@@ -1,0 +1,2 @@
+recursive-include sphinx_brand_theme/brand_theme *
+

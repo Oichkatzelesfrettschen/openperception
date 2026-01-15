@@ -1,0 +1,299 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "version": "1.0.0",
+  "description": "Visualization tokens for CVD-safe, accessible charts and data graphics",
+
+  "palettes": {
+    "qualitative": {
+      "description": "For categorical/nominal data with no inherent order",
+      "max_categories": 8,
+      "note": "Beyond 8 categories, use patterns or small multiples",
+      "default": {
+        "name": "uvas-qual-8",
+        "colors": [
+          {"hex": "#0077BB", "name": "blue", "oklch": "oklch(52% 0.14 240)"},
+          {"hex": "#EE7733", "name": "orange", "oklch": "oklch(67% 0.16 50)"},
+          {"hex": "#009988", "name": "teal", "oklch": "oklch(58% 0.12 180)"},
+          {"hex": "#CC3311", "name": "red", "oklch": "oklch(50% 0.18 30)"},
+          {"hex": "#33BBEE", "name": "cyan", "oklch": "oklch(72% 0.12 220)"},
+          {"hex": "#EE3377", "name": "magenta", "oklch": "oklch(55% 0.2 350)"},
+          {"hex": "#BBBBBB", "name": "gray", "oklch": "oklch(77% 0 0)"},
+          {"hex": "#332288", "name": "indigo", "oklch": "oklch(35% 0.14 280)"}
+        ],
+        "cvd_validation": {
+          "protan": "delta-E >= 12 between all pairs",
+          "deutan": "delta-E >= 12 between all pairs",
+          "tritan": "delta-E >= 10 between all pairs"
+        }
+      },
+      "high_contrast": {
+        "name": "uvas-qual-hc",
+        "description": "Higher saturation for low vision",
+        "colors": [
+          {"hex": "#0055AA", "name": "blue"},
+          {"hex": "#FF6600", "name": "orange"},
+          {"hex": "#007766", "name": "teal"},
+          {"hex": "#DD0000", "name": "red"},
+          {"hex": "#00AADD", "name": "cyan"},
+          {"hex": "#EE0066", "name": "magenta"}
+        ]
+      }
+    },
+    "sequential": {
+      "description": "For ordered data from low to high",
+      "default": {
+        "name": "uvas-seq-blue",
+        "colors": [
+          {"hex": "#F7FBFF", "position": 0},
+          {"hex": "#DEEBF7", "position": 0.125},
+          {"hex": "#C6DBEF", "position": 0.25},
+          {"hex": "#9ECAE1", "position": 0.375},
+          {"hex": "#6BAED6", "position": 0.5},
+          {"hex": "#4292C6", "position": 0.625},
+          {"hex": "#2171B5", "position": 0.75},
+          {"hex": "#08519C", "position": 0.875},
+          {"hex": "#08306B", "position": 1}
+        ],
+        "lightness_range": {"min": 25, "max": 95}
+      },
+      "alternatives": {
+        "viridis": {
+          "description": "Perceptually uniform, CVD-safe",
+          "source": "matplotlib",
+          "recommended_for": "Heatmaps, continuous data"
+        },
+        "cividis": {
+          "description": "Optimized for CVD accessibility",
+          "source": "matplotlib",
+          "recommended_for": "CVD-critical applications"
+        }
+      }
+    },
+    "diverging": {
+      "description": "For data with meaningful midpoint (e.g., 0, average)",
+      "default": {
+        "name": "uvas-div-blue-orange",
+        "colors": [
+          {"hex": "#053061", "position": 0, "meaning": "negative extreme"},
+          {"hex": "#2166AC", "position": 0.25},
+          {"hex": "#92C5DE", "position": 0.4},
+          {"hex": "#F7F7F7", "position": 0.5, "meaning": "neutral"},
+          {"hex": "#FDDBC7", "position": 0.6},
+          {"hex": "#D6604D", "position": 0.75},
+          {"hex": "#67001F", "position": 1, "meaning": "positive extreme"}
+        ],
+        "midpoint": 0.5
+      },
+      "cvd_note": "Diverging palettes must be distinguishable at endpoints under all CVD types"
+    }
+  },
+
+  "redundancy": {
+    "description": "Non-color encoding channels for CVD accessibility",
+    "markers": {
+      "shapes": ["circle", "square", "triangle", "diamond", "plus", "cross", "star", "pentagon"],
+      "minimum_size_pt": 4,
+      "recommended_size_pt": 6,
+      "stroke_width_pt": 1.5
+    },
+    "line_styles": {
+      "patterns": ["solid", "dashed", "dotted", "dash-dot", "long-dash"],
+      "minimum_width_pt": 1.5,
+      "recommended_width_pt": 2.0
+    },
+    "hatch_patterns": {
+      "patterns": ["///", "\\\\\\", "|||", "---", "+++", "xxx", "ooo"],
+      "use_case": "Bar charts, area fills"
+    },
+    "invariant": {
+      "rule": "Every visual category must be encoded with at least 2 channels",
+      "example": "color + marker shape, or color + line style"
+    }
+  },
+
+  "typography": {
+    "title": {
+      "size_pt": 14,
+      "weight": 700,
+      "family": "sans-serif"
+    },
+    "subtitle": {
+      "size_pt": 11,
+      "weight": 400,
+      "family": "sans-serif"
+    },
+    "axis_label": {
+      "size_pt": 11,
+      "weight": 600,
+      "family": "sans-serif"
+    },
+    "tick_label": {
+      "size_pt": 10,
+      "weight": 400,
+      "family": "sans-serif"
+    },
+    "legend": {
+      "title_size_pt": 10,
+      "item_size_pt": 9,
+      "weight": 400
+    },
+    "annotation": {
+      "size_pt": 9,
+      "weight": 400
+    },
+    "minimum_size_pt": 8,
+    "invariant_note": "No text smaller than 8pt in any visualization"
+  },
+
+  "dimensions": {
+    "line_width": {
+      "minimum_pt": 1.0,
+      "default_pt": 1.5,
+      "emphasis_pt": 2.5
+    },
+    "marker_size": {
+      "minimum_pt": 4,
+      "default_pt": 6,
+      "emphasis_pt": 8
+    },
+    "axis_line_width_pt": 1.0,
+    "grid_line_width_pt": 0.5,
+    "tick_length_pt": 5
+  },
+
+  "grid": {
+    "major": {
+      "enabled": true,
+      "color": "#E0E0E0",
+      "width_pt": 0.5,
+      "style": "solid"
+    },
+    "minor": {
+      "enabled": false,
+      "color": "#F0F0F0",
+      "width_pt": 0.25,
+      "style": "dotted"
+    },
+    "alpha": 0.5
+  },
+
+  "backgrounds": {
+    "light": {
+      "plot_area": "#FFFFFF",
+      "figure": "#FFFFFF",
+      "grid": "#F5F5F5"
+    },
+    "dark": {
+      "plot_area": "#1A1A1A",
+      "figure": "#121212",
+      "grid": "#2D2D2D"
+    }
+  },
+
+  "annotations": {
+    "max_per_panel": 5,
+    "cognitive_note": "More than 5 annotations per panel increases cognitive load",
+    "callout_style": {
+      "arrow_width_pt": 1,
+      "background_alpha": 0.9,
+      "padding_pt": 4,
+      "border_radius_pt": 2
+    }
+  },
+
+  "legends": {
+    "position": "right",
+    "position_options": ["right", "left", "top", "bottom", "inside-top-right"],
+    "frame": {
+      "enabled": true,
+      "color": "#CCCCCC",
+      "width_pt": 0.5
+    },
+    "max_items": 8,
+    "note": "Legends with > 8 items should use small multiples instead"
+  },
+
+  "aspect_ratios": {
+    "default": 1.618,
+    "wide": 2.0,
+    "square": 1.0,
+    "tall": 0.75,
+    "golden_note": "Golden ratio (1.618) is aesthetically pleasing and efficient"
+  },
+
+  "export": {
+    "dpi": {
+      "screen": 96,
+      "print": 300,
+      "publication": 600
+    },
+    "formats": {
+      "vector": ["svg", "pdf", "eps"],
+      "raster": ["png", "jpg"]
+    },
+    "recommended": "svg for web, pdf for print"
+  },
+
+  "validation_rules": {
+    "color_only_encoding": {
+      "rule": "Never encode meaning with color alone",
+      "check": "For each visual category, verify non-color channel exists",
+      "severity": "BLOCKING"
+    },
+    "text_minimum_size": {
+      "rule": "All text >= 8pt at export size",
+      "check": "Scan all text elements after scaling",
+      "severity": "WARNING"
+    },
+    "contrast_ratio": {
+      "rule": "Text contrast >= 4.5:1 against background",
+      "check": "Calculate contrast for all text elements",
+      "severity": "BLOCKING"
+    },
+    "annotation_density": {
+      "rule": "Annotations per panel <= 5",
+      "check": "Count annotation elements",
+      "severity": "WARNING"
+    },
+    "legend_size": {
+      "rule": "Legend items <= 8",
+      "check": "Count legend entries",
+      "severity": "WARNING"
+    }
+  },
+
+  "framework_configs": {
+    "matplotlib": {
+      "rcParams": {
+        "figure.dpi": 100,
+        "savefig.dpi": 300,
+        "font.size": 10,
+        "axes.titlesize": 14,
+        "axes.labelsize": 11,
+        "xtick.labelsize": 10,
+        "ytick.labelsize": 10,
+        "legend.fontsize": 9,
+        "lines.linewidth": 1.5,
+        "lines.markersize": 6,
+        "axes.linewidth": 1.0,
+        "grid.linewidth": 0.5,
+        "figure.figsize": [8, 4.944]
+      }
+    },
+    "ggplot2": {
+      "theme_uvas": {
+        "base_size": 11,
+        "base_family": "sans",
+        "base_line_size": 0.5,
+        "base_rect_size": 0.5
+      }
+    },
+    "plotly": {
+      "template": "plotly_white",
+      "font": {
+        "family": "Inter, system-ui, sans-serif",
+        "size": 12
+      }
+    }
+  }
+}

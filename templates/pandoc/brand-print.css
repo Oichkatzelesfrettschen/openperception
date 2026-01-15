@@ -1,0 +1,19 @@
+/* Print-optimized overrides for Pandoc HTML -> PDF/print */
+@media print {
+  :root { color-scheme: light; }
+  body { background: #ffffff !important; color: #111827 !important; }
+  .doc-header { background: #ffffff !important; border-bottom: 1pt solid #000 !important; }
+  .title { color: #000 !important; }
+  .date { color: #000 !important; }
+  a { color: #000 !important; text-decoration: underline; }
+  a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 9pt; }
+  code, pre { background: #ffffff !important; border: 0.75pt solid #000 !important; }
+  pre { page-break-inside: avoid; }
+  blockquote { border-left: 3pt solid #000 !important; color: #000 !important; }
+  table { border-collapse: collapse; }
+  th, td { border: 0.75pt solid #000 !important; }
+  th { background: #fff !important; }
+  /* Margins */
+  @page { margin: 20mm; }
+}
+

@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.w3.org)",
+      "Bash(wget:*)",
+      "WebFetch(domain:www.inf.ufrgs.br)",
+      "WebFetch(domain:daltonlens.org)",
+      "WebFetch(domain:trace.umd.edu)",
+      "WebFetch(domain:scholar.smu.edu)",
+      "WebFetch(domain:www.cvrl.org)",
+      "Bash(/usr/bin/find:*)",
+      "WebFetch(domain:www.mdpi.com)",
+      "WebFetch(domain:618media.com)",
+      "WebFetch(domain:colorblind.org)",
+      "WebFetch(domain:www.inclusivecolors.com)",
+      "WebFetch(domain:bottosson.github.io)"
+    ]
+  }
+}

@@ -1,0 +1,136 @@
+# OpenPerception Lint Workflow
+# Runs code quality checks on Python code
+
+name: Lint
+
+on:
+  push:
+    branches: [main, develop]
+    paths:
+      - '**.py'
+      - 'pyproject.toml'
+      - '.github/workflows/lint.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - '**.py'
+      - 'pyproject.toml'
+      - '.github/workflows/lint.yml'
+  workflow_dispatch:
+
+jobs:
+  ruff:
+    name: Ruff Linting
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install ruff
+        run: pip install ruff
+
+      - name: Run ruff check
+        run: ruff check . --output-format=github
+
+      - name: Run ruff format check
+        run: ruff format --check .
+
+  black:
+    name: Black Formatting
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install black
+        run: pip install black
+
+      - name: Run black check
+        run: black --check --diff .
+
+  mypy:
+    name: Type Checking
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install mypy numpy Pillow
+          pip install -e algorithms/DaltonLens-Python
+
+      - name: Run mypy
+        run: |
+          mypy algorithms/DaltonLens-Python/daltonlens --ignore-missing-imports || \
+            echo "Note: Type checking is advisory, not blocking"
+
+  security:
+    name: Security Scan
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install bandit
+        run: pip install bandit
+
+      - name: Run bandit
+        run: |
+          bandit -r algorithms/DaltonLens-Python/daltonlens tools \
+            -x "**/tests/*" \
+            --severity-level medium \
+            -f txt || echo "Note: Security scan is advisory"
+
+  docs:
+    name: Documentation Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check for broken links in markdown
+        uses: gaurav-nelson/github-action-markdown-link-check@v1
+        with:
+          use-quiet-mode: 'yes'
+          config-file: '.github/workflows/mlc-config.json'
+        continue-on-error: true
+
+      - name: Verify required files exist
+        run: |
+          files=(
+            "README.md"
+            "CLAUDE.md"
+            "CONTRIBUTING.md"
+            "LICENSE"
+            "CHANGELOG.md"
+            "ROADMAP.md"
+            "ARCHITECTURE.md"
+          )
+          for file in "${files[@]}"; do
+            if [ ! -f "$file" ]; then
+              echo "ERROR: Missing required file: $file"
+              exit 1
+            fi
+          done
+          echo "All required files present"

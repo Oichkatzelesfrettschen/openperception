@@ -1,0 +1,202 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "version": "1.0.0",
+  "description": "LaTeX typography and layout tokens for UVAS-compliant academic documents",
+
+  "document_class": {
+    "recommended": "article",
+    "options": ["11pt", "a4paper"],
+    "rationale": "11pt provides better readability than default 10pt; A4 is international standard"
+  },
+
+  "fonts": {
+    "text": {
+      "primary": {
+        "package": "libertinus",
+        "family": "Libertinus Serif",
+        "rationale": "Open source, excellent math support, good x-height",
+        "alternatives": ["lmodern", "mathpazo", "newpx"]
+      },
+      "sans": {
+        "package": "libertinus",
+        "family": "Libertinus Sans",
+        "use_case": "Headings, captions if sans preferred",
+        "alternatives": ["helvet", "sourcesanspro"]
+      }
+    },
+    "math": {
+      "package": "libertinust1math",
+      "alternative": "newtxmath",
+      "rationale": "Matches Libertinus text; excellent symbol coverage"
+    },
+    "mono": {
+      "package": "inconsolata",
+      "options": ["scaled=0.95"],
+      "rationale": "Good disambiguation; scales well with Libertinus",
+      "alternatives": ["sourcecodepro", "firacode"]
+    },
+    "disambiguation_test": {
+      "test_string": "Il1 0Oo rnm",
+      "requirement": "All pairs visually distinct at body size"
+    }
+  },
+
+  "sizes": {
+    "body": {
+      "size_pt": 11,
+      "baseline_skip_pt": 13.6,
+      "rationale": "11pt with 1.236 leading for comfortable reading"
+    },
+    "scale": {
+      "footnote": 0.818,
+      "small": 0.909,
+      "normalsize": 1.0,
+      "large": 1.2,
+      "Large": 1.44,
+      "LARGE": 1.728,
+      "huge": 2.074,
+      "Huge": 2.488
+    },
+    "minimum_body_pt": 10,
+    "invariant_note": "Never set body text below 10pt"
+  },
+
+  "line_spacing": {
+    "single": 1.0,
+    "onehalf": 1.25,
+    "double": 1.667,
+    "default": "onehalf",
+    "rationale": "1.5 spacing (onehalf) is WCAG-compliant and readable",
+    "package": "setspace"
+  },
+
+  "margins": {
+    "package": "geometry",
+    "settings": {
+      "top": "25mm",
+      "bottom": "25mm",
+      "left": "25mm",
+      "right": "25mm",
+      "headheight": "15pt",
+      "headsep": "12pt",
+      "footskip": "25pt"
+    },
+    "line_length_chars": 75,
+    "line_length_note": "With these margins at 11pt, line length is ~75 characters (optimal range 65-80)"
+  },
+
+  "headings": {
+    "package": "titlesec",
+    "section": {
+      "format": "\\Large\\bfseries",
+      "before_skip": "3.5ex plus 1ex minus 0.2ex",
+      "after_skip": "2.3ex plus 0.2ex"
+    },
+    "subsection": {
+      "format": "\\large\\bfseries",
+      "before_skip": "3.25ex plus 1ex minus 0.2ex",
+      "after_skip": "1.5ex plus 0.2ex"
+    },
+    "subsubsection": {
+      "format": "\\normalsize\\bfseries",
+      "before_skip": "3.25ex plus 1ex minus 0.2ex",
+      "after_skip": "1.5ex plus 0.2ex"
+    },
+    "numbering_depth": 3,
+    "toc_depth": 2
+  },
+
+  "paragraphs": {
+    "indent": "1.5em",
+    "skip": "0pt plus 0.5ex",
+    "tolerance": 200,
+    "hyphenation": {
+      "enabled": true,
+      "penalty": 50,
+      "min_left": 3,
+      "min_right": 3
+    }
+  },
+
+  "lists": {
+    "package": "enumitem",
+    "itemsep": "0.5ex",
+    "parsep": "0pt",
+    "topsep": "1ex",
+    "leftmargin": "2em"
+  },
+
+  "figures_tables": {
+    "caption": {
+      "package": "caption",
+      "font": "small",
+      "labelfont": "bf",
+      "labelsep": "period",
+      "skip": "10pt"
+    },
+    "placement": "htbp",
+    "float_package": "float",
+    "subcaption_package": "subcaption"
+  },
+
+  "code_listings": {
+    "package": "listings",
+    "basicstyle": "\\footnotesize\\ttfamily",
+    "frame": "single",
+    "breaklines": true,
+    "breakatwhitespace": true,
+    "tabsize": 4,
+    "showstringspaces": false,
+    "numbers": "left",
+    "numberstyle": "\\tiny\\color{gray}",
+    "backgroundcolor": "\\color{gray!10}"
+  },
+
+  "colors": {
+    "package": "xcolor",
+    "options": ["dvipsnames", "svgnames", "table"],
+    "semantic_roles": {
+      "danger": {"html": "#C53030", "description": "Errors, warnings"},
+      "success": {"html": "#2F855A", "description": "Success states"},
+      "info": {"html": "#2B6CB0", "description": "Information"},
+      "muted": {"html": "#718096", "description": "Secondary text"},
+      "link": {"html": "#2C5282", "description": "Hyperlinks"}
+    },
+    "cvd_note": "All colors must pass delta-E >= 10 under CVD simulation"
+  },
+
+  "hyperlinks": {
+    "package": "hyperref",
+    "colorlinks": true,
+    "linkcolor": "link",
+    "citecolor": "link",
+    "urlcolor": "link",
+    "pdfborder": "{0 0 0}"
+  },
+
+  "accessibility": {
+    "pdf_ua": {
+      "package": "pdfx",
+      "option": "a-3u",
+      "description": "PDF/UA compliance for accessibility"
+    },
+    "tagged_pdf": {
+      "package": "accessibility",
+      "enabled": true,
+      "description": "Produces tagged PDF structure"
+    },
+    "alt_text": {
+      "requirement": "All figures must have \\Description{} alt text",
+      "package": "accessibility"
+    }
+  },
+
+  "bibliography": {
+    "package": "biblatex",
+    "backend": "biber",
+    "style": "numeric-comp",
+    "sorting": "nyt",
+    "maxbibnames": 99,
+    "maxcitenames": 2
+  }
+}

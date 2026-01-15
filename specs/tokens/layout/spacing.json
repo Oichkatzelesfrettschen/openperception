@@ -1,0 +1,226 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "version": "1.0.0",
+  "description": "Spacing tokens for UVAS layout system",
+
+  "base": {
+    "unit": 4,
+    "unit_name": "px",
+    "rationale": "4px base allows fine-grained control while maintaining 8px grid alignment"
+  },
+
+  "scale": {
+    "space": {
+      "0": {"value": 0, "alias": "none", "use": "No space"},
+      "1": {"value": 4, "alias": "xs", "use": "Tightest grouping (icon-label)"},
+      "2": {"value": 8, "alias": "sm", "use": "Compact grouping (form field padding)"},
+      "3": {"value": 12, "use": "Default inline spacing"},
+      "4": {"value": 16, "alias": "md", "use": "Default block spacing"},
+      "5": {"value": 24, "use": "Section separation"},
+      "6": {"value": 32, "alias": "lg", "use": "Major section breaks"},
+      "7": {"value": 48, "use": "Large gaps, hero spacing"},
+      "8": {"value": 64, "alias": "xl", "use": "Maximum spacing"},
+      "9": {"value": 96, "use": "Page-level margins"}
+    },
+    "radius": {
+      "0": {"value": 0, "alias": "none", "use": "Sharp corners"},
+      "1": {"value": 2, "alias": "sm", "use": "Subtle rounding"},
+      "2": {"value": 4, "alias": "md", "use": "Default rounding"},
+      "3": {"value": 8, "alias": "lg", "use": "Cards, panels"},
+      "4": {"value": 16, "use": "Pills, tags"},
+      "full": {"value": 9999, "use": "Fully circular"}
+    },
+    "stroke": {
+      "0": {"value": 0, "alias": "none", "use": "No border"},
+      "1": {"value": 1, "alias": "thin", "use": "Subtle dividers"},
+      "2": {"value": 2, "alias": "default", "use": "Default borders, focus rings"},
+      "3": {"value": 3, "alias": "thick", "use": "Emphasized borders"},
+      "4": {"value": 4, "use": "Heavy borders, active states"}
+    }
+  },
+
+  "grid": {
+    "gutter": {
+      "default": 16,
+      "responsive": {
+        "xs": 12,
+        "sm": 12,
+        "md": 16,
+        "lg": 16,
+        "xl": 24,
+        "2xl": 24
+      }
+    },
+    "margin": {
+      "default": 24,
+      "responsive": {
+        "xs": 16,
+        "sm": 16,
+        "md": 24,
+        "lg": 24,
+        "xl": 32,
+        "2xl": 48
+      }
+    },
+    "columns": {
+      "default": 12,
+      "responsive": {
+        "xs": 4,
+        "sm": 4,
+        "md": 8,
+        "lg": 12,
+        "xl": 12,
+        "2xl": 12
+      }
+    },
+    "max_width": {
+      "content": 1200,
+      "reading": 720,
+      "narrow": 480
+    }
+  },
+
+  "interactive": {
+    "touch": {
+      "minTarget": {
+        "value": 44,
+        "unit": "px",
+        "source": "WCAG 2.5.5",
+        "invariant": true
+      },
+      "minSpacing": {
+        "value": 8,
+        "unit": "px",
+        "source": "WCAG 2.5.8 draft",
+        "invariant": true
+      }
+    },
+    "focus": {
+      "outlineWidth": {
+        "value": 2,
+        "unit": "px",
+        "invariant": true
+      },
+      "outlineOffset": {
+        "value": 2,
+        "unit": "px"
+      },
+      "outlineStyle": "solid"
+    }
+  },
+
+  "breakpoints": {
+    "xs": {"value": 0, "description": "Mobile portrait"},
+    "sm": {"value": 576, "description": "Mobile landscape"},
+    "md": {"value": 768, "description": "Tablet portrait"},
+    "lg": {"value": 1024, "description": "Tablet landscape / Small desktop"},
+    "xl": {"value": 1200, "description": "Desktop"},
+    "2xl": {"value": 1400, "description": "Large desktop"}
+  },
+
+  "density_modes": {
+    "compact": {
+      "multiplier": 0.75,
+      "description": "Maximum information density",
+      "use_case": "Power users, large screens, data-heavy views",
+      "scaled_values": {
+        "space.2": 6,
+        "space.4": 12,
+        "space.6": 24,
+        "grid.gutter": 12,
+        "grid.margin": 16
+      }
+    },
+    "comfortable": {
+      "multiplier": 1.0,
+      "description": "Balanced default",
+      "use_case": "General use"
+    },
+    "spacious": {
+      "multiplier": 1.5,
+      "description": "Maximum breathing room",
+      "use_case": "Cognitive accessibility, touch-primary interfaces",
+      "scaled_values": {
+        "space.2": 12,
+        "space.4": 24,
+        "space.6": 48,
+        "grid.gutter": 24,
+        "grid.margin": 32
+      }
+    }
+  },
+
+  "semantic_spacing": {
+    "component": {
+      "padding": {
+        "button": {"x": "space.4", "y": "space.2"},
+        "input": {"x": "space.3", "y": "space.2"},
+        "card": {"all": "space.4"},
+        "modal": {"all": "space.5"},
+        "section": {"y": "space.6"}
+      },
+      "gap": {
+        "buttonGroup": "space.2",
+        "formFields": "space.4",
+        "listItems": "space.2",
+        "cards": "space.4",
+        "sections": "space.6"
+      },
+      "margin": {
+        "paragraph": {"bottom": "space.4"},
+        "heading": {"top": "space.5", "bottom": "space.3"}
+      }
+    },
+    "page": {
+      "containerPadding": "grid.margin",
+      "sectionSpacing": "space.7",
+      "headerHeight": 64,
+      "footerHeight": 80,
+      "sidebarWidth": 256
+    }
+  },
+
+  "z_index": {
+    "base": 0,
+    "dropdown": 1000,
+    "sticky": 1100,
+    "fixed": 1200,
+    "modal_backdrop": 1300,
+    "modal": 1400,
+    "popover": 1500,
+    "tooltip": 1600,
+    "toast": 1700
+  },
+
+  "css_output": {
+    "example": {
+      "root": {
+        "--space-0": "0",
+        "--space-1": "4px",
+        "--space-2": "8px",
+        "--space-3": "12px",
+        "--space-4": "16px",
+        "--space-5": "24px",
+        "--space-6": "32px",
+        "--space-7": "48px",
+        "--space-8": "64px",
+        "--space-9": "96px",
+        "--radius-0": "0",
+        "--radius-1": "2px",
+        "--radius-2": "4px",
+        "--radius-3": "8px",
+        "--radius-4": "16px",
+        "--radius-full": "9999px",
+        "--stroke-1": "1px",
+        "--stroke-2": "2px",
+        "--stroke-3": "3px",
+        "--stroke-4": "4px",
+        "--touch-min-target": "44px",
+        "--touch-min-spacing": "8px",
+        "--focus-outline-width": "2px",
+        "--focus-outline-offset": "2px",
+        "--density-multiplier": "1"
+      }
+    }
+  }
+}

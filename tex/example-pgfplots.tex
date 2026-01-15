@@ -1,0 +1,63 @@
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{pgfplots}
+\usepackage{brandpalette}
+\pgfplotsset{compat=1.18}
+
+% Choose CVD variant: default | protan | deutan | tritan | mono
+\brandsetup[variant=default]
+\brandapplyplotstyles
+
+\usepackage{amsmath}
+\usepackage{lmodern}
+
+\begin{document}
+
+\section*{Brand + CVD-safe pgfplots demo}
+Variant: \texttt{default}. Switch by editing `\\brandsetup[variant=...]`.
+
+\begin{tikzpicture}
+  \begin{axis}[
+    brandaxis,
+    width=\linewidth,
+    height=6cm,
+    xlabel={x}, ylabel={y},
+    legend style={draw=none, at={(0.02,0.98)}, anchor=north west}
+  ]
+    \addplot+[smooth] table[row sep=\\] {
+      x y\\
+      0 0\\ 1 0.84\\ 2 0.91\\ 3 0.14\\ 4 -0.76\\ 5 -0.96\\ 6 -0.28\\
+    }; \addlegendentry{Series 1}
+    \addplot+[smooth] table[row sep=\\] {
+      x y\\
+      0 0.2\\ 1 0.9\\ 2 0.4\\ 3 -0.65\\ 4 -0.95\\ 5 -0.41\\ 6 0.56\\
+    }; \addlegendentry{Series 2}
+    \addplot+[smooth] table[row sep=\\] {
+      x y\\
+      0 -0.1\\ 1 0.6\\ 2 0.9\\ 3 0.3\\ 4 -0.8\\ 5 -1.0\\ 6 -0.2\\
+    }; \addlegendentry{Series 3}
+  \end{axis}
+\end{tikzpicture}
+
+\vspace{1cm}
+
+\begin{tikzpicture}
+  \begin{axis}[
+    brandaxis,
+    ybar,
+    bar width=12pt,
+    symbolic x coords={A,B,C,D},
+    xtick=data,
+    width=\linewidth,
+    height=6cm,
+    nodes near coords,
+    nodes near coords align={vertical},
+  ]
+    \addplot+[brandbarA] coordinates {(A,12) (B,8) (C,15) (D,9)};
+    \addplot+[brandbarB] coordinates {(A,10) (B,12) (C,11) (D,14)};
+    \addplot+[brandbarC] coordinates {(A,8) (B,7) (C,6) (D,10)};
+    \legend{Group 1, Group 2, Group 3}
+  \end{axis}
+\end{tikzpicture}
+
+\end{document}

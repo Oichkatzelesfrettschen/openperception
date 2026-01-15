@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CVD Simulator</title>
+    <link rel="stylesheet" href="../../tokens/color-tokens.css" />
+    <style>
+      body { font-family: system-ui, sans-serif; margin: 0; }
+      header { padding: 12px 16px; background: var(--surface-subtle); border-bottom: 1px solid var(--border); }
+      main { padding: 16px; display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+      .card { border: 1px solid var(--border); border-radius: 8px; padding: 12px; background: var(--surface); }
+      .swatch { display: grid; grid-template-columns: repeat(6, 1fr); gap: 4px; }
+      .box { height: 28px; border-radius: 4px; }
+      .btn-primary { margin-right: 8px; }
+      #simWrap { filter: none; }
+      .controls { display: flex; gap: 8px; align-items: center; }
+      .legend { font-size: 12px; color: var(--text-muted); }
+    </style>
+  </head>
+  <body>
+    <svg width="0" height="0" style="position:absolute">
+      <defs>
+        <filter id="protanopia">
+          <feColorMatrix type="matrix" values="
+            0.567 0.433 0     0 0
+            0.558 0.442 0     0 0
+            0     0.242 0.758 0 0
+            0     0     0     1 0"/>
+        </filter>
+        <filter id="deuteranopia">
+          <feColorMatrix type="matrix" values="
+            0.625 0.375 0     0 0
+            0.700 0.300 0     0 0
+            0     0.300 0.700 0 0
+            0     0     0     1 0"/>
+        </filter>
+        <filter id="tritanopia">
+          <feColorMatrix type="matrix" values="
+            0.95  0.05  0     0 0
+            0     0.433 0.567 0 0
+            0     0.475 0.525 0 0
+            0     0     0     1 0"/>
+        </filter>
+        <filter id="achromatopsia">
+          <feColorMatrix type="matrix" values="
+            0.299 0.587 0.114 0 0
+            0.299 0.587 0.114 0 0
+            0.299 0.587 0.114 0 0
+            0     0     0     1 0"/>
+        </filter>
+      </defs>
+    </svg>
+    <header>
+      <div class="controls">
+        <label for="mode">Simulate:</label>
+        <select id="mode">
+          <option value="none">none</option>
+          <option value="protanopia">protanopia</option>
+          <option value="deuteranopia">deuteranopia</option>
+          <option value="tritanopia">tritanopia</option>
+          <option value="achromatopsia">achromatopsia</option>
+        </select>
+        <span class="legend">SVG color matrix applied to the content below.</span>
+      </div>
+    </header>
+    <div id="simWrap">
+      <main>
+        <section class="card">
+          <h3>Swatches</h3>
+          <div class="swatch">
+            <div class="box" style="background: var(--indigo-700)"></div>
+            <div class="box" style="background: var(--indigo-600)"></div>
+            <div class="box" style="background: var(--indigo-500)"></div>
+            <div class="box" style="background: var(--indigo-300)"></div>
+            <div class="box" style="background: var(--magenta-700)"></div>
+            <div class="box" style="background: var(--magenta-600)"></div>
+            <div class="box" style="background: var(--magenta-400)"></div>
+            <div class="box" style="background: var(--magenta-200)"></div>
+            <div class="box" style="background: var(--gray-900)"></div>
+            <div class="box" style="background: var(--gray-700)"></div>
+            <div class="box" style="background: var(--gray-500)"></div>
+            <div class="box" style="background: var(--gray-300)"></div>
+          </div>
+        </section>
+        <section class="card">
+          <h3>Buttons</h3>
+          <button class="btn-primary">Primary</button>
+          <button class="btn-secondary">Secondary</button>
+          <p>Visit <a class="link" href="#">this link</a> for docs.</p>
+        </section>
+        <section class="card">
+          <h3>Patterns</h3>
+          <div class="chip hatch-diag">Paused</div>
+        </section>
+      </main>
+    </div>
+    <script>
+      const sel = document.getElementById('mode');
+      const wrap = document.getElementById('simWrap');
+      sel.addEventListener('change', () => {
+        const v = sel.value;
+        wrap.style.filter = v === 'none' ? 'none' : `url(#${v})`;
+      });
+    </script>
+    <script src="../shared/auto-dev.js"></script>
+    <script src="../shared/query-variant.js"></script>
+  </body>
+  </html>

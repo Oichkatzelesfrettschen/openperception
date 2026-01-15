@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/home/eirikr/Github/openperception/logs/.9f22dbf7b5887031d9e04e6274bf65300412d0c4-audit.json",
+    "files": [
+        {
+            "date": 1766963899075,
+            "name": "/home/eirikr/Github/openperception/logs/mcp-puppeteer-2025-12-28.log",
+            "hash": "c4ecf9023e5e7ab0a0d90c820d731ae9bb7e21a61acba78d25e36967447b2aaf"
+        }
+    ],
+    "hashType": "sha256"
+}

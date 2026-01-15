@@ -1,0 +1,20 @@
+/* Brand + CVD-friendly Pandoc CSS */
+:root { color-scheme: light; }
+html { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+body { margin: 0; background: var(--surface); color: var(--text); }
+.doc-header { padding: 24px 16px; background: var(--surface-subtle); border-bottom: 1px solid var(--border); }
+.title { margin: 0; color: var(--indigo-700); }
+.date { color: var(--text-muted); }
+.doc-body { padding: 16px; max-width: 880px; margin: 0 auto; }
+a { color: var(--link); text-decoration: underline; text-underline-offset: 2px; }
+code, pre { background: var(--surface-subtle); border: 1px solid var(--border); border-radius: 6px; }
+pre { padding: 12px; overflow-x: auto; }
+code { padding: 1px 4px; }
+blockquote { border-left: 3px solid var(--indigo-500); padding-left: 12px; color: var(--text-muted); }
+table { border-collapse: collapse; }
+th, td { border: 1px solid var(--border); padding: 6px 8px; }
+th { background: var(--surface-subtle); }
+.notice { border: 1px solid var(--border); border-radius: 6px; padding: 8px 10px; background: var(--magenta-200); }
+.btn { display: inline-block; padding: 6px 10px; border-radius: 6px; border: 1px solid var(--brand-primary-strong); }
+.btn-primary { background: var(--brand-primary); color: #fff; }
+

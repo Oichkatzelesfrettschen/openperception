@@ -1,0 +1,11 @@
+@import url('color-tokens.css');
+html { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+body { color: var(--text); background: var(--surface); margin: 0; }
+.document { padding: 16px; max-width: 900px; margin: 0 auto; }
+a { color: var(--link); text-decoration: underline; text-underline-offset: 2px; }
+pre, code { background: var(--surface-subtle); border: 1px solid var(--border); border-radius: 6px; }
+pre { padding: 10px; overflow-x: auto; }
+table.docutils { border-collapse: collapse; }
+table.docutils th, table.docutils td { border: 1px solid var(--border); padding: 6px 8px; }
+table.docutils th { background: var(--surface-subtle); }
+

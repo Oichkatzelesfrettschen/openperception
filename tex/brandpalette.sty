@@ -1,0 +1,191 @@
+% Brand + CVD-safe palette for TikZ/PGFPlots
+% Usage:
+%   \usepackage{pgfplots}
+%   \usepackage{tex/brandpalette}
+%   \pgfplotsset{compat=1.18}
+%   \brandsetup[variant=default] % or protan|deutan|tritan|mono
+%   \brandapplyplotstyles
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{brandpalette}[2025/10/31 Brand CVD-safe palette]
+
+\RequirePackage{pgfplots}
+\RequirePackage{tikz}
+\usetikzlibrary{patterns,arrows.meta}
+
+% Default brand colors (hex)
+\definecolor{brandIndigo700}{HTML}{3730A3}
+\definecolor{brandIndigo600}{HTML}{4F46E5}
+\definecolor{brandIndigo500}{HTML}{6366F1}
+\definecolor{brandIndigo300}{HTML}{A5B4FC}
+
+\definecolor{brandMagenta700}{HTML}{86198F}
+\definecolor{brandMagenta600}{HTML}{C026D3}
+\definecolor{brandMagenta400}{HTML}{E879F9}
+
+\definecolor{brandGray900}{HTML}{111827}
+\definecolor{brandGray700}{HTML}{374151}
+\definecolor{brandGray300}{HTML}{D1D5DB}
+\definecolor{brandGray100}{HTML}{F3F4F6}
+
+% Variant overrides — defined as named colors for switching
+% protan/deutan: darker indigo, warmer/brighter magenta
+\definecolor{protanIndigo700}{HTML}{2E2AA1}
+\definecolor{protanIndigo600}{HTML}{3D35C8}
+\definecolor{protanIndigo500}{HTML}{5A5FEF}
+\definecolor{protanMagenta700}{HTML}{B12179}
+\definecolor{protanMagenta600}{HTML}{D62A8A}
+\definecolor{protanMagenta400}{HTML}{EC6FB1}
+
+\definecolor{deutanIndigo700}{HTML}{2E2AA1}
+\definecolor{deutanIndigo600}{HTML}{3F38C5}
+\definecolor{deutanIndigo500}{HTML}{5D60EE}
+\definecolor{deutanMagenta700}{HTML}{A81E7B}
+\definecolor{deutanMagenta600}{HTML}{D02C8C}
+\definecolor{deutanMagenta400}{HTML}{F07BC0}
+
+% tritan: indigo toward violet; magenta slightly redder
+\definecolor{tritanIndigo700}{HTML}{5B33BF}
+\definecolor{tritanIndigo600}{HTML}{6940D6}
+\definecolor{tritanIndigo500}{HTML}{7E5AEE}
+\definecolor{tritanMagenta700}{HTML}{A9156E}
+\definecolor{tritanMagenta600}{HTML}{C81A78}
+\definecolor{tritanMagenta400}{HTML}{E05C9F}
+
+% mono: grayscale-only
+\definecolor{monoIndigo700}{HTML}{1E293B}
+\definecolor{monoIndigo600}{HTML}{334155}
+\definecolor{monoIndigo500}{HTML}{475569}
+\definecolor{monoMagenta700}{HTML}{4B5563}
+\definecolor{monoMagenta600}{HTML}{6B7280}
+\definecolor{monoMagenta400}{HTML}{9CA3AF}
+
+% Current effective colors (aliases updated by \brandsetup)
+\colorlet{effIndigo700}{brandIndigo700}
+\colorlet{effIndigo600}{brandIndigo600}
+\colorlet{effIndigo500}{brandIndigo500}
+\colorlet{effIndigo300}{brandIndigo300}
+
+\colorlet{effMagenta700}{brandMagenta700}
+\colorlet{effMagenta600}{brandMagenta600}
+\colorlet{effMagenta400}{brandMagenta400}
+
+\colorlet{effGray900}{brandGray900}
+\colorlet{effGray700}{brandGray700}
+\colorlet{effGray300}{brandGray300}
+\colorlet{effGray100}{brandGray100}
+
+% PGF keys for variant selection
+\pgfkeys{/brand/.is family}
+\pgfkeys{/brand,
+  variant/.estore in=\brand@variant,
+}
+\def\brand@variant{default}
+
+% Apply variant
+\newcommand{\brandsetup}[1][]{%
+  \pgfkeys{/brand, variant=default}% default
+  \pgfkeys{/brand,#1}% parse user options
+  \expandafter\csname brand@setcolors@\brand@variant\endcsname
+}
+
+% Variant color setters
+\newcommand{\brand@setcolors@default}{%
+  \colorlet{effIndigo700}{brandIndigo700}
+  \colorlet{effIndigo600}{brandIndigo600}
+  \colorlet{effIndigo500}{brandIndigo500}
+  \colorlet{effIndigo300}{brandIndigo300}
+  \colorlet{effMagenta700}{brandMagenta700}
+  \colorlet{effMagenta600}{brandMagenta600}
+  \colorlet{effMagenta400}{brandMagenta400}
+  \colorlet{effGray900}{brandGray900}
+  \colorlet{effGray700}{brandGray700}
+  \colorlet{effGray300}{brandGray300}
+  \colorlet{effGray100}{brandGray100}
+}
+
+\newcommand{\brand@setcolors@protan}{%
+  \colorlet{effIndigo700}{protanIndigo700}
+  \colorlet{effIndigo600}{protanIndigo600}
+  \colorlet{effIndigo500}{protanIndigo500}
+  \colorlet{effIndigo300}{brandIndigo300}
+  \colorlet{effMagenta700}{protanMagenta700}
+  \colorlet{effMagenta600}{protanMagenta600}
+  \colorlet{effMagenta400}{protanMagenta400}
+  \colorlet{effGray900}{brandGray900}
+  \colorlet{effGray700}{brandGray700}
+  \colorlet{effGray300}{brandGray300}
+  \colorlet{effGray100}{brandGray100}
+}
+
+\newcommand{\brand@setcolors@deutan}{%
+  \colorlet{effIndigo700}{deutanIndigo700}
+  \colorlet{effIndigo600}{deutanIndigo600}
+  \colorlet{effIndigo500}{deutanIndigo500}
+  \colorlet{effIndigo300}{brandIndigo300}
+  \colorlet{effMagenta700}{deutanMagenta700}
+  \colorlet{effMagenta600}{deutanMagenta600}
+  \colorlet{effMagenta400}{deutanMagenta400}
+  \colorlet{effGray900}{brandGray900}
+  \colorlet{effGray700}{brandGray700}
+  \colorlet{effGray300}{brandGray300}
+  \colorlet{effGray100}{brandGray100}
+}
+
+\newcommand{\brand@setcolors@tritan}{%
+  \colorlet{effIndigo700}{tritanIndigo700}
+  \colorlet{effIndigo600}{tritanIndigo600}
+  \colorlet{effIndigo500}{tritanIndigo500}
+  \colorlet{effIndigo300}{brandIndigo300}
+  \colorlet{effMagenta700}{tritanMagenta700}
+  \colorlet{effMagenta600}{tritanMagenta600}
+  \colorlet{effMagenta400}{tritanMagenta400}
+  \colorlet{effGray900}{brandGray900}
+  \colorlet{effGray700}{brandGray700}
+  \colorlet{effGray300}{brandGray300}
+  \colorlet{effGray100}{brandGray100}
+}
+
+\newcommand{\brand@setcolors@mono}{%
+  \colorlet{effIndigo700}{monoIndigo700}
+  \colorlet{effIndigo600}{monoIndigo600}
+  \colorlet{effIndigo500}{monoIndigo500}
+  \colorlet{effIndigo300}{monoMagenta400}
+  \colorlet{effMagenta700}{monoMagenta700}
+  \colorlet{effMagenta600}{monoMagenta600}
+  \colorlet{effMagenta400}{monoMagenta400}
+  \colorlet{effGray900}{brandGray900}
+  \colorlet{effGray700}{brandGray700}
+  \colorlet{effGray300}{brandGray300}
+  \colorlet{effGray100}{brandGray100}
+}
+
+% Plot cycle list: color + dash + marker; increasing width for emphasis
+\pgfplotscreateplotcyclelist{brand}{%
+  {every mark/.append style={solid,fill=effIndigo700}, color=effIndigo700,   mark=*,        line width=1.2pt},
+  {every mark/.append style={solid,fill=effMagenta600}, color=effMagenta600, mark=triangle*, dash pattern=on 6pt off 3pt, line width=1.0pt},
+  {every mark/.append style={solid,fill=effIndigo500}, color=effIndigo500,   mark=square*,  dotted, line width=1.0pt},
+  {every mark/.append style={solid,fill=effGray700},   color=effGray700,     mark=diamond*, dash dot, line width=1.0pt},
+  {every mark/.append style={solid,fill=effIndigo300}, color=effIndigo300,   mark=triangle, dash pattern=on 4pt off 2pt, line width=1.0pt},
+  {every mark/.append style={solid,fill=effMagenta400}, color=effMagenta400, mark=square,   solid, line width=1.6pt}
+}
+
+% Bar/area hatch styles
+\tikzset{brandbarA/.style={pattern=north east lines, pattern color=effIndigo600, draw=effIndigo700}}
+\tikzset{brandbarB/.style={pattern=dots,             pattern color=effMagenta600, draw=effMagenta700}}
+\tikzset{brandbarC/.style={pattern=crosshatch,       pattern color=effGray700,   draw=effGray700}}
+
+% Axes and grid styling
+\pgfplotsset{brandaxis/.style={
+    axis line style={effGray700},
+    tick style={effGray700},
+    label style={text=effGray900},
+    ticklabel style={text=effGray900},
+    grid=both, minor grid style={draw=effGray300!50}, major grid style={draw=effGray300}
+}}
+
+% Apply brand plot styles
+\newcommand{\brandapplyplotstyles}{%
+  \pgfplotsset{cycle list name=brand}
+}
+

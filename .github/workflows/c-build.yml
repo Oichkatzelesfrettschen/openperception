@@ -1,0 +1,117 @@
+# OpenPerception C Build Workflow
+# Builds and tests libDaltonLens across platforms
+
+name: C Build
+
+on:
+  push:
+    branches: [main, develop]
+    paths:
+      - 'algorithms/libDaltonLens/**'
+      - '.github/workflows/c-build.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'algorithms/libDaltonLens/**'
+      - '.github/workflows/c-build.yml'
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        include:
+          - os: ubuntu-latest
+            cmake_generator: "Unix Makefiles"
+          - os: macos-latest
+            cmake_generator: "Unix Makefiles"
+          - os: windows-latest
+            cmake_generator: "Visual Studio 17 2022"
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Configure CMake (Unix)
+        if: runner.os != 'Windows'
+        working-directory: algorithms/libDaltonLens
+        run: |
+          mkdir -p build
+          cd build
+          cmake .. -G "${{ matrix.cmake_generator }}" \
+            -DCMAKE_BUILD_TYPE=Release \
+            -DCMAKE_C_FLAGS="-Wall -Wextra -Werror"
+
+      - name: Configure CMake (Windows)
+        if: runner.os == 'Windows'
+        working-directory: algorithms/libDaltonLens
+        run: |
+          mkdir build -Force
+          cd build
+          cmake .. -G "${{ matrix.cmake_generator }}" -A x64
+
+      - name: Build
+        working-directory: algorithms/libDaltonLens/build
+        run: cmake --build . --config Release
+
+      - name: Run tests (Unix)
+        if: runner.os != 'Windows'
+        working-directory: algorithms/libDaltonLens/build
+        run: |
+          if [ -f ./tests/test_simulation ]; then
+            ./tests/test_simulation
+          else
+            echo "Test binary not found, checking build output..."
+            find . -name "test_simulation*" -type f
+          fi
+
+      - name: Run tests (Windows)
+        if: runner.os == 'Windows'
+        working-directory: algorithms/libDaltonLens/build
+        run: |
+          $testPath = Get-ChildItem -Path . -Filter "test_simulation.exe" -Recurse | Select-Object -First 1
+          if ($testPath) {
+            & $testPath.FullName
+          } else {
+            Write-Host "Test binary not found"
+            Get-ChildItem -Recurse -Filter "*.exe"
+          }
+
+  static-analysis:
+    name: Static Analysis
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install cppcheck
+        run: sudo apt-get install -y cppcheck
+
+      - name: Run cppcheck
+        working-directory: algorithms/libDaltonLens
+        run: |
+          cppcheck --enable=all --error-exitcode=1 \
+            --suppress=missingIncludeSystem \
+            --suppress=unusedFunction \
+            -I . \
+            libDaltonLens.c libDaltonLens.h
+
+  format-check:
+    name: Format Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install clang-format
+        run: sudo apt-get install -y clang-format
+
+      - name: Check formatting
+        working-directory: algorithms/libDaltonLens
+        run: |
+          clang-format --dry-run --Werror libDaltonLens.c libDaltonLens.h || \
+            echo "Note: Format check is advisory, not blocking"

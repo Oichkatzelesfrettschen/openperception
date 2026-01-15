@@ -1,0 +1,186 @@
+# OpenPerception Root Configuration
+# Python tooling configuration for the entire repository
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+# =============================================================================
+# Ruff Configuration
+# =============================================================================
+[tool.ruff]
+# Target Python version
+target-version = "py38"
+
+# Line length to match Black
+line-length = 88
+
+# Exclude directories
+exclude = [
+    ".git",
+    ".github",
+    ".mypy_cache",
+    ".pytest_cache",
+    ".ruff_cache",
+    ".venv",
+    "__pycache__",
+    "build",
+    "dist",
+    "*.egg-info",
+    # Vendored files
+    "datasets/ishihara-plate-learning/scripts/jquery.js",
+    # Generated files
+    "sphinx/example/_build",
+]
+
+[tool.ruff.lint]
+# Enable these rule sets
+select = [
+    "E",      # pycodestyle errors
+    "W",      # pycodestyle warnings
+    "F",      # Pyflakes
+    "I",      # isort
+    "B",      # flake8-bugbear
+    "C4",     # flake8-comprehensions
+    "UP",     # pyupgrade
+    "SIM",    # flake8-simplify
+    "TCH",    # flake8-type-checking
+    "PTH",    # flake8-use-pathlib
+    "RUF",    # Ruff-specific rules
+]
+
+# Ignore these specific rules
+ignore = [
+    "E501",   # Line too long (handled by formatter)
+    "B008",   # Function call in default argument
+    "B905",   # zip without strict= (Python 3.10+)
+    "UP007",  # Use X | Y for Union (Python 3.10+)
+]
+
+# Allow autofix for all enabled rules
+fixable = ["ALL"]
+unfixable = []
+
+[tool.ruff.lint.isort]
+# isort configuration compatible with Black
+known-first-party = ["daltonlens", "tools"]
+force-single-line = false
+lines-after-imports = 2
+
+[tool.ruff.lint.per-file-ignores]
+# Tests can use assertions and have longer lines
+"**/tests/*.py" = ["S101", "E501"]
+# Init files can have unused imports
+"**/__init__.py" = ["F401"]
+
+# =============================================================================
+# Black Configuration
+# =============================================================================
+[tool.black]
+line-length = 88
+target-version = ["py38", "py39", "py310", "py311", "py312"]
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.github
+  | \.mypy_cache
+  | \.pytest_cache
+  | \.ruff_cache
+  | \.venv
+  | __pycache__
+  | build
+  | dist
+  | \.egg-info
+  | datasets/ishihara-plate-learning
+)/
+'''
+
+# =============================================================================
+# pytest Configuration
+# =============================================================================
+[tool.pytest.ini_options]
+minversion = "7.0"
+testpaths = [
+    "algorithms/DaltonLens-Python/tests",
+    "tools/tests",
+]
+python_files = ["test_*.py", "*_test.py"]
+python_functions = ["test_*"]
+python_classes = ["Test*"]
+addopts = [
+    "-v",
+    "--tb=short",
+    "-ra",
+]
+filterwarnings = [
+    "error",
+    "ignore::DeprecationWarning:PIL.*:",
+]
+
+# =============================================================================
+# Coverage Configuration
+# =============================================================================
+[tool.coverage.run]
+source = [
+    "algorithms/DaltonLens-Python/daltonlens",
+    "tools",
+]
+omit = [
+    "*/tests/*",
+    "*/__pycache__/*",
+    "*/site-packages/*",
+]
+branch = true
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if __name__ == .__main__.:",
+    "if TYPE_CHECKING:",
+    "@abstractmethod",
+]
+show_missing = true
+fail_under = 70
+
+[tool.coverage.html]
+directory = "htmlcov"
+
+# =============================================================================
+# mypy Configuration
+# =============================================================================
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+strict_equality = true
+extra_checks = true
+check_untyped_defs = true
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = [
+    "PIL.*",
+    "numpy.*",
+]
+ignore_missing_imports = true
+
+# =============================================================================
+# Bandit Security Linting
+# =============================================================================
+[tool.bandit]
+exclude_dirs = [
+    "tests",
+    ".git",
+    "__pycache__",
+    "build",
+    "dist",
+]
+skips = [
+    "B101",  # assert_used (needed in tests)
+]

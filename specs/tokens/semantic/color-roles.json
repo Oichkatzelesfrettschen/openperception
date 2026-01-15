@@ -1,0 +1,268 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "version": "1.0.0",
+  "description": "Semantic color roles with CVD-safe redundancy encoding",
+
+  "roles": {
+    "danger": {
+      "description": "Hazards, damage, critical errors, hostile entities",
+      "semantics": ["hazard", "error", "enemy", "damage", "critical"],
+      "color": {
+        "default": {
+          "hue": 10,
+          "chroma": 80,
+          "lightness": 50,
+          "oklch": "oklch(50% 0.2 10)"
+        },
+        "protan-safe": {
+          "hue": 30,
+          "chroma": 90,
+          "lightness": 55,
+          "oklch": "oklch(55% 0.22 30)",
+          "note": "Shifted orange to avoid red confusion"
+        },
+        "deutan-safe": {
+          "hue": 35,
+          "chroma": 90,
+          "lightness": 55,
+          "oklch": "oklch(55% 0.22 35)"
+        },
+        "tritan-safe": {
+          "hue": 10,
+          "chroma": 80,
+          "lightness": 50,
+          "oklch": "oklch(50% 0.2 10)",
+          "note": "Red is distinguishable for tritan"
+        }
+      },
+      "redundancy": {
+        "pattern": "diagonal-stripes-45deg",
+        "icon": "exclamation-triangle",
+        "shape": "triangle-pointed",
+        "animation": "pulse-urgent",
+        "sound-cue": "alert-high"
+      },
+      "cvd-validation": {
+        "delta-e-from-ally": {
+          "protan": 15,
+          "deutan": 15,
+          "tritan": 10
+        }
+      }
+    },
+
+    "ally": {
+      "description": "Friendly, safe, success, player team",
+      "semantics": ["friendly", "success", "player", "safe", "positive"],
+      "color": {
+        "default": {
+          "hue": 145,
+          "chroma": 70,
+          "lightness": 50,
+          "oklch": "oklch(50% 0.175 145)"
+        },
+        "protan-safe": {
+          "hue": 200,
+          "chroma": 60,
+          "lightness": 55,
+          "oklch": "oklch(55% 0.15 200)",
+          "note": "Shifted to blue to avoid green confusion"
+        },
+        "deutan-safe": {
+          "hue": 200,
+          "chroma": 60,
+          "lightness": 55,
+          "oklch": "oklch(55% 0.15 200)"
+        },
+        "tritan-safe": {
+          "hue": 145,
+          "chroma": 70,
+          "lightness": 50,
+          "oklch": "oklch(50% 0.175 145)"
+        }
+      },
+      "redundancy": {
+        "pattern": "solid-fill",
+        "icon": "checkmark-circle",
+        "shape": "circle",
+        "animation": "none",
+        "sound-cue": "confirm-positive"
+      },
+      "cvd-validation": {
+        "delta-e-from-danger": {
+          "protan": 15,
+          "deutan": 15,
+          "tritan": 10
+        }
+      }
+    },
+
+    "focus": {
+      "description": "Current selection, keyboard focus, interactive highlight",
+      "semantics": ["selected", "focused", "active", "current"],
+      "color": {
+        "default": {
+          "hue": 250,
+          "chroma": 80,
+          "lightness": 55,
+          "oklch": "oklch(55% 0.2 250)"
+        }
+      },
+      "redundancy": {
+        "pattern": "outline-double-3px",
+        "icon": null,
+        "shape": "current-shape-outlined",
+        "animation": "subtle-glow",
+        "sound-cue": "focus-move"
+      },
+      "contrast": {
+        "min-against-adjacent": 3.0,
+        "outline-thickness": "2px minimum"
+      }
+    },
+
+    "disabled": {
+      "description": "Unavailable, inactive, locked",
+      "semantics": ["unavailable", "inactive", "locked", "greyed-out"],
+      "color": {
+        "default": {
+          "hue": 0,
+          "chroma": 5,
+          "lightness": 60,
+          "oklch": "oklch(60% 0.01 0)",
+          "note": "Desaturated, near-neutral"
+        }
+      },
+      "redundancy": {
+        "pattern": "dashed-outline",
+        "icon": "lock",
+        "shape": "faded",
+        "animation": "none",
+        "sound-cue": "blocked"
+      },
+      "contrast": {
+        "min-ratio": 3.0
+      }
+    },
+
+    "warning": {
+      "description": "Caution, attention needed, low resources",
+      "semantics": ["caution", "attention", "low-resource", "warning"],
+      "color": {
+        "default": {
+          "hue": 45,
+          "chroma": 85,
+          "lightness": 60,
+          "oklch": "oklch(60% 0.21 45)"
+        }
+      },
+      "redundancy": {
+        "pattern": "chevron-stripes",
+        "icon": "warning-triangle",
+        "shape": "rhombus",
+        "animation": "slow-pulse",
+        "sound-cue": "alert-medium"
+      }
+    },
+
+    "info": {
+      "description": "Neutral information, hints, tooltips",
+      "semantics": ["information", "hint", "help", "neutral"],
+      "color": {
+        "default": {
+          "hue": 200,
+          "chroma": 50,
+          "lightness": 55,
+          "oklch": "oklch(55% 0.125 200)"
+        }
+      },
+      "redundancy": {
+        "pattern": "dotted-outline",
+        "icon": "info-circle",
+        "shape": "rounded-rectangle",
+        "animation": "none",
+        "sound-cue": "info-chime"
+      }
+    },
+
+    "interactable": {
+      "description": "Can be clicked/activated/used",
+      "semantics": ["clickable", "button", "link", "actionable"],
+      "color": {
+        "default": {
+          "hue": 220,
+          "chroma": 70,
+          "lightness": 50,
+          "oklch": "oklch(50% 0.175 220)"
+        }
+      },
+      "redundancy": {
+        "pattern": "solid-with-outline",
+        "icon": null,
+        "shape": "button-shape",
+        "animation": "hover-lift",
+        "cursor": "pointer",
+        "sound-cue": "hover-feedback"
+      },
+      "contrast": {
+        "min-ratio": 3.0,
+        "hover-state-distinct": true
+      }
+    },
+
+    "progress": {
+      "description": "Progress bars, loading, completion",
+      "semantics": ["loading", "progress", "completion", "percentage"],
+      "color": {
+        "filled": {
+          "hue": 145,
+          "chroma": 60,
+          "lightness": 50
+        },
+        "empty": {
+          "hue": 0,
+          "chroma": 5,
+          "lightness": 30
+        }
+      },
+      "redundancy": {
+        "pattern": "fill-direction-left-to-right",
+        "icon": null,
+        "shape": "bar-horizontal",
+        "animation": "fill-animate",
+        "label": "percentage-text-required"
+      }
+    }
+  },
+
+  "contrast-requirements": {
+    "text-normal": {
+      "min-ratio": 4.5,
+      "apca-lc-min": 75,
+      "applies-to": "body text, labels, UI text"
+    },
+    "text-large": {
+      "min-ratio": 3.0,
+      "apca-lc-min": 60,
+      "size-threshold-pt": 18,
+      "size-threshold-bold-pt": 14,
+      "applies-to": "headings, large labels"
+    },
+    "ui-component": {
+      "min-ratio": 3.0,
+      "apca-lc-min": 45,
+      "applies-to": "buttons, form controls, icons"
+    },
+    "focus-indicator": {
+      "min-ratio": 3.0,
+      "min-thickness-px": 2,
+      "applies-to": "keyboard focus rings"
+    }
+  },
+
+  "notes": {
+    "cvd-simulation": "Validate all role pairs using Brettel 1997 or Machado 2009 simulation",
+    "delta-e": "Use CIEDE2000 for perceptual difference calculation",
+    "redundancy": "Every semantic role MUST have non-color redundancy (shape, pattern, icon, or label)"
+  }
+}

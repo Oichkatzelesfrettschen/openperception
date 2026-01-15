@@ -1,0 +1,20 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/home/eirikr/Github/Colorblindness/logs/.e3ec5ec666a9f7beeae509a266e0f94d68726741-audit.json",
+    "files": [
+        {
+            "date": 1766858754020,
+            "name": "/home/eirikr/Github/Colorblindness/logs/mcp-puppeteer-2025-12-27.log",
+            "hash": "cf0d00a95692791af78da80ab854a667243d7a9eff67a1328ff7bc653210e067"
+        },
+        {
+            "date": 1766963859741,
+            "name": "/home/eirikr/Github/Colorblindness/logs/mcp-puppeteer-2025-12-28.log",
+            "hash": "65bd2dd09bccf2ee753b05d23f113153c3dc6b2263d557dfd4180740dc0886d1"
+        }
+    ],
+    "hashType": "sha256"
+}

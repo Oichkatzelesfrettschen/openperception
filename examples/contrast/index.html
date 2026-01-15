@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contrast & Tokens Checker</title>
+    <link rel="stylesheet" href="../../tokens/color-tokens.css">
+    <style>
+      :root { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+      body { margin: 0; color: var(--text); background: var(--surface); }
+      header { padding: 12px 16px; background: var(--surface-subtle); border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 12px; }
+      main { padding: 16px; display: grid; gap: 16px; grid-template-columns: 340px 1fr; }
+      .panel { border: 1px solid var(--border); border-radius: 8px; padding: 12px; background: var(--surface); }
+      .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+      .pair { border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
+      .pair .sample { padding: 8px 10px; font-size: 14px; }
+      .pair .meta { display: flex; justify-content: space-between; font-size: 12px; padding: 6px 8px; border-top: 1px solid var(--border); background: var(--surface-subtle); }
+      .ok { background: #e6f7ec; }
+      .warn { background: #fff7e6; }
+      .fail { background: #ffefef; }
+      .swatches { display: grid; grid-template-columns: repeat(6, 1fr); gap: 4px; }
+      .swatch { height: 28px; border-radius: 4px; border: 1px solid var(--border); }
+      .controls { display: flex; gap: 8px; align-items: center; }
+      input[type="text"] { padding: 6px 8px; border: 1px solid var(--border); border-radius: 4px; width: 110px; }
+      button { padding: 6px 10px; }
+      .muted { color: var(--text-muted); font-size: 12px; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="controls">
+        <label for="variant">Variant:</label>
+        <select id="variant">
+          <option>default</option>
+          <option>protan</option>
+          <option>deutan</option>
+          <option>tritan</option>
+          <option>mono</option>
+        </select>
+      </div>
+      <div class="muted">Switches CSS variables via <code>data-cvd</code> attribute.</div>
+    </header>
+    <main>
+      <section class="panel">
+        <h3>Standard Pairs</h3>
+        <div id="pairs" class="grid"></div>
+      </section>
+      <section class="panel">
+        <h3>Custom Test</h3>
+        <div class="controls">
+          <label>FG:</label><input id="fg" value="#111827" />
+          <label>BG:</label><input id="bg" value="#FFFFFF" />
+          <button id="run">Check</button>
+        </div>
+        <div id="custom" style="margin-top:10px"></div>
+
+        <h3 style="margin-top:16px">Swatches</h3>
+        <div class="swatches" id="sw"></div>
+      </section>
+    </main>
+
+    <script>
+      const PAIRS = [
+        {label:'Text on Surface', fg:'#111827', bg:'#FFFFFF'},
+        {label:'PrimaryStrong on Surface', fg:'#3730A3', bg:'#FFFFFF'},
+        {label:'AccentStrong on Surface', fg:'#86198F', bg:'#FFFFFF'},
+        {label:'White on PrimaryStrong', fg:'#FFFFFF', bg:'#3730A3'},
+        {label:'White on AccentStrong', fg:'#FFFFFF', bg:'#86198F'},
+        {label:'Gray700 on Surface', fg:'#374151', bg:'#FFFFFF'},
+        {label:'Gray500 on Surface', fg:'#6B7280', bg:'#FFFFFF'}
+      ];
+
+      const TOKEN_SWATCHES = [
+        '--indigo-700','--indigo-600','--indigo-500','--indigo-300',
+        '--magenta-700','--magenta-600','--magenta-400','--magenta-200',
+        '--gray-900','--gray-700','--gray-500','--gray-300'
+      ];
+
+      function srgbLuminance(hex){
+        const s = hex.replace('#','');
+        const r = parseInt(s.slice(0,2),16);
+        const g = parseInt(s.slice(2,4),16);
+        const b = parseInt(s.slice(4,6),16);
+        function toLum(c){ c/=255; return c<=0.03928? c/12.92 : Math.pow((c+0.055)/1.055,2.4);} 
+        const R=toLum(r), G=toLum(g), B=toLum(b);
+        return 0.2126*R+0.7152*G+0.0722*B;
+      }
+      function contrast(fg, bg){
+        const L1 = srgbLuminance(fg), L2 = srgbLuminance(bg);
+        const light = Math.max(L1,L2), dark = Math.min(L1,L2);
+        return (light+0.05)/(dark+0.05);
+      }
+      function classify(r){ return r>=7? 'ok': (r>=4.5? 'ok':'warn'); }
+
+      function renderPairs(){
+        const el=document.getElementById('pairs');
+        el.innerHTML='';
+        for(const p of PAIRS){
+          const r=contrast(p.fg,p.bg);
+          const cls = r>=7? 'ok' : (r>=4.5? 'ok' : (r>=3? 'warn':'fail'));
+          const wrap=document.createElement('div');wrap.className='pair';
+          const sample=document.createElement('div');sample.className='sample';
+          sample.style.color=p.fg; sample.style.background=p.bg; sample.textContent=p.label;
+          const meta=document.createElement('div');meta.className='meta '+cls;
+          meta.innerHTML = `<span>${p.fg} on ${p.bg}</span><strong>${r.toFixed(2)}</strong>`;
+          wrap.appendChild(sample); wrap.appendChild(meta); el.appendChild(wrap);
+        }
+      }
+
+      function renderSwatches(){
+        const sw=document.getElementById('sw'); sw.innerHTML='';
+        const cs=getComputedStyle(document.documentElement);
+        for(const v of TOKEN_SWATCHES){
+          const color = cs.getPropertyValue(v).trim();
+          const d=document.createElement('div'); d.className='swatch'; d.title=v+': '+color; d.style.background=color; sw.appendChild(d);
+        }
+      }
+
+      document.getElementById('run').addEventListener('click',()=>{
+        const fg=document.getElementById('fg').value.trim();
+        const bg=document.getElementById('bg').value.trim();
+        const r=contrast(fg,bg);
+        const cls = r>=7? 'ok' : (r>=4.5? 'ok' : (r>=3? 'warn':'fail'));
+        document.getElementById('custom').innerHTML = `<div class="pair"><div class="sample" style="color:${fg};background:${bg}">Sample text Aa</div><div class="meta ${cls}"><span>${fg} on ${bg}</span><strong>${r.toFixed(2)}</strong></div></div>`;
+      });
+
+      const variantSel=document.getElementById('variant');
+      variantSel.addEventListener('change',()=>{
+        document.documentElement.setAttribute('data-cvd', variantSel.value);
+        renderSwatches();
+      });
+
+      renderPairs();
+      renderSwatches();
+    </script>
+  </body>
+  <script src="../shared/auto-dev.js"></script>
+  <script src="../shared/query-variant.js"></script>
+  </html>

@@ -1,0 +1,26 @@
+/* GTK4 brand — monochrome variant */
+@define-color brand_primary #334155; /* slate */
+@define-color brand_primary_strong #1E293B;
+@define-color brand_accent #6B7280;
+@define-color brand_accent_strong #4B5563;
+@define-color brand_text #111827;
+@define-color brand_border #D1D5DB;
+@define-color brand_surface #FFFFFF;
+@define-color brand_surface_subtle #F3F4F6;
+
+@define-color accent_bg_color @brand_primary;
+@define-color accent_fg_color #ffffff;
+@define-color accent_color @brand_primary_strong;
+@define-color link_color @brand_primary_strong;
+@define-color view_bg_color @brand_surface;
+@define-color view_fg_color @brand_text;
+@define-color window_bg_color @brand_surface;
+@define-color window_fg_color @brand_text;
+@define-color borders @brand_border;
+
+label.link, .link label { text-decoration-line: underline; text-decoration-color: @link_color; }
+button.suggested-action { background: @accent_bg_color; color: @accent_fg_color; border: 1px solid @brand_primary_strong; }
+button:focus { outline: 3px solid @brand_primary; outline-offset: 2px; }
+button.secondary { background: transparent; color: @brand_primary_strong; border: 1px solid @brand_primary_strong; }
+.chip.paused { background-image: repeating-linear-gradient(45deg, rgba(0,0,0,0.2) 0, rgba(0,0,0,0.2) 2px, transparent 2px, transparent 6px); border: 1px solid @borders; border-radius: 999px; padding: 2px 8px; }
+

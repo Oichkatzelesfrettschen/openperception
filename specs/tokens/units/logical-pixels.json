@@ -1,0 +1,243 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "version": "1.0.0",
+  "description": "Canonical unit system for device-independent sizing in UVAS+",
+
+  "reference": {
+    "dpi_ref": 96,
+    "lp_per_inch": 96,
+    "definition": "1 lp = 1/96 inch at reference density",
+    "equivalents": {
+      "windows_dip": "1 lp = 1 DIP",
+      "css_px": "1 lp = 1 CSS px (at 96 DPI reference)",
+      "macos_pt": "1 lp = 0.75 pt (macOS uses 72 pt/inch)"
+    }
+  },
+
+  "scaling": {
+    "effective_scale_formula": "S_eff = (DPI_phys / DPI_ref) * S_user",
+    "conversion_formula": "x_px = x_lp * S_eff",
+    "parameters": {
+      "DPI_phys": {
+        "type": "number",
+        "description": "Physical display DPI",
+        "common_values": [76, 96, 110, 120, 144, 192, 216, 288],
+        "fallback": 96
+      },
+      "S_user": {
+        "type": "number",
+        "description": "User scaling preference",
+        "range": {"min": 0.5, "max": 4.0},
+        "common_values": [1.0, 1.25, 1.5, 1.75, 2.0],
+        "default": 1.0
+      }
+    }
+  },
+
+  "quantization": {
+    "description": "Context-specific rounding rules to avoid fractional pixel artifacts",
+    "contexts": {
+      "text_size": {
+        "precision_px": 0.25,
+        "rationale": "Font engines handle quarter-pixel sizing well"
+      },
+      "text_position": {
+        "precision_px": 0.5,
+        "rationale": "Subpixel positioning for kerning and glyph placement"
+      },
+      "stroke": {
+        "precision_px": 1.0,
+        "rationale": "Crisp edges require whole pixel alignment"
+      },
+      "layout": {
+        "precision_px": 1.0,
+        "rationale": "Predictable box model and spacing"
+      },
+      "icon": {
+        "precision_px": 1.0,
+        "rationale": "Pixel-perfect icon alignment"
+      }
+    },
+    "high_dpi_refinement": {
+      "threshold_dpi": 144,
+      "adjustments": {
+        "text_size": {"precision_px": 0.125},
+        "stroke": {"precision_px": 0.5}
+      }
+    }
+  },
+
+  "base_grid": {
+    "unit": 4,
+    "unit_name": "lp",
+    "rationale": "4lp base ensures clean results at common scaling factors",
+    "clean_scaling_proof": {
+      "at_1.0x": "4 lp -> 4 px",
+      "at_1.25x": "4 lp -> 5 px",
+      "at_1.5x": "4 lp -> 6 px",
+      "at_2.0x": "4 lp -> 8 px"
+    }
+  },
+
+  "typography_scale": {
+    "formula": "f_lp(k) = f_0 * r^k",
+    "default_base": 16,
+    "default_ratio": 1.25,
+    "steps": {
+      "-2": {"name": "micro", "value_lp": 10},
+      "-1": {"name": "small", "value_lp": 13},
+      "0": {"name": "body", "value_lp": 16},
+      "1": {"name": "large", "value_lp": 20},
+      "2": {"name": "h4", "value_lp": 25},
+      "3": {"name": "h3", "value_lp": 31},
+      "4": {"name": "h2", "value_lp": 39},
+      "5": {"name": "h1", "value_lp": 49},
+      "6": {"name": "display", "value_lp": 61}
+    },
+    "alternative_ratios": {
+      "tight": {"value": 1.125, "name": "Major Second"},
+      "balanced": {"value": 1.200, "name": "Minor Third"},
+      "clear": {"value": 1.250, "name": "Major Third", "default": true},
+      "strong": {"value": 1.333, "name": "Perfect Fourth"},
+      "dramatic": {"value": 1.618, "name": "Golden Ratio"}
+    }
+  },
+
+  "spacing_scale": {
+    "base": 4,
+    "scale": {
+      "0": 0,
+      "1": 4,
+      "2": 8,
+      "3": 12,
+      "4": 16,
+      "5": 20,
+      "6": 24,
+      "7": 28,
+      "8": 32,
+      "9": 36,
+      "10": 40,
+      "11": 48,
+      "12": 56,
+      "13": 64,
+      "14": 80,
+      "15": 96,
+      "16": 128
+    },
+    "semantic": {
+      "none": 0,
+      "xs": 4,
+      "sm": 8,
+      "md": 16,
+      "lg": 24,
+      "xl": 32,
+      "2xl": 48,
+      "3xl": 64
+    }
+  },
+
+  "interactive_targets": {
+    "touch_minimum_lp": 44,
+    "touch_recommended_lp": 48,
+    "click_minimum_lp": 24,
+    "focus_ring_offset_lp": 2,
+    "focus_ring_width_lp": 2,
+    "scaling_note": "Touch targets scale with S_eff but never below 44px physical"
+  },
+
+  "platform_mappings": {
+    "web": {
+      "unit": "rem",
+      "base": "1rem = 16px (browser default)",
+      "conversion": "x_rem = x_lp / 16",
+      "media_query": "use (min-width: Xlp) not (min-width: Xpx)"
+    },
+    "windows": {
+      "unit": "DIP",
+      "conversion": "1 lp = 1 DIP",
+      "api": "GetDpiForWindow(), WM_DPICHANGED"
+    },
+    "macos": {
+      "unit": "point",
+      "conversion": "x_pt = x_lp * 0.75",
+      "api": "NSScreen.backingScaleFactor"
+    },
+    "android": {
+      "unit": "dp",
+      "conversion": "1 lp = 1 dp (at 160 dpi baseline, but conceptually similar)",
+      "note": "Android uses 160 dpi baseline; multiply by 1.667 for exact lp"
+    },
+    "ios": {
+      "unit": "point",
+      "conversion": "1 lp = 1 pt (iOS points are ~96 dpi equivalent)",
+      "api": "UIScreen.scale"
+    },
+    "unity": {
+      "approach": "Canvas Scaler with Reference Resolution",
+      "reference": "1920x1080 at 96 DPI",
+      "scaling_mode": "Scale With Screen Size"
+    },
+    "unreal": {
+      "approach": "DPI Scaling Curve",
+      "widget_units": "Slate units (configurable)"
+    }
+  },
+
+  "common_dpi_profiles": {
+    "low_density": {
+      "dpi_range": [72, 96],
+      "examples": ["Legacy CRT", "Old LCD monitors"],
+      "s_eff_at_100%": "0.75-1.0"
+    },
+    "standard_density": {
+      "dpi_range": [96, 120],
+      "examples": ["Most desktop monitors"],
+      "s_eff_at_100%": "1.0-1.25"
+    },
+    "high_density": {
+      "dpi_range": [120, 192],
+      "examples": ["Laptop screens", "QHD monitors"],
+      "s_eff_at_100%": "1.25-2.0"
+    },
+    "ultra_high_density": {
+      "dpi_range": [192, 400],
+      "examples": ["4K monitors", "Retina displays", "Mobile screens"],
+      "s_eff_at_100%": "2.0-4.0"
+    }
+  },
+
+  "testing_matrix": {
+    "dpi_values": [76, 96, 110, 144, 192],
+    "scale_factors": [0.5, 1.0, 1.25, 1.5, 2.0, 4.0],
+    "combinations_to_validate": [
+      {"dpi": 96, "scale": 1.0, "s_eff": 1.0},
+      {"dpi": 96, "scale": 1.25, "s_eff": 1.25},
+      {"dpi": 96, "scale": 1.5, "s_eff": 1.5},
+      {"dpi": 96, "scale": 2.0, "s_eff": 2.0},
+      {"dpi": 144, "scale": 1.0, "s_eff": 1.5},
+      {"dpi": 144, "scale": 1.25, "s_eff": 1.875},
+      {"dpi": 192, "scale": 1.0, "s_eff": 2.0},
+      {"dpi": 76, "scale": 1.0, "s_eff": 0.79},
+      {"dpi": 76, "scale": 1.25, "s_eff": 0.99}
+    ]
+  },
+
+  "invariants": {
+    "INV-U01": {
+      "rule": "All design tokens defined in logical pixels (lp)",
+      "severity": "WARNING"
+    },
+    "INV-U02": {
+      "rule": "S_eff >= 0.5 (never smaller than half reference)",
+      "severity": "WARNING"
+    },
+    "INV-U03": {
+      "rule": "Touch targets >= 44 lp, which is >= 22px physical minimum",
+      "severity": "WARNING"
+    },
+    "INV-U04": {
+      "rule": "Quantization applied before final render",
+      "severity": "WARNING"
+    }
+  }
+}

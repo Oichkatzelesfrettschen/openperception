@@ -1,0 +1,152 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "version": "1.0.0",
+  "description": "Font Contract: measurable properties any UVAS-approved font must satisfy",
+
+  "contract": {
+    "static_metrics": {
+      "x_height_ratio": {
+        "description": "Ratio of x-height to cap height",
+        "minimum": 0.50,
+        "optimal_range": [0.52, 0.58],
+        "rationale": "Higher x-height improves legibility at small sizes",
+        "test_method": "Measure x-height / cap-height in font editor or via OpenType metrics"
+      },
+      "cap_height_ratio": {
+        "description": "Ratio of cap height to em square",
+        "range": [0.68, 0.75],
+        "rationale": "Proportional hierarchy between uppercase and lowercase"
+      },
+      "weight_range": {
+        "required_weights": [400, 700],
+        "recommended_weights": [400, 500, 600, 700],
+        "rationale": "Regular and bold minimum; medium/semibold for nuanced hierarchy"
+      },
+      "width_consistency": {
+        "description": "Maximum width shift between weights",
+        "maximum_shift_percent": 5,
+        "rationale": "Prevents layout reflow when toggling bold"
+      }
+    },
+
+    "disambiguation": {
+      "description": "Character pairs that must be visually distinct",
+      "test_string": "Il1 0Oo rnm",
+      "test_sizes_px": [12, 14, 16],
+      "pairs": {
+        "set_a": {
+          "characters": ["I", "l", "1"],
+          "description": "Capital I, lowercase l, digit one",
+          "common_failure": "Slab serif I vs sans l",
+          "mitigation": "I needs serifs or crossbar; l needs tail or hook; 1 needs flag"
+        },
+        "set_b": {
+          "characters": ["0", "O", "o"],
+          "description": "Digit zero, capital O, lowercase o",
+          "common_failure": "Circular zero and O identical",
+          "mitigation": "Zero needs slash, dot, or narrower width"
+        },
+        "set_c": {
+          "characters": ["rn", "m"],
+          "description": "r-n sequence vs m",
+          "common_failure": "Tight tracking collapses rn into m appearance",
+          "mitigation": "Clear separation between r and n stems"
+        },
+        "set_d": {
+          "characters": ["'", "'", "`"],
+          "description": "Apostrophe, right single quote, backtick",
+          "common_failure": "Curly quotes look identical to straight",
+          "mitigation": "Distinct curve direction and positioning"
+        },
+        "set_e": {
+          "characters": ["-", "–", "—"],
+          "description": "Hyphen, en-dash, em-dash",
+          "common_failure": "All three same length",
+          "mitigation": "Clear length progression: hyphen < en-dash < em-dash"
+        }
+      },
+      "pass_criteria": "All pairs distinguishable by naive observer at all test sizes"
+    },
+
+    "rendering_behavior": {
+      "scale_stability": {
+        "test_scales": [1.0, 1.25, 1.5, 2.0],
+        "requirement": "Legible at all scales without blur or collapse",
+        "test_method": "Render at each scale, verify glyph clarity"
+      },
+      "contrast_theme_compatibility": {
+        "themes": ["light", "dark", "high_contrast", "low_glare"],
+        "requirement": "No stroke collapse or blur under theme variants",
+        "critical_pairs": [
+          {"fg": "#FFFFFF", "bg": "#000000"},
+          {"fg": "#000000", "bg": "#FFFFFF"},
+          {"fg": "#1A1A1A", "bg": "#F5F5DC"},
+          {"fg": "#E0E0E0", "bg": "#2D2D2D"}
+        ]
+      },
+      "fractional_dpi": {
+        "test_scales": [1.25, 1.5, 1.75],
+        "platforms": ["Windows", "Linux"],
+        "requirement": "No significant blur at fractional scaling",
+        "note": "Windows ClearType and Linux FreeType handle differently"
+      },
+      "subpixel_degradation": {
+        "requirement": "Graceful degradation when subpixel rendering disabled",
+        "test_method": "Disable ClearType/FreeType subpixel, verify readability"
+      }
+    },
+
+    "cognitive_properties": {
+      "rhythm_stability": {
+        "description": "Even letter spacing without optical gaps",
+        "test_text": "minimum winning illumination",
+        "requirement": "No visible rhythm breaks or 'shimmer' during reading"
+      },
+      "italic_distinctiveness": {
+        "description": "Italic clearly differs from roman",
+        "test_text": "This is roman. This is italic.",
+        "requirement": "Italic identifiable without direct comparison",
+        "note": "Some accessibility fonts avoid true italics; oblique acceptable if distinct"
+      },
+      "weight_progression": {
+        "description": "Linear perceived weight steps",
+        "test_weights": [400, 500, 600, 700],
+        "requirement": "Each step perceivably heavier than previous"
+      }
+    }
+  },
+
+  "compliance_levels": {
+    "full": {
+      "description": "Passes all contract requirements",
+      "use_cases": ["Primary UI font", "Body text", "All contexts"]
+    },
+    "partial": {
+      "description": "Passes static metrics and disambiguation; may have rendering edge cases",
+      "use_cases": ["Secondary use", "Platform-specific fallback"]
+    },
+    "fail": {
+      "description": "Fails disambiguation or critical metrics",
+      "use_cases": ["Not approved for UVAS systems"]
+    }
+  },
+
+  "testing_protocol": {
+    "automated_checks": [
+      "x_height_ratio via OpenType metrics",
+      "weight availability via font inspection",
+      "disambiguation via rendered image comparison"
+    ],
+    "manual_checks": [
+      "Rendering at fractional DPI",
+      "Subpixel disabled testing",
+      "Rhythm stability assessment"
+    ],
+    "test_environments": [
+      "Chrome on Windows 11 at 125%, 150%",
+      "Firefox on Linux at 1x, 2x",
+      "Safari on macOS at 1x, 2x",
+      "Unity TextMeshPro at 1080p, 4K"
+    ]
+  }
+}

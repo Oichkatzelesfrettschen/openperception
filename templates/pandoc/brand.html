@@ -1,0 +1,19 @@
+<!-- Pandoc HTML template binding brand tokens; usage below -->
+$if(title)$
+<title>$title$</title>
+$endif$
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="../../tokens/color-tokens.css" />
+<link rel="stylesheet" href="brand.css" />
+
+<body>
+<header class="doc-header">
+  $if(title)$<h1 class="title">$title$</h1>$endif$
+  $if(date)$<div class="date">$date$</div>$endif$
+</header>
+<main class="doc-body">
+$body$
+</main>
+</body>
+

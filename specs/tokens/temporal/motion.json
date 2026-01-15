@@ -1,0 +1,316 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "version": "1.0.0",
+  "description": "Temporal tokens for frame-rate independent animation and seizure-safe motion",
+
+  "units": {
+    "time": "milliseconds",
+    "frequency": "hertz",
+    "note": "All durations in ms, all frequencies in Hz - never in frames"
+  },
+
+  "durations": {
+    "description": "Standard transition duration tokens",
+    "instant": {
+      "value_ms": 0,
+      "use_case": "Immediate state changes, reduced-motion mode"
+    },
+    "micro": {
+      "value_ms": 50,
+      "use_case": "Micro-interactions, button feedback"
+    },
+    "short": {
+      "value_ms": 150,
+      "use_case": "Quick transitions, tooltips, dropdowns"
+    },
+    "medium": {
+      "value_ms": 300,
+      "use_case": "Standard transitions, modal opens"
+    },
+    "long": {
+      "value_ms": 500,
+      "use_case": "Complex transitions, page changes"
+    },
+    "extended": {
+      "value_ms": 1000,
+      "use_case": "Elaborate animations, onboarding sequences"
+    },
+    "profile_multipliers": {
+      "standard": 1.0,
+      "eink": 3.0,
+      "flicker_sensitive": 1.5,
+      "reduced_motion": 0
+    }
+  },
+
+  "frequency_caps": {
+    "description": "Maximum oscillation frequencies for safety",
+    "flash_hard_cap": {
+      "value_hz": 3,
+      "severity": "BLOCKING",
+      "source": "WCAG 2.3.1, Epilepsy Action guidelines",
+      "note": "No content may flash more than 3 times per second"
+    },
+    "luminance_modulation_cap": {
+      "standard_hz": 3,
+      "flicker_sensitive_hz": 1,
+      "description": "Maximum frequency for large-area brightness changes"
+    },
+    "high_risk_band": {
+      "min_hz": 10,
+      "max_hz": 25,
+      "severity": "BLOCKING",
+      "description": "Peak photosensitive seizure trigger band - NEVER enter"
+    },
+    "moderate_risk_band": {
+      "ranges": [
+        {"min_hz": 3, "max_hz": 10},
+        {"min_hz": 25, "max_hz": 50}
+      ],
+      "severity": "WARNING",
+      "description": "Some sensitive individuals affected"
+    }
+  },
+
+  "pulse_caps": {
+    "description": "Constraints on pulsing/breathing effects",
+    "max_pulse_frequency_hz": 0.5,
+    "max_contrast_delta_per_pulse": 0.3,
+    "note": "Pulsing effects (loading indicators) must be slow and subtle"
+  },
+
+  "luminance_modulation": {
+    "description": "Constraints on brightness changes",
+    "max_delta_per_frame": {
+      "standard": 0.25,
+      "flicker_sensitive": 0.1,
+      "description": "Maximum relative luminance change in single frame"
+    },
+    "max_affected_area_ratio": {
+      "value": 0.25,
+      "description": "Flashing limited to < 25% of viewport at once",
+      "source": "WCAG general flash threshold"
+    },
+    "strobe_allowed": {
+      "value": false,
+      "severity": "BLOCKING",
+      "description": "Strobe effects are never permitted"
+    }
+  },
+
+  "easing": {
+    "description": "Safe easing functions for transitions",
+    "safe_families": {
+      "linear": {
+        "css": "linear",
+        "description": "Constant velocity, predictable"
+      },
+      "ease_out": {
+        "css": "cubic-bezier(0, 0, 0.2, 1)",
+        "description": "Deceleration, natural stopping"
+      },
+      "ease_in_out": {
+        "css": "cubic-bezier(0.4, 0, 0.2, 1)",
+        "description": "Smooth acceleration and deceleration"
+      },
+      "gentle": {
+        "css": "cubic-bezier(0.25, 0.1, 0.25, 1)",
+        "description": "Subtle, low-acceleration curve"
+      }
+    },
+    "unsafe_patterns": {
+      "snap": {
+        "example": "cubic-bezier(0, 0, 0, 1)",
+        "reason": "Instant acceleration creates flash-like perception"
+      },
+      "bounce": {
+        "example": "Multiple zero-crossings",
+        "reason": "Oscillation can trigger vestibular discomfort"
+      },
+      "elastic": {
+        "example": "Overshoot with oscillation",
+        "reason": "Rapid direction changes problematic for motion sensitivity"
+      }
+    },
+    "note": "Unsafe easings may be used sparingly for small elements with user opt-in"
+  },
+
+  "animation_types": {
+    "description": "Animation category constraints",
+    "transform": {
+      "max_velocity_lp_per_sec": 1000,
+      "description": "Position/rotation/scale changes"
+    },
+    "opacity": {
+      "min_duration_ms": 150,
+      "max_opacity_change_per_frame": 0.1,
+      "description": "Fade in/out transitions"
+    },
+    "color": {
+      "min_duration_ms": 200,
+      "description": "Color shifts must be gradual"
+    },
+    "scroll": {
+      "max_velocity_lp_per_sec": 2000,
+      "smooth_scroll_duration_ms": 300,
+      "description": "Programmatic scroll animations"
+    }
+  },
+
+  "display_mode_overrides": {
+    "description": "How tokens change per display profile",
+    "standard": {
+      "duration_multiplier": 1.0,
+      "animation_enabled": true,
+      "pulse_enabled": true,
+      "parallax_enabled": true
+    },
+    "eink": {
+      "duration_multiplier": 3.0,
+      "animation_enabled": false,
+      "pulse_enabled": false,
+      "parallax_enabled": false,
+      "behaviors": [
+        "All transitions become instant state changes",
+        "Loading indicators use text/progress bars only",
+        "No blinking cursors",
+        "Extended hover/focus dwell times"
+      ]
+    },
+    "flicker_sensitive": {
+      "duration_multiplier": 1.5,
+      "animation_enabled": true,
+      "pulse_enabled": false,
+      "parallax_enabled": false,
+      "behaviors": [
+        "Longer fade durations",
+        "No large-area color transitions",
+        "Reduced particle effects",
+        "No camera shake"
+      ]
+    },
+    "reduced_motion": {
+      "duration_multiplier": 0,
+      "animation_enabled": false,
+      "pulse_enabled": false,
+      "parallax_enabled": false,
+      "behaviors": [
+        "All transitions instant",
+        "Static backgrounds only",
+        "No auto-playing media",
+        "Progress shown as text/numbers"
+      ]
+    },
+    "vrr_safe": {
+      "duration_multiplier": 1.0,
+      "animation_enabled": true,
+      "pulse_enabled": true,
+      "parallax_enabled": false,
+      "behaviors": [
+        "Stable frame timing",
+        "No frame-time dependent motion blur",
+        "Smooth velocity changes only"
+      ]
+    }
+  },
+
+  "frame_rate_independence": {
+    "description": "Ensuring consistent motion across refresh rates",
+    "principle": "Define motion in time (ms), not frames",
+    "implementation": {
+      "velocity_formula": "distance_lp / duration_ms * delta_time_ms",
+      "position_formula": "initial + velocity * elapsed_ms",
+      "note": "Never use frame counts; always use elapsed time"
+    },
+    "min_motion_step": {
+      "description": "Minimum movement per frame to avoid smearing on slow displays",
+      "formula": "max(1, round(velocity_lp_per_sec / refresh_hz))",
+      "eink_minimum_lp": 4
+    }
+  },
+
+  "invariants": {
+    "INV-M01": {
+      "id": "INV-M01",
+      "name": "flash_frequency_cap",
+      "rule": "No content may flash > 3 times per second",
+      "threshold_hz": 3,
+      "severity": "BLOCKING",
+      "source": "WCAG 2.3.1"
+    },
+    "INV-M02": {
+      "id": "INV-M02",
+      "name": "high_risk_band_exclusion",
+      "rule": "No oscillations in 10-25 Hz band",
+      "severity": "BLOCKING",
+      "source": "Photosensitive epilepsy research"
+    },
+    "INV-M03": {
+      "id": "INV-M03",
+      "name": "strobe_prohibition",
+      "rule": "Strobe effects are never permitted",
+      "severity": "BLOCKING"
+    },
+    "INV-M04": {
+      "id": "INV-M04",
+      "name": "time_based_motion",
+      "rule": "All motion defined in milliseconds, not frames",
+      "severity": "WARNING"
+    },
+    "INV-M05": {
+      "id": "INV-M05",
+      "name": "reduced_motion_respect",
+      "rule": "Must honor prefers-reduced-motion",
+      "severity": "WARNING",
+      "source": "WCAG 2.3.3"
+    }
+  },
+
+  "dials": {
+    "DIAL-M01": {
+      "id": "DIAL-M01",
+      "name": "animation_speed",
+      "range": [0.5, 2.0],
+      "default": 1.0,
+      "unit": "multiplier",
+      "floor": 0.5,
+      "description": "Global animation speed multiplier"
+    },
+    "DIAL-M02": {
+      "id": "DIAL-M02",
+      "name": "motion_intensity",
+      "range": [0, 1],
+      "default": 1.0,
+      "floor": 0,
+      "description": "Controls amplitude of parallax, shake, bounce effects"
+    },
+    "DIAL-M03": {
+      "id": "DIAL-M03",
+      "name": "transition_preference",
+      "values": ["instant", "subtle", "standard", "expressive"],
+      "default": "standard",
+      "description": "User preference for transition elaborateness"
+    }
+  },
+
+  "validation_rules": {
+    "flash_detection": {
+      "method": "Luminance delta analysis over 1-second windows",
+      "threshold": "3 transitions exceeding 10% relative luminance",
+      "severity": "BLOCKING"
+    },
+    "spectral_analysis": {
+      "method": "FFT of per-region luminance time series",
+      "flag_band_hz": [10, 25],
+      "severity": "BLOCKING"
+    },
+    "duration_minimum": {
+      "method": "Check all transitions against min_duration thresholds",
+      "severity": "WARNING"
+    },
+    "easing_safety": {
+      "method": "Validate easing functions against safe families",
+      "severity": "WARNING"
+    }
+  }
+}

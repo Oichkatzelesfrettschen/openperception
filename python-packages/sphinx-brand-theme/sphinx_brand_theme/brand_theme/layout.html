@@ -1,0 +1,16 @@
+{# Minimal Sphinx theme layout that pulls brand tokens #}
+<!DOCTYPE html>
+<html lang="{{ language or 'en' }}" data-cvd="default">
+  <head>
+    {{ metatags }}
+    <title>{{ title|striptags }}</title>
+    <link rel="stylesheet" href="{{ pathto('_static/color-tokens.css', 1) }}">
+    <link rel="stylesheet" href="{{ pathto('_static/brand.css', 1) }}">
+    {{ css }}
+  </head>
+  <body>
+    <div class="header"><h1 class="title">{{ title }}</h1></div>
+    <div class="content">{{ body }}</div>
+  </body>
+</html>
+

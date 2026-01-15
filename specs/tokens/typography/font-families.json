@@ -1,0 +1,293 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "version": "1.0.0",
+  "description": "Font family decision matrix by use-case with platform fallbacks",
+
+  "categories": {
+    "ui_sans": {
+      "description": "Interface labels, buttons, menus, short text",
+      "requirements": {
+        "legibility_at_small_sizes": true,
+        "min_test_size_px": 12,
+        "strong_disambiguation": true,
+        "weights_required": [400, 500, 600, 700],
+        "compact_but_not_cramped": true
+      },
+      "primary": {
+        "name": "Inter",
+        "license": "OFL 1.1",
+        "source": "https://rsms.me/inter/",
+        "x_height_ratio": 0.55,
+        "disambiguation_score": "excellent",
+        "weights": [100, 200, 300, 400, 500, 600, 700, 800, 900],
+        "variable": true,
+        "notes": "Designed specifically for screen UI; excellent at small sizes"
+      },
+      "alternates": [
+        {
+          "name": "Source Sans 3",
+          "license": "OFL 1.1",
+          "source": "https://github.com/adobe-fonts/source-sans",
+          "x_height_ratio": 0.53,
+          "disambiguation_score": "good",
+          "weights": [200, 300, 400, 500, 600, 700, 800, 900],
+          "use_when": "Adobe ecosystem, existing brand alignment"
+        },
+        {
+          "name": "Noto Sans",
+          "license": "OFL 1.1",
+          "source": "https://fonts.google.com/noto/specimen/Noto+Sans",
+          "x_height_ratio": 0.54,
+          "disambiguation_score": "good",
+          "weights": [100, 200, 300, 400, 500, 600, 700, 800, 900],
+          "use_when": "Multilingual support required, CJK coverage"
+        },
+        {
+          "name": "IBM Plex Sans",
+          "license": "OFL 1.1",
+          "source": "https://github.com/IBM/plex",
+          "x_height_ratio": 0.53,
+          "disambiguation_score": "excellent",
+          "weights": [100, 200, 300, 400, 500, 600, 700],
+          "use_when": "IBM brand alignment, technical contexts"
+        }
+      ],
+      "fallback_stack": "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    },
+
+    "reading_sans": {
+      "description": "Long-form body text in sans-serif contexts",
+      "requirements": {
+        "comfortable_at_body_sizes": true,
+        "min_test_size_px": 16,
+        "open_counters": true,
+        "generous_x_height": true,
+        "good_rhythm": true,
+        "weights_required": [400, 700]
+      },
+      "primary": {
+        "name": "Atkinson Hyperlegible",
+        "license": "OFL 1.1 (Braille Institute)",
+        "source": "https://brailleinstitute.org/freefont",
+        "x_height_ratio": 0.56,
+        "disambiguation_score": "exceptional",
+        "weights": [400, 700],
+        "italic": true,
+        "notes": "Designed for low vision; exceptional disambiguation; scientifically validated"
+      },
+      "alternates": [
+        {
+          "name": "Lexend",
+          "license": "OFL 1.1",
+          "source": "https://www.lexend.com/",
+          "x_height_ratio": 0.55,
+          "disambiguation_score": "excellent",
+          "weights": [100, 200, 300, 400, 500, 600, 700, 800, 900],
+          "variable": true,
+          "special_feature": "Variable 'Familiarity' axis reduces cognitive load",
+          "use_when": "Dyslexia support, reading fluency focus"
+        },
+        {
+          "name": "OpenDyslexic",
+          "license": "OFL 1.1",
+          "source": "https://opendyslexic.org/",
+          "x_height_ratio": 0.54,
+          "disambiguation_score": "exceptional",
+          "weights": [400, 700],
+          "special_feature": "Weighted bottoms to anchor letter recognition",
+          "use_when": "User preference for dyslexia-specific font"
+        },
+        {
+          "name": "Source Sans 3",
+          "license": "OFL 1.1",
+          "use_when": "Need more weights than Atkinson provides"
+        }
+      ],
+      "fallback_stack": "system-ui, -apple-system, sans-serif"
+    },
+
+    "reading_serif": {
+      "description": "Long-form body text, academic/literary contexts",
+      "requirements": {
+        "optimized_for_body_sizes": true,
+        "min_test_size_px": 16,
+        "clear_serifs_at_low_dpi": true,
+        "strong_italic_distinction": true,
+        "weights_required": [400, 700]
+      },
+      "primary": {
+        "name": "Literata",
+        "license": "OFL 1.1",
+        "source": "https://github.com/googlefonts/literata",
+        "x_height_ratio": 0.52,
+        "disambiguation_score": "good",
+        "weights": [200, 300, 400, 500, 600, 700, 800, 900],
+        "variable": true,
+        "notes": "Designed for Google Play Books; optimized for e-reading"
+      },
+      "alternates": [
+        {
+          "name": "Source Serif 4",
+          "license": "OFL 1.1",
+          "source": "https://github.com/adobe-fonts/source-serif",
+          "x_height_ratio": 0.51,
+          "disambiguation_score": "good",
+          "weights": [200, 300, 400, 500, 600, 700, 800, 900],
+          "use_when": "Adobe ecosystem, pairing with Source Sans"
+        },
+        {
+          "name": "Noto Serif",
+          "license": "OFL 1.1",
+          "source": "https://fonts.google.com/noto/specimen/Noto+Serif",
+          "x_height_ratio": 0.52,
+          "weights": [100, 200, 300, 400, 500, 600, 700, 800, 900],
+          "use_when": "Multilingual support, CJK coverage"
+        },
+        {
+          "name": "Crimson Pro",
+          "license": "OFL 1.1",
+          "source": "https://github.com/nicholashubbard/Crimson-Pro",
+          "x_height_ratio": 0.48,
+          "weights": [200, 300, 400, 500, 600, 700, 800, 900],
+          "use_when": "Traditional book aesthetic, larger sizes"
+        }
+      ],
+      "fallback_stack": "Georgia, 'Times New Roman', serif"
+    },
+
+    "mono": {
+      "description": "Code, data, tabular content",
+      "requirements": {
+        "fixed_width": true,
+        "clear_disambiguation": true,
+        "distinct_zero_o": true,
+        "distinct_one_l_i": true,
+        "ligatures_optional": true,
+        "weights_required": [400, 700]
+      },
+      "primary": {
+        "name": "JetBrains Mono",
+        "license": "OFL 1.1",
+        "source": "https://www.jetbrains.com/lp/mono/",
+        "disambiguation_score": "exceptional",
+        "weights": [100, 200, 300, 400, 500, 600, 700, 800],
+        "ligatures": true,
+        "notes": "Slashed zero, dotted lowercase l, distinct 1; increased x-height for code"
+      },
+      "alternates": [
+        {
+          "name": "Fira Code",
+          "license": "OFL 1.1",
+          "source": "https://github.com/tonsky/FiraCode",
+          "disambiguation_score": "excellent",
+          "weights": [300, 400, 500, 600, 700],
+          "ligatures": true,
+          "use_when": "Programming ligature preference, Mozilla alignment"
+        },
+        {
+          "name": "Source Code Pro",
+          "license": "OFL 1.1",
+          "source": "https://github.com/adobe-fonts/source-code-pro",
+          "disambiguation_score": "excellent",
+          "weights": [200, 300, 400, 500, 600, 700, 800, 900],
+          "ligatures": false,
+          "use_when": "Adobe ecosystem, no ligatures preferred"
+        },
+        {
+          "name": "IBM Plex Mono",
+          "license": "OFL 1.1",
+          "source": "https://github.com/IBM/plex",
+          "disambiguation_score": "excellent",
+          "weights": [100, 200, 300, 400, 500, 600, 700],
+          "use_when": "IBM brand alignment, technical documentation"
+        },
+        {
+          "name": "Cascadia Code",
+          "license": "OFL 1.1",
+          "source": "https://github.com/microsoft/cascadia-code",
+          "disambiguation_score": "excellent",
+          "weights": [200, 300, 400, 500, 600, 700],
+          "ligatures": true,
+          "use_when": "Windows Terminal default, Microsoft ecosystem"
+        }
+      ],
+      "fallback_stack": "ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace"
+    }
+  },
+
+  "accessibility_overrides": {
+    "dyslexia": {
+      "recommended": "Atkinson Hyperlegible",
+      "alternates": ["Lexend", "OpenDyslexic"],
+      "rationale": "Optimized disambiguation and letter distinction",
+      "additional_settings": {
+        "letter_spacing": "0.05em",
+        "word_spacing": "0.12em",
+        "line_height": 1.8,
+        "text_align": "left",
+        "hyphenation": false
+      }
+    },
+    "low_vision": {
+      "recommended": "Atkinson Hyperlegible",
+      "alternates": ["APHont"],
+      "rationale": "Designed by/for visually impaired users",
+      "additional_settings": {
+        "min_font_size": "18px",
+        "font_weight": 500,
+        "letter_spacing": "0.02em"
+      }
+    },
+    "cognitive_load": {
+      "recommended": "Lexend",
+      "alternates": ["Atkinson Hyperlegible"],
+      "rationale": "Variable familiarity axis, clean design",
+      "additional_settings": {
+        "line_height": 1.6,
+        "max_line_length": "65ch"
+      }
+    }
+  },
+
+  "platform_stacks": {
+    "web": {
+      "ui_sans": "'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+      "reading_sans": "'Atkinson Hyperlegible', 'Lexend', system-ui, sans-serif",
+      "reading_serif": "'Literata', Georgia, 'Times New Roman', serif",
+      "mono": "'JetBrains Mono', ui-monospace, 'Cascadia Code', 'Fira Code', Menlo, Consolas, monospace"
+    },
+    "windows": {
+      "ui_sans": "'Inter', 'Segoe UI Variable', 'Segoe UI', system-ui, sans-serif",
+      "reading_sans": "'Atkinson Hyperlegible', 'Segoe UI', sans-serif",
+      "reading_serif": "'Literata', Georgia, 'Times New Roman', serif",
+      "mono": "'JetBrains Mono', 'Cascadia Code', Consolas, monospace"
+    },
+    "macos": {
+      "ui_sans": "'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif",
+      "reading_sans": "'Atkinson Hyperlegible', -apple-system, 'SF Pro Text', sans-serif",
+      "reading_serif": "'Literata', 'New York', Georgia, serif",
+      "mono": "'JetBrains Mono', 'SF Mono', Menlo, monospace"
+    },
+    "linux": {
+      "ui_sans": "'Inter', 'Cantarell', 'DejaVu Sans', sans-serif",
+      "reading_sans": "'Atkinson Hyperlegible', 'DejaVu Sans', sans-serif",
+      "reading_serif": "'Literata', 'DejaVu Serif', serif",
+      "mono": "'JetBrains Mono', 'Fira Code', 'DejaVu Sans Mono', monospace"
+    },
+    "game_engines": {
+      "note": "Embed fonts; do not rely on system fallbacks",
+      "recommended": {
+        "ui": "Inter (variable)",
+        "reading": "Atkinson Hyperlegible",
+        "mono": "JetBrains Mono"
+      },
+      "sdf_rendering": "Use SDF fonts for resolution independence"
+    }
+  },
+
+  "licensing_notes": {
+    "all_primary_fonts": "OFL 1.1 - Free for commercial use, embedding, modification",
+    "attribution_required": "Include license file in distributed software",
+    "web_embedding": "Self-host or use Google Fonts CDN"
+  }
+}

@@ -1,0 +1,161 @@
+# OpenPerception .gitattributes
+# Handle line endings and diff behavior consistently across platforms
+
+# =============================================================================
+# Default Behavior
+# =============================================================================
+# Auto-detect text files and perform LF normalization
+* text=auto
+
+# =============================================================================
+# Source Code
+# =============================================================================
+# Python
+*.py text diff=python eol=lf
+*.pyi text diff=python eol=lf
+*.pyx text diff=python eol=lf
+
+# C/C++
+*.c text diff=cpp eol=lf
+*.h text diff=cpp eol=lf
+*.cpp text diff=cpp eol=lf
+*.hpp text diff=cpp eol=lf
+*.cc text diff=cpp eol=lf
+*.hh text diff=cpp eol=lf
+
+# JavaScript/TypeScript
+*.js text eol=lf
+*.jsx text eol=lf
+*.ts text eol=lf
+*.tsx text eol=lf
+*.mjs text eol=lf
+*.cjs text eol=lf
+
+# CSS
+*.css text diff=css eol=lf
+*.scss text diff=css eol=lf
+*.less text diff=css eol=lf
+
+# HTML
+*.html text diff=html eol=lf
+*.htm text diff=html eol=lf
+*.xhtml text diff=html eol=lf
+
+# =============================================================================
+# Documentation
+# =============================================================================
+*.md text diff=markdown eol=lf
+*.txt text eol=lf
+*.rst text eol=lf
+*.adoc text eol=lf
+
+# =============================================================================
+# Data Files
+# =============================================================================
+*.json text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+*.toml text eol=lf
+*.xml text eol=lf
+*.csv text eol=lf
+
+# =============================================================================
+# Configuration
+# =============================================================================
+*.cfg text eol=lf
+*.conf text eol=lf
+*.config text eol=lf
+*.ini text eol=lf
+.editorconfig text eol=lf
+.gitattributes text eol=lf
+.gitignore text eol=lf
+.gitmodules text eol=lf
+
+# Makefile (must use tabs)
+Makefile text eol=lf
+*.mk text eol=lf
+
+# CMake
+CMakeLists.txt text eol=lf
+*.cmake text eol=lf
+
+# =============================================================================
+# Shell Scripts
+# =============================================================================
+*.sh text eol=lf
+*.bash text eol=lf
+*.zsh text eol=lf
+*.fish text eol=lf
+
+# =============================================================================
+# Binary Files (do not normalize)
+# =============================================================================
+# Images
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.webp binary
+*.svg text eol=lf
+*.bmp binary
+*.tiff binary
+*.tif binary
+
+# Fonts
+*.ttf binary
+*.otf binary
+*.woff binary
+*.woff2 binary
+*.eot binary
+
+# Archives
+*.zip binary
+*.tar binary
+*.gz binary
+*.bz2 binary
+*.xz binary
+*.7z binary
+
+# Documents
+*.pdf binary
+*.doc binary
+*.docx binary
+*.ppt binary
+*.pptx binary
+*.xls binary
+*.xlsx binary
+
+# Compiled
+*.pyc binary
+*.pyo binary
+*.o binary
+*.a binary
+*.so binary
+*.dylib binary
+*.dll binary
+*.exe binary
+
+# Database
+*.db binary
+*.sqlite binary
+*.sqlite3 binary
+
+# =============================================================================
+# Linguist Overrides (for GitHub language stats)
+# =============================================================================
+# Vendor files
+datasets/ishihara-plate-learning/scripts/jquery.js linguist-vendored
+algorithms/libDaltonLens/tests/stb_image.h linguist-vendored
+algorithms/libDaltonLens/tests/stb_image_write.h linguist-vendored
+algorithms/libDaltonLens/tests/sokol_time.h linguist-vendored
+
+# Documentation
+docs/** linguist-documentation
+papers/** linguist-documentation
+research/** linguist-documentation
+specs/** linguist-documentation
+
+# Generated
+tokens/color-tokens.css linguist-generated
+tokens/color-oklch-map.json linguist-generated
