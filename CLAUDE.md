@@ -268,6 +268,88 @@ All workflows treat warnings as errors.
 
 ---
 
+## Troubleshooting
+
+### System Resource Issues (Claude CLI Crashes)
+
+**Symptom**: Claude CLI crashes with `ThreadPoolBuildError: IOError(Os { code: 11, kind: WouldBlock })` or SIGABRT signal
+
+**Root Cause**: System resource exhaustion - combination of:
+1. Thread count exceeding ulimit (multiple Claude instances)
+2. High swap usage (25GB+) causing memory pressure
+3. Aggressive swappiness setting (150 default on some systems)
+4. Rayon thread pool initialization requiring resources not available
+
+**Prevention Measures** (applied 2026-01-29):
+
+```bash
+# Check system health
+system-health                    # Shows memory, swap, threads, Claude instances
+
+# Before intensive operations
+free -h                          # Ensure >4GB available RAM
+ps aux | grep claude | wc -l     # Close unnecessary Claude sessions
+```
+
+**Configuration Applied**:
+
+1. **Swappiness reduced to 10** (from 150):
+   ```bash
+   # Temporary
+   sudo sysctl vm.swappiness=10
+
+   # Permanent (in /etc/sysctl.d/99-swappiness.conf)
+   vm.swappiness=10
+   vm.vfs_cache_pressure=50
+   ```
+
+2. **Rayon thread limit** (in ~/.zshrc):
+   ```bash
+   export RAYON_NUM_THREADS=2
+   ```
+
+3. **Monitoring installed**:
+   - `~/.local/bin/system-health` - System dashboard
+   - `~/.local/bin/memory-monitor` - Cron job alerts (every 5 minutes)
+   - Alerts when available RAM <2GB or threads >80% of ulimit
+
+**Recovery After Crash**:
+
+```bash
+# Verify repository integrity
+cd /home/eirikr/Github/openperception
+git fsck --full                  # Should report no errors
+git status                       # Verify clean working tree
+
+# Test build artifacts
+cd algorithms/libDaltonLens/build
+./test_simulation               # Should show GOOD for all tests
+
+# Test Python package
+cd algorithms/DaltonLens-Python
+python3 -c "from daltonlens import simulate; print('OK')"
+```
+
+**Emergency Memory Reclaim** (use with caution):
+
+```bash
+# Drop filesystem caches (safe, non-destructive)
+sync && echo 3 | sudo tee /proc/sys/vm/drop_caches
+
+# Reclaim swap (ONLY if free RAM > swap usage + 2GB safety margin)
+sudo swapoff -a && sudo swapon -a
+```
+
+**Verified After 2026-01-29 Crash**:
+- Repository integrity: CLEAN (git fsck passed)
+- Build artifacts: FUNCTIONAL (C tests pass, Python imports)
+- Data loss: NONE
+- Working tree: CLEAN
+
+**Quick Reference**: See `~/openperception-troubleshooting.md` for command cheat sheet
+
+---
+
 ## Contact
 
 For questions about this repository, see CONTRIBUTING.md or open an issue.
