@@ -308,7 +308,32 @@ ps aux | grep claude | wc -l     # Close unnecessary Claude sessions
    export RAYON_NUM_THREADS=2
    ```
 
-3. **Monitoring installed**:
+3. **Optimized ulimit values** (in /etc/security/limits.conf):
+   ```bash
+   # System: AMD Ryzen 5 5600X3D (12 threads), 31GB RAM
+   # Previous: nproc=4096 (insufficient, caused thread exhaustion)
+   # Optimized: nproc=16384 (4x increase, allows 10+ Claude instances)
+
+   eirikr  soft  nproc   16384     # Max user processes/threads
+   eirikr  hard  nproc   32768     # Emergency headroom
+   eirikr  soft  nofile  524288    # File descriptors (adequate)
+   eirikr  hard  nofile  1048576   # Doubled for safety
+   ```
+
+   **Rationale**:
+   - Previous limit (4096) caused crashes with current thread usage (4464)
+   - New soft limit (16384) provides 4x headroom for development workload
+   - Hard limit (32768) allows emergency expansion
+   - Still <1% of kernel limit (4,194,304) - safe from runaway processes
+
+   **Verification** (requires logout/login):
+   ```bash
+   verify-ulimits              # Run verification script
+   ulimit -u                   # Should show 16384
+   ulimit -Hu                  # Should show 32768
+   ```
+
+4. **Monitoring installed**:
    - `~/.local/bin/system-health` - System dashboard
    - `~/.local/bin/memory-monitor` - Cron job alerts (every 5 minutes)
    - Alerts when available RAM <2GB or threads >80% of ulimit
