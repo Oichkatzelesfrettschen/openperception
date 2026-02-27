@@ -428,4 +428,15 @@ When citing these papers, please verify current DOIs and URLs as they may change
 This bibliography was compiled for academic research purposes. Papers were identified through systematic literature searches using PubMed, Google Scholar, Frontiers, Nature, and other academic databases.
 
 ---
+
+## See Also
+
+Related compendiums in this repository:
+
+- `papers/ADHD_Visual_Processing_Papers_2023-2025.md` -- ADHD visual processing; co-occurring with autism in many individuals
+- `papers/cognitive_load_visual_processing_papers.md` -- Cognitive load theory; relevant to sensory processing differences
+- `specs/EVIDENCE_MATRIX.md` -- Autism sensory-friendly design claims (CLM-0068)
+
+---
+
 *Last updated: December 2025*

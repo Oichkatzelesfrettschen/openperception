@@ -492,4 +492,14 @@ ATF6 is the only known achromatopsia gene that does not encode a phototransducti
 
 ---
 
+## See Also
+
+Related compendiums in this repository:
+
+- `papers/COLORBLINDNESS_ACADEMIC_PAPERS.md` -- Red-green and blue-yellow CVD research (protanopia, deuteranopia, tritanopia)
+- `papers/colorblindness_algorithms_compendium.md` -- Simulation algorithms applicable to achromatopsia modeling
+- `specs/EVIDENCE_MATRIX.md` -- CVD population statistics and accessibility implications (CLM-0024, CLM-0131)
+
+---
+
 *This compendium was compiled from academic sources and clinical trial registries as of December 2025. For the most current information on ongoing clinical trials, please consult ClinicalTrials.gov directly.*

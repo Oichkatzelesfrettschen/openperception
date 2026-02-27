@@ -1,21 +1,80 @@
-# OKLCH Palette Guide
+# OKLCH Color Token Guide
 
-This document explains how to use perceptually uniform OKLCH values for the brand palette and its CVD variants.
+This guide explains the OKLCH color space and how OpenPerception generates perceptually
+uniform color tokens from hex source values.
 
-Artifacts generated:
-- `tokens/color-oklch-map.json` — hex to `[L, C, h]`
-- `tokens/color-tokens-oklch.css` — CSS variables per ramp/role and per CVD variant
+---
 
-Why OKLCH?
-- More uniform lightness and chroma perception across hues than sRGB/HSV
-- Easier to maintain contrast and separability under CVD by controlling `L` and `C`
+## WHY
 
-How to use in CSS:
-- The CSS file exports variables like `--oklch-indigo-600: L C h;` and `--oklch-brand-primary: L C h;`
-- When supported, use `oklch()`:
-  - `color: oklch(var(--oklch-brand-primary) / 1);`
-- For today’s browsers, keep hex as source of truth and use OKLCH for design checks and future support.
+Traditional HSL hue rotation produces colors with very different perceived lightness
+(yellow appears much brighter than blue at the same L value in HSL). OKLCH fixes this
+with a perceptually uniform lightness axis, making systematic palette design predictable.
 
-How to regenerate:
-- `python3 tools/gen_oklch_tokens.py`
+---
+
+## OKLCH Channels
+
+| Channel | Range | Meaning |
+|---------|-------|---------|
+| L | 0.0 - 1.0 | Perceptual lightness (0=black, 1=white) |
+| C | 0.0 - ~0.37 | Chroma (colorfulness; 0=gray) |
+| H | 0 - 360 | Hue angle in degrees |
+
+---
+
+## Generated Artifacts
+
+- `tokens/color-oklch-map.json` -- hex to `[L, C, H]` mapping for all tokens
+- `tokens/color-tokens-oklch.css` -- CSS custom properties with OKLCH values per role and CVD variant
+
+---
+
+## Using in CSS
+
+```css
+/* Variables exported as: --oklch-brand-primary: L C H */
+.button {
+  color: oklch(var(--oklch-brand-primary) / 1);
+}
+```
+
+For maximum compatibility, keep sRGB hex as the authoritative source in
+`tokens/color-tokens.json` and use OKLCH for design validation and future support.
+
+---
+
+## Regenerate Tokens
+
+```bash
+# Regenerate after editing tokens/color-tokens.json
+make oklch
+
+# Then validate
+make contrast-check
+make separation-check
+```
+
+---
+
+## CVD Variants
+
+Five stylesheets are generated for CVD accommodation. Switch variants via the
+`data-cvd` attribute on `<html>` or `<body>`:
+
+| Attribute | Variant |
+|-----------|---------|
+| (none) | Normal vision |
+| `data-cvd="protan"` | Protanopia/protanomaly |
+| `data-cvd="deutan"` | Deuteranopia/deuteranomaly |
+| `data-cvd="tritan"` | Tritanopia/tritanomaly |
+| `data-cvd="achromat"` | Achromatopsia |
+
+---
+
+## References
+
+- Ottosson, B. (2020). A perceptual color space for image processing.
+  https://bottosson.github.io/posts/oklab/
+- CSS Color 4 specification: https://www.w3.org/TR/css-color-4/#ok-lab
 

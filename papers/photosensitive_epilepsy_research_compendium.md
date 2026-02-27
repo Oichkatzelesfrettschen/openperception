@@ -629,3 +629,12 @@ Compiled December 2025 for Visual Accessibility Academic Research.
 - **Purpose:** Academic research reference
 - **Scope:** Photosensitive epilepsy, pattern sensitivity, visual accessibility guidelines
 - **Sources:** Web searches from academic databases, W3C, ISO, ITU, Ofcom, Epilepsy Foundation
+
+---
+
+## See Also
+
+Related compendiums in this repository:
+
+- `papers/cognitive_load_visual_processing_papers.md` -- Cognitive effects of visual stimuli and attention
+- `specs/EVIDENCE_MATRIX.md` -- Seizure safety claims with enforcement thresholds (CLM-0001 through CLM-0005, CLM-0117)

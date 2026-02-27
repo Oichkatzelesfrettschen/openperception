@@ -1,8 +1,8 @@
 # Visual Accessibility Research Compendium - Master Index
 
-**Repository:** `/home/eirikr/Github/Colorblindness/`
+**Repository:** OpenPerception (see repository root)
 **Compiled:** December 27, 2025
-**Total PDFs:** 57
+**Total PDFs:** Not distributed (copyright restrictions; see individual paper entries for DOI/URL links)
 **Total Compendiums:** 35 markdown files
 
 ---
@@ -166,7 +166,7 @@ Located in `/research/` subdirectories:
 ## Directory Structure
 
 ```
-/home/eirikr/Github/Colorblindness/
+openperception/
 ├── algorithms/
 │   ├── libDaltonLens/          # C implementation
 │   └── DaltonLens-Python/      # Python R&D package

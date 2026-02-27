@@ -2,7 +2,7 @@
 
 **Version:** 1.0.0
 **Date:** 2025-12-27
-**Sources:** 57 PDFs, 35 markdown compendiums, 400+ cataloged papers
+**Sources:** 7 markdown compendiums, 400+ cataloged papers (PDFs not distributed due to copyright)
 
 ---
 
@@ -263,7 +263,7 @@ Each claim follows this structure:
 | Constraint | soft_comfort |
 | Threshold | >= 16px (12pt) minimum, 18pt+ preferred |
 | Evidence | controlled_study |
-| Source | PubMed 17040418 |
+| Source | Legge et al. (2007), J Vis 7(2):8 - https://doi.org/10.1167/7.2.8 (PubMed 17040418) |
 | Notes | RNIB and industry recommend 18pt+ for large print |
 
 ### CLM-0032: Line Height Requirements
@@ -1141,4 +1141,38 @@ Each claim follows this structure:
 
 ---
 
-*Matrix Version 1.3.0 - Updated 2025-12-27 with Display Physics claims (Quantization, DPI Transitions, Reflow Exceptions, Temporal Stability, Color Theory)*
+*Matrix Version 1.3.1 - Updated 2025-12-27 with Display Physics claims (Quantization, DPI Transitions, Reflow Exceptions, Temporal Stability, Color Theory); 2026-02-26 errata: corrected PDF count, added PubMed DOI for CLM-0031, added falsifiability appendix*
+
+---
+
+## Appendix A: Falsifiability Criteria for Controlled-Study Claims
+
+This appendix documents how each `controlled_study` claim could in principle be
+falsified. A claim is falsifiable when an observable outcome would, if measured,
+disprove it.
+
+| CLM ID | Statement Summary | Falsification Criterion |
+|--------|-------------------|------------------------|
+| CLM-0014 | High contrast mode improves reading 25% | RCT shows < 5% improvement for matched low-vision cohort |
+| CLM-0031 | 16pt increases fluent reading to 94.4% | Replication in digital UI context shows no threshold effect at 16pt |
+| CLM-0052 | Monocular cues sufficient for most tasks | Task completion rate for stereoblind users < 80% under monocular-only conditions |
+| CLM-0060 | Working memory holds 7 +/- 2 items | Robust replication shows capacity systematically > 9 or < 5 items |
+| CLM-0063 | Age-specific UI reduces cognitive load 42% | NASA-TLX scores show no significant difference between age-specific and generic UI |
+| CLM-0064 | Progressive disclosure reduces ADHD load | Controlled ADHD study shows error rate or task time higher with progressive disclosure |
+| CLM-0067 | ADHD-friendly design principles effective | ADHD cohort shows no preference for simplified/progressive interfaces in forced choice |
+| CLM-0068 | Autism sensory-friendly design preferred | Autistic cohort prefers high-stimulation interfaces over calm layouts in controlled choice |
+| CLM-0080 | High x-height improves readability | Controlled reading-speed study finds x-height ratio below 0.50 outperforms high x-height fonts |
+| CLM-0081 | Poor disambiguation causes 3-5x errors | Reading error study shows < 1.5x difference between ambiguous and disambiguated fonts |
+| CLM-0082 | Increased spacing improves dyslexic reading 20% | Controlled dyslexic reading study shows spacing manipulation has no significant effect on speed |
+| CLM-0083 | All-caps reduces reading speed 13-20% | Eye-tracking study shows all-caps and mixed-case reading speeds within 5% |
+| CLM-0084 | Lines > 80ch increase reading errors | Reading comprehension study shows no significant difference at 45 vs 80 vs 120 ch line length |
+| CLM-0091 | < 8px spacing increases mis-taps 40% | Touch target study shows mis-tap rate difference < 10% between 8px and 0px spacing |
+| CLM-0093 | Menu depth > 4 levels increases failures 35% | Navigation study shows task failure rate difference < 10% between 2- and 5-level menus |
+| CLM-0094 | Skipped headings cause users to miss 28% content | Screen-reader study shows content discovery rate difference < 10% for skipped headings |
+| CLM-0100 | Color-only charts have 45% error rate for CVD | CVD participant study shows < 20% error rate difference vs dual-encoding charts |
+| CLM-0101 | > 8 legend items reduce comprehension 60% | Chart study shows comprehension accuracy difference < 20% between 4 and 12 legend items |
+| CLM-0102 | > 5 annotations reduce comprehension 25% | Controlled chart study shows no significant difference at 3 vs 7 annotations |
+| CLM-0105 | L* range < 50 impairs palette discrimination | Controlled color discrimination study shows no impairment at L* ranges below 50 |
+| CLM-0106 | Non-uniform scales cause 30% misinterpretation | Viridis vs rainbow study shows < 10% interpretation difference for controlled numeric tasks |
+| CLM-0120 | Modular scales feel perceptually uniform | A/B test shows users cannot distinguish modular from arithmetic size ladders |
+| CLM-0127 | > 10% frame jitter creates visible stutter | Double-blind display study shows < 50% subjects report visible stutter at 10-15% jitter |

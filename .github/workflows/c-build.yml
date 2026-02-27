@@ -35,6 +35,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          lfs: true
 
       - name: Configure CMake (Unix)
         if: runner.os != 'Windows'
@@ -87,6 +90,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          lfs: true
 
       - name: Install cppcheck
         run: sudo apt-get install -y cppcheck
@@ -106,6 +112,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          lfs: true
 
       - name: Install clang-format
         run: sudo apt-get install -y clang-format

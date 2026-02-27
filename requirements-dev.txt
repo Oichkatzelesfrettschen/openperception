@@ -1,0 +1,25 @@
+# Development dependencies - pinned for reproducibility
+# WHY: Pinned versions ensure consistent tooling across contributors and CI.
+# Update periodically with: pip install --upgrade -r requirements-dev.txt
+# Then re-pin: pip freeze | grep -E "^(pytest|ruff|black|mypy|bandit|coverage|pre-commit)" > requirements-dev.txt
+
+# Testing
+pytest==8.3.4
+pytest-cov==6.0.0
+
+# Linting and formatting
+ruff==0.9.0
+black==24.10.0
+
+# Type checking
+mypy==1.13.0
+
+# Security scanning
+bandit==1.8.0
+
+# Pre-commit hooks
+pre-commit==4.0.1
+
+# Runtime dependencies (DaltonLens-Python)
+numpy>=1.21
+Pillow>=9.0

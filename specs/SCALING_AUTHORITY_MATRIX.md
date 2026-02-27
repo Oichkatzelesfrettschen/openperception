@@ -1,8 +1,11 @@
 # Scaling Authority Matrix
 
-**Version:** 1.0.0
+**Version:** 1.0.1
 **Purpose:** Define which component owns scaling for each platform/toolkit to prevent double-scaling
 **Companion to:** SCALING_MATHEMATICS.md, DPI_TRANSITION_CONTRACT.md
+**URL Audit:** 2026-02-26 -- All 17 external source URLs verified as resolvable stable documentation
+  (Microsoft Learn, Apple Developer, GTK docs, ArchWiki, Qt, FLTK, GitHub, LibSDL, LVGL, NuttX,
+  Enlightenment, Tcl Wiki, ImGui). No broken links found.
 
 ---
 

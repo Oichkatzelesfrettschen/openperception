@@ -102,13 +102,13 @@ ipython_config.py
 *.out
 *.app
 
-# CMake
+# CMake (build-dir generated files only -- root Makefile is hand-written and tracked)
 CMakeLists.txt.user
 CMakeCache.txt
 CMakeFiles/
 CMakeScripts/
 Testing/
-Makefile
+build/Makefile
 cmake_install.cmake
 install_manifest.txt
 compile_commands.json

@@ -2,7 +2,7 @@
 
 **Version:** 1.0.0
 **Date:** 2025-12-27
-**Repository:** `/home/eirikr/Github/Colorblindness/`
+**Repository:** OpenPerception (see repository root)
 **Scope:** Cross-platform games, web, mobile, desktop, console UI/UX
 
 ---
@@ -738,4 +738,4 @@ PHASE 6: COGNITIVE LOAD MODES (Density, predictability, focus)
 ---
 
 *Specification Version 1.0.0 - Generated 2025-12-27*
-*Based on 57 PDFs, 35 markdown compendiums, 400+ cataloged papers*
+*Based on 7 markdown compendiums, 400+ cataloged papers (PDFs not distributed due to copyright)*

@@ -14,7 +14,7 @@ None currently. All critical issues have been resolved.
 
 ### Performance Note - Array Allocation (Documented)
 
-**Location**: `algorithms/DaltonLens-Python/daltonlens/simulate.py:486`
+**Location**: `algorithms/DaltonLens-Python/daltonlens/simulate.py` (CoblisV2Simulator.simulate_cvd)
 
 **Description**: The CoblisV2 simulator allocates multiple intermediate arrays for clarity and debugging. This is a conscious design choice prioritizing readability over memory efficiency.
 
@@ -167,9 +167,7 @@ When reporting new issues:
 
 | Issue | Target Version |
 |-------|----------------|
-| CLI NotImplementedError | v0.2.0 |
 | Performance TODO | v0.3.0 |
-| FIXME verification | v0.2.0 |
 | Missing examples | v0.4.0 |
 | Validator implementation | v0.3.0 |
 | Documentation deployment | v0.2.0 |

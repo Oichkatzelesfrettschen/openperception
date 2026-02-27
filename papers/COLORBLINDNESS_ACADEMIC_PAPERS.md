@@ -320,7 +320,7 @@
 - **Year:** 2024
 - **Conference:** UIST '24 (ACM Symposium on User Interface Software and Technology), Pittsburgh, PA
 - **arXiv:** https://arxiv.org/html/2408.01895v1
-- **Local Copy:** /home/eirikr/Github/Colorblindness/papers/arXiv_2408.01895_Trichromacy_Reconstruction_AR.pdf
+- **Local Copy:** Not distributed (copyright); see arXiv link above
 - **Access:** Open Access
 - **Description:** AR-based approach using rotational color shifts to help dichromats distinguish initially confusing colors.
 
@@ -435,6 +435,16 @@ For papers behind paywalls, consider:
 - Using institutional library access
 - Checking preprint servers (arXiv, bioRxiv, medRxiv)
 - Using legal open access tools like Unpaywall browser extension
+
+---
+
+## See Also
+
+Related compendiums in this repository:
+
+- `papers/colorblindness_algorithms_compendium.md` -- Simulation and correction algorithms (Brettel, Vienot, Machado, Fidaner)
+- `papers/achromatopsia_bcm_research_compendium.md` -- Achromatopsia and blue cone monochromacy (extreme CVD variants)
+- `specs/EVIDENCE_MATRIX.md` -- CVD population statistics and accessibility claims (CLM-0020 through CLM-0024, CLM-0131)
 
 ---
 

@@ -28,9 +28,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated MASTER_INDEX.md organization
 
 ### Fixed
-- (Pending) CLI NotImplementedError in main.py
-- (Pending) Performance TODO in simulate.py
-- (Pending) FIXME verification in convert.py
+- (Pending) Performance TODO in simulate.py (CoblisV2 array allocation)
 
 ---
 
@@ -89,5 +87,5 @@ Future versions will follow semantic versioning:
 
 ---
 
-[Unreleased]: https://github.com/username/openperception/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/username/openperception/releases/tag/v0.1.0
+[Unreleased]: https://github.com/openperception/openperception/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/openperception/openperception/releases/tag/v0.1.0

@@ -1,10 +1,6 @@
 # OpenPerception Root Configuration
 # Python tooling configuration for the entire repository
 
-[build-system]
-requires = ["setuptools>=61.0", "wheel"]
-build-backend = "setuptools.build_meta"
-
 # =============================================================================
 # Ruff Configuration
 # =============================================================================

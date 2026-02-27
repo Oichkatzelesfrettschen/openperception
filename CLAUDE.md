@@ -191,10 +191,8 @@ make separation-check    # Should report adequate separation
 See `docs/KNOWN_ISSUES.md` for current gaps and limitations.
 
 Key items:
-- CLI interface partially implemented (some subcommands raise NotImplementedError)
 - Validator framework specified but not fully implemented
-- Performance TODO in simulate.py:486 (array allocation)
-- FIXME in convert.py:282 needs verification
+- Performance TODO in simulate.py (CoblisV2 array allocation, intentional design decision)
 
 ---
 

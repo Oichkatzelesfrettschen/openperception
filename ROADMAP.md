@@ -23,10 +23,10 @@ Create the most comprehensive, evidence-based toolkit for visual accessibility, 
 - [x] Development tools (contrast check, OKLCH generation)
 - [x] GTK4 demo application
 - [x] Repository infrastructure (git, docs, CI/CD)
+- [x] CLI interface (all subcommands implemented in main.py)
 
 ### In Progress
 
-- [ ] CLI interface completion (main.py NotImplementedError)
 - [ ] Validator framework implementation
 - [ ] Performance optimization (array allocation)
 - [ ] Web-based examples expansion

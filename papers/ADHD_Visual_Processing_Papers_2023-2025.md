@@ -378,5 +378,15 @@ A comprehensive compendium of recent academic research on visual processing, att
 
 ---
 
+## See Also
+
+Related compendiums in this repository:
+
+- `papers/autism_visual_processing_bibliography.md` -- Autism visual processing; overlapping sensory sensitivity with ADHD
+- `papers/cognitive_load_visual_processing_papers.md` -- Cognitive load theory; working memory capacity relevant to ADHD
+- `specs/EVIDENCE_MATRIX.md` -- ADHD-friendly design claims with falsifiability criteria (CLM-0064, CLM-0067)
+
+---
+
 *Compiled: December 2025*
 *For: ADHD Visual and Perceptual Processing Research Compendium*

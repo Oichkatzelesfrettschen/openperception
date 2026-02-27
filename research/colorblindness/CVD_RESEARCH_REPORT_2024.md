@@ -319,12 +319,12 @@ Three primary algorithms dominate CVD simulation research:
    - URL: https://opg.optica.org/josaa/abstract.cfm?uri=josaa-14-10-2647
    - Method: Projects stimuli onto reduced stimulus surface in LMS space
    - Best for: All dichromacy types, especially tritanopia
-   - Local copy: `/home/eirikr/Github/Colorblindness/research/colorblindness/algorithms/Brettel_1997_Dichromat_Simulation.pdf`
+   - Local copy: Not distributed (copyright); obtain via DOI or institutional access
 
 2. **"Digital video colourmaps for checking the legibility of displays by dichromats"** (Vienot et al., 1999)
    - Simpler algorithm for protanopia/deuteranopia
    - Better handling of extreme values
-   - Local copy: `/home/eirikr/Github/Colorblindness/research/colorblindness/algorithms/Vienot_1999_Digital_Colourmaps.pdf`
+   - Local copy: Not distributed (copyright); obtain via DOI or institutional access
 
 3. **"A Physiologically-based Model for Simulation of Color Vision Deficiency"** (Machado et al., 2009)
    - Journal: IEEE TVCG
@@ -332,7 +332,7 @@ Three primary algorithms dominate CVD simulation research:
    - PDF: https://www.inf.ufrgs.br/~oliveira/pubs_files/CVD_Simulation/Machado_Oliveira_Fernandes_CVD_Vis2009_final.pdf
    - Method: Incorporates opponent-color theory (stage theory)
    - Unique capability: Simulates anomalous trichromacy (not just dichromacy)
-   - Local copy: `/home/eirikr/Github/Colorblindness/research/colorblindness/algorithms/Machado_2009_CVD_Simulation.pdf`
+   - Local copy: Not distributed (copyright); obtain via DOI or institutional access
 
 ### Recent Research (2025)
 

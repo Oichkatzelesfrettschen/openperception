@@ -522,7 +522,7 @@ Sources:
 - **Created**: 2025-12-27
 - **Research Period Covered**: 2020-2025
 - **Purpose**: Accessibility research repository for stereoblindness and depth perception impairments
-- **Location**: /home/eirikr/Github/Colorblindness/research/visual_impairments/stereoblindness/
+- **Location**: `research/visual_impairments/stereoblindness/` (relative to repository root)
 
 ---
 

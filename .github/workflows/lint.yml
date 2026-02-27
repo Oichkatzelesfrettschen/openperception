@@ -25,6 +25,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          lfs: true
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -46,6 +49,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          lfs: true
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -64,6 +70,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          lfs: true
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -77,8 +86,7 @@ jobs:
 
       - name: Run mypy
         run: |
-          mypy algorithms/DaltonLens-Python/daltonlens --ignore-missing-imports || \
-            echo "Note: Type checking is advisory, not blocking"
+          mypy algorithms/DaltonLens-Python/daltonlens --ignore-missing-imports
 
   security:
     name: Security Scan
@@ -86,6 +94,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          lfs: true
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -100,7 +111,7 @@ jobs:
           bandit -r algorithms/DaltonLens-Python/daltonlens tools \
             -x "**/tests/*" \
             --severity-level medium \
-            -f txt || echo "Note: Security scan is advisory"
+            -f txt
 
   docs:
     name: Documentation Check
@@ -108,6 +119,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          lfs: true
 
       - name: Check for broken links in markdown
         uses: gaurav-nelson/github-action-markdown-link-check@v1

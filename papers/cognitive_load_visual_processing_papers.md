@@ -613,4 +613,15 @@ Compiled: December 2025
 
 ---
 
+## See Also
+
+Related compendiums in this repository:
+
+- `papers/ADHD_Visual_Processing_Papers_2023-2025.md` -- ADHD visual processing; attentional resource allocation
+- `papers/autism_visual_processing_bibliography.md` -- Autism visual processing; sensory overload and cognitive load overlap
+- `papers/colorblindness_algorithms_compendium.md` -- Color processing algorithms; affects chart comprehension load
+- `specs/EVIDENCE_MATRIX.md` -- Cognitive axis claims with falsifiability criteria (CLM-0060 through CLM-0068, CLM-0101)
+
+---
+
 *This compendium was compiled for the Colorblindness research project's cognitive load and visual processing research strand.*

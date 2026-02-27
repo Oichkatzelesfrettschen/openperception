@@ -564,5 +564,16 @@ When citing colorblindness simulation algorithms:
 
 ---
 
+## See Also
+
+Related compendiums in this repository:
+
+- `papers/COLORBLINDNESS_ACADEMIC_PAPERS.md` -- Epidemiology, genetics, clinical research, and gene therapy for CVD
+- `papers/achromatopsia_bcm_research_compendium.md` -- Achromatopsia and blue cone monochromacy (total/rod monochromacy)
+- `papers/cognitive_load_visual_processing_papers.md` -- Cognitive load in visual interfaces; working memory capacity
+- `specs/EVIDENCE_MATRIX.md` -- Claims matrix citing Brettel, Vienot, and Machado algorithms (CLM-0020 through CLM-0023)
+
+---
+
 *Compiled: 2025-12-27*
 *For: Colorblindness Research Compendium*
