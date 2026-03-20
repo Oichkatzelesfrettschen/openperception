@@ -12,14 +12,12 @@ from __future__ import annotations
 
 import argparse
 import http.server
-import io
 import os
 import socketserver
 import sys
 import threading
 import time
 from pathlib import Path
-from typing import Set
 
 
 ROOT = Path.cwd()
@@ -29,7 +27,7 @@ WATCH_EXT = {'.html', '.css', '.js', '.json', '.md', '.py', '.tex', '.sty'}
 
 class LiveReloadRegistry:
     def __init__(self):
-        self.clients: Set[http.server.BaseHTTPRequestHandler] = set()
+        self.clients: set[http.server.BaseHTTPRequestHandler] = set()
         self.lock = threading.Lock()
 
     def register(self, handler):
@@ -45,7 +43,7 @@ class LiveReloadRegistry:
         with self.lock:
             for h in list(self.clients):
                 try:
-                    h.wfile.write(f"data: {msg}\n\n".encode('utf-8'))
+                    h.wfile.write(f"data: {msg}\n\n".encode())
                     h.wfile.flush()
                 except Exception:
                     dead.append(h)
@@ -66,9 +64,9 @@ class Handler(http.server.SimpleHTTPRequestHandler):
     def do_GET(self):
         if self.path == '/__livereload.js':
             src = (
-                "var es=new EventSource('/__events');"\
-                "es.onmessage=function(e){if(e.data==='reload'){location.reload();}};"
-            ).encode('utf-8')
+                b"var es=new EventSource('/__events');"\
+                b"es.onmessage=function(e){if(e.data==='reload'){location.reload();}};"
+            )
             self.send_response(200)
             self.send_header('Content-Type', 'application/javascript')
             self.send_header('Content-Length', str(len(src)))

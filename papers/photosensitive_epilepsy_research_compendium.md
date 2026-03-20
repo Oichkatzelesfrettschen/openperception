@@ -632,9 +632,50 @@ Compiled December 2025 for Visual Accessibility Academic Research.
 
 ---
 
+## 2025-2026 Additions
+
+### PSE Hazard Analysis Tool Validation (2025)
+
+**Title**: "Evaluating Conformance of Video Safety Tools for Photosensitive Epilepsy"
+**Conference**: Springer LNCS (2025)
+**DOI**: 10.1007/978-3-031-93848-1_7
+**Key Finding**: Identifies validation gaps in current PSE hazard analysis tools
+(PEAT, Harding FPA). Proposes new ground-truth video sequence generation for
+validating and comparing PSE safety algorithms. Establishes testing paradigms
+for conformance evaluation.
+**Relevance**: Directly applicable to GATE-001 SEIZURE validator implementation.
+
+### PEAT Status
+
+The Photosensitive Epilepsy Analysis Tool (PEAT) from the Trace Center at University
+of Maryland has been retired and is no longer officially supported. The Harding Flash
+and Pattern Analyzer (FPA) is the successor tool used by YouTube, Vimeo, and broadcast
+platforms.
+
+### Platform-Level Adoption
+
+As of 2025-2026:
+- YouTube and Vimeo run Harding FPA during upload; warn or block failing videos
+- Adobe is implementing seizure safety analysis into its creative tools
+- Browser-level protections are being explored for CSS animations
+
+### Web Accessibility Enforcement
+
+WCAG 2.2 SC 2.3.1 (Level A) remains the primary standard:
+- Max 3 general flashes per second
+- Max 3 red flashes per second
+- Danger zone: 15-20 Hz frequency range
+- Pattern limits: max 5 light-dark pairs if oscillating
+
+---
+
 ## See Also
 
 Related compendiums in this repository:
 
 - `papers/cognitive_load_visual_processing_papers.md` -- Cognitive effects of visual stimuli and attention
 - `specs/EVIDENCE_MATRIX.md` -- Seizure safety claims with enforcement thresholds (CLM-0001 through CLM-0005, CLM-0117)
+
+---
+
+*Updated: 2026-03-19 (added PSE tool validation research, PEAT retirement status, platform adoption)*

@@ -1,6 +1,7 @@
-# Color Vision Deficiency Research Report (2023-2025)
+# Color Vision Deficiency Research Report
 
 **Generated:** 2025-12-27
+**Last Updated:** 2026-03-19
 **Purpose:** Comprehensive accessibility research repository for color vision deficiency (CVD)
 
 ---
@@ -692,11 +693,111 @@ The Rayleigh match test definitively diagnoses inherited red-green CVD:
 
 ---
 
+## 2025-2026 Research Updates
+
+### CVD Simulation Model Accuracy (2025)
+
+A 2025 study evaluated the accuracy of existing CVD simulation models using a novel
+methodology based on quantified color vision tests administered to both color-deficient
+observers (CDOs) and color-normal observers (CNOs) viewing simulated images:
+- **Machado (2009)** and **Yaguchi** models significantly outperform the Yang model
+- Evaluation method compares CDO test results on original colors vs. CNO results on simulated colors
+- Confirms Machado as the strongest general-purpose simulator for anomalous trichromacy
+
+**Source**: "Evaluating the accuracy of color vision deficiency simulation:
+Methodologies and a comparative analysis of current models." *Optics Communications*, 2025.
+
+### Gene Therapy Clinical Trials
+
+#### Achromatopsia (CNGA3/CNGB3)
+
+Five registered gene therapy clinical trials for achromatopsia as of mid-2025:
+
+| Trial | Gene | Phase | Sponsor | Status |
+|-------|------|-------|---------|--------|
+| NCT02610582 | CNGA3 | I/II | STZ/RD-CURE | Completed |
+| NCT03758404 | CNGA3 | I/II | AGTC | Results reported |
+| NCT03001310 | CNGB3 | I/II | MeiraGTx | Phase I/II complete |
+| NCT02935517 | CNGB3 | I/II | AGTC | Results reported |
+| Lonfat et al. 2025 | Review | -- | Multiple | Survey paper |
+
+**Key findings (AGTC, 2025)**:
+- CNGB3 therapy: 2 adults + 2 pediatric patients showed improved retinal sensitivity
+  at second-highest dose; improvements in light discomfort also observed
+- CNGA3 therapy: No consistent evidence of biologic activity
+- Hypothesis: CNGA3 patients have defective protein that may interfere with therapeutic
+  protein function, while CNGB3 patients have no protein expressed
+
+**Key findings (MeiraGTx)**:
+- AAV8-hCARp.hCNGB3 delivered subretinally was safe and well tolerated
+- No consistent efficacy at 24 weeks, though some participants showed trends
+  in color vision and photo-aversion improvement
+
+#### Blue Cone Monochromacy (BCM)
+
+- **CIRM grant**: $4.7M awarded to Blue Gen Therapeutics / Children's Hospital LA (2024)
+- **BGTF-027**: Intravitreal gene therapy encoding functional L-opsin; Phase 1
+  clinical trial protocol being developed (announced July 2025)
+- **ADVM-062**: Adverum Biotechnologies' intravitreal AAV.7m8 vector for sustained
+  L-opsin expression (preclinical)
+- **Treatment window study (2025)**: Communications Biology published research on
+  molecular mechanisms limiting the AAV gene therapy treatment window in BCM mouse
+  models, informing optimal patient age for intervention
+
+**Source**: Lonfat, N., Moreno-Leon, L., Punzo, C., & Khanna, H. (2025).
+"Update on Gene Therapy Clinical Trials for Eye Diseases." *Human Gene Therapy*.
+DOI: 10.1177/10430342251379824
+
+### Daltonization Advances
+
+#### NVIDIA Luminance-Preserving Daltonization (2023)
+
+Ebelin et al. proposed a real-time daltonization algorithm that:
+- Preserves luminance (unlike Fidaner method which can shift brightness)
+- Provides temporal stability (no flickering during camera movement)
+- Runs in 0.2 ms/frame on GPU
+- Outperforms Machado-Oliveira and Huang et al. methods for temporal consistency
+
+**Citation**: Ebelin, P., Crassin, C., Denes, G., Oskarsson, M., Astrom, K., &
+Akenine-Moller, T. (2023). "Luminance-Preserving and Temporally Stable
+Daltonization." *Eurographics 2023 Short Papers*.
+
+#### Deep Learning Daltonization (2025)
+
+- Pix2Pix GAN-based recoloring achieving naturalistic output
+- Swin Transformer approach for CVD compensation (Springer, 2023)
+- ResNet-50/EfficientNet/DenseNet feature embeddings with PCA fusion achieving
+  99.7% accuracy (OvA) and 100% (MLP) for Ishihara enhancement
+- Optimal daltonization parameters: alpha=0.54 (deuteranopia), 0.64 (protanopia)
+- Survey with 15 diagnosed students: recognition of previously unreadable digits
+  increased from <20% to full visibility
+
+**Source**: "Enhancing Ishihara and educational images using machine learning."
+*Frontiers in Artificial Intelligence*, 2025. DOI: 10.3389/frai.2025.1676644
+
+### ChromATA: Real-Time CVD Processing (2025)
+
+ChromATA (Chromatic Accessibility Through Adaptation) is a real-time image processing
+system for CVD simulation and accommodation, extending Machado 2009 with GPU shader
+support for real-time rendering applications.
+
+**Source**: IJSRC, 2025.
+
+### WCAG 3.0 and APCA Status (2025-2026)
+
+- WCAG 3.0 remains in Working Draft as of August 2025
+- APCA (Accessible Perceptual Contrast Algorithm) is NOT yet in the published draft
+- APCA produces Lightness Contrast (LC) scores 0-100+ instead of ratios
+- LC thresholds are context-dependent (body text ~60, headlines ~45)
+- WCAG WG charter targets Q2/2026 for completion (considered optimistic)
+- WCAG 2.2 remains the current recommendation
+
 ## Document History
 
 | Date | Version | Changes |
 |------|---------|---------|
 | 2025-12-27 | 1.0 | Initial comprehensive report |
+| 2026-03-19 | 1.1 | Added 2025-2026 research updates: simulation accuracy study, gene therapy trials, NVIDIA daltonization, deep learning approaches, WCAG 3.0/APCA status |
 
 ---
 

@@ -1,5 +1,5 @@
-import os, sys
 import sphinx_brand_theme
+
 
 project = 'Brand + CVD Sphinx Example'
 extensions = []

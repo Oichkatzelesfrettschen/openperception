@@ -1,5 +1,9 @@
 # Unified Visual Accessibility Specification (UVAS)
 
+> **Implementation Status:** Partially implemented. GATE-002 (CONTRAST) and GATE-003 (CVD)
+> validators exist in `tools/validators/`. Invariants INV-001 through INV-010 are
+> specification only -- no automated enforcement code exists yet (targeted for v0.3.0+).
+
 **Version:** 1.0.0
 **Date:** 2025-12-27
 **Repository:** OpenPerception (see repository root)

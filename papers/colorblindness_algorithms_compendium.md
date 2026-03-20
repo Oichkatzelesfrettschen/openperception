@@ -564,6 +564,57 @@ When citing colorblindness simulation algorithms:
 
 ---
 
+## 2025-2026 Additions
+
+### Simulation Accuracy Evaluation (2025)
+
+**Title**: "Evaluating the accuracy of color vision deficiency simulation:
+Methodologies and a comparative analysis of current models"
+**Journal**: Optics Communications (2025)
+**DOI**: 10.1016/j.optcom.2025.131489 (ScienceDirect)
+**Key Finding**: Novel evaluation methodology comparing CDO test results on original
+colors vs. CNO results on simulated colors. Machado (2009) and Yaguchi models
+significantly outperform Yang model. Confirms Machado as strongest general-purpose
+simulator for anomalous trichromacy.
+**Relevance**: Validates DaltonLens-Python's Machado implementation as state-of-the-art.
+
+### ChromATA: Real-Time CVD Processing (2025)
+
+**Title**: "ChromATA: A Real-Time Image Processing Simulation and Accommodation System"
+**Journal**: IJSRC (2025)
+**Key Finding**: Extends Machado 2009 with GPU shader support for real-time rendering.
+Demonstrates feasibility of live CVD simulation in consumer applications.
+
+### NVIDIA Luminance-Preserving Daltonization (2023)
+
+**Title**: "Luminance-Preserving and Temporally Stable Daltonization"
+**Authors**: Ebelin, P., Crassin, C., Denes, G., Oskarsson, M., Astrom, K., Akenine-Moller, T.
+**Conference**: Eurographics 2023 Short Papers
+**Key Finding**: Real-time daltonization (0.2 ms/frame GPU) that preserves luminance
+and provides temporal stability. Outperforms Machado-Oliveira and Huang et al. for
+temporal consistency. Addresses flickering artifacts in competing algorithms.
+**Relevance**: Next-generation daltonization approach; potential future implementation target.
+
+### Deep Learning Daltonization (2025)
+
+**Title**: "Enhancing Ishihara and educational images using machine learning:
+toward accessible learning for colorblind individuals"
+**Journal**: Frontiers in Artificial Intelligence (2025)
+**DOI**: 10.3389/frai.2025.1676644
+**Key Finding**: Feature embeddings (ResNet-50/EfficientNet/DenseNet) with PCA fusion
+achieve 99.7% OvA accuracy for daltonization. Optimal alpha=0.54 (deutan), 0.64 (protan).
+Diagnosed student surveys confirm <20% to full visibility improvement.
+
+### Swin Transformer Recoloring (2023)
+
+**Title**: "Image recoloring for color vision deficiency compensation using Swin transformer"
+**Journal**: Neural Computing and Applications (Springer, 2023)
+**DOI**: 10.1007/s00521-023-09367-2
+**Key Finding**: Transformer-based recoloring with learned loss functions for naturalness
+and contrast. Unsupervised training.
+
+---
+
 ## See Also
 
 Related compendiums in this repository:
@@ -576,4 +627,5 @@ Related compendiums in this repository:
 ---
 
 *Compiled: 2025-12-27*
+*Updated: 2026-03-19 (added 2025-2026 simulation accuracy, daltonization, and ML papers)*
 *For: Colorblindness Research Compendium*

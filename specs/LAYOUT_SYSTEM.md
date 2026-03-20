@@ -1,5 +1,7 @@
 # Layout System Specification
 
+> **Status:** SPECIFICATION ONLY -- not yet targeted for implementation
+
 **Version:** 1.0.0
 **Purpose:** Define measurable layout requirements as invariants and dials within the UVAS framework
 

@@ -378,6 +378,45 @@ A comprehensive compendium of recent academic research on visual processing, att
 
 ---
 
+## 2025-2026 Additions
+
+### Retinal Fundus Imaging as ADHD Biomarker (2025)
+
+**Title**: "Retinal fundus imaging as biomarker for ADHD using machine learning
+for screening and visual attention stratification"
+**Journal**: npj Digital Medicine (Nature, 2025)
+**DOI**: 10.1038/s41746-025-01547-9
+**Key Finding**: Machine learning analysis of retinal fundus photographs for
+noninvasive ADHD screening and executive function stratification:
+- ADHD screening models: 95.5%-96.9% AUROC
+- Visual subdomain models show strong performance for executive function stratification
+- Noninvasive, objective, and scalable approach
+**Accessibility Relevance**: Confirms visual pathway differences in ADHD that
+may inform interface design (temporal processing, attention allocation)
+
+### AI-Enabled Early ASD/ADHD Detection (2025)
+
+**Title**: "AI-Enabled Technologies and Biomarker Analysis for the Early
+Identification of Autism and Related Neurodevelopmental Disorders"
+**Journal**: PMC (2025)
+**Key Finding**: Review of AI-enabled tools combining machine learning with
+biological and behavioral signatures. Eye-tracking demonstrates high diagnostic
+accuracy often rivaling traditional observational methods.
+
+### Eye Tracking and Gaze Patterns (2025)
+
+Children with both autism and ADHD show shorter periods of focused attention on
+faces while viewing static social cues compared to ASD-only and neurotypical
+children. ADHD-specific gaze patterns are linked to task accuracy, with increased
+fixation variability and shorter dwell times on task-relevant stimuli.
+
+**Accessibility Implications**:
+- UI elements must compete effectively for attention (contrast, size, placement)
+- Critical information should not rely on sustained visual attention
+- Progressive disclosure reduces visual competition
+
+---
+
 ## See Also
 
 Related compendiums in this repository:
@@ -389,4 +428,5 @@ Related compendiums in this repository:
 ---
 
 *Compiled: December 2025*
+*Updated: 2026-03-19 (added retinal fundus biomarker, AI detection, gaze pattern studies)*
 *For: ADHD Visual and Perceptual Processing Research Compendium*

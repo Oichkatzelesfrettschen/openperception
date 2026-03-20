@@ -6,7 +6,7 @@
 # =============================================================================
 [tool.ruff]
 # Target Python version
-target-version = "py38"
+target-version = "py314"
 
 # Line length to match Black
 line-length = 88
@@ -27,6 +27,10 @@ exclude = [
     "datasets/ishihara-plate-learning/scripts/jquery.js",
     # Generated files
     "sphinx/example/_build",
+    # Git submodules -- upstream code, not linted by this project
+    "algorithms/DaltonLens-Python",
+    "algorithms/libDaltonLens",
+    "datasets/ishihara-plate-learning",
 ]
 
 [tool.ruff.lint]
@@ -49,8 +53,6 @@ select = [
 ignore = [
     "E501",   # Line too long (handled by formatter)
     "B008",   # Function call in default argument
-    "B905",   # zip without strict= (Python 3.10+)
-    "UP007",  # Use X | Y for Union (Python 3.10+)
 ]
 
 # Allow autofix for all enabled rules
@@ -59,7 +61,7 @@ unfixable = []
 
 [tool.ruff.lint.isort]
 # isort configuration compatible with Black
-known-first-party = ["daltonlens", "tools"]
+known-first-party = ["daltonlens"]
 force-single-line = false
 lines-after-imports = 2
 
@@ -68,13 +70,24 @@ lines-after-imports = 2
 "**/tests/*.py" = ["S101", "E501"]
 # Init files can have unused imports
 "**/__init__.py" = ["F401"]
+# OKLCH code uses 'l' as the standard domain variable name (lightness)
+"tools/okcolor.py" = ["E741"]
+# GTK4 demo must import gi before subpackages (E402 is intentional ordering)
+"gtk4/demo.py" = ["E402"]
+"gtk4/template/app.py" = ["E402", "PTH100", "PTH118", "E701", "E702"]
+# Benchmark script uses os.path for cross-platform path construction
+"benchmarks/run_benchmarks.py" = ["PTH100", "PTH103", "PTH118", "PTH120", "PTH123"]
+# Dev server: lambda and suppress patterns are intentional
+"tools/devserver.py" = ["E731", "SIM105"]
+# OKLCH token generator: loop variable and suppress pattern are intentional
+"tools/gen_oklch_tokens.py" = ["B007", "SIM105"]
 
 # =============================================================================
 # Black Configuration
 # =============================================================================
 [tool.black]
 line-length = 88
-target-version = ["py38", "py39", "py310", "py311", "py312"]
+target-version = ["py312", "py313", "py314"]
 include = '\.pyi?$'
 exclude = '''
 /(
@@ -149,7 +162,7 @@ directory = "htmlcov"
 # mypy Configuration
 # =============================================================================
 [tool.mypy]
-python_version = "3.8"
+python_version = "3.14"
 warn_return_any = true
 warn_unused_configs = true
 warn_redundant_casts = true

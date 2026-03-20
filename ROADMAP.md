@@ -42,9 +42,9 @@ Create the most comprehensive, evidence-based toolkit for visual accessibility, 
 - [ ] Add cross-platform build validation (Linux, macOS, Windows)
 - [ ] Set up automated documentation deployment
 
-### CLI Completion
+### CLI Enhancements
 
-- [ ] Implement all CLI subcommands
+- [x] Implement all CLI subcommands (main.py -- simulate, daltonize, info)
 - [ ] Add batch processing support
 - [ ] Create CLI integration tests
 - [ ] Document CLI usage comprehensively
@@ -70,7 +70,7 @@ Create the most comprehensive, evidence-based toolkit for visual accessibility, 
 
 ### Algorithm Expansion
 
-- [ ] Daltonization (color correction) algorithms
+- [x] Daltonization (color correction) algorithms (daltonize.py -- Fidaner, Simple)
 - [ ] Anomalous trichromacy refined models
 - [ ] Machine learning-based perceptual metrics
 - [ ] Real-time video processing support
@@ -116,6 +116,42 @@ Create the most comprehensive, evidence-based toolkit for visual accessibility, 
 
 ---
 
+## Deferred Items
+
+The following items are tracked but explicitly deferred to future milestones:
+
+### Deferred to v0.2.0+
+- [ ] PEP 621 migration (setup.cfg to pyproject.toml consolidation)
+- [ ] Sphinx API documentation generation
+- [ ] GitHub Pages documentation deployment
+
+### Deferred to v0.3.0+
+- [ ] Machado2009 C port (algorithm parity)
+- [ ] Daltonization C port (depends on Machado port)
+- [ ] GATE-001 SEIZURE validator implementation
+- [ ] GATE-004 SPATIAL validator implementation
+- [ ] GATE-005 TEMPORAL/DEPTH validator implementation
+- [ ] GATE-006 COGNITIVE validator implementation
+- [ ] Unified validator CLI interface
+- [ ] CI coverage badge in README
+- [ ] PyPI publish workflow
+
+### Deferred to v0.4.0+
+- [ ] sRGB lookup table optimization for C library
+- [ ] SIMD vectorization for C library
+- [ ] Performance benchmark suite
+- [ ] Blue Cone Monochromacy simulation
+
+### Spec-Only (no implementation timeline)
+The following specs define aspirational architecture and have no current implementation target:
+- `specs/TYPOGRAPHY_SYSTEM.md`
+- `specs/LAYOUT_SYSTEM.md`
+- `specs/DPI_TRANSITION_CONTRACT.md`
+- `specs/DISPLAY_ADAPTATION_LAYER.md`
+- `specs/UNIFIED_VISUAL_ACCESSIBILITY_SPEC.md` (INV-001 through INV-010 invariant enforcement)
+
+---
+
 ## Non-Goals
 
 The following are explicitly out of scope:
@@ -131,7 +167,7 @@ The following are explicitly out of scope:
 
 | Priority | Category | Items |
 |----------|----------|-------|
-| P0 (Critical) | Infrastructure | CI/CD, test coverage, CLI completion |
+| P0 (Critical) | Infrastructure | CI/CD hardening, test coverage, documentation |
 | P1 (High) | Features | Validator framework, web simulator |
 | P2 (Medium) | Expansion | Integration libraries, algorithm expansion |
 | P3 (Low) | Future | AI features, standards contribution |

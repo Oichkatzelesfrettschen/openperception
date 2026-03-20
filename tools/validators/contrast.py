@@ -9,7 +9,6 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
-from typing import Dict, List, Optional, Tuple
 
 from validators.base import (
     CheckResult,
@@ -24,7 +23,7 @@ from validators.base import (
 # Pure WCAG utilities (extracted from tools/contrast_check.py)
 # ---------------------------------------------------------------------------
 
-def hex_to_rgb(hex_str: str) -> Tuple[int, int, int]:
+def hex_to_rgb(hex_str: str) -> tuple[int, int, int]:
     s = hex_str.strip().lstrip("#")
     if len(s) == 3:
         s = "".join(c * 2 for c in s)
@@ -35,7 +34,7 @@ def _srgb_to_linear(c: float) -> float:
     return c / 12.92 if c <= 0.03928 else ((c + 0.055) / 1.055) ** 2.4
 
 
-def relative_luminance(rgb: Tuple[int, int, int]) -> float:
+def relative_luminance(rgb: tuple[int, int, int]) -> float:
     r, g, b = rgb
     R = _srgb_to_linear(r / 255.0)
     G = _srgb_to_linear(g / 255.0)
@@ -76,7 +75,7 @@ class ContrastGate(ValidatorGate):
     gate_name = "CONTRAST"
     severity = Severity.BLOCKING
 
-    def __init__(self, tokens_json_path: Optional[Path] = None):
+    def __init__(self, tokens_json_path: Path | None = None):
         if tokens_json_path is None:
             # Default: look relative to repository root
             tokens_json_path = (
@@ -86,11 +85,11 @@ class ContrastGate(ValidatorGate):
 
     def _check_variant(
         self, variant_name: str, data: dict
-    ) -> List[CheckResult]:
+    ) -> list[CheckResult]:
         brand = data.get("brand", {})
         gray = data.get("gray", {})
 
-        pairs: List[Tuple[Optional[str], Optional[str], str, float]] = [
+        pairs: list[tuple[str | None, str | None, str, float]] = [
             (brand.get("text"), brand.get("surface"), "text on surface", WCAG_AA_NORMAL),
             (brand.get("primaryStrong"), brand.get("surface"), "primaryStrong on surface", WCAG_AA_NORMAL),
             (brand.get("accentStrong"), brand.get("surface"), "accentStrong on surface", WCAG_AA_NORMAL),
@@ -130,7 +129,7 @@ class ContrastGate(ValidatorGate):
 
     def validate(self, **kwargs) -> GateResult:
         result = self._make_result()
-        tokens: Dict[str, dict] = json.loads(self.tokens_path.read_text())
+        tokens: dict[str, dict] = json.loads(self.tokens_path.read_text())
         for variant_name, variant_data in tokens.items():
             result.checks.extend(self._check_variant(variant_name, variant_data))
         return result

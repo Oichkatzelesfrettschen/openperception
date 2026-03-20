@@ -4,9 +4,10 @@ Contrast checker for brand tokens across variants.
 Reports WCAG contrast for common text/background pairs.
 """
 from __future__ import annotations
-from pathlib import Path
+
 import json
-import math
+from pathlib import Path
+
 
 ROOT = Path(__file__).resolve().parents[1]
 TOKENS_JSON = ROOT / 'tokens' / 'color-tokens.json'

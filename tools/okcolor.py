@@ -5,11 +5,11 @@ Implements Björn Ottosson's Oklab algorithm.
 """
 
 from __future__ import annotations
+
 import math
-from typing import Tuple
 
 
-def hex_to_srgb(hex_str: str) -> Tuple[float, float, float]:
+def hex_to_srgb(hex_str: str) -> tuple[float, float, float]:
     s = hex_str.strip().lstrip('#')
     if len(s) == 3:
         s = ''.join([c*2 for c in s])
@@ -25,7 +25,7 @@ def srgb_to_linear(c: float) -> float:
     return c / 12.92 if c <= 0.04045 else ((c + 0.055) / 1.055) ** 2.4
 
 
-def srgb_to_oklab(r: float, g: float, b: float) -> Tuple[float, float, float]:
+def srgb_to_oklab(r: float, g: float, b: float) -> tuple[float, float, float]:
     # Linearize
     rl, gl, bl = srgb_to_linear(r), srgb_to_linear(g), srgb_to_linear(b)
 
@@ -44,26 +44,26 @@ def srgb_to_oklab(r: float, g: float, b: float) -> Tuple[float, float, float]:
     return L, a, b
 
 
-def oklab_to_oklch(L: float, a: float, b: float) -> Tuple[float, float, float]:
+def oklab_to_oklch(L: float, a: float, b: float) -> tuple[float, float, float]:
     C = math.hypot(a, b)
     h = math.degrees(math.atan2(b, a)) % 360.0
     return L, C, h
 
 
-def hex_to_oklch(hex_str: str) -> Tuple[float, float, float]:
+def hex_to_oklch(hex_str: str) -> tuple[float, float, float]:
     r, g, b = hex_to_srgb(hex_str)
     L, a, b2 = srgb_to_oklab(r, g, b)
     Lc, C, h = oklab_to_oklch(L, a, b2)
     return (Lc, C, h)
 
 
-def format_oklch_tuple(t: Tuple[float, float, float], precision: int = 5) -> Tuple[float, float, float]:
+def format_oklch_tuple(t: tuple[float, float, float], precision: int = 5) -> tuple[float, float, float]:
     L, C, h = t
     return (round(L, precision), round(C, precision), round(h, 2))
 
 
 if __name__ == '__main__':
-    import sys, json
+    import sys
     for hex_code in sys.argv[1:]:
         print(hex_code, format_oklch_tuple(hex_to_oklch(hex_code)))
 

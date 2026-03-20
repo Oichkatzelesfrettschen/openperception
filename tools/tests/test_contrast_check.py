@@ -2,11 +2,17 @@
 import sys
 from pathlib import Path
 
+
 # Allow importing contrast_check from the tools directory
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 import pytest
-from contrast_check import hex_to_rgb, srgb_channel_to_lum, relative_luminance, contrast_ratio
+from contrast_check import (
+    contrast_ratio,
+    hex_to_rgb,
+    relative_luminance,
+    srgb_channel_to_lum,
+)
 
 
 class TestHexToRgb:

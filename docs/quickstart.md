@@ -31,6 +31,21 @@ For a complete development environment (linting, testing, pre-commit):
 make install-dev
 ```
 
+### System Dependencies (optional)
+
+Full development requires these system packages:
+
+| Package | Purpose | Install (Arch/CachyOS) |
+|---------|---------|------------------------|
+| `cmake` | Build libDaltonLens (C library) | `pacman -S cmake` |
+| `clang` | C compiler + clang-format | `pacman -S clang` |
+| `cppcheck` | C static analysis | `pacman -S cppcheck` |
+| `pandoc` | Document conversion | `pacman -S pandoc` |
+
+On Ubuntu/Debian: `apt install cmake clang clang-format cppcheck pandoc`
+
+On macOS: `brew install cmake llvm cppcheck pandoc`
+
 ---
 
 ## 3. Simulate Color Vision Deficiency

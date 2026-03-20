@@ -1,5 +1,7 @@
 # DPI Transition Contract
 
+> **Status:** SPECIFICATION ONLY -- not yet targeted for implementation
+
 **Version:** 1.0.0
 **Purpose:** Define behavior when effective scale (S_eff) changes due to monitor transitions or user scaling
 **Companion to:** SCALING_MATHEMATICS.md, QUANTIZATION_POLICY.md

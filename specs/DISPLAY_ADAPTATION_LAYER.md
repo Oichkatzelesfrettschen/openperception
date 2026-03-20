@@ -1,5 +1,7 @@
 # Display Adaptation Layer (DAL)
 
+> **Status:** SPECIFICATION ONLY -- not yet targeted for implementation
+
 **Version:** 1.0.0
 **Purpose:** Enable UVAS+ to adapt semantics to display physics without becoming a GPU driver
 

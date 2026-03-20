@@ -1,7 +1,7 @@
 # UVAS+ References and Bibliography
 
 **Version:** 1.0.0
-**Last Updated:** 2025-12-27
+**Last Updated:** 2026-03-19
 **Purpose:** Consolidated bibliography of all sources cited in UVAS+ specification documents
 
 ---
@@ -14,7 +14,8 @@
 |----------|-----|---------|
 | WCAG 2.2 Specification | https://www.w3.org/TR/WCAG22/ | All specs |
 | WCAG 2.1 Specification | https://www.w3.org/TR/WCAG21/ | Legacy references |
-| WCAG 3.0 (Draft) | https://www.w3.org/TR/wcag-3.0/ | APCA integration |
+| WCAG 3.0 (Working Draft) | https://www.w3.org/TR/wcag-3.0/ | APCA integration (not yet in published draft as of Aug 2025) |
+| APCA (SAPC-APCA) | https://github.com/Myndex/SAPC-APCA | Contrast algorithm for WCAG 3.0 (LC scores replace ratios) |
 
 ### 1.2 Understanding Documents
 
@@ -363,7 +364,24 @@
 
 ---
 
-## 13. License Information
+## 13. Cross-References to Papers/ Compendiums
+
+This bibliography cites sources that are further cataloged in the `papers/` compendiums:
+
+| Bibliography Section | Compendium File | Coverage |
+|---------------------|-----------------|----------|
+| Sec 2 (CVD Simulation) | `papers/colorblindness_algorithms_compendium.md` | Brettel, Vienot, Machado algorithms + 2025-2026 additions |
+| Sec 3 (Color Science) | `papers/COLORBLINDNESS_ACADEMIC_PAPERS.md` | Cone fundamentals, genetics, epidemiology |
+| Sec 4 (Seizure Safety) | `papers/photosensitive_epilepsy_research_compendium.md` | ITU-R BT.1702, Fisher 2022, PEAT |
+| Sec 6 (Neurodivergence) | `papers/ADHD_Visual_Processing_Papers_2023-2025.md` | ADHD visual processing, eye tracking |
+| Sec 6 (Neurodivergence) | `papers/autism_visual_processing_bibliography.md` | Autism visual perception |
+| Sec 7 (Cognitive Load) | `papers/cognitive_load_visual_processing_papers.md` | CLT, VWM, fNIRS |
+| Sec 3 (Achromatopsia) | `papers/achromatopsia_bcm_research_compendium.md` | Gene therapy trials, BCM |
+| (Dyslexia) | `research/neurodivergence/dyslexia/DYSLEXIA_VISUAL_PROCESSING_RESEARCH.md` | Magnocellular pathway, visual processing |
+
+---
+
+## 14. License Information
 
 | Resource Type | Common Licenses |
 |---------------|-----------------|
@@ -374,12 +392,13 @@
 
 ---
 
-## 14. Changelog
+## 15. Changelog
 
 | Version | Date | Changes |
 |---------|------|---------|
 | 1.0.0 | 2025-12-27 | Initial compilation from all UVAS+ specs |
+| 1.1.0 | 2026-03-19 | Added APCA reference, WCAG 3.0 status update, cross-references to papers/ compendiums |
 
 ---
 
-*REFERENCES_BIBLIOGRAPHY.md Version 1.0.0 - Created 2025-12-27*
+*REFERENCES_BIBLIOGRAPHY.md Version 1.1.0 - Updated 2026-03-19*

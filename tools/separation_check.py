@@ -3,10 +3,13 @@
 Check perceptual separation (Oklab distance) between primary and accent per variant.
 """
 from __future__ import annotations
-from pathlib import Path
+
 import json
 import math
-from okcolor import hex_to_oklch, srgb_to_oklab, hex_to_srgb
+from pathlib import Path
+
+from okcolor import hex_to_srgb, srgb_to_oklab
+
 
 ROOT = Path(__file__).resolve().parents[1]
 TOKENS_JSON = ROOT / 'tokens' / 'color-tokens.json'

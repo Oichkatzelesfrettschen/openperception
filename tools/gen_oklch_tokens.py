@@ -6,10 +6,12 @@ Reads tokens/color-tokens.json and writes:
 - tokens/color-tokens-oklch.css (CSS variables with OKLCH triples per variant)
 """
 from __future__ import annotations
+
 import json
 from pathlib import Path
-from typing import Dict, Any, Tuple
-from okcolor import hex_to_oklch, format_oklch_tuple
+from typing import Any
+
+from okcolor import format_oklch_tuple, hex_to_oklch
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -18,8 +20,8 @@ OKLCH_MAP_JSON = ROOT / 'tokens' / 'color-oklch-map.json'
 OKLCH_CSS = ROOT / 'tokens' / 'color-tokens-oklch.css'
 
 
-def collect_hex_values(tokens: Dict[str, Any]) -> Dict[str, set]:
-    by_variant: Dict[str, set] = {}
+def collect_hex_values(tokens: dict[str, Any]) -> dict[str, set]:
+    by_variant: dict[str, set] = {}
     for variant, data in tokens.items():
         colors = set()
         # brand roles
@@ -42,8 +44,8 @@ def collect_hex_values(tokens: Dict[str, Any]) -> Dict[str, set]:
     return by_variant
 
 
-def compute_oklch_map(colors: set) -> Dict[str, Tuple[float, float, float]]:
-    result: Dict[str, Tuple[float, float, float]] = {}
+def compute_oklch_map(colors: set) -> dict[str, tuple[float, float, float]]:
+    result: dict[str, tuple[float, float, float]] = {}
     for hexv in sorted(colors):
         try:
             result[hexv] = format_oklch_tuple(hex_to_oklch(hexv))
@@ -52,10 +54,10 @@ def compute_oklch_map(colors: set) -> Dict[str, Tuple[float, float, float]]:
     return result
 
 
-def write_oklch_css(tokens: Dict[str, Any], oklch_map: Dict[str, Tuple[float, float, float]]) -> str:
+def write_oklch_css(tokens: dict[str, Any], oklch_map: dict[str, tuple[float, float, float]]) -> str:
     lines = []
     # Default/root
-    def add_block(selector: str, data: Dict[str, Any]):
+    def add_block(selector: str, data: dict[str, Any]):
         lines.append(f"{selector} {{")
         # Emit OKLCH variables for ramps present
         for ramp in ('indigo', 'magenta', 'gray'):

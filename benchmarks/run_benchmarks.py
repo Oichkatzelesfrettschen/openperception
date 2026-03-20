@@ -30,10 +30,12 @@ import time
 
 import numpy as np
 
+
 # Ensure the daltonlens package from the submodule is importable.
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "algorithms", "DaltonLens-Python"))
 
 from daltonlens import convert, simulate
+
 
 # ---------------------------------------------------------------------------
 # Configuration
@@ -85,7 +87,7 @@ def make_image(height, width):
 def collect_env():
     """Return a dict of environment metadata."""
     info = {
-        "date": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "date": datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "python": platform.python_version(),
         "platform": platform.platform(),
         "cpu": platform.processor() or "unknown",
@@ -111,7 +113,7 @@ def results_to_markdown(rows, env):
     for k, v in env.items():
         lines.append(f"- **{k}**: {v}")
     lines.append("")
-    lines.append("## Results (best of {} repeats, ms)".format(REPEATS))
+    lines.append(f"## Results (best of {REPEATS} repeats, ms)")
     lines.append("")
     # Header
     deficiency_labels = [d.name.capitalize() for d in DEFICIENCIES]

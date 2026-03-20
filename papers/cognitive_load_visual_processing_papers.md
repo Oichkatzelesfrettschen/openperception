@@ -613,6 +613,49 @@ Compiled: December 2025
 
 ---
 
+## 2025-2026 Additions
+
+### Multimodal Cognitive Load Prediction (2025)
+
+**Title**: "Machine Learning Models to Predict Individual Cognitive Load in
+Collaborative Learning: Combining fNIRS and Eye-Tracking Data"
+**Journal**: MDPI Machine Learning and Knowledge Extraction (2025)
+**Key Finding**: Random Forest model achieves F1=0.84; multimodal fNIRS + eye-tracking
+model achieves F1=0.87 for individual cognitive load prediction during collaborative
+learning. Demonstrates integration of physiological and behavioral signals.
+
+### Eye-Tracking and Biometric UX Research (2025)
+
+**Title**: "Eye-Tracking and Biometric Feedback in UX Research: Measuring User Engagement"
+**Source**: arXiv:2505.21982 (2025)
+**Key Finding**: Combines eye tracking with biometric feedback for real-time UX
+evaluation. Establishes correlations between gaze patterns, physiological arousal,
+and subjective engagement metrics.
+
+### Cognitive Load in 3D/XR Environments (2025)
+
+**Title**: "Assessing Cognitive Load Using EEG and Eye-Tracking in 3-D Learning
+Environments: A Systematic Review"
+**Journal**: MDPI Multimodal Technologies and Interaction (2025)
+**Key Finding**: Systematic review of 4 principal research axes: deep-learning-based
+gaze estimation; XR interaction paradigms; cognitive load measurement; and
+accessibility-oriented interface design. EEG combined with eye tracking provides
+the most reliable cognitive load classification.
+
+### Intrinsic vs. Extraneous Load Prediction (2025)
+
+**Title**: "Prediction of intrinsic and extraneous cognitive load with oculometric
+and biometric indicators"
+**Journal**: Scientific Reports (Nature, 2025)
+**DOI**: 10.1038/s41598-025-89336-y
+**Key Finding**: Distinct physiological signatures for intrinsic vs. extraneous
+cognitive load, enabling differentiation between material difficulty and interface
+complexity as load sources.
+**Accessibility Relevance**: Interface designers can now target extraneous load
+reduction specifically, rather than conflating material difficulty with poor design.
+
+---
+
 ## See Also
 
 Related compendiums in this repository:
@@ -625,3 +668,4 @@ Related compendiums in this repository:
 ---
 
 *This compendium was compiled for the Colorblindness research project's cognitive load and visual processing research strand.*
+*Updated: 2026-03-19 (added multimodal prediction, XR environments, intrinsic/extraneous load research)*

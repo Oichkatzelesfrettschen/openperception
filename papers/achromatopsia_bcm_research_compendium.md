@@ -492,6 +492,57 @@ ATF6 is the only known achromatopsia gene that does not encode a phototransducti
 
 ---
 
+## 2025-2026 Additions
+
+### Gene Therapy Clinical Trial Updates
+
+#### AGTC Achromatopsia Trials (2025)
+
+12-month data for Phase 1/2 trials (45 patients total):
+- **CNGB3**: 2 adults + 2 pediatric patients at second-highest dose showed improved
+  retinal sensitivity (static perimetry); 2 adults showed light discomfort improvement
+- **CNGA3**: No consistent biologic activity observed
+- **Differential efficacy hypothesis**: CNGB3 patients have no protein expressed
+  (clean slate for gene therapy), while CNGA3 patients have defective protein that
+  may interfere with therapeutic protein function
+
+**Source**: Foundation Fighting Blindness / AGTC announcements (2025)
+
+#### MeiraGTx Achromatopsia Trials (2025)
+
+- AAV8-hCARp.hCNGB3 (subretinal) -- Phase I/II complete
+- Safe and generally well tolerated in adults and children
+- No consistent efficacy at 24 weeks, though individual trends in color vision
+  and photo-aversion observed
+
+#### BCM Gene Therapy Progress (2025)
+
+- **BGTF-027 (Blue Gen Therapeutics)**: Intravitreal gene therapy encoding functional
+  L-opsin for BCM. Phase 1 trial protocol in development (announced July 2025).
+  $4.7M CIRM grant to Children's Hospital Los Angeles.
+- **ADVM-062 (Adverum)**: Intravitreal AAV.7m8 vector for sustained L-opsin
+  expression (preclinical stage)
+- **Treatment window research (2025)**: "Molecular mechanisms limiting the AAV gene
+  therapy treatment window in mouse models of blue cone monochromacy."
+  *Communications Biology*, 2025. DOI: 10.1038/s42003-025-09045-0.
+  Findings inform optimal patient age for intervention.
+
+### Gene Therapy Review Paper (2025)
+
+**Title**: "Update on Gene Therapy Clinical Trials for Eye Diseases"
+**Authors**: Lonfat, N., Moreno-Leon, L., Punzo, C., & Khanna, H.
+**Journal**: Human Gene Therapy (2025)
+**DOI**: 10.1177/10430342251379824
+**Scope**: Comprehensive review of all registered gene therapy clinical trials
+for retinal diseases including 5 achromatopsia trials.
+
+### Orphan Drug Designation
+
+BGTF-027 received Orphan Drug Designation for BCM gene therapy, recognizing
+BCM as a rare disease affecting approximately 1 in 100,000 males.
+
+---
+
 ## See Also
 
 Related compendiums in this repository:
@@ -502,4 +553,6 @@ Related compendiums in this repository:
 
 ---
 
-*This compendium was compiled from academic sources and clinical trial registries as of December 2025. For the most current information on ongoing clinical trials, please consult ClinicalTrials.gov directly.*
+*This compendium was compiled from academic sources and clinical trial registries as of December 2025.*
+*Updated: 2026-03-19 (added 2025-2026 gene therapy trial results, BCM treatment progress)*
+*For the most current information on ongoing clinical trials, please consult ClinicalTrials.gov directly.*

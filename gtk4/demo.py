@@ -2,9 +2,12 @@
 # GTK4 demo using brand CSS variants
 
 import sys
+
 import gi
+
+
 gi.require_version('Gtk', '4.0')
-from gi.repository import Gtk, Gdk
+from gi.repository import Gdk, Gtk
 
 
 def load_css(path: str):

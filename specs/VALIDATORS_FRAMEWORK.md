@@ -5,6 +5,21 @@
 
 ---
 
+## Implementation Status
+
+| Gate | ID | Status | Location |
+|------|----|--------|----------|
+| CONTRAST | GATE-002 | **Implemented** | `tools/validators/contrast.py` |
+| CVD | GATE-003 | **Implemented** | `tools/validators/cvd.py` |
+| Base ABC | -- | **Implemented** | `tools/validators/base.py` |
+| SEIZURE | GATE-001 | Spec only (v0.3.0) | -- |
+| SPATIAL | GATE-004 | Spec only (v0.3.0) | -- |
+| TEMPORAL/DEPTH | GATE-005 | Spec only (v0.3.0+) | -- |
+| COGNITIVE | GATE-006 | Spec only (v0.3.0+) | -- |
+| Unified CLI | -- | Spec only (v0.3.0) | -- |
+
+---
+
 ## 1. Validator Architecture
 
 ```

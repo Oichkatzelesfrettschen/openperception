@@ -2,7 +2,7 @@
 
 **Repository:** OpenPerception (see repository root)
 **Compiled:** December 27, 2025
-**Total PDFs:** Not distributed (copyright restrictions; see individual paper entries for DOI/URL links)
+**Total PDFs:** 32 (in `papers/downloads/` -- for research use only; see DOI/URL links for official access)
 **Total Compendiums:** 35 markdown files
 
 ---
@@ -259,12 +259,13 @@ openperception/
 
 | Metric | Count |
 |--------|-------|
-| Total PDFs | 57 |
+| Total PDFs | 32 (in papers/downloads/) |
 | Compendium Markdown Files | 7 |
-| Research Domain Markdowns | 28 |
-| Papers Cataloged (estimated) | 400+ |
+| Research Domain Markdowns | 29 |
+| Papers Cataloged (estimated) | 420+ |
 | Research Categories | 6 major |
 | Subcategories | 20+ |
+| Last Research Update | 2026-03-19 |
 
 ---
 
@@ -290,4 +291,5 @@ openperception/
 ---
 
 *Index generated: December 27, 2025*
+*Updated: March 19, 2026 (added 2025-2026 research across all domains, dyslexia research file)*
 *For: Visual Accessibility Research Compendium*

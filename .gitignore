@@ -235,3 +235,6 @@ algorithms/libDaltonLens/tests/output/
 # Research artifacts that shouldn't be tracked
 *.zip
 !tools/PEAT_1.6_Seizure_Analysis.zip
+
+# Unrelated files
+COLOR-STRATEGY.md

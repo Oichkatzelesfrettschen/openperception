@@ -42,26 +42,33 @@ None currently. All critical issues have been resolved.
 
 ---
 
-### Missing Examples
+### Examples Documentation
 
-**Affected Areas**:
-- `examples/simulator/` - Empty or minimal
-- `examples/contrast/` - Empty or minimal
-- `examples/ui/` - Empty or minimal
+**Affected Areas**: `examples/`
 
-**Impact**: Users lack runnable examples for common use cases.
+**Description**: 8 functional example files exist across 4 subdirectories:
+- `examples/simulator/index.html` -- Interactive CVD simulator
+- `examples/contrast/index.html` -- Contrast ratio checker
+- `examples/viz/matplotlib_palette.py` -- Matplotlib palette visualization
+- `examples/viz/d3-scale.js` -- D3.js scale configuration
+- `examples/viz/chartjs.config.js` -- Chart.js configuration
+- `examples/shared/auto-dev.js` -- Auto-reload development helper
+- `examples/shared/query-variant.js` -- CVD variant query utility
+- `examples/ui/variant-toggle.html` -- CVD variant toggle UI
 
-**Status**: Targeted for web platform expansion (v0.4.0)
+**Impact**: Examples exist but lack a README or usage documentation.
+
+**Status**: Documentation needed (v0.2.0)
 
 ---
 
 ### Specification Implementation Gap
 
-**Description**: `specs/VALIDATORS_FRAMEWORK.md` defines comprehensive validation requirements, but corresponding code implementation does not exist.
+**Description**: `specs/VALIDATORS_FRAMEWORK.md` defines 6 validation gates. GATE-002 (CONTRAST) and GATE-003 (CVD) are implemented in `tools/validators/`. GATE-001 (SEIZURE), GATE-004 (SPATIAL), GATE-005 (TEMPORAL/DEPTH), and GATE-006 (COGNITIVE) remain spec-only. The unified validator CLI is not yet implemented.
 
-**Impact**: Specifications exist without tooling to enforce them.
+**Impact**: 4 of 6 gates and the unified CLI lack enforcement tooling.
 
-**Status**: Targeted for v0.3.0 (Validators milestone)
+**Status**: Remaining gates targeted for v0.3.0
 
 ---
 
@@ -112,6 +119,18 @@ None currently. All critical issues have been resolved.
 **Impact**: May fall behind upstream security patches.
 
 **Status**: Monitor upstream for security updates
+
+---
+
+### PEAT Binary in Git
+
+**Location**: `tools/PEAT_1.6_Seizure_Analysis.zip` (1.1 MB)
+
+**Description**: The Photosensitive Epilepsy Analysis Tool binary is committed to the repository as a reference tool for GATE-001 SEIZURE validation research.
+
+**Impact**: Inflates repository size. Binary files are not ideal for git.
+
+**Status**: Acceptable for now; consider Git LFS or external hosting if more binaries are added
 
 ---
 
@@ -167,12 +186,13 @@ When reporting new issues:
 
 | Issue | Target Version |
 |-------|----------------|
-| Performance TODO | v0.3.0 |
-| Missing examples | v0.4.0 |
-| Validator implementation | v0.3.0 |
-| Documentation deployment | v0.2.0 |
+| Examples documentation | v0.2.0 |
+| Remaining validator gates (4 of 6) | v0.3.0 |
+| Unified validator CLI | v0.3.0 |
+| Documentation deployment | v0.2.0+ |
 | Cross-platform CI | v0.2.0 |
+| BCM simulation | v0.4.0 |
 
 ---
 
-Last Updated: 2026-01-14
+Last Updated: 2026-03-19

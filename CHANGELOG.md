@@ -20,19 +20,51 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - .editorconfig for editor consistency
 - pyproject.toml with ruff/black configuration
 - .clang-format for C code consistency
-- GitHub Actions CI/CD workflows
+- GitHub Actions CI/CD workflows (python-tests, lint, c-build)
 - docs/KNOWN_ISSUES.md documenting current gaps
+- docs/quickstart.md with 5-minute getting started guide
+- Validator framework base class (`tools/validators/base.py` -- ValidatorGate ABC)
+- GATE-002 CONTRAST validator (`tools/validators/contrast.py`)
+- GATE-003 CVD validator (`tools/validators/cvd.py`)
+- Tools test suite (`tools/tests/` -- 27 tests)
+- `.gitmodules` for submodule tracking (was missing)
+- `.pre-commit-config.yaml` with ruff, black, and standard hooks
+- `requirements-dev.txt` for development dependencies
+- Daltonization module (`daltonize.py` -- Fidaner and Simple methods)
+- CLI fully implemented (`main.py` -- simulate, daltonize, info subcommands)
+
+### Research Updates (2026-03-19)
+- Updated CVD_RESEARCH_REPORT.md with 2025-2026 findings: simulation accuracy study, gene therapy trial results, NVIDIA daltonization, WCAG 3.0/APCA status
+- Created dyslexia visual processing research file (`research/neurodivergence/dyslexia/DYSLEXIA_VISUAL_PROCESSING_RESEARCH.md`)
+- Updated colorblindness algorithms compendium with 5 new papers (simulation accuracy, ChromATA, NVIDIA daltonization, DL daltonization, Swin Transformer)
+- Updated achromatopsia/BCM compendium with AGTC/MeiraGTx trial results, BGTF-027 Phase 1, treatment window study
+- Updated ADHD compendium with retinal fundus biomarker study (95.5-96.9% AUROC), AI detection methods
+- Updated cognitive load compendium with multimodal fNIRS+eye-tracking prediction (F1=0.87), intrinsic vs. extraneous load differentiation
+- Updated seizure compendium with PSE tool validation framework, PEAT retirement confirmation, platform adoption status
+- Added APCA reference and cross-references to papers/ in REFERENCES_BIBLIOGRAPHY.md
+- Updated DETECTION_TOOLS.md with 2025-2026 validation research and platform adoption
 
 ### Changed
 - Enhanced Makefile with test and lint targets
-- Updated MASTER_INDEX.md organization
+- Updated MASTER_INDEX.md organization and statistics
+- Marked CLI subcommands and daltonization as completed in ROADMAP.md
+- Updated KNOWN_ISSUES.md to reflect actual examples/ state (8 files, not empty)
+- Renamed CVD_RESEARCH_REPORT_2024.md to CVD_RESEARCH_REPORT.md (content covers 2023-2026)
+- Added implementation status table to VALIDATORS_FRAMEWORK.md
+- Added "SPECIFICATION ONLY" headers to 4 aspirational spec files
+- Added "Deferred Items" section to ROADMAP.md with milestone targets
+- CI: coverage threshold enforced (--cov-fail-under=70), tools tests added, link check blocking, clang-format blocking
+- Pre-commit: added mypy, bandit, conventional-commits hooks
+- Fixed pyproject.toml known-first-party (removed non-package "tools")
 
 ### Fixed
-- (Pending) Performance TODO in simulate.py (CoblisV2 array allocation)
+- Performance TODO in simulate.py documented as intentional design decision
+- 7 accuracy debt items resolved (false doc claims corrected)
+- GitHub URL placeholders annotated in CHANGELOG
 
 ---
 
-## [0.1.0] - 2024-XX-XX (Pre-infrastructure)
+## [0.1.0] - 2026-01-15 (Pre-infrastructure)
 
 ### Components Present
 
@@ -87,5 +119,6 @@ Future versions will follow semantic versioning:
 
 ---
 
+<!-- Update these URLs when repository is published to GitHub -->
 [Unreleased]: https://github.com/openperception/openperception/compare/v0.1.0...HEAD
 [0.1.0]: https://github.com/openperception/openperception/releases/tag/v0.1.0

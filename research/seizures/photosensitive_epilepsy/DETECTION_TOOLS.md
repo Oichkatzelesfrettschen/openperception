@@ -1,6 +1,6 @@
 # Photosensitive Epilepsy Detection Tools and Algorithms
 
-**Last Updated:** 2025-12-27
+**Last Updated:** 2026-03-19
 **Purpose:** Comprehensive guide to PSE detection software and methodologies
 
 ---
@@ -440,8 +440,38 @@ hazardous = (flash_count > 3/sec) AND
 
 ---
 
+## 2025-2026 Updates
+
+### PSE Tool Validation Framework (2025)
+
+A 2025 publication (Springer LNCS, DOI: 10.1007/978-3-031-93848-1_7) addresses
+validation gaps in current PSE hazard analysis tools. Key contributions:
+- Identifies gaps in testing paradigms for PEAT, Harding FPA, and similar tools
+- Proposes ground-truth video sequence generation for tool validation
+- Establishes conformance testing methodology for comparing PSE safety algorithms
+- Relevant to OpenPerception GATE-001 SEIZURE validator development
+
+### Platform Adoption Status (2026)
+
+| Platform | Tool Used | Action |
+|----------|-----------|--------|
+| YouTube | Harding FPA | Warn/block on upload |
+| Vimeo | Harding FPA | Warn/block on upload |
+| Adobe Creative Suite | Custom analysis | Integration in progress |
+| Browsers (CSS) | None standard | Exploratory |
+
+### PEAT Retirement Confirmed
+
+PEAT (Trace Center, University of Maryland) is officially retired and no longer
+supported. The Harding Flash and Pattern Analyzer (FPA) is the industry successor.
+PEAT 1.6 remains available in this repository (`tools/PEAT_1.6_Seizure_Analysis.zip`)
+as a historical reference.
+
+---
+
 ## Document Information
 
 **Related Documents:**
 - `/research/seizures/photosensitive_epilepsy/COMPREHENSIVE_RESEARCH.md`
 - `/research/seizures/guidelines/INTERNATIONAL_STANDARDS.md`
+- `/papers/photosensitive_epilepsy_research_compendium.md`

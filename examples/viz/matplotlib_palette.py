@@ -3,8 +3,10 @@
 
 import json
 from pathlib import Path
-from cycler import cycler
+
 import matplotlib.pyplot as plt
+from cycler import cycler
+
 
 TOKENS = json.loads(Path(__file__).resolve().parents[2].joinpath('tokens/color-tokens.json').read_text())
 

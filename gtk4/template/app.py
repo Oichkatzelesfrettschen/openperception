@@ -1,7 +1,12 @@
 #!/usr/bin/env python3
-import gi, os
+import os
+
+import gi
+
+
 gi.require_version('Gtk','4.0')
-from gi.repository import Gtk, Gdk
+from gi.repository import Gdk, Gtk
+
 
 CSS_MAP = {
     'default': os.path.abspath(os.path.join('..','brand_default.css')),
@@ -34,7 +39,7 @@ class App(Gtk.Application):
         header = Gtk.HeaderBar()
         win.set_titlebar(header)
         combo = Gtk.ComboBoxText()
-        for k in CSS_MAP.keys(): combo.append_text(k)
+        for k in CSS_MAP: combo.append_text(k)
         combo.set_active(0)
         combo.connect('changed', lambda w: apply_css(CSS_MAP[w.get_active_text()]))
         header.pack_end(combo)

@@ -11,12 +11,13 @@ import json
 import math
 import sys
 from pathlib import Path
-from typing import Optional
+
 
 # Allow running this module directly from the tools/ directory
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from okcolor import hex_to_srgb, srgb_to_oklab
+
 from validators.base import (
     CheckResult,
     GateResult,
@@ -65,7 +66,7 @@ class CVDGate(ValidatorGate):
     gate_name = "CVD"
     severity = Severity.WARNING
 
-    def __init__(self, tokens_json_path: Optional[Path] = None):
+    def __init__(self, tokens_json_path: Path | None = None):
         if tokens_json_path is None:
             tokens_json_path = (
                 Path(__file__).resolve().parents[2] / "tokens" / "color-tokens.json"

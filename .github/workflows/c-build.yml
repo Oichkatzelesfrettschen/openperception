@@ -122,5 +122,35 @@ jobs:
       - name: Check formatting
         working-directory: algorithms/libDaltonLens
         run: |
-          clang-format --dry-run --Werror libDaltonLens.c libDaltonLens.h || \
-            echo "Note: Format check is advisory, not blocking"
+          clang-format --dry-run --Werror libDaltonLens.c libDaltonLens.h
+
+  submodule-integrity:
+    name: Submodule Integrity
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          lfs: true
+
+      - name: Verify submodules are at expected commits
+        run: |
+          git submodule status --recursive | tee /tmp/submodule-status.txt
+          # Fail if any submodule shows a leading '+' (local commit differs from .gitmodules)
+          if grep -q '^+' /tmp/submodule-status.txt; then
+            echo "ERROR: One or more submodules are not at the committed SHA:"
+            grep '^+' /tmp/submodule-status.txt
+            exit 1
+          fi
+          echo "All submodules verified at expected commits."
+
+      - name: Verify submodule directories are not empty
+        run: |
+          for dir in algorithms/DaltonLens-Python algorithms/libDaltonLens datasets/ishihara-plate-learning; do
+            if [ ! -d "$dir" ] || [ -z "$(ls -A "$dir")" ]; then
+              echo "ERROR: Submodule directory empty or missing: $dir"
+              exit 1
+            fi
+          done
+          echo "All submodule directories populated."

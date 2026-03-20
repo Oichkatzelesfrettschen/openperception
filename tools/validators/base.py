@@ -10,7 +10,6 @@ from __future__ import annotations
 from abc import ABC, abstractmethod
 from dataclasses import dataclass, field
 from enum import Enum
-from typing import List, Optional
 
 
 class Severity(Enum):
@@ -30,8 +29,8 @@ class CheckResult:
     name: str
     status: Status
     message: str
-    value: Optional[float] = None
-    threshold: Optional[float] = None
+    value: float | None = None
+    threshold: float | None = None
 
 
 @dataclass
@@ -40,7 +39,7 @@ class GateResult:
     gate_id: str
     gate_name: str
     severity: Severity
-    checks: List[CheckResult] = field(default_factory=list)
+    checks: list[CheckResult] = field(default_factory=list)
 
     @property
     def status(self) -> Status:
