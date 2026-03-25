@@ -15,6 +15,9 @@ This directory is the repo's curated local paper cache.
 Use this tree for cached primary sources that back claims, guides, and specs in
 the repo. Keep filenames stable and ASCII-only.
 
+Non-paper reference assets belong in `datasets/source_assets/` instead of this
+literature cache.
+
 ## Layout
 
 - `adhd/`

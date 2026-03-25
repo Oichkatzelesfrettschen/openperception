@@ -1,0 +1,21 @@
+{
+  "generated_on": "2026-03-25",
+  "assets": [
+    {
+      "id": "ishihara_38_plate_reference",
+      "title": "Ishihara Colour Plates - 38 Set",
+      "asset_type": "nonpaper_reference_pdf",
+      "local_path": "datasets/source_assets/ishihara/Ishihara_38_Plates_Test.pdf",
+      "sha256": "549b389d9bf921006a0d4d52941728b1b15f77df3cf766a79e0f21a1d3b31786",
+      "size_bytes": 2816420,
+      "former_repo_path": "research/colorblindness/Ishihara_38_Plates_Test.pdf",
+      "upstream_url": null,
+      "provenance_status": "legacy_local_asset_upstream_not_yet_reverified",
+      "used_by": [
+        "datasets/ishihara-plate-learning/",
+        "research/colorblindness/"
+      ],
+      "notes": "Retained as a non-paper source asset for the Ishihara learning-tool lane. The cached PDF contains the 38-plate reference set and answer key pages, but it is not part of the canonical literature paper corpus."
+    }
+  ]
+}

@@ -10,6 +10,8 @@ tracked papers and trace artifacts.
 - New paper artifacts belong in `papers/downloads/`.
 - `research/` should cite or discuss those artifacts, not carry placeholder PDF
   stubs or duplicate mirrors.
+- Non-paper source assets belong in dataset-specific lanes such as
+  `datasets/source_assets/`, not in the paper corpus.
 - Tracked Markdown and BibTeX should not point directly at `research/...pdf`
   paths outside the dedicated provenance and migration-inventory docs.
 - When a direct PDF is blocked, cache the accessible full-text HTML plus a
@@ -58,6 +60,7 @@ The verifier checks:
 
 - canonical artifacts exist and match the registry hash/size table,
 - no zero-byte PDFs remain under `papers/` or `research/`,
+- no unmigrated `research/*.pdf` files remain,
 - legacy alias paths stay removed,
 - legacy alias paths appear only in the paper-corpus provenance docs,
 - direct `research/...pdf` references appear only in provenance or migration docs,

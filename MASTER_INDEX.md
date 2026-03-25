@@ -3,7 +3,7 @@
 **Repository:** OpenPerception (see repository root)
 **Compiled:** March 25, 2026
 **Total PDFs:** 45 (in `papers/downloads/` -- for research use only; see DOI/URL links for official access)
-**Total Compendiums:** 36 markdown files
+**Total Compendiums:** 39 markdown files
 
 ---
 
@@ -155,7 +155,8 @@ Applied documentation:
 | `docs/external_sources/paper_corpus_registry.md` | Human-readable canonical cache policy and duplicate map |
 | `docs/external_sources/algorithm_source_cache.md` | Cached algorithm-support source index |
 | `docs/external_sources/cognitive_load_source_cache.md` | Cached cognitive-load source index |
-| `docs/external_sources/research_pdf_migration_inventory.md` | Remaining research-local PDF inventory and migration buckets |
+| `docs/external_sources/nonpaper_source_assets.md` | Dataset-support source assets that do not belong in the paper corpus |
+| `docs/external_sources/research_pdf_migration_inventory.md` | Closeout note for retired research-local PDF debt |
 | `docs/external_sources/neurodivergence_source_cache.md` | Cached ADHD, autism, and dyslexia source index |
 | `docs/external_sources/seizure_source_cache.md` | Cached seizure-source index |
 | `docs/external_sources/vision_clinical_source_cache.md` | Cached BCM, contrast, low-vision, nystagmus, and visual-field-loss source index |
@@ -172,7 +173,8 @@ Applied documentation:
 
 Located in `/research/` subdirectories:
 - Canonical source-cache paths for algorithm and cognitive-load papers now live under `papers/downloads/`; see `docs/external_sources/paper_corpus_registry.md`
-- 1 research-local PDF remains; see `docs/external_sources/research_pdf_migration_inventory.md`
+- 0 research-local PDFs remain; see `docs/external_sources/research_pdf_migration_inventory.md`
+- The Ishihara 38-plate reference PDF now lives in `datasets/source_assets/ishihara/`; see `docs/external_sources/nonpaper_source_assets.md`
 
 ---
 
@@ -257,6 +259,8 @@ openperception/
 │   │   └── guidelines/
 │   └── cognitive_load/
 └── datasets/
+    ├── source_assets/
+    │   └── ishihara/
     └── ishihara-plate-learning/
 ```
 
@@ -299,7 +303,7 @@ openperception/
 
 | Metric | Count |
 |--------|-------|
-| Total PDFs | 36 (in papers/downloads/) |
+| Total PDFs | 45 (in papers/downloads/) |
 | Compendium Markdown Files | 7 |
 | Research Domain Markdowns | 29 |
 | Papers Cataloged (estimated) | 420+ |
@@ -331,5 +335,5 @@ openperception/
 ---
 
 *Index generated: March 25, 2026*
-*Updated: March 25, 2026 (repaired placeholder sources, added canonical corpus registry, refreshed cache counts)*
+*Updated: March 25, 2026 (retired research-local PDF debt, added dataset source-asset lane, refreshed cache counts)*
 *For: Visual Accessibility Research Compendium*

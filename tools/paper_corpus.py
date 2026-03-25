@@ -237,6 +237,13 @@ def validate_paper_corpus(
             f"registered={registered_duplicates} actual={actual_duplicates}"
         )
 
+    remaining_research_pdfs = collect_remaining_research_pdf_paths(registry, repo_root)
+    if remaining_research_pdfs:
+        errors.append(
+            "unmigrated research PDFs remain outside the canonical cache: "
+            + ", ".join(remaining_research_pdfs)
+        )
+
     errors.extend(collect_noncanonical_reference_violations(registry, repo_root))
 
     return errors

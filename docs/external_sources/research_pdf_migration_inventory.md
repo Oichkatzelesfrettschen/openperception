@@ -2,8 +2,8 @@
 
 Updated: 2026-03-25
 
-This note tracks the remaining PDFs that still live under `research/` instead of
-the canonical `papers/downloads/` cache.
+This note tracks the retirement of PDFs that previously lived under `research/`
+instead of the canonical `papers/downloads/` cache.
 
 Direct `research/...pdf` references are now treated as provenance-only
 references. Outside this inventory and the paper-corpus provenance docs, tracked
@@ -12,22 +12,23 @@ source by title/DOI until the artifact is migrated.
 
 ## Current Totals
 
-- Remaining research-local PDFs: 1
-- Topic buckets: `colorblindness` 1
+- Remaining research-local PDFs: 0
+- Topic buckets: none
 
-## Decision Buckets
+## Retirement Result
 
-| Path | Bucket | Rationale |
-|------|--------|-----------|
-| `research/colorblindness/Ishihara_38_Plates_Test.pdf` | Keep local | Test asset rather than a canonical literature-cache paper. |
+All literature PDFs that used to live under `research/` have been migrated into
+the canonical paper cache under `papers/downloads/`.
 
-## Topic Counts
+The last non-paper exception was also retired from `research/`:
 
-| Topic | Count | Paths |
-|-------|-------|-------|
-| `colorblindness` | 1 | `research/colorblindness/Ishihara_38_Plates_Test.pdf` |
+| Former Path | Resolution | Current Location |
+|-------------|------------|------------------|
+| `research/colorblindness/Ishihara_38_Plates_Test.pdf` | Reclassified as a dataset-support source asset rather than a literature paper. | `datasets/source_assets/ishihara/Ishihara_38_Plates_Test.pdf` |
 
-## Next Migration Order
+## Follow-Up
 
-1. Decide whether the Ishihara test asset deserves a separate non-paper cache
-   lane or should remain a deliberate research-local exception.
+1. Re-verify an upstream acquisition URL for the Ishihara source asset when a
+   trustworthy source is identified.
+2. Keep future non-paper reference artifacts in `datasets/source_assets/`
+   instead of `research/`.

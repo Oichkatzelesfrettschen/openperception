@@ -8,6 +8,7 @@ This note captures the paper-corpus state after the duplicate-collapse tranche.
 
 - `papers/downloads/` is now versioned intentionally.
 - PDF papers in `papers/` and `research/` are configured for Git LFS.
+- The paper corpus no longer has any live `research/*.pdf` debt.
 - Bibliographies, provenance manifests, HTML captures, and text extracts remain
   in normal Git for reviewability.
 
@@ -71,8 +72,7 @@ the provenance docs that are meant to record them.
 
 1. Keep future paper additions in `papers/downloads/` first, with provenance or
    trace artifacts added in the same change.
-2. Treat research-local PDF copies as migration debt rather than a normal
-   storage pattern.
-3. Use the [research PDF migration inventory](/home/eirikr/Github/openperception/docs/external_sources/research_pdf_migration_inventory.md)
-   to keep the lone remaining research-local PDF deliberate rather than letting
-   new migration debt accumulate piecemeal.
+2. Treat any new `research/*.pdf` file as a verifier failure, not as acceptable
+   migration debt.
+3. Keep non-paper reference assets in dataset-specific lanes such as
+   `datasets/source_assets/`, with a provenance note beside the asset.

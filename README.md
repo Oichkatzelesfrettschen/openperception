@@ -75,9 +75,9 @@ make oklch
 
 ### Research Corpus Notes
 
-The canonical paper corpus lives under `papers/downloads/`. PDF artifacts in
-that cache, plus legacy research PDFs that have not yet been retired, are
-stored with Git LFS. After cloning, run:
+The canonical paper corpus lives under `papers/downloads/`. Non-paper dataset
+support assets live under `datasets/source_assets/`. PDF artifacts in both
+lanes are stored with Git LFS. After cloning, run:
 
 ```bash
 git lfs pull
@@ -93,6 +93,7 @@ openperception/
 |   |-- DaltonLens-Python/     # Python CVD simulation package
 |   +-- libDaltonLens/         # C library (public domain)
 |-- datasets/
+|   |-- source_assets/         # Non-paper reference assets for datasets/tools
 |   +-- ishihara-plate-learning/  # Color blindness test learning tool
 |-- docs/                       # User guides and tutorials
 |-- examples/                   # Code examples and demos

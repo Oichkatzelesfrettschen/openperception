@@ -162,6 +162,7 @@ specs/** linguist-documentation
 # Research paper corpus and downloaded primary sources belong in LFS.
 papers/**/*.pdf filter=lfs diff=lfs merge=lfs -text
 research/**/*.pdf filter=lfs diff=lfs merge=lfs -text
+datasets/source_assets/**/*.pdf filter=lfs diff=lfs merge=lfs -text
 
 # Generated
 tokens/color-tokens.css linguist-generated

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
-Validate canonical paper-cache paths, provenance hashes, and duplicate coverage.
+Validate canonical paper-cache paths, provenance hashes, duplicate coverage,
+and zero research-local PDF drift.
 """
 from __future__ import annotations
 
@@ -12,7 +13,7 @@ from paper_corpus import DEFAULT_PAPER_CORPUS_REGISTRY, validate_paper_corpus
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Validate the paper corpus registry and cached artifacts.",
+        description="Validate the paper corpus registry, cached artifacts, and zero research-local PDF drift.",
     )
     parser.add_argument(
         "--registry",

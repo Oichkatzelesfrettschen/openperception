@@ -221,3 +221,17 @@ def test_collect_remaining_research_pdf_paths_reports_unmigrated_research_pdfs(
         "research/topic/live.pdf",
         "research/topic/second.pdf",
     ]
+
+
+def test_validate_paper_corpus_rejects_unmigrated_research_pdfs(
+    tmp_path: Path,
+) -> None:
+    registry_path = seed_minimal_repo(tmp_path)
+    seed_research_pdf(tmp_path, "research/topic/live.pdf")
+
+    errors = validate_paper_corpus(registry_path, repo_root=tmp_path)
+
+    assert any(
+        "unmigrated research PDFs remain outside the canonical cache" in error
+        for error in errors
+    )
