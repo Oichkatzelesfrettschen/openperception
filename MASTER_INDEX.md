@@ -160,11 +160,9 @@ Applied documentation:
 ### Existing Research PDFs
 
 Located in `/research/` subdirectories:
-- `Brettel_Vienot_Mollon_1997_Dichromat_Simulation.pdf`
-- `Machado_Oliveira_Fernandes_2009_CVD_Simulation.pdf`
 - `Stockman_2019_Cone_Fundamentals_CIE_Standards.pdf`
 - `Vienot_2015_Cone_Fundamentals_Past_Present_Future.pdf`
-- Canonical source-cache paths now live under `papers/downloads/`; see `docs/external_sources/paper_corpus_registry.md`
+- Canonical source-cache paths for algorithm and cognitive-load papers now live under `papers/downloads/`; see `docs/external_sources/paper_corpus_registry.md`
 - And 18+ more across research subdirectories
 
 ---

@@ -138,40 +138,51 @@
         "papers/downloads/adhd/2024_Eye_Tracking_ADHD_Screening.txt"
       ],
       "status": "removed_duplicate_alias"
+    },
+    {
+      "legacy_path": "research/colorblindness/algorithms/Brettel_1997_Dichromat_Simulation.pdf",
+      "canonical_artifacts": [
+        "papers/downloads/algorithms/Brettel_1997_Dichromat_Simulation.pdf"
+      ],
+      "status": "removed_duplicate_mirror"
+    },
+    {
+      "legacy_path": "research/colorblindness/algorithms/Brettel_Vienot_Mollon_1997_Dichromat_Simulation.pdf",
+      "canonical_artifacts": [
+        "papers/downloads/algorithms/Brettel_1997_Dichromat_Simulation.pdf"
+      ],
+      "status": "removed_duplicate_mirror"
+    },
+    {
+      "legacy_path": "research/colorblindness/algorithms/Machado_2009_CVD_Simulation.pdf",
+      "canonical_artifacts": [
+        "papers/downloads/algorithms/Machado_2009_CVD_Simulation.pdf"
+      ],
+      "status": "removed_duplicate_mirror"
+    },
+    {
+      "legacy_path": "research/colorblindness/algorithms/Machado_Oliveira_Fernandes_2009_CVD_Simulation.pdf",
+      "canonical_artifacts": [
+        "papers/downloads/algorithms/Machado_2009_CVD_Simulation.pdf"
+      ],
+      "status": "removed_duplicate_mirror"
+    },
+    {
+      "legacy_path": "research/colorblindness/algorithms/Vienot_1999_Digital_Colourmaps.pdf",
+      "canonical_artifacts": [
+        "papers/downloads/algorithms/Vienot_1999_Digital_Colourmaps.pdf"
+      ],
+      "status": "removed_duplicate_mirror"
+    },
+    {
+      "legacy_path": "research/cognitive_load/2025_Predicting_Cognitive_Load_VR_Multitasking.pdf",
+      "canonical_artifacts": [
+        "papers/downloads/cognitive_load/Virtual_Multitasking_Cognitive_Load.pdf"
+      ],
+      "status": "removed_duplicate_mirror"
     }
   ],
-  "duplicate_groups": [
-    {
-      "id": "brettel_1997",
-      "canonical_path": "papers/downloads/algorithms/Brettel_1997_Dichromat_Simulation.pdf",
-      "alias_paths": [
-        "research/colorblindness/algorithms/Brettel_1997_Dichromat_Simulation.pdf",
-        "research/colorblindness/algorithms/Brettel_Vienot_Mollon_1997_Dichromat_Simulation.pdf"
-      ]
-    },
-    {
-      "id": "machado_2009",
-      "canonical_path": "papers/downloads/algorithms/Machado_2009_CVD_Simulation.pdf",
-      "alias_paths": [
-        "research/colorblindness/algorithms/Machado_2009_CVD_Simulation.pdf",
-        "research/colorblindness/algorithms/Machado_Oliveira_Fernandes_2009_CVD_Simulation.pdf"
-      ]
-    },
-    {
-      "id": "vienot_1999",
-      "canonical_path": "papers/downloads/algorithms/Vienot_1999_Digital_Colourmaps.pdf",
-      "alias_paths": [
-        "research/colorblindness/algorithms/Vienot_1999_Digital_Colourmaps.pdf"
-      ]
-    },
-    {
-      "id": "virtual_multitasking_cognitive_load",
-      "canonical_path": "papers/downloads/cognitive_load/Virtual_Multitasking_Cognitive_Load.pdf",
-      "alias_paths": [
-        "research/cognitive_load/2025_Predicting_Cognitive_Load_VR_Multitasking.pdf"
-      ]
-    }
-  ],
+  "duplicate_groups": [],
   "files": [
     {
       "path": "papers/downloads/seizures/Fisher_2022_Visually_Sensitive_Seizures.pdf",

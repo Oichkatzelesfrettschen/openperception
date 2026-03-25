@@ -9,7 +9,7 @@ tracked papers and trace artifacts.
 
 - New paper artifacts belong in `papers/downloads/`.
 - `research/` should cite or discuss those artifacts, not carry placeholder PDF
-  stubs.
+  stubs or duplicate mirrors.
 - When a direct PDF is blocked, cache the accessible full-text HTML plus a
   trace artifact that shows the blocked PDF path.
 
@@ -30,10 +30,11 @@ Machine-readable tracking:
 | `research/seizures/photosensitive_epilepsy/Fisher_2022_Visually_Sensitive_Seizures.pdf` | `papers/downloads/seizures/Fisher_2022_Visually_Sensitive_Seizures.pdf`, `.txt` | PDF | Essex repository open PDF cached. |
 | `research/visual_impairments/nystagmus/2024_INS_Gene_Therapy_Clinical_Trials.pdf` | `papers/downloads/nystagmus/2024_INS_Gene_Therapy_Clinical_Trials.html`, `.txt`, `.pdf.trace.html` | HTML full text | PMC HTML accessible; direct PDF blocked. |
 
-## Documented Duplicate Groups
+## Collapsed Duplicate Groups
 
-These duplicates still exist on disk, but the canonical path for citation and
-future cleanup is explicit:
+The remaining cross-lane duplicate groups have now been retired. The canonical
+path for citation and provenance remains in `papers/downloads/`, and the former
+research-local mirrors are tracked below as removed aliases.
 
 | Canonical path | Legacy duplicate paths |
 |----------------|------------------------|
@@ -54,5 +55,5 @@ The verifier checks:
 
 - canonical artifacts exist and match the registry hash/size table,
 - no zero-byte PDFs remain under `papers/` or `research/`,
-- legacy placeholder paths stay removed,
-- duplicate PDF groups match the documented registry.
+- legacy alias paths stay removed,
+- duplicate PDF groups do not reappear across `papers/` and `research/`.

@@ -75,8 +75,9 @@ make oklch
 
 ### Research Corpus Notes
 
-The paper corpus under `papers/downloads/` and research PDFs under `papers/` and
-`research/` are stored with Git LFS. After cloning, run:
+The canonical paper corpus lives under `papers/downloads/`. PDF artifacts in
+that cache, plus legacy research PDFs that have not yet been retired, are
+stored with Git LFS. After cloning, run:
 
 ```bash
 git lfs pull

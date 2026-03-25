@@ -2,7 +2,7 @@
 
 Audit date: 2026-03-25
 
-This note captures the paper-corpus state after the first repair tranche.
+This note captures the paper-corpus state after the duplicate-collapse tranche.
 
 ## Current Shape
 
@@ -28,26 +28,31 @@ See:
 - `papers/downloads/paper_corpus_tracking.bib`
 - [Paper corpus registry](/home/eirikr/Github/openperception/docs/external_sources/paper_corpus_registry.md)
 
-### 2. Duplicate PDFs across canonical lanes are documented
+### 2. Duplicate mirrors across canonical lanes were collapsed
 
-The following files are byte-identical duplicates:
+The last byte-identical cross-lane mirror groups were removed from `research/`
+so the repo now has one canonical on-disk copy per tracked paper artifact:
 
 - `papers/downloads/algorithms/Brettel_1997_Dichromat_Simulation.pdf`
-- `research/colorblindness/algorithms/Brettel_1997_Dichromat_Simulation.pdf`
-- `research/colorblindness/algorithms/Brettel_Vienot_Mollon_1997_Dichromat_Simulation.pdf`
+- retired mirrors:
+  `research/colorblindness/algorithms/Brettel_1997_Dichromat_Simulation.pdf`,
+  `research/colorblindness/algorithms/Brettel_Vienot_Mollon_1997_Dichromat_Simulation.pdf`
 
 - `papers/downloads/algorithms/Machado_2009_CVD_Simulation.pdf`
-- `research/colorblindness/algorithms/Machado_2009_CVD_Simulation.pdf`
-- `research/colorblindness/algorithms/Machado_Oliveira_Fernandes_2009_CVD_Simulation.pdf`
+- retired mirrors:
+  `research/colorblindness/algorithms/Machado_2009_CVD_Simulation.pdf`,
+  `research/colorblindness/algorithms/Machado_Oliveira_Fernandes_2009_CVD_Simulation.pdf`
 
 - `papers/downloads/algorithms/Vienot_1999_Digital_Colourmaps.pdf`
-- `research/colorblindness/algorithms/Vienot_1999_Digital_Colourmaps.pdf`
+- retired mirror:
+  `research/colorblindness/algorithms/Vienot_1999_Digital_Colourmaps.pdf`
 
 - `papers/downloads/cognitive_load/Virtual_Multitasking_Cognitive_Load.pdf`
-- `research/cognitive_load/2025_Predicting_Cognitive_Load_VR_Multitasking.pdf`
+- retired mirror:
+  `research/cognitive_load/2025_Predicting_Cognitive_Load_VR_Multitasking.pdf`
 
-These are not urgent because LFS de-duplicates object storage by content, but
-they do create naming drift and citation ambiguity.
+The registry now records those paths as removed legacy aliases, and the paper
+corpus verifier will fail if equivalent cross-lane PDF duplicates reappear.
 
 ## Quality Gate
 
@@ -57,12 +62,13 @@ The paper corpus now has a dedicated verifier:
 python3 tools/check_paper_corpus.py
 ```
 
-It fails on zero-byte PDFs, bad registry hashes, lingering legacy placeholder
-paths, and duplicate groups that drift away from the documented canonical map.
+It fails on zero-byte PDFs, bad registry hashes, lingering legacy aliases, and
+any duplicate PDF groups that reappear across the canonical cache and research
+lanes.
 
 ## Remaining Follow-Up
 
-1. Collapse the documented cross-lane duplicate groups once downstream docs stop
-   depending on research-local mirror PDFs.
-2. Keep future paper additions in `papers/downloads/` first, with provenance or
+1. Keep future paper additions in `papers/downloads/` first, with provenance or
    trace artifacts added in the same change.
+2. Treat research-local PDF copies as migration debt rather than a normal
+   storage pattern.
