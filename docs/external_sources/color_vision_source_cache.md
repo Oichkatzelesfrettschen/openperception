@@ -22,6 +22,7 @@ Machine-readable registry:
 
 ## Related Docs
 
+- [Color vision primary source notes](/home/eirikr/Github/openperception/research/colorblindness/primary_source_notes.md)
 - [Color vision deficiency academic papers](/home/eirikr/Github/openperception/papers/COLORBLINDNESS_ACADEMIC_PAPERS.md)
 - [CVD research report](/home/eirikr/Github/openperception/research/colorblindness/CVD_RESEARCH_REPORT.md)
 - [Paper corpus registry](/home/eirikr/Github/openperception/docs/external_sources/paper_corpus_registry.md)

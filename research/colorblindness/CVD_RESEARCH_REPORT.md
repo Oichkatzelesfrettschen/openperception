@@ -1,7 +1,7 @@
 # Color Vision Deficiency Research Report
 
 **Generated:** 2025-12-27
-**Last Updated:** 2026-03-19
+**Last Updated:** 2026-03-25
 **Purpose:** Comprehensive accessibility research repository for color vision deficiency (CVD)
 
 ---
@@ -417,6 +417,22 @@ Daltonization is the process of modifying images to improve color discrimination
    - Features: FZU-CVDSet dataset (first large-scale CVD-individual-labeled dataset)
    - Modules: Perception-guided feature extraction + diffusion transformer
 
+#### Interactive Recognition And Reconstruction (2024-2025)
+
+5. **"Computational Trichromacy Reconstruction: Empowering the Color-Vision Deficient to Recognize Colors Using Augmented Reality"** (2024)
+   - Conference: UIST 2024
+   - DOI: 10.1145/3654777.3676415
+   - Canonical local cache: `papers/downloads/color_vision/Zhu_2024_Computational_Trichromacy_Reconstruction_AR.pdf`
+   - Key contribution: distinguishes color recognition from mere discrimination and uses interactive temporal color shifts to create a learnable extra cue for dichromats
+   - Study structure: psychophysics on 16 CVD participants and a 9-day longitudinal study on 8 participants
+
+6. **"A Computational Framework for Modeling Emergence of Color Vision in the Human Brain"** (2025)
+   - Venue: ICLR 2025 (oral)
+   - URL: https://openreview.net/forum?id=g3xuCtrG6H
+   - Canonical local cache: `papers/downloads/color_vision/Kotani_2025_Color_Vision_Emergence_Framework.pdf`
+   - Key contribution: models color vision as an emergent N-dimensional cortical representation inferred from optic nerve signals rather than a fixed trichromatic assumption
+   - Practical relevance: informs restoration and enhancement framing, but is not itself a direct accessibility intervention paper
+
 #### Machine Learning for Ishihara Enhancement (2025)
 
 5. **"Enhancing Ishihara and educational images using machine learning"**
@@ -694,9 +710,13 @@ The Rayleigh match test definitively diagnoses inherited red-green CVD:
 
 8. Stockman, A., et al. (2024). Formulae for generating standard and individual human cone spectral sensitivities. *Color Research & Application*.
 
+9. Zhu, Y., Chen, E., Hascup, C., Yan, Y., & Sharma, G. (2024). Computational trichromacy reconstruction: Empowering the color-vision deficient to recognize colors using augmented reality. *UIST 2024*. DOI: 10.1145/3654777.3676415
+
+10. Kotani, A., & Ng, R. (2025). A computational framework for modeling emergence of color vision in the human brain. *ICLR 2025*. https://openreview.net/forum?id=g3xuCtrG6H
+
 ### Accessibility Standards
 
-9. W3C. (2023). Web Content Accessibility Guidelines (WCAG) 2.2. https://www.w3.org/TR/WCAG22/
+11. W3C. (2023). Web Content Accessibility Guidelines (WCAG) 2.2. https://www.w3.org/TR/WCAG22/
 
 ---
 
@@ -782,6 +802,44 @@ Daltonization." *Eurographics 2023 Short Papers*.
 **Source**: "Enhancing Ishihara and educational images using machine learning."
 *Frontiers in Artificial Intelligence*, 2025. DOI: 10.3389/frai.2025.1676644
 
+### Interactive Color Recognition And AR Assistance
+
+Zhu et al. (UIST 2024) add an important distinction that static recoloring
+papers often blur: helping users discriminate colors is not the same as helping
+them recognize and name those colors in real tasks.
+
+Key repo-relevant takeaways:
+
+- The system augments a dichromat's native 2D percept with a third, learned cue
+  via swipe-controlled temporal color shifts.
+- The paper reports both psychophysical discrimination gains and task-level
+  color-recognition benefits in Lego-building and art-interpretation scenarios.
+- For OpenPerception, some accommodations should be evaluated against naming and
+  task completion, not only against pairwise color separability.
+
+**Canonical local cache**:
+`papers/downloads/color_vision/Zhu_2024_Computational_Trichromacy_Reconstruction_AR.pdf`
+
+### Computational Models Of Color-Vision Emergence
+
+Kotani and Ng (ICLR 2025) broaden the conceptual frame for the repo by treating
+color vision as an emergent cortical representation whose dimensionality must be
+inferred from optic nerve signals.
+
+Key repo-relevant takeaways:
+
+- The framework naturally recovers 1D, 2D, 3D, and 4D color representations
+  depending on the number of photoreceptor classes in the simulated retina.
+- It helps separate today's accessibility questions from longer-horizon
+  restoration or enhancement questions, including gene-therapy-linked shifts in
+  color dimensionality.
+- For repo writing, it supports avoiding language that treats trichromacy as
+  the only natural endpoint of color perception while still keeping current UI
+  accommodations grounded in today's users.
+
+**Canonical local cache**:
+`papers/downloads/color_vision/Kotani_2025_Color_Vision_Emergence_Framework.pdf`
+
 ### ChromATA: Real-Time CVD Processing (2025)
 
 ChromATA (Chromatic Accessibility Through Adaptation) is a real-time image processing
@@ -805,6 +863,7 @@ support for real-time rendering applications.
 |------|---------|---------|
 | 2025-12-27 | 1.0 | Initial comprehensive report |
 | 2026-03-19 | 1.1 | Added 2025-2026 research updates: simulation accuracy study, gene therapy trials, NVIDIA daltonization, deep learning approaches, WCAG 3.0/APCA status |
+| 2026-03-25 | 1.2 | Added canonical color-vision source synthesis for AR color recognition and computational color-vision emergence modeling |
 
 ---
 

@@ -172,6 +172,7 @@ Applied documentation:
 | File | Description |
 |------|-------------|
 | `research/neurodivergence/primary_source_notes.md` | Granular extraction for repaired ADHD, autism, and dyslexia sources |
+| `research/colorblindness/primary_source_notes.md` | Granular extraction for color-vision reconstruction and emergence sources |
 | `research/seizures/photosensitive_epilepsy/primary_source_notes.md` | Granular extraction for Fisher et al. seizure review |
 | `research/colorblindness/blue_cone_monochromacy/primary_source_notes.md` | Granular extraction for BCM review |
 | `research/visual_impairments/nystagmus/primary_source_notes.md` | Granular extraction for INS and gene-therapy review |
