@@ -10,12 +10,18 @@
       "size_bytes": 2816420,
       "former_repo_path": "research/colorblindness/Ishihara_38_Plates_Test.pdf",
       "upstream_url": null,
-      "provenance_status": "legacy_local_asset_upstream_not_yet_reverified",
+      "reference_urls": [
+        "https://square.umin.ac.jp/issinkai/kensahyou.html",
+        "https://www.oculus.de/en/products/ishihara-colour-chart/",
+        "https://www.ssc.education.ed.ac.uk/library/catalogue.pdf"
+      ],
+      "verification_trace": "datasets/source_assets/ishihara/verification_trace.md",
+      "provenance_status": "bibliographic_source_reverified_exact_file_origin_still_unresolved",
       "used_by": [
         "datasets/ishihara-plate-learning/",
         "research/colorblindness/"
       ],
-      "notes": "Retained as a non-paper source asset for the Ishihara learning-tool lane. The cached PDF contains the 38-plate reference set and answer key pages, but it is not part of the canonical literature paper corpus."
+      "notes": "Retained as a non-paper source asset for the Ishihara learning-tool lane. The cached PDF contains the 38-plate reference set and answer key pages, but it is not part of the canonical literature paper corpus. Official bibliographic/product references for the 38-plate edition were re-verified, while exact byte-level acquisition lineage for this local PDF remains unresolved."
     }
   ]
 }

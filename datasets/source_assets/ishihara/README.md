@@ -16,3 +16,10 @@ dataset-support asset rather than as a literature paper.
 The current local artifact is a legacy cached PDF whose exact upstream source
 URL has not yet been re-verified. Its local hash, former path, and current role
 are recorded in `PROVENANCE.json`.
+
+The current verification trace lives in `verification_trace.md`, which records:
+
+- re-verified bibliographic and product references for the 38-plate edition,
+- hash comparison against public mirror PDFs,
+- the remaining gap between content verification and exact acquisition-path
+  verification.

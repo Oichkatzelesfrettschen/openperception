@@ -3,7 +3,7 @@
 **Repository:** OpenPerception (see repository root)
 **Compiled:** March 25, 2026
 **Total PDFs:** 45 (in `papers/downloads/` -- for research use only; see DOI/URL links for official access)
-**Total Compendiums:** 39 markdown files
+**Total Compendiums:** 40 markdown files
 
 ---
 
@@ -175,6 +175,7 @@ Located in `/research/` subdirectories:
 - Canonical source-cache paths for algorithm and cognitive-load papers now live under `papers/downloads/`; see `docs/external_sources/paper_corpus_registry.md`
 - 0 research-local PDFs remain; see `docs/external_sources/research_pdf_migration_inventory.md`
 - The Ishihara 38-plate reference PDF now lives in `datasets/source_assets/ishihara/`; see `docs/external_sources/nonpaper_source_assets.md`
+- Use `tools/check_source_assets.py` to validate dataset-support source assets and provenance traces
 
 ---
 

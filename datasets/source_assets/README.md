@@ -16,3 +16,11 @@ interactive tools, or demonstrations in the repository.
 - Keep filenames stable and ASCII-only.
 - Add a small local provenance note for each asset so future cleanups do not
   have to reverse-engineer why the file is here.
+
+## Verification
+
+Run:
+
+```bash
+python3 tools/check_source_assets.py
+```

@@ -83,6 +83,13 @@ lanes are stored with Git LFS. After cloning, run:
 git lfs pull
 ```
 
+Integrity checks:
+
+```bash
+python3 tools/check_paper_corpus.py
+python3 tools/check_source_assets.py
+```
+
 ---
 
 ## Repository Structure
