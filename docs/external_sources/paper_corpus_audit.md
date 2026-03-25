@@ -55,6 +55,19 @@ so the repo now has one canonical on-disk copy per tracked paper artifact:
 The registry now records those paths as removed legacy aliases, and the paper
 corpus verifier will fail if equivalent cross-lane PDF duplicates reappear.
 
+### 3. Root-level paper outliers were retired into topic lanes
+
+The last tracked paper PDFs living directly under `papers/` were migrated into
+topic lanes under `papers/downloads/`:
+
+- `papers/downloads/color_vision/Zhu_2024_Computational_Trichromacy_Reconstruction_AR.pdf`
+- retired outlier:
+  `papers/arXiv_2408.01895_Trichromacy_Reconstruction_AR.pdf`
+
+- `papers/downloads/color_vision/Kotani_2025_Color_Vision_Emergence_Framework.pdf`
+- retired outlier:
+  `papers/arXiv_2408.16916_Color_Vision_Emergence_Framework.pdf`
+
 ## Quality Gate
 
 The paper corpus now has a dedicated verifier:
@@ -63,10 +76,11 @@ The paper corpus now has a dedicated verifier:
 python3 tools/check_paper_corpus.py
 ```
 
-It fails on zero-byte PDFs, bad registry hashes, lingering legacy aliases, and
-any duplicate PDF groups that reappear across the canonical cache and research
-lanes. It also blocks stale Markdown references to retired alias paths outside
-the provenance docs that are meant to record them.
+It fails on zero-byte PDFs, bad registry hashes, lingering legacy aliases,
+stray `papers/*.pdf` outliers, and any duplicate PDF groups that reappear
+across the canonical cache and research lanes. It also blocks stale Markdown
+references to retired alias paths outside the provenance docs that are meant to
+record them.
 
 ## Remaining Follow-Up
 

@@ -8,6 +8,8 @@ tracked papers and trace artifacts.
 ## Canonical Policy
 
 - New paper artifacts belong in `papers/downloads/`.
+- Tracked paper PDFs should not live directly under `papers/`; use a topic lane
+  inside `papers/downloads/`.
 - `research/` should cite or discuss those artifacts, not carry placeholder PDF
   stubs or duplicate mirrors.
 - Non-paper source assets belong in dataset-specific lanes such as
@@ -60,6 +62,7 @@ The verifier checks:
 
 - canonical artifacts exist and match the registry hash/size table,
 - no zero-byte PDFs remain under `papers/` or `research/`,
+- no stray `papers/*.pdf` outliers remain outside `papers/downloads/`,
 - no unmigrated `research/*.pdf` files remain,
 - legacy alias paths stay removed,
 - legacy alias paths appear only in the paper-corpus provenance docs,

@@ -237,6 +237,17 @@ def validate_paper_corpus(
             f"registered={registered_duplicates} actual={actual_duplicates}"
         )
 
+    stray_paper_cache_paths = sorted(
+        path.relative_to(repo_root).as_posix()
+        for path in repo_root.glob("papers/**/*.pdf")
+        if not path.relative_to(repo_root).as_posix().startswith("papers/downloads/")
+    )
+    if stray_paper_cache_paths:
+        errors.append(
+            "stray paper PDFs remain outside papers/downloads: "
+            + ", ".join(stray_paper_cache_paths)
+        )
+
     remaining_research_pdfs = collect_remaining_research_pdf_paths(registry, repo_root)
     if remaining_research_pdfs:
         errors.append(

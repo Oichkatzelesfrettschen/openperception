@@ -320,7 +320,8 @@
 - **Year:** 2024
 - **Conference:** UIST '24 (ACM Symposium on User Interface Software and Technology), Pittsburgh, PA
 - **arXiv:** https://arxiv.org/html/2408.01895v1
-- **Local Copy:** Not distributed (copyright); see arXiv link above
+- **DOI:** 10.1145/3654777.3676415
+- **Canonical Local Cache:** `papers/downloads/color_vision/Zhu_2024_Computational_Trichromacy_Reconstruction_AR.pdf`
 - **Access:** Open Access
 - **Description:** AR-based approach using rotational color shifts to help dichromats distinguish initially confusing colors.
 

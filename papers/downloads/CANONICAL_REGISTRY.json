@@ -190,6 +190,28 @@
         "papers/downloads/autism/2024_Visual_Mental_Imagery_Autism.pdf"
       ],
       "notes": "Author-preprint PDF retained in the canonical autism cache while the final bibliographic record is verified via DOI and PubMed."
+    },
+    {
+      "id": "zhu_2024",
+      "title": "Computational Trichromacy Reconstruction: Empowering the Color-Vision Deficient to Recognize Colors Using Augmented Reality",
+      "url": "https://doi.org/10.1145/3654777.3676415",
+      "download_url": "https://arxiv.org/pdf/2408.01895.pdf",
+      "access": "pdf",
+      "artifacts": [
+        "papers/downloads/color_vision/Zhu_2024_Computational_Trichromacy_Reconstruction_AR.pdf"
+      ],
+      "notes": "arXiv preprint retained in the canonical color-vision cache for the UIST 2024 AR accessibility paper."
+    },
+    {
+      "id": "kotani_2025",
+      "title": "A Computational Framework for Modeling Emergence of Color Vision in the Human Brain",
+      "url": "https://openreview.net/forum?id=g3xuCtrG6H",
+      "download_url": "https://arxiv.org/pdf/2408.16916.pdf",
+      "access": "pdf",
+      "artifacts": [
+        "papers/downloads/color_vision/Kotani_2025_Color_Vision_Emergence_Framework.pdf"
+      ],
+      "notes": "ICLR 2025 oral paper retained in the canonical color-vision cache from the arXiv/OpenReview release."
     }
   ],
   "legacy_aliases": [
@@ -360,6 +382,20 @@
         "papers/downloads/autism/2024_Visual_Mental_Imagery_Autism.pdf"
       ],
       "status": "migrated_to_canonical_cache"
+    },
+    {
+      "legacy_path": "papers/arXiv_2408.01895_Trichromacy_Reconstruction_AR.pdf",
+      "canonical_artifacts": [
+        "papers/downloads/color_vision/Zhu_2024_Computational_Trichromacy_Reconstruction_AR.pdf"
+      ],
+      "status": "migrated_root_paper_outlier"
+    },
+    {
+      "legacy_path": "papers/arXiv_2408.16916_Color_Vision_Emergence_Framework.pdf",
+      "canonical_artifacts": [
+        "papers/downloads/color_vision/Kotani_2025_Color_Vision_Emergence_Framework.pdf"
+      ],
+      "status": "migrated_root_paper_outlier"
     }
   ],
   "duplicate_groups": [],
@@ -506,6 +542,18 @@
       "path": "papers/downloads/autism/2024_Visual_Mental_Imagery_Autism.pdf",
       "sha256": "4c6257c223615be2b7b01014ad81efb883f7426b8595c2e7a2331e5ef2a64075",
       "size_bytes": 939147,
+      "accessed_utc_date": "2026-03-25"
+    },
+    {
+      "path": "papers/downloads/color_vision/Zhu_2024_Computational_Trichromacy_Reconstruction_AR.pdf",
+      "sha256": "f94936924dcf442e8ba8a10d400e8bab959df37f0a420e4fd83f144164066ec1",
+      "size_bytes": 21068674,
+      "accessed_utc_date": "2026-03-25"
+    },
+    {
+      "path": "papers/downloads/color_vision/Kotani_2025_Color_Vision_Emergence_Framework.pdf",
+      "sha256": "100104877d7293880e3a2ae102320ebb030db49c0b8e0f98821d9c385cd7d438",
+      "size_bytes": 44527297,
       "accessed_utc_date": "2026-03-25"
     }
   ]

@@ -235,3 +235,14 @@ def test_validate_paper_corpus_rejects_unmigrated_research_pdfs(
         "unmigrated research PDFs remain outside the canonical cache" in error
         for error in errors
     )
+
+
+def test_validate_paper_corpus_rejects_stray_paper_root_pdfs(tmp_path: Path) -> None:
+    registry_path = seed_minimal_repo(tmp_path)
+    stray = tmp_path / "papers" / "stray.pdf"
+    stray.parent.mkdir(parents=True, exist_ok=True)
+    stray.write_bytes(MINIMAL_PDF)
+
+    errors = validate_paper_corpus(registry_path, repo_root=tmp_path)
+
+    assert any("stray paper PDFs remain outside papers/downloads" in error for error in errors)

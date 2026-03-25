@@ -90,6 +90,9 @@ python3 tools/check_paper_corpus.py
 python3 tools/check_source_assets.py
 ```
 
+The paper-corpus check now also fails if tracked literature PDFs appear
+directly under `papers/` instead of a topic lane inside `papers/downloads/`.
+
 ---
 
 ## Repository Structure
@@ -106,6 +109,7 @@ openperception/
 |-- examples/                   # Code examples and demos
 |-- gtk4/                       # GTK4 accessibility demo
 |-- papers/                     # Research paper compendiums
+|   |-- downloads/             # Canonical topic-lane paper cache
 |-- python-packages/
 |   +-- sphinx-brand-theme/    # Custom Sphinx documentation theme
 |-- research/                   # Domain research (CVD, neurodivergence, etc.)

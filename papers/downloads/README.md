@@ -27,6 +27,7 @@ literature cache.
 - `cognitive_load/`
 - `contrast_sensitivity/`
 - `colorblindness/`
+- `color_vision/`
 - `dyslexia/`
 - `low_vision/`
 - `nystagmus/`

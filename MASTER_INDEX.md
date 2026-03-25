@@ -2,8 +2,8 @@
 
 **Repository:** OpenPerception (see repository root)
 **Compiled:** March 25, 2026
-**Total PDFs:** 45 (in `papers/downloads/` -- for research use only; see DOI/URL links for official access)
-**Total Compendiums:** 40 markdown files
+**Total PDFs:** 47 (in `papers/downloads/` -- for research use only; see DOI/URL links for official access)
+**Total Compendiums:** 41 markdown files
 
 ---
 
@@ -78,6 +78,12 @@
 | `MedlinePlus_Color_Vision_Deficiency.pdf` | Clinical overview |
 | `OPN1LW_Exon_Deletion_RG_CVD.pdf` | Genetic case study |
 | `OPN1LW_OPN1MW_Mutations_CVD.pdf` | Opsin gene mutations |
+
+#### Color Vision (2 papers)
+| File | Description |
+|------|-------------|
+| `Zhu_2024_Computational_Trichromacy_Reconstruction_AR.pdf` | AR-based trichromacy reconstruction for CVD |
+| `Kotani_2025_Color_Vision_Emergence_Framework.pdf` | Computational framework for color-vision emergence |
 
 #### Blue Cone Monochromacy (1 paper)
 | File | Description |
@@ -155,6 +161,7 @@ Applied documentation:
 | `docs/external_sources/paper_corpus_registry.md` | Human-readable canonical cache policy and duplicate map |
 | `docs/external_sources/algorithm_source_cache.md` | Cached algorithm-support source index |
 | `docs/external_sources/cognitive_load_source_cache.md` | Cached cognitive-load source index |
+| `docs/external_sources/color_vision_source_cache.md` | Cached color-vision computation and augmentation source index |
 | `docs/external_sources/nonpaper_source_assets.md` | Dataset-support source assets that do not belong in the paper corpus |
 | `docs/external_sources/research_pdf_migration_inventory.md` | Closeout note for retired research-local PDF debt |
 | `docs/external_sources/neurodivergence_source_cache.md` | Cached ADHD, autism, and dyslexia source index |
@@ -176,6 +183,7 @@ Located in `/research/` subdirectories:
 - 0 research-local PDFs remain; see `docs/external_sources/research_pdf_migration_inventory.md`
 - The Ishihara 38-plate reference PDF now lives in `datasets/source_assets/ishihara/`; see `docs/external_sources/nonpaper_source_assets.md`
 - Use `tools/check_source_assets.py` to validate dataset-support source assets and provenance traces
+- Use `tools/check_paper_corpus.py` to catch stray `papers/*.pdf` outliers outside `papers/downloads/`
 
 ---
 
@@ -224,6 +232,7 @@ openperception/
 │   │   ├── autism/
 │   │   ├── cognitive_load/
 │   │   ├── colorblindness/
+│   │   ├── color_vision/
 │   │   ├── dyslexia/
 │   │   ├── seizures/
 │   │   └── stereoblindness/
@@ -304,7 +313,7 @@ openperception/
 
 | Metric | Count |
 |--------|-------|
-| Total PDFs | 45 (in papers/downloads/) |
+| Total PDFs | 47 (in papers/downloads/) |
 | Compendium Markdown Files | 7 |
 | Research Domain Markdowns | 29 |
 | Papers Cataloged (estimated) | 420+ |
@@ -336,5 +345,5 @@ openperception/
 ---
 
 *Index generated: March 25, 2026*
-*Updated: March 25, 2026 (retired research-local PDF debt, added dataset source-asset lane, refreshed cache counts)*
+*Updated: March 25, 2026 (retired root-level paper outliers, expanded canonical cache lanes, refreshed cache counts)*
 *For: Visual Accessibility Research Compendium*
