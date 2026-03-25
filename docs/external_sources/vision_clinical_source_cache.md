@@ -17,6 +17,7 @@ Machine-readable registry:
 
 | ID | Citation | Local Artifacts | Access Mode | Notes |
 |----|----------|-----------------|-------------|-------|
+| `cideciyan_2024` | Cideciyan et al. *International Journal of Molecular Sciences* (2024). | `papers/downloads/blue_cone_monochromacy/Cideciyan_2024_BCM_Retinal_Structure_Clinical_Endpoints.pdf` | PDF | MDPI article PDF migrated from the legacy research blue-cone-monochromacy lane. |
 | `sechrest_2023` | Sechrest et al. *Vision Research* (2023). | `papers/downloads/blue_cone_monochromacy/Sechrest_2023_BCM_Gene_Therapy_Review.html`, `papers/downloads/blue_cone_monochromacy/Sechrest_2023_BCM_Gene_Therapy_Review.txt`, `papers/downloads/blue_cone_monochromacy/Sechrest_2023_BCM_Gene_Therapy_Review.pdf.trace.html` | HTML full text | PMC HTML accessible; direct PDF fetch was blocked and cached as a trace artifact. |
 | `tripolone_2024` | Tripolone et al. *medRxiv* (2024). | `papers/downloads/contrast_sensitivity/2024_Contrast_Sensitivity_Glaucoma_Suspect.pdf` | PDF | medRxiv preprint migrated from the legacy research visual-impairment lane. |
 | `del_aguila_2024` | Del Aguila et al. *LEIRD 2024 Proceedings* (2024). | `papers/downloads/low_vision/2024_Systematic_Review_Mobile_Interface_Visually_Impaired.pdf` | PDF | Proceedings paper migrated from the legacy research low-vision lane. |

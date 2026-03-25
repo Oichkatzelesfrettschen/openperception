@@ -2,8 +2,8 @@
 
 **Repository:** OpenPerception (see repository root)
 **Compiled:** March 25, 2026
-**Total PDFs:** 41 (in `papers/downloads/` -- for research use only; see DOI/URL links for official access)
-**Total Compendiums:** 35 markdown files
+**Total PDFs:** 45 (in `papers/downloads/` -- for research use only; see DOI/URL links for official access)
+**Total Compendiums:** 36 markdown files
 
 ---
 
@@ -79,6 +79,11 @@
 | `OPN1LW_Exon_Deletion_RG_CVD.pdf` | Genetic case study |
 | `OPN1LW_OPN1MW_Mutations_CVD.pdf` | Opsin gene mutations |
 
+#### Blue Cone Monochromacy (1 paper)
+| File | Description |
+|------|-------------|
+| `Cideciyan_2024_BCM_Retinal_Structure_Clinical_Endpoints.pdf` | Clinical endpoints for L-opsin gene therapy |
+
 #### ADHD (5 papers)
 | File | Description |
 |------|-------------|
@@ -88,11 +93,12 @@
 | `ADHD_Peripheral_Vision_2023.pdf` | Neuro-glasses intervention |
 | `Gestalt_Processing_CVI_ADHD_2024.pdf` | Visual selective attention |
 
-#### Autism (7 papers)
+#### Autism (8 papers)
 | File | Description |
 |------|-------------|
 | `AASPIRE_Autism_Web_Accessibility_Guidelines_2019.pdf` | Participatory web accessibility guidelines |
 | `2min_Eye_Tracking_ASD_2024.pdf` | Brief screening protocol |
+| `2024_Visual_Mental_Imagery_Autism.pdf` | Visual mental imagery study |
 | `Eye_Tracking_ASD_2024.pdf` | Novel metrics system |
 | `Eye_Tracking_ASD_DL_2025.pdf` | Deep learning diagnosis |
 | `Manning_2024_Visual_Processing_Autism_Dyslexia.pdf` | Cross-syndrome study |
@@ -104,9 +110,11 @@
 |------|-------------|
 | `Mueller-Axt_2024_Magnocellular_LGN_Dyslexia.pdf` | Visual thalamus neuroimaging evidence |
 
-#### Cognitive Load (10 papers)
+#### Cognitive Load (12 papers)
 | File | Description |
 |------|-------------|
+| `2024_Cognitive_Load_Measurement_Methods.pdf` | Measurement-methods review and framework |
+| `2024_Minimalism_vs_Complexity_UX_Cognitive_Load.pdf` | Web-interface complexity thesis |
 | `Adaptive_Learning_Cognitive_Load.pdf` | ALT analysis |
 | `CLT_Emerging_Trends_2025.pdf` | Theory evolution |
 | `Cognition_Computation_Attention.pdf` | Human-AI comparison |
@@ -146,6 +154,7 @@ Applied documentation:
 | `paper_corpus_tracking.bib` | BibTeX tracking for repaired legacy placeholders |
 | `docs/external_sources/paper_corpus_registry.md` | Human-readable canonical cache policy and duplicate map |
 | `docs/external_sources/algorithm_source_cache.md` | Cached algorithm-support source index |
+| `docs/external_sources/cognitive_load_source_cache.md` | Cached cognitive-load source index |
 | `docs/external_sources/research_pdf_migration_inventory.md` | Remaining research-local PDF inventory and migration buckets |
 | `docs/external_sources/neurodivergence_source_cache.md` | Cached ADHD, autism, and dyslexia source index |
 | `docs/external_sources/seizure_source_cache.md` | Cached seizure-source index |
@@ -163,7 +172,7 @@ Applied documentation:
 
 Located in `/research/` subdirectories:
 - Canonical source-cache paths for algorithm and cognitive-load papers now live under `papers/downloads/`; see `docs/external_sources/paper_corpus_registry.md`
-- 5 research-local PDFs remain; see `docs/external_sources/research_pdf_migration_inventory.md`
+- 1 research-local PDF remains; see `docs/external_sources/research_pdf_migration_inventory.md`
 
 ---
 

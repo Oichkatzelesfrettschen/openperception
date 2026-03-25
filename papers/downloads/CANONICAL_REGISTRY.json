@@ -146,6 +146,50 @@
         "papers/downloads/autism/Manning_2024_Visual_Processing_Autism_Dyslexia.pdf"
       ],
       "notes": "Publisher-version PDF retained in the canonical autism cache; legacy research-local export retired."
+    },
+    {
+      "id": "darejeh_2024",
+      "title": "A critical analysis of cognitive load measurement methods for evaluating the usability of different types of interfaces: guidelines and framework for Human-Computer Interaction",
+      "url": "https://doi.org/10.48550/arXiv.2402.11820",
+      "download_url": "https://arxiv.org/pdf/2402.11820.pdf",
+      "access": "pdf",
+      "artifacts": [
+        "papers/downloads/cognitive_load/2024_Cognitive_Load_Measurement_Methods.pdf"
+      ],
+      "notes": "arXiv preprint migrated from the legacy research cognitive-load lane."
+    },
+    {
+      "id": "khazanehdarloo_2025",
+      "title": "Minimalism vs. Complexity: User Experience and Cognitive Load: A User Study on the Impact of Web Interface Complexity on Perceived Cognitive Load and Perceived User Experience in First-Time Website Visitors",
+      "url": "https://sh.diva-portal.org/smash/record.jsf?pid=diva2%3A1993063",
+      "download_url": "https://sh.diva-portal.org/smash/get/diva2:1993063/FULLTEXT01.pdf",
+      "access": "pdf",
+      "artifacts": [
+        "papers/downloads/cognitive_load/2024_Minimalism_vs_Complexity_UX_Cognitive_Load.pdf"
+      ],
+      "notes": "Sodertorn University DiVA thesis PDF migrated from the legacy research cognitive-load lane."
+    },
+    {
+      "id": "cideciyan_2024",
+      "title": "Evaluation of Retinal Structure and Visual Function in Blue Cone Monochromacy to Develop Clinical Endpoints for L-opsin Gene Therapy",
+      "url": "https://doi.org/10.3390/ijms251910639",
+      "download_url": "https://doi.org/10.3390/ijms251910639",
+      "access": "pdf",
+      "artifacts": [
+        "papers/downloads/blue_cone_monochromacy/Cideciyan_2024_BCM_Retinal_Structure_Clinical_Endpoints.pdf"
+      ],
+      "notes": "MDPI article PDF migrated from the legacy research blue-cone-monochromacy lane."
+    },
+    {
+      "id": "bled_2024",
+      "title": "Visual mental imagery abilities in autism",
+      "url": "https://doi.org/10.1002/aur.3192",
+      "download_url": "https://doi.org/10.1002/aur.3192",
+      "access": "pdf",
+      "artifacts": [
+        "papers/downloads/autism/2024_Visual_Mental_Imagery_Autism.pdf"
+      ],
+      "notes": "Author-preprint PDF retained in the canonical autism cache while the final bibliographic record is verified via DOI and PubMed."
     }
   ],
   "legacy_aliases": [
@@ -288,6 +332,34 @@
         "papers/downloads/visual_field_loss/2024_Telerehabilitation_Hemianopia_Children.pdf"
       ],
       "status": "migrated_to_canonical_cache"
+    },
+    {
+      "legacy_path": "research/cognitive_load/2024_Cognitive_Load_Measurement_Methods.pdf",
+      "canonical_artifacts": [
+        "papers/downloads/cognitive_load/2024_Cognitive_Load_Measurement_Methods.pdf"
+      ],
+      "status": "migrated_to_canonical_cache"
+    },
+    {
+      "legacy_path": "research/cognitive_load/2024_Minimalism_vs_Complexity_UX_Cognitive_Load.pdf",
+      "canonical_artifacts": [
+        "papers/downloads/cognitive_load/2024_Minimalism_vs_Complexity_UX_Cognitive_Load.pdf"
+      ],
+      "status": "migrated_to_canonical_cache"
+    },
+    {
+      "legacy_path": "research/colorblindness/blue_cone_monochromacy/Cideciyan_2024_BCM_Retinal_Structure_Clinical_Endpoints.pdf",
+      "canonical_artifacts": [
+        "papers/downloads/blue_cone_monochromacy/Cideciyan_2024_BCM_Retinal_Structure_Clinical_Endpoints.pdf"
+      ],
+      "status": "migrated_to_canonical_cache"
+    },
+    {
+      "legacy_path": "research/neurodivergence/autism/2024_Visual_Mental_Imagery_Autism.pdf",
+      "canonical_artifacts": [
+        "papers/downloads/autism/2024_Visual_Mental_Imagery_Autism.pdf"
+      ],
+      "status": "migrated_to_canonical_cache"
     }
   ],
   "duplicate_groups": [],
@@ -410,6 +482,30 @@
       "path": "papers/downloads/autism/Manning_2024_Visual_Processing_Autism_Dyslexia.pdf",
       "sha256": "014a55e387062df098ee2bf3f947c664298c9553a0ac3ee3e631fdfc1a18bd20",
       "size_bytes": 440261,
+      "accessed_utc_date": "2026-03-25"
+    },
+    {
+      "path": "papers/downloads/cognitive_load/2024_Cognitive_Load_Measurement_Methods.pdf",
+      "sha256": "a1b0a30453f30da723d0c5e19c5a16bb2a9556170e3aa42c76b33ec1954a0cf5",
+      "size_bytes": 1221098,
+      "accessed_utc_date": "2026-03-25"
+    },
+    {
+      "path": "papers/downloads/cognitive_load/2024_Minimalism_vs_Complexity_UX_Cognitive_Load.pdf",
+      "sha256": "565fbc7be5c40dfcc061dd5063494e15f2c3add9ee52273e2eef66853eb9bdff",
+      "size_bytes": 4820673,
+      "accessed_utc_date": "2026-03-25"
+    },
+    {
+      "path": "papers/downloads/blue_cone_monochromacy/Cideciyan_2024_BCM_Retinal_Structure_Clinical_Endpoints.pdf",
+      "sha256": "bd49fc0643bbed1824ad1980b5c126ed37790c467ecd7331e36cfe62008ff474",
+      "size_bytes": 7459677,
+      "accessed_utc_date": "2026-03-25"
+    },
+    {
+      "path": "papers/downloads/autism/2024_Visual_Mental_Imagery_Autism.pdf",
+      "sha256": "4c6257c223615be2b7b01014ad81efb883f7426b8595c2e7a2331e5ef2a64075",
+      "size_bytes": 939147,
       "accessed_utc_date": "2026-03-25"
     }
   ]
