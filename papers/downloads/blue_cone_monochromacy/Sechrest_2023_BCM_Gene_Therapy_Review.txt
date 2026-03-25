@@ -1,0 +1,1710 @@
+Vision Res
+. Author manuscript; available in PMC: 2024 Jul 1.
+Published in final edited form as:
+Vision Res. 2023 Mar 29;208:108221. doi:
+10.1016/j.visres.2023.108221
+Search in PMC
+Search in PubMed
+View in NLM Catalog
+Add to search
+Blue Cone Monochromacy and Gene Therapy
+Emily R Sechrest
+Emily R Sechrest
+1
+Department of Ophthalmology and Visual Sciences, West Virginia University, Morgantown, WV 26505
+Find articles by
+Emily R Sechrest
+1
+,
+Kathryn Chmelik
+Kathryn Chmelik
+1
+Department of Ophthalmology and Visual Sciences, West Virginia University, Morgantown, WV 26505
+2
+Department of Biochemistry, West Virginia University, Morgantown, WV, 26505
+Find articles by
+Kathryn Chmelik
+1,
+2
+,
+Wendy D Tan
+Wendy D Tan
+1
+Department of Ophthalmology and Visual Sciences, West Virginia University, Morgantown, WV 26505
+Find articles by
+Wendy D Tan
+1
+,
+Wen-Tao Deng
+Wen-Tao Deng
+1
+Department of Ophthalmology and Visual Sciences, West Virginia University, Morgantown, WV 26505
+2
+Department of Biochemistry, West Virginia University, Morgantown, WV, 26505
+Find articles by
+Wen-Tao Deng
+1,
+2
+Author information
+Copyright and License information
+1
+Department of Ophthalmology and Visual Sciences, West Virginia University, Morgantown, WV 26505
+2
+Department of Biochemistry, West Virginia University, Morgantown, WV, 26505
+Emily R. Sechrest, Kathryn Chmelik, Wendy D. Tan, Wen-Tao Deng all performed literature review and wrote the manuscript.
+*
+Corresponding author: Wen-Tao Deng, Department of Ophthalmology and Visual Sciences, West Virginia University, Morgantown, WV, Department of Biochemistry, West Virginia University, Morgantown, WV,
+wen.deng@hsc.wvu.edu
+PMC Copyright notice
+PMCID: PMC10182257  NIHMSID: NIHMS1887745  PMID:
+37001420
+The publisher's version of this article is available at
+Vision Res
+Abstract
+Blue cone monochromacy (BCM) is a congenital vision disorder characterized by complete loss or severely reduced long- and middle-wavelength cone function, caused by mutations in the
+OPN1LW/OPN1MW
+gene cluster on the X-chromosome. BCM patients typically suffer from poor visual acuity, severely impaired color discrimination, myopia, and nystagmus. In this review, we cover the genetic causes of BCM, clinical features of BCM patients, genetic testing, and clinical outcome measurements for future BCM clinical trials. However, our emphasis is on detailing the animal models for BCM and gene therapy using adeno-associated vectors (AAV). We describe two mouse models resembling the two most common causes of BCM, current progress in proof-of-concept studies to treat BCM with deletion mutations, the challenges we face, and future directions.
+Keywords:
+blue cone monochromacy, cone opsin, cone dystrophy, AAV, gene therapy, opsin knockout mice, OPN1MW, OPN1LW
+INTRODUCTION
+Cone photoreceptors are responsible for our high acuity, daylight, and color vision. In the human retina, three different cone opsin proteins (S-opsin, M-opsin, L-opsin) are expressed, with only one type expressed per cone. Similar to rhodopsin in rods, cone opsins are crucial in both the maintenance and structural integrity of the cone outer segment, the light-sensing organelle of the cell. Additionally, these proteins are required for initiation of phototransduction and overall visual function in cones
+1
+–
+6
+. S-cones express S- (blue) opsin, which is encoded by the
+OPN1SW
+gene located on chromosome 7, and are sensitive to short-wavelength light. S-cones comprise only 2–7% of cones, with the majority localized to the peripheral retina. M- (green) and L- (red) cones (sensitive to medium- and long-wavelength light, respectively) comprise ~95% of all cones and are concentrated in the fovea, the structure at the central retina which is responsible for high visual acuity
+1
+–
+3
+,
+7
+. X-linked retinal diseases resulting from mutations in the L- (
+OPN1LW
+, OMIM *300822) and M- (
+OPN1MW
+, OMIM *300821) opsin gene cluster are associated with a wide range of visual defects, including red/green color vision deficiency, X-linked cone dystrophy/dysfunction, high myopia with abnormal cone function, and blue cone monochromacy (BCM)
+8
+–
+22
+. BCM (OMIM #303700) is an X-linked cone dysfunction syndrome that results in complete loss or severe reduction of L- and M- cone function. It is estimated that BCM affects approximately 1 in 100,000 people worldwide
+23
+,
+24
+. In this review, we focus on the current status of BCM gene therapy research, including investigation in animal models designed to resemble the retinas of BCM patients, as well as the future directions and challenges associated with BCM gene therapy. We will also discuss the genetic causes and clinical features of BCM, genetic testing, and pertinent clinical trial outcome measurements for patients with BCM.
+GENETIC CAUSE OF BCM
+L- and M-opsin are encoded by
+OPN1LW
+and
+OPN1MW
+, respectively, which are arranged in a head-to-tail tandem array on the X-chromosome (Xq28). While there is tremendous variation among people in terms of copy numbers of
+OPN1LW
+and
+OPN1MW
+in the human genome, on average, one copy of
+OPN1LW
+is present at the proximal position of the opsin gene array, followed by one or more copies of
+OPN1MW
+25
+,
+26
+. Expression of these genes is driven and regulated by their own specific promoters, as well as an upstream cis-element termed the locus control region (LCR). Previous studies demonstrate that the LCR ensures only the first two opsin genes are expressed and that each cone only expresses one type of opsin
+4
+–
+6
+. However, there is conflicting evidence on the expression of “only” the first two genes in the array
+27
+.
+OPN1LW
+and
+OPN1MW
+are thought to be duplicates, as these genes share 96% sequence homology. The sequence variation between these genes is thought to be involved in the spectral tuning of the specific opsin proteins
+28
+.
+Due to their high degree of homology and physical proximity, unequal homologous recombination and gene conversion events between
+OPN1LW
+and
+OPN1MW
+are common
+13
+,
+26
+,
+29
+. This nonhomologous recombination often results in formation of hybrid genes which contain portions of both
+OPN1LW
+and
+OPN1MW
+genes
+19
+,
+30
+,
+31
+. Alterations or deficiencies in proper red/green color vision may vary between individuals depending on the hybrid gene patterns created from these events. Three main mechanisms are thought to cause BCM. The first results in the formation of large deletions most frequently covering the LCR and parts of or the entire cone opsin gene array that abolish the expression of both
+OPN1LW
+and
+OPN1MW
+. The second involves a two-step process. In the first step, non-allelic homologous recombination occurs, resulting in a single
+OPN1LW
+or single
+OPN1LW/OPN1MW
+hybrid gene. In the second step, an additional deletion or missense mutation occurs, leading to inactivation of functional L- or M-opsin. The most common missense mutation observed in this scenario is a Cys203Arg (C203R) mutation in an
+OPN1LW
+/
+OPN1MW
+hybrid gene
+4
+,
+12
+,
+19
+,
+20
+,
+32
+–
+34
+. The third mechanism thought to cause BCM involves rare
+OPN1LW/OPN1MW
+interchange haplotypes within exon 3 in polymorphic positions. The most common disease-causing haplotypes have been identified as LIAVA, LVAVA, MIAVA, and LIAVS. The single-letter code indicates the amino acids expressed at each variant position (p.153, p.171, p.174, p.178, and p.180) encoded within exon 3
+35
+. It has been shown that LIAVA, LVAVA, MIAVA, and LIAVS variants affect vision primarily through abnormal splicing, rather than abnormal protein structure or function
+33
+,
+36
+–
+38
+CLINICAL FEATURES OF BCM
+BCM patients typically display severely reduced visual acuity and impaired color vision from birth. Patients also often show signs of photophobia and present with infantile nystagmus, as well as myopia
+12
+,
+17
+. Many of these symptoms are also hallmarks of achromatopsia, presenting a difficult challenge for clinicians to distinguish between the two disorders. Pedigree analysis is typically required to properly diagnose patients with these defects as BCM shows an X-linked inheritance pattern, while achromatopsia is an autosomal recessive disease affecting males and females equally. BCM patients have a normal to mildly subnormal dark-adapted rod electroretinogram (ERG). Furthermore, while the S-cone ERG of a BCM patient is normal, 30Hz flicker ERG responses mediated by L- and M- cones are undetectable
+8
+,
+39
+,
+40
+. Fundus examination is also usually normal, however, retinal pigment epithelial (RPE) atrophy at the macula may be noted in older patients
+8
+,
+17
+,
+41
+–
+43
+.
+Spectral-domain OCT (SD-OCT) is used widely in clinical settings for visualization of the retinal layers as distinct reflective bands. The second hyperreflective outer retinal band, commonly refer to as ellipsoid zone (EZ), is the junction between the inner and outer segment of photoreceptors, has been shown to correspond to photoreceptor integrity. Discontinuities in the EZ have been observed at the fovea in BCM patients, suggesting disruption of cone photoreceptor structure
+43
+–
+46
+. Retinal cross-sections of BCM patients imaged by OCT also show thinning of the foveal outer nuclear layer (ONL) at an early age
+43
+,
+44
+,
+46
+. At the foveola, the center of the fovea which is dominated by L- and M- cones, the ONL is abnormally thin in almost all patients. Younger BCM patients between the ages of 5 and 20 present with a mean foveolar ONL thickness that is about 60% of normal. Longitudinal OCT data suggest there is a slow and progressive thinning of the ONL at the foveola with age
+43
+. (
+Fig. 1
+, adapted from the original article by Cideciyan 2012), and some patients display macular atrophy at later ages
+8
+,
+15
+. OCT images also demonstrate that remaining foveal cones of BCM patients have significantly shortened outer segments but there is no observed correlation between cone outer segment length and age (
+Fig. 2
+, adapted from the original article by Cideciyan 2012)
+43
+.
+Figure 1.
+Open in a new tab
+Younger BCM patients show normal RPE but abnormal thinning of the photoreceptor nuclear layer.
+(A)
+En face
+imaging of melanin and lipofuscin fluorophores of the RPE using NIR-RAFI and SW-RAFI, respectively, in a normal subject (age 29; myope, -6D) and three BCM patients. The small dark foveal region in the normal and P1 on SW-RAFI is the result of absorption of the excitation light by dense macular pigment; the larger dark region in the central macula of P4 on NIR-RAFI and SW-RAFI represents RPE atrophy. Retinal blood vessels and the optic nerve head also appear darker than the background. All images are shown contrast stretched for visibility of features.
+(B)
+Cross-sectional scans along the vertical meridian crossing the fovea in the same four eyes as shown in
+(A)
+. ONL, where the photoreceptor nuclei reside, is highlighted (blue). Vertical dashed lines delineate the foveola dominated by cone photoreceptors, 0.8 mm superior retina with cone and rod photoreceptors, and the rod hot spot dominated by rod photoreceptors.
+(C)
+ONL thickness vertically across the central 10 mm of retina is graphically displayed for a group of normal subjects (gray represents mean±2SD;
+n
+=22; age range 8–62 years), and the BCM data (lines).
+(D)
+ONL thickness at the foveola (upper), 0.8 mm superior retina (middle), and the rod hot spot (lower) as a function of age in patients (colored symbols: green, age <10; orange, age range 10–20; brown, age >20 years) and normal controls (gray symbols). The 95% prediction interval of linear regression fit to the normal data is shown (gray dashed lines). Symbols connected with lines represent patients with multiple visits.
+(E)
+The extent of ONL abnormality along the vertical meridian as a function of age. Individual patient data are displayed as in
+(D)
+. Average results for the three age groups are shown with colored circles. Inset, schematic of the average extent of ONL abnormality for the three age groups overlaid to scale on a representative retinal view. ONL, outer nuclear layer; RPE, retinal pigment epithelium (adapted from the original article by Cideciyan 2012)
+Figure 2.
+Open in a new tab
+Abnormal cone and rod photoreceptor outer segments in BCM.
+(A
+and
+B)
+Left panels
+: An optical coherence tomography along the vertical meridian in a representative normal
+(A)
+and BCM patient P9
+(B)
+.
+Right panels
+: Enlarged view of the region immediately superior to the foveola. Four of the five hyperscattering bands are painted for visibility: ISe (yellow), COST (orange), ROST (cyan), and RPE/BrM (brown). OLM layer is also labeled. LRPs are shown at 0.5 and 0.8 mm eccentricity. Dashed orange line in the BCM patient represents intermittent visibility of the COST peak. Cavitation in P9 causes structural loss of the ISe and distal layers at the foveola (arrowhead). The lengths of ROS and COS are bracketed.
+(C
+and
+D)
+LRPs from the two regions (0.5 and 0.8 mm superior) are overlaid onto models of retina showing the region at rod and cone inner and outer segments and the RPE. Axial dimensions are to scale, but lateral dimensions are not.
+(E–H)
+COS and ROS lengths at the 0.5 and 0.8 mm superior retina as a function of age in patients. Individual patient symbols and colors as in Individual normal controls (gray symbols), and the 95% prediction interval of linear regression fit to the normal data (gray dashed lines) are shown. BrM, Bruch’s membrane; COS, cone outer segment; COST, COS tips; ISe, ellipsoid region of photoreceptor inner segments; LRP, longitudinal reflectivity profile; OLM, outer limiting membrane; ROS, rod outer segment; ROST, ROS tips; RPE, retinal pigment epithelium (adapted from the original article by Cideciyan 2012).
+SD-OCT studies have also been carried out to compare both foveal hypoplasia (lack of full development of the morphology of the fovea) and the appearance of the EZ at the fovea between patients with achromatopsia or BCM
+47
+. The incidence of foveal hypoplasia was significantly more prevalent in patients with achromatopsia compared to those with BCM. There was also a significant difference in the distribution of EZ grades between the achromatopsia and BCM, with grade II EZ (EZ disruption) being by far the most common phenotype in BCM, while the achromatopsia patients exhibit a relatively equal prevalence of EZ grades I (continuous EZ), II, and IV (presence of a hyporeflective zone). In addition to electrophysiological testing and SD-OCT, psychophysical testing using the Berson color plates can be a useful tool in distinguishing BCM from achromatopsia. In this color vision test, a patient receives two instructional and four test plates. The test plates contain four arrows, three of which are blue-green and one that is purple-blue. Patients with BCM are easily able to decipher which arrow is purple-blue, while those with achromatopsia are unable to determine this arrow from those that are blue-green
+41
+.
+Adaptive optics scanning light ophthalmoscopy (AOSLO) allows non-invasive visualization of the living human retina with single-cell resolution. It has the capability to show cell mosaics of the healthy and diseased retina
+48
+. In comparison to SD-OCT, AOSLO allows to define the identity and spatial density of photoreceptors. Healthy cone photoreceptors are the most easily visualized structures in confocal AOSLO images, appearing as larger bright spots that have a central reflective core surrounded by a darker ring, and they are surrounded by smaller structures that are rods
+48
+,
+49
+. In BCM patients, two types of cones were identified using AOSLO. The first included normal cones that retain a central reflective core representing the S-cone population. The second type includes dark cones which are missing the central reflective component, representing remnant L- or M- cones with intact inner segments but significantly shortened or missing outer segments
+24
+,
+43
+,
+45
+.
+To correlate the level of severity of the BCM phenotype with genotype, the structure of cone photoreceptors was compared between patients with the two most common causes of BCM, those with either A) large deletion mutations or B) a C203R missense mutation in the
+OPN1LW/OPN1MW
+gene cluster. It was found that both genotypes have a population of non-waveguiding photoreceptors, although the spectral identity and level of function remain unknown
+24
+. Another study showed that patients with a C203R mutation have decades longer preservation of foveal cone outer nuclear layer thickness and a slower rate of development of inner/outer segment defects
+46
+. Since mutant C203R protein is misfolded, it was postulated to be toxic to cone photoreceptors, similar to what has been observed for known rhodopsin missense mutations that cause dominant retinitis pigmentosa. Therefore, it was unexpected that the C203R genotype appeared less aggressive compared to patients with deletion mutations. However, preliminary research in our laboratory shows that cones in the corresponding C198R mouse model do not seem to degenerate faster than those in the deletion mouse model, consistent with the findings in the BCM patients
+50
+.
+In summary, the AOSLO imaging results, taken together with OCT, provided strong evidence that BCM patients have a lower cone density than those seen in normal subjects, but a higher total cone density than would be expected for just the S-cones, suggesting the existence of a remnant L-/M-cone population in BCM.
+GENETIC TESTING
+After clinical diagnosis of BCM, genetic testing is required to confirm the diagnosis and determine the exact mutation in order to identify any potential gene therapies. Typically, BCM genetic testing is carried out by polymerase chain reaction (PCR) or long-range PCR followed by Sanger sequencing of the LCR and all coding exons. Due to the complex structure of the locus control region (LCR) and the presence of highly homologous sequences between the
+OPN1LW
+and
+OPN1MW
+genes, overlapping primers are commonly used to investigate the structure and integrity of the LCR, as well as the
+OPN1LW/OPN1MW
+gene cluster. Restriction fragment length polymorphism (RFLP) is used to determine the presence or absence of a common point mutation. For example, RFLP in exon 4 via BstUI digestion is used to analyze for the common point mutation c.607T > C p.C203R, while the RFLP in exon 5 via RsaI differentiates the dimorphism at amino acid position 277, wherein p.Y277 is specific for the OPN1LW gene and p.F277 is specific for the OPN1MW gene
+43
+. Additionally, genome walking and inverse PCR are used to identify the precise junction breaking points
+12
+,
+13
+,
+33
+,
+43
+,
+51
+,
+52
+, and quantitative real-time PCR (qRT-PCR) is used to estimate the relative ratio of the first L-opsin gene versus the downstream M-opsin genes in the opsin gene arrays
+53
+.
+Recently, a new genetic assay for the analysis of the
+OPN1LW
+/
+OPN1MW
+gene cluster was developed which detects both structural and nucleotide variants. It consists of copy number analysis via multiplex ligation-dependent probe amplification and sequence analysis via long-read circular consensus sequencing
+31
+. Additionally, microarray-based techniques have also been used in diagnosing BCM
+54
+. Unfortunately, routine short read next generation sequencing either applying gene panels or doing whole exome sequencing actually perform rather bad for the cone opsin gene array. Moreover, microarray-based testing usually lack resolution and cannot resolve gene array order, and thus may only be applicable for the detection of some of the deletions.
+GENE THERAPY for BCM
+Improved genetic diagnosis of inherited retinal diseases and advances in retinal gene therapy have led to great promise in treating different forms of inherited blindness. Due to its immunoprivileged environment, direct accessibility, and the number of established noninvasive techniques that can be employed for monitoring retinal structure and assessing visual function after surgery, the retina is a favorable target for administration of gene therapy
+55
+,
+56
+. Generally, retinal gene therapy is carried out by a subretinal or intravitreal injection of a therapeutic reagent packaged within a viral vector, commonly an adeno-associated virus (AAV) or lentivirus. Two different strategies are often used to combat inherited blinding diseases by gene therapy, including 1) gene augmentation, which delivers a functional copy of a gene to restore expression of a mutated gene, and 2) gene-editing, which is designed to directly edit and correct the mutation. Currently, BCM gene therapy research has focused on gene augmentation in a mouse model mimicking large deletion mutations and has shown success. Furthermore, a study which used gene augmentation to treat color blindness in adult monkeys with dichromatic vision suggests that the adult primate’s visual cortex can process new cone inputs upon expression of a third cone opsin with different wavelength sensitivity
+57
+. Together, these data provide compelling evidence that the visual cortex of BCM patients may respond to new chromatic inputs similarly following treatment.
+Retinal structure of BCM patients
+Retinal cross-sections of BCM patients imaged by optical coherence tomography (OCT) show disruption of EZ and thinning of the foveal outer nuclear layer (ONL) at an early age
+43
+,
+44
+,
+46
+,
+58
+. At the foveola, the center of the fovea dominated by L- and M- cones, the ONL was abnormally thin in almost all patients. Younger BCM patients between the ages of 5 and 20 present with a mean foveolar ONL thickness that is about 60% of normal. Longitudinal OCT data suggest there is a slow and progressive thinning of the ONL at the foveola with age
+43
+, and some patients display macular atrophy at later ages
+8
+,
+15
+. OCT images also demonstrate that any remaining foveal cones of BCM patients have significantly shortened outer segments and there is no correlation between cone outer segment length and age
+43
+. Adaptive optics scanning laser ophthalmoscope (AOSLO) imaging shows a disrupted cone mosaic and EZ in BCM patients which further confirms the reduction of foveal cones
+24
+,
+45
+,
+58
+,
+59
+.
+Detailed studies on the fate of opsin-deficient cone photoreceptors and their structural changes have been carried out in BCM patients with deletion mutations or a C203R missense mutation
+24
+,
+43
+,
+46
+. Interestingly, although patients with a C203R mutation exhibited decades-longer persistence of foveal photoreceptor outer nuclear layer thickness and a slower rate of development of inner and outer segment defects compared to patients with large deletion mutations, all patients had comparably severe losses of the foveal structure at late ages.
+AAV-mediated gene therapy for BCM with deletion mutations
+Currently, the majority of investigations into gene therapy for BCM have been carried out using adeno associated virus (AAV) as a vector in mouse models of deletion mutations. There are several differences between human and murine cones in terms of anatomy, distribution, and opsin expression, so knowledge of these variances is critical for assessing the pros and cons of using a mouse model for BCM gene therapy research. As stated previously, the human retina contains three different types of cones: L-, M- and S-cones, with each cone expressing only one type of opsin
+1
+,
+2
+,
+7
+,
+60
+. In contrast, the murine retina only harbors M- and S-cones, with most cones co-expressing both opsins. Where L- and M-cones are concentrated in fovea of the human retina, mice do not possess a fovea and their cones are distributed across the entire retina with a dorsal-to-ventral gradient. S-opsin predominates the ventral retina and M-opsin is expressed across the entire retina with its highest concentration in the dorsal retina
+61
+,
+62
+.
+Initially, M-opsin knockout mice (
+Opn1mw
+−/−
+) were used to study gene therapy in BCM patients with deletion mutations
+63
+. In this mouse model, M-opsin is absent from both the dorsal and ventral retina, with S-opsin being predominately detected in the ventral region, similar to wild-type mice. Peanut agglutinin (PNA) was used to assess
+Opn1mw
+−/−
+cone viability, as it is a lectin that specifically binds to the cone sheath – the extracellular glycoprotein matrix secreted by cone inner segments. PNA staining of
+Opn1mw
+−/−
+retinal cross-sections revealed an intact cone sheath in both the dorsal and ventral regions of
+Opn1mw
+−/−
+retinas, suggesting that dorsal cones remain viable in the absence of M-opsin. Due to loss of M-opsin,
+Opn1mw
+−/−
+mice do not possess middle-wavelength M-cone ERG response, but do present with a normal S-cone ERG. Furthermore, when cone outer segment morphology of
+Opn1mw
+−/−
+mice was examined using immunostaining with antibodies against the cone-specific phosphodiesterase 6α’ subunit (PDE6α’) and cone transducin α-subunit (cTα), PDE6α’ staining was primarily detected in cone inner segments and cTα expression was completely absent. These data suggest that
+Opn1mw
+−/−
+dorsal cones, where M- opsin is absent and S- opsin expression is low, do not form proper outer segments, similar to the morphologies of L- and M-cones observed in the human fovea of BCM patients
+64
+. Gene replacement therapy using AAV5-mediated expression of mouse
+Opn1mw
+, driven by the cone-specific promoter PR2.1, demonstrated that treated eyes gained robust M-cone function when analyzed by ERG
+63
+. AAV5-mediated expression of human
+OPN1LW
+or
+OPN1MW
+also promoted proper dorsal cone outer segment morphogenesis, restoring expression and normal localization of both PDE6α’ and cTα to the outer segment
+64
+. Together, these results provided an experimental basis for BCM gene therapy clinical trials using an AAV-mediated gene replacement approach.
+Although the
+Opn1m
+−/−
+mouse is a working disease model for BCM patients with deletion mutations, this model has its limitations. As mentioned earlier, each human cone expresses only one type of opsin – L-, M-, or S- opsin. Due to this, affected L- and M-cones in the BCM retina do not express any functional opsin proteins. In contrast, as low levels of endogenous S-opsin remain expressed in dorsal
+Opn1m
+−/−
+cones, these photoreceptors may not reflect the true pathophysiology of BCM cones. Moreover, as
+Opn1m
+−/−
+retinas contain a large number of S-cones with normal S-cone structure and function
+63
+, AAV-mediated expression of either human L/M-opsin or mouse M-opsin in these S-cones generates additional long-/middle- wavelength ERG signals which interfere with interpretation of the gene therapy outcome. To circumvent this issue,
+Opn1mw
+−/−
+/Opn1sw
+−/−
+mice (DKO mice) were generated which exhibit complete ablation of M- and S- opsin expression in all cone photoreceptors
+65
+. While the DKO mouse could also be a model for achromatopsia, the fact that it lacks all mouse cone visual pigment also better mimics BCM cones at the cellular level.
+Cones across the entire DKO retina present with shortened outer segments, structurally resembling cones in the BCM fovea. As DKO cones do not possess cone opsins, these mice lack photopic ERG responses, ensuring that observed increases in visual function are a direct reflection of functional rescue due to gene therapy. It was shown that cones within the DKO retina remain viable at younger ages but subsequently undergo degeneration. By 6 months of age, the numbers of viable cones in
+Opn1mw
+−/−
+/Opn1sw
+−/−
+retinas are reduced by half
+65
+. AAV5-mediated expression of human
+OPN1LW
+under a PR2.1 promoter was used to treat
+Opn1mw
+−/−
+mice before 2 months of age. At 1 month post-injection, the photopic b-wave maximum amplitude measured by ERG was ~60% of wild-type, while contralateral untreated control eyes showed no photopic ERG response (
+Fig. 3
+). Treatment also restored cone outer segments as well as expression of cone outer segment-specific proteins such as PDE6α’ and cTα (
+Fig. 4
+). Rescue persisted long-term, at least 8-months post-injection. Furthermore, optomotor analysis showed that cone-mediated visual behavior was similar to wild-type thresholds at 8-months post-treatment. However, when mice were treated at 5- or 7- months of age, the chance and degree of rescue was significantly reduced, despite retention of viable cones in the retina, demonstrating that early intervention may be crucial for efficient and stable rescue (
+Fig. 3
+&
+4
+).
+Figure. 3.
+Open in a new tab
+(A) Representative long-wavelength ERG traces from untreated
+Opn1mw
+−/−
+/Opn1sw
+−/−
+retinas at 1-month-old,
+Opn1mw
+−/−
+/Opn1sw
+−/−
+eyes treated by AAV-mediated human
+OPN1LW
+gene therapy at 2-, 5-, and 7-months of age, as well as wild-type controls at a light intensity of 1.4 log cd s/m2. (B) Averaged long-wavelength mediated ERG responses in
+Opn1mw
+−/−
+/Opn1sw
+−/−
+mice treated at different ages. ERG was performed 4 weeks after injection. The number of mice from each group are: untreated
+Opn1mw
+−/−
+/Opn1sw
+−/−
+(n=10),
+Opn1mw
+−/−
+/Opn1sw
+−/−
+eyes treated at 2-months (n=10), 5-months (n=19), and 7-months (n=15), WT controls (n=10). Each bar represents the mean ± SEM of cone mediated b-wave amplitudes recorded at 630 nm at 1.4 log cd.s/m
+2
+. *P < 0.0001.
+Figure. 4.
+Open in a new tab
+Expression levels and subcellular localization of AAV-mediated human
+OPN1LW
+expression in
+Opn1mw
+−/−
+/Opn1sw
+−/−
+retinas treated at different ages. Retinas which demonstrated ERG rescue were pooled 1-month post-injection from mice treated at different ages. (A) Western blot of OPN1LW expression (red) in
+Opn1mw
+−/−
+/Opn1sw
+−/−
+eyes injected at different ages and analyzed 4-weeks post-injection. An anti-α-tubulin (green) antibody was used as loading control. (B) Immunohistochemistry of retinal cross-sections from untreated and
+Opn1mw
+−/−
+/Opn1sw
+−/−
+eyes treated at different ages stained with antibodies against OPN1LW (red) together with cone outer segment specific proteins GNGT2 (green, top row), PDE6α’ (green, middle row), or PNA (bottom row). Scale bar: 20 μm.
+AAV-mediated gene therapy for BCM with point mutations
+Presence of a C203R missense mutation in a single
+OPN1LW/MW
+hybrid gene or in multiple
+OPN1LW/MW
+genes is one of the most common causes of BCM
+19
+.
+Opn1mw
+C198R
+Opn1sw
+−/−
+mice were generated to model human BCM with the corresponding C203R mutation
+50
+. Based on studies of an important disulfide bond between C110 and C187 in rhodopsin
+66
+, it is postulated that the cone opsin equivalent C203 is involved in disulfide bond formation and that a C203R mutation disrupts this bond, leading to improper cone pigment tertiary structure that may inhibit proper transport to the outer segment. In fact, it has been shown that the C187Y mutation in rhodopsin leads to early and severe autosomal dominant retinitis pigmentosa
+67
+. Studies also demonstrate that C203R expressed
+in vitro
+is retained in the endoplasmic reticulum (ER) due to improper folding
+32
+. Similar to the retinal phenotype displayed in DKO mice, cones of
+Opn1mw
+C198R
+Opn1sw
+−/−
+mice degenerate with age, with absent or significantly shortened cone outer segments
+50
+. These phenotypes are similar to those observed in BCM patients with C203R mutations, demonstrating that this model can be used to investigate the disease mechanism of BCM and in the development of gene therapy. Gene therapy in
+Opn1mw
+C198R
+Opn1sw
+−/−
+mice is currently under development in our lab.
+Besides C203R, several other missense mutations in the
+OPN1MW
+/
+OPN1LW
+gene cluster have been linked to BCM, including W177R
+13
+, P307L
+68
+, K82E
+69
+, M273K
+70
+, and R247X
+20
+. Each of these mutations has various effects on the folding and activity of the opsin protein. P307L opsin is glycosylated and transported to the cone outer segment, yet light absorption at the appropriate wavelength and subsequent phototransduction is compromised. This mutation is predicted to affect the structure of the binding pocket for 11-
+cis
+-retinal
+68
+,
+71
+. The W177R mutation and its equivalent W161R mutation in rod opsin both result in protein misfolding and ER retention when expressed
+in vitro
+13
+, similar to the phenotype displayed by the C203R mutant. W177R mutant expressed via AAV in
+Opn1mw
+−/−
+mice was detected exclusively in the cone inner segment and ER, suggesting that it is also misfolded
+in vivo
+71
+. An R247X mutation results in an early termination codon and a truncated protein. The underlying disease mechanisms of these cone opsin mutants all appear to be different, with some genotypes causing potential dominant negative phenotypes, signifying the need for development of accurate animal models of each BCM genotype. Generation of these models will allow for proper investigation and development of gene therapy strategies, including those which incorporate gene editing or gene silencing.
+Gene Therapy Applicability from Mouse Models to Human Patients
+Although gene therapy has shown efficacy in mouse models of BCM, there are two issues that need to be addressed in terms of applicability to human patients. First, murine retinas do not contain foveae and their cones are spread evenly across the entire retina. Secondly, each human cone expresses only one type of opsin, while the majority of cones in the mouse retina co-express both M- and S-opsin. Recently, our lab has addressed these concerns by crossing
+Opn1mw
+−/−
+/Opn1sw
+−/−
+mice with
+Nr
+−/−
+mice
+72
+–
+74
+to generate mice with all-cone retinas lacking opsin expression. Preliminary data show that
+Nrl
+−/−
+/Opn1mw
+−/−
+/Opn1sw
+−/−
+all-cone retinas lack opsin expression, have significantly shortened outer segments, and lack photopic M-cone ERG responses, thereby structurally and functionally mimicking the foveae of BCM patients with deletion mutations. Studies are currently underway in our lab to determine the effectiveness of gene replacement therapy in this opsin-lacking all-cone mouse model.
+As L- and M-cone function is abolished in BCM patients, another question regarding BCM gene therapy is whether BCM patients should be treated with an AAV expressing M- and L-opsin together or separately. We have shown previously that when treated with AAV vectors containing an equal mixture of
+OPN1LW
+and
+OPN1MW
+in the
+Opn1mw
+−/−
+retinas, most of the cones co-expressed both opsins
+64
+. However, there was great variation in terms of the total amount of opsin being expressed and the OPN1LW/OPN1MW ratio among even adjacent treated cones. This is expected due to the stochastic nature of expression from AAV vectors. Since human cones normally express only one type of opsin, we do not know how the visual cortex in BCM patients will respond if two different opsins are co-expressed in a single cone. In our opinion, improving visual acuity is more valuable to BCM patients rather than restoring complete color vision. If we aim to ensure that the most important treatment outcome of BCM gene therapy is improvement of visual acuity, it seems the best plan of action would be to treat BCM patients with just one opsin gene, thereby eliminating any biological variations or uncertainties from treating with two opsins and to simplify the interpretation of study results. Currently, it is thought that between L- and M-opsin, L-opsin may serve as a better candidate for gene replacement therapy because it would give rise to a wider spectrum of perceptible light frequencies in combination with endogenous S-cone frequencies compared to M- and S-opsin combined. Moreover, in the human retina, L-cones are more abundant than M-cones
+75
+,
+76
+.
+OUTCOME MEASUREMENT CONSIDERATIONS FOR FUTURE BCM GENE THERAPY CLINICAL TRIALS
+Several studies have explored tailored outcome measurements in order to account for the unique features of BCM retinas and the preferred intravitreal injection route suggested by clinicians. As light perception in BCM patients is dominated by both rods and S-cones, and as rods have been shown to mediate a degree of daylight vision in BCM patients, it is crucial for a clear outcome measurement to be established to differentiate small cone-driven gain from the native rod function
+77
+,
+78
+. There is a possibility that initial AAV gene therapy trials will achieve only minor increases in cone-driven function, making it possible that assessment of visual acuity and full-field ERG would serve as inappropriate outcome measurements as they are not sensitive enough to detect focal changes in retinal function. Of course, the primary outcome measurement of any interventional study – including BCM gene therapy – should be safety parameters, including routine ophthalmic examination and OCT, in order to monitor for systemic and ocular toxicity
+79
+. OCT is also a useful tool for pre-enrollment imaging to select for candidates with a detectable foveal outer nuclear layer as it indicates a structural integrity amenable for gene therapy
+43
+,
+46
+.
+It has been shown that chromatic microperimetry could be used as an efficacy outcome measurement because BCM patients demonstrate a large loss of sensitivity to red stimuli presented on a cyan adapting background at the fovea and surrounding parafovea
+77
+. Additionally, a Nidek MP1 microperimeter was modified and developed into a more sensitive outcome measurement for detection of small improvements in L/M-cone function as this modification generates varied stimuli of a very wide range of luminance and chromaticity, granting precise spatiotemporal control locked to retinal features
+80
+. Researchers continue to work to develop and test new methods which can be used as outcome measurement of BCM gene therapy in clinical trials. For example, use of an MNREAD acuity chart has shown that BCM patients exhibit abnormal reading performance in all parameters examined (reading speed, critical print size, reading acuity, and the reading accessibility index), demonstrating that MNREAD measures of reading performance would be a robust secondary outcome in a clinical trial protocol
+81
+. More recently, two color arrangement tests (D-15 and Roth-28) derived from the Farnsworth-Munsell (FM) 100 Hue and the Color Assessment and Diagnosis (CAD) test were utilized to evaluate patients with BCM, providing promising new tools to assess color vision in BCM clinical trials
+82
+.
+As mentioned previously, BCM patients share many similar clinical features as patients with achromatopsia, such as reduced visual acuity, impaired color vision, photophobia, and nystagmus. They also share similar retinal phenotypes, including foveal hypoplasia and disruption of the EZ zone. Therefore, many of the outcome measurements used in achromatopsia gene therapy clinical trials can be referenced for outcome measurements in BCM gene therapy trials. As shown by a clinical trial study for CNGA3 gene therapy
+83
+, safety was the primary end point, which was assessed by clinical examination of ocular inflammation. Systemic safety was evaluated by vital signs, routine clinical chemistry testing, and full and differential blood cell counts. Visual function and patient reported outcomes served as secondary outcome measurements. Visual function reports the number of participants with improved visual function measured by best corrected visual acuity, contrast sensitivity, color vision, temporal resolution, retinal sensitivity, pupillography, and the evaluation of retinal imaging. Patient reported outcomes include patients who are able to demonstrate functional gain associated with improvements in the ability to identify letters and numbers, as well as in color vision using the validated Visual Function Questionnaire 25 test
+84
+. Together, these outcome measurements all can be potentially useful for assessing efficacy of a BCM clinical trial.
+SUMMARY and FUTURE DIRECTIONS
+One critical observation from gene therapy in DKO mice is that rescue efficacy is significantly reduced when mice were treated at older ages (5 months and older), although more than 50% of cones are still present
+65
+. In order to extend the therapeutic window, mechanisms of cone degeneration in BCM must be elucidated. Secondly, as current studies restrict the assessment of structural cone rescue to fluorescent imaging of outer segment markers, additional investigation of cone ultrastructure through methods such as transmission electron microscopy is vital. Finally, as subretinal injections require retinal detachment for proper transduction of the photoreceptors, successful gene therapy for primary cone degenerative disorders like BCM via subretinal vector injection would require foveal detachment. This poses a serious safety issue, as previous clinical trials have shown loss of foveal cone outer segments and cone death following foveal detachment from subretinal injections
+79
+,
+85
+,
+86
+. Alternatively, intravitreal injections would be a much safer method of vector administration as they do not require retinal detachment, are less invasive, and can be performed in an outpatient setting. In order to achieve effective intravitreal injection, future studies must focus on improving AAV vectors to exhibit increased vector penetrance, transduction efficiency, and transgene expression.
+ACKNOWLEGEMENTS
+This work was supported by National Institutes of Health (R01 EY030056), West Virginia University startup fund, Lion’s Club, and NIGMS P20GM144230 (Visual Sciences Center of Biomedical Research Excellence).
+Footnotes
+Authors have no conflict of interests to declare.
+Publisher's Disclaimer:
+This is a PDF file of an unedited manuscript that has been accepted for publication. As a service to our customers we are providing this early version of the manuscript. The manuscript will undergo copyediting, typesetting, and review of the resulting proof before it is published in its final form. Please note that during the production process errors may be discovered which could affect the content, and all legal disclaimers that apply to the journal pertain.
+References
+1.
+Curcio CA, Allen KA, Sloan KR
+et al.
+Distribution and morphology of human cone photoreceptors stained with anti-blue opsin. J Comp Neurol
+1991;312:610–624.
+[
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+2.
+Mustafi D, Engel AH, Palczewski K. Structure of cone photoreceptors. Prog Retin Eye Res
+2009;28:289–302.
+[
+DOI
+] [
+PMC free article
+] [
+PubMed
+] [
+Google Scholar
+]
+3.
+Nathans J, Thomas D, Hogness DS. Molecular genetics of human color vision: the genes encoding blue, green, and red pigments. Science
+1986;232:193–202.
+[
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+4.
+Smallwood PM, Wang Y, Nathans J. Role of a locus control region in the mutually exclusive expression of human red and green cone pigment genes. Proc Natl Acad Sci U S A
+2002;99:1008–1011.
+[
+DOI
+] [
+PMC free article
+] [
+PubMed
+] [
+Google Scholar
+]
+5.
+Wang Y, Macke JP, Merbs SL
+et al.
+A locus control region adjacent to the human red and green visual pigment genes. Neuron
+1992;9:429–440.
+[
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+6.
+Yamaguchi T, Motulsky AG, Deeb SS. Visual pigment gene structure and expression in human retinae. Hum Mol Genet
+1997;6:981–990.
+[
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+7.
+Curcio CA, Sloan KR, Kalina RE
+et al.
+Human photoreceptor topography. J Comp Neurol
+1990;292:497–523.
+[
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+8.
+Ayyagari R, Kakuk LE, Coats CL
+et al.
+Bilateral macular atrophy in blue cone monochromacy (BCM) with loss of the locus control region (LCR) and part of the red pigment gene. Mol Vis
+1999;5:13.
+[
+PubMed
+] [
+Google Scholar
+]
+9.
+Carroll J, Baraas RC, Wagner-Schuman M
+et al.
+Cone photoreceptor mosaic disruption associated with Cys203Arg mutation in the M-cone opsin. Proc Natl Acad Sci U S A
+2009;106:20948–20953.
+[
+DOI
+] [
+PMC free article
+] [
+PubMed
+] [
+Google Scholar
+]
+10.
+Carroll J, Neitz M, Hofer H
+et al.
+Functional photoreceptor loss revealed with adaptive optics: an alternate cause of color blindness. Proc Natl Acad Sci U S A
+2004;101:8461–8466.
+[
+DOI
+] [
+PMC free article
+] [
+PubMed
+] [
+Google Scholar
+]
+11.
+Crognale MA, Fry M, Highsmith J
+et al.
+Characterization of a novel form of X-linked incomplete achromatopsia. Vis Neurosci
+2004;21:197–203.
+[
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+12.
+Gardner JC, Michaelides M, Holder GE
+et al.
+Blue cone monochromacy: causative mutations and associated phenotypes. Mol Vis
+2009;15:876–884.
+[
+PMC free article
+] [
+PubMed
+] [
+Google Scholar
+]
+13.
+Gardner JC, Webb TR, Kanuga N
+et al.
+X-linked cone dystrophy caused by mutation of the red and green cone opsins. Am J Hum Genet
+2010;87:26–39.
+[
+DOI
+] [
+PMC free article
+] [
+PubMed
+] [
+Google Scholar
+]
+14.
+Jagla WM, Jagle H, Hayashi T
+et al.
+The molecular basis of dichromatic color vision in males with multiple red and green visual pigment genes. Hum Mol Genet
+2002;11:23–32.
+[
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+15.
+Kellner U, Wissinger B, Tippmann S
+et al.
+Blue cone monochromatism: clinical findings in patients with mutations in the red/green opsin gene cluster. Graefes Arch Clin Exp Ophthalmol
+2004;242:729–735.
+[
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+16.
+Michaelides M, Johnson S, Bradshaw K
+et al.
+X-linked cone dysfunction syndrome with myopia and protanopia. Ophthalmology
+2005;112:1448–1454.
+[
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+17.
+Michaelides M, Johnson S, Simunovic MP
+et al.
+Blue cone monochromatism: a phenotype and genotype assessment with evidence of progressive loss of cone function in older individuals. Eye (Lond)
+2005;19:2–10.
+[
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+18.
+Mizrahi-Meissonnier L, Merin S, Banin E
+et al.
+Variable retinal phenotypes caused by mutations in the X-linked photopigment gene array. Invest Ophthalmol Vis Sci
+2010;51:3884–3892.
+[
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+19.
+Nathans J, Davenport CM, Maumenee IH
+et al.
+Molecular genetics of human blue cone monochromacy. Science
+1989;245:831–838.
+[
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+20.
+Nathans J, Maumenee IH, Zrenner E
+et al.
+Genetic heterogeneity among blue-cone monochromats. Am J Hum Genet
+1993;53:987–1000.
+[
+PMC free article
+] [
+PubMed
+] [
+Google Scholar
+]
+21.
+Neitz M, Carroll J, Renner A
+et al.
+Variety of genotypes in males diagnosed as dichromatic on a conventional clinical anomaloscope. Vis Neurosci
+2004;21:205–216.
+[
+DOI
+] [
+PMC free article
+] [
+PubMed
+] [
+Google Scholar
+]
+22.
+Winderickx J, Sanocki E, Lindsey DT
+et al.
+Defective colour vision associated with a missense mutation in the human green visual pigment gene. Nat Genet
+1992;1:251–256.
+[
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+23.
+Kohl S, Hamel CP. Clinical utility gene card for: blue cone monochromatism. Eur J Hum Genet
+2011;19.
+[
+DOI
+] [
+PMC free article
+] [
+PubMed
+] [
+Google Scholar
+]
+24.
+Patterson EJ, Kalitzeos A, Kane TM
+et al.
+Foveal Cone Structure in Patients With Blue Cone Monochromacy. Invest Ophthalmol Vis Sci
+2022;63:23.
+[
+DOI
+] [
+PMC free article
+] [
+PubMed
+] [
+Google Scholar
+]
+25.
+Vollrath D, Nathans J, Davis RW. Tandem array of human visual pigment genes at Xq28. Science
+1988;240:1669–1672.
+[
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+26.
+Neitz J, Neitz M. The genetics of normal and defective color vision. Vision Res
+2011;51:633–651.
+[
+DOI
+] [
+PMC free article
+] [
+PubMed
+] [
+Google Scholar
+]
+27.
+Sjoberg SA, Neitz M, Balding SD
+et al.
+L-cone pigment genes expressed in normal colour vision. Vision Res
+1998;38:3213–3219.
+[
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+28.
+Neitz M, Neitz J, Jacobs GH. Genetic basis of photopigment variations in human dichromats. Vision Res
+1995;35:2095–2103.
+[
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+29.
+Reyniers E, Van Thienen MN, Meire F
+et al.
+Gene conversion between red and defective green opsin gene in blue cone monochromacy. Genomics
+1995;29:323–328.
+[
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+30.
+Drummond-Borg M, Deeb SS, Motulsky AG. Molecular patterns of X chromosome-linked color vision genes among 134 men of European ancestry. Proc Natl Acad Sci U S A
+1989;86:983–987.
+[
+DOI
+] [
+PMC free article
+] [
+PubMed
+] [
+Google Scholar
+]
+31.
+Haer-Wigman L, den Ouden A, van Genderen MM
+et al.
+Diagnostic analysis of the highly complex OPN1LW/OPN1MW gene cluster using long-read sequencing and MLPA. NPJ Genom Med
+2022;7:65.
+[
+DOI
+] [
+PMC free article
+] [
+PubMed
+] [
+Google Scholar
+]
+32.
+Kazmi MA, Sakmar TP, Ostrer H. Mutation of a conserved cysteine in the X-linked cone opsins causes color vision deficiencies by disrupting protein folding and stability. Invest Ophthalmol Vis Sci
+1997;38:1074–1081.
+[
+PubMed
+] [
+Google Scholar
+]
+33.
+Buena-Atienza E, Ruther K, Baumann B
+et al.
+De novo intrachromosomal gene conversion from OPN1MW to OPN1LW in the male germline results in Blue Cone Monochromacy. Sci Rep
+2016;6:28253.
+[
+DOI
+] [
+PMC free article
+] [
+PubMed
+] [
+Google Scholar
+]
+34.
+Kohl S, Jagle H, Wissinger B. Achromatopsia. In: GeneReviews(R). Pagon RA, Adam MP, Ardinger HH et al. , eds. (Seattle (WA)). 1993.
+[
+Google Scholar
+]
+35.
+Neitz M, Neitz J. Intermixing the OPN1LW and OPN1MW Genes Disrupts the Exonic Splicing Code Causing an Array of Vision Disorders. Genes (Basel)
+2021;12.
+[
+DOI
+] [
+PMC free article
+] [
+PubMed
+] [
+Google Scholar
+]
+36.
+Ueyama H, Muraki-Oda S, Yamade S
+et al.
+Unique haplotype in exon 3 of cone opsin mRNA affects splicing of its precursor, leading to congenital color vision defect. Biochem Biophys Res Commun
+2012;424:152–157.
+[
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+37.
+Gardner JC, Liew G, Quan YH
+et al.
+Three different cone opsin gene array mutational mechanisms with genotype-phenotype correlation and functional investigation of cone opsin variants. Hum Mutat
+2014;35:1354–1362.
+[
+DOI
+] [
+PMC free article
+] [
+PubMed
+] [
+Google Scholar
+]
+38.
+Greenwald SH, Kuchenbecker JA, Rowlan JS
+et al.
+Role of a Dual Splicing and Amino Acid Code in Myopia, Cone Dysfunction and Cone Dystrophy Associated with L/M Opsin Interchange Mutations. Transl Vis Sci Technol
+2017;6:2.
+[
+DOI
+] [
+PMC free article
+] [
+PubMed
+] [
+Google Scholar
+]
+39.
+Berson EL, Sandberg MA, Maguire A
+et al.
+Electroretinograms in carriers of blue cone monochromatism. Am J Ophthalmol
+1986;102:254–261.
+[
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+40.
+De Silva SR, Arno G, Robson AG
+et al.
+The X-linked retinopathies: Physiological insights, pathogenic mechanisms, phenotypic features and novel therapies. Prog Retin Eye Res
+2021;82:100898.
+[
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+41.
+Berson EL, Sandberg MA, Rosner B
+et al.
+Color plates to help identify patients with blue cone monochromatism. Am J Ophthalmol
+1983;95:741–747.
+[
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+42.
+Hess RF, Mullen KT, Sharpe LT
+et al.
+The photoreceptors in atypical achromatopsia. J Physiol
+1989;417:123–149.
+[
+DOI
+] [
+PMC free article
+] [
+PubMed
+] [
+Google Scholar
+]
+43.
+Cideciyan AV, Hufnagel RB, Carroll J
+et al.
+Human cone visual pigment deletions spare sufficient photoreceptors to warrant gene therapy. Hum Gene Ther
+2013;24:993–1006.
+[
+DOI
+] [
+PMC free article
+] [
+PubMed
+] [
+Google Scholar
+]
+44.
+Barthelmes D, Sutter FK, Kurz-Levin MM
+et al.
+Quantitative analysis of OCT characteristics in patients with achromatopsia and blue-cone monochromatism. Invest Ophthalmol Vis Sci
+2006;47:1161–1166.
+[
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+45.
+Carroll J, Dubra A, Gardner JC
+et al.
+The effect of cone opsin mutations on retinal structure and the integrity of the photoreceptor mosaic. Invest Ophthalmol Vis Sci
+2012;53:8006–8015.
+[
+DOI
+] [
+PMC free article
+] [
+PubMed
+] [
+Google Scholar
+]
+46.
+Sumaroka A, Garafalo AV, Cideciyan AV
+et al.
+Blue Cone Monochromacy Caused by the C203R Missense Mutation or Large Deletion Mutations. Invest Ophthalmol Vis Sci
+2018;59:5762–5772.
+[
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+47.
+Patterson EJ, Langlo CS, Georgiou M
+et al.
+Comparing Retinal Structure in Patients with Achromatopsia and Blue Cone Monochromacy Using OCT. Ophthalmol Sci
+2021;1.
+[
+DOI
+] [
+PMC free article
+] [
+PubMed
+] [
+Google Scholar
+]
+48.
+Dubra A, Sulai Y, Norris JL
+et al.
+Noninvasive imaging of the human rod photoreceptor mosaic using a confocal adaptive optics scanning ophthalmoscope. Biomed Opt Express
+2011;2:1864–1876.
+[
+DOI
+] [
+PMC free article
+] [
+PubMed
+] [
+Google Scholar
+]
+49.
+Cooper RF, Dubis AM, Pavaskar A
+et al.
+Spatial and temporal variation of rod photoreceptor reflectance in the human retina. Biomed Opt Express
+2011;2:2577–2589.
+[
+DOI
+] [
+PMC free article
+] [
+PubMed
+] [
+Google Scholar
+]
+50.
+Sechrest EM, Deng X, WT. Characterization of cone structure and function in a mouse model for blue cone monochromacy patients with a C203R mutation. Investigative Ophthalmology & Visual Science, 2022 Abstract Issue
+2022;63:1789.
+[
+Google Scholar
+]
+51.
+Wissinger B, Baumann B, Buena-Atienza E
+et al.
+The landscape of submicroscopic structural variants at the OPN1LW/OPN1MW gene cluster on Xq28 underlying blue cone monochromacy. Proc Natl Acad Sci U S A
+2022;119:e2115538119.
+[
+DOI
+] [
+PMC free article
+] [
+PubMed
+] [
+Google Scholar
+]
+52.
+Hayashi T, Motulsky AG, Deeb SS. Position of a ‘green-red’ hybrid gene in the visual pigment array determines colour-vision phenotype. Nat Genet
+1999;22:90–93.
+[
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+53.
+McMahon C, Carroll J, Awua S
+et al.
+The L:M cone ratio in males of African descent with normal color vision. J Vis
+2008;8:5 1–9.
+[
+DOI
+] [
+PMC free article
+] [
+PubMed
+] [
+Google Scholar
+]
+54.
+Yatsenko SA, Bakos HA, Vitullo K
+et al.
+High-resolution microarray analysis unravels complex Xq28 aberrations in patients and carriers affected by X-linked blue cone monochromacy. Clin Genet
+2016;89:82–87.
+[
+DOI
+] [
+PMC free article
+] [
+PubMed
+] [
+Google Scholar
+]
+55.
+DiCarlo JE, Mahajan VB, Tsang SH. Gene therapy and genome surgery in the retina. J Clin Invest
+2018;128:2177–2188.
+[
+DOI
+] [
+PMC free article
+] [
+PubMed
+] [
+Google Scholar
+]
+56.
+Hu ML, Edwards TL, O’Hare F
+et al.
+Gene therapy for inherited retinal diseases: progress and possibilities. Clin Exp Optom
+2021;104:444–454.
+[
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+57.
+Mancuso K, Hauswirth WW, Li Q
+et al.
+Gene therapy for red-green colour blindness in adult primates. Nature
+2009;461:784–787.
+[
+DOI
+] [
+PMC free article
+] [
+PubMed
+] [
+Google Scholar
+]
+58.
+Scoles D, Flatter JA, Cooper RF
+et al.
+Assessing Photoreceptor Structure Associated with Ellipsoid Zone Disruptions Visualized with Optical Coherence Tomography. Retina
+2016;36:91–103.
+[
+DOI
+] [
+PMC free article
+] [
+PubMed
+] [
+Google Scholar
+]
+59.
+Carroll J, Rossi EA, Porter J
+et al.
+Deletion of the X-linked opsin gene array locus control region (LCR) results in disruption of the cone mosaic. Vision Res
+2010;50:1989–1999.
+[
+DOI
+] [
+PMC free article
+] [
+PubMed
+] [
+Google Scholar
+]
+60.
+Hofer H, Carroll J, Neitz J
+et al.
+Organization of the human trichromatic cone mosaic. J Neurosci
+2005;25:9669–9679.
+[
+DOI
+] [
+PMC free article
+] [
+PubMed
+] [
+Google Scholar
+]
+61.
+Applebury ML, Antoch MP, Baxter LC
+et al.
+The murine cone photoreceptor: a single cone type expresses both S and M opsins with retinal spatial patterning. Neuron
+2000;27:513–523.
+[
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+62.
+Daniele LL, Insinna C, Chance R
+et al.
+A mouse M-opsin monochromat: retinal cone photoreceptors have increased M-opsin expression when S-opsin is knocked out. Vision Res
+2011;51:447–458.
+[
+DOI
+] [
+PMC free article
+] [
+PubMed
+] [
+Google Scholar
+]
+63.
+Zhang Y, Deng WT, Du W
+et al.
+Gene-based Therapy in a Mouse Model of Blue Cone Monochromacy. Sci Rep
+2017;7:6690.
+[
+DOI
+] [
+PMC free article
+] [
+PubMed
+] [
+Google Scholar
+]
+64.
+Deng WT, Li J, Zhu P
+et al.
+Human L- and M-opsins restore M-cone function in a mouse model for human blue cone monochromacy. Mol Vis
+2018;24:17–28.
+[
+PMC free article
+] [
+PubMed
+] [
+Google Scholar
+]
+65.
+Ma X, Sechrest ER, Fajardo D
+et al.
+Gene Therapy in Opn1mw(−/−)/Opn1sw(−/−) Mice and Implications for Blue Cone Monochromacy Patients with Deletion Mutations. Hum Gene Ther
+2022;33:708–718.
+[
+DOI
+] [
+PMC free article
+] [
+PubMed
+] [
+Google Scholar
+]
+66.
+Karnik SS, Khorana HG. Assembly of functional rhodopsin requires a disulfide bond between cysteine residues 110 and 187. J Biol Chem
+1990;265:17520–17524.
+[
+PubMed
+] [
+Google Scholar
+]
+67.
+Richards JE, Scott KM, Sieving PA. Disruption of conserved rhodopsin disulfide bond by Cys187Tyr mutation causes early and severe autosomal dominant retinitis pigmentosa. Ophthalmology
+1995;102:669–677.
+[
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+68.
+Ostrer H, Kazmi MA. Mutation of a conserved proline disrupts the retinal-binding pocket of the X-linked cone opsins. Mol Vis
+1997;3:16.
+[
+PubMed
+] [
+Google Scholar
+]
+69.
+Cai B, Li Z, Sun S
+et al.
+Novel mutations in the OPN1LW and NR2R3 genes in a patient with blue cone monochromacy. Ophthalmic Genet
+2019;40:43–48.
+[
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+70.
+Katagiri S, Iwasa M, Hayashi T
+et al.
+Genotype determination of the OPN1LW/OPN1MW genes: novel disease-causing mechanisms in Japanese patients with blue cone monochromacy. Sci Rep
+2018;8:11507.
+[
+DOI
+] [
+PMC free article
+] [
+PubMed
+] [
+Google Scholar
+]
+71.
+Zhu P, Dyka F, Ma X
+et al.
+Disease mechanisms of X-linked cone dystrophy caused by missense mutations in the red and green cone opsins. FASEB J
+2021;35:e21927.
+[
+DOI
+] [
+PMC free article
+] [
+PubMed
+] [
+Google Scholar
+]
+72.
+Daniele LL, Lillo C, Lyubarsky AL
+et al.
+Cone-like morphological, molecular, and electrophysiological features of the photoreceptors of the Nrl knockout mouse. Invest Ophthalmol Vis Sci
+2005;46:2156–2167.
+[
+DOI
+] [
+PMC free article
+] [
+PubMed
+] [
+Google Scholar
+]
+73.
+Mears AJ, Kondo M, Swain PK
+et al.
+Nrl is required for rod photoreceptor development. Nat Genet
+2001;29:447–452.
+[
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+74.
+Nikonov SS, Daniele LL, Zhu X
+et al.
+Photoreceptors of Nrl −/− mice coexpress functional S- and M-cone opsins having distinct inactivation mechanisms. J Gen Physiol
+2005;125:287–304.
+[
+DOI
+] [
+PMC free article
+] [
+PubMed
+] [
+Google Scholar
+]
+75.
+Hagstrom SA, Neitz J, Neitz M. Variations in cone populations for red-green color vision examined by analysis of mRNA. Neuroreport
+1998;9:1963–1967.
+[
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+76.
+Vimal RL, Pokorny J, Smith VC
+et al.
+Foveal cone thresholds. Vision Res
+1989;29:61–78.
+[
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+77.
+Luo X, Cideciyan AV, Iannaccone A
+et al.
+Blue cone monochromacy: visual function and efficacy outcome measures for clinical trials. PLoS One
+2015;10:e0125700.
+[
+DOI
+] [
+PMC free article
+] [
+PubMed
+] [
+Google Scholar
+]
+78.
+Buck SL, Knight R. Partial additivity of rod signals with M- and L-cone signals in increment detection. Vision Res
+1994;34:2537–2545.
+[
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+79.
+Jacobson SG, Cideciyan AV, Ratnakaram R
+et al.
+Gene therapy for leber congenital amaurosis caused by RPE65 mutations: safety and efficacy in 15 children and adults followed up to 3 years. Arch Ophthalmol
+2012;130:9–24.
+[
+DOI
+] [
+PMC free article
+] [
+PubMed
+] [
+Google Scholar
+]
+80.
+Cideciyan AV, Roman AJ, Jacobson SG
+et al.
+Developing an Outcome Measure With High Luminance for Optogenetics Treatment of Severe Retinal Degenerations and for Gene Therapy of Cone Diseases. Invest Ophthalmol Vis Sci
+2016;57:3211–3221.
+[
+DOI
+] [
+PMC free article
+] [
+PubMed
+] [
+Google Scholar
+]
+81.
+Semenov EP, Sheplock R, Roman AJ
+et al.
+Reading Performance in Blue Cone Monochromacy: Defining an Outcome Measure for a Clinical Trial. Transl Vis Sci Technol
+2020;9:13.
+[
+DOI
+] [
+PMC free article
+] [
+PubMed
+] [
+Google Scholar
+]
+82.
+Mascio AA, Roman AJ, Cideciyan AV
+et al.
+Color Vision in Blue Cone Monochromacy: Outcome Measures for a Clinical Trial. Transl Vis Sci Technol
+2023;12:25.
+[
+DOI
+] [
+PMC free article
+] [
+PubMed
+] [
+Google Scholar
+]
+83.
+Fischer MD, Michalakis S, Wilhelm B
+et al.
+Safety and Vision Outcomes of Subretinal Gene Therapy Targeting Cone Photoreceptors in Achromatopsia: A Nonrandomized Controlled Trial. JAMA Ophthalmol
+2020;138:643–651.
+[
+DOI
+] [
+PMC free article
+] [
+PubMed
+] [
+Google Scholar
+]
+84.
+Marella M, Pesudovs K, Keeffe JE
+et al.
+The psychometric validity of the NEI VFQ-25 for use in a low-vision population. Invest Ophthalmol Vis Sci
+2010;51:2878–2884.
+[
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+85.
+Hauswirth WW, Aleman TS, Kaushal S
+et al.
+Treatment of leber congenital amaurosis due to RPE65 mutations by ocular subretinal injection of adeno-associated virus gene vector: short-term results of a phase I trial. Hum Gene Ther
+2008;19:979–990.
+[
+DOI
+] [
+PMC free article
+] [
+PubMed
+] [
+Google Scholar
+]
+86.
+Maguire AM, Simonelli F, Pierce EA
+et al.
+Safety and efficacy of gene transfer for Leber’s congenital amaurosis. N Engl J Med
+2008;358:2240–2248.
+[
+DOI
+] [
+PMC free article
+] [
+PubMed
+] [
+Google Scholar
+]

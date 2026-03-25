@@ -1,0 +1,261 @@
+{
+  "generated_on": "2026-03-25",
+  "canonical_cache_root": "papers/downloads",
+  "bibliography": "papers/downloads/paper_corpus_tracking.bib",
+  "policy": {
+    "canonical_pdf_lane": "papers/downloads",
+    "research_pdf_policy": "New source artifacts belong in papers/downloads. research/ may keep legacy mirrors temporarily, but canonical citations and provenance should point at papers/downloads."
+  },
+  "sources": [
+    {
+      "id": "fisher_2022",
+      "title": "Visually sensitive seizures: An updated review by the Epilepsy Foundation",
+      "url": "https://repository.essex.ac.uk/34275/",
+      "download_url": "https://repository.essex.ac.uk/34275/1/Epilepsia%20-%202022%20-%20Fisher%20-%20Visually%20sensitive%20seizures%20An%20updated%20review%20by%20the%20Epilepsy%20Foundation.pdf",
+      "access": "pdf_and_txt",
+      "artifacts": [
+        "papers/downloads/seizures/Fisher_2022_Visually_Sensitive_Seizures.pdf",
+        "papers/downloads/seizures/Fisher_2022_Visually_Sensitive_Seizures.txt"
+      ],
+      "notes": "Open repository PDF cached from the University of Essex record."
+    },
+    {
+      "id": "aaspire_2019",
+      "title": "Development of the AASPIRE Web Accessibility Guidelines for Autistic Web Users",
+      "url": "https://doi.org/10.1089/aut.2018.0020",
+      "download_url": "https://pure.port.ac.uk/ws/portalfiles/portal/16733604/Development_of_the_AASPIRE_Web.pdf",
+      "access": "pdf_and_txt",
+      "artifacts": [
+        "papers/downloads/autism/AASPIRE_Autism_Web_Accessibility_Guidelines_2019.pdf",
+        "papers/downloads/autism/AASPIRE_Autism_Web_Accessibility_Guidelines_2019.txt"
+      ],
+      "notes": "Author copy cached from the institutional repository path surfaced in search."
+    },
+    {
+      "id": "mueller_axt_2024",
+      "title": "Dysfunction of the magnocellular subdivision of the visual thalamus in developmental dyslexia",
+      "url": "https://doi.org/10.1093/brain/awae235",
+      "download_url": "https://pure.mpg.de/rest/items/item_3606668_1/component/file_3606669/content",
+      "access": "pdf_and_txt",
+      "artifacts": [
+        "papers/downloads/dyslexia/Mueller-Axt_2024_Magnocellular_LGN_Dyslexia.pdf",
+        "papers/downloads/dyslexia/Mueller-Axt_2024_Magnocellular_LGN_Dyslexia.txt"
+      ],
+      "notes": "Preproof PDF cached from the Max Planck repository."
+    },
+    {
+      "id": "yoo_2024",
+      "title": "Development of an innovative approach using portable eye tracking to assist ADHD screening: a machine learning study",
+      "url": "https://www.frontiersin.org/journals/psychiatry/articles/10.3389/fpsyt.2024.1337595/full",
+      "download_url": "https://public-pages-files-2025.frontiersin.org/journals/psychiatry/articles/10.3389/fpsyt.2024.1337595/pdf",
+      "access": "pdf_and_txt",
+      "artifacts": [
+        "papers/downloads/adhd/2024_Eye_Tracking_ADHD_Screening.pdf",
+        "papers/downloads/adhd/2024_Eye_Tracking_ADHD_Screening.txt"
+      ],
+      "notes": "Frontiers publisher PDF used because the PMC PDF endpoint returned a proof-of-work page."
+    },
+    {
+      "id": "sechrest_2023",
+      "title": "Blue Cone Monochromacy and Gene Therapy",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10182257/",
+      "download_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10182257/pdf/nihms-1887745.pdf",
+      "access": "html_full_text",
+      "artifacts": [
+        "papers/downloads/blue_cone_monochromacy/Sechrest_2023_BCM_Gene_Therapy_Review.html",
+        "papers/downloads/blue_cone_monochromacy/Sechrest_2023_BCM_Gene_Therapy_Review.txt",
+        "papers/downloads/blue_cone_monochromacy/Sechrest_2023_BCM_Gene_Therapy_Review.pdf.trace.html"
+      ],
+      "notes": "Full article HTML was accessible on PMC. Direct PDF fetch returned a proof-of-work page, which is cached as a trace artifact."
+    },
+    {
+      "id": "gong_hertle_2024",
+      "title": "Infantile Nystagmus Syndrome-Associated Inherited Retinal Diseases: Perspectives from Gene Therapy Clinical Trials",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11595273/",
+      "download_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11595273/pdf/life-14-01356.pdf",
+      "access": "html_full_text",
+      "artifacts": [
+        "papers/downloads/nystagmus/2024_INS_Gene_Therapy_Clinical_Trials.html",
+        "papers/downloads/nystagmus/2024_INS_Gene_Therapy_Clinical_Trials.txt",
+        "papers/downloads/nystagmus/2024_INS_Gene_Therapy_Clinical_Trials.pdf.trace.html"
+      ],
+      "notes": "Full article HTML was accessible on PMC. Direct PDF fetch returned a proof-of-work page, which is cached as a trace artifact."
+    }
+  ],
+  "legacy_aliases": [
+    {
+      "legacy_path": "research/colorblindness/blue_cone_monochromacy/Sechrest_2023_BCM_Gene_Therapy_Review.pdf",
+      "canonical_artifacts": [
+        "papers/downloads/blue_cone_monochromacy/Sechrest_2023_BCM_Gene_Therapy_Review.html",
+        "papers/downloads/blue_cone_monochromacy/Sechrest_2023_BCM_Gene_Therapy_Review.txt"
+      ],
+      "status": "removed_placeholder"
+    },
+    {
+      "legacy_path": "research/neurodivergence/adhd/2024_Eye_Tracking_ADHD_Screening.pdf",
+      "canonical_artifacts": [
+        "papers/downloads/adhd/2024_Eye_Tracking_ADHD_Screening.pdf",
+        "papers/downloads/adhd/2024_Eye_Tracking_ADHD_Screening.txt"
+      ],
+      "status": "removed_placeholder"
+    },
+    {
+      "legacy_path": "research/neurodivergence/autism/AASPIRE_Autism_Web_Accessibility_Guidelines_2019.pdf",
+      "canonical_artifacts": [
+        "papers/downloads/autism/AASPIRE_Autism_Web_Accessibility_Guidelines_2019.pdf",
+        "papers/downloads/autism/AASPIRE_Autism_Web_Accessibility_Guidelines_2019.txt"
+      ],
+      "status": "removed_placeholder"
+    },
+    {
+      "legacy_path": "research/neurodivergence/dyslexia/Mueller-Axt_2024_Magnocellular_LGN_Dyslexia.pdf",
+      "canonical_artifacts": [
+        "papers/downloads/dyslexia/Mueller-Axt_2024_Magnocellular_LGN_Dyslexia.pdf",
+        "papers/downloads/dyslexia/Mueller-Axt_2024_Magnocellular_LGN_Dyslexia.txt"
+      ],
+      "status": "removed_placeholder"
+    },
+    {
+      "legacy_path": "research/seizures/photosensitive_epilepsy/Fisher_2022_Visually_Sensitive_Seizures.pdf",
+      "canonical_artifacts": [
+        "papers/downloads/seizures/Fisher_2022_Visually_Sensitive_Seizures.pdf",
+        "papers/downloads/seizures/Fisher_2022_Visually_Sensitive_Seizures.txt"
+      ],
+      "status": "removed_placeholder"
+    },
+    {
+      "legacy_path": "research/visual_impairments/nystagmus/2024_INS_Gene_Therapy_Clinical_Trials.pdf",
+      "canonical_artifacts": [
+        "papers/downloads/nystagmus/2024_INS_Gene_Therapy_Clinical_Trials.html",
+        "papers/downloads/nystagmus/2024_INS_Gene_Therapy_Clinical_Trials.txt"
+      ],
+      "status": "removed_placeholder"
+    },
+    {
+      "legacy_path": "papers/downloads/adhd/ADHD_Eye_Tracking_2024.pdf",
+      "canonical_artifacts": [
+        "papers/downloads/adhd/2024_Eye_Tracking_ADHD_Screening.pdf",
+        "papers/downloads/adhd/2024_Eye_Tracking_ADHD_Screening.txt"
+      ],
+      "status": "removed_duplicate_alias"
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "id": "brettel_1997",
+      "canonical_path": "papers/downloads/algorithms/Brettel_1997_Dichromat_Simulation.pdf",
+      "alias_paths": [
+        "research/colorblindness/algorithms/Brettel_1997_Dichromat_Simulation.pdf",
+        "research/colorblindness/algorithms/Brettel_Vienot_Mollon_1997_Dichromat_Simulation.pdf"
+      ]
+    },
+    {
+      "id": "machado_2009",
+      "canonical_path": "papers/downloads/algorithms/Machado_2009_CVD_Simulation.pdf",
+      "alias_paths": [
+        "research/colorblindness/algorithms/Machado_2009_CVD_Simulation.pdf",
+        "research/colorblindness/algorithms/Machado_Oliveira_Fernandes_2009_CVD_Simulation.pdf"
+      ]
+    },
+    {
+      "id": "vienot_1999",
+      "canonical_path": "papers/downloads/algorithms/Vienot_1999_Digital_Colourmaps.pdf",
+      "alias_paths": [
+        "research/colorblindness/algorithms/Vienot_1999_Digital_Colourmaps.pdf"
+      ]
+    },
+    {
+      "id": "virtual_multitasking_cognitive_load",
+      "canonical_path": "papers/downloads/cognitive_load/Virtual_Multitasking_Cognitive_Load.pdf",
+      "alias_paths": [
+        "research/cognitive_load/2025_Predicting_Cognitive_Load_VR_Multitasking.pdf"
+      ]
+    }
+  ],
+  "files": [
+    {
+      "path": "papers/downloads/seizures/Fisher_2022_Visually_Sensitive_Seizures.pdf",
+      "sha256": "0a86898b5169728f48a81cd92a5a2a50cd18506f8d8cee3aefe147b3d9b9f005",
+      "size_bytes": 2445928,
+      "accessed_utc_date": "2026-03-25"
+    },
+    {
+      "path": "papers/downloads/seizures/Fisher_2022_Visually_Sensitive_Seizures.txt",
+      "sha256": "f3e3ba570cfd6ea772ae1c2de366d4d1c8b0769d1adc7482bf9c6c7fcdf880ed",
+      "size_bytes": 172688,
+      "accessed_utc_date": "2026-03-25"
+    },
+    {
+      "path": "papers/downloads/autism/AASPIRE_Autism_Web_Accessibility_Guidelines_2019.pdf",
+      "sha256": "99bd75415bb05c6f7cae1e1fd465d7c1aa7b3bc26bdaeea3829c2249360fd6a5",
+      "size_bytes": 1010649,
+      "accessed_utc_date": "2026-03-25"
+    },
+    {
+      "path": "papers/downloads/autism/AASPIRE_Autism_Web_Accessibility_Guidelines_2019.txt",
+      "sha256": "1f79c2f028bc918b6d3e34ebce87a598ee37fd44bff5cac4a270fb61acc65388",
+      "size_bytes": 57575,
+      "accessed_utc_date": "2026-03-25"
+    },
+    {
+      "path": "papers/downloads/dyslexia/Mueller-Axt_2024_Magnocellular_LGN_Dyslexia.pdf",
+      "sha256": "7b70dc3d9c0e6a989e7b47997dfb31a6eafddd24d6e510fcbe7d8f51c15c9f97",
+      "size_bytes": 1491669,
+      "accessed_utc_date": "2026-03-25"
+    },
+    {
+      "path": "papers/downloads/dyslexia/Mueller-Axt_2024_Magnocellular_LGN_Dyslexia.txt",
+      "sha256": "9e7e9f28e67416c5aa1baac1c7cae277b635f122b30742c392836e6ec77d9891",
+      "size_bytes": 64102,
+      "accessed_utc_date": "2026-03-25"
+    },
+    {
+      "path": "papers/downloads/adhd/2024_Eye_Tracking_ADHD_Screening.pdf",
+      "sha256": "e08d27d5efacf5d0581140e543a5b8dc7049d3fbc01bf6116b2a07f3c01575a1",
+      "size_bytes": 1466201,
+      "accessed_utc_date": "2026-03-25"
+    },
+    {
+      "path": "papers/downloads/adhd/2024_Eye_Tracking_ADHD_Screening.txt",
+      "sha256": "b45a7ffd886397c821efa0af3efb5f6839c4add14d5858edc7b969f0927362cf",
+      "size_bytes": 57559,
+      "accessed_utc_date": "2026-03-25"
+    },
+    {
+      "path": "papers/downloads/blue_cone_monochromacy/Sechrest_2023_BCM_Gene_Therapy_Review.html",
+      "sha256": "cde093c1668027833d5c9abc6ad6bf113f5af7e87509138fa1d87f65076a81b9",
+      "size_bytes": 228314,
+      "accessed_utc_date": "2026-03-25"
+    },
+    {
+      "path": "papers/downloads/blue_cone_monochromacy/Sechrest_2023_BCM_Gene_Therapy_Review.txt",
+      "sha256": "a2bc623dd91ccd7d69941ff0037e7a00126c7236c4b3f802b0b94c1b64d4dfe4",
+      "size_bytes": 60681,
+      "accessed_utc_date": "2026-03-25"
+    },
+    {
+      "path": "papers/downloads/blue_cone_monochromacy/Sechrest_2023_BCM_Gene_Therapy_Review.pdf.trace.html",
+      "sha256": "4176ad7b7f60ff7827a84e51534e92aad04b436a8f3d0e4b630c2436114083fc",
+      "size_bytes": 1817,
+      "accessed_utc_date": "2026-03-25"
+    },
+    {
+      "path": "papers/downloads/nystagmus/2024_INS_Gene_Therapy_Clinical_Trials.html",
+      "sha256": "0b09bf92daabbe4b8a305c2ed7a0ddef918f5f4b0299fe3822e7afd6ea5e54fb",
+      "size_bytes": 408521,
+      "accessed_utc_date": "2026-03-25"
+    },
+    {
+      "path": "papers/downloads/nystagmus/2024_INS_Gene_Therapy_Clinical_Trials.txt",
+      "sha256": "9e9c3940b75e74ea6e67fa41954ccbed74c9d4fd448166ae3cc4f81799a10c63",
+      "size_bytes": 120172,
+      "accessed_utc_date": "2026-03-25"
+    },
+    {
+      "path": "papers/downloads/nystagmus/2024_INS_Gene_Therapy_Clinical_Trials.pdf.trace.html",
+      "sha256": "c22ece5f7e0495ff12bb085ffbbf5874731ec0824cc83d86832d4a21e5cbff46",
+      "size_bytes": 1817,
+      "accessed_utc_date": "2026-03-25"
+    }
+  ]
+}

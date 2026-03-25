@@ -1,8 +1,8 @@
 # Visual Accessibility Research Compendium - Master Index
 
 **Repository:** OpenPerception (see repository root)
-**Compiled:** December 27, 2025
-**Total PDFs:** 33 (in `papers/downloads/` -- for research use only; see DOI/URL links for official access)
+**Compiled:** March 25, 2026
+**Total PDFs:** 36 (in `papers/downloads/` -- for research use only; see DOI/URL links for official access)
 **Total Compendiums:** 35 markdown files
 
 ---
@@ -82,7 +82,7 @@
 #### ADHD (5 papers)
 | File | Description |
 |------|-------------|
-| `ADHD_Eye_Tracking_2024.pdf` | Eye tracking screening |
+| `2024_Eye_Tracking_ADHD_Screening.pdf` | Eye tracking screening |
 | `ADHD_Pediatrics_Review_2024.pdf` | Neuroimaging review |
 | `ADHD_Perceptual_Oscillations_2025.pdf` | 91.8% ML classification |
 | `ADHD_Peripheral_Vision_2023.pdf` | Neuro-glasses intervention |
@@ -91,12 +91,18 @@
 #### Autism (7 papers)
 | File | Description |
 |------|-------------|
+| `AASPIRE_Autism_Web_Accessibility_Guidelines_2019.pdf` | Participatory web accessibility guidelines |
 | `2min_Eye_Tracking_ASD_2024.pdf` | Brief screening protocol |
 | `Eye_Tracking_ASD_2024.pdf` | Novel metrics system |
 | `Eye_Tracking_ASD_DL_2025.pdf` | Deep learning diagnosis |
 | `Manning_2024_Visual_Processing_Autism_Dyslexia.pdf` | Cross-syndrome study |
 | `Visual_Complexity_Autism_2025.pdf` | Sensory preferences |
 | `Visual_Perception_Autism_Review.pdf` | Comprehensive review |
+
+#### Dyslexia (1 paper)
+| File | Description |
+|------|-------------|
+| `Mueller-Axt_2024_Magnocellular_LGN_Dyslexia.pdf` | Visual thalamus neuroimaging evidence |
 
 #### Cognitive Load (10 papers)
 | File | Description |
@@ -115,6 +121,7 @@
 #### Seizures (3 papers)
 | File | Description |
 |------|-------------|
+| `Fisher_2022_Visually_Sensitive_Seizures.pdf` | Epilepsy Foundation review |
 | `ITU-R_BT1702-3_PSE_Guidelines.pdf` | International standard |
 | `Multisensory_Flicker_Epilepsy_2024.pdf` | 40Hz stimulation |
 
@@ -132,6 +139,13 @@ Applied documentation:
 - `docs/external_sources/stereoblindness_depth_sources.md` - Source cache and provenance index
 - `research/visual_impairments/stereoblindness/primary_source_notes.md` - Paper-by-paper granular extraction
 
+#### Canonical Corpus Registry
+| File | Description |
+|------|-------------|
+| `CANONICAL_REGISTRY.json` | Canonical paper paths, legacy aliases, and file hashes |
+| `paper_corpus_tracking.bib` | BibTeX tracking for repaired legacy placeholders |
+| `docs/external_sources/paper_corpus_registry.md` | Human-readable canonical cache policy and duplicate map |
+
 ### Existing Research PDFs
 
 Located in `/research/` subdirectories:
@@ -139,9 +153,7 @@ Located in `/research/` subdirectories:
 - `Machado_Oliveira_Fernandes_2009_CVD_Simulation.pdf`
 - `Stockman_2019_Cone_Fundamentals_CIE_Standards.pdf`
 - `Vienot_2015_Cone_Fundamentals_Past_Present_Future.pdf`
-- `Fisher_2022_Visually_Sensitive_Seizures.pdf`
-- `AASPIRE_Autism_Web_Accessibility_Guidelines_2019.pdf`
-- `Mueller-Axt_2024_Magnocellular_LGN_Dyslexia.pdf`
+- Canonical source-cache paths now live under `papers/downloads/`; see `docs/external_sources/paper_corpus_registry.md`
 - And 18+ more across research subdirectories
 
 ---
@@ -269,7 +281,7 @@ openperception/
 
 | Metric | Count |
 |--------|-------|
-| Total PDFs | 32 (in papers/downloads/) |
+| Total PDFs | 36 (in papers/downloads/) |
 | Compendium Markdown Files | 7 |
 | Research Domain Markdowns | 29 |
 | Papers Cataloged (estimated) | 420+ |
@@ -282,9 +294,9 @@ openperception/
 ## Usage Notes
 
 ### Finding Papers
-1. Check `papers/downloads/` for directly downloaded PDFs
+1. Check `papers/downloads/` for canonical downloaded PDFs
 2. Check compendium files for paper lists with DOIs/URLs
-3. Use research subdirectories for topic-specific materials
+3. Use `docs/external_sources/paper_corpus_registry.md` for canonical-path and legacy-alias tracking
 
 ### Key Compendiums
 - **For CVD algorithms**: `colorblindness_algorithms_compendium.md`
@@ -300,6 +312,6 @@ openperception/
 
 ---
 
-*Index generated: December 27, 2025*
-*Updated: March 19, 2026 (added 2025-2026 research across all domains, dyslexia research file)*
+*Index generated: March 25, 2026*
+*Updated: March 25, 2026 (repaired placeholder sources, added canonical corpus registry, refreshed cache counts)*
 *For: Visual Accessibility Research Compendium*

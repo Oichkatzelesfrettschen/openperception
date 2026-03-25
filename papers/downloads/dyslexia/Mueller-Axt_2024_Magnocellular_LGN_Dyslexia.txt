@@ -1,0 +1,3786 @@
+2
+
+thalamus in developmental dyslexia
+
+3
+
+Christa Müller-Axt,1,2,† Louise Kauffmann,2,3,† Cornelius Eichner2 and Katharina von
+
+4
+
+Kriegstein1
+
+5
+
+† These authors contributed equally to this work.
+
+6
+
+Abstract
+
+7
+
+Developmental dyslexia (DD) is one of the most common learning disorders, affecting millions
+
+8
+
+of children and adults worldwide. To date, scientific research has attempted to explain DD
+
+9
+
+primarily based on pathophysiological alterations in the cerebral cortex. In contrast, several
+
+10
+
+decades ago, pioneering research on five post-mortem human brains suggested that a core
+
+11
+
+characteristic of DD might be morphological alterations in a specific subdivision of the visual
+
+12
+
+thalamus – the magnocellular LGN (M-LGN). However, due to considerable technical
+
+13
+
+challenges in investigating LGN subdivisions non-invasively in humans, this finding was never
+
+14
+
+confirmed in-vivo, and its relevance for DD pathology remained highly controversial.
+
+15
+
+Here, we leveraged recent advances in high-resolution magnetic resonance imaging (MRI) at
+
+16
+
+high field strength (7 Tesla) to investigate the M-LGN in DD in-vivo. Using a case-control
+
+17
+
+design, we acquired data from a large sample of young adults with DD (n = 26; age 28  7
+
+18
+
+years; 13 females) and matched control participants (n = 28; age 27  6 years; 15 females).
+
+19
+
+Each participant completed a comprehensive diagnostic behavioral test battery and participated
+
+20
+
+in two MRI sessions, including three functional MRI experiments and one structural MRI
+
+21
+
+acquisition. We measured blood-oxygen-level-dependent responses and longitudinal relaxation
+
+23
+
+U
+
+N
+
+A
+
+M
+
+D
+
+TE
+
+EP
+
+rates to compare both groups on LGN subdivision function and myelination. Based on previous
+research, we hypothesized that the M-LGN is altered in DD and that these alterations are
+associated with a key DD diagnostic score, i.e., rapid letter and number naming (RANln).
+
+A
+
+24
+
+CC
+
+22
+
+SC
+RI
+PT
+
+Dysfunction of the magnocellular subdivision of the visual
+
+25
+
+The results showed aberrant responses of the M-LGN in DD compared to controls, which was
+
+26
+
+reflected in a different functional lateralization of this subdivision between groups. These
+
+27
+
+alterations were associated with RANln performance, specifically in male DD. We also found
+
+28
+
+lateralization differences in the longitudinal relaxation rates of the M-LGN in DD relative to
+
+29
+
+controls. Conversely, the other main subdivision of the LGN, the parvocellular LGN (P-LGN),
+© The Author(s) 2024. Published by Oxford University Press on behalf of the Guarantors of Brain. This is an
+Open Access article distributed under the terms of the Creative Commons Attribution License
+(https://creativecommons.org/licenses/by/4.0/), which permits unrestricted reuse, distribution, and reproduction
+in any medium, provided the original work is properly cited.
+1
+
+Downloaded from https://academic.oup.com/brain/advance-article/doi/10.1093/brain/awae235/7729174 by Max Planck Institute for Human Cognitive and Brain Sciences user on 19 August 2024
+
+1
+
+
+2
+
+between groups.
+
+3
+
+The present study is the first to unequivocally show that M-LGN alterations are a hallmark of
+
+4
+
+DD, affecting both the function and microstructure of this subdivision. It further provides a
+
+5
+
+first functional interpretation of M-LGN alterations and a basis for a better understanding of
+
+6
+
+sex-specific differences in DD with implications for prospective diagnostic and treatment
+
+7
+
+strategies.
+
+SC
+RI
+PT
+
+showed comparable blood-oxygen-level-dependent responses and longitudinal relaxation rates
+
+8
+Author affiliations:
+
+10
+
+1 Faculty of Psychology, TUD Dresden University of Technology, 01062 Dresden, Germany
+
+11
+
+2 Max Planck Institute for Human Cognitive and Brain Sciences, 04103 Leipzig, Germany
+
+12
+
+3 Laboratory of Psychology and NeuroCognition, Grenoble Alpes University, 38000 Grenoble,
+
+13
+
+France
+
+A
+
+N
+
+U
+
+9
+
+M
+
+14
+Correspondence to: Christa Müller-Axt
+
+16
+
+TUD Dresden University of Technology
+
+17
+
+Faculty of Psychology
+
+18
+
+Chair of Cognitive and Clinical Neuroscience
+
+19
+
+01062 Dresden, Germany
+
+20
+
+E-mail: christa.mueller-axt@tu-dresden.de
+
+TE
+
+EP
+
+Running title: Visual sensory thalamus in dyslexia
+
+A
+
+22
+
+CC
+
+21
+
+D
+
+15
+
+23
+
+Keywords: reading disability; lateral geniculate nucleus; visual processing; predictive coding;
+
+24
+
+fMRI; quantitative MRI
+
+25
+26
+
+Introduction
+
+27
+
+Developmental dyslexia (DD) is a neurodevelopmental disorder characterized by persistent
+
+28
+
+difficulties in acquiring effective literacy skills despite adequate intellectual development,
+2
+
+Downloaded from https://academic.oup.com/brain/advance-article/doi/10.1093/brain/awae235/7729174 by Max Planck Institute for Human Cognitive and Brain Sciences user on 19 August 2024
+
+1
+
+
+motivation, and educational opportunities.1 With a 5-10% prevalence in children, DD
+
+2
+
+encompasses the most common learning disorder. DD is often associated with considerable
+
+3
+
+long-term consequences for the individual and high costs for society. 1,2 Compared to typically
+
+4
+
+reading peers, DD is associated with significantly
+
+5
+
+unemployment rates, poorer health, and a shortened life expectancy. 1
+
+SC
+RI
+PT
+
+6
+
+higher academic drop-out and
+
+Research on the neurobiological origins of DD in humans focuses primarily on the cerebral
+
+8
+
+cortex and has revealed alterations particularly in a left-lateralized language network.3
+
+9
+
+However, this cortico-centric view of DD is challenged by histopathological observations made
+
+10
+
+in the early-1990s on several post-mortem brains of dyslexics.4,5 These studies revealed that
+
+11
+
+DD is not only associated with alterations (neuronal ectopias and focal microgyria) in key
+
+12
+
+cortical language regions, but also with histological alterations of the sensory thalami, i.e., the
+
+13
+
+lateral geniculate nucleus (LGN) and the medial geniculate body (MGB) of the visual and
+
+14
+
+auditory processing pathway, respectively. 4,5 Sensory thalami are the last subcortical
+
+15
+
+processing site before sensory information is routed to primary cortices. 6 Sensory thalamus
+
+16
+
+alterations, including sex-specific differences, have also been observed in several animal
+
+17
+
+models of DD.7,8 In-vivo magnetic resonance imaging (MRI) studies in humans have shown
+
+18
+
+that thalamo-cortical connectivity in DD is altered predominantly in the left hemisphere in the
+
+19
+
+visual pathway, mirroring similar findings in the auditory pathway. 9,10
+
+TE
+
+D
+
+M
+
+A
+
+N
+
+U
+
+7
+
+20
+
+In humans, the LGN is a small, layered structure that can be coarsely partitioned into two main
+
+22
+
+subdivisions: a magnocellular (M-LGN; layers 1-2) and a parvocellular (P-LGN; layers 3-6)
+
+23
+
+subdivision.11,12 Thin intercalated koniocellular layers separate each of the individual M and P
+
+25
+
+layers. Neurons of the M and P subdivisions process complementary visual information: For
+example, M-LGN neurons are involved in coarse spatial image analysis and are specialized in
+detecting rapid visual changes and motion. Conversely, P-LGN neurons are involved in
+
+A
+
+26
+
+CC
+
+24
+
+EP
+
+21
+
+27
+
+processing color and fine spatial detail. The functional role of koniocellular neurons is still
+
+28
+
+largely unresolved; however, they also contribute to color vision. 6 Human post-mortem studies
+
+29
+
+in DD demonstrated morphological alterations specifically in the magnocellular layers but not
+
+30
+
+in the parvocellular layers of the LGN. 4 These findings were based on N=5 post-mortem
+
+31
+
+dyslexic cases and have not yet been replicated in further human post-mortem or in-vivo
+
+32
+
+imaging studies. Previous in-vivo studies investigating LGN alterations in DD have provided
+
+3
+
+Downloaded from https://academic.oup.com/brain/advance-article/doi/10.1093/brain/awae235/7729174 by Max Planck Institute for Human Cognitive and Brain Sciences user on 19 August 2024
+
+1
+
+
+2
+
+therefore lack the sensitivity to assess individual M and P subdivisions and their potential role
+
+3
+
+in DD.14,15 In addition, measuring magnocellular function behaviorally is indirect and
+
+4
+
+unreliable16 and not all dyslexics exhibit behavioral impairments that could be attributed to a
+
+5
+
+general magnocellular visual processing difficulty. 17 Thus, to date, it remains elusive (i)
+
+6
+
+whether M-LGN alterations can also be detected in DD in-vivo, and if so, (ii) which functional
+
+7
+
+relevance these may have for dyslexia symptoms.
+
+SC
+RI
+PT
+
+unreliable results.13 Furthermore, they have been limited to measuring the entire LGN and
+
+8
+
+The scarcity of clinical post-mortem brain specimens and the technical challenges associated
+
+10
+
+with in-vivo MRI measurements of small subcortical brain structures pose major obstacles to
+
+11
+
+answering these questions. In humans, individual LGN layers are  1mm thick, verging on the
+
+12
+
+limits of attainable image resolutions of conventional MRI. 11,12 However, recent advances in
+
+13
+
+high-field MRI have made it possible to measure distinct signals from the M- and P-LGN in
+
+14
+
+humans in-vivo, paving the way for assessing subdivision-specific LGN alterations in larger
+
+15
+
+sample sizes.12,18
+
+A
+
+N
+
+U
+
+9
+
+M
+
+16
+
+We used recently developed high-field functional MRI (fMRI) experiments at 7 Tesla to
+
+18
+
+investigate whether DD is associated with functional alterations of the M-LGN. In addition,
+
+19
+
+we acquired quantitative MRI data to explore potential structural alterations of the M-LGN.
+
+20
+
+We acquired data from a large sample of N=54 young German adults with a lifelong history of
+
+21
+
+DD and matched control participants (Table S1). With this sample we performed three blood-
+
+22
+
+oxygen-level-dependent (BOLD) fMRI experiments (Fig. 1). The central aim of these
+
+23
+
+experiments was to test whether (i) M-LGN alterations can also be detected in DD in-vivo, and
+
+25
+
+TE
+
+EP
+
+if so, (ii) whether they are related to a dyslexia diagnostic score, i.e., rapid automatized naming
+for letters and numbers (RANln). We focused specifically on RANln performance because it is
+associated with altered connectivity between the LGN and the cerebral cortex in DD 10 and with
+
+A
+
+26
+
+CC
+
+24
+
+D
+
+17
+
+27
+
+sensory thalamus dysfunction in the auditory modality. 19 Furthermore, RANln performance is
+
+28
+
+key for predicting reading ability.20
+
+29
+
+4
+
+Downloaded from https://academic.oup.com/brain/advance-article/doi/10.1093/brain/awae235/7729174 by Max Planck Institute for Human Cognitive and Brain Sciences user on 19 August 2024
+
+1
+
+
+2
+
+Participants
+
+3
+
+Fifty-four healthy adult German speakers were included in the study. This sample consisted of
+
+4
+
+26 participants with DD and 28 control participants, matched in age, sex, handedness, and
+
+5
+
+nonverbal IQ (Supplementary Material: Methods and Supplementary Table 1). Participants
+
+6
+
+with DD performed worse than controls on tests of literacy (spelling, reading speed, and
+
+7
+
+comprehension), rapid automatized naming of letters and numbers (RANln), and word and
+
+8
+
+non-word reading (Supplementary Material: Methods and Supplementary Table 1).
+
+SC
+RI
+PT
+
+Materials and methods
+
+9
+
+MRI experiments
+
+11
+
+Procedure
+
+12
+
+Participants attended two MRI sessions on two separate days. The sessions included three fMRI
+
+13
+
+experiments: the LGN localizer and M/P mapping experiment (first session) and a motion
+
+14
+
+experiment (second session). In addition, whole-brain quantitative structural MR images were
+
+15
+
+acquired in each participant during the first session. One DD participant attended only the first
+
+16
+
+MRI session due to pregnancy at the time of the second session. In the context of a different
+
+17
+
+research question, we acquired additional fMRI and diffusion-weighted imaging data from the
+
+18
+
+participants, the results of which will be reported elsewhere.
+
+N
+
+A
+
+M
+
+D
+
+TE
+
+EP
+
+20
+
+Setup
+
+21
+
+CC
+
+19
+
+22
+
+In each fMRI experiment, visual stimuli were front-projected onto a translucent screen
+positioned on the participants’ chests. Participants viewed the screen in the MRI system
+through a mirror mounted directly above their eyes. During the fMRI experiments, we also
+
+A
+
+23
+
+U
+
+10
+
+24
+
+recorded cardio-respiratory data from the participants. This was done to account for
+
+25
+
+physiological noise in the BOLD signal during data processing to increase the signal-to-noise
+
+26
+
+ratio in the LGN.21 For more details on display settings, visual stimulation software, and
+
+27
+
+physiological recordings, see Supplementary Material: Methods.
+
+28
+
+5
+
+Downloaded from https://academic.oup.com/brain/advance-article/doi/10.1093/brain/awae235/7729174 by Max Planck Institute for Human Cognitive and Brain Sciences user on 19 August 2024
+
+1
+
+
+2
+
+LGN localizer
+
+3
+
+This experiment was used to functionally localize the LGN in each participant (Fig. 1A). 18 The
+
+4
+
+stimulus consisted of a flickering radial checkerboard with 100% contrast, with its contrast
+
+5
+
+polarity reversed at 4Hz (for the full cycle). The checkerboard covered half the screen while
+
+6
+
+the other half contained a uniform gray background. The checkerboard alternated between the
+
+7
+
+two visual hemifields in a block design. Participants maintained fixation on a central white
+
+8
+
+fixation dot while viewing the stimuli. Each hemifield block lasted 16 s, and the whole run was
+
+9
+
+composed of 8 left-right alternations for a total of 16 blocks and a run duration of 5 minutes.
+
+10
+
+Further details on the experimental design can be found in the corresponding reference. 18
+
+SC
+RI
+PT
+
+Experimental design
+
+U
+
+11
+
+M/P mapping
+
+13
+
+This experiment used full-field stimuli designed to match the selective response properties of
+
+14
+
+neurons in the M-LGN and P-LGN (Fig. 1B).18 The M-stimulus was a sinusoidal grayscale
+
+15
+
+grating with a luminance contrast of 100%, a low spatial frequency of 0.5 cycles per degree
+
+16
+
+(cpd), and a sinusoidal counterphase flicker frequency of 15 Hz. The P-stimulus was a
+
+17
+
+sinusoidal high color-contrast red-green grating with low luminance contrast, a higher spatial
+
+18
+
+frequency of 2 cpd, and a lower sinusoidal counterphase flicker of 5 Hz. Gratings changed
+
+19
+
+orientation every 3 s and could be presented at one of 6 orientations (0°, 30°, 60°, 90°, 120°,
+
+20
+
+150°). M- and P-stimuli were presented in a block design and were interspersed with rest blocks
+
+21
+
+consisting of a uniform gray background. Throughout the experiment, participants maintained
+
+22
+
+fixation on a central white fixation dot while viewing the stimuli. To ensure continued fixation
+
+24
+
+A
+
+M
+
+D
+
+TE
+
+EP
+
+on the screen during experimental M/P-blocks, participants were asked to detect contrast
+decrements (0 to 3 targets) that could appear at random locations within each block. At the end
+of each block, participants had 1.5 s to report the number of targets per button press. Each block
+
+A
+
+25
+
+CC
+
+23
+
+N
+
+12
+
+26
+
+lasted 16 s and each run was composed of 6 M-blocks, 6 P-blocks, and 3 rest blocks for a total
+
+27
+
+of 15 blocks. Participants completed 4 runs of the M/P mapping experiment, which lasted
+
+28
+
+approximately 5 minutes each. Further details on the experimental design can be found in the
+
+29
+
+corresponding reference.18
+
+30
+
+6
+
+Downloaded from https://academic.oup.com/brain/advance-article/doi/10.1093/brain/awae235/7729174 by Max Planck Institute for Human Cognitive and Brain Sciences user on 19 August 2024
+
+1
+
+
+2
+
+This experiment served to functionally validate the obtained M- and P-subdivision maps and
+
+3
+
+consisted of alternating moving and static point clouds presented in a block design (Fig. 1C).22
+
+4
+
+In the motion blocks, point clouds consisted of 250 white dots with a radius of 0.1° moving
+
+5
+
+radially against a black background at a speed of 4.7 deg/s and 100% coherence within a
+
+6
+
+circular aperture of 17°. For half of the motion blocks, the points moved inward, while for the
+
+7
+
+other half, they moved outward. Radial motion was chosen to facilitate central fixation and to
+
+8
+
+stimulate a broad spectrum of motion direction-selective cells.23 During static blocks, the same
+
+9
+
+number of dots was displayed at random locations and remained stationary for the duration of
+
+10
+
+the block. Throughout all blocks, participants were instructed to maintain fixation on a central
+
+11
+
+gray fixation point (0.2° radius) while viewing the stimuli. Each block lasted 16 s, and a run
+
+12
+
+was composed of 8 blocks of each type (i.e., motion and static), for a total of 16 blocks.
+
+13
+
+Participants completed one run, which lasted approximately 5 minutes.
+
+N
+
+U
+
+SC
+RI
+PT
+
+Motion experiment
+
+A
+
+14
+
+High-resolution MRI data acquisition
+
+16
+
+High-resolution functional and structural MRI data were acquired on a 7 Tesla Magnetom MRI
+
+17
+
+system (Siemens Healthineers, Erlangen, Germany) equipped with a 32-channel head coil
+
+18
+
+(Nova Medical, Wilmington, MA, USA). In the three fMRI experiments, high-resolution echo-
+
+19
+
+planar images were acquired at a resolution of 1.25 × 1.25 × 1.2 mm with partial brain coverage
+
+20
+
+(40 transverse slices), covering the LGN and visual cortex. High-resolution whole-brain
+
+21
+
+quantitative structural MR images were acquired (0.7 mm isotropic resolution) for registration
+
+22
+
+purposes and an exploratory analysis of LGN microstructure (Supplementary Material:
+
+23
+
+Methods). Participants received foam padding around the head to reduce head motion. For
+
+D
+
+TE
+
+EP
+
+further details on the acquisition parameters and a quantitative evaluation of head motion, see
+Supplementary Material: Methods.
+
+A
+
+25
+
+CC
+
+24
+
+M
+
+15
+
+26
+27
+
+MRI data processing
+
+28
+
+Preprocessing and first-level statistical analyses of fMRI data were performed using standard
+
+29
+
+pipelines in SPM12 (Wellcome Centre for Human Neuroimaging, London, UK), implemented
+
+30
+
+in Matlab 2019Rb (Mathworks Inc., Sherborn, MA, USA) (see Supplementary Material:
+
+31
+
+Methods).
+7
+
+Downloaded from https://academic.oup.com/brain/advance-article/doi/10.1093/brain/awae235/7729174 by Max Planck Institute for Human Cognitive and Brain Sciences user on 19 August 2024
+
+1
+
+
+Definition of the LGN
+
+3
+
+We used a publicly available high-resolution 7T probabilistic LGN atlas to precisely segment
+
+4
+
+the LGN in each participant and to carefully demarcate it from adjacent visual brain
+
+5
+
+structures.12 Nonlinear registrations of the atlas to each participant’s native quantitative T1
+
+6
+
+image were performed using (landmark-based) symmetric normalization in ANTs (version
+
+7
+
+2.3.1; Supplementary Material: Methods).24 For each participant, individual left and right LGN
+
+8
+
+masks were then registered to the functional image data. We also verified whether the resulting
+
+9
+
+masks overlapped with the functional responses obtained in the LGN localizer experiment.
+
+SC
+RI
+PT
+
+2
+
+10
+
+Definition of M- and P-LGN
+
+12
+
+M- and P-LGNs were defined using the M/P mapping experiment as previously described: 18
+
+13
+
+For each participant, we computed Beta M-P maps in native space by subtracting the Beta maps
+
+14
+
+obtained from the general linear model (GLM) estimation corresponding to the M- and P-
+
+15
+
+stimulus conditions of the M/P mapping experiment, respectively. It follows that voxels with
+
+16
+
+larger values on the Beta M-P maps indicate a higher response preference for the M-stimulus,
+
+17
+
+while lower voxel values indicate a higher response preference for the P-stimulus. To confine
+
+18
+
+these maps to relevant voxels within the LGN, individual Beta M-P maps were then masked
+
+19
+
+with the previously defined individual left and right LGN masks. For each participant and
+
+20
+
+hemisphere separately, the M-LGN was defined as the 20% of voxels with the largest Beta M-
+
+21
+
+P values, while the remaining 80% of voxels formed the P-LGN. This 20/80% volume
+
+22
+
+allocation criterion is based on previous histological studies showing that the proportion of M
+
+24
+
+N
+
+A
+
+M
+
+D
+
+TE
+
+EP
+
+and P neurons in the human LGN fall within these bounds, respectively. 11
+As a quality criterion, we checked whether the M/P-LGN subdivision maps defined in native
+space adhered to the anatomically known spatial configuration of the M-LGN being located
+
+A
+
+25
+
+CC
+
+23
+
+U
+
+11
+
+26
+
+more medially than the P-LGN.12,18 To this end, we computed individual M/P-LGN subdivision
+
+27
+
+maps also in MNI standard space. This step permitted comparability between participants by
+
+28
+
+aligning all LGNs in a common reference space. MNI Beta M-P maps were masked with a
+
+29
+
+probabilistic LGN atlas12 (in MNI 1mm standard space) (Fig. 2A) and the same 20/80% volume
+
+30
+
+allocation criterion was applied to define M- and P-LGN subdivision maps, respectively (Fig.
+
+31
+
+2B) (Supplementary Material: Methods). The analysis in MNI standard space served solely for
+
+8
+
+Downloaded from https://academic.oup.com/brain/advance-article/doi/10.1093/brain/awae235/7729174 by Max Planck Institute for Human Cognitive and Brain Sciences user on 19 August 2024
+
+1
+
+
+quality control of the spatial configuration of the identified M/P-LGN subdivision maps. All
+
+2
+
+further quantitative analyses comparing the accuracy of the M/P-LGN subdivision maps
+
+3
+
+between groups are based on the data in participants' native space.
+
+4
+
+Extraction of signal change
+
+6
+
+Beta estimates corresponding to the conditions of interest were extracted from all voxels within
+
+7
+
+the LGN (i.e., for the LGN localizer experiment) or the M- and P-LGN (i.e., for the M/P
+
+8
+
+mapping and motion experiments) in each participant using an in-house toolbox. These
+
+9
+
+estimates were then converted to percent signal change (PSC in %). Percent signal change was
+
+10
+
+computed as: PSC = (βcondition  SF / βconstant)  100, wherein βcondition corresponds to the
+
+11
+
+parameter estimate of the condition of interest, SF refers to the scale factor of the design matrix,
+
+12
+
+and βconstant corresponds to the parameter estimate for the constant term. 25 Mean PSC values
+
+13
+
+were extracted from each region for every participant and experimental condition in the fMRI
+
+14
+
+experiments, and subjected to mixed-design analyses of variance (ANOVA) for statistical
+
+15
+
+analysis (see Supplementary Material: Methods). For the motion experiment, we used the
+
+16
+
+identified M- and P-LGN subdivisions to mask responses in the contrast motion vs. static.
+
+17
+
+D
+
+M
+
+A
+
+N
+
+U
+
+SC
+RI
+PT
+
+5
+
+Statistical analyses
+
+19
+
+Mean PSC values were submitted to mixed-design ANOVAs for statistical analysis. Pairwise
+
+20
+
+comparisons were performed using paired t-tests, where appropriate. Effect sizes for ANOVAs
+
+21
+
+and t-tests were calculated using partial eta squared (η2p) and Cohen’s d, respectively.
+
+22
+
+Correlation analyses between PSC and RANln were performed using Pearson’s correlations.
+
+24
+
+EP
+
+Correlation analyses were only performed with RANln, while other behavioral measures were
+omitted. This choice was motivated by previous evidence showing an association between
+RANln and sensory thalamus alterations in DD. 10,19 We checked the data for normality using
+
+A
+
+25
+
+CC
+
+23
+
+TE
+
+18
+
+26
+
+the Shapiro-Wilk test.26 Participants whose results deviated more than two standard deviations
+
+27
+
+from the group mean were excluded. This was the case for (i) one DD participant in the
+
+28
+
+correlation analysis of M-LGN responses and RANln reaction times in female DD, (ii) three
+
+29
+
+participants in the structural brain analysis of M-LGN R1 data (1 control, 2 DD), and (iii) two
+
+30
+
+participants (1 control, 1 DD) in the P-LGN R1 data analysis. To account for deviations of the
+
+31
+
+R1 data from a normal distribution despite outlier rejection, the R 1 data of the M- and P-LGN
+
+9
+
+Downloaded from https://academic.oup.com/brain/advance-article/doi/10.1093/brain/awae235/7729174 by Max Planck Institute for Human Cognitive and Brain Sciences user on 19 August 2024
+
+1
+
+
+were analyzed using independent non-parametric Mann-Whitney U tests. For all statistical
+
+2
+
+tests, the significance level α was set to 0.05, and Bonferroni-correction was applied as
+
+3
+
+described in the main text.
+
+4
+
+Results
+
+6
+
+In each individual participant, we segmented the entire LGN based on an anatomical atlas and
+
+7
+
+additionally localized it functionally (LGN localizer18 ) (Fig. 1A). Within the LGN, we mapped
+
+8
+
+the M- and P-LGN (M/P mapping18 ) (Fig. 1B) to test for functional differences in the M- and
+
+9
+
+P-LGN between control and DD participants. In a further fMRI experiment, we assessed visual
+
+10
+
+motion processing (motion experiment, Fig. 1C). This experiment was originally developed in
+
+11
+
+the context of a different research question as a V5/MT-localizer and here served as a quality
+
+12
+
+control for the identified M- and P-LGN derived from the M/P mapping experiment.
+
+N
+
+U
+
+SC
+RI
+PT
+
+5
+
+A
+
+13
+
+Overall LGN responses similar between control and DD
+
+15
+
+participants
+
+16
+
+The LGN localizer (Fig. 1A) allowed us to functionally localize the entire LGN in each
+
+17
+
+participant and assess whether DD participants may already differ from control participants in
+
+18
+
+their overall LGN responses to visual stimulation. Such a difference between groups would
+
+19
+
+indicate a general LGN deficit in DD that is not confined to any particular LGN subdivision.
+
+20
+
+A mixed-design analysis of variance (ANOVA) of participants’ functional LGN responses with
+
+21
+
+the between-subject factors of group (controls/DD) and sex (female/male) and the within-
+
+22
+
+subject factors of hemisphere (left/right) and stimulation site (left/right visual hemifield)
+
+D
+
+TE
+
+EP
+
+provided no support for such a global LGN deficit in DD. There were no significant main
+effects of group (F(1,50) = 0.223, p = .639, η2p = .004) or sex (F(1,50) = 2.846, p = .098, η2p =
+
+A
+
+24
+
+CC
+
+23
+
+M
+
+14
+
+25
+
+.054), nor any significant interaction involving both factors (all p’s ≥ .252, all η2p ≤ .026),
+
+26
+
+suggesting that overall LGN responses to the visual checkerboard stimulation were similar in
+
+27
+
+control and DD participants.
+
+28
+
+10
+
+Downloaded from https://academic.oup.com/brain/advance-article/doi/10.1093/brain/awae235/7729174 by Max Planck Institute for Human Cognitive and Brain Sciences user on 19 August 2024
+
+1
+
+
+2
+
+We then tested our first hypothesis that DD is associated with specific alterations of the M-
+
+3
+
+LGN. For this purpose, we functionally defined each participant’s M- and P-subdivision (Fig.
+
+4
+
+2A,B). We computed a mixed-design ANOVA of participants’ subdivision-specific LGN
+
+5
+
+responses with the between-subject factors of group (controls/DD) and sex (female/male) and
+
+6
+
+the within-subject factors of subdivision (M-LGN/P-LGN), stimulus-type (M-stimulus/P-
+
+7
+
+stimulus), and hemisphere (left/right). The analysis revealed significant main effects of the
+
+8
+
+factors subdivision (M-LGN>P-LGN responses; F(1,45) = 230.190, p = 2.610-19 , η2p = .836),
+
+9
+
+stimulus-type (M-stimulus>P-stimulus responses; F(1,45) = 222.001, p = 5.210-19 , η2p = .831),
+
+10
+
+and hemisphere (left>right responses; F(1,45) = 7.252, p = .01, η2p = .139), while the main
+
+11
+
+effects of the factors group (F(1,45) = 0.027, p = .871, η2p = .001) and sex (F(1,45) = 0.703, p
+
+12
+
+= .406, η2p = .015) were non-significant. Importantly, there was a significant three-way
+
+13
+
+interaction of group  subdivision  hemisphere (F(1,45) = 4.361, p = .042, η2p = .088; Fig. 3).
+
+14
+
+Conversely, the same interaction including the stimulus-type factor was not significant (F(1,45)
+
+15
+
+= 0.737, p = .395, η2p = .016), likely reflecting the partial functional overlap (i.e., rather than
+
+16
+
+strict dichotomy) in the response profiles of M and P neurons. 27–29 The observed three-way
+
+17
+
+interaction suggested a difference in the subdivision  hemisphere interaction between the two
+
+18
+
+groups of control and DD participants. Given previous results of potential left lateralization of
+
+19
+
+sensory thalamus alterations in DD,9,10,19 we expected a significant subdivision  hemisphere
+
+20
+
+interaction in the DD but not in the control group. In line with this expectation, two subsequent
+
+21
+
+within-group repeated-measures ANOVAs revealed a significant interaction of subdivision 
+
+22
+
+hemisphere in DD participants (F(1,24) = 6.531, p = .017, η2p = .214, at Bonferroni-adjusted
+
+23
+
+significance level  = .025), while this interaction was non-significant in controls (F(1,23) =
+
+U
+
+N
+
+A
+
+M
+
+D
+
+TE
+
+EP
+
+0.724, p = .403, η2p = .031) (Fig. 3). Post-hoc paired t-tests showed that within the DD group,
+the observed subdivision  hemisphere interaction was driven by significant hemispheric
+
+A
+
+25
+
+CC
+
+24
+
+SC
+RI
+PT
+
+Altered M-LGN response in DD participants
+
+26
+
+differences in functional responses between the left and right M-LGN (t(24) = 3.199, p = .004,
+
+27
+
+d = 0.64, two-tailed at Bonferroni-adjusted significance level  = .025). M-LGN responses in
+
+28
+
+DD participants were significantly stronger in the left than right hemisphere. In contrast, there
+
+29
+
+were no differences in P-LGN responses between hemispheres (t(24) = 0.520, p = .608, d =
+
+30
+
+0.104) (Fig. 3). Additional exploratory post-hoc independent t-tests, prompted by a reviewer,
+
+31
+
+revealed no further significant differences between groups. Overall, these results suggest that,
+
+32
+
+unlike typical readers, DD participants exhibit functional response alterations, which are
+11
+
+Downloaded from https://academic.oup.com/brain/advance-article/doi/10.1093/brain/awae235/7729174 by Max Planck Institute for Human Cognitive and Brain Sciences user on 19 August 2024
+
+1
+
+
+2
+
+LGN. Consistent with post-mortem human studies,4 these findings provide first evidence that
+
+3
+
+DD is associated with alterations of the M-LGN also in-vivo.
+
+4
+
+In an additional exploratory analysis of the quantitative T 1 data (Supplementary Material:
+
+5
+
+Methods), we found that the altered functional lateralization of the M-LGN in DD may relate
+
+6
+
+to differences in the underlying myelination of this subdivision between controls and
+
+7
+
+individuals with DD (Fig. 4). While both the M- and P-LGN featured a rightward lateralization
+
+8
+
+pattern in myelination in the two groups, the myelin content of the M-LGN was significantly
+
+9
+
+shifted towards the left hemisphere in DD (U = 155.0, p = .016, two-tailed at Bonferroni-
+
+10
+
+adjusted significance level  = .025) as compared to control participants (i.e., a tendency
+
+11
+
+towards greater leftward lateralization in DD). Analogous to the fMRI results, the lateralization
+
+12
+
+of the P-LGN did not differ between groups (U = 218.0, p = .217; Fig. 4).
+
+U
+
+SC
+RI
+PT
+
+characterized by a notable increase in hemispheric asymmetry specifically affecting the M-
+
+N
+
+13
+
+No differences in M/P-LGN localization accuracy between groups
+
+15
+
+First, there were no significant differences in the size of individually defined entire LGN masks
+
+16
+
+(outlined in black in Fig. 2) between control and DD participants, either for the left LGN (128.2
+
+17
+
+ 17.4 mm3 in controls vs. 124.5  14.0 mm3 in DD; t(52) = 0.838, p = .406, d = 0.228, two-
+
+18
+
+tailed) or right LGN (136.1  17.0 mm3 in controls vs. 132.4  17.7 mm3 in DD; t(52) = 0.793,
+
+19
+
+p = .432, d = 0.216, two-tailed). Second, identified M/P-LGN maps were evaluated against the
+
+20
+
+anatomically informed criterion that, for each participant, the M-LGN should be consistently
+
+21
+
+located more medially than the P-LGN 12,18 (Fig. 2B) (Supplementary Material: Methods).
+
+22
+
+Participants who did not meet this criterion (n = 4 controls, n = 1 DD) were excluded from the
+
+23
+
+M/P-LGN analyses. There were also no differences in the size of the identified M/P-LGN maps
+
+M
+
+D
+
+TE
+
+EP
+
+between groups in either hemisphere in the final sample (all p’s ≥ .512, all d’s ≤ 0.189). Finally,
+there were no significant differences between groups in behavioral performance on the contrast
+
+A
+
+25
+
+CC
+
+24
+
+A
+
+14
+
+26
+
+decrement detection task during the M/P mapping experiment (all p’s > .4; see Supplementary
+
+27
+
+Material: Results).
+
+28
+29
+
+M/P-LGN maps show expected functional response properties
+
+30
+
+Next, we verified that the identified M/P-LGN maps also showed the expected functional
+
+31
+
+response properties of M-LGN and P-LGN (Supplementary Material: Methods). To this end,
+12
+
+Downloaded from https://academic.oup.com/brain/advance-article/doi/10.1093/brain/awae235/7729174 by Max Planck Institute for Human Cognitive and Brain Sciences user on 19 August 2024
+
+1
+
+
+2
+
+experiment. Based on the known response properties of M-LGN and P-LGN neurons, BOLD
+
+3
+
+responses to visual motion should be stronger in the identified M- than P-LGN.6 As expected,
+
+4
+
+a mixed-design ANOVA of participants’ functional M/P-LGN responses to the contrast motion
+
+5
+
+vs. static with the between-subject factor of group (controls/DD) and the within-subject factors
+
+6
+
+of subdivision (M-LGN/P-LGN) and hemisphere (left/right) revealed a significant main effect
+
+7
+
+of the factor subdivision with stronger BOLD responses in the identified M- than P-LGN across
+
+8
+
+participants (F(1,46) = 57.621, p = 1.19410-9 , η2p = .556). There was no main effect (F(1,46)
+
+9
+
+= 0.181, p = .673, η2p = .004) nor any interaction (all p’s ≥ .268, all η2p ≤ .027) with the factor
+
+10
+
+group, suggesting that the identified subdivisions in both groups adhered to the expected
+
+11
+
+functional response properties.
+
+SC
+RI
+PT
+
+we analyzed the subdivision-specific LGN responses within the independent visual motion
+
+U
+
+12
+
+M-LGN response predicts key deficit in DD males
+
+14
+
+In human DD research, a commonly used diagnostic task is rapid automatized naming (RAN).
+
+15
+
+In this task, participants name a series of visually presented familiar items (e.g., letters and
+
+16
+
+numbers) aloud as quickly and accurately as possible. 30 RAN ability is an important predictor
+
+17
+
+of reading fluency and poses a key deficit in DD across the lifespan. 20 Importantly, slow
+
+18
+
+reaction times on RAN for letters and numbers (RANln) have previously been linked to both
+
+19
+
+functional and structural alterations of the sensory thalami and their connections to the cerebral
+
+20
+
+cortex in DD.10,19 We therefore expected that the reaction times on RANln would be associated
+
+21
+
+with M-LGN alterations in DD. To test this hypothesis, we correlated M-LGN alterations,
+
+22
+
+quantified as a difference score between the functional BOLD responses of the left and right
+
+23
+
+M-LGN (LR M-LGN BOLD), with the reaction times on RANln using one-tailed Pearson’s
+
+25
+
+A
+
+M
+
+D
+
+TE
+
+EP
+
+correlation. To our surprise, there was no correlation between M-LGN difference scores and
+RANln performance across the whole DD group (R = .211, p = .155) (Fig. 5A). We realized
+that previous studies on the association between RANln and thalamo-cortical alterations in DD
+
+A
+
+26
+
+CC
+
+24
+
+N
+
+13
+
+27
+
+relied predominantly on male samples, limiting their predictive power for similar associations
+
+28
+
+in female DD. We therefore tested the correlation also within male and female DD participants
+
+29
+
+separately (Bonferroni-corrected for three statistical tests). The analysis revealed, in male DD
+
+30
+
+participants only, a significant correlation between M-LGN difference scores and RANln
+
+31
+
+performance (R = .612, p = .013, at Bonferroni-adjusted significance level  = .0167) (Fig.
+
+13
+
+Downloaded from https://academic.oup.com/brain/advance-article/doi/10.1093/brain/awae235/7729174 by Max Planck Institute for Human Cognitive and Brain Sciences user on 19 August 2024
+
+1
+
+
+5B). In contrast, the correlation within female DD participants (R = .36, p = .277) was non-
+
+2
+
+significant (Fig. 5C; Supplementary Material: Methods).
+
+3
+
+Discussion
+
+5
+
+Recent developments in high-field MRI have enabled the study of small brain structures such
+
+6
+
+as the subdivisions of human thalamic nuclei in-vivo. We here used this technical advance to
+
+7
+
+image the human LGN and its M and P subdivisions in a large sample of adults with DD and
+
+8
+
+matched control participants. Consistent with human post-mortem reports dating back to the
+
+9
+
+1990s,4,5 we found that individuals with DD show functional and structural response alterations
+
+10
+
+specifically in the M-LGN. Our findings solve the long-standing question of whether M-LGN
+
+11
+
+alterations are also present in DD in-vivo and give first indications about their potential sex-
+
+12
+
+specific behavioral relevance.
+
+N
+
+U
+
+SC
+RI
+PT
+
+4
+
+A
+
+13
+
+Our finding of different lateralization of the M-LGN in DD compared to controls is compatible
+
+15
+
+with previous findings of left-lateralized sensory thalamic alterations in human DD. 5,9,19 In the
+
+16
+
+auditory pathway, histological changes occurred specifically in the left MGB in post-mortem
+
+17
+
+brains of dyslexics.5 In-vivo MRI studies on DD showed functional response changes and
+
+18
+
+altered connectivity of the MGB, which were restricted to the left hemisphere. 9,19 Previous
+
+19
+
+findings on potential laterality of thalamic alterations in the visual processing pathway are less
+
+20
+
+conclusive4,10 : histopathological changes were found in the M but not P layers of the LGN;
+
+21
+
+however, it is unclear which hemisphere(s) were affected. 4 In addition, there is reduced
+
+22
+
+structural connectivity between the left LGN and visual motion area V5/MT in DD, while
+
+23
+
+connectivity results in the right hemisphere remained unclear. 10 Recent behavioral findings
+
+D
+
+TE
+
+EP
+
+point towards an altered lateralization in DD also in visual processing: typically reading
+individuals have a right hemifield advantage in detecting moving low-spatial frequency events,
+
+A
+
+25
+
+CC
+
+24
+
+M
+
+14
+
+26
+
+but this is not the case in DD.31 This is in line with aberrant left-hemispheric LGN-V5/MT
+
+27
+
+connectivity,10 and left-lateralized alterations in DD in the auditory sensory thalamus in-vivo
+
+28
+
+and post-mortem.5,9,19 The results of the present study do not permit to adjudicate whether the
+
+29
+
+divergent lateralization of the M-LGN is due to response differences within the left or right M-
+
+30
+
+LGN. Within a predictive coding framework of brain processing, higher left-hemispheric LGN
+
+31
+
+responses in DD could indicate larger levels of prediction error attributable to deficient left-
+
+32
+
+lateralized cortico-thalamic
+
+feedback connections, resulting in poorer rapid naming
+14
+
+Downloaded from https://academic.oup.com/brain/advance-article/doi/10.1093/brain/awae235/7729174 by Max Planck Institute for Human Cognitive and Brain Sciences user on 19 August 2024
+
+1
+
+
+performance.10 This speculation is, however, at odds with suggestions based on findings in the
+
+2
+
+auditory thalamus in DD, where lower responses were found for speech tasks compared to
+
+3
+
+other tasks.19 The exact nature of altered responses in DD in the sensory thalami therefore
+
+4
+
+remain elusive.
+
+5
+Prior research in rat models of DD has shown that inducing microgyria in the developing
+
+7
+
+neocortex leads to behavioral deficits and cellular changes in the sensory thalamus, akin to
+
+8
+
+those observed in human DD post-mortem.4,5,7 Notably, these effects specifically manifest in
+
+9
+
+male animals, while females are spared despite a similar cerebral cortex pathology. 32 Our
+
+10
+
+results in human adults partly parallel these findings, demonstrating a significant correlation
+
+11
+
+between M-LGN alterations and behavioral deficits on RANln only in male individuals with
+
+12
+
+DD. Impaired RANln performance has been repeatedly associated with left-hemispheric
+
+13
+
+sensory thalamic alterations in male DD in previous human studies. 10,19 The correlation
+
+14
+
+between RANln and sensory thalamus alterations may thus be a hallmark of DD that is
+
+15
+
+predominant in male individuals. However, we also note that our correlation analysis in male
+
+16
+
+DD was based on a relatively modest subsample (n = 13) and needs replication in future studies.
+
+17
+
+Finally, the absence of a significant interaction effect involving the factor sex in our analysis
+
+18
+
+leaves the question of sex-dependency open. One possibility is that, unlike the observations in
+
+19
+
+rat models, thalamic alterations in human DD may not be sex-dependent. Alternatively, the
+
+20
+
+modest subsample sizes of males and females in this study may have limited our ability to
+
+21
+
+detect potential sex-specific differences in M-LGN alterations (cf. M-LGN response between
+
+22
+
+male and female DD in Fig. 5B,C).
+
+EP
+
+TE
+
+D
+
+M
+
+A
+
+N
+
+U
+
+SC
+RI
+PT
+
+6
+
+24
+25
+
+Cross-sectional human case-control designs, as used in the present study, are confronted with
+the difficulty of discerning cause from secondary effects of the reading difficulties. This can be
+achieved, for example, through training or longitudinal studies, as has already been done for
+
+A
+
+26
+
+CC
+
+23
+
+27
+
+investigating the contribution of dorsal stream dysfunction to the development of DD. 33–36 We
+
+28
+
+cannot derive from our results how M-LGN alterations contribute to core DD symptoms. We
+
+29
+
+have previously proposed two potential explanations. 10 First, proficient reading and RANln
+
+30
+
+performance require rapid, directed attentional shifts towards spatially successive letters and
+
+31
+
+numbers. This visual-spatial skill is associated with a right-lateralized fronto-parietal attention
+
+32
+
+network, including the ventral portion of the superior longitudinal fasciculus (SLF-III) .37,38
+
+15
+
+Downloaded from https://academic.oup.com/brain/advance-article/doi/10.1093/brain/awae235/7729174 by Max Planck Institute for Human Cognitive and Brain Sciences user on 19 August 2024
+
+1
+
+
+2
+
+structure to the fronto-parietal attention network.39 Left-lateralized input from the M-LGN and
+
+3
+
+a reduced right lateralization of M-LGN myelination, as observed in the current study, may
+
+4
+
+perturb the dynamics of this right-lateralized attention network. This interference could explain
+
+5
+
+diminished RANln performance and previous observations of lateralized behavioral deficits in
+
+6
+
+children and adults with DD.40–42 Our second suggestion was that deficient RANln
+
+7
+
+performance might be a result of deficient top-down modulation of the LGN to fast-varying
+
+8
+
+predictable speech stimuli, i.e., visual articulatory movements. 10 M-LGN neurons are known
+
+9
+
+to process high temporal frequency visual information. 6 Interestingly, DD is associated with a
+
+10
+
+reduced structural connectivity between the LGN and area V5/MT in the left hemisphere. 10 An
+
+11
+
+imbalanced top-down modulation of M-LGN neurons could therefore contribute to a deficit in
+
+12
+
+processing fast visual speech features in DD, which might be important for acquiring
+
+13
+
+phonological skills during ontogeny.
+
+U
+
+SC
+RI
+PT
+
+Neurons of the M-LGN relay visual information to area V5/MT, which serves as a main input
+
+N
+
+14
+
+In summary, we present results of a comprehensive 7 Tesla MRI study in a sample of n = 28
+
+16
+
+controls and n = 26 individuals with DD, using an extensive acquisition protocol at high spatial
+
+17
+
+resolution to investigate the two main subdivisions of the human LGN in DD in-vivo. Our
+
+18
+
+results show that M-LGN alterations are a key feature of DD. The findings confirm a long-
+
+19
+
+standing hypothesis4 that DD is associated with alterations in the magnocellular system at the
+
+20
+
+level of the LGN, but not the parvocellular system. In addition, the results suggest that M-LGN
+
+21
+
+alterations are associated with reading-related behavioral scores in male DD. This emphasizes
+
+22
+
+the need for a more in-depth understanding of sex-specific behavioral effects of sensory
+
+23
+
+thalamic alterations in DD. This may be particularly helpful for the development of prospective
+
+24
+
+treatment strategies, as targeting the thalamo-cortical system for example with complementary
+
+M
+
+D
+
+TE
+
+EP
+
+neurostimulation might be particularly effective in male individuals with DD. 43,44
+
+A
+
+26
+
+CC
+
+25
+
+A
+
+15
+
+27
+
+Data availability
+
+28
+
+The scripts used to generate the LGN hemifield and M/P-stimuli are publicly available.18 The
+
+29
+
+motion experiment and fMRI analysis scripts have been made publicly available on the Open
+
+30
+
+Science Framework (OSF; https://osf.io/bge75/).22 Raw MRI data cannot be made available as
+
+31
+
+sharing these personal data is not covered by the ethics clearance. Single-subject data in native
+
+16
+
+Downloaded from https://academic.oup.com/brain/advance-article/doi/10.1093/brain/awae235/7729174 by Max Planck Institute for Human Cognitive and Brain Sciences user on 19 August 2024
+
+1
+
+
+and MNI space (i.e., individual LGN, M- and P-LGN as well as Beta M-P maps) are available
+
+2
+
+on OSF.
+
+3
+
+Acknowledgements
+
+5
+
+We are grateful to our participants for taking part in the study. We also thank the German federal
+
+6
+
+association for dyslexia and dyscalculia (Bundesverband Legasthenie Dyskalkulie e.V.,
+
+7
+
+https://www.bvl-legasthenie.de/) for their continued support in advertising our study. We
+
+8
+
+further thank Martina Dietrich, Laura Hüser, Kim Lawatsch, Lisa Ziggel, Hanna Oversiek,
+
+9
+
+Liane Dörr, and Tabea Fleps for their extensive help in scheduling and conducting the
+
+10
+
+behavioral tests.
+
+SC
+RI
+PT
+
+4
+
+U
+
+11
+
+Funding
+
+13
+
+This work was supported by the ERC-consolidator-grant SENSOCOM 647051 and the ERA-
+
+14
+
+Net Neuron-grant ReDyslexia 01EW2213, funded by the German Federal Ministry of
+
+15
+
+Education and Research.
+
+D
+
+16
+
+M
+
+A
+
+N
+
+12
+
+Competing interests
+
+18
+
+The authors declare no competing interests.
+
+EP
+
+TE
+
+17
+
+19
+
+21
+
+Supplementary material is available at Brain online.
+
+A
+
+22
+
+Supplementary material
+
+CC
+
+20
+
+17
+
+Downloaded from https://academic.oup.com/brain/advance-article/doi/10.1093/brain/awae235/7729174 by Max Planck Institute for Human Cognitive and Brain Sciences user on 19 August 2024
+
+1
+
+
+References
+
+2
+
+1.
+
+3
+
+of dyslexia. Oxf Rev Educ. 2020;46(4):454-471. doi:10.1080/03054985.2020.1793545
+2.
+
+5
+6
+
+SE.
+
+Dyslexia.
+
+N
+
+Engl
+
+J
+
+doi:10.1056/NEJM199801293380507
+3.
+
+7
+8
+
+Shaywitz
+
+Peterson
+
+RL,
+
+Pennington
+
+BF.
+
+Med.
+
+1998;338(5):307-312.
+
+SC
+RI
+PT
+
+4
+
+Shaywitz BA, Shaywitz SE. The American experience: towards a 21st century definition
+
+Developmental
+
+dyslexia.
+
+The
+
+Lancet.
+
+2012;379(9830):1997-2007. doi:10.1016/S0140-6736(12)60198-6
+4.
+
+Livingstone MS, Rosen GD, Drislane FW, Galaburda AM. Physiological and anatomical
+
+9
+
+evidence for a magnocellular defect in developmental dyslexia. Proceedings of the
+
+10
+
+National Academy of Sciences. 1991;88(18):7943-7947. doi:10.1073/pnas.88.18.7943
+5.
+
+Galaburda AM, Menard MT, Rosen GD. Evidence for aberrant auditory anatomy in
+
+U
+
+11
+
+developmental dyslexia. Proceedings of the National Academy of Sciences.
+
+13
+
+1994;91(17):8010-8013. doi:10.1073/pnas.91.17.8010
+
+15
+
+Nassi JJ, Callaway EM. Parallel processing strategies of the primate visual system. Nat
+Rev Neurosci. 2009;10(5):360-372. doi:10.1038/nrn2619
+
+7.
+
+Rosen GD, Mesples B, Hendriks M, Galaburda AM. Histometric changes and cell death
+
+D
+
+16
+
+A
+
+6.
+
+M
+
+14
+
+N
+
+12
+
+in the thalamus after neonatal neocortical injury in the rat. Neuroscience.
+
+18
+
+2006;141(2):875-888. doi:10.1016/j.neuroscience.2006.04.035
+
+19
+
+8.
+
+TE
+
+17
+
+Herman AE, Galaburda AM, Fitch RH, Carter AR, Rosen GD. Cerebral microgyria,
+thalamic cell size and auditory temporal processing in male and female rats. Cerebral
+
+21
+
+Cortex. 1997;7(5):453-464. doi:10.1093/cercor/7.5.453
+
+23
+
+9.
+
+25
+26
+
+Tschentscher N, Ruisinger A, Blank H, Díaz B, von Kriegstein K. Reduced structural
+connectivity between left auditory thalamus and the motion-sensitive planum temporale
+
+A
+
+24
+
+CC
+
+22
+
+EP
+
+20
+
+10.
+
+in
+
+developmental
+
+dyslexia.
+
+Journal of Neuroscience.
+
+2019;39(9):1720-1732.
+
+doi:10.1523/JNEUROSCI.1435-18.2018
+Müller-Axt C, Anwander A, von Kriegstein K. Altered structural connectivity of the left
+
+27
+
+visual thalamus in developmental dyslexia. Current Biology. 2017;27(23):3692-
+
+28
+
+3698.e4. doi:10.1016/j.cub.2017.10.034
+
+18
+
+Downloaded from https://academic.oup.com/brain/advance-article/doi/10.1093/brain/awae235/7729174 by Max Planck Institute for Human Cognitive and Brain Sciences user on 19 August 2024
+
+1
+
+
+11.
+
+Andrews TJ, Halpern SD, Purves D. Correlated size variations in human visual cortex,
+
+2
+
+lateral geniculate nucleus, and optic tract. Journal of Neuroscience. 1997;17(8):2859-
+
+3
+
+2868. doi:10.1523/JNEUROSCI.17-08-02859.1997
+
+4
+
+12.
+
+Müller-Axt C, Eichner C, Rusch H, et al. Mapping the human lateral geniculate nucleus
+
+5
+
+and its cytoarchitectonic
+
+6
+
+2021;244:118559. doi:10.1016/j.neuroimage.2021.118559
+13.
+
+8
+9
+
+PubPeer
+
+Critique
+
+using quantitative
+
+MRI. Neuroimage.
+
+SC
+RI
+PT
+
+7
+
+subdivisions
+
+on
+
+Giraldo-Chica
+
+et
+
+al.
+
+(2015).
+
+https://pubpeer.com/publications/745ADDFD495BFFE47FA39BD6BE3024.
+14.
+
+Giraldo-Chica M, Hegarty JP, Schneider KA. Morphological differences in the lateral
+geniculate nucleus associated with dyslexia. Neuroimage Clin. 2015;7:830-836.
+
+11
+
+doi:10.1016/j.nicl.2015.03.011
+
+12
+
+15.
+
+U
+
+10
+
+Giraldo-Chica M, Schneider KA. Hemispheric asymmetries in the orientation and
+location of the lateral geniculate nucleus in dyslexia. Dyslexia. 2018;24(2):197-203.
+
+14
+
+doi:10.1002/dys.1580
+
+A
+
+16.
+
+Goodbourn PT, Bosten JM, Hogg RE, Bargary G, Lawrance-Owen AJ, Mollon JD. Do
+
+M
+
+15
+
+N
+
+13
+
+16
+
+different ‘magnocellular tasks’ probe the same neural substrate? Proceedings of the
+
+17
+
+Royal
+
+18
+
+doi:10.1098/rspb.2012.1430
+
+21
+
+4388(03)00035-7
+
+2012;279(1745):4263-4271.
+
+EP
+
+Curr
+
+Opin
+
+Neurobiol.
+
+2003;13(2):212-218.
+
+doi:10.1016/S0959-
+
+Denison RN, Vu AT, Yacoub E, Feinberg DA, Silver MA. Functional mapping of the
+magnocellular
+
+and parvocellular
+
+subdivisions
+
+of human
+
+LGN. Neuroimage.
+
+2014;102:358-369. doi:10.1016/j.neuroimage.2014.07.019
+
+19.
+
+A
+
+25
+
+18.
+
+CC
+
+24
+
+Sciences.
+
+Ramus F. Developmental dyslexia: specific phonological deficit or general sensorimotor
+dysfunction?
+
+23
+
+Biological
+
+D
+
+17.
+
+20
+
+22
+
+B:
+
+TE
+
+19
+
+Society
+
+Díaz B, Hintz F, Kiebel SJ, von Kriegstein K. Dysfunction of the auditory thalamus in
+
+26
+
+developmental dyslexia. Proceedings of the National Academy of Sciences.
+
+27
+
+2012;109(34):13841-13846. doi:10.1073/pnas.1119828109
+
+28
+
+20.
+
+Norton ES, Wolf M. Rapid automatized naming (RAN) and reading fluency:
+
+29
+
+implications for understanding and treatment of reading disabilities. Annu Rev Psychol.
+
+30
+
+2012;63(1):427-452. doi:10.1146/annurev-psych-120710-100431
+
+19
+
+Downloaded from https://academic.oup.com/brain/advance-article/doi/10.1093/brain/awae235/7729174 by Max Planck Institute for Human Cognitive and Brain Sciences user on 19 August 2024
+
+1
+
+
+21.
+
+2
+3
+
+Hutton C, Josephs O, Stadler J, et al. The impact of physiological noise correction on
+fMRI at 7 T. Neuroimage. 2011;57(1):101-112. doi:10.1016/j.neuroimage.2011.04.018
+
+22.
+
+Müller-Axt C, Kauffmann L, Eichner C, von Kriegstein K. Data repository: Dysfunction
+
+4
+
+of the magnocellular subdivision of the visual thalamus in developmental dyslexia.
+
+5
+
+Published online 2022. doi:10.17605/OSF.IO/BGE75
+23.
+
+O’Craven KM, Rosen BR, Kwong KK, Treisman A, Savoy RL. Voluntary attention
+
+7
+
+modulates fMRI activity
+
+8
+
+doi:10.1016/S0896-6273(00)80300-1
+
+9
+
+24.
+
+SC
+RI
+PT
+
+6
+
+in human MT–MST. Neuron. 1997;18(4):591-598.
+
+Avants BB, Epstein CL, Grossman M, Gee JC. Symmetric diffeomorphic image
+
+10
+
+registration with cross-correlation: evaluating automated labeling of elderly and
+
+11
+
+neurodegenerative
+
+12
+
+doi:10.1016/j.media.2007.06.004
+
+MRI:
+
+15
+
+doi:10.3389/fnins.2014.00001
+
+17
+
+a
+
+tutorial
+
+for
+
+junior
+
+U
+
+neuro-imagers.
+
+Front
+
+Neurosci.
+
+2014;8:1.
+
+Royston P. Approximating the Shapiro-Wilk W-test for non-normality. Stat Comput.
+
+27.
+
+D
+
+1992;2(3):117-119. doi:10.1007/bf01891203
+Skottun BC. On the use of spatial frequency to isolate contributions from the
+
+TE
+
+18
+
+2008;12(1):26-41.
+
+M
+
+26.
+
+Anal.
+
+Pernet CR. Misconceptions in the use of the General Linear Model applied to functional
+
+14
+
+16
+
+Image
+
+N
+
+25.
+
+Med
+
+A
+
+13
+
+brain.
+
+magnocellular and parvocellular systems and the dorsal and ventral cortical streams.
+
+20
+
+Neurosci Biobehav Rev. 2015;56:266-275. doi:10.1016/j.neubiorev.2015.07.002
+
+21
+
+28.
+
+EP
+
+19
+
+Levitt JB, Schumer RA, Sherman SM, Spear PD, Movshon JA. Visual response
+properties of neurons in the LGN of normally reared and visually deprived macaque
+
+23
+
+monkeys. J Neurophysiol. 2001;85(5):2111-2129. doi:10.1152/jn.2001.85.5.2111
+
+24
+
+29.
+
+Movshon JA, Kiorpes L, Hawken MJ, Cavanaugh JR. Functional maturation of the
+
+A
+
+25
+
+CC
+
+22
+
+macaque’s lateral geniculate nucleus. Journal of Neuroscience. 2005;25(10):2712-2722.
+
+27
+
+Denckla MB, Rudel RG. Rapid “automatized” naming (R.A.N.): Dyslexia differentiated
+
+26
+
+30.
+
+doi:10.1523/JNEUROSCI.2356-04.2005
+
+28
+
+from
+
+29
+
+doi:10.1016/0028-3932(76)90075-0
+
+other
+
+learning
+
+disabilities.
+
+Neuropsychologia.
+
+1976;14(4):471-479.
+
+20
+
+Downloaded from https://academic.oup.com/brain/advance-article/doi/10.1093/brain/awae235/7729174 by Max Planck Institute for Human Cognitive and Brain Sciences user on 19 August 2024
+
+1
+
+
+31.
+
+Rima S, Kerbyson G, Jones E, Schmid MC. Advantage of detecting visual events in the
+
+2
+
+right hemifield
+
+3
+
+doi:10.1016/j.visres.2020.03.001
+
+4
+
+32.
+
+is affected
+
+by reading
+
+skill.
+
+Vision
+
+Res.
+
+2020;169:41-48.
+
+Rosen GD, Herman AE, Galaburda AM. Sex differences in the effects of early
+neocortical injury on neuronal size distribution of the medial geniculate nucleus in the
+
+6
+
+rat are mediated by perinatal gonadal steroids. Cerebral Cortex. 1999;9(1):27-34.
+
+7
+
+doi:10.1093/cercor/9.1.27
+
+8
+
+33.
+
+SC
+RI
+PT
+
+5
+
+Gori S, Seitz AR, Ronconi L, Franceschini S, Facoetti A. Multiple causal links between
+
+9
+
+magnocellular–dorsal pathway deficit and developmental dyslexia. Cerebral Cortex.
+
+10
+
+2016;26(11):4356-4369. doi:10.1093/cercor/bhv206
+
+Vidyasagar TR, Pammer K. Dyslexia: a deficit in visuo-spatial attention, not in
+
+12
+
+phonological
+
+13
+
+doi:10.1016/j.tics.2009.12.003
+35.
+
+Trends
+
+Cogn
+
+Sci.
+
+2010;14(2):57-63.
+
+Boets B, Vandermosten M, Cornelissen P, Wouters J, Ghesquière P. Coherent motion
+
+A
+
+14
+
+processing.
+
+U
+
+34.
+
+N
+
+11
+
+sensitivity and reading development in the transition from prereading to reading stage.
+
+16
+
+Child Dev. 2011;82(3):854-869. doi:10.1111/j.1467-8624.2010.01527.x
+36.
+
+Kevan A, Pammer K. Predicting early reading skills from pre-reading measures of dorsal
+
+D
+
+17
+
+M
+
+15
+
+18
+
+stream
+
+19
+
+doi:10.1016/j.neuropsychologia.2009.07.016
+37.
+
+Neuropsychologia.
+
+2009;47(14):3174-3181.
+
+TE
+
+20
+
+functioning.
+
+Corbetta M, Akbudak E, Conturo TE, et al. A common network of functional areas for
+attention and eye movements. Neuron. 1998;21(4):761-773. doi:10.1016/S0896-
+
+22
+
+6273(00)80593-0
+
+24
+
+de Schotten MT, Dell’Acqua F, Forkel SJ, et al. A lateralized brain network for
+visuospatial attention. Nat Neurosci. 2011;14(10):1245-1246. doi:10.1038/nn.2905
+
+A
+
+25
+
+38.
+
+CC
+
+23
+
+EP
+
+21
+
+39.
+
+Born RT, Bradley DC. Structure and function of visual area MT. Annu Rev Neurosci.
+
+27
+
+Facoetti A, Turatto M. Asymmetrical visual fields distribution of attention in dyslexic
+
+26
+
+40.
+
+2005;28:157-189. doi:10.1146/annurev.neuro.26.041002.131052
+
+28
+
+children:
+
+29
+
+doi:10.1016/S0304-3940(00)01354-9
+
+a
+
+neuropsychological
+
+study.
+
+Neurosci
+
+Lett.
+
+2000;290(3):216-218.
+
+21
+
+Downloaded from https://academic.oup.com/brain/advance-article/doi/10.1093/brain/awae235/7729174 by Max Planck Institute for Human Cognitive and Brain Sciences user on 19 August 2024
+
+1
+
+
+41.
+
+Facoetti A, Turatto M, Lorusso ML, Mascetti GG. Orienting of visual attention in
+
+2
+
+dyslexia: evidence for asymmetric hemispheric control of attention. Exp Brain Res.
+
+3
+
+2001;138(1):46-53. doi:10.1007/s002210100700
+42.
+
+5
+6
+
+Hari R, Renvall H, Tanskanen T. Left minineglect in dyslexic adults. Brain.
+2001;124(7):1373-1380. doi:10.1093/brain/124.7.1373
+
+43.
+
+Heth I, Lavidor M. Improved reading measures in adults with dyslexia following
+
+SC
+RI
+PT
+
+4
+
+7
+
+transcranial direct current stimulation treatment. Neuropsychologia. 2015;70:107-113.
+
+8
+
+doi:10.1016/j.neuropsychologia.2015.02.022
+
+9
+
+44.
+
+Battisti A, Lazzaro G, Costanzo F, et al. Effects of a short and intensive transcranial
+
+10
+
+direct current stimulation treatment in children and adolescents with developmental
+
+11
+
+dyslexia:
+
+12
+
+doi:10.3389/fpsyg.2022.986242
+
+crossover
+
+clinical
+
+trial.
+
+Front
+
+Psychol.
+
+2022;13:986242.
+
+U
+
+a
+
+N
+
+13
+
+A
+
+CC
+
+EP
+
+TE
+
+D
+
+M
+
+A
+
+14
+
+22
+
+Downloaded from https://academic.oup.com/brain/advance-article/doi/10.1093/brain/awae235/7729174 by Max Planck Institute for Human Cognitive and Brain Sciences user on 19 August 2024
+
+1
+
+
+2
+
+Figure 1 Experimental design of the three fMRI experiments. (A) In the LGN localizer
+
+3
+
+experiment, participants saw a flickering checkerboard stimulus in blocks alternating between
+
+4
+
+the left and right visual hemifields. Participants viewed the stimuli while maintaining central
+
+5
+
+fixation. (B) During the M/P mapping experiment, participants viewed two types of
+
+6
+
+experimental stimulus blocks designed to evoke different BOLD responses from the M- and P-
+
+7
+
+LGN. M-blocks consisted of a full-field achromatic grating stimulus with a luminance contrast
+
+8
+
+of 100%, presented at a low spatial (fs) and a high temporal frequency (ft). P-blocks consisted
+
+9
+
+of a full-field colored grating stimulus with low luminance contrast, presented at a higher
+
+10
+
+spatial and a lower temporal frequency. M- and P-blocks were interleaved with rest blocks
+
+11
+
+containing a gray screen. During the experimental stimulus blocks, participants detected
+
+12
+
+contrast decrements (luminance in M-blocks, color in P-blocks) and reported the number of
+
+13
+
+targets by button press after each block (R). (C) In the motion experiment, participants were
+
+14
+
+presented with blocks of either moving or static point clouds. Motion blocks contained either
+
+15
+
+inward or outward motion. Participants viewed the stimuli while maintaining central fixation.
+
+16
+
+See Materials & Methods for more details on the experimental designs. Abbreviations: LGN,
+
+17
+
+lateral geniculate nucleus; d, duration; M, magnocellular; P, parvocellular; cpd, cycles per
+
+18
+
+degree.
+
+D
+
+M
+
+A
+
+N
+
+U
+
+SC
+RI
+PT
+
+Figure legends
+
+TE
+
+19
+
+Figure 2 Definition of M/P-LGN in control and DD participants. (A) Left: Anatomical
+
+21
+
+overview of the location of the LGN, indicated by the black rectangle, within the standard brain
+
+22
+
+of the Montreal Neurological Institute (MNI). Right: We used a publicly available high-
+
+23
+
+resolution probabilistic LGN atlas (top panel) to confine functional responses from the LGN
+
+25
+
+localizer to the bilateral nuclei in each participant. 12 The atlas was set to a threshold of 35%
+overlap across subjects, as indicated by the black outlines surrounding the left and right LGN
+in the bottom panel. M/P-LGN mapping was performed within these defined regions by
+
+A
+
+26
+
+CC
+
+24
+
+EP
+
+20
+
+27
+
+applying a volume threshold of 20/80% to the individual Beta M-P maps obtained from the
+
+28
+
+M/P mapping experiment.18 An example Beta M-P map is depicted in the bottom panel. On this
+
+29
+
+map, LGN voxels with larger values (red color) show a higher response preference for the M-
+
+30
+
+stimulus, while voxels with lower values (blue color) show a higher response preference for
+
+31
+
+the P-stimulus. (B) Examples of derived M-LGN (in red color) and P-LGN (in blue color)
+
+32
+
+subdivision maps based on the described volume threshold procedure in representative control
+
+23
+
+Downloaded from https://academic.oup.com/brain/advance-article/doi/10.1093/brain/awae235/7729174 by Max Planck Institute for Human Cognitive and Brain Sciences user on 19 August 2024
+
+1
+
+
+and DD participants. Abbreviations: a.u., arbitrary units; LGN, lateral geniculate nucleus; M,
+
+2
+
+magnocellular; P, parvocellular; L, left; R, right.
+
+3
+Figure 3 Bilateral M/P-LGN BOLD responses in control (n = 24) and DD (n = 25)
+
+5
+
+participants. The figure displays boxplots overlaid with individual data points alongside color-
+
+6
+
+coded density plots. M-LGN responses are coded in red. P-LGN responses are coded in blue.
+
+7
+
+Left and right-hemispheric responses are coded in saturated and light colors, respectively.
+
+8
+
+Responses are averaged across stimulus-type to reveal the significant interaction between
+
+9
+
+group  subdivision  hemisphere. Abbreviations: n.s., not significant; BOLD, blood-oxygen-
+
+10
+
+level-dependent; LGN, lateral geniculate nucleus; M, magnocellular; P, parvocellular.
+
+SC
+RI
+PT
+
+4
+
+11
+
+Figure 4 Myelination of the M-LGN (n = 23 controls, n = 23 DD) and P-LGN (n = 23
+
+13
+
+controls, n = 24 DD). Laterality in myelination was assessed using difference scores between
+
+14
+
+the R1 values of the M/P-LGN subdivisions in the left and right hemispheres (i.e., LR R1 ). The
+
+15
+
+sign of delta indicates the direction of lateralization (i.e., negative  = right-lateralized, positive
+
+16
+
+ = left-lateralized). The dotted line indicates equal contributions of R 1 from the left and right
+
+17
+
+M/P-LGN to the difference score (i.e., no lateralization in myelination). The figure displays
+
+18
+
+boxplots overlaid with individual data points. Data of control participants are represented by
+
+19
+
+light gray circles and data of DD participants by light gray triangles. Independent non-
+
+20
+
+parametric Mann-Whitney U tests revealed significant group differences in the lateralization
+
+21
+
+of R1 for the M-LGN (U = 155.0, p = .016, two-tailed at Bonferroni-adjusted significance level
+
+22
+
+ = .025) but not P-LGN (U = 218.0, p = .217). Abbreviations: n.s., not significant; LGN,
+
+23
+
+lateral geniculate nucleus; M, magnocellular; P, parvocellular.
+
+25
+
+N
+
+A
+
+M
+
+D
+
+TE
+
+EP
+
+Figure 5 M-LGN response in DD participants (N = 25), and its behavioral relevance for
+rapid automatized naming for letters and numbers (RANln). (A) M-LGN response,
+
+A
+
+26
+
+CC
+
+24
+
+U
+
+12
+
+27
+
+quantified as a difference score between the BOLD responses of the left and right M-LGN (i.e.,
+
+28
+
+LR M-LGN BOLD) in male (n = 13, dark triangles) and female participants (n = 12, bright
+
+29
+
+triangles) with DD. The dotted line indicates equal functional contributions of the left and right
+
+30
+
+M-LGN to the difference score (i.e., no functional lateralization). There was no correlation
+
+31
+
+between M-LGN difference scores [%] and the reaction time on RANln [s] across the whole
+
+32
+
+DD group. (B,C) M-LGN difference scores correlated positively with the reaction time on
+
+24
+
+Downloaded from https://academic.oup.com/brain/advance-article/doi/10.1093/brain/awae235/7729174 by Max Planck Institute for Human Cognitive and Brain Sciences user on 19 August 2024
+
+1
+
+
+RANln in (B) male DD (n = 13), but not in (C) female DD participants (n = 11). The plot in
+
+2
+
+(B) shows the least squares correlation fit, including the 95% confidence interval (light gray
+
+3
+
+shaded area) for the correlation coefficient R, in male participants with DD. Abbreviations:
+
+4
+
+BOLD, blood-oxygen-level-dependent; LGN, lateral geniculate nucleus; M, magnocellular.
+
+5
+
+A
+
+CC
+
+EP
+
+TE
+
+D
+
+M
+
+A
+
+N
+
+U
+
+SC
+RI
+PT
+
+6
+
+25
+
+Downloaded from https://academic.oup.com/brain/advance-article/doi/10.1093/brain/awae235/7729174 by Max Planck Institute for Human Cognitive and Brain Sciences user on 19 August 2024
+
+1
+
+
+2
+3
+
+4
+
+CC
+
+A
+
+Figure 1
+159x174 mm ( x DPI)
+
+26
+
+D
+
+TE
+
+EP
+
+SC
+RI
+PT
+U
+N
+
+A
+
+M
+
+Downloaded from https://academic.oup.com/brain/advance-article/doi/10.1093/brain/awae235/7729174 by Max Planck Institute for Human Cognitive and Brain Sciences user on 19 August 2024
+
+1
+
+
+D
+
+TE
+
+EP
+
+4
+
+CC
+
+A
+
+Figure 2
+159x162 mm ( x DPI)
+
+2
+3
+
+27
+
+SC
+RI
+PT
+U
+N
+
+A
+
+M
+
+Downloaded from https://academic.oup.com/brain/advance-article/doi/10.1093/brain/awae235/7729174 by Max Planck Institute for Human Cognitive and Brain Sciences user on 19 August 2024
+
+1
+
+
+CC
+
+A
+
+D
+
+TE
+
+EP
+
+Figure 3
+159x143 mm ( x DPI)
+
+2
+3
+
+4
+
+28
+
+SC
+RI
+PT
+U
+N
+
+A
+
+M
+
+Downloaded from https://academic.oup.com/brain/advance-article/doi/10.1093/brain/awae235/7729174 by Max Planck Institute for Human Cognitive and Brain Sciences user on 19 August 2024
+
+1
+
+
+CC
+
+A
+
+D
+
+TE
+
+EP
+
+SC
+RI
+PT
+U
+N
+
+A
+
+M
+
+Figure 4
+159x106 mm ( x DPI)
+
+2
+3
+
+4
+
+29
+
+Downloaded from https://academic.oup.com/brain/advance-article/doi/10.1093/brain/awae235/7729174 by Max Planck Institute for Human Cognitive and Brain Sciences user on 19 August 2024
+
+1
+
+
+CC
+
+A
+
+D
+
+TE
+
+EP
+
+SC
+RI
+PT
+U
+N
+
+A
+
+M
+
+Figure 5
+159x40 mm ( x DPI)
+
+2
+3
+
+30
+
+Downloaded from https://academic.oup.com/brain/advance-article/doi/10.1093/brain/awae235/7729174 by Max Planck Institute for Human Cognitive and Brain Sciences user on 19 August 2024
+
+1

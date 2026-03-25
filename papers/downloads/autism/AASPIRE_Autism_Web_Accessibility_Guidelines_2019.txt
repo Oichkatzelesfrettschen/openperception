@@ -1,0 +1,1131 @@
+Final publication is copyrighted by and available from Mary Ann Liebert,
+Inc., publishers http://dx.doi.org/10.1089/aut.2018.0020
+To cite this article:
+Dora M. Raymaker, Steven K. Kapp, Katherine E. McDonald, Michael
+Weiner, Elesia Ashkenazy, and Christina Nicolaidis.Autism in Adulthood.
+http://doi.org/10.1089/aut.2018.0020
+Title: Development of the AASPIRE Web Accessibility Guidelines for Autistic Web Users
+Author Names and Affiliations: Dora M. Raymaker, PhD1,2 (draymake@pdx.edu, 503.725.9629),
+Steven K. Kapp, PhD2,3 (steven.kapp@gmail.com, +44 7491.934037), Katherine E. McDonald,
+PhD2,4 (kemcdona@syr.edu, 315.443.5313), Michael Weiner, MD, MPH2,5 (mw@cogit.net, 317274-9026), Elesia Ashkenazy, BA2 (elesia.ashkenaz@gmail.com, 718.208.3435), Christina
+Nicolaidis, MD, MPH1,2,6 (nicol22@pdx.edu, 503.725.9603)
+1
+
+Regional Research Institute, School of Social Work, Portland State University, Portland, Oregon
+
+2
+
+Academic Autism Spectrum Partnership in Research and Education, Portland State University,
+Portland, Oregon
+3
+
+College of Social Sciences and International Studies, Sociology, Philosophy, and Anthropology,
+University of Exeter, United Kingdom
+4
+
+Public Health, Food Studies, and Nutrition, David B. Balk College of Sport and Human
+Dynamics, Syracuse University, Syracuse, New York
+5
+
+Regenstrief Institute, Inc., Indiana University Center for Health Services and Outcomes
+Research, Center for Health Information and Communication, U.S. Department of Veterans
+Affairs, Veterans Health Administration, Health Services Research and Development Service CIN
+13-416, Richard L. Roudebush VA Medical Center, Indianapolis, Indiana.
+6
+
+Department of Medicine, Oregon Health and Science University, Portland, Oregon
+
+Running title: AASPIRE Web Accessibility Guidelines
+Corresponding Author: Dora M. Raymaker, 1600 SW 4th Avenue, Suite 900, Portland OR 97201,
+draymake@pdx.edu, 503.725.9629
+Keywords: autism, web accessibility, web accessibility guidelines, community based
+participatory research
+
+
+Authorship Confirmation Statement
+All authors contributed to all stages of the research described in this article as full AASPIRE
+partners. Dora M. Raymaker, Steven K. Kapp, and Elesia Ashkenazy contributed as autistic
+community partners, with Raymaker and Kapp also contributing academic expertise in
+accessibility and autism and the internet, and Ashkenazy contributing written content for the
+website. Further, Raymaker was the lead engineer and technical writer for the website.
+Christina Nicolaidis was the Principal Investigator for the study, and served as a senior mentor
+throughout. She is both a family member to an autistic person and a health care provider.
+Katherine E. McDonald and Michael Weiner (also a healthcare provider) served as academic
+partners, providing expertise in disability accessibility and web-based bioinformatics. On this
+paper, Raymaker took the lead role in organizing the data, creating the first full draft, and
+revising subsequent drafts. All authors reviewed the initial draft and revisions, contributed
+additional ideas and content, and approved the final version prior to submission. Earlier
+versions of this work were included as part of Dr. Raymaker’s PhD dissertation. This manuscript
+has been submitted solely to this journal and is not published elsewhere.
+Author Disclosure Statements
+Dora M. Raymaker, PhD - No competing financial interests exist.
+Steven Kapp, PhD - No competing financial interests exist.
+Katherine E. McDonald, PhD - No competing financial interests exist.
+Michael Weiner, MD - No competing financial interests exist.
+Elesia Ashkenazy, BA - No competing financial interests exist.
+Christina Nicolaidis, MD, MPH - No competing financial interests exist.
+
+
+Abstract
+Websites figure predominantly in everyday life. However, many websites remain inaccessible to
+autistic people, and existing efforts to improve accessibility are in early stages, do not directly
+include autistic users in their development, or have not been empirically evaluated. The
+Academic Autism Spectrum Partnership in Research and Education (AASPIRE) used a
+community based participatory research approach to create a website to improve healthcare
+access for autistic adults. We used the creation of that website as a "living laboratory" to
+develop the AASPIRE Web Accessibility Guidelines for Autistic Users. Our guidelines are
+grounded in accessibility theory, had autistic end-user involvement at all stages, and was
+empirically evaluated through a usability study and evaluation surveys. We incorporated what
+we learned into the design of the website, and compiled the accessibility information into a set
+of guidelines. The guidelines offer recommendations for increasing the physical, intellectual,
+and social acceptability of websites for use by autistic adults. In the evaluation of the website
+by 170 autistic end users, nearly all indicated it was easy to use (97%), easy to understand
+(95%), important (97%), and useful (96%). Ninety-two percent would recommend it to a friend,
+and 95% would recommend it to a healthcare provider. There were no significant associations
+between usability or understandability and education level, receipt of help using the site,
+browser type (e.g., IE, Safari), or device type (e.g. PC, tablet). We recommend using the
+guidelines to improve website accessibility for autistic internet users.
+
+
+Background
+Internet Accessibility and Autism
+The internet, including the World Wide Web, is woven into the fabric of life in much of the
+world, and is instrumental in activities such as finding employment and housing, managing bank
+accounts, navigating maps, accessing health systems and health information, and staying
+informed about local and world events. Web accessibility for autistic users may be especially
+important, as a large number of them likely use the internet,1-3 and the Autistic community has
+developed largely through web-based interaction.4,5 The internet has been called "to autistic
+people what [American Sign Language] is to the deaf."6 Indeed, a recent online survey reported
+that the internet helped autistic people communicate more than it helped non-autistic people
+because of its textual basis, provisioning of time to think, unique opportunities for practicing
+social interaction (including control of which people with whom to interact, and control of
+communication media), facilitation of meeting similar people, and expression of one's true
+self.7 However, uneven attention has been paid in existing guidelines to the specific web
+accessibility needs of people on the autism spectrum, which may be different from the needs of
+people with other types of disabilities.
+Web accessibility refers, broadly, to making the web accessible to all, including people with a
+variety of disabilities, or functional limitations. Multiple policy guidelines, such as Section 508 of
+the US Rehabilitation Act 8 and the United Nations Web Accessibility Mandate,9 support
+individuals’ rights to accessible web-based information. The international body responsible for
+setting the technical standards on which the web operates—the World Wide Web
+Consortium—includes the Web Accessibility Initiative (WAI),10 which developed and maintains
+the Web Content Accessibility Guidelines (WCAG). The WCAG provides a set of technical
+standards to address concerns of interface detection, control, comprehension, and crossplatform sustainability, which are broadly implemented throughout today’s web. Most web
+accessibility features are cost-effective and simple to implement,11 particularly if implemented
+from the outset. However, major accessibility standards such as the WCAG were largely created
+by and for individuals with physical and sensory (i.e., vision and hearing) disabilities, not by
+individuals with other sensory processing, communication, or cognitive disabilities, such as
+many people on the autism spectrum. Aware of this, the WAI convened a Cognitive and
+Learning Disabilities Task Force,12 to provide guidance around cognitive accessibility; however
+current work remains in preliminary stages,13 and it is unclear if any of the individuals on the
+task force are autistic.
+Involving autistic people in developing web accessibility guidelines matters because of the great
+need for end-user engagement in both the creation of accessible websites,14-21 and in disabilityrelated research.22-25 Individuals who do not have a particular disability lack the first-hand
+experience that provides important insight into understanding effective access strategies for
+those who do, or even which functional limitations need to be accommodated.26,27 While
+laudable, the idea of “universal design” (accessibility features that work for everyone) is
+ultimately impractical due to the fact that access needs can conflict with each other. For
+
+
+example, some guidelines intended for people with intellectual disability17,19,20 recommend
+simplifying vocabulary, which—if implemented without retaining the precision afforded by
+more complex wording—can make language pragmatics more difficult for autistic users to
+understand.28,29 Likewise, high-contrast color schemes suitable for people with low vision may
+be painful or unreadable to autistic users with hypersensitive vision.
+Internet spaces made by and for autistic users may incorporate accessibility features naturally;
+however, there is little guidance for developers of websites, including those who may want to
+take advantage of some autistic people’s affinity for the internet, to develop resources for
+autistic adults. Clear guidelines, informed by autistic end users and developed through a
+systematic process, are needed.
+Our aim was to use a community-based participatory research (CBPR) approach to create a set
+of guidelines for developing accessible web sites targeting autistic web users. We created these
+guidelines from lessons learned during the development and evaluation a website focused on
+healthcare for autistic adults.
+AASPIRE and the AASPIRE Healthcare Toolkit Project Context
+The Academic Autism Spectrum Partnership in Research and Education (AASPIRE) is a long-term
+CBPR collaboration comprised of autistic adults, academic researchers, and other stakeholders.
+In this article, we describe several accessibility lessons learned during a three-year study to
+create and test an interactive, web-based toolkit for improving healthcare access and quality
+for autistic adults in the US.30 During the study we solicited feedback about web accessibility
+from autistic participants and from our own CBPR team, which consists mostly of autistic adults.
+After the research was completed, we compiled the accessibility lessons into the AASPIRE Web
+Accessibility Guidelines presented in this article. The full details of the research project (the
+AASPIRE Healthcare Toolkit project) are reported in-depth elsewhere.30-32 However, it is
+important to understand the context of the research project, since we used it as the “living
+laboratory” in which to develop and validate the accessibility features that we then compiled
+into the guidelines.
+The three-year research project consisted of four study components that are described in
+varying detail in this paper. Two study components primarily informed the accessibility features
+used on the website: 1) qualitative interviews with autistic adults about their healthcare
+experiences and ideas for interactive online healthcare tools;31 and 2) a series of studies to
+develop, refine, and test an accessible online survey tool that is used as part of the
+website.30,33,34 The other two study components verified and evaluated our accessibility
+features: 1) a usability study of the initial (alpha) version of the web site; and 2) an evaluation of
+the revised (beta) version of the website. The results of the interview and survey tool
+components are summarized where relevant; the results of the usability study and the
+evaluation study are presented here in greater detail.
+
+
+The AASPIRE Healthcare Toolkit consists of an informational website and an interactive report
+generator, called the Autism Healthcare Accommodations Tool (AHAT). The AHAT uses the
+accessible online survey tool to collect information and then generates a customized healthcare
+accommodations report for healthcare providers and their staff. The intended audience for the
+site is autistic adults, people who support them in healthcare, and healthcare providers. The
+toolkit can be found at <https://autismandhealth.org/>. See Figure 1 for a map of the full
+project.
+Study components primarily to inform website accessibility features
+
+qualitative interviews about
+healthcare experiences &
+interactive website ideas
+
+studies to develop & refine an
+accessible online survey tool,
+including our preliminary evaluation
+
+AASPIRE Healthcare
+Toolkit Product
+(interactive website)
+
+AASPIRE Healthcare Toolkit Project
+“living laboratory” for understanding
+web accessibility for autistic users
+
+alpha website
+usability study*
+
+AASPIRE Web
+Accessibility
+Guideline*
+
+beta website
+evaluation
+study*
+*primary focus of this paper
+
+Study components primarily to evaluate website accessibility features
+
+Theoretical Foundation
+We compiled what we learned from our work in the “living laboratory” of the AASPIRE
+Healthcare Toolkit project into the AASPIRE Web Accessibility Guidelines, using existing theory
+and established principles of web accessibility. As a theoretical foundation, we used the
+"information worlds" model provided by Jaeger and Bernett.11 The model defines three
+dimensions of information access: physical, intellectual, and social. Physical accessibility has
+received the most focus on the Web;11 examples include image descriptions, forms that are
+navigable by keyboard, user-controlled font sizes, and other accommodations for sensory
+disabilities. An example of intellectual (i.e., cognitive) accessibility is translating prose into a
+simpler and less abstract vocabulary. Examples of social accessibility would be content that
+explicitly spells out language pragmatics, or content that takes social or cultural context into
+account; for example, avoiding the use of the jigsaw-puzzle symbol for autism because in
+Autistic and neurodiversity culture, this symbol is considered dehumanizing.35,36
+As guiding principles for physical accessibility, we used the principles of the WCAG, the most
+widely-used Web accessibility standard: sites must be perceivable (can users make it out?),
+operable (can it be controlled?), understandable (can it be comprehended?), and robust (can it
+run on current and likely future technologies?).37,38 As guiding principles for intellectual and
+
+
+social accessibility, we used the principles of the plain language movement. Plain language is
+defined behaviorally by the Center for Plain Language: "Can the people who are the audience
+for the material quickly and easily find what they need, understand what they find, [and] act
+appropriately on that understanding." 39
+Methods to Create the Guidelines
+CBPR Process
+AASPIRE uses a CBPR approach, with autistic adults and academic scientists (not necessarily
+mutually exclusive roles) contributing equitably to the work.40,41 We have been working
+together for over a decade, and meet and make decisions together through text-based chat,
+selective in-person meetings, and a group mailing list.42,43 Throughout the project, adult autistic
+web users on our team led accessibility discussions and provided solutions. Figure 2
+summarizes the iterative developmental process. The figure shows the nature of involvement
+by autistic people at each stage: on our CBPR team, as research participants, or by Autistic staff;
+the lead web developer and technical writer, and first author of this paper, is Autistic. This
+section describes our process for generating, and then verifying, our accessibility solutions.
+ideas from QUALITATIVE INTERVIEWS ABOUT HEALTHCARE
+EXPERIENCES & INTERACTIVE WEBSITE IDEAS
+
+1. Website
+Content
+
+2. Website User
+Interface
+
+3. Interactive
+Survey Tool
+
+STAFF: content outline and
+information architecture
+
+STAFF: mockups of possible user
+interfaces
+
+PRIOR STUDIES: develop the
+ACASI accessible survey tool
+
+CBPR TEAM: feedback on content
+and information architecture
+
+CBPR TEAM: feedback on
+interface mockups
+
+STAFF: first draft of content and
+information architecture
+
+STAFF: website user interface
+implementation
+
+CBPR TEAM: create interactive
+survey for website / refine tool
+
+RESEARCH STUDY: interactive
+survey tool preliminary evaluation
+
+4. alpha Website
+CBPR team review and feedback
+of fully implemented website
+RESEARCH STUDY: usability
+study on website
+STAFF: website revisions based on
+usability study
+
+5. Beta Website
+RESEARCH STUDY: toolkit
+evaluation study
+
+KEY
+Italic - autistic involvement by research participants
+Underlined - autistic involvement by research team
+Neither - autistic involvement by staﬀ only
+
+
+1. Website Content
+The website development began by reviewing information from our qualitative interviews on
+the experiences of autistic adults in healthcare,31 as well as our team’s ideas for what might be
+helpful to them or to other autistic people. Staff compiled those ideas into an outline of content
+to include and presented it to the full team for further development.
+Accessibility discussions focused on making the content intellectually and socially accessible.
+Qualitative study participants and research team members noted significant problems with
+existing websites and descriptions of medical practice, and offered recommendations for
+overcoming them. Examples are not assuming that patients can use the telephone to make
+appointments, attending to sensory and organizational challenges related to exercise, and
+addressing how to make a change in diet when someone else, such as a care provider, is in
+charge of one’s food. We discussed whether to include a potentially controversial section on
+therapy, which autistic people have found both a source of increased quality of life and a
+source of harm or oppression.44-46 We decided that we would be able to present therapy in a
+way that was socially accessible by drawing on the expertise of the autistic members of the
+team.
+In creating the full draft of the content, staff writers implemented WCAG and plain-language
+principles, and drew on our autistic partner’s expertise. We wrote at an eighth-grade reading
+level, used specific and precise language, and avoided idioms, minimized length, and used a
+FAQ-formatted information architecture. More explanation of social context was added than
+would be for other audiences, such as through inclusion of interaction scripts (e.g., for making
+an appointment, requesting accommodations from a healthcare provider, or asking for a
+referral for a diagnosis).
+Staff provided the draft to the full team for review and additional accessibility checks. Autistic
+team members highlighted the following additional accessibility points and examples, for
+intellectual and social accessibility.
+•
+
+Content modifications based on lived experience: knowing it’s possible to be evaluated
+for autism even if no one is available to give an early childhood report, information
+about free clinics, and explaining why healthcare providers might be antagonistic
+towards accommodation requests
+
+•
+
+Clarifications of ambiguities: how to communicate medicine dosages if more than one is
+listed on the label, acceptability of leaving blanks on intake forms, prefacing
+recommendations with "not all of these items may apply to you"
+
+•
+
+Enhanced precision of language: specifying “call or email” instead of "contact,” defining
+"healthcare providers," providing examples for open-ended recommendations
+("advocate for accommodations in the waiting room--adjust the music, lights, etc.")
+
+
+•
+
+Clarifications due to community-specific context: clarifying special diet as "diabetic diet"
+or "low-salt diet" (not a "cure-autism" diet), changing "wait in my car" to "wait outside"
+so as not to presume the person has a car
+
+•
+
+Recommendations for restructuring text to reduce length or increase clarity: removing
+non-essential items from a long list, referencing repeated information in a single
+separate section instead of pasting it repeatedly
+
+•
+
+Simplifying language or reducing reading level through multiple wording changes
+
+2. Website User Interface
+Simultaneously with the content development, staff created mock-ups of how the website
+might look. Because the lead developer was autistic, accessibility features were built into the
+mock-ups, including using a low-contrast color theme, an accessible sans-serif font, and visual
+simplicity including plain, flat backgrounds.
+In discussion, the team came to consensus on preferred layout quickly; however, the color
+palette was more difficult. Team members expressed divergent preferences and noted that the
+"wrong" palette could lead to eye strain, migraines, and an inability to read the text. Further,
+while a low-contrast palette is an accessibility need for many autistic people, it presents a
+barrier to accessibility for individuals with low vision. We decided to create multiple color
+themes—users could choose based on preference—including two high-contrast themes that
+met the WCAG guidelines for contrast ratio,10 with a default palette similar to that of the
+AASPIRE website, which has a low-contrast purple and tan theme that everyone on the team
+liked. Having multiple color options has provided unusual benefits to autistic people, such as
+reading words and facial expressions.47,48
+Staff created the website from the selected mockup, implementing user-controlled font sizes
+and color themes, including a “theme” with no formatting at all; a simple and clutter-free
+interface; predictable navigation and layout; and use of simple but meaningful icons to
+delineate and organize content areas and topics. The full team then reviewed the working
+website and made the following further accessibility comments and requests.
+For intellectual accessibility:
+•
+
+Decreasing clutter: remove or visually tone down horizontal lines as separators, increase
+use of white space
+
+•
+
+Reducing scrolling: make all navigation and key page elements visible in a typically-sized
+browser window
+
+•
+
+Increasing predictability: position similar elements in the same place on various pages,
+add “breadcrumbs” (indicators of location in a hierarchical structure) even for shallow
+navigation trees.
+
+
+•
+
+Reinforcing information architecture with icons: increase usage of icons, because they
+provide redundancy with the nature of the content, and make it easy to understand
+how the content is structured
+
+For social accessibility:
+•
+
+Increasing explicitness: use words on the home page to make it very clear what the site
+is about and why someone might use it; replace "change skin" with "change theme";
+make key areas, such as the entry point for the AHAT, more distinct
+
+•
+
+Replacing icons with unwanted symbolism: butterfly held too many pre-existing
+connotations within the Autistic community, lightning bolt communicated aggression
+
+For physical accessibility:
+•
+
+Adding colors: provide alternatives, including a theme with a dark background and a
+theme with a light background, for both the low- and high-contrast palettes
+
+3. Interactive Survey Tool
+The interactive survey tool generates a customized accommodations report for healthcare
+providers based on how a user completes a web-based form. It was built on Portland State
+University’s Audio Computer Assisted Self Interview (ACASI) platform, a web-based survey tool
+previously developed in partnership with individuals with a wide range of disabilities, including
+autistic people. It incorporates several accessibility features,33,34 including read-aloud (feedback
+from participants was that the inflection of human-recorded speech, not computer-generated,
+is what enabled them to understand the information), user-controlled font sizes, consistent and
+clutter-free navigation, the capacity to play American Sign Language translations of text, and
+screen reader optimization. A detailed description of the ACASI software can be found
+elsewhere.34
+AASPIRE team members liked the neutral colors and the existing accessibility features, and no
+one had difficulty using the survey. They identified accessibility barriers as 1) the inability to go
+back to previous pages; 2) dependence on Flash (an online application that was popular at the
+time) for the non-screen reader version, which limited compatibility with some platforms and
+with assistive technology; and 3) lack of alternative color schemes. We added a “back” button
+and addressed the Flash issues by rebuilding the platform in HTML5, and merging the screen
+reader and main versions. We deferred providing alternative color schemes for a future version.
+We configured the tool to work with our application, and made the accessibility changes
+recommended by the group. We then conducted a brief preliminary evaluation of just the tool
+with autistic participants and supporters; it included a cognitive interview of the survey items,
+and a short questionnaire about perceived usability, accessibility, and acceptability. Details are
+available elsewhere;30 here, we summarize findings relevant to the website accessibility.
+
+
+Regarding intellectual and social accessibility, participants were able to paraphrase survey
+content, and the overwhelming majority said the material was easy to understand. Qualitative
+suggestions for improving the user interface included the issues identified by our team. They
+also included: 1) clarifying the reason for open-ended items; 2) adding a “not sure” or “N/A”
+option to reduce anxiety about not being able to answer exactly; 3) allowing people to write in
+their own answers instead of selecting from the checklists; and 4) correcting a confusing
+combination of a checkbox and a narrative-text (write-in) field. Participants noted the need to
+reduce the font sizes to display more text per page, and to minimize scrolling. We made all of
+these changes except allowing people to provide narrative responses, because this would have
+interfered with core aspects of the intervention. This both confirmed that the accessibility
+features of the survey tool were otherwise working, and provided some additional information
+about desirable features to be added.
+4. Alpha Website Usability Testing
+Methods
+Staff implemented all accessibility changes, and put the full toolkit together. We then
+conducted a usability study49 of the site. We recruited participants through community
+connections in the Portland, Oregon Metro area. Participants needed to be live in the Portland,
+Oregon metro area as the study was administered in person, and be at least 18 years of age.
+They also had to be one of the three intended audiences for the website, defined as meeting
+one of the following criteria: 1) be diagnosed with an autism spectrum disorder (ASD); 2)
+support someone who has been diagnosed with an ASD; or 3) be a primary care provider. These
+three populations are the audiences for the web site. Additionally, participants were
+purposefully selected to represent a range of comfort with internet technology, a range of
+educational levels, and multiple target use cases (task-oriented, exploratory, and proxy--using
+the site on behalf of a family member or client).
+We followed a typical protocol for software usability testing,49 where participants were asked
+to complete a series of tasks involving the website functionality while the first author observed,
+asked follow-up questions, and recorded the results. Data recorded on the tasks were 1)
+whether it could be completed; 2) how long it took to complete; 3) observations (e.g., of what
+the participant was doing with their mouse); and 4) participant comments. Tasks covered basic
+web functionality (e.g., search, navigation), accessibility functions (e.g., color theme switching,
+font size control), and functionality specific to the Toolkit (e.g., downloading content for offline
+use,).
+The first author met with participants in person. With the exception of one healthcare provider,
+the study was conducted in the same location with the same equipment. Where there
+appeared to be a usability problem, the first author probed participants for ideas for why the
+problem might exist, and what might fix it. The first author placed both verbal information (e.g.,
+participant comments about locating a link) and behavior from participants (e.g., whether their
+mouse pointer found the link quickly) into a series of matrices to assess usability issues, and
+
+
+prioritized the issues based on severity (to what degree did it affect the person’s ability to find
+and make use of the data) and pervasiveness (how many people had the same experience).49
+During the process, the first author referred to observational field notes and participant
+comments to gain a more in-depth understanding of issues, and relied on their experience as a
+programmer to make decisions about what to address from the aggregate issues matrix based
+on severity ranking and the level of effort to correct the issue. The full team then met to discuss
+the findings.
+Results
+Eight people participated: three autistic, three supporter, and two primary care providers. This
+is a typical and sufficient number of participants for a usability study50. They were aged 18 to 50
+years, and were diverse in observed technical ability and self-reported education (Table 1).
+Although all participants were able to complete the tasks, they did identify several usability
+issues, which are summarized in Table 2. The issues of highest priority were a consequence of
+the forms and worksheets displaying as the default page after entering the patient or provider
+side from the home page, and lack of clear labeling for the topic and outline navigation. These
+issues were remedied by defaulting to a topic summary page and adding headers. The usability
+issues were not specific to any one user group; in cases where an issue was reported by more
+than one person, those individuals spanned multiple stakeholder groups. This was important to
+us, since all three audiences would be using the site. It also made it clear that the issues were
+general user interface problems, not accessibility problems.
+Participants were encouraged to "think out loud" as they performed the usability tasks. Several
+participants noted the accessibility features of the site during their dialogue. Autistic
+participants said that they appreciated the ability to change colors ("because some people may
+have a harder time seeing one... not many sites I know do that"); appreciated the icons and the
+simple, predictable navigation ("I like how you can go back to top from any place so you don't
+get lost"); the lack of clutter ("calming not to have the splashings and the fancies"); and the
+highly structured information architecture and FAQ-formatted content ("clear, categorical
+information in an accessible format is great and sorely needed. Most sites present information
+in the form of vague statements instead of a question...this is an intuitive web site...it's in
+question form so I know where to go"). The results of the usability study help verify that we
+were able to create an accessible website by drawing on the expertise of the autistic people on
+our research team.
+Staff revised the web site to address the issues identified during the usability testing. We used
+the resulting beta site in the Beta Website Evaluation, described next.
+5. Beta Website Evaluation
+Methods
+We conducted an evaluation of the AASPIRE Healthcare Toolkit to determine its feasibility and
+acceptability as an intervention to improve healthcare for autistic adults. Details of that study
+
+
+can be found elsewhere.30 Here, we describe the results of the subset of evaluation items
+related to the usability and accessibility.
+Our sample included U.S. residents age 18 or older who also met at least one of the following
+criteria: 1) diagnosed with an ASD, and/or 2) providing support to an individual diagnosed with
+an ASD who would not be able to participate in the study themselves, even with
+accommodations and supports. We recruited a convenience sample of participants through
+word of mouth and our networks, including community electronic mailing lists, local
+developmental disabilities agencies, and social media. We also recruited via broader online
+recruitment channels including the Interactive Autism Network <https:// iancommunity.org/>
+and several general online study recruitment boards.
+Participants took a pre-usage survey which then directed them to the beta website. One month
+later, we sent participants a link to a post-usage survey that included the evaluation questions
+about the website. Multiple-choice questions on the post-usage survey asked how easy the
+website was to use and understand, how important and useful the information was, and
+whether participants would recommend it to friends or primary care providers. Open-ended
+items solicited information about what the participant liked most and least about the website,
+what they thought was most useful, and recommendations for how to improve the website.
+We analyzed quantitative data using Stata 11 (College Station, Texas)51. The primary analysis
+consisted of summary statistics for the combined patient and supporter populations. We
+conducted a secondary analysis using chi-squared tests for association between evaluation
+variables and the population, education level, and browser and device type used. We
+summarized the recommendations provided in the open-ended items.
+Results
+Demographics from the 170 participants are in Table 3. They represented a diverse range of age
+(18-63), gender (54% female, 44% male, 2% other), educational attainment (19% high school or
+less, 25% some college, 37% undergraduate degree, 18% graduate degree), and support needs
+(63% needed support always or often to receive healthcare). Most participants accessed the
+site through a desktop or laptop computer, and in a Google Chrome or Mozilla FireFox browser.
+Nearly all participants found the toolkit easy to use (97% N=120 very easy or somewhat easy)
+and easy to understand (95% N=117 all or most of the site). Most indicated that the
+information was important (63% N=79 very important, 34% N=42 kind of important). Most
+indicated that the information was useful (53% N=63 very useful, 43% N=53 somewhat useful).
+Ninety-two percent (N=105) would recommend the toolkit to a friend, and 95% (N=111) would
+recommend it to a healthcare provider.30 In t-tests for association, no significant associations
+were found between usability or understandability and education level, receipt of help using
+the site, browser type, or device type.
+Qualitative comments related to access and usability were minimal. The most frequent
+recommendation was alternative color schemes on the survey tool, confirming what we already
+believed. A few participants felt that the survey tool’s user interface was too cluttered, possibly
+
+
+due to some items having a large number of possible options; this was addressed by the use of
+formatting in a subsequent release. Some participants noted the accessibility and usability as
+what they appreciated about the site: "the questions aren't vague, and they are easy to
+understand," "it was easy to navigate and it was free," "very well organized and easy to use."
+Based on these evaluation data, we feel that the features that we identified throughout our
+processes created a highly accessible website for a population of autistic users with a diverse
+range of age, gender, education, and support needs.
+The public release of the toolkit can be found at <https://autismandhealth.org>. Future
+releases will add user-controlled color themes to the survey tool user interface.
+AASPIRE Web Accessibility Guidelines
+These guidelines are a summary of the accessibility features we identified and implemented
+during the course of our work. None of these items were difficult or expensive for us to
+implement. They did not require special expertise beyond basic web programming and
+technical communications skills. We recommend that anyone seeking to create accessible
+websites for autistic users follow the AASPIRE Web Accessibility Guidelines, in addition to
+broader web and communications standards and principles such as the WCAG.
+Physical Accessibility
+• Provide a least one low-contrast, neutral-color palette option to accommodate sensitive
+vision.
+• Provide a selection of color palettes, including one with a dark background and one with
+a light background, to accommodate color and contrast sensitivity.
+• Provide a no-style option (i.e., no CSS), to accommodate browser customization and
+users who prefer no stylistic formatting.
+• Provide simple, consistent navigation and highly consistent site behavior for increased
+ease of operation.
+• Avoid textured backgrounds, moving images, decorative elements that do not convey
+information, and other visual or sonic "clutter;" these types of elements may make the
+site difficult or impossible to comprehend.
+• Provide smaller font sizes in addition to larger ones; large font sizes may make the page
+appear cluttered and difficult to read.
+• Use a plain, accessible font such as a sans-serif font (e.g., Arial), for ease of readability.
+Intellectual Accessibility
+• Use the simplest interface possible, for ease of understanding.
+• Use simple, concrete icons or images to communicate redundant information with text,
+and accommodate multiple ways of understanding information.
+• Clearly label site elements with their purpose throughout the site, even if it seems
+redundant, to make navigation and site functionality easier to follow.
+
+
+•
+•
+•
+
+•
+
+Provide concrete examples where applicable, to accommodate difficulties
+understanding abstractions or generalizations.
+Minimize scrolling, so that the user does not need to rely on assumptions about content
+to guess what might be on the page.
+Show all important features and site navigation, as opposed to within combo-box dropdown areas, so the user does not need to rely on assumptions to guess whether the
+item exists, and how to access it. For example, completely visible list boxes or radio
+buttons can be used instead of drop-down combo-boxes.
+Make content as concise as possible without sacrificing precision and specificity, to
+reduce cognitive burden.
+
+Social Accessibility
+• Be specific and precise in language; avoid colloquialisms, idioms, and ambiguity, to
+accommodate difficulties with language pragmatics.
+• Explain the reason behind any non-standard instructions or unusual information;
+provide additional pragmatic context to accommodate difficulties with language
+pragmatics.
+• Provide alternatives to definitive response items on surveys and forms, such as, "do not
+know," "do not wish to say," or "not applicable," to reduce frustration over not being
+able to produce an exact answer.
+• Use FAQ formats to organize complex information to enhance clarity as to why the
+information might be useful to the user and how it connects to their life.
+• Define terms that might have different meanings depending on social context, or that
+might be jargon related to a specialized field (e.g., "drug interactions", "healthcare
+providers"), to accommodate difficulties with language pragmatics.
+• Attend to Autistic culture and community preferences, including the language used to
+describe autism, and how community-based symbols and history might influence
+content and perception of site credibility
+Discussion
+We present a systematically derived, theoretically grounded, empirically tested set of
+guidelines for web accessibility for end users on the autism spectrum. These guidelines were
+created via AASPIRE's collective expertise and our iterative engagement with end users on the
+autism spectrum. The guidelines add to the growing literature of disability-specific accessibility
+recommendations that go beyond what the WCAG supports, and cover all three dimensions of
+accessibility: physical, intellectual, and social.
+A small number of unofficial Web accessibility guidelines or recommendations for people on
+the autistic spectrum do exist. However, they do not have our strong combination of autistic
+end-user engagement in all phases, systematic guidelines generation, empirical testing, explicit
+grounding in accessibility theory, and holistic approach. For example, both the National Autistic
+Society and the UK Home Office have guidelines available outside the peer-reviewed
+
+
+literature.52,53 An article from the proceedings of the 2016 International Conference on
+Advances in Computer-Human Interactions reviewed and compiled recommendations for
+autism-specific guidelines scattered throughout the peer-reviewed literature.54 The compiled
+list, arranged in categories, includes a number of the items identified in our work (e.g.,
+customization and simplicity), further confirming our findings. However, it focuses on physical
+accessibility and does not catch, for example, the importance of cultural considerations or the
+cognitive impact of navigational scrolling. Other guidelines also focus on a particular area of
+accessibility such as text and readability55 rather than the Web as a whole, or do not present
+results of empirical testing.
+This work has some limitations. First, the guidelines were generated from work on a primarily
+informational website with a simple form-based application. Additional items may be needed
+for websites with more complex or specialized functionality. Second, the work was done in the
+United States and, although the technology of the internet is international, cultural and
+technological considerations in localization (e.g., assumptions about available internet speed)
+outside the U.S. were not considered. Third, the empirical findings from the final evaluation are
+from a convenience sample of a study with a primary purpose to evaluate the potential impact
+of the Toolkit on healthcare outcomes, rather than a primary focus on usability. Lastly, both our
+CBPR team and our participant samples were primarily non-Hispanic white, leaving out key
+racial and ethnic dimensions of diversity. Future work should address some of these gaps.
+Due to an affinity for the Web among many autistic people, there may be significant impact
+from increasing accessibility for the autistic population by using the AASPIRE Web Accessibility
+Guidelines. We strongly support the implementation of accessible web sites for all people;
+implementing these accessibility recommendations could improve access to information and
+technology for the 1% of the adult population on the autism spectrum56—and the 1 in 59 of
+young people on the autism spectrum who will become adults57—as well as to others who may
+not be autistic but who have similar or overlapping accessibility needs (e.g., attention deficit
+disorder/attention deficit hyperactive disorder, psychosis, or traumatic brain injury). We also
+strongly recommend engaging the assistance of autistic web users directly as subject-matter
+experts in website development. Accessibility matters and has real impact on reducing the
+significant inequities experienced by adults with disabilities.
+Acknowledgements:
+We would like to thank the study participants and all AASPIRE team members, past and
+present, for their invaluable insights. We would also like to thank the Autistic Self Advocacy
+Network and the Autism Society of Oregon their help with recruitment and dissemination, and
+for their ongoing support of our work.
+This work was supported by National Institute of Mental Health grant number R34MH092503
+and Oregon Clinical and Translational Research Institute (OCTRI) grant number UL1 RR024140
+from the National Center for Research Resources (NCRR), a component of the National
+Institutes of Health (NIH), and NIH Roadmap for Medical Research. Dr. Weiner is Chief of Health
+
+
+Services Research and Development at the Richard L. Roudebush Veterans Affairs Medical
+Center in Indianapolis, Indiana. The views expressed in this article are those of the authors and
+do not necessarily represent the views of the U.S. Department of Veterans Affairs or the NIH.
+TABLES
+Web Site Usability Study
+Autistic
+Supporter
+PCP
+
+3
+3
+2
+
+Age
+
+18-34
+35-50
+50+
+
+2
+2
+4
+
+Gender
+
+Male
+Female
+
+2
+6
+
+Education
+
+HS or modified
+diploma
+undergraduate
+degree
+graduate degree
+
+2
+3
+3
+
+Technical
+Ability
+(observed)
+
+Low
+Medium
+High
+
+3
+3
+3
+
+Stakeholder
+Group
+
+Table 1: Usability Demographics
+# of
+severissue
+reports ity
+1
+high
+not clear site is about autism
+overwhelming and not clear what
+1
+high
+would be relevant (PCP side)
+3
+
+high
+
+topic and outline links not clear
+
+3
+
+high
+
+topics not clear
+
+1
+
+med
+
+1
+
+med
+
+1
+
+med
+
+1
+
+med
+
+1
+
+med
+
+3
+
+low
+
+did not process right hand side of
+main page where AHAT link is
+not clear site is about primary care
+only
+font size adjuster hard to read for
+someone with low vision
+printed PDFs lack navigation and
+branding
+close window button only relevant
+in the popup print version
+slight crowding / narrow margins
+
+actions
+add some identifiers
+re-do the information
+architecture for the PCP side
+add "Topics" or "Outline" header
+above the links
+change default to splash page to
+description of topics
+add AHAT link also to topic list
+on left hand side
+add some identifiers
+make high contrast always
+add table of contents and
+branded footer to PDFs
+hide close window button when
+"No CSS" used as theme
+make whitespace a little bigger,
+bullet links
+
+stakeholders**
+pcp
+pcp
+aut
+aut, sup
+aut
+sup
+n/a
+aut
+aut
+aut, pcp
+
+
+thought a special "tool" area on
+aut
+the top bar might work
+add static links to bottom in
+aut, sup
+3
+low
+addition to top
+pcp
+change graphic to plain text;
+aut, sup,
+5
+low
+consider other ideas
+pcp
+place dropdown in same place
+5
+low
+as on formatted layout
+aut, sup
+add PDF indicator, link to
+insufficient PDF identification and
+1
+low
+Acrobat, information for how to
+resources
+get alternative format
+aut
+offer email option in a special
+1*
+low
+looked for email to on main page
+aut
+content area on the main page
+1
+low
+not sure what "No CSS" meant
+change to "no layout"
+aut
+* italicized items not addressed due to determination of limited benefit given the effort to
+implement effectively
+** pcp - primary care provider; aut - autistic adult; sup - person who supports an autistic adult in
+healthcare settings
+1*
+
+low
+
+could not find detail actions (print,
+email, download)
+looked for static content links on
+bottom of page
+graphic for switching sides not
+effective; unclear what it will do
+dropdown to change back to layout
+hard to find on no css theme
+
+Table 2: Usability Matrix
+References
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+
+8.
+
+Biever C. Web removes social barriers for those with autism. New Scientist.
+2007(2610):26 - 27.
+Jordan C. Evolution of autism support and understanding via the world wide web.
+Intellectual and Developmental Disabilities. 2010;48(3):220-227.
+Robertson S. Information technology & the autistic culture: Influences, empowerment,
+& progression of it usage in advocacy initiatives. Autreat; 2007; Johnstown,
+Pennsylvania.
+Chamak B, Bonniau B, Jaunay E, Cohen D. What Can We Learn about Autism from
+Autistic Persons? Psychotherapy and Psychosomatics. 2008;77(5):271-279.
+Sinclair J. History of ANI. 2005; http://www.autreat.com/History_of_ANI.html. Accessed
+2 January, 2014.
+Blume H. Autistics, freed from face-to-face encounters, are communicating in
+cyberspace. The New York Times1997.
+Gillespie-Lynch K, Kapp, Steven K., Shane-Simpson, C., Smith, D.S., Hutman, T.
+Intersections between the autism spectrum and the Internet: Perceived benefits and
+preferred functions of computer-mediated communication. Intellectual and
+Developmental Disabilities. 2014;52(6):456-469.
+United States Government. Section 508. 2013; https://www.section508.gov/. Accessed
+25 May, 2013.
+
+
+9.
+10.
+11.
+12.
+13.
+14.
+15.
+16.
+17.
+
+18.
+19.
+20.
+21.
+22.
+23.
+24.
+25.
+
+United Nations. Making web sites accessible for the Unitied Nations. 2013;
+http://www.un.org/webaccessibility/index.shtml. Accessed 5/25, 2013.
+W3C. Web Accessiblity Initiative (WAI). 2013; http://www.w3.org/WAI/. Accessed 5/25,
+2013.
+Jaeger PT. Disability and the Internet: Confronting a Digital Divide. Boulder, CO: Lynne
+Rienner Pub; 2011.
+W3C Web Accessibility Initiative. Cognitive and Learning Disabities Accessibility Task
+Force (Cognitive A11Y TF). 2018; https://www.w3.org/WAI/PF/cognitive-a11y-tf/.
+Accessed 26 March, 2018.
+W3C Cognitive and Learning Disabilities Accessibility Task Force. Gap Analysis/autism.
+2014; https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Gap_Analysis/autism.
+Accessed 26 March, 2018.
+Brajnik G, Yesilada Y, Harper S. The expertise effect on web accessibility evaluation
+methods. Human–Computer Interaction. 2011;26(3):246-283.
+Federici S, Micangeli A, Ruspantini I, et al. Checking an integrated model of web
+accessibility and usability evaluation for disabled people. Disability and rehabilitation.
+2005;27(13):781-790.
+Kelly B, Sloan D, Brown S, et al. Accessibility 2.0: Next steps for web accessibility. Journal
+of Access Services. 2009;6(1 & 2):265-294.
+Mirchandani N. Web accessibility for people with cognitive disabilities: Universal design
+principles at work! Research Exchange 2003; Vol.8,
+No.3:http://www.ncddr.org/products/researchexchange/v08n03/8_access.html.
+Accessed 27 September, 2013.
+Adam A, Kreps D. Disability and discourses of web accessiblity. Information,
+Communication & Society. 2009;12(7):1041-1058.
+Friedman MG, Bryen DN. Web accessibility design recommendations for people with
+cognitive disabilities. Technology and Disability. 2007;19(4):205-212.
+Kennedy H, Evans S, Thomas S. Can the Web Be Made Accessible for People with
+Intellectual Disabilities? The Information Society. 2011;27(1):29-39.
+Jaeger PT. User-centered policy evaluations of Section 508 of the Rehabilitation Act.
+Journal of Disability Policy Studies. 2008;19(1):24-33.
+McDonald KE, Keys CB. How the powerful decide: Access to research participation by
+those at the margins. American Journal of Community Psychology. 2008;42(1):79-93.
+McDonald KE. "We want respect": adults with intellectual and developmental disabilities
+address respect in research. American journal on intellectual and developmental
+disabilities. 2012;117(4):263-274.
+McDonald KE, Kidney CA, Nelms SL, Parker MR, Kimmel A, Keys CB. Including adults with
+intellectual disabilities in research: Scientists' perceptions of risks and protections.
+Journal of Policy and Practice in Intellectual Disabilities. 2009;6(4):244-252.
+Raymaker DM, McDonald KE. Paradigm shifts in disability and health: Toward more
+ethical public health research. American journal of public health. 2013;103(12):21652173.
+
+
+26.
+27.
+28.
+
+29.
+30.
+
+31.
+32.
+33.
+
+34.
+35.
+
+36.
+37.
+38.
+39.
+40.
+
+Brew-Parrish V. The wrong message. Awareness Days 1997; disability simulation issues.
+Available at: http://www.raggededgemagazine.com/archive/aware.htm. Accessed 16
+November, 2013.
+Brew-Parrish V. The wrong message still. 2004; disability simulation issues. Available at:
+http://www.raggededgemagazine.com/focus/wrongmessage04.html. Accessed 16
+November, 2013.
+Nicolaidis C, Raymaker DM, Katz M, et al. Participatory research to adapt measures of
+health and interpersonal violence for use by people with developmental disabilities.
+Progress in Community Health Partnerships: Research, Education, and Action. 2014;in
+press.
+Raymaker DM. Unpublished database and notes on Partnering ACASI usability study.
+2011.
+Nicolaidis C, Raymaker, D.M., McDonald, K., Kapp, S., Weiner, M., Ashkenazy, E., Gerrity,
+M., Kripke, C., Platt, L. Baggs, A. The development and evaluation of an online
+healthcare toolkit for autistic adults and their providers. Journal of General Internal
+Medicine. 2016.
+Nicolaidis C, Raymaker DM, Ashkenazy E, et al. "Respect the way I need to communicate
+with you": Healthcare experiences of adults on the autism spectrum. Autism. 2015.
+Raymaker DM, McDonald KE, Ashkenazy E, et al. Barriers to healthcare: Instrument
+development and comparison between autistic adults and adults with and without
+other disabilities. Autism. 2017;21(8):972-984.
+Oschwald M, Renker PR, Hughes RB, Arthur A, Powers LE, Curry MA. Development of an
+accessible audio computer-assisted self-interview (A-CASI) to screen for abuse and
+provide safety strategies for women with disabilities. J Interpers Violence.
+2009;24(5):795-818.
+Oschwald M, Leotti S, Raymaker DM, et al. Development of an Audio-Computer Assisted
+Self-Interview to investigate violence and health in the lives of people with
+developmental disabilities. Disability and Health Journal. 2014.
+Autisticalex. Why you need to stop using the puzzle piece to represent autistic people.
+Autistic Alex: Blogging about neurodiversity, psychology, and autism research. Vol 2018.
+https://autisticalex.wordpress.com/2014/04/12/why-you-need-to-stop-using-thepuzzle-piece-to-represent-autistic-people/2014.
+Gernsbacher MA, Raimond AR, Stevenson JL, Boston JS, Harp B. Do puzzle pieces and
+autism puzzle piece logos evoke negative associations? Autism. 2018;22(2):118-125.
+W3C. Introduction to understanding WCAG 2.0. 2013;
+http://www.w3.org/TR/UNDERSTANDING-WCAG20/intro.html - introductionfourprincs-head. Accessed 16 November, 2013.
+W3C. Web content accessiblity guidelines (WCAG) 2.0. 2008;
+http://www.w3.org/TR/UNDERSTANDING-WCAG20/intro.html - introductionfourprincs-head. Accessed 16 November, 2013.
+Center for Plain Language. What is plain language? 2013;
+http://centerforplainlanguage.org/. Accessed 10 October, 2013.
+Israel BA, Schulz AJ, Parker EA, Becker AB, Allen AJI, Guzman JR. Critical issues in
+developing and following community based participatory research principles. In:
+
+
+41.
+42.
+
+43.
+44.
+45.
+46.
+47.
+48.
+49.
+50.
+51.
+52.
+
+53.
+54.
+
+Meridith Minkler NW, ed. Community-Based Participatory Research for Health. San
+Fransisco, CA: John Wille & Sons, Inc.; 2003:53-73.
+Nicolaidis C, Raymaker DM. Community based participatory research with communities
+defined by race, ethnicity, and disability: Translating theory to practice. In: Bradbury H,
+ed. The SAGE Handbook of Action Research: SAGE; 2015:in press.
+Nicolaidis C, Raymaker, D., McDonald, K, Dern, S., Ashkenazy, E., Boisclair, W.C.,
+Robertson, S, Baggs, A. Collaboration strategies in non-traditional CBPR partnerships:
+Lessons from an academic-community partnership with autistic self-advocates. Progress
+in Community Health Partnerships. 2011;5(2):143-150.
+Raymaker DM. Intersections of Critical Systems Thinking and Community Based
+Participatory Research: A Learning Organization Example with the Autistic Community.
+Syst Pract Action Res. 2016;29(5):405-423.
+Creal DL. The "disability of thinking" the "disabled" body: Course paper for ambiguous
+bodies: Studies in contemporary sexuality, masters level English course (6994.06). 1999;
+http://www.normemma.com/advocacy/artcreal.htm. Accessed October 4, 2012.
+Giangreco M. "The stairs don't go anywhere!": A self-advocate's reflections on
+specialized services and their impact on people with disabilities. Physical Disabilities:
+Education and Related Service. 1996;14(2):1-12.
+Ne'eman A. The future (and past) of autism advocacy, or why the ASA's magazine, The
+Advocate, wouldn't publish this piece. Disability Studies Quarterly. 2010;30(1).
+Ludlow AK, Taylor-Whiffen E, Wilkins AJ. Coloured filters enhance the visual perception
+of social cues in children with autism spectrum disorders. ISRN Neurol.
+2012;2012:298098.
+Whitaker L, Jones CR, Wilkins AJ, Roberson D. Judging the Intensity of Emotional
+Expression in Faces: the Effects of Colored Tints on Individuals With Autism Spectrum
+Disorder. Autism Res. 2016;9(4):450-459.
+US Department of Health and Human Services. Usability testing.
+http://usability.gov/methods/test_refine/learnusa/index.html. Accessed 5 November,
+2012.
+Nielsen J. How many test users in a usability study? 2012;
+https://www.nngroup.com/articles/how-many-test-users/. Accessed 19 November,
+2018.
+StataCorp LP. Stata: Data analysis and statistical software. 2013;
+http://www.stata.com/. Accessed 15 November, 2013.
+The National Autistic Society. Designing websites suitable for people with autism
+spectrum disorders. 2013; http://www.autism.org.uk/working-with/leisure-andenvironments/designing-websites-suitable-for-people-with-autism-spectrumdisorders.aspx. Accessed 16 November, 2013.
+UK Home Office. Designing for accessibility: An update on our accessiblity posters. 2016;
+https://hodigital.blog.gov.uk/2016/12/28/designing-for-accessibility-an-update-on-ouraccessibility-posters/. Accessed 31 October, 2018.
+Britto T, Pizzolato, E. Towards web accessiblity guidelines of interaction and interface
+design for people with autism spectrum disorder. Paper presented at: International
+Conference on Advances in Computer-Human Interactions2016; Venice, Italy.
+
+
+55.
+56.
+57.
+
+Pavlov N. User interface for people with autism spectrum disorders. Journal of Software
+Engineeering and Applications. 2014;7(2):128-134.
+Brugha T, Meltzer H, Smith J, et al. Autism spectrum disorders in adults living in
+households throughout England: Report from the adult psychiatric morbidity survey
+2007. Information Center for Health and Social Care;2009.
+Baio J, Wiggins L, Christensen DL, et al. Prevalence of Autism Spectrum Disorder Among
+Children Aged 8 Years - Autism and Developmental Disabilities Monitoring Network, 11
+Sites, United States, 2014. MMWR Surveill Summ. 2018;67(6):1-23.

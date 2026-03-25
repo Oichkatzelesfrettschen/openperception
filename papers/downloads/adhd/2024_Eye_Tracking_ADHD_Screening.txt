@@ -1,0 +1,1621 @@
+TYPE Original Research
+PUBLISHED 15 February 2024
+DOI 10.3389/fpsyt.2024.1337595
+
+OPEN ACCESS
+EDITED BY
+
+Soohwan Oh,
+Sungkyunkwan University, Republic of Korea
+REVIEWED BY
+
+Eunjoo Kim,
+Yonsei University, Republic of Korea
+Thiago P. Fernandes,
+Federal University of Paraı´ba, Brazil
+*CORRESPONDENCE
+
+Jae-Won Kim
+kimjw412@snu.ac.kr
+RECEIVED 13 November 2023
+ACCEPTED 23 January 2024
+PUBLISHED 15 February 2024
+CITATION
+
+Yoo JH, Kang CS, Lim JS, Wang B, Choi C-H,
+Hwang H, Han DH, Kim H, Cheon H and
+Kim J-W (2024) Development of an
+innovative approach using portable eye
+tracking to assist ADHD screening:
+a machine learning study.
+Front. Psychiatry 15:1337595.
+doi: 10.3389/fpsyt.2024.1337595
+COPYRIGHT
+
+© 2024 Yoo, Kang, Lim, Wang, Choi, Hwang,
+Han, Kim, Cheon and Kim. This is an openaccess article distributed under the terms of
+the Creative Commons Attribution License
+(CC BY). The use, distribution or reproduction
+in other forums is permitted, provided the
+original author(s) and the copyright owner(s)
+are credited and that the original publication
+in this journal is cited, in accordance with
+accepted academic practice. No use,
+distribution or reproduction is permitted
+which does not comply with these terms.
+
+Development of an innovative
+approach using portable
+eye tracking to assist ADHD
+screening: a machine
+learning study
+Jae Hyun Yoo 1, ChangSu Kang 2, Joon Shik Lim 2,
+Bohyun Wang 2, Chi-Hyun Choi 3, Hyunchan Hwang 4,
+Doug Hyun Han 4, Hyungjun Kim 5, Hosang Cheon 5
+and Jae-Won Kim 6*
+Department of Psychiatry, Seoul St. Mary’s Hospital, College of Medicine, The Catholic University of
+Korea, Seoul, Republic of Korea, 2Department of Computer Science, Gachon University, Seongnam-si,
+Gyeonggi-do, Republic of Korea, 3Department of Psychiatry, Seoul Metropolitan Government - Seoul
+National University (SMG-SNU) Boramae Medical Center, Seoul, Republic of Korea, 4Department of
+Psychiatry, Chung-Ang University College of Medicine, Seoul, Republic of Korea, 5AI.ble Therapeutics,
+Seoul, Republic of Korea, 6Division of Child and Adolescent Psychiatry, Department of Neuropsychiatry,
+Seoul National University Hospital, Seoul, Republic of Korea
+1
+
+Introduction: Attention-deﬁcit/hyperactivity disorder (ADHD) affects a
+signiﬁcant proportion of the pediatric population, making early detection
+crucial for effective intervention. Eye movements are controlled by brain
+regions associated with neuropsychological functions, such as selective
+attention, response inhibition, and working memory, and their deﬁcits are
+related to the core characteristics of ADHD. Herein, we aimed to develop a
+screening model for ADHD using machine learning (ML) and eye-tracking
+features from tasks that reﬂect neuropsychological deﬁcits in ADHD.
+Methods: Fifty-six children (mean age 8.38 ± 1.58, 45 males) diagnosed with
+ADHD based on the Diagnostic and Statistical Manual of Mental Disorders, ﬁfth
+edition were recruited along with seventy-nine typically developing children
+(TDC) (mean age 8.80 ± 1.82, 33 males). Eye-tracking data were collected using a
+digital device during the performance of ﬁve behavioral tasks measuring selective
+attention, working memory, and response inhibition (pro-saccade task, antisaccade task, memory-guided saccade task, change detection task, and Stroop
+task). ML was employed to select relevant eye-tracking features for ADHD, and to
+subsequently construct an optimal model classifying ADHD from TDC.
+Results: We identiﬁed 33 eye-tracking features in the ﬁve tasks with the potential
+to distinguish children with ADHD from TDC. Participants with ADHD showed
+increased saccade latency and degree, and shorter ﬁxation time in eye-tracking
+tasks. A soft voting model integrating extra tree and random forest classiﬁers
+demonstrated high accuracy (76.3%) at identifying ADHD using eye-tracking
+features alone. A comparison of the model using only eye-tracking features with
+models using the Advanced Test of Attention or Stroop test showed no
+signiﬁcant difference in the area under the curve (AUC) (p = 0.419 and
+p=0.235, respectively). Combining demographic, behavioral, and clinical data
+
+Frontiers in Psychiatry
+
+01
+
+frontiersin.org
+
+
+Yoo et al.
+
+10.3389/fpsyt.2024.1337595
+
+with eye-tracking features improved accuracy, but did not signiﬁcantly alter the
+AUC (p=0.208).
+Discussion: Our study suggests that eye-tracking features hold promise as ADHD
+screening tools, even when obtained using a simple digital device. The current
+ﬁndings emphasize that eye-tracking features could be reliable indicators of
+impaired neurobiological functioning in individuals with ADHD. To enhance
+utility as a screening tool, future research should be conducted with a larger
+sample of participants with a more balanced gender ratio.
+
+KEYWORDS
+
+attention-deﬁcit/hyperactivity disorder, eye-tracking technology, saccades, ﬁxation,
+biomarkers, machine learning
+
+Introduction
+
+deﬁcits seen in ADHD, suggesting an alteration in frontostriatal
+circuitry affecting suppression signals crucial for saccadic control in
+ADHD individuals (19). These ﬁndings indicate that eye movement
+features could be potential biomarkers for cognitive processes,
+including those related to attention and brain function.
+Eye-tracking studies in children with ADHD have shown
+considerable potential in discriminating children with ADHD
+from typically developing children (TDC). In a meta-analysis,
+lower performance in direction errors in the anti-saccade task
+and visually guided saccade latency was identiﬁed in the ADHD
+group compared to the TDC group (16). Another study
+demonstrated a relationship between premature anticipatory eye
+movements and the inattentive characteristics associated with
+ADHD (20). In addition, the ADHD group showed greater errors
+(21, 22) and a longer latency in the memory-guided saccade task, as
+well as more eye movement during the ﬁxation task (23). However,
+these ﬁndings have limited generalizability because of the limited
+sample size, lack of a uniform task paradigm, and heterogeneity in
+the results among studies (20–22). While the ﬁndings from these
+studies remain inconclusive, eye-tracking holds promise as a
+potentially valuable tool for screening ADHD based on
+neurobiological markers.
+In the present study, we aimed to develop a model that best
+distinguishes children with ADHD from TDC through the
+application eye-tracking features. We used machine learning
+(ML) to combine features extracted from ﬁve different eyetracking tasks that require attentional control, working memory,
+and response inhibition, which are crucial neuropsychological
+impairments in ADHD (24). Furthermore, we measured the
+feasibility of the eye-tracking-features-only model and its
+potential as a screening tool for ADHD. For this purpose, we
+estimated the classiﬁcation performance of the eye-trackingfeatures-only model (stage 1), and compared it with that of the
+conventional screening methods; Advanced Test of Attention
+(ATA) and/or Stroop task (stage 2). Finally, we measured the
+performance of a model that combined demographic, behavioral,
+
+Attention-deﬁcit/hyperactivity disorder (ADHD) is a
+neurodevelopmental disorder that affects 3–10% of children (1).
+Symptoms of ADHD, such as inattention, hyperactivity, and
+impulsivity signiﬁcantly impair social, academic, and occupational
+functions, and can even persist into adulthood (2). As such, early
+detection and intervention are crucial for the recovery of patients
+with ADHD.
+Currently, the diagnosis of ADHD relies on expert decisions
+informed by reports from parents’ and/or teachers’, behavioral
+observations, and clinical interviews (3). Several task-based
+paradigms have been developed and are widely applied in both
+clinics and research to assess attention and executive dysfunction in
+individuals with ADHD. These include the Continuous Performance
+Test (CPT) (4), Tests of Variables of Attention (T.O.V.A.) (5), and
+neuropsychological batteries such as the Stroop test (6) and the
+Wisconsin Card Sorting test (7). However, task-based measures for
+diagnosing ADHD have pitfalls, including a high false positive rate,
+limited test–retest reliability, and practice effects (8). In clinical settings,
+physicians employ a multifaceted assessment considering additional
+factors such as recent stress, anxiety, depression, and behavioral
+problems that can inﬂuence attention (9). However, physician
+interviews are not suitable for screening large populations of children
+as they are time-consuming and expensive.
+Recently, signiﬁcant attention has been paid to the
+characteristics of eye movement and their neurobiological roles in
+ADHD (10–13). Eye movements are controlled by complex brain
+regions, including the frontal eye ﬁeld, dorsolateral prefrontal
+cortex (DLPFC), posterior parietal cortex, basal ganglia, and
+cerebellum (14, 15). There is signiﬁcant overlap between the
+neural networks involved in oculomotor and attention control
+(16), and there is evidence to suggest that the DLPFC and
+substantia nigra pars reticulata likely provide essential control
+signals for saccadic suppression (17, 18). Experimental inhibition
+in these areas leads to increased intrusive saccades, similar to
+
+Frontiers in Psychiatry
+
+02
+
+frontiersin.org
+
+
+Yoo et al.
+
+10.3389/fpsyt.2024.1337595
+
+Anxiety Related Disorders (SCARED) (32, 33), and Family
+Adaptability and Cohesion Evaluation Scale IV (FACES-IV) (34)
+were further applied to assess subjective distress related to
+depression, anxiety, and family functioning, respectively. Finally,
+the Stroop task and the Auditory/Visual Continuous Performance
+Test (ATA) (35) were administered to each participant. In the
+Stroop task (6), four representative T-scores (word, color, colorword, and interference scores) were measured. Similarly, the Tscores of omission error (OE), commission error (CE), response
+time (RT), and variability in RT were computed from each visual
+and auditory ATA. T-score data (four scores from the Stroop task
+and eight scores from the ATA) were included as behavioral task
+features in the ML analysis.
+
+and clinical information on ADHD obtained from physicians’
+examinations and contrasted its performance with that of the
+stage 1 model (stage 3).
+
+Methods
+Participants
+We recruited children aged 6–12 years through advertisements
+at four university hospitals and one elementary school in Seoul,
+Korea. Participants voluntarily visited one of the hospitals and
+underwent clinical and semi-structured diagnostic interviews using
+the Korean version of the Kiddie-Schedule for Affective Disorders
+and Schizophrenia for School-Age Children-Present and Lifetime
+Version (K-SADS-PL-K) (25) by a child and adolescent psychiatrist.
+Based on these interviews, a diagnosis of ADHD was determined
+according to the ADHD criteria of the Diagnostic and Statistical
+Manual of Mental Disorders, Fifth Edition (DSM-5). Individuals
+who did not meet any DSM-5 criteria, had no history of psychiatric
+disorder in ﬁrst degree relatives, and were not taking any
+medication that could affect the nervous system (including
+psychiatric medication and anticonvulsants) were classiﬁed as
+TDC. Additionally, intelligence quotient (IQ) was measured for
+each participant using the Korean Wechsler Intelligence Scale for
+Children-Fourth Edition and Fifth Edition.
+The exclusion criteria were as follows: (1) any history of medical
+or neurological disorders; (2) IQ < 70; and (3) any history of autism
+spectrum disorder, psychotic, bipolar, or eating disorders.
+
+Eye-tracking experiment and
+behavioral paradigms
+The eye-tracking system used for the experiment comprised a
+visual display, a connecting server, and a main server computer for
+deep learning. The tasks were initially recorded with a camera lens
+attached to the Android 10 system built into the Samsung Galaxy
+Tab 7+. SeeSo SDK (built on Unity SDK 2.4.2), developed by
+VisualCamp, was used to capture frontal facial images and to
+calculate 2D gaze points. Digitized data were stored on each
+mobile pad and subsequently transferred to the main
+server computer.
+During the experiment, the participants were asked to sit in an
+upright position, and their chairs were height-adjusted so that the
+participant’s face was at the center of the smart pad device. The
+screen was placed approximately 50 cm away from the participants’
+faces. Before performing the behavioral tasks, each participant was
+asked to calibrate the eye-tracking system to accurately estimate
+their eye movements. To become accustomed to eye rolling while
+minimizing head movement, participants were subjected to ﬁve
+practice stimuli before the initiation of each task.
+We excluded eye-tracking data if the x- and y-coordinates did
+not follow the gaze and remained stalled at a ﬁxed coordinate, or if
+the gaze was tracked, but the reference point of the x- or ycoordinate was off-screen.
+The eye tracking experiment comprised ﬁve serial tasks
+(Figure 1): (1) Pro-Saccades Task (PST), (2) Anti-Saccades Task
+(AST), (3) Memory-Guided Saccades Task (MGST), (4) Change
+Detection Task (CDT), and (5) Stroop Task.
+First, the PST was administered to participants using a
+previously described protocol (12). The PST is a visually guided
+saccade task comprising 30 stimuli (Supplementary Figure 1). The
+participants were all given speciﬁc instructions to initially focus
+their gaze on a central ﬁxation point (FP). Subsequently, they were
+required to shift their gaze from the FP location to a peripheral
+target stimulus (animal face illustration), which unpredictably
+appeared on either the left or right side of the smart pad device.
+After an additional 1,000 ms, one of two scenarios unfolded; either
+the FP vanished, and after a gap duration of 200 ms, an eccentric
+target stimulus emerged; or, the target stimulus remained
+illuminated for 1,000 ms.
+
+Ethical statements
+This study was approved by the Institutional Review Boards of
+Seoul National University (SNU) Hospital (Approval Number
+2103-197-1208), Chung-Ang University Hospital (2160-003-464),
+Seoul St. Mary’s Hospital (KC21FIDI0355), and Seoul Metropolitan
+Government (SMG)–SNU Boramae Medical Center (30-2021-111).
+Written informed consent was obtained from all participants and
+their caregivers. The study protocol was approved by the
+Institutional Committee on Human Research, and conformed to
+the ethical guidelines of the 1975 Declaration of Helsinki.
+
+Clinical symptom assessment
+After enrollment, the severity of ADHD symptom was
+determined by one of the participants’ caregivers using the
+Korean version of Dupaul’s ADHD Rating Scale IV (ADHD-RS)
+(26). The Child Behavior Checklist (CBCL) (27) and the Disruptive
+Behavior Disorders Rating Scale (DBDRS) (28) were obtained from
+the primary caregivers of the participants to estimate the children’s
+levels of internalizing and externalizing symptoms.
+Participants were asked to complete questionnaires including
+the Children’s Depression Inventory (CDI) (29) and the Beck
+Depression Inventory (BDI) (30, 31). The Screen for Child
+
+Frontiers in Psychiatry
+
+03
+
+frontiersin.org
+
+
+Yoo et al.
+
+10.3389/fpsyt.2024.1337595
+
+A
+
+B
+
+C
+
+D
+
+E
+
+FIGURE 1
+
+Overview of the ﬁve eye-tracking tasks used in the current study. The (A) Pro-Saccades Task, (B) Anti-Saccades Task, (C) Memory Guided-Saccades
+Task, (D) Change Detection Task, and (E) Stroop Task.
+
+trials so that the participant could not predict where the cue would
+appear on any given trial. A total of 36 trials were included in the MGST.
+The CDT is designed to assess visuospatial working memory
+and attention capacity. The procedure for the CDT was the same as
+that in the original paper, using the same time schedule
+(Supplementary Figure 4) (38, 39). A total 15 pairs of images was
+used, with each pair displaying minor differences in color, location
+and presence/absence at the center or periphery. The ﬁrst image was
+displayed for 240ms, after which it was changed to another pair of
+images sequentially (240ms), with a black background (80ms) in
+between. Participants were asked to identify the differences between
+images to examine their visual working memory. In our application,
+we made a circle appear when participants touched the screen. This
+way, they knew what they had chosen. If the subject answered
+correctly, they moved to the next image pair; if not, they moved to
+the next pair after 20 seconds.
+Finally, the Stroop task was implemented to assess response
+inhibition and working memory when processing incongruent
+
+In the AST (Supplementary Figure 2), the presentation of the
+stimuli mirrored the previously described procedure (12).
+Participants were instructed to direct their gaze toward the
+central FP. However, upon the appearance of the eccentric
+stimulus, they were directed to shift their gaze away from the
+stimulus and toward the opposite side of the vertical meridian. The
+stimulus location was assigned randomly to either side. This task
+comprised 48 anti-saccade trials 5 seconds apart.
+The MGST was administered to assess visuospatial working
+memory. The MGST procedure followed that indicated in the
+original article (36, 37), with the following time adjustments
+(Supplementary Figure 3). The participants were initially asked to
+gaze at the FP for 1,000 ms, and the target stimulus appeared at the
+peripheral region of the screen (500ms) according to randomly assign
+order, then disappeared (Supplementary Figure 2). After the
+disappearance of the FP (1,000ms), participants needed to use their
+memory to direct their eyes toward a remembered location in the
+absence of a visual stimulus. The stimulus location was randomized over
+
+Frontiers in Psychiatry
+
+04
+
+frontiersin.org
+
+
+Yoo et al.
+
+10.3389/fpsyt.2024.1337595
+
+generalization of the model (42). In a comparative study of
+multiple ML algorithms, feature selection using RandomForest
+showed the best performance among a variety of datasets (42).
+Thus, we employed the RandomForest classiﬁer from the python
+‘scikit-learn’ library for feature selection across the ﬁve serial tasks.
+The accuracy was measured using the 5-fold cross-validation (CV)
+method, and the rank of each feature was determined based on the
+feature importance metric, calculated using the ML algorithm. For
+each fold of the group, 2000 iterative tree generation processes were
+performed to establish a stable estimation model. Subsequently, the
+backward elimination method was employed to remove features
+with the lowest importance value and classiﬁcation accuracy of the
+model. Once the features with less importance were removed, the
+feature set demonstrating the highest averaged 5-fold accuracy was
+identiﬁed for each task.
+Next, we tested the estimation power of the selected eyetracking features subset using various ML algorithms built into
+the ‘scikit-learn’ library. A model with an accuracy of 0.1 or
+greater than the Dummy classiﬁer (a model that classiﬁes all
+participants as TDC), was determined as a model with superior
+classiﬁcation power. Soft voting is a helpful technique that uses
+an average of the probabilities between the predictions of
+multiple classiﬁers to determine the ﬁnal class (43). To
+enhance ﬂexibility and generalization of our classiﬁcation
+model, we combined the superior models (RandomForest
+classiﬁers and Extra Trees classiﬁres) using soft voting
+methods. Each model included in the soft voting methods was
+tuned to the value which showed the highest accuracy through
+hyperparameter analysis.
+Finally, we examined the utility of the eye-tracking-featuresonly model as a screening measure. We considered AUC
+(separability) as an important metric, along with Recall
+(sensitivity), to determine its potential as a screening tool. The
+classiﬁcation performance (Accuracy, Recall, Precision, and F1
+score) of each model was determined using the eye-tracking
+feature only model (Stage 1), conventional ADHD screening tools
+(ATA, Stroop task, and both) (Stage 2), and optimal diagnosis using
+combined demographic, behavioral, and clinical information (Stage
+3). To verify the value of the eye-tracking-only model as a screening
+tool, the area under the curve AUC was obtained and compared to
+compare the receiver operating characteristics (ROC) of the models
+at each stage.
+The features included in each stage were as follows:
+
+stimuli (40). For this, we employed the Stroop paradigm
+(Supplementary Figure 5), as utilized by Vakil et al. (41). One of
+the 4 color name were exhibited using “Malgun Gothic” font, blackcolored, size 144, while the colors themselves were displayed within
+a rectangle. Participants were instructed to identify the color within
+the rectangle by pressing the corresponding name on the lower side
+of screen. The task comprised a total of 40 trials, including 50
+congruent and 50 incongruent trials. After a stimulus appeared on
+the screen (5,000ms), 2,000 ms of FP was followed as a signal that
+the trial had changed. If the subject answered correctly, they moved
+to the next trial; otherwise, a gap of after 5 seconds was included
+before moving on.
+
+Selection of eye-tracking features and
+identiﬁcation of the optimal model using
+ML algorithms
+From each task, we extracted 20 distinct eye-tracking
+features (Table 1). In the current experiment, a ﬁxation was
+deﬁned as a cluster of points where the distance between points
+indicated they were spatially close to each other, and the
+temporal interval was longer than 70 ms. The saccade was
+deﬁned as an eye gaze movement from one point to another.
+We estimated the degree and latency of each saccade and elicited
+the total degree and its average and standard deviation as
+features. Additionally, the total count, total duration, mean
+duration, and longest time spent on saccades and ﬁxations
+(Saccade Time Max, and Fixation Time Max) were obtained.
+To estimate the extent of the participants’ attention, the total and
+mean time spent looking at the screen, hit count, and total
+elapsed time on the task were recorded as eye-tracking features.
+Finally, the average x and y coordinate values of the participant’s
+gaze were calculated from the eye-tracking data.
+Feature selection is essential to reduce the inﬂuence of features
+of low importance, avoid over-ﬁtting, and to improve the
+TABLE 1 Twenty eye-tracking features extracted from each of ﬁve
+sequential tasks.
+
+Features
+Saccade Degree Mean
+
+Fixation Count
+
+Saccade Degree SD
+
+Fixation Mean
+
+Saccade Degree Total
+
+Fixation Duration
+
+Saccade Latency Mean
+
+Fixation Time Max
+
+Saccade Latency SD
+
+Coordinate X Mean
+
+Saccade Latency Total
+
+Coordinate Y Mean
+
+Saccade Count
+
+Screen Duration Mean
+
+Saccade Mean
+
+Screen Duration Total
+
+Saccade Duration
+
+Hit Count
+
+Saccade Time Max
+
+Total Elapsed Time
+
+Frontiers in Psychiatry
+
+Stage 1: Eye-tracking features only [33 features in total].
+Stage 2: Visual and auditory ATA only [8 features]; Stroop task
+only [4 features]; both ATAs and Stroop task [12 features
+in total].
+Stage 3: Eye-tracking features [33 features], demographic
+features (age, sex, IQ), behavioral task features (features
+from the both ATAs [8 features] and the Stroop task [4
+features]), and clinical characteristics (CBCL [13 features],
+DBDRS [3 features], CDI, BDI, SCARED [6 features], and
+FACES-IV [3 features]) [75 features in total].
+
+05
+
+frontiersin.org
+
+
+Yoo et al.
+
+10.3389/fpsyt.2024.1337595
+
+auditory ATA and the Stroop task) were collected from 73 subjects (50
+with ADHD and 23 TDC).
+The ages of participants in the ADHD and TDC groups did not
+differ signiﬁcantly (Table 2). However, the ADHD group a higher
+proportion of boys than the TDC group (p<0.001). The average
+ADHD-RS total score was 25.98 ± 7.81 among the participants
+diagnosed with ADHD, which is higher than the clinical cutoff value
+(19 and above). Signiﬁcant differences were observed in the ADHDRS total scores (p<0.001), inattention (p<0.001), and hyperactivity/
+impulsivity domain scores (p<0.001) between the two groups.
+A comparison of the behavioral task measurements revealed
+that participants diagnosed with ADHD had higher OE and CE
+production in the visual and auditory ATA, as well as lower verbal
+ﬂuency and inhibitory control performance in the Stroop task,
+although their average IQ score did not signiﬁcantly differ from that
+of the control group (p = 0.770, Supplementary Table 1).
+Self-administered questionnaires showed that the ADHD group
+had higher levels of depressive and anxiety symptoms than the TDC
+group. Primary caregivers also reported that participants diagnosed
+with ADHD had more externalizing problems (includes Delinquent
+and Aggressive Behaviors), internalizing problems (includes
+Withdrawn, Anxious/Depressed), and total problems (includes
+Social, Thought, and Attention problems) in the CBCL, and
+disruptive behaviors in the DBDRS scale (Supplementary Table 1).
+Correlation results of eye-tracking features and conventional
+screening methods (includes scores of ADHD-RS, Stroop task, and
+visual and auditory ATA), are summarized in online Supplementary
+Tables 2, 3.
+
+Statistical tests
+The demographic and clinical characteristics, ADHD symptoms,
+and behavioral task performance of the ADHD and TDC groups were
+compared using parametric (independent-sample t-tests) and nonparametric (Mann-Whitney U test) tests, depending on whether the
+normality assumption was met. If the p-value of the KolmogorovSmirnov test and the Shapiro-Wilk test was greater than 0.05, we
+determined the data was normal. For categorical variables, we used the
+chi-square test. Pearson’s correlation was conducted between eyetracking features and scores of ADHD-RS, ATA, Stroop task.
+Statistical results were analyzed using SPSS 24.0 software (IBM
+Corporation, Armonk, NY, USA).
+Second, ML analysis of eye tracking and relevant features was
+performed using Python 3.7.11 and scikit-learn 0.23.2. For the
+comparison of overall performance of models in each stage, the
+AUC was measured from each model at different stages. Then, the
+Wilcoxon rank sum test was performed to compare the AUCs between
+the models and the model with the eye tracking feature only (Stage 1).
+A test result was considered statistically signiﬁcant if the p-value
+was < 0.05.
+
+Results
+Participants and clinical characteristics
+This multicenter study initially recruited 250 participants (108
+children diagnosed with ADHD and 142 TDC). Among them, 7
+subjects were excluded prior to enrollment (3 withdrawal, 4
+screening failure). Further, 47 ADHD children and 61 TDC were
+excluded due to errors in collecting eye-tracking data (5 Gaze offscreen, 4 Incomplete Experiment, 99 Eye-tracking failure). Finally, 135
+participants (56 subjects with ADHD and 79 TDC) completed the eyetracking experiments (Figure 2). From among the 135 participants, the
+complete sets of clinical characteristics (IQ, CBCL, DBDRS, CDI, BDI,
+SCARED, and FACES-IV) and behavioral assessments (the visual and
+
+Classifying ADHD group from TDC using
+eye-tracking features only
+After recursive feature selection, 33 eye-tracking features from ﬁve
+tasks were retained. The list of selected eye-tracking features and their
+ranks is displayed in Table 3. Before applying the ML algorithm, we
+constructed an optimal eye-tracking features model by combining all
+eye-tracking features.
+
+FIGURE 2
+
+A ﬂowchart showing enrollment of the study participants.
+
+Frontiers in Psychiatry
+
+06
+
+frontiersin.org
+
+
+Yoo et al.
+
+10.3389/fpsyt.2024.1337595
+
+TABLE 2 Demographics of all study participants (n=135).
+
+Variables
+
+ADHD
+(n=56)
+
+TDC
+(n=79)
+
+P value
+
+Age, years †
+
+8.38 ± 1.58
+
+8.80 ± 1.82
+
+.053
+
+Gender (M:F)
+
+45:11
+
+33:46
+
+<0.001
+
+26.27 ± 8.46
+
+9.77 ± 5.71
+
+<0.001
+
+ADHD-RS inattention score †
+
+14.88 ± 4.82
+
+6.16 ± 3.87
+
+<0.001
+
+ADHD-RS hyperactivity/
+impulsivity score †
+
+11.39 ± 5.31
+
+3.61 ± 2.62
+
+<0.001
+
+ADHD-RS total score †
+
+ADHD and TDC. Although the age and IQ of the ADHD group
+were similar to those of the TDC group, the ML model using eyetracking features could only successfully classify the diagnosis of the
+participants with an accuracy of 76.3%. An ensemble of
+demographic, behavioral, and clinical features increased the
+accuracy and precision metrics of the model, resulting in the
+correct classiﬁcation of diagnosis. However, there was no
+signiﬁcant difference in the AUC among the ensemble models.
+Two tree-based decision algorithms were effective at classifying
+ADHD. The optimal number of features for classiﬁcation varied for
+each task; some showed signiﬁcant differences in conventional
+statistics, whereas others did not. In decision tree analysis, each
+feature is assigned a weight (importance) based on its attributes for
+classiﬁcation at each splitting step (44). Decision tree integrates
+weights from various features to improve overall performance
+compared to a single classiﬁer. Because of these characteristics,
+individual classiﬁers tend to make errors under different
+circumstances (45). Thus, some of the eye-tracking features
+selected in the optimal model may not be signiﬁcant in
+conventional statistical analysis. In each task, the tree-based
+algorithm tended to include more features in the model when the
+difference in eye-tracking features between the two groups was not
+distinct (i.e., PST and AST), and to classify with fewer features when
+there were signiﬁcant differences (i.e., MGST, CDT, and Stroop
+task). This ﬁnding suggests that features in the MGST, CDT, and
+the Stroop task may be sensitive indicators for classifying ADHD.
+In the current study, a total of 33 features useful for ADHD
+classiﬁcation were chosen from ﬁve eye-tracking tasks. We
+examined the role of features in each task in relation to
+attentional control, working memory, and response inhibition
+in ADHD.
+The neural mechanisms of saccadic eye movements are closely
+linked to those of attentional control (11, 46). Munoz et al. (9)
+demonstrated that individuals with ADHD exhibited extended RT,
+higher within-subject variability, and prolonged durations during
+the PST. A recent review also showed that the mean latency of prosaccades in ADHD was signiﬁcantly shorter, but the error rate was
+higher than controls in multiple studies (10, 47). The ADHD group
+also showed a reduced ability to suppress involuntary saccades
+when asked to ﬁx their gaze (9, 12, 47). Similarly, we found that
+participants with ADHD showed signiﬁcantly shorter ﬁxation
+durations in the PST than the TDC. The ADHD group also
+tended to have longer saccade latencies and greater saccade
+degrees, but no statistically signiﬁcant differences were found.
+These results suggest that individuals with ADHD are associated
+with reduced ﬁxation time and shorter saccade latency in the PST,
+which has been implicated in poor attentional control.
+The mechanisms underlying AST are thought to be associated
+with top-down inhibition of saccade-generating neurons (48). The
+ADHD group was found to have more errors in the task, as well as
+greater RT and within-subject variability (9). They also showed
+longer RT and more anti-saccade direction errors than TDCs (47,
+49). Another report demonstrated that ADHD children had a lower
+ability to suppress explorative saccade than controls (50). In
+accordance with the aforementioned ﬁndings, this study observed
+a signiﬁcant increase in the longest time spent on saccades (Saccade
+
+ADHD, Attention-Deﬁcit/Hyperacitivity Disorder; TDC, Typically Developing Children;
+ADHD-RS, Dupaul’s ADHD rating Scale, Korean version.
+†Mann-Whitney U test was applied because of violations of the normality assumption.
+
+Supplementary Table 4 summarizes the classiﬁcation metrics of
+each ML model in selecting the ADHD group using the optimal
+eye-tracking features model. The accuracies of the two models were
+greater than that of the Dummy classiﬁer (accuracy of 0.583). The
+‘RandomForest’ algorithm was found to have the highest accuracy
+(0.705), followed by the ‘ExtraTrees’ classiﬁer algorithm (0.687).
+The ﬁnal soft voting model combining the RandomForest and
+ExtraTrees classiﬁers showed an accuracy of 76.3% and good AUC
+(0.724), recall (0.725), precision (0.789), and F1-score (0.789)
+among the 135 participants (Figure 3A).
+
+Comparison of the performance of models
+using eye-tracking features only versus
+models using behavioral, demographic,
+and clinical features
+Multidimensional feature combination was performed using valid
+data from 73 participants. The eye-tracking-features-only model
+correctly classiﬁed 68.9% of diagnoses in stage 1 (Table 4).
+Compared to stage 1, the model using the Stroop task features had a
+better accuracy of 73.0%, but a more modest AUC of 0.621 (Figure 3B).
+The accuracy of the models increased to 78.4% and 77.0% when using
+the visual and auditory ATA features, and when using both ATAs and
+the Stroop task features, respectively. The AUC was the highest for the
+combination of both ATAs and the Stroop task features (0.769), but no
+signiﬁcant differences were found between the stage 2 model and the
+eye-tracking-features-only model (Figure 3C, both ATAs vs. stage 1,
+U= 2549, p =0.235; Stroop task vs. stage 1, U= 2684, p =0.419; both
+ATAs and Stroop task vs. stage 1, U= 2524, p =0.206).
+In stage 3, the classiﬁcation accuracy was the highest among all
+stages (86.5%), while the other ML model metrics were also
+improved. However, a comparison of ROC curves demonstrated
+no signiﬁcant differences between the AUCs of the stage 3 and stage
+1 models (Figure 3D, U= 2525, p =0.208).
+
+Discussion
+The current study revealed that a classiﬁcation model using eyetracking features was useful in differentiating between children with
+
+Frontiers in Psychiatry
+
+07
+
+frontiersin.org
+
+
+Yoo et al.
+
+10.3389/fpsyt.2024.1337595
+
+TABLE 3 Comparison of the eye-tracking features between the ADHD and TDC groups, selected from recursive feature elimination.
+
+Task sequence
+Pro-saccade task
+
+Anti-saccade task
+
+Memory-guided saccade task
+
+Change detection task
+
+Stroop task
+
+Feature
+
+Feature
+Importance
+
+ADHD
+(n=56)
+
+TDC
+(n=79)
+
+p-value
+
+Fixation Duration†
+
+0.038
+
+64.57 ± 19.70
+
+71.79 ± 16.90
+
+0.030
+
+Saccade Degree Mean
+
+0.025
+
+39.13 ± 7.23
+
+37.33 ± 8.20
+
+0.189
+
+Saccade
+Latency Mean†
+
+0.021
+
+1.21 ± 0.75
+
+1.08 ± 0.36
+
+0.932
+
+Saccade Mean†
+
+0.021
+
+8.98 ± 3.04
+
+8.95 ± 2.82
+
+0.830
+
+Saccade Degree SD†
+
+0.022
+
+29.10 ± 8.24
+
+29.41 ± 7.78
+
+0.630
+
+Saccade Degree Total†
+
+0.021
+
+7808.41 ± 3444.85
+
+7217.25 ± 3230.01
+
+0.233
+
+Fixation Time Max†
+
+0.020
+
+26.81 ± 4.87
+
+27.97 ± 4.08
+
+0.213
+
+Saccade Degree Mean
+
+0.033
+
+42.92 ± 5.98
+
+40.82 ± 8.63
+
+0.119
+
+Saccade Duration
+
+0.029
+
+52.44 ± 13.73
+
+48.18 ± 18.77
+
+0.151
+
+Saccade Degree Total†
+
+0.028
+
+20869.22 ± 7520.73
+
+18612.54 ± 8268.31
+
+0.061
+
+Fixation Duration†
+
+0.024
+
+104.47 ± 33.88
+
+103.06 ± 30.69
+
+0.918
+
+Coordinate Y Mean
+
+0.025
+
+20.20 ± 94.26
+
+10.44 ± 108.63
+
+0.588
+
+Saccade Degree SD
+
+0.028
+
+35.70 ± 8.52
+
+35.76 ± 8.43
+
+0.967
+
+Fixation Count
+
+0.019
+
+1131.79 ± 236.06
+
+1168.73 ± 241.93
+
+0.379
+
+Screen
+Duration Mean†
+
+0.023
+
+3.77 ± 4.91
+
+3.18 ± 3.51
+
+0.768
+
+Saccade Latency SD†
+
+0.020
+
+0.85 ± 0.36
+
+0.93 ± 0.62
+
+0.520
+
+Saccade Time Max
+
+0.025
+
+24.68 ± 6.58
+
+22.19 ± 7.41
+
+0.047
+
+Saccade Latency Total†
+
+0.020
+
+76.85 ± 13.23
+
+77.54 ± 17.02
+
+0.799
+
+Saccade Degree Total†
+
+0.048
+
+14201.95 ± 6935.07
+
+10647.83 ± 4475.26
+
+0.005
+
+Saccade Degree Mean†
+
+0.033
+
+40.88 ± 6.05
+
+37.48 ± 8.45
+
+0.032
+
+Saccade Time Max†
+
+0.035
+
+17.91 ± 6.64
+
+14.96 ± 5.47
+
+0.007
+
+Fixation Time Max†
+
+0.036
+
+32.41 ± 7.17
+
+35.54 ± 4.78
+
+0.020
+
+Fixation Mean†
+
+0.039
+
+28.71 ± 8.09
+
+32.27 ± 6.36
+
+0.013
+
+Saccade Latency Total
+
+0.033
+
+51.14 ± 12.20
+
+55.75 ± 10.84
+
+0.022
+
+Saccade Duration†
+
+0.029
+
+42.41 ± 17.58
+
+35.11 ± 14.18
+
+0.011
+
+Coordinate X Mean†
+
+0.023
+
+1.78 ± 88.28
+
+-13.09 ± 90.57
+
+0.198
+
+Saccade Degree SD
+
+0.057
+
+24.67 ± 4.76
+
+27.47 ± 6.61
+
+0.008
+
+Total Elapsed Time†
+
+0.038
+
+5658.91 ± 1333.01
+
+5172.72 ± 1088.88
+
+0.051
+
+Saccade Degree Mean
+
+0.024
+
+34.38 ± 7.12
+
+34.06 ± 7.25
+
+0.805
+
+Saccade Time Max†
+
+0.025
+
+12.36 ± 5.08
+
+13.27 ± 5.03
+
+0.219
+
+Saccade Degree Mean†
+
+0.052
+
+33.67 ± 6.43
+
+30.54 ± 6.35
+
+0.003
+
+Screen
+Duration Mean†
+
+0.037
+
+0.42 ± 0.32
+
+0.33 ± 0.34
+
+0.019
+
+Saccade Latency Total†
+
+0.043
+
+2.66 ± 0.75
+
+2.33 ± 0.65
+
+0.012
+
+Features are sorted by importance rank in the recursive feature elimination process.
+Feature importance was calculated by an averaged importance from the classiﬁcation analysis using an optimal model that includes all 33 eye-tracking features.
+ADHD, Attention-Deﬁcit/Hyperactivity Disorder; TDC, Typically Developing Children.
+†Mann-Whitney U test was applied because of violations of the normality assumption.
+
+Frontiers in Psychiatry
+
+08
+
+frontiersin.org
+
+
+Yoo et al.
+
+10.3389/fpsyt.2024.1337595
+
+A
+
+B
+
+C
+
+D
+
+FIGURE 3
+
+Receiver Operating Characteristic (ROC) curves for the models of ADHD by Ensemble stage. (A) An ROC curve for eye-tracking-features-only model
+in a large sample (135 subjects). (B) An ROC curve for Stage 1: Eye-tracking features only (73 subjects). (C) ROC curves for Stage 2: Behavioral task
+features (Features from the Visual and Auditory ATA, the Stroop task, and both ATAs and Stroop task). (D) An ROC curve for Stage 3: Ensemble of
+eye-tracking features, behavioral task feature (Features from the Stroop, and the visual ATA), demographics (age, gender, IQ), and clinical
+characteristics (CBCL, DBDRS, CDI, BDI, SCARED and FACES-IV).
+
+saccade responses, as evidenced by their failure to interrupt the
+provocative saccade of visual stimuli.
+The MGST (36, 37) and the CDT (38, 39) were both designed to
+reveal deﬁcits in visuospatial working memory among participants
+with ADHD. In individuals with ADHD, the decreased accuracy,
+
+Time Max) during the AST in the ADHD group compared to the
+TDC group. In addition, ADHD children showed a larger change in
+the Y-axis coordinate as well as an increase in saccade degree total
+and saccade degree mean compared to controls. This result
+indicates that the ADHD group had difﬁculty inhibiting the
+
+TABLE 4 Classiﬁcation performance of the ensemble model of the multi-dimensional feature.
+
+Accuracy
+
+Recall
+
+Precision
+
+F1-score
+
+AUC
+
+Comparison with
+Stage 1
+(p-value)
+
+0.689
+
+0.961
+
+0.700
+
+0.810
+
+0.662
+
+–
+
+Stroop task
+
+0.730
+
+0.980
+
+0.725
+
+0.833
+
+0.621
+
+0.419
+
+Visual and auditory ATA
+
+0.784
+
+0.961
+
+0.778
+
+0.860
+
+0.717
+
+0.235
+
+Both ATAs and Stroop task
+
+0.770
+
+0.941
+
+0.774
+
+0.850
+
+0.769
+
+0.206
+
+0.865
+
+0.980
+
+0.847
+
+0.909
+
+0.838
+
+0.208
+
+Model
+Stage 1
+Eye-tracking feature only
+
+Stage 2
+
+Stage 3
+Ensemble of eye-tracking, demographic,
+behavioral, clinical features
+AUC, Area under the curve; ATA, Advanced test of attention.
+
+Frontiers in Psychiatry
+
+09
+
+frontiersin.org
+
+
+Yoo et al.
+
+10.3389/fpsyt.2024.1337595
+
+In conclusion, our optimal model successfully classiﬁed ADHD
+by combining different eye-tracking features extracted from
+behavioral tasks that reﬂect the core problems of ADHD, such as
+difﬁculty in selective attention, working memory, and response
+inhibition. Additionally, the present study is expected to be highly
+applicable to ADHD screening as it measures eye-tracking features
+using a simple digital device. Future research will need to improve
+the measurement methods, such as using a VR headset, and further
+elaborate on model accuracy by including more participants and
+matching demographic and clinical characteristics.
+
+higher level of anticipatory errors, and prolonged latencies in MGS
+have been reported (22, 51). Hence, it has been reported that the
+ADHD group did not show a signiﬁcant difference in performance
+time compared to controls (38), but were less accurate in the CDT. This
+may occur due to impairments in response inhibition, and/or deﬁcits in
+visuospatial working memory (16). In parallel with these ﬁndings, we
+observed that the ADHD group had a wider range of gaze movements,
+relatively shorter ﬁxation times, and more saccadic eye movements
+during the MGST. In the CDT, individuals with ADHD showed large
+variation in Saccade Degree (Saccade Degree SD) which is consistent
+with recent literature (52, 53).
+Finally, in the Stroop task, the ADHD group showed a
+signiﬁcant increase in saccade degree and latency compared with
+the TDC group. Previous studies have shown that features of
+ADHD include more frequent gaze switches between the target
+and distractor, a higher overall time spent on the target and
+distractor, and a higher number of ﬁxations on the target (41).
+Our experiments could not measure the gaze switch itself; however,
+repeated saccade movement and hesitation before choosing the
+correct answer in the ADHD group may be associated with a greater
+saccade degree and saccade latency in need of decision making
+whether a stimulus is congruent or not. Although we did not
+identify any signiﬁcant differences in accuracy in the Stroop task,
+working memory and response inhibition presumably inﬂuenced
+the time taken to make a decision in the Stroop interference (40).
+The primary strength of this study is that we were able to
+distinguish the ADHD and TDC groups using only eye-tracking
+features. Compared to conventional screening methods, such as the
+ATA or Stroop task, the eye-tracking-features-only model was slightly
+less accurate, but performed equally well on recall metrics, and did not
+show a signiﬁcant difference in AUC. The ensemble of eye tracking,
+demographic, behavioral, and clinical data showed the best accuracy
+among all models, but there was no signiﬁcant difference in the AUC
+compared with the stage 1 model. Another important point is that a
+simple smart pad device can be used to obtain eye-tracking data. Smart
+pad devices are commonly used in many households, and it is expected
+that the use of currently developed eye-tracking algorithms can be
+easily applied to reduce the temporal and spatial constraints associated
+with screening for ADHD.
+Nevertheless, this study has several limitations which should be
+considered. Firstly, the sample size was small in the group that
+completed the behavioral tasks and provided clinical data. This
+limit would lead to trade-off between model complexity and
+accuracy and may have caused overﬁtting problems in the ML
+analysis. However, we used a tree-based algorithm to overcome this
+overﬁtting by setting the node depth to reduce overﬁtting, and
+subsequently found that the eye-tracking features alone could
+signiﬁcantly classify ADHD. Second, in terms of sex, there were
+signiﬁcantly more boys than girls in the ADHD group, but not in
+the TDC group. In the future, it may be necessary to conduct a sexmatched study to overcome this effect. Finally, the accuracy of eyetracking metrics could have been affected by the children’s head
+movements. In this study, we attempted to improve this accuracy by
+excluding a large amount of inaccurate data, but we also believe that
+higher-quality eye-tracking data can be obtained using a virtual
+reality (VR) head-mounted eye-tracking system.
+
+Frontiers in Psychiatry
+
+Data availability statement
+The original contributions presented in the study are included
+in the article/Supplementary Material. Further inquiries can be
+directed to the corresponding author.
+
+Ethics statement
+The studies involving humans were approved by Institutional
+Review Boards of Seoul National University (SNU) Hospital
+(Approval Number, 2103-197-1208), Institutional Review Boards of
+Chung-Ang University Hospital (2160-003-464), Institutional Review
+Boards of Seoul St. Mary’s Hospital (KC21FIDI0355), Institutional
+Review Boards of Seoul Metropolitan Government (SMG)–SNU
+Boramae Medical Center (30-2021-111). The studies were conducted
+in accordance with the local legislation and institutional requirements.
+Written informed consent for participation in this study was provided
+by the participants’ legal guardians/next of kin.
+
+Author contributions
+JY: Conceptualization, Data curation, Formal analysis,
+Investigation, Writing – original draft. CK: Conceptualization,
+Formal analysis, Investigation, Writing – original draft. JL:
+Conceptualization, Formal analysis, Supervision, Writing – review &
+editing. BW: Conceptualization, Formal analysis, Supervision, Writing
+– review & editing. C-HC: Data curation, Investigation, Writing –
+review & editing. HH: Data curation, Investigation, Writing – review &
+editing. DH: Conceptualization, Data curation, Investigation, Writing –
+review & editing. HK: Conceptualization, Funding acquisition,
+Resources, Software, Validation, Writing – review & editing. HC:
+Conceptualization, Funding acquisition, Resources, Software,
+Validation, Writing – review & editing. J-WK: Conceptualization,
+Data curation, Investigation, Project administration, Supervision,
+Validation, Writing – review & editing.
+
+Funding
+The author(s) declare ﬁnancial support was received for the
+research, authorship, and/or publication of this article. This work
+was supported by the Technological Innovation R&D Program
+(S2840728) funded by the Ministry of SMEs and Startups (MSS,
+
+10
+
+frontiersin.org
+
+
+Yoo et al.
+
+10.3389/fpsyt.2024.1337595
+
+Korea). This research was supported by a grant from the Korea Health
+Technology R&D Project through the Korea Health Industry
+Development Institute (KHIDI) and funded by the Ministry of
+Health & Welfare, Republic of Korea (grant number: HI22C0776).
+
+Publisher’s note
+All claims expressed in this article are solely those of the authors
+and do not necessarily represent those of their afﬁliated
+organizations, or those of the publisher, the editors and the
+reviewers. Any product that may be evaluated in this article, or
+claim that may be made by its manufacturer, is not guaranteed or
+endorsed by the publisher.
+
+Acknowledgments
+All individuals who contributed to this paper are listed
+as authors.
+
+Conﬂict of interest
+
+Supplementary material
+
+Authors HK and HC are co-founders of AI.ble Therapeutics.
+The remaining authors declare that the research was conducted
+in the absence of any commercial or ﬁnancial relationships that
+could be construed as a potential conﬂict of interest.
+
+The Supplementary Material for this article can be found online
+at: https://www.frontiersin.org/articles/10.3389/fpsyt.2024.1337595/
+full#supplementary-material
+
+References
+1. Schubiner H, Katragadda S. Overview of epidemiology, clinical features, genetics,
+neurobiology, and prognosis of adolescent attention-deﬁcit/hyperactivity disorder. Adolesc
+Med State Art Rev (2008) 19(2):209–15,vii. doi: 10.1542/9781581104035-overview
+
+17. Funahashi S, Chafee MV, Goldman-Rakic PS. Prefrontal neuronal activity in
+rhesus monkeys performing a delayed anti-saccade task. Nature (1993) 365(6448):753–
+6. doi: 10.1038/365753a0
+
+2. DuPaul GJ, Morgan PL, Farkas G, Hillemeier MM, Maczuga S. Academic and
+social functioning associated with attention-deﬁcit/hyperactivity disorder: latent class
+analyses of trajectories from kindergarten to ﬁfth grade. J Abnorm Child Psychol (2016)
+44(7):1425–38. doi: 10.1007/s10802-016-0126-z
+
+18. Hikosaka O, Wurtz RH. Visual and oculomotor functions of monkey substantia
+nigra pars reticulata. II. Visual responses related to ﬁxation of gaze. J Neurophysiol
+(1983) 49(5):1254–67. doi: 10.1152/jn.1983.49.5.1254
+19. Hikosaka O, Takikawa Y, Kawagoe R. Role of the basal ganglia in the control of
+purposive saccadic eye movements. Physiol Rev (2000) 80(3):953–78. doi: 10.1152/
+physrev.2000.80.3.953
+
+3. Gualtieri CT, Johnson LG. ADHD: is objective diagnosis possible? Psychiatry
+(Edgmont) (2005) 2(11):44–53.
+
+20. Siqueiros Sanchez M, Falck-Ytter T, Kennedy DP, Bolte S, Lichtenstein P,
+D'Onofrio BM, et al. Volitional eye movement control and ADHD traits: a twin
+study. J Child Psychol Psychiatry (2020) 61(12):1309–16. doi: 10.1111/jcpp.13210
+
+4. Conners CK. Issues in the study of adolescent ADD-H/hyperactivity.
+Psychopharmacol Bull (1985) 21(2):243–50.
+5. Greenberg LM, Waldman ID. Developmental normative data on the test of
+variables of attention (T.O.V.A.). J Child Psychol Psychiatry (1993) 34(6):1019–30. doi:
+10.1111/j.1469-7610.1993.tb01105.x
+
+21. Castellanos FX, Marvasti FF, Ducharme JL, Walter JM, Israel ME, Krain A, et al.
+Executive function oculomotor tasks in girls with ADHD. J Am Acad Child Adolesc
+Psychiatry (2000) 39(5):644–50. doi: 10.1097/00004583-200005000-00019
+
+6. Stroop JR. Studies of interference in serial verbal reactions. J Exp Psychol (1935) 18
+(6):643–62. doi: 10.1037/h0054651
+7. Berg EA. A simple objective technique for measuring ﬂexibility in thinking. J Gen
+Psychol (1948) 39:15–22. doi: 10.1080/00221309.1948.9918159
+
+22. Mostofsky SH, Lasker AG, Singer HS, Denckla MB, Zee DS. Oculomotor
+abnormalities in boys with tourette syndrome with and without ADHD. J Am Acad Child
+Adolesc Psychiatry (2001) 40(12):1464–72. doi: 10.1097/00004583-200112000-00018
+
+8. Shaked D, Faulkner LMD, Tolle K, Wendell CR, Waldstein SR, Spencer RJ.
+Reliability and validity of the conners' Continuous performance test. Appl Neuropsychol
+Adult (2020) 27(5):478–87. doi: 10.1080/23279095.2019.1570199
+
+23. Molina R, Redondo B, Vera J, Garcia JA, Munoz-Hoyos A, Jimenez R. Children with
+attention-deﬁcit/hyperactivity disorder show an altered eye movement pattern during
+reading. Optom Vis Sci (2020) 97(4):265–74. doi: 10.1097/OPX.0000000000001498
+
+9. Munoz DP, Armstrong IT, Hampton KA, Moore KD. Altered control of visual
+ﬁxation and saccadic eye movements in attention-deﬁcit hyperactivity disorder. J
+Neurophysiol (2003) 90(1):503–14. doi: 10.1152/jn.00192.2003
+
+24. Bhullar A, Kumar K, Anand A. ADHD and neuropsychology: developmental
+perspective, assessment, and interventions. Ann Neurosci (2023) 30(1):5–7. doi: 10.1177/
+09727531231171765
+
+10. Levantini V, Muratori P, Inguaggiato E, Masi G, Milone A, Valente E, et al. EYES are the
+window to the mind: eye-tracking technology as a novel approach to study clinical
+characteristics of ADHD. Psychiatry Res (2020) 290:113135. doi: 10.1016/j.psychres.2020.113135
+
+25. Kim YS, Cheon KA, Kim BN, Chang SA, Yoo HJ, Kim JW, et al. The reliability
+and validity of Kiddie-Schedule for Affective Disorders and Schizophrenia-Present and
+Lifetime Version- Korean version (K-SADS-PL-K). Yonsei Med J (2004) 45(1):81–9.
+doi: 10.3349/ymj.2004.45.1.81
+
+11. Maron DN, Bowe SJ, Spencer-Smith M, Mellahn OJ, Perrykkad K, Bellgrove
+MA, et al. Oculomotor deﬁcits in attention deﬁcit hyperactivity disorder (ADHD): A
+systematic review and comprehensive meta-analysis. Neurosci Biobehav Rev (2021)
+131:1198–213. doi: 10.1016/j.neubiorev.2021.10.012
+
+26. So Y, Noh J, Kim Y, Ko S, Koh Y. The reliability and validity of Korean parent
+and teacher ADHD rating scale. J Korean Neuropsychiatr Assoc (2002) 41(2):283–9.
+27. Oh K LH, Hong K, Ha E. Korean Version of Child Behavior Checklist (K-CBCL).
+Seoul: Chungang Aptitude Publishing Co. Ltd (1997).
+
+12. Huang JH, Chan YS. Saccade eye movement in children with attention deﬁcit
+hyperactivity disorder. Nord J Psychiatry (2020) 74(1):16–22. doi: 10.1080/
+08039488.2019.1666919
+
+28. Ise E, Gortz-Dorten A, Dopfner M. Reliability and validity of teacher-rated
+symptoms of oppositional deﬁant disorder and conduct disorder in a clinical sample.
+Psychopathology (2014) 47(5):312–8. doi: 10.1159/000362373
+
+13. Moschovakis AK, Scudder CA, Highstein SM. The microscopic anatomy and
+physiology of the mammalian saccadic system. Prog Neurobiol (1996) 50(2-3):133–254.
+doi: 10.1016/S0301-0082(96)00034-2
+
+29. Cho S LY. Development of the Korean form of the Kovacs' Children's depression
+inventory. J Korean Neuropsychiatr Assoc (1990) 29(4):943–56.
+
+14. Munoz DP, Dorris MC, Pare M, Everling S. On your mark, get set: brainstem
+circuitry underlying saccadic initiation. Can J Physiol Pharmacol (2000) 78(11):934–44.
+doi: 10.1139/y00-062
+
+30. Beck AT, Ward CH, Mendelson M, Mock J, Erbaugh J. An inventory for measuring
+depression. Arch Gen Psychiatry (1961) 4:561–71. doi: 10.1001/archpsyc.1961.01710120031004
+31. Lee YH. Development of Korean version of BDI, SDS, and MMPI-D: a reliability
+and validity study. Korean J Clin Psychol (1991) 10:98–113.
+
+15. Pierrot-Deseilligny C, Milea D, Muri RM. Eye movement control by the cerebral
+cortex. Curr Opin Neurol (2004) 17(1):17–25. doi: 10.1097/00019052-200402000-00005
+
+32. Birmaher B, Khetarpal S, Brent D, Cully M, Balach L, Kaufman J, et al. The
+Screen for Child Anxiety Related Emotional Disorders (SCARED): scale construction
+and psychometric characteristics. J Am Acad Child Adolesc Psychiatry (1997) 36
+(4):545–53. doi: 10.1097/00004583-199704000-00018
+
+16. Sherigar SS, Gamsa AH, Srinivasan K. Oculomotor deﬁcits in attention deﬁcit
+hyperactivity disorder: a systematic review and meta-analysis. Eye (Lond) (2023) 37
+(10):1975–81. doi: 10.1038/s41433-022-02284-z
+
+Frontiers in Psychiatry
+
+11
+
+frontiersin.org
+
+
+Yoo et al.
+
+10.3389/fpsyt.2024.1337595
+
+33. Shin J, Kim KM, Lee KH, Hong SB, Lee J, Choi CH, et al. Psychometric properties and
+factor structure of the Korean version of the screen for child anxiety related emotional
+disorders (SCARED). BMC Psychiatry (2020) 20(1):89. doi: 10.1186/s12888-020-02505-3
+
+44. Maudes J, Rodrı́guez JJ, Garcı́a-Osorio C, Garcı́a-Pedrajas N. Random feature
+weights for decision tree ensemble construction. Inform Fusion (2012) 13(1):20–30. doi:
+10.1016/j.inffus.2010.11.004
+
+34. Olson D. FACES IV and the Circumplex Model: validation study. J Marital Fam
+Ther (2011) 37(1):64–80. doi: 10.1111/j.1752-0606.2009.00175.x
+
+45. Polikar R. Ensemble based systems in decision making. IEEE Circuits Syst
+magazine (2006) 6(3):21–45. doi: 10.1109/MCAS.2006.1688199
+
+35. Shin MS, Choi H, Kim H, Hwang JW, Kim BN, Cho SC. A study of
+neuropsychological deﬁcit in children with obsessive-compulsive disorder. Eur
+Psychiatry (2008) 23(7):512–20. doi: 10.1016/j.eurpsy.2008.03.010
+
+46. Moore T, Fallah M. Control of eye movements and spatial attention. Proc Natl
+Acad Sci U S A. (2001) 98(3):1273–6. doi: 10.1073/pnas.98.3.1273
+47. Bucci MP, Stordeur C, Septier M, Acquaviva E, Peyre H, Delorme R.
+Oculomotor abnormalities in children with attention-deﬁcit/hyperactivity disorder
+are improved by methylphenidate. J Child Adolesc Psychopharmacol (2017) 27(3):274–
+80. doi: 10.1089/cap.2016.0162
+
+36. Reinhart RM, Heitz RP, Purcell BA, Weigand PK, Schall JD, Woodman GF.
+Homologous mechanisms of visuospatial working memory maintenance in macaque
+and human: properties and sources. J Neurosci (2012) 32(22):7711–22. doi: 10.1523/
+JNEUROSCI.0215-12.2012
+
+48. Coe BC, Munoz DP. Mechanisms of saccade suppression revealed in the anti-saccade
+task. Philos Trans R Soc Lond B Biol Sci (2017) 372(1718). doi: 10.1098/rstb.2016.0192
+
+37. Opris I, Barborica A, Ferrera VP. Comparison of performance on memoryguided saccade and delayed spatial match-to-sample tasks in monkeys. Vision Res
+(2003) 43(3):321–32. doi: 10.1016/S0042-6989(02)00418-2
+
+49. Fernandez-Ruiz J, Hakvoort Schwerdtfeger RM, Alahyane N, Brien DC, Coe BC,
+Munoz DP. Dorsolateral prefrontal cortex hyperactivity during inhibitory control in
+children with ADHD in the antisaccade task. Brain Imaging Behav (2020) 14(6):2450–
+63. doi: 10.1007/s11682-019-00196-3
+
+38. Turkan BN, Amado S, Ercan ES, Percinel I. Comparison of change detection
+performance and visual search patterns among children with/without ADHD: Evidence
+from eye movements. Res Dev Disabil (2016) 49-50:205–15. doi: 10.1016/j.ridd.2015.12.002
+
+50. Hanisch C, Radach R, Holtkamp K, Herpertz-Dahlmann B, Konrad K.
+Oculomotor inhibition in children with and without attention-deﬁcit hyperactivity
+disorder (ADHD). J Neural Transm (Vienna) (2006) 113(5):671–84. doi: 10.1007/
+s00702-005-0344-y
+
+39. Rensink RA, Kevin O'Regan J, Clark JJ. On the failure to detect changes in scenes
+across brief interruptions. Visual Cogn (2000) 7(1-3):127–45. doi: 10.1080/135062800394720
+40. Duell N, Icenogle G, Silva K, Chein J, Steinberg L, Banich MT, et al. A crosssectional examination of response inhibition and working memory on the Stroop task.
+Cogn Dev (2018) 47:19–31. doi: 10.1016/j.cogdev.2018.02.003
+41. Vakil E, Mass M, Schiff R. Eye movement performance on the stroop test in adults
+with ADHD. J Atten Disord (2019) 23(10):1160–9. doi: 10.1177/1087054716642904
+
+51. Mahone EM, Mostofsky SH, Lasker AG, Zee D, Denckla MB. Oculomotor
+anomalies in attention-deﬁcit/hyperactivity disorder: evidence for deﬁcits in response
+preparation and inhibition. J Am Acad Child Adolesc Psychiatry (2009) 48(7):749–56.
+doi: 10.1097/CHI.0b013e3181a565f1
+
+42. Chen R-C, Dewi C, Huang S-W, Caraka RE. Selecting critical features for data
+classiﬁcation based on machine learning methods. J Big Data (2020) 7(1):52. doi:
+10.1186/s40537-020-00327-4
+
+52. Lee DY, Shin Y, Park RW, Cho SM, Han S, Yoon C, et al. Use of eye tracking to
+improve the identiﬁcation of attention-deﬁcit/hyperactivity disorder in children. Sci
+Rep (2023) 13(1):14469. doi: 10.1038/s41598-023-41654-9
+
+43. Wang H, Yang Y, Wang H, Chen D. Soft-voting clustering ensemble. In:
+Multiple Classiﬁer Systems: 11th International Workshop, MCS 2013, Nanjing, China,
+May 15-17, 2013 Proceedings 11. (Berlin, Heidelberg: Springer) (2013).
+
+53. Hochhauser M, Aran A, Grynszpan O. Change blindness in adolescents with
+attention-deﬁcit/hyperactivity disorder: use of eye-tracking. Front Psychiatry (2022)
+13:770921. doi: 10.3389/fpsyt.2022.770921
+
+Frontiers in Psychiatry
+
+12
+
+frontiersin.org

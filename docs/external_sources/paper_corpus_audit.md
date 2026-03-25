@@ -2,7 +2,7 @@
 
 Audit date: 2026-03-25
 
-This note captures the first post-LFS audit state of the paper corpus.
+This note captures the paper-corpus state after the first repair tranche.
 
 ## Current Shape
 
@@ -11,22 +11,24 @@ This note captures the first post-LFS audit state of the paper corpus.
 - Bibliographies, provenance manifests, HTML captures, and text extracts remain
   in normal Git for reviewability.
 
-## Observed Gaps
+## Repaired Gaps
 
-### 1. Zero-byte legacy PDF placeholders
+### 1. Legacy placeholders were replaced or retired
 
-The following tracked files currently exist as zero-byte placeholders:
+The six tracked zero-byte placeholder PDFs have been removed from `research/`
+and replaced with canonical cache entries in `papers/downloads/`.
 
-- `research/colorblindness/blue_cone_monochromacy/Sechrest_2023_BCM_Gene_Therapy_Review.pdf`
-- `research/neurodivergence/adhd/2024_Eye_Tracking_ADHD_Screening.pdf`
-- `research/neurodivergence/autism/AASPIRE_Autism_Web_Accessibility_Guidelines_2019.pdf`
-- `research/neurodivergence/dyslexia/Mueller-Axt_2024_Magnocellular_LGN_Dyslexia.pdf`
-- `research/seizures/photosensitive_epilepsy/Fisher_2022_Visually_Sensitive_Seizures.pdf`
-- `research/visual_impairments/nystagmus/2024_INS_Gene_Therapy_Clinical_Trials.pdf`
+- Four placeholders now resolve to real PDF plus text sidecars.
+- Two placeholders now resolve to PMC HTML full-text captures plus trace
+  artifacts documenting blocked direct PDF fetches.
 
-These should be treated as missing-source stubs, not as valid cached papers.
+See:
 
-### 2. Duplicate PDFs across canonical lanes
+- `papers/downloads/CANONICAL_REGISTRY.json`
+- `papers/downloads/paper_corpus_tracking.bib`
+- [Paper corpus registry](/home/eirikr/Github/openperception/docs/external_sources/paper_corpus_registry.md)
+
+### 2. Duplicate PDFs across canonical lanes are documented
 
 The following files are byte-identical duplicates:
 
@@ -47,13 +49,20 @@ The following files are byte-identical duplicates:
 These are not urgent because LFS de-duplicates object storage by content, but
 they do create naming drift and citation ambiguity.
 
-## Recommended Next Steps
+## Quality Gate
 
-1. Choose one canonical storage lane for each paper: either `papers/downloads/`
-   as the source cache or `research/` as the topic-local archive.
-2. Replace zero-byte placeholders with real artifacts plus provenance, or
-   explicitly convert them into README-style trace notes.
-3. Update docs that cite duplicate filenames so claims point to one stable
-   artifact path per source.
-4. Add a lightweight verifier that flags zero-byte PDFs and duplicate filenames
-   with differing paths.
+The paper corpus now has a dedicated verifier:
+
+```bash
+python3 tools/check_paper_corpus.py
+```
+
+It fails on zero-byte PDFs, bad registry hashes, lingering legacy placeholder
+paths, and duplicate groups that drift away from the documented canonical map.
+
+## Remaining Follow-Up
+
+1. Collapse the documented cross-lane duplicate groups once downstream docs stop
+   depending on research-local mirror PDFs.
+2. Keep future paper additions in `papers/downloads/` first, with provenance or
+   trace artifacts added in the same change.

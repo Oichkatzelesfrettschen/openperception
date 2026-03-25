@@ -1,0 +1,3013 @@
+Received: 29 October 2021
+DOI: 10.1111/epi.17175
+
+| Revised: 10 January 2022 | Accepted: 12 January 2022
+
+CRITICAL REVIEW
+
+Visually sensitive seizures: An updated review by the
+Epilepsy Foundation
+Robert S. Fisher1
+| Jayant N. Acharya2 | Fiona Mitchell Baumer1 | Jacqueline
+A. French3
+| Pasquale Parisi4 | Jessica H. Solodar5 | Jerzy P. Szaflarski6 | Liu
+Lin Thio7
+| Benjamin Tolchin8 | Arnold J. Wilkins9 | Dorothée Kasteleijn-­Nolst
+Trenité10
+1
+
+Department of Neurology and Neurological Sciences, Stanford University School of Medicine, Stanford, California, USA
+
+2
+
+Department of Neurology, Penn State Health, Hershey, Pennsylvania, USA
+
+3
+
+NYU Comprehensive Epilepsy Center, Epilepsy Foundation, New York, New York, USA
+
+4
+
+Department of Neuroscience, Mental Health, and Sensory Organs, Sapienza University, Rome, Italy
+
+5
+
+American Medical Writers Association-­New England Chapter, Boston, Massachusetts, USA
+
+6
+
+Department of Neurology, Neurobiology and Neurosurgery, University of Alabama at Birmingham Heersink School of Medicine, Birmingham,
+Alabama, USA
+
+7
+
+Department of Neurology, Washington University School of Medicine, St. Louis, Missouri, USA
+
+8
+
+Department of Neurology, Yale School of Medicine, New Haven, Connecticut, USA
+
+9
+
+Department of Psychology, University of Essex, Essex, UK
+
+10
+
+Department of Neurosurgery and Epilepsy, University Medical Center, Utrecht, The Netherlands
+
+Correspondence
+Robert S. Fisher, Department of
+Neurology, Stanford University School
+of Medicine, 213 Quarry Road, Room
+4865, Palo Alto, CA 94304-­5979, USA.
+Email: robert.fisher@stanford.edu
+[Correction added on 06 May, 2022,
+after first online publication: the
+copyright line has been changed.]
+
+Abstract
+Light flashes, patterns, or color changes can provoke seizures in up to 1 in 4000
+persons. Prevalence may be higher because of selection bias. The Epilepsy
+Foundation reviewed light-­induced seizures in 2005. Since then, images on social
+media, virtual reality, three-­dimensional (3D) movies, and the Internet have proliferated. Hundreds of studies have explored the mechanisms and presentations
+of photosensitive seizures, justifying an updated review. This literature summary
+derives from a nonsystematic literature review via PubMed using the terms “photosensitive” and “epilepsy.” The photoparoxysmal response (PPR) is an electroencephalography (EEG) phenomenon, and photosensitive seizures (PS) are seizures
+provoked by visual stimulation. Photosensitivity is more common in the young
+and in specific forms of generalized epilepsy. PS can coexist with spontaneous
+seizures. PS are hereditable and linked to recently identified genes. Brain imaging
+usually is normal, but special studies imaging white matter tracts demonstrate
+abnormal connectivity. Occipital cortex and connected regions are hyperexcitable in subjects with light-­provoked seizures. Mechanisms remain unclear. Video
+games, social media clips, occasional movies, and natural stimuli can provoke PS.
+
+© 2022 The Authors. Epilepsia published by Wiley Periodicals LLC on behalf of International League Against Epilepsy.
+This is an open access article under the terms of the Creative Commons Attribution-NonCommercial License, which permits use, distribution and reproduction in any
+medium, provided the original work is properly cited and is not used for commercial purposes.
+Epilepsia. 2022;63:739–768.
+
+﻿
+
+wileyonlinelibrary.com/journal/epi
+
+| 739
+
+
+|
+
+FISHER et al.
+
+Virtual reality and 3D images so far appear benign unless they contain specific
+provocative content, for example, flashes. Images with flashes brighter than 20
+candelas/m2 at 3-­60 (particularly 15-­20) Hz occupying at least 10 to 25% of the
+visual field are a risk, as are red color flashes or oscillating stripes. Equipment to
+assay for these characteristics is probably underutilized. Prevention of seizures
+includes avoiding provocative stimuli, covering one eye, wearing dark glasses,
+sitting at least two meters from screens, reducing contrast, and taking certain
+antiseizure drugs. Measurement of PPR suppression in a photosensitivity model
+can screen putative antiseizure drugs. Some countries regulate media to reduce
+risk. Visually-­induced seizures remain significant public health hazards so they
+warrant ongoing scientific and regulatory efforts and public education.
+KEYWORDS
+
+EEG, epilepsy, photosensitivity, seizures
+
+1
+
+|
+
+I N T RO DU CT ION
+
+Key Points
+
+1
+
+Reflex seizures refer to seizures that are reliably provoked by certain sensory inputs, such as light, pattern, or
+color flashes2; or activities such as eating,3 playing games,4
+thinking,5 or other cognitive processes. In 1881, Gowers
+described seizures that were provoked by bright lights.6
+Adrian and Matthews7 constructed a photic stimulator
+and registered occipital waves different from alpha and
+dependent on flash frequency in 1934. Thereafter, a group
+of European and American scientists, most prominently
+Walter, Gastaut, Bickford, Melin, Cobb, and Lennox, explored the modulation of electroencephalography (EEG)
+rhythms by photic stimulation and the link to epileptic
+seizures.8
+Terminology in this field has been confusing, referring to certain EEG abnormalities as a “photoconvulsive response,” even in the absence of a convulsion. The
+currently favored term for abnormal EEG responses to
+light is the photoparoxysmal response (PPR). Epilepsy
+associated with light sensitivity occasionally is called
+“photoconvulsive” epilepsy, although seizures may not
+be in the form of convulsions, so “photosensitive” is a
+better modifier term for visually-­provoked seizures or
+epilepsy. Photosensitivity is a broad term in medical
+literature, sometimes designating sensitive skin or eye
+conditions. In this review, the meaning is restricted to a
+neurological response to light, color or patterns. Several
+recent reviews are available.9–­22 The prior reviews are
+not systematic reviews and neither is this one. A paucity
+of controlled studies in this field would make such a review difficult.
+
+• A photoparoxysmal response (PPR) occurs
+on electroencephalography (EEG) of 0.6% to
+30% of people with epilepsy, depending upon
+syndrome.
+• Provoking factors depend on flash frequency,
+intensity, duration, retinal coverage, and certain colors and patterns.
+• Several photosensitive syndromes have a genetic component. Mechanisms are beginning to
+be understood.
+• The best treatment is prevention, but several
+medications are effective.
+• The popularity of the internet, three-­
+dimensional (3D) media, and virtual reality add
+to so-­far uncharacterized risks. Further education and public protection are warranted.
+
+2
+
+|
+
+GENERAL C LINICAL ISSU E S
+
+2.1 | Seizure types and syndromes
+associated with photosensitivity
+Photosensitivity occurs in several epilepsy syndromes as a
+common but not defining feature. It is most prevalent in
+genetic generalized epilepsies, such as juvenile myoclonic
+epilepsy (30%-­90%), childhood (18%) and juvenile (8%) absence epilepsies, generalized tonic-­clonic seizures on awakening (13%), and benign myoclonic epilepsy of infancy
+
+15281167, 2022, 4, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/epi.17175 by UNIVERSITY OF ESSEX, Wiley Online Library on [29/08/2025]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+740
+
+
+
+
+(10%).23–­26 In Japan, photosensitivity is seen in 17% of patients with juvenile myoclonic epilepsy.24 Photosensitivity
+also is seen in other conditions, including Dravet syndrome,
+Lennox-­Gastaut syndrome, Lafora’s disease, Unverricht-­
+Lundborg disease, myoclonic epilepsy with ragged-­red
+fibers, and type 2 neuronal ceroid lipofuscinosis.23,25,27,28
+Myoclonic, absence, and generalized tonic-­clonic seizures
+occur with some regularity among photosensitive individuals.23 Photosensitivity is less common in focal epilepsies. In
+a study of patients with focal epilepsy of unknown cause,
+the reflex seizure rate was 6.5%. 29
+The 2017 International League Against Epilepsy seizure
+classification30,31 defined “generalized absence with eyelid
+myoclonia” as a seizure type. Eyelid myoclonia are myoclonic jerks of the eyelids associated with upward deviation
+of the eyes.32 Eyelid myoclonia, absence seizures, and photosensitivity constitute Jeavons’ syndrome33, 34 in which
+seizures are induced by eye closure and photosensitivity is
+nearly universal.35 Orbitofrontal myoclonus refers to flash-­
+driven contractions of the eye-­movement muscles and periorbital muscles. Associated EEG changes can be difficult to
+identify and it is unclear whether orbitofrontal myoclonus
+is a seizure or a normal physiological response. In contrast,
+eyelid myoclonus is epileptic, has associated epileptiform
+EEG findings, and may be linked to absence seizures. These
+syndromes are discussed in more detail in the following text.
+Kasteleijn-­Nolst Trenité and colleagues36 proposed a
+classification for clinical syndromes associated with visual
+sensitivity (Table 1).
+Visual stimuli can generate subjective symptoms that
+are not necessarily associated with seizures—­for example,
+TABLE 1
+
+Photosensitive symptoms.
+
+Classification of clinical symptoms (adapted from1)
+1. Mild subjective symptoms
+2. Orbitofrontal photomyoclonus
+3. Eyelid myoclonus
+a. Eyelid myoclonus with absences
+b. Self-­inducing behavior
+4. Focal, asymmetrical, myoclonus
+5. Generalized myoclonus
+a. Without loss of consciousness, often isolated
+b. With impairment of consciousness
+6. Tonic, versive phenomena
+7. Absence seizures
+8. Generalized tonic—­clonic seizures
+9. Partial (focal) seizures
+a. With simple visual symptoms
+b. With complex visual symptoms
+c. With limbic symptoms
+
+| 741
+
+hallucinations of lines or colors, dizziness, eye pain, or
+gastrointestinal distress. The prevalence of provocative
+factors for reflex seizures varies among different populations. In most populations, visual triggers are the most
+common provoking factor for reflex seizures.
+
+2.2
+
+| Sunflower syndrome
+
+“Sunflower syndrome,” a term coined by Ames and
+Saffer37 and recently summarized by Belcastro and colleagues,38 describes a condition characterized by stereotypic seizures. Patients turn their bodies and look toward
+a light source, usually sunlight and then extend their
+elbow and lift one hand and wave abducted fingers in
+front of their eyes. Most patients consistently wave the
+same hand, which may or may not be their dominant
+one.39 There is blinking or eye fluttering with or without
+further evolution to absence and generalized tonic-­clonic
+seizures.37,39,40 Sunflower syndrome predominantly affects young females with mean age at onset between 2 and
+8 years.39,40 EEG shows normal background activity, with
+generalized spike-­waves or polyspike-­waves in association
+with handwaving, and a photoparoxysmal response to intermittent photic stimulation with the greatest response
+at 10-­20 cycles per second.37,39–­41 Approximately one-­half
+to two-­thirds of patients have other seizure types without
+handwaving, including absence, myoclonic, and tonic-­
+clonic seizures.39,40 Family history of absence or juvenile
+myoclonic epilepsy occurs in one-­third of patients, but
+sunflower syndrome itself is rarely familial.37,39,40 An early
+description of these features was provided by Gastaut in
+1951,42 but because of the apparent sun-­seeking behavior
+(heliotropism) of these patients, which was in marked
+contrast to the usual avoidance of light stimuli by patients
+with photosensitive epilepsy, he considered these seizures
+to be self-­induced by handwaving. This interpretation persisted in other reports but was challenged by Livingston
+and Torres,43 and later by others 37,39 based on the observation that EEG changes occurred almost simultaneously
+with handwaving. This was further confirmed in a recent
+video-­EEG monitoring study, where 89% of the handwaving episodes occurred <1 s after the onset of epileptiform
+EEG activity, suggesting that the handwaving was part of
+the seizure itself rather than a provoking factor,41 with the
+behaviors during the seizure possibly perpetuating the
+seizure. The reason that the patients appear to be drawn
+to light remains unknown. However, several patients confide feelings of pleasure, and dopamine-­blocking agents
+(pimozide) suppress this behavior without reducing the
+PPR.44
+The natural history of sunflower syndrome is not well
+characterized, but the literature suggests that the frequency
+
+15281167, 2022, 4, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/epi.17175 by UNIVERSITY OF ESSEX, Wiley Online Library on [29/08/2025]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+FISHER et al.
+
+
+|
+
+of handwaving episodes and light-­seeking behavior decreases as the patients grow older. In general, the epilepsy
+is refractory to anti-­seizure medicines,38 but valproate and
+fenfluramine may be helpful.40,45–­47 A variety of nonpharmacological approaches have also been found to be useful,
+including stimulus avoidance; wearing hats, sunglasses, or
+special tinted glasses; staying indoors; focused attention;
+and using one or both hands for other activities.39,40,48 Some
+photosensitive patients have the same behavior and seek
+patterns in their environment49 to evoke absence and tonic-­
+clonic seizures; similarly treatment is very difficult.
+
+2.3
+
+| Jeavons syndrome
+
+Jeavons syndrome (or JS), first described in 1977,50 comprises upward jerking of the eyelids called eyelid myoclonia, EEG paroxysms induced by eye closure, and
+photosensitivity.34,51 Absence seizures may be associated.
+Eyelid closure also involves loss of fixation, but the eyelid closure is more important than is fixation loss.52 JS is
+considered to be rare, probably because it is underdiagnosed; one study of 5796 patients with epilepsy identified
+JS in 0.55%.53 JS presents in childhood but can persist into
+adulthood,54 with one series identifying 61 adults with
+JS. The syndrome is encountered predominantly in females33,55 and one-­third to one-­half have a family history
+of epilepsy.51,53 The family association has encouraged a
+search for genes56 with preliminary identification of four
+possible candidates: SYNGAP1, KIA02022/NEXMIF,
+RORB, and CHD2. Cognitive impairment is common in
+JS but not inevitable57 and the majority of patients do not
+have impairment.51
+Because absence seizures are associated only in 25%51
+to 50%53 of cases, JS might better be considered a subset
+of myoclonic seizures, with myoclonus restricted to the
+eyelids, rather than a primary absence epilepsy.33 The syndrome also may be accompanied by tonic-­clonic seizures
+in about 25%.51,58 It is worth noting that eyelid myoclonia
+is not unique to JS, but also appears in other syndromes,
+such as juvenile myoclonic epilepsy.59
+Generalized spike-­waves are the most common EEG
+finding, but additional focal EEG findings are not rare.53,55
+Does JS include generalized or focal seizures? Discharges
+often appear to be generalized, but JS can show subtle
+occipital discharges preceding eyelid myoclonia,55 suggesting that the syndrome may comprise a focal occipital
+epilepsy with rapid propagation. In patients with JS, eye
+closure increased functional magnetic resonance imaging
+(fMRI) blood oxygen–­level dependent (BOLD) signal over
+visual cortex, posterior thalamus, and eye movement control areas, consistent with a focal abnormality of the visual
+system.
+
+FISHER et al.
+
+Patients with JS and seizures can be treated with anti-­
+seizure medications. Valproic acid, ethosuximide, lamotrigine, and levetiracetam have been listed as drugs of
+choice.58 Valproate is undesirable in women of childbearing age, in which case levetiracetam may be a useful substitute.60,61 Lacosamide monotherapy benefited a case not
+helped by other medicines.62 Case studies documented
+worsening with oxcarbazepine63 and cannabadiol.64 The
+ketogenic diet has been helpful in a few patients with JS.53
+Anti-­seizure medications often ameliorate the seizures associated with JS, but usually do not provide full control.
+One series32 of 51 patients documented full seizure control in 21.6%.
+In summary, Jeavons syndrome is a probably undiagnosed condition occurring mainly in young females presenting with eyelid myoclonia, eye closure precipitation,
+and photosensitivity. Absence seizures and other seizure
+types may or may not be associated. Complete control can
+be elusive.
+
+2.4
+
+| Photomyoclonus
+
+Electrical recordings in response to light flashes can
+comprise both brain potentials and muscle artifacts from
+peri-­orbital, frontal, or temporal muscle contractions.
+Walter first reported paroxysmal EEG changes in response to light flashes in 1948.65 A year later, Gastaut &
+Rémond66 identified a component of the frontal EEG response to flash as being from muscle. Bickford67 referred
+to the EEG response to flash as the “photoconvulsive” response and the artifact from face twitching as the “photomyoclonic response.” Meier-­Ewart68 characterized the
+photomyoclonic response in a series of 11 subjects with
+epilepsy and 2 without. The response was a diphasic potential lasting 15–­20 ms, sometimes with after-­potentials,
+maximal over frontal and temporal muscles. Typical amplitudes were around 1 mV. Concurrent EEG showed
+polyspikes or polyspike-­waves with following slow waves.
+Photoconvulsive (EEG) and photomyoclonic (muscle) responses sometimes overlapped and at other times showed
+separation. A true frontal EEG response arising from
+brain can, however, be recorded from depth electrodes.69
+Photomyoclonus occasionally can be evoked by patterns.70 Jaffe pointed out that normal, nonepileptic individuals can have a photomyoclonic response.71 This
+nonepileptiform response may be exaggerated when conjoined with other conditions that increase neuromuscular
+excitability, for example, hypocalcemia72 or alcohol withdrawal. It is not evident that a photomyoclonic response
+requires treatment, but it can be reduced by diazepam.71
+In conclusion, light flashes may produce frontal EEG
+changes that are a combination of brain-­derived EEG and
+
+15281167, 2022, 4, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/epi.17175 by UNIVERSITY OF ESSEX, Wiley Online Library on [29/08/2025]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+742
+
+
+muscle-­derived electromyographic artifact. Distinguishing
+epileptiform spikes in such recordings can be difficult and
+might only be possible in the absence of facial movements.
+
+2.5
+
+| Pattern-­sensitive seizures
+
+Certain patterns can evoke EEG photoparoxysmal responses or actual seizures. This was first reported in 195367
+by describing a boy who had seizures and EEG spike-­wave
+discharges when gazing at striped patterns on curtains or
+his father’s tie. Numerous additional reports followed.
+Patients who are exclusively pattern-­sensitive tend to be
+more likely to have focal epilepsy.73 A systematic study of
+pattern-­sensitive epilepsy was performed on 73 patients at
+the Mayo clinic.16 Patterns were viewed as still images and
+then shaken vertically and horizontally for 10 seconds. At
+presentation, 60% had generalized tonic-­clonic seizures,
+49% absence seizures, 38% myoclonic seizures, and 11%
+focal seizures. Some had more than one seizure type.
+Among those followed for more than 5 years, 46% had
+outgrown their seizures. Brinciotti and Matricardi73 prospectively studied the long-­term (5 years or greater) outcome in 35 patients with pattern-­sensitive epilepsy. Five
+(14%) had only reflex seizures, whereas others had both
+reflex and spontaneous seizures. The most common type
+of spontaneous seizures was generalized (60%), but reflex
+seizures were more frequently focal (74%). At the end of
+the follow-­up period 80% were seizure-­free, indicating a
+good prognosis for spontaneous as well as reflex seizures.
+
+3 | DI F F E R E N T IAL DIAG N OSIS
+O F P H OTO S E N SIT IVIT Y
+Photosensitive seizures can be difficult to distinguish from
+other types of reflex seizures that are provoked by other
+sensory, affective, or cognitive stimuli.74–­82 EEG ictal recording with polygraphic and extensive long-­term, neurophysiological investigations83–­85 may be required to secure
+a correct diagnosis. The photoparoxysmal EEG reaction to
+intermittent photic stimulation represents an EEG focal
+or generalized response that can be an isolated EEG feature or a clinical phenomenon ranging from very simple
+ocular discomfort, photophobia, headache, or more serious changes in the state of consciousness.86,87
+
+3.1
+
+| Syndromes imitating photosensitivity
+
+Hyperekplexia is an exaggerated startle in response to external stimuli associated with a generalized increase in tone
+seen in neonates or infancy with both a sporadic and genetic
+
+
+
+| 743
+
+predisposition. This is an uncommon neurological, nonepileptic entity that can be misdiagnosed as seizures, with or
+without light stimulus or photosensitivity. 78,88 Rare manifestations and special EEG features of progressive myoclonic
+epilepsy (PME) may be confused with occipital epilepsy or
+photosensitive epilepsy. Thus, if the continuous occipital
+spikes and photosensitivity are presented in a patient with
+refractory seizures and developmental regression, PME
+should be considered.89 Some patients can have a clinical
+course with persistent and protracted vomiting along with
+occasional loss of consciousness and subtle motor manifestations (including some features of Panayiotopolous90
+syndrome), and in this case the differential diagnosis can
+include also photosensitive epilepsy.91 Seshia17 points out
+that seizures also can be triggered by negative stimuli, such
+as intermittent darkness. Driving past trees blocking the
+sunlight provides a potent example of interrupted-­light
+stimulation. Flashing police car lights only rarely provoke
+seizures, perhaps because the image rarely occupies a large
+part of the visual field.92
+Three cases of operculo-­insular reflex seizures were
+documented, triggered by somatosensory stimuli in two
+and loud noises in the third. Limited operculo-­insular resection resulted in an excellent outcome.77 Seizures can be
+triggered by hot water or bathing, requiring differentiation
+from photosensitive epilepsy.74 Paroxysmal kinesigenic
+dyskinesia can be a differential diagnostic challenge.93
+Functional seizures (also called nonepileptic seizures)
+may present as apparent light-­provoked seizures. Photic
+stimulation during video-­EEG recording can be useful for
+recognition of this condition.94,95
+
+3.2
+
+| Photosensitivity and headache
+
+Headache has a complex relationship to light-­provoked
+seizures, and awareness of a link between photosensitive
+seizures and migraine headaches has been growing.96
+Both relate to intermittent changes in brain excitability,
+considered as dysexcitability (either hypo-­  or hyperexcitable or mixed) conditions, which can facilitate each
+other.97 Visual aura and other autonomic symptoms
+often precede both occipital epilepsies and migraine
+headaches. In both, the symptoms and signs of the visual
+aura can be elicited by bright and flashing lights and can
+be either positive (flicker scotoma, hallucinations) or
+negative (temporary loss of vision). Ictal epileptic headache (IEH; see the original diagnostic criteria in98) represents an overlap of seizures and headache, and some
+of these patients are photosensitive.86,97 Diagnosis can
+be difficult because migraine can produce seizure-­like
+symptoms, seizures commonly induce headaches, and
+both conditions can coexist.
+
+15281167, 2022, 4, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/epi.17175 by UNIVERSITY OF ESSEX, Wiley Online Library on [29/08/2025]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+FISHER et al.
+
+
+|
+
+Wendorff and Juchniewicz99 studied the frequency
+and type of PPR in idiopathic headaches in children and
+adolescents, 7–­18 years of age: 77 children with migraine
+with aura, 112 children with migraine without aura, and
+74 children with tension-­type headache. The frequency
+of PPR did not differ significantly in the three types of
+idiopathic headaches, although PPR was found most frequently (17.6%) in children younger than 12 years of age
+affected by migraine with aura. In this group of children,
+the PPR consisted of generalized spike or polyspike and
+waves in 11.8% and it localized to the temporo-­parieto-­
+occipital region in only 5.9%. Frequent coexistence of PPR
+and visual provocation of a migraine attack in children
+supports the theory about a general cortical dysexcitability with presence at different times in the same subject of
+both hypoexcitability and hyperexcitability, during different phases and at different ages, and along the psychomotor developmental stages.86,87 The accumulated burden of
+migraine seems to alter the physiology of the visual cortex
+and an increase in alpha rhythm variability up to 72 hours
+before the next migraine attack.100 Sensory cortex may be
+hypoexcitable between migraine attacks101, confirming a
+dysexcitability state.102 Other studies, however, have argued for a cortical hyperexcitability state.103 Fogang and
+colleagues104 documented good sensitivity (82.24%), but
+moderate specificity (69.36%), of the visually-­identified
+photic driving H response (enhanced photic driving during
+high-­frequency flicker stimulation) in migraineurs.
+Video-­EEG recordings during headaches, particularly
+if unresponsive to antimigraine therapy, in specific populations with known epilepsy in family members, can be
+diagnostically decisive.87,98,105
+
+4 | E P I DE MIOLOGY AN D
+P RO G NO S I S
+The presence of a PPR has been reported 0.3%-­8% of the
+normal population and 0.6%-­30% in patients with epilepsy.106 Many types of seizures can be provoked by visual
+stimuli, including most commonly tonic-­clonic seizures in
+about 80%9 and the remainder with lower prevalence, including absence seizures,107 tonic seizures, focal seizures
+from the temporal lobe,108 myoclonic absence seizures in
+patients with Dravet syndrome,109 myoclonic seizures,110
+and idiopathic photosensitive occipital lobe epilepsy
+(IPOE).111–­114 Photic-­induced myoclonic seizures may be
+underrepresented in epidemiological studies, since some
+people seek medical attention only after having a tonic-­
+clonic seizure. IPOE111,112 is on a continuum between
+focal and generalized seizures and may present with photosensitive absence, myoclonic or tonic-­clonic seizures.
+Clinical symptoms of IPOE include colorful visual auras,
+
+FISHER et al.
+
+tonic eye-­head movements, and sometimes myoclonic
+jerks.115
+
+4.1 | Photosensitivity in individuals
+without epilepsy
+All epidemiological studies of photosensitivity in people
+without recognized epilepsy are challenging due to selection
+bias.19 Focal and absence seizures are likely underreported,
+since many may not be noticed, particularly in the general
+population. Military Air Forces are among the few agencies
+that routinely screen large numbers of applicants with EEG,
+and studies from several countries116–­120 have identified
+epileptiform abnormalities in 0.35%-­2.4%. However, these
+samples of predominantly healthy young adults may not be
+representative of the general adult population. Children appear to have a higher prevalence of PPR, and a study of 743
+healthy, developmentally normal children without epilepsy
+ages 1-­15 years identified a PPR in 8.3%, with a higher preponderance in girls compared to boys, and in children older
+than 10 compared to younger children.121
+
+4.2 | Photosensitivity in individuals
+with epilepsy
+Studies from England in the 1990s suggest that the prevalence of photosensitive epilepsy among the general population is approximately 1 in 4000.10,121,122 Studies focusing
+specifically on people with epilepsy report that 0.6%-­30%
+have a PPR. Patient characteristics (age, gender, type of
+epilepsy) as well as the EEG methods used to diagnose
+photosensitivity contribute to this variability. New-­onset
+seizure patients in Great Britain showed photic-­induced
+generalized spike-­waves in about 2% of all new-­onset seizure cases or 1.1 per 100,000 in the general population
+and 5.7% in children ages 7-­19.123 Consideration of other
+types of PPR beyond spike-­waves would elevate these
+percentages.
+The presence of photosensitivity in patients with epilepsy varies by age, especially in cases of juvenile myoclonic epilepsy, juvenile or childhood absence, and
+catastrophic epilepsy syndromes.15,124 In a study of consecutive EEG studies of children without acquired brain
+injury, only 1% (53/5055) of children younger than 5 years
+of age had a PPR, compared with 3.5% in 5-­ to 10-­year-­olds
+and 4.6% in 10-­ to 15-­year-­olds; 21% of the youngest age
+group had Dravet syndrome.125,126 A second study of
+10,671 EEG studies of 7188 patients also found that patients 11-­20 years of age were most likely to have a PPR.127
+Among 5950 EEG studies in adult epilepsy patients (age
+>15) only 1.2% demonstrated a photosensitive response.127
+
+15281167, 2022, 4, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/epi.17175 by UNIVERSITY OF ESSEX, Wiley Online Library on [29/08/2025]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+744
+
+
+Female gender is a second risk factor for photosensitivity, with females being approximately twice as likely as
+males to have photosensitive epilepsy.22,125 Several studies
+have suggested that adolescent girls at puberty initiation
+are at especially high risk.22,127
+Patients with generalized epilepsies are more likely
+than those with focal epilepsies to have a PPR, but patients
+with focal epilepsy should still be evaluated for photosensitivity. Among the general population of all ages, Wolf
+and Goosses23 examined 1000 patients with epilepsy and
+concluded that 15% of generalized epilepsies and 3% of
+focal epilepsies demonstrated photosensitivity. A recent
+study of 1893 patients with epilepsy over the age of 2 years
+found that 9% of patients with generalized epilepsy and
+0.9% of those with focal epilepsy had a PPR.106
+A population study specifically focused on children
+found that 46% with generalized epilepsy128 showed PPR,
+contrasted with 20% who had focal epilepsies. A second recent study of all children with photosensitivity at a tertiary
+care hospital found that 51% had generalized, 24% had focal,
+10% had combined, and 14% had unknown epilepsy diagnoses. Of interest, those children with untreated focal epilepsy
+were most likely to have self-­sustaining PPRs.129
+Other clinical and demographic factors likely influence
+the risk of photosensitivity. The incidence varies with
+geography, such that living in a country with 50 Hz line
+voltage (eg, Europe, Japan) rather than 60 Hz (the US) is
+a risk factor—­at least for discovering underlying photosensitivity by provocation of a seizure. It used to be said10
+that Europeans commonly had their first seizure in front
+of a TV, although this is unlikely to still be the case now
+that digital screens have replaced cathode ray tubes that
+refreshed at 50 Hz. Studies of ethnic origin and photosensitivity have not been conclusive, but several studies
+suggest a lower prevalence in Black Sub-­Saharan Africans
+compared with their White counterparts.113
+Prevalence PPR studies documented the highest values in adolescents.125 A very recent study evaluating PPR
+prevalence based on a scored database of 10,671 EEG studies confirmed this prevalence.127 A study by Jeavons and
+Harding130 showed that 10 of 18 of those without medication were no longer photosensitive at a mean age of 24.5
+± 4.9 years. The Harding study of 1997131 entitled “The
+persistence of photosensitivity” argued that at least two-­
+thirds continued to be photosensitive. However, this study
+is difficult to interpret because it included numerous family members and considered occipital spikes as still being
+photosensitive.
+Long-­term outcome of pattern-­sensitive epilepsy was
+evaluated in 35 patients.73 Half had focal and half had
+generalized-­onset seizures. After a mean 13.9 years of
+follow-­up, 80% were seizure-­free, perhaps indicating a
+good prognosis for this condition or perhaps reflecting
+
+
+
+| 745
+
+the improvement in television technology. Thirty children
+(1.8% of 1705 clinic patients) younger than age 12, with a
+history of television-­induced seizures, were followed for
+at least 2 years.132 EEG showed spontaneous generalized
+epileptiform spikes in 77%, and 90% had such spikes with
+photic stimulation. The general prognosis of visually-­
+sensitive seizures is fair, but not excellent and is also dependent on the associated epilepsy type and syndrome.
+Harding estimated a 14%-­37% probability of remission in
+light-­ and pattern-­sensitive individuals.131
+
+5
+
+|
+
+GENETIC S
+
+Our knowledge regarding the genetics of photosensitivity
+stems from studying the heritability of the photoparoxysmal response (or PPR) itself, as well as epilepsies with
+prominent photosensitivity. Several reviews have considered the genetics of photosensitivity.15,22,26,133
+
+5.1 | Genetics of the photosensitivity
+response
+Screens of family members of people with photosensitive epilepsy indicate that the PPR is highly heritable.
+Monozygotic twins demonstrate nearly 100% concordance
+with regard to photosensitivity, and siblings of affected individuals have a 5-­fold elevated risk of having photosensitivity compared to the general population.134,135 Studies
+suggest that the PPR can be inherited in an autosomal
+dominant fashion, with reduced and age-­dependent penetrance.133 There is also evidence that the PPR segregates
+separately from epilepsy. Children of women with photosensitivity have a 25% chance of demonstrating a PPR,
+but only half go on to develop epilepsy.131 In families with
+photosensitive epilepsy, the incidence of the PPR is similar in siblings with and without epilepsy.136 Furthermore,
+Piccioli et al.86 studied family members of 4 patients with
+photosensitive epilepsy and found that 9 of 12 relatives
+without epilepsy showed EEG photosensitivity, with two
+demonstrating an ictal EEG pattern after light flashes.
+
+5.2 | Genetics of epilepsies with
+prominent photosensitivity
+Photosensitive epilepsies have been classified in various
+ways. Taylor and colleagues137 divide idiopathic epilepsy
+and photosensitivity into genetic generalized epilepsy,
+idiopathic photosensitive occipital epilepsy, or a mixture
+of the two. Other authors15,22 categorize photosensitive
+epilepsies as either (1) “pure” photosensitivity epilepsies
+
+15281167, 2022, 4, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/epi.17175 by UNIVERSITY OF ESSEX, Wiley Online Library on [29/08/2025]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+FISHER et al.
+
+
+|
+
+FISHER et al.
+
+F I G U R E 1 Waltz type 1 response,
+with occipital spikes that do not spread
+anteriorly or outlast the stimulus. This
+response is now considered to be normal
+
+in which seizures are primarily provoked by visual stimulation (ie, eyelid myoclonia with absences; idiopathic
+photosensitive occipital lobe epilepsy); and (2) epilepsy
+syndromes associated with photosensitivity (ie, the genetic generalized epilepsies; progressive myoclonic epilepsies; and several epileptic encephalopathies) in which
+patients have a mixture of provoked and unprovoked
+seizures.
+Large linkage studies of genetic generalized epilepsies
+have identified potential photosensitivity loci on chromosomes 6, 7, 13, and 16.133 This association, particularly in
+patients with juvenile myoclonic epilepsy,1 may be mediated by genes at region 6p21.2 and 13q31.3: the former
+locus is linked to photosensitivity and the latter to epilepsy.138 Another study suggested that regions 7q32 and
+16p13 may be linked to the PPR in families with idiopathic
+myoclonic epilepsies.139,140
+Specific susceptibility genes for photosensitive seizures
+remain poorly characterized, but a few candidates have
+been identified. The neuronally expressed developmentally downregulated the NEDD4-­2 gene, which regulates
+voltage-­gated sodium channels, was identified in one cohort of 124 families with genetic generalized epilepsy,141
+but the finding was not replicated.142 Approximately
+50% of patients with mutations in the alpha-­1 subunit of
+γ-­aminobutyric acid (GABA)A receptors143 (GABRA1) have
+a PPR; otherwise they display wide phenotypic variability
+ranging from juvenile myoclonic epilepsy to epileptic encephalopathy. A study of more than 600 individuals with
+a PPR found that mutations in the chromodomain helicase DNA-­binding protein-­2 (CHD2) gene (a regulator of
+transcription) are specifically associated with eyelid myoclonia with absences, but not a PPR without epilepsy.144
+CHD2 variants are also associated with self-­induced photosensitive seizures.145,146 Other recently identified genes
+
+associated with eyelid myoclonia and absences include
+SYNGAP1147–­149 (a Ras-­GTPase activating protein that is
+part of the N-­methyl-­d-­aspartate (NMDA) receptor complex and associated with excitatory neurotransmission),
+KIA02022/NEXMIF150,151 (X-­linked Intellectual Disability
+Protein Related to Neurite Extension, important for neuronal migration, cellular adhesion, and circuit development), and RORβ56,152,153 (retinoid-­related orphan receptor
+β, important for neuronal migration and differentiation).
+Recently, variants in RORβ have also been reported in
+patients with a spectrum of photosensitive disorders, including eyelid myoclonia with absences and idiopathic
+photosensitive occipital lobe epilepsy.154 Although the
+overlap between these syndromes has been recognized
+clinically, this is the first gene known to contribute to the
+overlap between genetic generalized and idiopathic occipital lobe epilepsies.
+A number of rare and typically autosomal recessive
+epilepsy syndromes feature photosensitivity as a defining
+characteristic. For example, approximately 30%-­50% of
+children with Dravet syndrome due to SCN1A mutations
+develop photosensitive seizures, and photosensitive seizures seem to be a marker of disease severity.155 Over half
+of patients with neuronal ceroid lipofuscinosis type 2 disease have a pronounced PPR on EEG, often to low photic
+frequencies.156 Many of the progressive myoclonic epilepsies are also associated with pronounced photosensitivity;
+new genes associated with these epilepsies continue to be
+identified.133 PPR can be found also in patients with chromosomal abnormalities like trisomy 13, 19, or 21 (Down
+syndrome), X-­chromosome, and other rare abnormalities, usually in combination with cognitive deficiency.157
+Further investigations of specific epilepsy and other syndromes may thus shed additional light on the genetics of
+photosensitivity.
+
+15281167, 2022, 4, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/epi.17175 by UNIVERSITY OF ESSEX, Wiley Online Library on [29/08/2025]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+746
+
+
+6
+6.1
+
+|
+
+P H OT I C E EG AN D IM AG ING
+
+| EEG and photosensitivity
+
+Walter and Gastaut first reported paroxysmal EEG
+changes to light flashes in 1948.65 In 1992, Waltz136
+grouped EEG responses to flash into four categories. Type
+1 is spikes confined to the occipital rhythms (Figures 1
+and 2. Below); type 2 is parieto-­occipital spikes with a biphasic slow wave; type 3 is type 2 with frontal spread; type
+4, representing the most pathological response, is generalized spike-­waves.
+An extended classification of EEG responses to intermittent photic stimulation was proposed by a European
+group (Table 2).36
+PPR has been simplified by the “Standardized
+Computer-­based Organized Reporting of EEG” (SCORE)
+group158 into the following categories: (1) Unmodified;
+(2) Posterior stimulus-­independent response, limited to
+the stimulus train; (3) Posterior stimulus-­independent response, self-­sustained; (4) Generalized photoparoxysmal
+response, limited to the stimulus train; (5) Generalized
+photoparoxysmal response, self-­sustained; and (6)
+Activation of pre-­existing epileptogenic area. Inter-­rater
+agreement using this scale is moderately good and almost
+perfect for scoring epileptiform discharges.159
+A photoparoxysmal response (or PPR) with abnormal spikes, slowing, spike-­waves, or EEG ictal events in
+response to photic stimulation can occur in the absence
+of obvious behavior change, in which case the clinical
+significance is uncertain. However, recognition of behavioral change depends upon the rigor of observation. One
+study160 documented a motor task delay during the EEG
+photoparoxysmal response, arguing that the events were
+not EEG markers of a tendency, but in fact represented
+
+F I G U R E 2 Waltz type 4 response, with generalized spike-­
+waves in response to intermittent photic stimulation
+
+
+
+| 747
+
+seizures. This suggests that visual stimuli producing
+a photoparoxysmal response for more than a few seconds could have important safety implications. This was
+demonstrated during a routine outpatient EEG recording,161 when one patient with known photosensitive seizures had bradycardia to 12 beats per minute provoked
+by photic stimulation. Among patients with epilepsy, it is
+more common to encounter those in whom certain photic stimuli sometimes trigger seizures, but not all seizures
+in these individuals need be photic-­induced.15 Most, but
+not all of those with a PPR in an EEG lab have epilepsy,9
+yet they may or may not have had a light-­induced seizure.
+Conversely, it is common to find a PPR with EEG recording in those who have light-­induced seizures, provided
+that a suitable range of light flash frequencies is tested,162
+A study of 35 individuals who had a seizure while playing
+video games163 demonstrated a PPR in 52%. Studies done
+in EEG labs have an obvious selection bias, and it is likely
+that many people who would have a PPR had they been
+tested are never aware of this tendency. Rare, pure forms
+of photosensitive epilepsy syndromes only manifest seizures when provoked by certain light stimuli.
+The Mayo Rochester Epidemiology Project164 identified 449 residents with newly diagnosed epilepsy; photic
+stimulation yielded a diagnosis in 3.3%. Photic stimulation
+across a range of frequencies has long been advocated as a
+part of routine EEG recording.162 Use of a suitably bright
+(at least 1 Joule per flash) and a diffused light stimulator
+may be needed to identify photosensitivity.165 Recording
+can be done with eyes closed, as the light penetrates the
+eyelids and diffuses across the retina. Testing a range of
+flash frequencies is important to identify individual susceptibilities. Signal analysis suggests that the optimal frequency to produce a driving response is 16 ± 10 Hz for
+normal subjects, but 8 Hz for patients with epilepsy,16
+­although, a driving response does not indicate and abnormal photoparoxysmal response.
+Analysis of propagation patterns for photic discharges167
+showed multiple patterns of spread. The most common
+pattern was symmetric bilateral occipito-­temporo-­frontal
+spread. Power spectral density and coherence methods
+can estimate coherence among EEG channels during
+photic stimulation.168 During 14 Hz photic stimulation of
+patients with generalized photosensitive epilepsy, inter-­
+channel coherence in the 0-­30 Hz frequency spectrum did
+not change, but the coherence increased in the gamma169
+frequency band in occipital electrodes with frequencies
+above 30 Hz. Because gamma activity in part reflects the
+activities of inhibitory interneurons,170 changes in gamma
+coherence may have relevance to mechanisms of seizure
+generation.170 The stimuli that are most provocative in
+photosensitive epilepsy match the stimuli that strongly
+drive gamma oscillations.171 Parra169 studied synchrony
+
+15281167, 2022, 4, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/epi.17175 by UNIVERSITY OF ESSEX, Wiley Online Library on [29/08/2025]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+FISHER et al.
+
+
+|
+
+TABLE 2
+
+FISHER et al.
+
+EEG responses to intermittent photic stimulation
+
+An extended classification of EEG responses to
+intermittent photic stimulation
+1. Photic following
+a. At flash rate
+b. At harmonics
+2. Orbitofrontal photomyoclonus
+3. Posterior-­stimulus-­dependent response
+4. Posterior-­stimulus-­independent response
+a. Limited to the stimulus train
+b. Self-­sustaining
+5. Generalized photoparoxysmal response
+a. Limited to the stimulus train
+b. Self-­sustaining
+6. Activation of preexisting epileptogenic area
+Note: Grade 3, 4, and 5 are generally described as photoparoxysmal
+responses.
+
+in the 30-­120 Hz gamma frequency domain occurring just
+before a PPR in 10 patients with idiopathic photosensitive
+epilepsy and 8 controls. Phase synchrony was enhanced
+in patients with photosensitivity, suggesting that this
+synchrony might contribute to photosensitive seizures in
+these patients. This subject recently has been reviewed in
+detail by Avanzini.172 Future studies of gamma frequencies will provide additional insights into mechanisms of
+origin and propagation of the PPR.
+Localization of the PPR is relatively imprecise with
+standard scalp-­recorded EEG. The distribution of the
+photoparoxysmal response was mapped by intracranial
+electrodes in a patient being studied for possible epilepsy
+surgery.173 Photic stimulation produced focal medial occipital discharges, parietal discharges, and sometimes apparently generalized spikes. Photic-­provoked myoclonic
+seizures were associated with generalized spike-­wave
+discharges, particularly involving the parietal cortex. A
+constraint on this study is the limited sampling of brain
+regions (especially frontal) by the implanted electrodes.
+In general, it is assumed that photic stimulation provokes epileptiform and seizure activity. However, sensory
+stimulation can inhibit or interrupt some seizures and
+light flashes are a form of such stimulation. One study174
+recorded a mean reduction of interictal spiking from 1.17
+per minute at baseline to 0.8 per minute during light
+flashes across the range of 5-­50 Hz. This raises the unexpected possibility that some types of light stimuli might be
+beneficial against seizures. A reconciliation of this possibility with the more frequent elicitation of spikes by light
+flashes currently is lacking.
+Photic seizures occurred during 1.4% of 1000 retrospectively and randomly selected EEG studies, and during
+
+31% of EEG studies in patients with generalized or photosensitive epilepsies, although no generalized tonic-­clonic
+seizures (GTCSs) were evoked.175 In a later prospective
+nationwide study in the UK176 0.7% had photic seizures in
+the lab of whom two (0.04%) had a GTCS. EEG technologists usually are trained to stop stimulating if they recognize a build-­up to a possible seizure, since production of
+a tonic-­clonic or even a less-­intense clinical seizure is not
+encouraged. An exception is during video-­EEG monitoring, where the goal is to provoke and record a seizure.
+
+6.2
+
+| Brain imaging and photosensitivity
+
+In most cases of photosensitive epilepsy, structural brain
+MRI is normal. However, special imaging techniques that
+assess structural and functional connectivity or blood flow
+and energy metabolism associated with photosensitivity
+may provide additional insights into the mechanisms of
+photosensitivity. Although assessment of the response to
+photic stimulation is rarely employed in neuroimaging
+studies (in part due to the danger of inducing seizures),
+several neuroimaging studies of patients with photosensitive epilepsies have been conducted.
+Of the structural studies, one MRI study in PPR-­
+positive idiopathic generalized epilepsy (IGE) patients
+and PPR-­positive subjects found bilateral increase of cortical thickness in the occipital, frontal, and parietal cortices compared to healthy controls, whereas the same
+comparison revealed a decrease in the temporal lobes of
+those with a PPR but not epilepsy.177 Another study using
+voxel-­based morphometry (VBM) investigated 60 patients
+with JME (19 with photosensitivity) and 30 sex-­matched
+healthy controls.178 This study showed reduced bilateral
+gray matter volume in visual cortices using VBM in the
+JME-­photosensitive group compared to healthy controls
+but not when compared to the nonphotosensitive JME
+patients. However, they also observed reduced left hippocampus and left inferior frontal gyrus volume in the JME-­
+photosensitive group compared to JME nonphotosensitive
+patients.
+MRI studies of fractional anisotropy (FA) and mean
+diffusivity (MD) point to white matter structural abnormalities in the precentral and lateral occipital regions of
+subjects with PPR.179 In the same study, patients with
+IGE and PPR showed additional increases in FA in the
+thalamus and precentral/parietal white matter. PPR was
+associated with changes in axial and radial diffusivity in
+the occipital regions. Another study in 18 JME patients (8
+with PPR) compared diffusion parameters to 27 healthy
+controls to identify widespread microstructural abnormalities in JME including increased FA in the ascending
+reticular activating system and ventromedial thalamus,
+
+15281167, 2022, 4, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/epi.17175 by UNIVERSITY OF ESSEX, Wiley Online Library on [29/08/2025]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+748
+
+
+whereas reduced fractional anisotropy of the lateral geniculate nucleus was observed in the entire JME group
+compared to healthy controls.180 Yet another study conducted tract-­based spatial statistics (TBSS) analysis in 8
+patients with photosensitive epilepsy (PSE) and 16 age-­/
+sex-­matched healthy individuals; PSE participants had
+significantly lower FA values in the corpus callosum.181
+Another study compared 31 patients with JME (12 PPR
+positive) and 27 healthy controls matched for age/sex also
+using TBSS.182 These authors showed reduced FA in longitudinal fasciculus, inferior fronto-­occipital fasciculus, corticospinal tract, anterior and posterior thalamic radiation,
+corona radiata, corpus callosum, cingulate gyrus, and
+external capsule. However, subgroup analysis revealed
+no significant differences of white matter alterations between PPR positive and negative patients and with clinical
+and epilepsy-­related factors. The overall conclusion is that
+white matter connectivity in various brain networks is abnormal in subjects with PPR or PSE, although the studies
+do not demonstrate cause versus effect.
+Functional MRI (or fMRI) is a technique to judge the
+amount of oxygen extracted from the blood flowing into
+brain tissue; it is a measure of both blood flow and metabolism. Combined EEG-­fMRI can portray the blood-­flow/
+oxygenation changes associated with photic responses
+or generalized spike-­wave discharges (GSWDs). People
+with JME exposed to intermittent photic stimulation in
+the scanner demonstrated a positive BOLD response in
+visual areas and reduced positive BOLD response in the
+fronto-­parietal areas and putamen but a stronger negative
+BOLD response in the primary sensorimotor cortex and
+in cortical regions belonging to the default mode network
+(DMN).183 Furthermore, in JME, the dynamic evaluation
+of BOLD signal changes related to PPR revealed an early
+positive response in the putamen and the primary sensorimotor cortex, followed by BOLD signal decrements in
+the putamen, caudate nuclei, thalami, and sensorimotor cortex. Another EEG-­fMRI study investigated evoked
+GSWDs in six patients with PPR (four with IGE and two
+with tension-­type headache) to show that intermittent
+photic stimulation led to a significant activation of the visual cortex. PPR activation was found in the parietal cortex adjacent to the intraparietal sulcus in five and in the
+premotor cortex in all six subjects with early deactivation
+in early activated areas in all subjects to suggest that PPR
+is a cortical phenomenon with an involvement of the parietal and frontal cortices (and not thalamic involvement
+as in generalized spike-­wave discharges). Another study
+by the same group used EEG-­based coherent source imaging and EEG-­fMRI to show that both methods identified
+the occipital, parietal, and the frontal cortex in a network
+associated with PPR.184 However, only when PPR preceded a generalized tonic-­clonic seizure, the thalamus
+
+
+
+| 749
+
+was involved in the generation of PPR as shown by both
+imaging techniques, indicating that the thalamus acts as
+a pacemaker while PPR could be explained by a cortical
+propagation from the occipital cortex via the parietal cortex to the frontal cortex.
+A recent study investigated the hemodynamic correlates of the spontaneous alpha rhythm in 16 participants
+with IGE and photosensitivity, 13 participants with IGE
+and no photosensitivity, and 15 patients with focal epilepsy using EEG-­fMRI.185 Patients with IGE with photosensitivity demonstrated significantly greater mean alpha
+power with respect to healthy controls and other epilepsy
+groups. In photosensitive IGE, alpha-­related BOLD signal
+changes demonstrated lower decreases relative to all other
+groups in the occipital, sensory-­motor, anterior cingulate,
+and supplementary motor cortices. The same brain regions also demonstrated abnormal connectivity with the
+thalamus that was present only in epilepsy patients with
+photosensitivity. These findings indicate that the cortical-­
+subcortical network generating the alpha oscillation at rest
+is different in people with epilepsy and visual sensitivity.
+Positron emission tomography (PET) evaluation of
+baboons with or without photosensitivity showed the
+greatest activation in several structures including bilateral occipital lobes in the control animals but absence of
+such activation in the photosensitive animals.186 An older
+human study of photosensitivity using [11O]-­H2O in photosensitive healthy and epilepsy participants documented
+increases in the occipital cortex in both groups,187 with differences seen in other brain regions between the healthy
+controls and epilepsy patients; epilepsy but not healthy
+controls also exhibited increased hypothalamic radioisotope uptake.
+
+7 | MECHANISMS OF PHOTO­
+SENSITIVITY
+The mechanisms of photosensitivity and pattern sensitivity are largely unknown, although the available evidence
+indicates that the occipital cortex and the networks to
+which it belongs have physiological abnormalities. These
+changes are expected, since hypersensitivity to flashing
+lights can provoke a variety of neurological symptoms, including headaches, dizziness, nausea, disorientation, and
+of course, seizures.
+Characteristics of the visual stimuli capable of evoking seizures in patients with photosensitivity may provide
+some insight into the underlying mechanisms. The visual
+system has evolved to process images from nature efficiently using sparse coding.188–­192 The flicker and patterns
+that provoke seizures are rarely encountered in nature.
+For these stimuli, the energy components of images are
+
+15281167, 2022, 4, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/epi.17175 by UNIVERSITY OF ESSEX, Wiley Online Library on [29/08/2025]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+FISHER et al.
+
+
+|
+
+not distributed as is typical for natural scenes but concentrated instead at temporal and spatial frequencies to
+which the visual system is generally most sensitive.193 In
+healthy individuals, such unnatural stimuli generate both
+visual discomfort and a large hemodynamic response.194
+Haigh and others showed that images with a large chromaticity difference (rare in nature) also evoked discomfort
+and a large hemodynamic response, and they interpreted
+the differences between the epileptogenic properties of
+colored flicker195 in these terms.196,197 A large neural response, possibly due to failure of gain control,198 is necessary for a PPR, but it is not sufficient. Drifting gratings
+that induce both discomfort and a large hemodynamic
+response199 do not provoke seizures, presumably because
+they fail to synchronize the activity they evoke.200 A large
+neural response and synchronization of neural activity are
+both necessary for a PPR.
+Several observations indicate that the occipital cortex
+or visual system in patients with photosensitive epilepsy
+is hyperexcitable. Visual evoked potentials (VEPs) have
+a higher amplitude in photosensitive patients with generalized or occipital lobe epilepsies when compared to
+healthy controls or patients without photosensitive epilepsy.198,201–­203 The increase in VEP amplitude depends on
+factors such as the contrast of the stimuli used and eye
+closure. In addition, VEPs in patients with photosensitive
+epilepsy respond differently to repetitive transcranial magnetic stimulation (rTMS) than VEPs in controls. rTMS can
+serve as a tool to assay cortical excitability with 0.5-­1 Hz
+pulses tending to have an inhibitory effect.204 Bocci and
+colleagues205 showed that VEPs in patients with photosensitive epilepsy recovered faster after rTMS, which may correspond to the tendency to have photosensitive seizures.
+Patients with photosensitive epilepsy were more likely
+than nonphotosensitive people with epilepsy to perceive
+phosphenes with low-­intensity TMS.206 Finally, examination of occipital gamma frequency activity/high frequency
+oscillations evoked by light flashes or high-­contrast
+gratings provides further evidence for increased excitability in the occipital cortex or visual system of photosensitive patients. Visual stimuli evoke higher-­amplitude
+occipital gamma frequency activity/high-­frequency oscillations as assessed by magnetoencephalography or EEG
+in photosensitive patients compared to controls.207–­209
+Occipital gamma activity may serve as a nonprovocative
+biomarker.171
+Abnormal excitability in patients with photosensitive
+epilepsy extends beyond the occipital cortex and visual
+system. Subdural electrode recordings from a patient with
+epilepsy showed that photoparoxysmal (PPR) and photoconvulsive responses involved the occipital lobe, parietal
+lobe, posterior cingulate, and medial frontal convexity.173
+However, even photic driving alone involved the parietal
+
+FISHER et al.
+
+lobe in addition to the occipital lobe. Intermittent photic
+stimulation (IPS) normally does not modulate the cortical silent period in the motor cortex of healthy patients
+with a PPR and in patients with genetic generalized epilepsies.210,211 Normally, IPS decreases the cortical silent
+period in the motor cortex. This property is lost in patients
+with a PPR and in patients with genetic generalized epilepsies regardless of whether they have a PPR. An interesting case report of a photosensitive seizure while recording
+EEG and fMRI212 showed that PPR to light flashes resulted
+in increased MRI BOLD signals in visual cortex, superior
+colliculi, and thalamus, but decreased BOLD signals in the
+frontoparietal areas. Vaudano et al. performed an EEG-­
+fMRI study at rest in patients with genetic generalized epilepsies with and without photosensitivity.185 They found
+that patients with photosensitivity had greater posterior
+alpha power with altered functional connectivity with the
+pulvinar and reduced alpha-­related inhibition in the supplementary motor area, the sensorimotor cortex, and the
+premotor cortex. These findings begin to delineate the networks involved in generation of photosensitive seizures.
+Often the assumption is that photosensitive seizures
+are generalized in onset. However, the results summarized above underscore the importance of the occipital
+lobe and the visual system to photosensitive seizures.
+Indeed, patients often experience sensations or visual
+images before losing awareness, reflecting focal seizure
+origin. Kasteleijn-­Nolst Trenité et al. concluded from a
+literature review that 17% of focal epilepsies show PPRs
+and that PPRs can be focal.213 Substantial evidence exists
+for photosensitive seizures originating focally near the visual cortex.17 The PPR is stochastic, and the probability of
+epileptiform activity is closely dependent on the parameters of pattern stimulation, including the contrast, the
+spatial frequency, and the size and shape of the pattern
+and its position in the visual field.214 From a study of these
+parameters and their relation to the known properties of
+cortical neurons it can be inferred that the two cerebral
+hemispheres act individually and independently in the
+induction of epileptiform EEG activity. The activity occurs when normal synchronized physiological excitation
+within the visual cortex of one or both hemispheres exceeds a critical area of cortical tissue that differs from one
+individual to another.
+Vertebrate and invertebrate models of photosensitive
+seizures such as the Papio papio baboon, the Fayoumi
+chicken, the Rhodesian Ridgeback dog, and the ceramide phosphoethanolamine synthase (cpes)-­null mutant
+Drosophila share features of photosensitivity found in
+patients.133,215–­217 For example, EEG recordings from baboons typically show 4-­6 Hz generalized spike and wave
+discharges with 23% having photosensitivity.218 EEG
+studies have captured myoclonic seizures, which are the
+
+15281167, 2022, 4, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/epi.17175 by UNIVERSITY OF ESSEX, Wiley Online Library on [29/08/2025]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+750
+
+
+predominant seizure type in these baboons, but they also
+have absence and generalized tonic-­clonic seizures.219
+These baboons respond to sunlight flashing off rippling
+leaves with myoclonic jerks, causing them to fall from
+trees.13 Although the genetic basis has not been identified
+in the baboon, genetic studies in the other models have
+helped to identify the potential molecular basis for photosensitivity. However, the mechanisms by which these
+molecular defects confer photosensitivity remain unclear.
+Takahashi220 identified two different mechanisms of
+the PPR. One, called wavelength-­dependent mechanisms,
+elicited PPRs when the subject viewed red light with
+wavelength greater than 700 nm. This mechanism was
+likely implicated in the Pokémon incident with the red-­
+blue flash sequences of the rocket-­launch segment.221 The
+second, called quantity of light-­dependent mechanisms,
+generates a PPR in response to bright light flashes independent of color. Color filters or general light filters, based
+upon each of these mechanisms failed to inhibit PPR in
+about half of test cases. However, compound filters addressing both mechanisms inhibited PPR in 90%.
+Light sensitivity usually is defined and tested as an
+immediate EEG response, yet a clinical response might
+be delayed by minutes and therefore not predicted by a
+falsely reassuring EEG. In addition, the range of possible
+light triggers in the real world is far larger than the stimuli
+tested in an EEG lab.
+Seizures occur when excitation exceeds inhibition and
+synchrony overcomes desynchronization in relevant brain
+networks. The above information provides clues but does
+not lead to an explanation of how certain light stimuli provoke seizures. The answer will likely lie in analyzing how
+cellular and molecular changes resulting from genetic
+and environmental insults alter the networks involved in
+processing visual information. Some indications may be
+found in recent computational models of the visual cortex,
+however, in which strong (epileptogenic) visual stimulation has been shown to result in “winner takes all” behavior when inhibitory connections are impaired.222
+
+8 | L I G H T- ­I N DU CE D SE IZ U R ES
+F RO M M O D ER N ST IM U LI
+8.1
+
+| Video-­game-­induced seizures
+
+The ability of some video games to provoke seizures has
+been recognized since 1981, with “Astro Fighter” provoking a seizure in a boy playing in an arcade.223 A “Captain
+Powers” television program in the United States provoked
+seizures in the 1980s.224 In 1992, a 14-­year-­old boy in the
+UK died while playing a video game.225 In 1993, a Golden
+Wonder, Pot Noodle commercial on TV provoked multiple
+
+
+
+| 751
+
+seizures, including a fatality.224 Several other examples of
+TV-­provoked seizures came to public attention. In Great
+Britain, the annual incidence of first seizures precipitated
+by video games has been estimated at 1.5 per 100,000
+among those ages 7-­ to 19-­years-­old.226
+Video games might provoke seizures by several mechanisms. The first is by bright flickering lights, the second
+by patterns, the third by certain color changes, and the
+fourth by content, provoking individual cognitive triggering factors. These may act in combination. Piccioli and
+Vigevano227 exposed nine children who had prior TV-­ or
+video game–­induced seizures to the Nintendo video games
+Super Mario World, Super Mario Kart, Street Fighter II,
+Super Bomberman II, The Magical Quest, Super Mario All
+Stars, Super Aleste, Donkey Kong Country, Kick Off, Nigel
+Mansell's World Championship, Super Strike Gunner, and
+Biometal. All had PPR to IPS. Loss of consciousness was
+seen in eight of the children and myoclonus in all nine.
+Longer seizures with loss of consciousness occurred with
+Bomberman II, a game with high brightness. Subtle signs,
+such as eye deviation or partial closure, might have been
+missed.
+Kasteleijn-­Nolst Trenite12 studied 163 subjects with a
+history of light-­induced seizures. Epileptiform EEG discharges were seen in response to IPS in 85% and to patterns
+in 44%. Games played on a TV screen were more likely to
+provoke a seizure than was playing on the Nintendo device, perhaps because of increased screen size, brightness,
+and subtle flickering of the TV image. The scan rate of the
+TV mattered: 59% showed epileptiform discharges with 50
+Hz TV raster frequency vs 29% with 100 Hz TV.
+Information on limiting flash and patterns to accommodate users with visually sensitive seizures is included
+in an influential set of accessibility guidelines (http://
+gamea​ccess​ibili​tygui​delin​es.com/conta​ct/) issued in 2012
+for video game developers. The guidelines, which received
+an FCC award for advancements in accessibility, contain
+suggestions for accommodating people with a wide spectrum of medical and cognitive conditions, including those
+susceptible to light-­provoked seizures.
+
+8.2
+
+| Movies
+
+Movies shown in cinemas usually do not provoke photic
+seizures, because of low light intensity relative to the
+brightness of a TV or computer screen. However, image
+sequences in some films have triggered seizures in theaters equipped with newer, brighter screens. In recent years,
+movie studios and epilepsy advocacy organizations have
+occasionally issued seizure warnings for popular movies,
+although this is typically done after seizures have already
+occurred in some patrons. In one instance, after reports of
+
+15281167, 2022, 4, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/epi.17175 by UNIVERSITY OF ESSEX, Wiley Online Library on [29/08/2025]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+FISHER et al.
+
+
+|
+
+FISHER et al.
+
+seizures in Incredibles 2 audience members, Disney-­Pixar
+announced a warning and re-­edited the film to alter the
+problem sequences. In the UK, the British Board of Film
+Classification, which reviews all movies prior to release in
+cinemas, requests that filmmakers and distributors warn
+viewers about sequences that could provoke seizures.
+
+8.3
+
+|
+
+Internet and social media
+
+Daily use of electronic entertainment media rose sharply
+with the introduction of smartphones, fast wireless communication, and hugely popular internet and social media
+platforms that display moving images and connect users
+around the world. Facebook debuted in limited release
+in 2004, YouTube in 2005, Twitter in 2006, Instagram in
+2010, Snapchat in 2011, and TikTok in 2016. Heavy use of
+these platforms and the vast amount of multimedia content shared on them have increased the likelihood that
+people with light-­sensitive epilepsy could be exposed to
+potentially harmful images.
+These platforms also allow ordinary people to easily create and distribute their own video and animation
+content, without much oversight. In some instances, individuals with malicious intent have used social media and
+targeted the social media of epilepsy organizations to display flashing images to induce seizures in visually sensitive
+individuals. The Twitter feed of the Epilepsy Foundation
+was attacked in 2019 with seizure-­inducing posts. The UK
+Epilepsy Society has experienced similar attacks. In 2016,
+a flashing image, accompanied by a menacing message,
+was sent via Twitter to a Newsweek journalist known to
+have epilepsy, who then had a seizure.
+Some web browsers and social media platforms have
+introduced protective measures, such as banning animated images (Twitter), allowing users to turn off the
+autoplay feature (YouTube, Twitter, Facebook, Instagram,
+and web browsers), and allowing users to skip over any
+content that the platform determines is potentially seizure
+inducing (TikTok). Another TikTok feature alerts content
+creators if they upload image sequences that could potentially provoke seizures in viewers. Many mobile phones
+also offer the option to disable autoplay.
+Music videos, many with strobing and other visually
+provocative effects, migrated to the internet after the
+launch of YouTube, where they gained a much wider audience and became integral to the popular music industry.
+An irreverent 2012 article acknowledged the genre’s widespread use of potentially seizure-­inducing visual effects,
+observing, “…sometimes [music videos] just slam us in the
+face with superfast editing and more erratic, bright lights
+than is medically advisable. Everyone knows the best vids
+come with a surgeon general's warning.” (Bein, K. “Top
+
+Ten Seizure-­Inducing Music Videos.” Miami New Times.
+April 18, 2012.) Although more public education and user
+safeguards are needed, there is gradual progress on internet and social media platforms toward reducing content
+that provokes visually sensitive seizures.
+
+8.4
+
+| 3D
+
+Movies, TV, and videogames occasionally present images in three dimensions (3D). The history of stereoscopic
+gaming is well summarized in a slide set available online
+at
+https://www.pcwor​ld.com/artic​le/22092​2/the_histo​
+ry_of_stero​scopic_3d_gaming.html#slide1 (Benj Edwards
+release March 3, 2011).
+Little information is available on the medical dangers
+of 3D imaging, which perhaps is a comforting observation.
+3D images can produce eye strain and blurred visions228
+and motion sickness.229 A study of 433 subjects viewing
+movies in 3D or 2D reported a 14% incidence of side effects, with a higher incidence of headaches, eyestrain, and
+dizziness with 3D video.228 Tychsen and Thio230 concluded
+from a review that “Studies published by pediatric epilepsy experts emphasize the low risk of 3D viewing even
+for children with known photosensitive epilepsy.” This is
+noteworthy because the number of hours devoted to 2D or
+3D screen viewing and virtual reality (VR) headset use by
+children worldwide has increased markedly over the last
+decade.
+Risks for provoking seizures vary with the technology
+used to present the 3D images.231 An active shutter design
+rapidly alternates left and right eye visibility to produce a
+sense of visual parallax. The alternate method is passive
+images guided to the left or right eye by polarized glasses.
+This method reduces resolution of the image but provides
+a lighter apparatus that does not require power. Active 3D
+is common on light-­emitting diodes (LEDs), liquid crystal
+displays (LCDs), plasma, and projector TVs. Passive 3D
+may be encountered on some LED and LCD TVs. Active
+imaging reduces light, while passive imaging halves the
+resolution. Some active shutter systems produce a perception of flicker. Typically frequencies of 48, 50, or 60 per
+second are beyond the usual range for provoking seizures,
+but they could provoke seizures in individuals who are
+sensitive to high-­frequency flicker. Some glasses increase
+flicker when they are used to view 2D movies.232
+In 2010, Samsung warned that 3D TV could cause risks
+to pregnant women, the elderly, children, and people with
+serious medical conditions, including epilepsy https://
+www.teleg​raph.co.uk/techn​ology/​news/75962​41/Samsu​
+ng-­warns​-­of-­dange​rs-­of-­3D-­telev​ision.html. The data or
+experience upon which this warning was based were not
+publicly revealed.
+
+15281167, 2022, 4, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/epi.17175 by UNIVERSITY OF ESSEX, Wiley Online Library on [29/08/2025]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+752
+
+
+Khairuddin231 presented a car racing video game
+in 2D, 3D passive (polarized), and 3D active (shutter)
+modes to 29 healthy subjects. Signal analysis techniques
+were applied to the EEG. The first technique measured
+Hjorth complexity parameters, representing the mean
+power of the EEG signal, the first derivative of the EEG
+and the mobility or change in frequency during the recording. The second technique used the composite permutation entropy index, which breaks the EEG into
+segments and estimates the probabilities of containing
+various peaks, troughs, and slopes of the signals in those
+segments. A low index represents an EEG that is regular
+over time. The study found that complexity of the EEG
+signal increased with 3D vs 2D play, especially for the
+active shutter 3D version.
+Researchers at the University of Munich and
+University of Salzburg exposed 100 subjects with epilepsy to 20 minutes of light stimulation and 15 minutes
+of 3D TV, during EEG recording. https://www.theve​rge.
+com/2011/12/6/26141​85/study​-­3d-­tv-­epile​ptic-­seizures.
+One seizure interrupted the 3D TV viewing and 20% experienced nausea, headache, and dizziness. Despite the
+single seizure, the researchers concluded that 3D TV
+viewing did not increase epileptic activity on the EEG
+and it was impossible with a small sample size to say that
+the 3D viewing caused the seizure. A study reported online (https://www.mdedge.com/neuro​logyr​eview​s/artic​
+le/73230/​neuro​devel​opmen​tal-­disor​ders/how-­safe-­3d-­tv-­
+child​ren-­epile​psy/page/0/1) entitled “How safe is 3D TV
+for Children with Epilepsy?”233 performed a 20-­minute
+routine EEG with intermittent photic stimulation and
+during 15 minutes of viewing the 3D film Ice Age 3 with
+active shutter glasses. Data were gathered for 150 children
+and adolescents, 88 with epilepsy and 66 with miscellaneous other conditions. No patient had a seizure during
+viewing. One subject who typically had four seizures per
+day, experienced a seizure two minutes after the viewing.
+Three subjects showed at least a doubling of baseline interictal epileptiform EEG discharges. Ten subjects with pre-­
+existing epilepsy showed improved EEG recordings during
+game playing, presumably due to the usual improvement
+that occurs when drowsiness is replaced by alertness. The
+study was not able to rule out a small increased risk in
+some cases, but no major risk was identified.
+Internet blogs contain scattered reports of people having seizures after watching 3D movies, but a causal effect cannot be established. One study232 concluded that
+“In patients with photosensitive epilepsy, the risks of a
+seizure being triggered by 3D movies is not greater than
+conventional 2D programmes,” although this conclusion
+was based on consideration of the typical brightness and
+flicker frequencies of 3D movies, rather than on direct
+evidence.
+
+
+
+| 753
+
+Viewing 3D movies produces side effects in 14%,
+mostly headache, eyestrain and dizziness. A few internet
+blogs report individual seizures after watching 3D movies, but no causal relation can be established. Some active
+shutter 3D lenses might be at risk for inducing seizures
+due to a flicker effect by the lens, independent of video
+content. Almost no evidence exists in the medical literature to guide safest practice for 3D material. There is no
+indication of a large problem to date.
+
+8.5
+
+| Virtual reality
+
+Virtual reality (or VR) is used increasingly in the medical environment for rehabilitation234, pain control,235
+anxiety,236 and improving quality of life.237 A survey238
+of 30 hospitalized patients who viewed multiple VR experiences with Samsung Gear VR goggles described the
+experience as pleasant and able to reduce pain (75%) and
+anxiety (43%). People with epilepsy were excluded from
+the survey.
+Very few laboratory studies have been done on the effect of VR on seizure tendency. A study in rats239 showed
+that brain cells in the hippocampus, a temporal lobe structure important for spatial navigation, reduced their firing
+rates by 68% when navigating in VR compared to navigating in the real world. The significance of this for safety of
+VR is unclear, but hypothetical scenarios can be imagined
+in which inhibitory (protective) neurons are silenced in a
+VR environment, increasing the excitability of brain and
+leading to seizures.
+VR can improve rehabilitation after a stroke.234
+Although stroke is a risk factor for seizures, none of 80
+studied patients had seizures during rehabilitation, and
+in fact, no side effects were mentioned. A smaller study
+of 10 stroke patients240 placed in a VR canoe also demonstrated no seizures or side effects. VR was compared to VR
+plus occupational therapy,237 with 35 stroke patients who
+showed improvement in mood with VR. No study subjects
+had adverse reactions. One study241 mentioned a seizure
+after VR training, but this seizure was in the conventional
+therapy group. A group of 141 stroke patients were randomized to conventional recreational therapy vs VR therapy with the commercially available games played on the
+Nintendo Wii. No difference in outcome was observed,
+but one VR group patient playing the Nintendo Wii had
+a heart attack, one in the conventional group had a brain
+hemorrhage, and another in the conventional group had
+a seizure.
+Little information is available in the medical literature regarding people with epilepsy and VR. A study242 of
+spatial navigation in 25 patients with refractory temporal
+lobe epilepsy used VR to test navigation skills in a virtual
+
+15281167, 2022, 4, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/epi.17175 by UNIVERSITY OF ESSEX, Wiley Online Library on [29/08/2025]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+FISHER et al.
+
+
+|
+
+warehouse of boxes to be opened. Boxes changed colors
+when opened, but did not flicker or move. The epilepsy
+patients performed worse than did normal controls, but
+no induced seizures or side effects were mentioned. A 3D
+virtual shopping market243,244 was used to test the ability of epilepsy patients to memorize a verbally presented
+shopping list. Equipment included eight surrounding
+touch screens. People with epilepsy found fewer objects
+and traveled longer distances to search.
+The limited data so far available raise no special seizure
+concerns in terms of VR technology, although this view
+may change with more experience. Certain types of VR
+content, including bright flashes, provocative patterns, or
+color changes would be expected to provoke seizures, just
+as they do in the real world.
+
+8.6
+
+| LEDs
+
+Many electronic devices, including TVs and videogame
+or computer screens now employ light-­emitting diodes
+(LEDs). In the past these were not very bright and therefore unlikely to provoke problems other than eyestrain,
+but modern LEDs have significantly increased luminance.
+Modern photostimulators in EEG labs use LEDs to generate bright lights,245 so it is clear that flashes with LEDs can
+provoke photoparoxysmal responses. What is not known is
+whether or not LEDs have provocative properties in people with epilepsy distinct from the known responses to
+bright flashes. A PubMed search on January 25, 2021 using
+search terms "light emitting diode" and seizures produced
+only five results, none of which indicated provocation of
+seizures and two based on animal models,246,247 showing
+suppression of seizure-­like activity with LEDs. Frequencies
+up to 11 kHz generate a visible pattern on the retina when
+a saccade is made across a flickering LED, and this pattern
+is more visible to individuals who complain of eye strain.248
+The effect of LEDs on people with epilepsy is a subject that
+would benefit from additional research.
+
+9 | T EC H N IQU E S TO M IN IMIZE
+RI SK S
+9.1
+
+| Provocative factors
+
+Avoidance of provocative factors and prevention of seizures are conceptually superior to treatment with antiseizure medications (ASMs), and light-­induced seizures, by
+definition, have provocative factors. Prevention can take
+place at the level of government regulation, industry, families, and individual patients.
+
+FISHER et al.
+
+One approach to risk minimization is avoidance of individual precipitating factors for seizures. These can be
+quite varied. Wassenaar and Kasteleijn-­Nolst Trenite124
+sent questionnaires to 248 patients who were taking anti-­
+seizure medications for seizure control. At least one precipitating factor was reported in 47%. Stress was listed in
+33.5%, sleep deprivation in 25%, flickering lights in 17%,
+alcohol in 7%, sounds in 5%, fever in 4%, and menstruation in 3%. The 17% prevalence of precipitation by lights
+was higher than the usually reported 5-­7% among people
+with epilepsy, possibly because EEG confirmation was not
+undertaken in the questionnaire study.
+In addition to flashing lights and certain patterns, in
+rare instances, seizures can be provoked by Fourth-­of-­July
+fireworks,249 certain types of cognition,250 Mah-­jong,251
+wind turbines presenting flicker of the sun,252,253 and
+massively multiplayer online role-­playing games.254 A
+PPR response, but not a seizure, occurred with the rapid
+flashes of an iPhone designed to constrict pupils and reduce red eye during taking of a “selfie.”255 Seizures provoked by an undulating water surface256 were reportedly
+provoked by a TV advertisement for the London Olympics
+in 30 susceptible watchers.10 Attending a discotheque in
+The Netherlands tripled the risk for a seizure.257 Seizures
+due to “sunflower epilepsy” can be self-­induced by waving fingers in front of a light.40,258 Even though triggering
+stimuli may be uncomfortable, the net effect of the symptoms during a seizure may be pleasurable or able to reduce
+tension (see section 2.2 ).49
+
+9.2
+
+| Stimulus characteristics
+
+Inciting stimuli in photosensitive individuals can be light
+flashes, color changes, or certain moving patterns.203 In
+2005, a panel convened by the Epilepsy Foundation of
+America259,260 concluded that a flash is a potential hazard
+if it is brighter than 20 candelas per square meter, occupies
+at least 10% of the visual field, flashes or changes color at
+a frequency between 3 and 60 Hz, and endures for at least
+half a second. Similar parameters apply to color changes,
+which are particularly problematic when to and from saturated red195 with a large chromaticity difference.197 Red
+flashes induce more photoparoxysmal responses than do
+other colors195 and color sensitivity tends to occur at lower
+frequencies than does sensitivity to white light. A pattern
+might provoke seizures if there are at least five clearly
+discernible oscillating stripes (eight if drifting smoothly)
+brighter than 50 candelas per square meter, enduring for
+over one-­half second. Avoidance of these characteristics is
+estimated to be protective for at least two-­thirds of people
+with epilepsy.260
+
+15281167, 2022, 4, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/epi.17175 by UNIVERSITY OF ESSEX, Wiley Online Library on [29/08/2025]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+754
+
+
+Using smaller screens (ideally <12”) and maintaining
+a distance of at least two meters or three times the width
+of the screen (whichever is larger) reduces brightness and
+the area of the visual field involved, thereby reducing seizure risk. Screens that refresh at 100 Hz and flat screen
+plasma and liquid-­crystal displays may be less provocative than older cathode-­ray screens with slower refresh
+frequencies. Limiting screen exposure by taking frequent
+(at least hourly) breaks, limiting cumulative time to fewer
+than 5 hours per day, and avoiding screens entirely when
+sleep-­deprived or fatigued may also be helpful. Software
+settings on social media should be changed so that videos
+do not play automatically.
+
+9.3
+
+| Regulatory issues
+
+To regulate material planned for public broadcast, it is
+necessary to measure the risk for provoking seizures. The
+following list indicates some resources for detecting and/
+or eliminating flashing stimuli that might provoke seizures. The Harding FPA additionally evaluates patterns.
+1. Harding Flash and Pattern Analyzer (FPA): http://
+www.hardi​ngfpa.com/
+2. Photosensitive Epilepsy Analysis Tool (PEAT): https://
+trace.umd.edu/peat/
+3. Baton (Interra systems): https://www.inter​rasys​tems.
+com/
+4. Pulsar Automated Quality Control (Venera technologies)
+https://www.vener​atech.com/pulsa​r-­autom​
+ated-­file-­qc/#checks
+5. Photon Player: https://devpo​st.com/softw​are/photo​n-­
+playe​r-­photo​sensi​tive-­epile​ptic-­seizu​re-­preve​ntion
+6. Flicker Check (Hitachi Solutions Limited): https://
+www.hitac​hi-­solut​ions.com/pdf/flick​erche​ck.pdf
+7. TikTok
+https://newsr​oom.tiktok.com/en-­us/makin​
+g-­tikto​k-­more-­acces​sible​-­to-­peopl​e-­with-­photo​sensi​
+tive-­epilepsy
+8. Vidchecker (Telestream, LLC) http://www.teles​tream.
+net/pdfs/user-­guide​s/PQA-­Pictu​re-­Quali​ty-­Analy​zer-­
+User-­Manua​l-­D0001​0028A.pdf
+Video streaming represents 68% of peak-­time data
+traffic.261 Test systems can detect potentially provocative
+patterns in streaming video in near real time. One analyzer accepts HDMI input from streaming media.261 Flash
+luminance and saturated red are quantified. The software
+detects flashes with luminance changing at least 10% from
+the maximal luminance if occurring at frequencies of at
+least three per second. Luminance is also analyzed for
+each of three component colors: red, green, and blue. To
+trigger a warning, the display must occupy more than 10%
+
+
+
+| 755
+
+of the visual field, typically about one-­fourth of the screen
+area at typical viewing distances.261
+Some countries, including the UK, Japan, Russia, and
+Italy,10 have implemented regulations to limit risks of
+broadcast material for provoking seizures. Guidelines that
+are employed in Britain and Japan include limits not only
+on light flash and colors, but on patterns. Striped patterns
+are restricted if they last more than 0.5 seconds, occupy at
+least 25% of the screen at typical viewing distances, and
+have luminance above 50 candela per meter squared.260
+The Independent Television Committee guidelines in
+the UK prohibit flashes at greater than 3 Hz, brightness
+above 20 candela per square meter or red color flashes occupying more than 25% of the screen.14 These guidelines
+are predicted to protect at least two-­thirds of people with
+pattern-­sensitive seizures. In the UK, devices that flash in
+public are limited to frequencies no higher than 4 Hz, and
+they should not be visible from stairways.10 Frequency,
+brightness, binocularity, and large area are all key factors
+in contributing to seizure provocation. Frequency range
+susceptibility is individual, but according to Martins da
+Silva and Leal,13 15-­20 Hz flashes are most likely to provoke seizures.
+A study in Japan262 suggested that the broadcasting
+guidelines were effective in reducing the number of people who had a first seizure while watching television.
+Many measures that individuals and families can take
+serve to avoid provocative flashing lights and patterns and
+to prevent photosensitive seizures.263
+
+10 | TECHNOLOGY TO REDUCE
+RISK
+Reducing screen brightness and contrast can minimize
+seizure risk. A physical or downloadable electronic antiglare screen filter can help to reduce brightness. Using
+screens only in well-­lit rooms can reduce contrast.
+Alternatively, viewers can wear dark lenses. Lenses that
+diminish brightness by 80% suppressed PPR in 77%.264
+Some blue lenses are more effective than others.265
+Cobalt blue lenses may be especially effective,264–­266 because they filter out red light.195 Polarized lenses, which
+block horizontally oscillating light waves while allowing vertically oscillating light waves to pass, can provide
+further protection. Dark lenses can offer protection,
+not only from screens but also from natural flicker and
+flash effects (light reflected off water or filtered through
+trees), environmental lighting (fireworks, strobe lights,
+malfunctioning fluorescent lighting, camera flashes,
+and so on), and high contrast patterns. However, dark
+lenses attenuate only about 50% of light, so may not be
+fully protective. Dark lenses should not be used while
+
+15281167, 2022, 4, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/epi.17175 by UNIVERSITY OF ESSEX, Wiley Online Library on [29/08/2025]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+FISHER et al.
+
+
+|
+
+driving at night, and blue lenses can make red stop
+lights more difficult to recognize even in daylight, thus
+presenting significant driving hazards. Covering one
+eye with a hand or patch can reduce seizure provocation
+when dark lenses are not available. Closing both eyes is
+generally not protective because bright light penetrates
+the eyelids and is diffused across the retina.
+One strategy to forestall seizures would be a device positioned between the image generator and viewing screen
+that would monitor and selectively reduce the saturation
+of red and other potentially provocative colors by real-­
+time filtering of provocative stimuli at the level of the
+user. Parra and colleagues showed that red-­blue transitions were especially provocative, but that induction of
+PPRs could be reduced greatly by lowering the modulation depth (defined as the maximal minus the minimal
+luminance divided by the maximal luminance) without
+greatly affecting the spatial properties and visual content
+of imagery.267 Photosensitive EEG responses are attenuated with the modification. Nomura, Takahashi, and coworkers268 developed an adaptive temporal filter to reduce
+frame-­to-­frame flicker in TV, video, or computer displays.
+Testing in 11 photosensitive patients showed reduction of
+PPR. To date, these technological solutions have not come
+into wide use.
+A group met in 1993 to provide a consensus view on
+video games and seizures after visually sensitive seizures
+were provoked in the UK.269 They concluded “There is no
+reasonable doubt that epileptic seizures may be precipitated by playing interactive computerized 'video-­games.'”
+Possible contributing factors were listed as: (1) flicker
+from the display; (2) photosensitive response to content;
+(3) seizures from cognitive triggers; (4) seizures precipitated by emotions during the game; (5) induced fatigue
+or sleep deprivation; and (6) chance seizures from coincidence. Of these factors, innate photosensitivity was considered to be the most important. Their recommended
+guidelines were: (1) Use a screen ≤12 inches, and if larger,
+view from a distance more than four times the screen diameter; (2) restrict playing time to <1 hour per session; (3)
+with a history or family history of epilepsy, undergo EEG
+with photic stimulation before playing; and (4) make photosensitive people aware of the risks and supervise them
+during playing.
+The recommendation for EEG in people at high risk
+is important, because about half of individuals with EEG
+photosensitivity are unaware of that trait.19 Most of the
+children who had seizures in the Pokémon incident were
+previously unaware of their tendency to seizures provoked
+by color flashes. Martins da Silva13 enumerated actions
+that viewers could take to minimize the chance of a seizure: occlude one eye; sit more than two meters from a
+screen; avoid flashing images and rapid color transitions;
+
+FISHER et al.
+
+and consider glasses to filter out red. The Epilepsy
+Foundation recommends that users also take breaks in
+playing or viewing. A more extensive list of nonpharmacological treatments for photosensitivity was provided by
+Verrotti.21
+• Avoid potentially provocative stimuli: discotheques,
+flickering sunlight, flashing TV programs and video
+games, and striped patterns
+• Use of a small TV, 12-­inch set
+• Use of a digital TV
+• Use of a lamp beside the TV
+• Use of a temporal optical filter
+• Use of a remote control
+• Respect critical distance of more than two meters from
+the screen
+• Monocular occlusion in case of exposure to trigger
+stimuli
+• Avoid stress, extreme fatigue, sleep deprivation
+• Avoid prolonged videogames playing (more than one
+hour per session)
+• Avoid playing videogames if suffering from lack of sleep
+• Avoid playing videogames alone
+• Use of glasses: dark, polarized, colored lenses
+
+11 | THE PHOTOSENSITIVITY
+MODEL
+Photosensitivity is a reflex form of epilepsy and therefore an important first “treatment” option is to determine
+whether a potential therapy can eliminate or attenuate a
+photosensitive response. The clear advantage of the photosensitivity model (PM) is real-­time testing in epilepsy
+patients, as early as possible in drug development. Animal
+data and single-­dose safety studies in healthy volunteers are sufficient to start investigating dose-­dependent
+efficacy.
+Application of testing in photosensitive individuals
+should be tailored to the patient’s environment, lifestyle,
+and personal characteristics; for example, teenagers are
+most visually sensitive. Insight into a person’s risks can
+be gathered during IPS testing in combination with a detailed clinical history. Testing should evaluate the individual flash frequencies at which a PPR occurs (see https://
+www.ilae.org/files/​i laeG​u idel​i ne/Photi​c Stim​u lati​o n-­
+2012-­.1528-­1167.2011.03319.pdf and the environment
+most likely to evoke seizures.125 The tester should record
+the signs and symptoms during the PPR and whether the
+subject recognizes them as being typical. Generalized
+myoclonic movements are most common, which is helpful in recognizing potentially provocative stimuli in daily
+life.270
+
+15281167, 2022, 4, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/epi.17175 by UNIVERSITY OF ESSEX, Wiley Online Library on [29/08/2025]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+756
+
+
+EEG can help in monitoring efficacy of ASM treatment
+in a particular patient and can predict relapse in seizures
+during ASM withdrawal. However, complete suppression
+of the PPR is not a prerequisite for medication efficacy.
+Photic-­provoked paroxysmal EEG discharges can provide a test ground for putative anti-­seizure drugs271. The
+widely used selective SV2A ligands, levetiracetam and brivaracetam, were developed in part because of their efficacy in the phase-­II PM,272,273 where patients with known
+photosensitivity serve as test subjects. The photosensitivity frequency range and dose dependence are determined
+before and after exposure to a test drug, with hourly stimuli over the course of three days. Change in photosensitivity range after drug intake in relation to drug plasma levels
+gives then a pharmacodynamic/pharmacokinetic profile
+of the drug under investigation. EEG can help in monitoring efficacy of ASM treatment in a particular patient
+and predict relapse in seizures during ASM withdrawal.
+However, complete suppression of the PPR is not a prerequisite for medication efficacy.
+Over time, drugs with different chemical structures and
+mechanisms of action have been tested in the PM. These
+include the histamine H3R antagonist pitolisant,274 partial
+benzodiazepine agonists,275 the AMPA/kainate receptor
+antagonist BGG492,276 Kv7 potassium channel activation
+with ICA-­105665,277 carisbamate,278 the sulfamide JNJ-­
+26489112279 and PF-­06372865, a selective GABA potentiator.280 Cenobamate281 is the most recently US Food and
+Drug Administration (FDA)approved ASM tested in photosensitive subjects. The PM can be tailored to the relevant
+questions, for example, efficacy against status epilepticus
+or seizure clusters, as shown in the comparative time to
+PPR abolition after intravenous infusion of levetiracetam
+and brivaracetam282 or inhalation of alprazolam.283
+
+1 2 | T RE AT M E N T FOR LIG HT-­
+I N D UC E D S E IZ U R E S
+Avoidance of provocative stimuli, such as flashing lights,
+moving patterns, or rapid color changes should be the first
+line of treatment for light-­provoked seizures. Teachers, caregivers, and other responsible adults should be informed
+when a child is photosensitive and should understand the
+need for avoidance and prevention. Photosensitive epilepsy is a medical condition that should be documented in
+educational plans for affected children and schools should
+make relevant accommodations.
+Covering one eye as soon as pre-­seizure sensations
+are perceived can be helpful. Reduction of 50% of the
+visual input substantially reduces the risk of evoked seizures.284 Closing the eyes is not effective and can even be
+more provocative, because diffusion of the light increases
+
+
+
+| 757
+
+photosensitivity,285 as does the act of closing itself.125 Dark
+glasses can reduce seizure risk in photosensitive individuals. Because red light can be especially provocative, blue-­
+tinted glasses can be especially effective, although this
+should be confirmed in the EEG laboratory.264 Spectacles
+individually tinted for maximum clarity when viewing
+text can often relieve the discomfort associated with light
+sensitivity, and occasionally reduce seizures.286
+Avoidance of provocative stimuli is not always possible and is becoming more difficult in modern society.
+Prophylaxis with ASM may be warranted in those with
+strong photosensitivity, seizure types that go easily unnoticed such as absence, or those who have tonic-­clonic seizures.287 Sodium valproate is particularly effective for the
+control of photosensitive seizures288 but it has numerous
+side effects and its use is limited in those of childbearing
+potential.288,289 Levetiracetam, lamotrigine, lacosamide,
+vigabatrin (limited by potential retinal toxicity), and clobazam also have been recommended. Newer ASMs such as
+brivaracetam and cenobamate are good candidates as well
+but clinical experience is yet limited. Phenytoin and carbamazepine are not considered drugs of choice for photosensitive seizures.
+Medication withdrawal should be performed cautiously; in some cases, PPR and related seizures return
+when a medication is tapered. EEG can help in predicting
+whether the patient is indeed in remission or still needs
+pharmacological treatment during the process of gradual
+withdrawal. The seizure-­suppressive effect of ASM can
+last up to weeks after complete withdrawal.290
+
+13 | CONC LUSIONS AND FUT U RE
+NEEDS
+Visually sensitive epilepsy is characterized by recurrent
+seizures provoked by light flashes, colors, or patterns. A
+marker for risk of having visually sensitive seizures is the
+photoparoxysmal response during EEG recording, represented as epileptiform discharges that spread beyond the
+occipital (visual) lobe. Light-­induced seizures can be provoked most commonly by bright repetitive flashes, and
+less often by certain color changes and patterns. Little information is available on the medical dangers of 3D or VR
+imaging. Allowing for interpretive limitations produced
+by varying methodology and selection bias, the presence
+of a PPR ranges from 0.3% to 8% of the normal population
+and from 0.6% to 30% in patients with epilepsy.106 About
+15% of people with generalized epilepsy and 3% of those
+with focal epilepsy show photosensitivity. Provoked seizures can be in the form of tonic-­clonic, myoclonic, absence and focal occipital or temporal seizures, or eyelid
+myoclonia.
+
+15281167, 2022, 4, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/epi.17175 by UNIVERSITY OF ESSEX, Wiley Online Library on [29/08/2025]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+FISHER et al.
+
+
+|
+
+Girls are more likely than boys to be photosensitive,
+but boys are more likely to play provocative videogames.
+Videogame-­provoked seizures have been recognized
+since 1981. In Great Britain, the annual incidence of first
+seizures precipitated by videogames has been estimated
+at 1.5 per 100,000 among those 7-­  to 19-­year-­olds.123
+Black Africans are less likely than Caucasians to have
+visually sensitive seizures.113 The prognosis of visually
+sensitive seizures is fair but not great, with a 14%-­37%
+probability of remission. Photosensitivity results from
+both genetic and environmental factors, but genetics are
+especially important. Photosensitivity runs in families,
+although of course not all have seizures. The likelihood
+of photosensitivity is especially high in families with
+both migraines and epilepsy. Several genes are known to
+be risk factors for photosensitivity; no one gene explains
+the condition.
+Testing for response to light flashes is routine during
+ordinary EEG recordings and ideally done with eyes open,
+closed and with closure. Provocative flash frequencies
+vary from 3 to 60 per second, but 15–­20 flashes per second.
+are maximally provocative in most subjects. Mechanisms
+of photosensitivity are largely unknown. Changes in the
+excitability of occipital cortex and connected networks are
+important factors both in laboratory models and patients.
+Photic-­provoked paroxysmal EEG discharges can provide
+a test model for putative antiepileptic drugs, called the
+photosensitivity model.
+To regulate material planned for public broadcast, measuring the risk for provoking seizures is
+needed. Several tools are available, most prominently
+a Photosensitive Epilepsy Analysis Tool (PEAT) by
+the Trace Research and Development Center at the
+University of Wisconsin (now relocated to the University
+of Maryland), and the Harding Flash and Pattern
+Analyzer http://www.hardi​ngfpa.com/ from Cambridge
+Research Systems, Ltd, and the Baton https://www.inter​
+rasys​tems.com/. Some countries, including the UK,
+Japan, Russia, and Italy, have implemented regulations
+to limit the risks of broadcast material for provoking seizures. Guidelines that are employed in Britain and Japan
+include limits not only on light flash and colors, but on
+patterns. Striped patterns are restricted if they last more
+than 0.5 seconds, occupy at least 25% of the screen at
+typical viewing distances, and have luminance above 50
+candela per meter squared. The Independent Television
+Committee guidelines in the UK prohibit flashes above
+3 Hz, brightness above 20 cd/m2, or red color flashes occupying more than 25% of the screen. These guidelines
+are estimated to protect at least two-­thirds of people with
+pattern-­sensitive seizures. Reducing screen brightness
+can minimize seizure risk. Alternatively, the viewer can
+
+FISHER et al.
+
+wear dark lenses. Blue lenses may be especially effective,
+because they filter out red light.
+ASMs are another method of protection from light-­
+induced seizures. Sodium valproate is particularly effective, but its use should be limited to those without
+childbearing potential. Levetiracetam, lamotrigine, lacosamide, vigabatrin, clobazam, and newer ASM such
+as brivaracetam and cenobamate are good candidates as
+well. Choice of drug treatment is dependent on the type
+of seizure, since efficacy varies and some ASMs can occasionally worsen symptoms, for example, exacerbation
+of myoclonus by lamotrigine. Withdrawal of medication
+requires special attention because, in many cases, PPR
+and related seizures can easily return when medication
+is reduced. EEG can help predict whether the patient is
+indeed in remission or still needs pharmacological treatment during the process of gradual withdrawal.
+A fundamental understanding of the pathophysiology
+of visual-­sensitive seizures is still lacking, so preventive
+measures will remain empirical. In 2006, Kasteleijn-­Nolst
+Trenité19 made recommendations (rephrased for brevity)
+that are still largely unmet (Table 3).
+In the time since the 2005 Epilepsy Foundation-­
+sponsored review,2 three significant developments have
+affected the possibility of photic seizures from technology-­
+generated visual stimuli in daily life. The first is greater
+ability to screen potentially provocative video material—­
+either at the point of origin or the user screen. However,
+the use of this screening technology is voluntary in most
+countries. The second is the enormous proliferation and
+widespread use of interactive online media, resulting in
+frequent and prolonged exposure to images that may trigger seizures in visually sensitive people. The third is emergence of potentially provocative material presented on the
+web, or via 3D and virtual media.
+The Photosensitivity Task Force of the Epilepsy
+Foundation of America continues to believe, as in 2005,
+that preventable seizures from visual stimuli are significant public health problems. Avoidance of provocative
+images and lighting by the public is not always possible.
+Despite some efforts by technology providers and platforms to protect consumers from potentially hazardous visual stimuli, safety in everyday life remains a challenge for
+visually sensitive individuals. Educational programs and
+protective policies are needed in the United States to substantially reduce the likelihood of light-­induced seizures.
+ACKNOWLEDGMENTS
+The authors are grateful to the Epilepsy Foundation and
+particularly Laura Weidner and Allison Nichol for organizing the virtual meetings leading to this review. RF
+is supported by the Maslah Saul MD Chair, the James
+
+15281167, 2022, 4, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/epi.17175 by UNIVERSITY OF ESSEX, Wiley Online Library on [29/08/2025]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+758
+
+
+TABLE 3
+
+
+
+Unmet needs regarding light-­induced seizure
+
+I. Epidemiological studies to better define:
+a. prevalence of visual sensitivity
+b. laboratory findings of light sensitivity
+c. prevalence of a PPR in asymptomatic people
+II. Epidemiological studies:
+a. In different epilepsy syndromes and ethnic groups
+b. long-­term follow-­up
+c. methods to distinguish photosensitive occipital epilepsy
+from migraine
+d. investigate those who only have a seizure during EEG
+investigation
+III. Epidemiological studies:
+a. Prognosis of myoclonic vs. absence visually sensitive
+epilepsy
+b. Are those with video game-­induced seizures a distinct
+population?
+c. Of prognosis in those only with visually-­induced seizures
+d. Value of focal and asymmetrical EEG findings
+e. Importance of visual priming
+IV. Double-­blind, placebo-­controlled trials of ASMs in visual-­
+sensitive patients
+V. Pathophysiological studies: MRI, magnetoencephalography,
+genetic
+Standardize information gathering to facilitate studies.
+Abbreviations: ASMs, antiseizure medications; EEG,
+electroencephalography; MRI, magnetic resonance imaging; PPR,
+photoparoxysmal response.
+
+and Carrie Anderson Epilepsy Fund, and the Steve Chen
+Epilepsy Research Fund.
+CONFLICT OF INTEREST
+Fisher: No relevant disclosures. Unrelated disclosures
+include Medtronic consulting and stock in Avails
+Medical, Cerebral Therapeutics, Irody, Smart-­Monitor,
+Zeto. Jayant N. Acharya was on the Advisory Board of
+SK Life Science until April, 2020, and his wife is currently on the SK Life Science Advisory Board. Fiona
+Mitchell Baumer was supported by the NIH NINDS
+(K23NS116110).
+French, Jacqueline A. receives salary support from the
+Epilepsy Foundation and for consulting work and/or attending Scientific Advisory Boards on behalf of the Epilepsy
+Study Consortium for Adamas, Aeonian/Aeovian, Alterity
+Therapeutics Limited, Anavex, Arkin Holdings, Arvelle
+Therapeutics, Inc., Athenen Therapeutics/Carnot Pharma,
+Baergic Bio, Biogen, BioXcel Therapeutics, Cavion, Cerebral
+Therapeutics, Cerevel, Corlieve Therapeutics, Crossject,
+CuroNZ, Eisai, Eliem Therapeutics, Encoded Therapeutics,
+Engage Therapeutics, Engrail, Epalex, Epihunter,
+
+| 759
+
+Epiminder, Equilibre BioPharmaceuticals, Fortress
+Biotech, Greenwich Biosciences, GW Pharma, Janssen
+Pharmaceutica, Knopp Biosciences, LivaNova, Longboard
+Pharmaceuticals, Lundbeck, Marinus, Mend Neuroscience,
+Merck, NeuCyte, Inc., Neumirna Therapeutics, Neurocrine,
+Neuropace, Otsuka Pharmaceutical Development, Ovid
+Therapeutics Inc., Passage Bio, Praxis, PureTech LTY Inc.,
+Redpin, Sage, SK Life Sciences, Sofinnova, Stoke, Supernus,
+Synergia Medical, Takeda, UCB Inc., West Therapeutic
+Development, Xenon, Xeris, Zogenix, and Zynerba. She
+has also received research support from the Epilepsy Study
+Consortium (Funded by Andrews Foundation, Eisai,
+Engage, Lundbeck, Pfizer, SK Life Science, Sunovion,
+UCB, Vogelstein Foundation) Epilepsy Study Consortium/
+Epilepsy Foundation (Funded by UCB), GW/FACES, and
+NINDS. She is on the editorial board of Lancet Neurology and
+Neurology Today, and is Chief Medical/Innovation Officer
+for the Epilepsy Foundation. She has received travel reimbursement related to research, advisory meetings, or presentation of results at scientific meetings from the Epilepsy
+Study Consortium, the Epilepsy Foundation, Arvelle
+Therapeutics, Inc., Biogen, Cerevel, Engage, Lundbeck,
+NeuCyte, Inc., Otsuka, Sage, UCB, Xenon, Zogenix.
+Pasquale Parisi and Jessica H. Solodar have nothing to
+disclose.
+Jerzy P. Szaflarski: In the last 2 years, Jerzy P. Szaflarski
+has received funding from the National Institutes of
+Health (NIH), the National Science Foundation (NSF),
+the US Department of Defense, State of Alabama, Shor
+Foundation for Epilepsy Research, UCB Pharma Inc.,
+NeuroPace Inc., Greenwich Biosciences Inc., Biogen Inc.,
+Xenon Pharmaceuticals, Serina Therapeutics Inc., and
+Eisai, Inc.; served as a consultant for Greenwich Biosciences
+Inc., NeuroPace, Inc., Serina Therapeutics Inc., AdCel
+Biopharma Inc., iFovea Inc., LivaNova Inc., UCB Pharma
+Inc., and SK Lifesciences Inc., and provided medico-­legal
+services. Liu Lin Thio: NIH, St. Louis Children's Hospital
+Foundation, Epilepsy Study Consortium through which he
+has done consulting work for Anavex Life Sciences, Eisai,
+GW Pharmaceuticals, Marinus Pharmaceuticals, Ovid
+Therapeutics, SK Biopharmaceuticals, Stoke Therapeutics,
+Takeda Pharmaceuticals, and Zogenix. Benjamin Tolchin:
+research funding from a US Veteran Administration
+VISN1 Career Development Award, the VA Pain Research,
+Informatics, Multimorbidities, and Education (PRIME)
+Center of Innovation, and the C.G. Swebilius Trust. He
+has received honoraria from Columbia University Medical
+Center, the International League Against Epilepsy, and the
+American Academy of Neurology.
+Arnold J. Wilkins: none.
+Dorothée Kasteleijn-­Nolst Trenité: consultancy fees
+from Otsuka Pharmaceutical Development, UCB Inc, and
+Greenwich Biosciences.
+
+15281167, 2022, 4, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/epi.17175 by UNIVERSITY OF ESSEX, Wiley Online Library on [29/08/2025]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+FISHER et al.
+
+
+|
+
+AUTHOR CONTRIBUTIONS
+Dr. Fisher wrote the sections on Jeavons syndrome and
+photomyoclonus, prepared the first and last draft of the
+manuscript, and coordinated the submissions of the coauthors for the various sections. Dr. Kasteleijn-­Nolst
+Trenité performed the senior author role and edited the
+entire manuscript and wrote the sections on diagnosis
+and the photosensitivity model. Dr. Parisi wrote and
+revised part of the section relating to the "Differential
+diagnosis of photosensitivity" and "Headache and photosensitivity." He also participated in the review of the
+final manuscript draft approved by all the authors. Dr.
+Tolchin contributed to the sections on epidemiology and
+prognosis, techniques and technologies to minimize risk
+and treatment for light-­induced seizures. Drs. Wilkins
+and Thio wrote the section on mechanisms and reviewed
+the entire manuscript. Dr. Wilkens wrote parts of the
+section on pattern-­sensitive epilepsy. Ms. Solodar contributed to the Internet and Social Media section as well
+as the Conclusion and Future Needs section. Dr. French
+planned the manuscript and reviewed and edited the
+whole document. Drs. Baumer, Tolchin, and Acharya
+contributed to the section on sunflower syndrome. Dr.
+Baumer updated and revised the epidemiology and genetics sections. Dr. Szaflarski revised the section on
+brain imaging. He also participated in the review of the
+final manuscript draft approved by all the authors.
+
+FISHER et al.
+
+3.
+
+4.
+
+5.
+6.
+7.
+8.
+
+9.
+10.
+11.
+12.
+
+13.
+
+14.
+
+GUIDELINE AFFIRMATION
+We confirm that we have read the Journal’s position on
+issues involved in ethical publication and affirm that this
+report is consistent with those guidelines.
+
+15.
+
+ORCID
+Robert S. Fisher https://orcid.org/0000-0003-0287-613X
+Fiona Mitchell Baumer https://orcid.
+org/0000-0002-9162-9458
+Jacqueline A. French https://orcid.
+org/0000-0003-2242-8027
+Pasquale Parisi https://orcid.org/0000-0001-9042-8120
+Jerzy P. Szaflarski https://orcid.org/0000-0002-5936-6627
+Liu Lin Thio https://orcid.org/0000-0002-9779-7903
+Benjamin Tolchin https://orcid.org/0000-0002-9099-0022
+Arnold J. Wilkins https://orcid.org/0000-0002-9322-0461
+Dorothée Kasteleijn-­Nolst Trenité https://orcid.
+org/0000-0002-6659-2614
+
+17.
+
+REFERENCES
+
+1. Wolf P. Reflex epileptic mechanisms in humans: Lessons about
+natural ictogenesis. Epilepsy Behav. 2017;71:118–­23.
+2. Fisher RS, Harding G, Erba G, Barkley GL, Wilkins A, Group
+EFoAW. Photic-­ and pattern-­induced seizures: a review for the
+
+16.
+
+18.
+
+19.
+20.
+
+21.
+
+22.
+23.
+24.
+
+Epilepsy Foundation of America Working Group. Epilepsia.
+2005;46:1426–­41.
+Jagtap S, Menon R, Cherian A, Baheti N, Ashalatha R, Thomas
+SV. "Eating" epilepsy revisited-­  an electro-­clinico-­radiological
+study. J Clin Neurosci. 2016;30:44–­8.
+An D, Zou X, Chen T, Yan B, Liu L, Zhou D. Clinical characteristics and prognosis of mah-­jong-­induced epilepsy: A cohort
+review of 56 patients. Epilepsy Behav. 2015;53:117–­9.
+Nevler N, Gandelman-­Marton R. Acute provoked reflex seizures induced by thinking. Neurologist. 2012;18:415–­7.
+Eadie MJ. Epilepsy in Gowers's understanding, a century ago.
+Clin Exp Neurol. 1989;26:13–­22.
+Adrian ED, Matthews BHC. The Berger rhythm: potential
+changes from the occipital lobes in man. Brain. 1934;57:355–­85.
+Stone JL, Hughes JR. Early history of electroencephalography
+and establishment of the American Clinical Neurophysiology
+Society. J Clin Neurophysiol. 2013;30:28–­44.
+Covanis A. Photosensitivity in idiopathic generalized epilepsies. Epilepsia. 2005;46(Suppl 9):67–­72.
+Harding GF, Harding PF. Photosensitive epilepsy and image
+safety. Appl Ergon. 2010;41:504–­8.
+Hughes JR. The photoparoxysmal response: the probable cause
+of attacks during video games. Clin EEG Neurosci. 2008;39:1–­7.
+Kasteleijn-­Nolst Trenite DG, Martins da Silva A, Ricci S,
+Rubboli G, Tassinari CA, Lopes J, et al. Video games are exciting: a European study of video game-­induced seizures and epilepsy. Epileptic Disord. 2002;4:121–­8.
+Martins da Silva A, Leal B. Photosensitivity and epilepsy:
+Current concepts and perspectives-­A narrative review. Seizure.
+2017;50:209–­18.
+Parra J, Kalitzin SN, Lopes da Silva FH. Photosensitivity and
+visually induced seizures. Curr Opin Neurol. 2005;18:155–­9.
+Poleon S, Szaflarski JP. Photosensitivity in generalized epilepsies. Epilepsy Behav. 2017;68:225–­33.
+Radhakrishnan K, St Louis EK, Johnson JA, McClelland RL,
+Westmoreland BF, Klass DW. Pattern-­sensitive epilepsy: electroclinical characteristics, natural history, and delineation of
+the epileptic syndrome. Epilepsia. 2005;46:48–­58.
+Seshia SS, Carmant L. Visual-­sensitive epilepsies: classification
+and review. Can J Neurol Sci. 2005;32:298–­305.
+Shoja MM, Tubbs RS, Malekian A, Jafari Rouhi AH, Barzgar
+M, Oakes WJ. Video game epilepsy in the twentieth century: a
+review. Childs Nerv Syst. 2007;23:265–­7.
+Trenite DG. Photosensitivity, visually sensitive seizures and epilepsies. Epilepsy Res. 2006;70(Suppl 1):S269–­79.
+Verrotti A, Beccaria F, Fiori F, Montagnini A, Capovilla G.
+Photosensitivity: epidemiology, genetics, clinical manifestations, assessment, and management. Epileptic Disord.
+2012;14:349–­62.
+Verrotti A, Tocco AM, Salladini C, Latini G, Chiarelli F. Human
+photosensitivity: from pathophysiology to treatment. Eur J
+Neurol. 2005;12:828–­41.
+Padmanaban V, Inati S, Ksendzovsky A, Zaghloul K. Clinical advances in photosensitive epilepsy. Brain Res. 2019;1703:18–­25.
+Wolf P, Goosses R. Relation of photosensitivity to epileptic syndromes. J Neurol Neurosurg Psychiatry. 1986;49:1386–­91.
+Shiraishi H, Fujiwara T, Inoue Y, Yagi K. Photosensitivity in relation to epileptic syndromes: a survey from an epilepsy center
+in Japan. Epilepsia. 2001;42:393–­7.
+
+15281167, 2022, 4, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/epi.17175 by UNIVERSITY OF ESSEX, Wiley Online Library on [29/08/2025]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+760
+
+
+25. Guerrini R, Genton P. Epileptic syndromes and visually induced seizures. Epilepsia. 2004;45(Suppl 1):14–­8.
+26. Stephani U, Tauer U, Koeleman B, Pinto D, Neubauer BA,
+Lindhout D. Genetics of photosensitivity (photoparoxysmal response): a review. Epilepsia. 2004;45(Suppl 1):19–­23.
+27. Acharya JN, Satishchandra P, Shankar SK. Familial progressive
+myoclonus epilepsy: clinical and electrophysiologic observations. Epilepsia. 1995;36:429–­34.
+28. Specchio N, Bellusci M, Pietrafusa N, Trivisano M, de Palma
+L, Vigevano F. Photosensitivity is an early marker of neuronal
+ceroid lipofuscinosis type 2 disease. Epilepsia. 2017;58:1380–­8.
+29. Atalar A, Vanlı-­Yavuz EN, Yılmaz E, Bebek N, Baykan B. Reflex
+epileptic features in patients with focal epilepsy of unknown
+cause. Clin Neurol Neurosurg. 2020;190:105633.
+30. Fisher RS. The New Classification of Seizures by the
+International League Against Epilepsy 2017. Curr Neurol
+Neurosci Rep. 2017;17:48.
+31. Fisher RS, Cross JH, French JA, Higurashi N, Hirsch E, Jansen FE,
+et al. Operational classification of seizure types by the International
+League Against Epilepsy: Position Paper of the ILAE Commission
+for Classification and Terminology. Epilepsia. 2017;58:522–­30.
+32. Giuliano L, Fatuzzo D, Mainieri G, Maira G, Elia M, Ferlazzo E,
+et al. Eyelid myoclonia with absences: Electroclinical features
+and prognostic factors. Epilepsia. 2019;60:1104–­13.
+33. Striano S, Capovilla G, Sofia V, Romeo A, Rubboli G, Striano P,
+et al. Eyelid myoclonia with absences (Jeavons syndrome): a well-­
+defined idiopathic generalized epilepsy syndrome or a spectrum
+of photosensitive conditions? Epilepsia. 2009;50(Suppl 5):15–­9.
+34. Zawar I, Pestana Knight EM. An overview of the electroencephalographic (EEG) features of epilepsy with eyelid myoclonia (Jeavons Syndrome). Neurodiagn J. 2020;60:113–­27.
+35. Capovilla G, Striano P, Gambardella A, Beccaria F, Hirsch E,
+Casellato S, et al. Eyelid fluttering, typical EEG pattern, and
+impaired intellectual function: a homogeneous epileptic condition among the patients presenting with eyelid myoclonia.
+Epilepsia. 2009;50:1536–­41.
+36. Kasteleijn-­Nolst Trenite DG, Guerrini R, Binnie CD, Genton
+P. Visual sensitivity and epilepsy: a proposed terminology and
+classification for clinical and EEG phenomenology. Epilepsia.
+2001;42:692–­701.
+37. Ames FR, Saffer D. The sunflower syndrome. A new look at "self-­
+induced" photosensitive epilepsy. J Neurol Sci. 1983;59:1–­11.
+38. Belcastro V, Casellato S, Striano P, Capovilla G, Savasta S,
+Foiadelli T, et al. Epilepsy in "Sunflower syndrome": electroclinical features, therapeutic response, and long-­term follow-­up.
+Seizure. 2021;93:8–­12.
+39. Barnett JR, Fleming BM, Geenen KR, Sourbron J, Freedman
+JH, Bruno PL, et al. Characterizing Sunflower syndrome: a clinical series. Epileptic Disord. 2020;22:273–­80.
+40. Baumer FM, Porter BE. Clinical and electrographic features of
+sunflower syndrome. Epilepsy Res. 2018;142:58–­63.
+41. Sourbron J, Ayub N, Luo Y, Thiele EA. Ictal EEG in sunflower
+syndrome: Provoked or unprovoked seizures? Epilepsy Behav.
+2020;113:107470.
+42. Gastaut H. Photogenic epilepsy. Rev Prat. 1951;1:105–­9.
+43. Livingston S, Torres IC. Photic epilepsy: report of an unusual case and review of the literature. Clin Pediatr (Phila).
+1964;3:304–­7.
+44. Kasteleijn-­Nolst TDGA, Binnie CD, Overweg J, Oosting J, Van
+Emde BW. Treatment of self-­induction in epileptic patients:
+
+
+
+45.
+46.
+
+47.
+48.
+49.
+
+50.
+
+51.
+
+52.
+
+53.
+
+54.
+
+55.
+
+56.
+
+57.
+
+58.
+
+59.
+
+60.
+
+61.
+
+62.
+
+63.
+
+| 761
+
+who wants it? In Beaumanoir A, Gastaut H, Naquet R, editors.
+Reflex seizures and reflex epilepsies: Médecine & Hygiéne;
+1989, p. 439-­45.
+Aicardi J, Gastaut H. Treatment of self-­induced photosensitive
+epilepsy with fenfluramine. N Engl J Med. 1985;313:1419.
+Geenen KR, Patel S, Thiele EA. Sunflower syndrome: a poorly
+understood photosensitive epilepsy. Dev Med Child Neurol.
+2021;63:259–­62.
+Boel M, Casaer P. Add-­on therapy of fenfluramine in intractable self-­induced epilepsy. Neuropediatrics. 1996;27:171–­3.
+Robertson EG. Photogenic epilepsy: self-­precipitated attacks.
+Brain. 1954;77:232–­51.
+Brinciotti M, Wilkins AJ, Penacchio O, Matricardi M. Pattern-­
+sensitive patients with epilepsy use uncomfortable visual stimuli to self-­induce seizures. Epilepsy Behav. 2021;122:108189.
+Jeavons PM. Nosological problems of myoclonic epilepsies in childhood and adolescence. Dev Med Child Neurol.
+1977;19:3–­8.
+Nilo A, Crespel A, Genton P, Macorig G, Gigli GL, Gelisse P.
+Epilepsy with eyelid myoclonias (Jeavons syndrome): An
+electro-­clinical study of 40 patients from childhood to adulthood. Seizure. 2021;87:30–­8.
+Myers KA, Oskoui M. Seizures in epilepsy with eyelid myoclonia may be provoked by eye closure, not fixation removal.
+Pediatr Neurol. 2020;105:62–­4.
+Reyhani A, Özkara Ç. Pitfalls in the diagnosis of Jeavons syndrome: a study of 32 cases and review of the literature. Epileptic
+Disord. 2020;22:281–­90.
+Gülen Abanoz Y, Abanoz Y, Özkara Ç. Ongoing photosensitivity in an elderly patient with Jeavons Sydrome. Neurologist.
+2018;23:94–­7.
+Viravan S, Go C, Ochi A, Akiyama T, Carter Snead O, Otsubo H.
+Jeavons syndrome existing as occipital cortex initiating generalized epilepsy. Epilepsia. 2011;52:1273–­9.
+Mayo S, Gómez-­Manjón I, Fernández-­Martínez FJ, Camacho A,
+Martínez F, Benito-­León J. Candidate genes for eyelid myoclonia
+with absences, review of the literature. Int J Mol Sci. 2021;22:5609.
+Fournier-­Goodnight AS, Gabriel M, Perry MS. Preliminary neurocognitive outcomes in Jeavons syndrome. Epilepsy Behav.
+2015;52:260–­3.
+Smith KM, Youssef PE, Wirrell EC, Nickels KC, Payne ET,
+Britton JW, et al. Jeavons syndrome: clinical features and response to treatment. Pediatr Neurol. 2018;86:46–­51.
+Uchida CGP, de Carvalho KC, Guaranha MSB, Guilhoto LMFF,
+de Araújo Filho GM, et al. Prognosis of Juvenile myoclonic epilepsy with eye-­closure sensitivity. Seizure. 2018;62:17–­25.
+Parissis D, Ioannidis P, Karacostas D. Levetiracetam as alternative treatment in Jeavons syndrome. J Neurol Sci.
+2014;341:147–­9.
+Striano P, Sofia V, Capovilla G, Rubboli G, Di Bonaventura C,
+Coppola A, et al. A pilot trial of levetiracetam in eyelid myoclonia
+with absences (Jeavons syndrome). Epilepsia. 2008;49:425–­30.
+Zawar I, Franic L, Knight EP. Response to lacosamide monotherapy in a patient with medically refractory Jeavons syndrome: a case report and review of the literature. Epileptic
+Disord. 2020;22:643–­7.
+Menon R, Baheti NN, Cherian A, Iyer RS. Oxcarbazepine
+induced worsening of seizures in Jeavons syndrome: lessons learnt from an interesting presentation. Neurol India.
+2011;59:70–­2.
+
+15281167, 2022, 4, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/epi.17175 by UNIVERSITY OF ESSEX, Wiley Online Library on [29/08/2025]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+FISHER et al.
+
+
+|
+
+64. Zawar I, Franic L, Kotagal P, Knight EP. Exacerbation of eyelid
+myoclonia in patients with epilepsy and eyelid myoclonia receiving cannabidiol. Epileptic Disord. 2021;23(6):906.
+65. Walter WG, Walter VJ, Gastaut H, Gastaut Y. Une forme é lectroenc é phalographique nouvelle de l' é pilepsie: l' é pilepsie
+photogenique. Rev Neurol. 1948;80:613–­4.
+66. Gastaut H, Remond A. L'activation de l’électroencéphalogramme dans les affections cérébrales non épileptogènes (vers
+une neurophysiologie clinique). Rev Neurol. 1949;81:594–­8.
+67. Bickford RG, Daly D, Keith HM. Convulsive effects of light
+stimulation in children. AMA Am J Dis Child. 1953;86:170–­83.
+68. Meier-­Ewert K, Broughton RJ. Photomyoclonic response
+of epileptic and non-­epileptic subjects during wakefulness,
+sleep and arousal. Electroencephalogr Clin Neurophysiol.
+1967;23:142–­51.
+69. Chatrian GE, Prez-­Brja C. Depth electrographic observations in
+two cases of photo-­oculoclonic response. Electroencephalogr
+Clin Neurophysiol. 1964;17:71–­5.
+70. Anyanwu E, Watson NA. Visually-­evoked pattern and photomyoclonic responses in video game and television epilepsy: case reports. Acta Physiol Pharmacol Ther Latinoam.
+1996;46:177–­84.
+71. Jaffe MJ, Hommer DW. Attenuating actions of diazepam on the
+photomyoclonic reflex. Retina. 1987;7:237–­40.
+72. Moccia M, Erro R, Nicolella E, Striano P, Striano S. Extreme
+startle and photomyoclonic response in severe hypocalcaemia.
+Epileptic Disord. 2014;16:84–­7.
+73. Brinciotti M, Matricardi M, Cantonetti L, Lauretti G, Pugliatti
+M. Long-­term outcome of pattern-­sensitive epilepsy. Epilepsia.
+2006;47(Suppl 5):36–­40.
+74. Seneviratne U. Bathing epilepsy. Seizure. 2001;10:516–­7.
+75. McAbee GN, Chan A. Hot water-­induced migraine syndrome:
+further evidence of a relationship between migraine and epilepsy. Eur Neurol. 2001;46:227.
+76. Braham J, Hertzeanu H, Yahini JH, Neufeld HN. Reflex cardiac
+arrest presenting as epilepsy. Ann Neurol. 1981;10:277–­8.
+77. Xiao H, Tran TP, Pétrin M, Boucher O, Mohamed I, Bouthillier
+A, et al. Reflex operculo-­insular seizures. Epileptic Disord.
+2016;18:19–­25.
+78. Huang Z, Lian Y, Xu H, Zhang H. Weird Laughing in
+Hyperekplexia: A new phenotype associated with a novel mutation in the GLRA1 gene? Seizure. 2018;58:6–­8.
+79. Seri S, Cerquiglini A, Harding GF. Visually induced syncope:
+a nonepileptic manifestation of visual sensitivity? Neurology.
+2006;67:359–­60.
+80. Zifkin BG, Kasteleijn-­Nolst TD. Reflex epilepsy and reflex seizures of the visual system: a clinical review. Epileptic Disord.
+2000;2:129–­36.
+81. Mikati MA, Shamseddine AN. Refractory calculation-­induced
+idiopathic generalized epilepsy: a case report and review of the
+literature. Epilepsia. 2005;46(Suppl 10):48–­50.
+82. Genç BO, Genç E, Güney F, Ilhan N. Pattern-­reversal visual
+evoked potentials in patients with newly diagnosed epilepsy.
+Epilepsia. 2005;46:1219–­23.
+83. Wolf P, Benbadis S, Dimova PS, Vinayan KP, Michaelis R,
+Reuber M, et al. The importance of semiological information based on epileptic seizure history. Epileptic Disord.
+2020;22:15–­31.
+84. Koutroumanidis M, Arzimanoglou A, Caraballo R, Goyal
+S, Kaminska A, Laoprasert P, et al. The role of EEG in the
+
+FISHER et al.
+
+diagnosis and classification of the epilepsy syndromes: a tool
+for clinical practice by the ILAE Neurophysiology Task Force
+(Part 1). Epileptic Disord. 2017;19:233–­98.
+85. Koutroumanidis M, Arzimanoglou A, Caraballo R, Goyal S,
+Kaminska A, Laoprasert P, et al. The role of EEG in the diagnosis and classification of the epilepsy syndromes: a tool for clinical practice by the ILAE Neurophysiology Task Force (Part 2).
+Epileptic Disord. 2017;19:385–­437.
+86. Piccioli M, Parisi P, Tisei P, Villa MP, Buttinelli C, Kasteleijn-­
+Nolst Trenite DG. Ictal headache and visual sensitivity.
+Cephalalgia. 2009;29:194–­203.
+87. Parisi P, Striano P, Negro A, Martelletti P, Belcastro V. Ictal
+epileptic headache: an old story with courses and appeals. J
+Headache Pain. 2012;13:607–­13.
+88. Piard J, Béreau M, XiangWei W, Wirth T, Amsallem D, Buisson
+L, et al. The GRIA3 c.2477G > A variant causes an exaggerated
+startle reflex, chorea, and multifocal myoclonus. Mov Disord.
+2020;35:1224–­32.
+89. Lv Y, Zhang N, Liu C, Shi M, Sun L. Occipital epilepsy versus
+progressive myoclonic epilepsy in a patient with continuous occipital spikes and photosensitivity in electroencephalogram: A
+case report. Medicine (Baltimore). 2018;97:e0299.
+90. Panayiotopoulos CP. Benign nocturnal childhood occipital epilepsy: a new syndrome with nocturnal seizures, tonic deviation
+of the eyes, and vomiting. J Child Neurol. 1989;4:43–­9.
+91. Sureshbabu S, Nayak D, Aggarwal V, Peter S, Khanna L, Mittal
+G. Intractable ictal vomiting: a new form of reflex epilepsy?
+Epileptic Disord. 2017;19:212–­6.
+92. Vainstein G, Yoffe V, Gadoth N. Can police car colored flash
+light induce encephalographic discharges and seizures? Croat
+Med J. 2000;41:319–­22.
+93. Huang XJ, Wang SG, Guo XN, Tian WT, Zhan FX, Zhu ZY, et al.
+The phenotypic and genetic spectrum of paroxysmal kinesigenic dyskinesia in China. Mov Disord. 2020;35:1428–­37.
+94. Goyal G, Kalita J, Misra UK. Utility of different seizure induction protocols in psychogenic nonepileptic seizures. Epilepsy
+Res. 2014;108:1120–­7.
+95. Popkirov S, Grönheit W, Wellmer J. Hyperventilation and photic stimulation are useful additions to a placebo-­based suggestive seizure induction protocol in patients with psychogenic
+nonepileptic seizures. Epilepsy Behav. 2015;46:88–­90.
+96. Kasteleijn-­Nolst Trenite DG, Verrotti A, Di Fonzo A, Cantonetti
+L, Bruschi R, Chiarelli F, et al. Headache, epilepsy and photosensitivity: how are they connected? J Headache Pain.
+2010;11:469–­76.
+97. Parisi P, Paolino MC, Raucci U, Della Vecchia N, Belcastro V,
+Villa MP, et al. Ictal epileptic headache: when terminology is
+not a moot question. Front Neurol. 2019;10:785.
+98. Parisi P, Striano P, Trenité DG, Verrotti A, Martelletti P, Villa
+MP, et al. 'Ictal epileptic headache': recent concepts for new
+classifications criteria. Cephalalgia. 2012;32:723–­4.
+99. Wendorff J, Juchniewicz B. Photosensitivity in children with
+idiopathic headaches. Neurol Neurochir Pol. 2005;39:S9–­16.
+100. Bjørk MH, Stovner LJ, Nilsen BM, Stjern M, Hagen K, Sand T.
+The occipital alpha rhythm related to the "migraine cycle" and
+headache burden: a blinded, controlled longitudinal study. Clin
+Neurophysiol. 2009;120:464–­71.
+101. Coppola G, Pierelli F, Schoenen J. Is the cerebral cortex hyperexcitable or hyperresponsive in migraine? Cephalalgia.
+2007;27:1427–­39.
+
+15281167, 2022, 4, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/epi.17175 by UNIVERSITY OF ESSEX, Wiley Online Library on [29/08/2025]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+762
+
+
+102. Parisi P. The complex relationship between epilepsy and
+headache and the concept of ictal epileptic headache. In:
+Striano P, editor. Epilepsy towards the next decade. New
+trends and hopes in epileptology. New York: Springer; 2015.
+p. 139–­62.
+103. Wilkins AJ, Haigh SM, Mahroo OA, Plant GT. Photophobia in
+migraine: A symptom cluster? Cephalalgia. 2021;41:1240–­8.
+104. Fogang Y, Gérard P, De Pasqua V, Pepin JL, Ndiaye M, Magis D,
+et al. Analysis and clinical correlates of 20 Hz photic driving on
+routine EEG in migraine. Acta Neurol Belg. 2015;115:39–­45.
+105. Parisi P, Verrotti A, Costa P, Striano P, Zanus C, Carrozzi M,
+et al. Diagnostic criteria currently proposed for "ictal epileptic
+headache": Perspectives on strengths, weaknesses and pitfalls.
+Seizure. 2015;31:56–­63.
+106. Rathore C, Prakash S, Makwana P. Prevalence of photoparoxysmal response in patients with epilepsy: Effect of the underlying
+syndrome and treatment status. Seizure. 2020;82:39–­43.
+107. Baykan B, Matur Z, Gurses C, Aykutlu E, Gokyigit A. Typical absence
+seizures triggered by photosensitivity. Epilepsia. 2005;46:159–­63.
+108. Lee CY, Jeon JY, Cho YW, Moon HJ. A case of temporal onset
+partial seizure induced by photic stimuli. J Epilepsy Res.
+2014;4:18–­20.
+109. Myers KA, Scheffer IE. Myoclonic absence seizures in Dravet
+Syndrome. Pediatr Neurol. 2017;70:67–­9.
+110. Spagnoli C, Kugathasan U, Brittain H, Boyd SG. Epileptic
+spasms and early-­onset photosensitive epilepsy in Patau syndrome: An EEG study. Brain Dev. 2015;37:704–­13.
+111. Bonini F, Egeo G, Fattouch J, Fanella M, Morano A, Giallonardo
+AT, et al. Natural evolution from idiopathic photosensitive occipital lobe epilepsy to idiopathic generalized epilepsy in an untreated young patient. Brain Dev. 2014;36:346–­50.
+112. Politi-­Elishkevich K, Kivity S, Shuper A, Levine H, Goldberg-­
+Stern H. Idiopathic photosensitive occipital epilepsy: clinical
+and electroencephalographic (EEG) features. J Child Neurol.
+2014;29:307–­11.
+113. Magnerou AM, Toffa DH, Sow AD, Basse A, Seck LB, Ndiaye
+M, et al. Are Sub-­Saharan epileptic people less photosensitive?
+A Senegalese study of photoparoxysmal response in a reference
+epilepsy centre. Epileptic Disord. 2020;22:610–­22.
+114. Bai J, Zhang WJ, Ruan ZF, Chen BB, Zhao G, Wang D, et al.
+Photosensitive epilepsy and photosensitivity of patients with
+possible epilepsy in Chinese Han race: A prospective multicenter study. J Clin Neurosci. 2019;69:15–­20.
+115. Taylor I, Marini C, Johnson MR, Turner S, Berkovic SF, Scheffer
+IE. Juvenile myoclonic epilepsy and idiopathic photosensitive occipital lobe epilepsy: is there overlap? Brain. 2004;127:1878–­86.
+116. Kasteleijn-­Nolst Trenité DG. Intermittent photic stimulation as
+an activation method for electroencephalographic screening of
+aircrew applicants. Epilepsy Behav. 2005;6:21–­6.
+117. Trojaborg W. EEG abnormalities in 5,893 jet pilot applicants registered in a 20-­year period. Clin Electroencephalogr.
+1992;23:72–­8.
+118. Gregory RP, Oates T, Merry RT. Electroencephalogram epileptiform abnormalities in candidates for aircrew training.
+Electroencephalogr Clin Neurophysiol. 1993;86:75–­7.
+119. Hendriksen IJ, Elderson A. The use of EEG in aircrew selection. Aviat Space Environ Med. 2001;72:1025–­33.
+120. Oh DA, Kim H, Bae EK. Electroencephalographic abnormalities in the screening for pilot applicants in korea. J Clin Neurol.
+2018;14:212–­4.
+
+
+
+| 763
+
+121. Eeg-­Olofsson O, Petersen I, Sellden U. The development of
+the electroencephalogram in normal children from the age
+of 1 through 15 years. Paroxysmal activity. Neuropadiatrie.
+1971;2:375–­404.
+122. Harding G, Jeavons PM. Photosensitive Epilepsy. London, UK:
+MacKeith Press; 1994.
+123. Quirk JA, Fish DR, Smith SJ, Sander JW, Shorvon SD, Allen
+PJ. Incidence of photosensitive epilepsy: a prospective national
+study. Electroencephalogr Clin Neurophysiol. 1995;95:260–­7.
+124. Wassenaar M, Kasteleijn-­Nolst Trenite DG, de Haan GJ, Carpay
+JA, Leijten FS. Seizure precipitants in a community-­based epilepsy cohort. J Neurol. 2014;261:717–­24.
+125. Kasteleijn-­Nolst Trenité DG. Photosensitivity in epilepsy.
+Electrophysiological and clinical correlates. Acta Neurol Scand
+Suppl. 1989;125:3–­149.
+126. Binelli S, Ragona F, Canafoglia L, Freri E, Saletti V, Casazza
+M, et al. Electroencephalographic (EEG) photoparoxysmal responses under 5 years of age: diagnostic implications and peculiarities. J Child Neurol. 2015;30:1824–­30.
+127. Meritam Larsen P, Wüstenhagen S, Terney D, Gardella E,
+Alving J, Aurlien H, et al. Photoparoxysmal response and its
+characteristics in a large EEG database using the SCORE system. Clin Neurophysiol. 2021;132:365–­71.
+128. Lu Y, Waltz S, Stenzel K, Muhle H, Stephani U. Photosensitivity
+in epileptic syndromes of childhood and adolescence. Epileptic
+Disord. 2008;10:136–­43.
+129. van Win OA, Barnes JG, Ferrier CF, Booth F, Prasad AN,
+Kasteleijn-­Nolst Trenite DGA. A study of the significance of
+photoparoxysmal responses and spontaneous epileptiform
+discharges in the EEG in childhood epilepsy. Epilepsy Behav.
+2020;107:107046.
+130. Jeavons PM, Bishop A, Harding GF. The prognosis of photosensitivity. Epilepsia. 1986;27:569–­75.
+131. Harding GF, Edson A, Jeavons PM. Persistence of photosensitivity. Epilepsia. 1997;38:663–­9.
+132. Etemadifar M, Raoufi M, Maghzi AH, Ebrahimi A, Kaji-­
+Esfahani M, Mousavi SA. Television-­provoked epilepsy in children: a follow-­up survey from Isfahan. Iran. Arch Iran Med.
+2008;11:649–­53.
+133. Italiano D, Striano P, Russo E, Leo A, Spina E, Zara F, et al.
+Genetics of reflex seizures and epilepsies in humans and animals. Epilepsy Res. 2016;121:47–­54.
+134. Hutchison JH, Stone FH, Davidson JR. Photogenic epilepsy induced by the patient. Lancet. 1958;1:243–­5.
+135. Davidson S, Watson CW. Hereditary light sensitive epilepsy.
+Neurology. 1956;6:235–­61.
+136. Waltz S, Christen HJ, Doose H. The different patterns of the
+photoparoxysmal response–­a genetic study. Electroencephalogr
+Clin Neurophysiol. 1992;83:138–­45.
+137. Taylor I, Berkovic SF, Scheffer IE. Genetics of epilepsy
+syndromes in families with photosensitivity. Neurology.
+2013;80:1322–­9.
+138. de Kovel CG, Pinto D, Tauer U, Lorenz S, Muhle H, Leu C, et al.
+Whole-­genome linkage scanfor epilepsy-­related photosensitivity: a mega-­analysis. Epilepsy Res. 2010;89:286–­94.
+139. Pinto D, Kasteleijn-­Nolst Trenite DG, Cordell HJ, Mattheisen
+M, Strauch K, Lindhout D, et al. Explorative two-­locus linkage
+analysis suggests a multiplicative interaction between the 7q32
+and 16p13 myoclonic seizures-­related photosensitivity loci.
+Genet Epidemiol. 2007;31:42–­50.
+
+15281167, 2022, 4, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/epi.17175 by UNIVERSITY OF ESSEX, Wiley Online Library on [29/08/2025]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+FISHER et al.
+
+
+|
+
+140. Pinto D, Westland B, de Haan GJ, Rudolf G, da Silva BM, Hirsch
+E, et al. Genome-­wide linkage scan of epilepsy-­related photoparoxysmal electroencephalographic response: evidence for
+linkage on chromosomes 7q32 and 16p13. Hum Mol Genet.
+2005;14:171–­8.
+141. Dibbens LM, Ekberg J, Taylor I, Hodgson BL, Conroy SJ,
+Lensink IL, et al. NEDD4-­2 as a potential candidate susceptibility gene for epileptic photosensitivity. Genes Brain Behav.
+2007;6:750–­5.
+142. Vanli-­Yavuz EN, Ozdemir O, Demirkan A, Catal S, Bebek N,
+Ozbek U, et al. Investigation of the possible association of
+NEDD4-­2 (NEDD4L) gene with idiopathic photosensitive epilepsy. Acta Neurol Belg. 2015;115:241–­5.
+143. Johannesen K, Marini C, Pfeffer S, Møller RS, Dorn T, Niturad
+CE, et al. Phenotypic spectrum of GABRA1: From generalized
+epilepsies to severe epileptic encephalopathies. Neurology.
+2016;87:1140–­51.
+144. Galizia EC, Myers CT, Leu C, de Kovel CG, Afrikanova T,
+Cordero-­Maldonado ML, et al. CHD2 variants are a risk factor
+for photosensitivity in epilepsy. Brain. 2015;138:1198–­207.
+145. Thomas RH, Zhang LM, Carvill GL, Archer JS, Heavin SB,
+Mandelstam SA, et al. CHD2 myoclonic encephalopathy is
+frequently associated with self-­induced seizures. Neurology.
+2015;84:951–­8.
+146. Caputo D, Trivisano M, Vigevano F, Fusco L. CHD2-­epilepsy:
+Polygraphic documentation of self-­induced seizures due to
+fixation-­off sensitivity. Seizure. 2018;57:8–­10.
+147. Carvill GL, Heavin SB, Yendle SC, McMahon JM, O'Roak BJ,
+Cook J, et al. Targeted resequencing in epileptic encephalopathies identifies de novo mutations in CHD2 and SYNGAP1. Nat
+Genet. 2013;45:825–­30.
+148. Vlaskamp DRM, Shaw BJ, Burgess R, Mei D, Montomoli
+M, Xie H, et al. encephalopathy: A distinctive generalized
+developmental and epileptic encephalopathy. Neurology.
+2019;92:e96–­e107.
+149. Lo Barco T, Kaminska A, Solazzi R, Cancés C, Barcia G,
+Chemaly N, et al. SYNGAP1-­DEE: A visual sensitive epilepsy.
+Clin Neurophysiol. 2021;132:841–­50.
+150. Borlot F, Regan BM, Bassett AS, Stavropoulos DJ, Andrade
+DM. Prevalence of pathogenic copy number variation in adults
+with pediatric-­onset epilepsy and intellectual disability. JAMA
+Neurol. 2017;74:1301–­11.
+151. Stamberger H, Hammer TB, Gardella E, Vlaskamp DRM,
+Bertelsen B, Mandelstam S, et al. NEXMIF encephalopathy: an
+X-­linked disorder with male and female phenotypic patterns.
+Genet Med. 2021;23:363–­73.
+152. Bartnik M, Szczepanik E, Derwińska K, Wiśniowiecka-­
+Kowalnik B, Gambin T, Sykulski M, et al. Application of array
+comparative genomic hybridization in 102 patients with epilepsy and additional neurodevelopmental disorders. Am J Med
+Genet B Neuropsychiatr Genet. 2012;159B:760–­71.
+153. Rudolf G, Lesca G, Mehrjouy MM, Labalme A, Salmi M, Bache
+I, et al. Loss of function of the retinoid-­related nuclear receptor
+(RORB) gene and epilepsy. Eur J Hum Genet. 2016;24:1761–­70.
+154. Sadleir LG, de Valles-­Ibanez G, King C, Coleman M, Mossman
+S, Paterson S, et al. Inherited RORB pathogenic variants:
+Overlap of photosensitive genetic generalized and occipital
+lobe epilepsy. Epilepsia. 2020;61:e23–­9.
+155. Verbeek N, Kasteleijn-­Nolst Trenite D, Wassenaar M, van
+Campen J, Sonsma A, Gunning WB, et al. Photosensitivity in
+
+FISHER et al.
+
+Dravet syndrome is under-­recognized and related to prognosis.
+Clin Neurophysiol. 2017;128:323–­30.
+156. Ardicli D, Haliloglu G, Gocmen R, Gunbey C, Topcu M.
+Unraveling neuronal ceroid lipofuscinosis type 2 (CLN2) disease: A tertiary center experience for determinants of diagnostic delay. Eur J Paediatr Neurol. 2021;33:94–­8.
+157. Franceschetti S, Maurizio EM. Photosensitivity in special syndromes. In: Kasteleijn-­Nolst Trenite D, editor. The Importance
+of Photosensitivity for Epilepsy. New York: Springer; 2021.
+158. Beniczky S, Aurlien H, Brøgger JC, Hirsch LJ, Schomer DL,
+Trinka E, et al. Standardized computer-­based organized reporting of EEG: SCORE -­ Second version. Clin Neurophysiol.
+2017;128:2334–­46.
+159. Beniczky S, Aurlien H, Franceschetti S, Martins da Silva A,
+Bisulli F, Bentes C, et al. Interrater agreement of classification of photoparoxysmal electroencephalographic response.
+Epilepsia. 2020;61:e124–­8.
+160. Fallah A, RamachandranNair R. Does photoparoxysmal response in children represent provoked seizure? Evidence from
+simultaneous motor task during EEG. Clin Neurol Neurosurg.
+2009;111:147–­50.
+161. Einspenner M, Brunet DG, Boisse Lomax L, Spiller AE.
+Bradycardia from flash stimulation. Epileptic Disord.
+2015;17:409–­12.
+162. Kasteleijn-­Nolst Trenite D, Rubboli G, Hirsch E, Martins da
+Silva A, Seri S, Wilkins A, et al. Methodology of photic stimulation revisited: updated European algorithm for visual stimulation in the EEG laboratory. Epilepsia. 2012;53:16–­24.
+163. Graf WD, Chatrian GE, Glass ST, Knauss TA. Video game-­
+related seizures: a report on 10 patients and a review of the literature. Pediatrics. 1994;93:551–­6.
+164. Baldin E, Hauser WA, Buchhalter JR, Hesdorffer DC, Ottman R.
+Utility of EEG activation procedures in epilepsy: A population-­
+based study. J Clin Neurophysiol. 2017;34:512–­9.
+165. Specchio N, Kasteleijn-­Nolst Trenite DG, Piccioli M, Specchio
+LM, Trivisano M, Fusco L, et al. Diagnosing photosensitive epilepsy: fancy new versus old fashioned techniques in patients
+with different epileptic syndromes. Brain Dev. 2011;33:294–­300.
+166. Tekin E, Engin M, Dalbasti T, Engin EZ. The evaluation of EEG
+response to photic stimulation in normal and diseased subjects.
+Comput Biol Med. 2009;39:53–­60.
+167. Skadorwa T, Strzelecka J. Patterns of intrahemispheric propagation in pediatric photoparoxysmal response. Seizure.
+2017;51:107–­13.
+168. Visani E, Varotto G, Binelli S, Fratello L, Franceschetti S,
+Avanzini G, et al. Photosensitive epilepsy: spectral and coherence analyses of EEG using 14Hz intermittent photic stimulation. Clin Neurophysiol. 2010;121:318–­24.
+169. Parra J, Kalitzin SN, Iriarte J, Blanes W, Velis DN, Lopes da
+Silva FH. Gamma-­band phase clustering and photosensitivity:
+is there an underlying mechanism common to photosensitive
+epilepsy and visual perception? Brain. 2003;126:1164–­72.
+170. Engel J, Bragin A, Staba R, Mody I. High-­frequency oscillations:
+What is normal and what is not? Epilepsia. 2009;50:598–­604.
+171. Hermes D, Kasteleijn-­Nolst Trenite DGA, Winawer J.
+Gamma oscillations and photosensitive epilepsy. Curr Biol.
+2017;27:R336–­8.
+172. Avanzini G. Gamma oscillations. In: Kasteleijn-­Nolst Trenite
+D, editor. The Importance of Photosensitivity for Epilepsy. New
+York: Springer; 2021.
+
+15281167, 2022, 4, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/epi.17175 by UNIVERSITY OF ESSEX, Wiley Online Library on [29/08/2025]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+764
+
+
+173. Mukundan L, Lie OV, Leary LD, Papanastassiou AM, Morgan
+LC, Szabo CA. Subdural electrode recording of generalized photoepileptic responses. Epilepsy Behav Case Rep.
+2015;3:4–­7.
+174. Elmalı AD, Ur Özçelik E, Bebek N, Baykan B. Let there be light:
+Inhibitory effect of photic stimulation on spike frequency in
+patients with mesial temporal lobe epilepsy with hippocampal
+sclerosis. Epilepsy Res. 2021;176:106734.
+175. Angus-­Leppan H. Seizures and adverse events during routine
+scalp electroencephalography: a clinical and EEG analysis of
+1000 records. Clin Neurophysiol. 2007;118:22–­30.
+176. Whitehead K, Sherratt M, Kandler R, Lawrence S, Pang C.
+Photic stimulation during electroencephalography: Efficacy
+and safety in an unselected cohort of patients referred to UK
+neurophysiology departments. Seizure. 2016;34:29–­34.
+177. Hanganu A, Groppa SA, Deuschl G, Siebner H, Moeller F,
+Siniatchkin M, et al. Cortical thickness changes associated with
+photoparoxysmal response. Brain Topogr. 2015;28:702–­9.
+178. Lin K, Jackowski AP, Carrete H, de Araújo Filho GM, Silva
+HH, Guaranha MS, et al. Voxel-­based morphometry evaluation
+of patients with photosensitive juvenile myoclonic epilepsy.
+Epilepsy Res. 2009;86:138–­45.
+179. Groppa S, Moeller F, Siebner H, Wolff S, Riedel C, Deuschl G,
+et al. White matter microstructural changes of thalamocortical
+networks in photosensitivity and idiopathic generalized epilepsy. Epilepsia. 2012;53:668–­76.
+180. von Podewils F, Runge U, Kruger S, Geithner J, Wang ZI,
+Khaw AV, et al. Diffusion tensor imaging abnormalities in
+photosensitive juvenile myoclonic epilepsy. Eur J Neurol.
+2015;22:1192–­200.
+181. Du H, Xie B, Lu P, Feng H, Wang J, Yuan S. Impaired white-­
+matter integrity in photosensitive epilepsy: a DTI study using
+tract-­based spatial statistics. J Neuroradiol. 2014;41:131–­5.
+182. Domin M, Bartels S, Geithner J, Wang ZI, Runge U, Grothe M,
+et al. Juvenile myoclonic epilepsy shows potential structural white
+matter abnormalities: A TBSS Study. Front Neurol. 2018;9:509.
+183. Bartolini E, Pesaresi I, Fabbri S, Cecchi P, Giorgi FS, Sartucci F,
+et al. Abnormal response to photic stimulation in juvenile myoclonic epilepsy: an EEG-­fMRI study. Epilepsia. 2014;55:1038–­47.
+184. Moeller F, Muthuraman M, Stephani U, Deuschl G, Raethjen J,
+Siniatchkin M. Representation and propagation of epileptic activity in absences and generalized photoparoxysmal responses.
+Hum Brain Mapp. 2013;34:1896–­909.
+185. Vaudano AE, Ruggieri A, Avanzini P, Gessaroli G, Cantalupo G,
+Coppola A, et al. Photosensitive epilepsy is associated with reduced inhibition of alpha rhythm generating networks. Brain.
+2017;140:981–­97.
+186. Szabo CA, Leland MM, Knape K, Elliott JJ, Haines V, Williams
+JT. Clinical and EEG phenotypes of epilepsy in the baboon
+(Papio hamadryas spp.). Epilepsy Res. 2005;65:71–­80.
+187. da Silva EA, Müller RA, Chugani DC, Shah J, Shah A, Watson
+C, et al. Brain activation during intermittent photic stimulation:
+a 15O.-­water PET study on photosensitive epilepsy. Epilepsia.
+1999;40(Suppl 4):17–­22.
+188. Barlow HB. Possible principles underlying the transformations of sensory messages, a symposium. In: Rosenblith W, editor. Sensory Communication. New York: MIT Press; 1961. p.
+217–­34.
+189. Field DJ. What is the goal of sensory coding. Neural Comput.
+1994;6:559–­601.
+
+
+
+| 765
+
+190. Olshausen BA, Field DJ. Emergence of simple-­cell receptive
+field properties by learning a sparse code for natural images.
+Nature. 1996;381:607–­9.
+191. Vinje WE, Gallant JL. Sparse coding and decorrelation in primary
+visual cortex during natural vision. Science. 2000;287:1273–­6.
+192. Zhu M, Rozell CJ. Visual nonclassical receptive field effects
+emerge from sparse coding in a dynamical system. PLoS
+Comput Biol. 2013;9:e1003191.
+193. Wilkins AJ. Fear of light: on the cause and remediation of photophobia. Light Res Technol. 2021;53:395–­404.
+194. Le AT, Payne JR, Clarke CL, Kelly MA, Prudenziati F, Armsby E,
+et al. Discomfort from urban scenes: metabolic consequences.
+Landscape and Urban Planning. 2017;160:61–­8.
+195. Parra J, Lopes da Silva FH, Stroink H, Kalitzin S. Is colour modulation an independent factor in human visual photosensitivity? Brain. 2007;130:1679–­89.
+196. Haigh SM, Barningham L, Berntsen M, Coutts LV, Hobbs ES,
+Irabor J, et al. Discomfort and the cortical haemodynamic response to coloured gratings. Vision Res. 2013;89:47–­53.
+197. Haigh SM, Cooper NR, Wilkins AJ. Chromaticity separation
+and the alpha response. Neuropsychologia. 2018;108:1–­5.
+198. Porciatti V, Bonanni P, Fiorentini A, Guerrini R. Lack of cortical contrast gain control in human photosensitive epilepsy. Nat
+Neurosci. 2000;3:259–­63.
+199. Haigh S, Karanovic O, Wilkinson F, Wilkins A. Cortical hyperexcitability in migraine and aversion to patterns. Cephalalgia.
+2012;32:236–­40.
+200. Binnie CD, Findlay J, Wilkins AJ. Mechanisms of epileptogenesis in photosensitive epilepsy implied by the effects of moving
+patterns. Electroencephalogr Clin Neurophysiol. 1985;61:1–­6.
+201. Siniatchkin M, Moeller F, Shepherd A, Siebner H, Stephani U.
+Altered cortical visual processing in individuals with a spreading
+photoparoxysmal EEG response. Eur J Neurosci. 2007;26:529–­36.
+202. Strigaro G, Prandi P, Varrasi C, Monaco F, Cantello R. Defective
+visual inhibition in photosensitive idiopathic generalized epilepsy. Epilepsia. 2012;53:695–­704.
+203. Brinciotti M, Mittica A, Matricardi M. Characteristics of visual
+evoked potentials related to the electro-­clinical expression of
+reflex seizures in photosensitive patients with idiopathic occipital lobe epilepsy. Epilepsy Res. 2020;164:106345.
+204. Barr MS, Farzan F, Davis KD, Fitzgerald PB, Daskalakis ZJ.
+Measuring GABAergic inhibitory activity with TMS-­EEG and its
+potential clinical application for chronic pain. J Neuroimmune
+Pharmacol. 2013;8:535–­46.
+205. Bocci T, Caleo M, Restani L, Barloscio D, Rossi S, Sartucci F.
+Altered recovery from inhibitory repetitive transcranial magnetic stimulation (rTMS) in subjects with photosensitive epilepsy. Clin Neurophysiol. 2016;127:3353–­61.
+206. Brigo F, Bongiovanni LG, Nardone R, Trinka E, Tezzon F,
+Fiaschi A, et al. Visual cortex hyperexcitability in idiopathic
+generalized epilepsies with photosensitivity: a TMS pilot study.
+Epilepsy Behav. 2013;27:301–­6.
+207. Lopes da Silva FH, Harding GF. Transition to seizure in photosensitive epilepsy. Epilepsy Res. 2011;97:278–­82.
+208. Perry G, Brindley LM, Muthukumaraswamy SD, Singh KD,
+Hamandi K. Evidence for increased visual gamma responses in
+photosensitive epilepsy. Epilepsy Res. 2014;108:1076–­86.
+209. Strigaro G, Gori B, Varrasi C, Fleetwood T, Cantello G, Cantello
+R. Flash-­evoked high-­frequency EEG oscillations in photosensitive epilepsies. Epilepsy Res. 2021;172:106597.
+
+15281167, 2022, 4, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/epi.17175 by UNIVERSITY OF ESSEX, Wiley Online Library on [29/08/2025]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+FISHER et al.
+
+
+|
+
+210. Siniatchkin M, Groppa S, Jerosch B, Muhle H, Kurth C,
+Shepherd AJ, et al. Spreading photoparoxysmal EEG response
+is associated with an abnormal cortical excitability pattern.
+Brain. 2007;130:78–­87.
+211. Groppa S, Siebner HR, Kurth C, Stephani U, Siniatchkin M.
+Abnormal response of motor cortex to photic stimulation in
+idiopathic generalized epilepsy. Epilepsia. 2008;49:2022–­9.
+212. Moeller F, Siebner HR, Wolff S, Muhle H, Granert O, Jansen O,
+et al. Mapping brain activity on the verge of a photically induced
+generalized tonic-­clonic seizure. Epilepsia. 2009;50:1632–­7.
+213. Kasteleijn-­Nolst Trenite D, Genton P, Brandt C, Reed RC. The
+'Photosensitivity Model' is (also) a model for focal (partial) seizures. Epilepsy Res. 2017;133:113–­20.
+214. Wilkins AJ, Bonanni P, Porciatti V, Guerrini R. Physiology of
+human photosensitivity. Epilepsia. 2004;45(Suppl 1):7–­13.
+215. Douaud M, Feve K, Pituello F, Gourichon D, Boitard S, Leguern
+E, et al. Epilepsy caused by an abnormal alternative splicing
+with dosage effect of the SV2A gene in a chicken model. PLoS
+One. 2011;6:e26932.
+216. Wielaender F, Sarviaho R, James F, Hytonen MK, Cortez MA,
+Kluger G, et al. Generalized myoclonic epilepsy with photosensitivity in juvenile dogs caused by a defective DIRAS family
+GTPase 1. Proc Natl Acad Sci USA. 2017;114:2669–­74.
+217. Kunduri G, Turner-­Evans D, Konya Y, Izumi Y, Nagashima K,
+Lockett S, et al. Defective cortex glia plasma membrane structure underlies light-­induced epilepsy in cpes mutants. Proc Natl
+Acad Sci USA. 2018;115:E8919–­28.
+218. Szabo CA, Knape KD, Leland MM, Williams JT. Electroclinical
+phenotypes in a pedigreed baboon colony. Epilepsy Res.
+2013;105:77–­85.
+219. Szabo CA, Gonzalez DA, Koneru S. Semiology of spontaneous
+generalized tonic-­clonic seizures in the epileptic baboon.
+Epilepsia Open. 2020;5:213–­9.
+220. Takahashi Y, Sato T, Goto K, Fujino M, Fujiwara T, Yamaga M,
+et al. Optical filters inhibiting television-­induced photosensitive seizures. Neurology. 2001;57:1767–­73.
+221. Funatsuka M, Fujita M, Shirakawa S, Oguni H, Osawa M.
+Analysis of photo-­pattern sensitivity in patients with Pokemon-­
+related symptoms. Pediatr Neurol. 2003;28:28–­36.
+222. Penacchio O, Wilkins AJ, Otazu X, Harris JM. Inhibitory function and its contribution to cortical hyperexcitability and visual
+discomfort as assessed by a computation model of cortical function. Perception. 2016;45:272.
+223. Rushton DN. "Space invader" epilepsy. Lancet. 1981;1:501.
+224. Harding GF, Harding PF. Televised material and photosensitive
+epilepsy. Epilepsia. 1999;40(Suppl 4):65–­9.
+225. Bureau M, Hirsch E, Vigevano F. Epilepsy and videogames.
+Epilepsia. 2004;45(Suppl 1):24–­6.
+226. Quirk JA, Fish DR, Smith SJ, Sander JW, Shorvon SD, Allen
+PJ. First seizures associated with playing electronic screen
+games: a community-­based study in Great Britain. Ann Neurol.
+1995;37:733–­7.
+227. Piccioli M, Vigevano F, Buttinelli C, Kasteleijn-­Nolst Trenite
+DG. Do video games evoke specific types of epileptic seizures?
+Epilepsy Behav. 2005;7:524–­30.
+228. Read JCA, Bohr I. User experience while viewing stereoscopic
+3D television. Ergonomics. 2014;57:1140–­53.
+229. Takada M, Fukui Y, Matsuura Y, Sato M, Takada H. Peripheral
+viewing during exposure to a 2D/3D video clip: effects on the
+human body. Environ Health Prev Med. 2015;20:79–­89.
+
+FISHER et al.
+
+230. Tychsen L, Thio LL. Concern of photosensitive seizures evoked
+by 3d video displays or virtual reality headsets in children: current perspective. Eye Brain. 2020;12:45–­8.
+231. Khairuddin HR, Malik AS, Mumtaz W, Kamel N, Xia L. Analysis
+of EEG signals regularity in adults during video game play in 2D
+and 3D. Conf Proc IEEE Eng Med Biol Soc. 2013;2013:2064–­7.
+232. Prasad M, Arora M, Abu-­Arafeh I, Harding G. 3D movies
+and risk of seizures in patients with photosensitive epilepsy.
+Seizure. 2012;21:49–­50.
+233. Kluger G. How safe is 3D TV for children with epilepsy?
+Neurology Reviews: MDedge. 2012;20:5.
+234. Kiper P, Piron L, Turolla A, Stozek J, Tonin P. The effectiveness
+of reinforced feedback in virtual environment in the first 12
+months after stroke. Neurol Neurochir Pol. 2011;45:436–­44.
+235. Tashjian VC, Mosadeghi S, Howard AR, Lopez M, Dupuy T, Reid
+M, et al. Virtual reality for management of pain in hospitalized patients: Results of a controlled trial. JMIR Ment Health. 2017;4:e9.
+236. Anderson PL, Price M, Edwards SM, Obasaju MA, Schmertz
+SK, Zimand E, et al. Virtual reality exposure therapy for social
+anxiety disorder: a randomized controlled trial. J Consult Clin
+Psychol. 2013;81:751–­60.
+237. Shin JH, Bog Park S, Ho JS. Effects of game-­based virtual reality
+on health-­related quality of life in chronic stroke patients: A
+randomized, controlled study. Comput Biol Med. 2015;63:92–­8.
+238. Mosadeghi S, Reid MW, Martinez B, Rosen BT, Spiegel BM.
+Feasibility of an immersive virtual reality intervention for hospitalized patients: an observational cohort study. JMIR Ment
+Health. 2016;3:e28.
+239. Aghajan ZM, Acharya L, Moore JJ, Cushman JD, Vuong C, Mehta
+MR. Impaired spatial selectivity and intact phase precession in
+two-­dimensional virtual reality. Nat Neurosci. 2015;18:121–­8.
+240. Lee MM, Shin DC, Song CH. Canoe game-­based virtual reality
+training to improve trunk postural stability, balance, and upper
+limb motor function in subacute stroke patients: a randomized
+controlled pilot study. J Phys Ther Sci. 2016;28:2019–­24.
+241. Saposnik G, Cohen LG, Mamdani M, Pooyania S, Ploughman
+M, Cheung D, et al. Efficacy and safety of non-­immersive virtual reality exercising in stroke rehabilitation (EVREST): a
+randomised, multicentre, single-­blind, controlled trial. Lancet
+Neurol. 2016;15:1019–­27.
+242. Canovas R, Leon I, Serrano P, Roldan MD, Cimadevilla JM.
+Spatial navigation impairment in patients with refractory temporal lobe epilepsy: evidence from a new virtual reality-­based
+task. Epilepsy Behav. 2011;22:364–­9.
+243. Grewe P, Kohsik A, Flentge D, Dyck E, Botsch M, Winter Y,
+et al. Learning real-­life cognitive abilities in a novel 360 degrees -­virtual reality supermarket: a neuropsychological study
+of healthy participants and patients with epilepsy. J Neuroeng
+Rehabil. 2013;10:42.
+244. Grewe P, Lahr D, Kohsik A, Dyck E, Markowitsch HJ, Bien CG,
+et al. Real-­life memory and spatial navigation in patients with
+focal epilepsy: ecological validity of a virtual reality supermarket task. Epilepsy Behav. 2014;31:57–­66.
+245. Kasteleijn-­Nolst Trenité D, Carr B, Checa-­Ros A, Seri S. Light-­
+emitting-­diode and Grass PS 33 xenon lamp photic stimulators
+are equivalent in the assessment of photosensitivity: Clinical
+and research implications. Epilepsy Res. 2020;165:106377.
+246. Yang XF, Schmidt BF, Rode DL, Rothman SM. Optical suppression of experimental seizures in rat brain slices. Epilepsia.
+2010;51:127–­35.
+
+15281167, 2022, 4, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/epi.17175 by UNIVERSITY OF ESSEX, Wiley Online Library on [29/08/2025]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+766
+
+
+247. Rothman SM, Perry G, Yang XF, Hyrc K, Schmidt BF. Optical
+suppression of seizure-­like activity with an LED. Epilepsy Res.
+2007;74:201–­9.
+248. Brown E, Foulsham T, Lee C-­S & Wilkins A Visibility of temporal light artefact from flicker at 11 kH. Lighting Research and
+Technology 2020; 52:371-­376.
+249. Brosch JR, Golomb MR. Seizures triggered by July 4th fireworks in an 8-­year-­old girl with perinatal stroke. J Child Neurol.
+2011;26:638–­41.
+250. Tatsuzawa Y, Yoshino A, Nomura S. A case of seizures induced
+by abstract reasoning. Epilepsy Behav. 2010;17:552–­4.
+251. Wan CL, Lin TK, Lu CH, Chang CS, Chen SD, Chuang YC.
+Mah-­Jong-­induced epilepsy: a special reflex epilepsy in Chinese
+society. Seizure. 2005;14:19–­22.
+252. Harding G, Harding P, Wilkins A. Wind turbines, flicker, and
+photosensitive epilepsy: characterizing the flashing that may
+precipitate seizures and optimizing guidelines to prevent them.
+Epilepsia. 2008;49:1095–­8.
+253. Smedley AR, Webb AR, Wilkins AJ. Potential of wind turbines
+to elicit seizures under various meteorological conditions.
+Epilepsia. 2010;51:1146–­51.
+254. Chuang YC. Massively multiplayer online role-­playing game-­
+induced seizures: a neglected health problem in Internet addiction. Cyberpsychol Behav. 2006;9:451–­6.
+255. Brna PM, Gordon KG. "Selfie-­epilepsy": A novel photosensitivity. Seizure. 2017;47:5–­8.
+256. Bauer S, Knake S, Haag A, Hermsen A, Strzelczyk A, Hamer
+HM, et al. Seizures induced by the sight of moving water.
+Epileptic Disord. 2008;10:49–­52.
+257. Salet N, Visser M, Stam C, Smulders YM. Stroboscopic light
+effects during electronic dance music festivals and photosensitive epilepsy: a cohort study and case report. BMJ Open.
+2019;9:e023442.
+258. Belcastro V, Striano P. Self-­induction seizures in sunflower epilepsy: a video-­EEG report. Epileptic Disord. 2014;16:93–­5.
+259. Harding G, Wilkins AJ, Erba G, Barkley GL, Fisher RS.
+Photic-­ and pattern-­induced seizures: expert consensus of the
+Epilepsy Foundation of America Working Group. Epilepsia.
+2005;46:1423–­5.
+260. Wilkins A, Emmett J, Harding G. Characterizing the patterned
+images that precipitate seizures and optimizing guidelines to
+prevent them. Epilepsia. 2005;46:1212–­8.
+261. Alzubaidi MA, Otoom M, Al-­Tamimi AK. Parallel scheme for
+real-­time detection of photosensitive seizures. Comput Biol
+Med. 2016;70:139–­47.
+262. Takahashi Y, Fujiwara T. Effectiveness of broadcasting
+guidelines for photosensitive seizure prevention. Neurology.
+2004;62:990–­3.
+263. Covanis A, Solodar J. Photosensitive and pattern-­sensitive
+epilepsy: A guide for patients and caregivers. In: Kasteleijn-­
+Nolst Trenite D, editor. The Importance of Photosensitivity for
+Epilepsy. New York: Springer; 2021.
+264. Capovilla G, Gambardella A, Rubboli G, Beccaria F, Montagnini
+A, Aguglia U, et al. Suppressive efficacy by a commercially
+available blue lens on PPR in 610 photosensitive epilepsy patients. Epilepsia. 2006;47:529–­33.
+265. Checa-­Ros A, Kasteleijn-­Nolst Trenite D, Edson-­Scott A, Carr
+B, Cerquiglini A, Seri S. Efficacy of color lenses in abolishing photosensitivity: Beyond the one-­type-­fits-­all approach?
+Epilepsy Behav. 2021;124:108332.
+
+
+
+| 767
+
+266. Takahashi T, Tsukahara Y. Usefulness of blue sunglasses in
+photosensitive epilepsy. Epilepsia. 1992;33:517–­21.
+267. Parra J, Kalitzin SN, Stroink H, Dekker E, de Wit C, Lopes da
+Silva FH. Removal of epileptogenic sequences from video material: the role of color. Neurology. 2005;64:787–­91.
+268. Nomura M, Takahashi T, Kamijo K, Yamazaki T. A new adaptive temporal filter: application to photosensitive seizure patients. Psychiatry Clin Neurosci. 2000;54:685–­90.
+269. Binnie CD, Harding GF, Richens A, Wilkins A. Video games
+and epileptic seizures–­a consensus statement. Video-­Game
+Epilepsy Consensus Group. Seizure. 1994;3:245–­6.
+270. Kasteleijn-­Nolst Trenité DG, Binnie CD, Meinardi H.
+Photosensitive patients: symptoms and signs during intermittent photic stimulation and their relation to seizures in daily
+life. J Neurol Neurosurg Psychiatry. 1987;50:1546–­9.
+271. Yuen ES, Sims JR. How predictive are photosensitive epilepsy models as proof of principle trials for epilepsy? Seizure.
+2014;23:490–­3.
+272. Kasteleijn-­Nolst Trenité DG, Marescaux C, Stodieck S,
+Edelbroek PM, Oosting J. Photosensitive epilepsy: a model to
+study the effects of antiepileptic drugs. Evaluation of the piracetam analogue, levetiracetam. Epilepsy Res. 1996;25:225–­30.
+273. Kasteleijn-­Nolst Trenite DG, Genton P, Parain D, Masnou
+P, Steinhoff BJ, Jacobs T, et al. Evaluation of brivaracetam, a
+novel SV2A ligand, in the photosensitivity model. Neurology.
+2007;69:1027–­34.
+274. Kasteleijn-­Nolst Trenite D, Parain D, Genton P, Masnou P,
+Schwartz JC, Hirsch E. Efficacy of the histamine 3 receptor
+(H3R) antagonist pitolisant (formerly known as tiprolisant;
+BF2.649) in epilepsy: dose-­dependent effects in the human
+photosensitivity model. Epilepsy Behav. 2013;28:66–­70.
+275. Kasteleijn-­Nolst Trenite DG, Groenwold RH, Schmidt B,
+Loscher W. Single dose efficacy evaluation of two partial benzodiazepine receptor agonists in photosensitive epilepsy patients:
+A placebo-­controlled pilot study. Epilepsy Res. 2016;122:30–­6.
+276. Kasteleijn-­Nolst Trenité D, Brandt C, Mayer T, Rosenow F,
+Schmidt B, Steinhoff BJ, et al. Dose-­dependent suppression
+of human photoparoxysmal response with the competitive
+AMPA/kainate receptor antagonist BGG492: Clear PK/PD relationship. Epilepsia. 2015;56:924–­32.
+277. Kasteleijn-­Nolst Trenité DG, Biton V, French JA, Abou-­Khalil
+B, Rosenfeld WE, Diventura B, et al. Kv7 potassium channel
+activation with ICA-­105665 reduces photoparoxysmal EEG responses in patients with epilepsy. Epilepsia. 2013;54:1437–­43.
+278. Trenite DG, French JA, Hirsch E, Macher JP, Meyer BU, Grosse
+PA, et al. Evaluation of carisbamate, a novel antiepileptic drug,
+in photosensitive patients: an exploratory, placebo-­controlled
+study. Epilepsy Res. 2007;74:193–­200.
+279. Di Prospero NA, Gambale JJ, Pandina G, Ford L, Girgis S,
+Moyer JA, et al. Evaluation of JNJ-­26489112 in patients with
+photosensitive epilepsy: a placebo-­controlled, exploratory
+study. Epilepsy Res. 2014;108:709–­16.
+280. Gurrell R, Gorman D, Whitlock M, Ogden A, Reynolds DS,
+DiVentura B, et al. Photosensitive epilepsy: Robust clinical efficacy of a selective GABA potentiator. Neurology.
+2019;92:e1786–­95.
+281. Kasteleijn-­Nolst Trenite DGA, DiVentura BD, Pollard JR,
+Krauss GL, Mizne S, French JA. Suppression of the photoparoxysmal response in photosensitive epilepsy with cenobamate
+(YKP3089). Neurology. 2019;93:e559–­67.
+
+15281167, 2022, 4, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/epi.17175 by UNIVERSITY OF ESSEX, Wiley Online Library on [29/08/2025]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+FISHER et al.
+
+
+|
+
+282. Reed RC, Rosenfeld WE, Lippmann SM, Eijkemans RMJC,
+Kasteleijn-­Nolst Trenité DGA. Rapidity of CNS effect on photoparoxysmal response for brivaracetam vs. levetiracetam: a
+randomized, double-­blind, crossover trial in photosensitive epilepsy patients. CNS Drugs. 2020;34:1075–­86.
+283. French JA, Wechsler R, Gelfand MA, Pollard JR, Vazquez B,
+Friedman D, et al. Inhaled alprazolam rapidly suppresses epileptic
+activity in photosensitive participants. Epilepsia. 2019;60:1602–­9.
+284. Panayiotopoulos CP. Effectiveness of photic stimulation on
+various eye-­states in photosensitive epilepsy. J Neurol Sci.
+1974;23:165–­73.
+285. Leijten FS, Dekker E, Spekreijse H, Kasteleijn-­Nolst Trenité
+DG, Van Emde BW. Light diffusion in photosensitive epilepsy.
+Electroencephalogr Clin Neurophysiol. 1998;106:387–­91.
+286. Wilkins AJ, Baker A, Amin D, Smith S, Bradford J, Zaiwalla
+Z, et al. Treatment of photosensitive epilepsy using coloured
+glasses. Seizure. 1999;8:444–­9.
+287. Brancheck L, Klein P, Hogan RE. Photosensitive epilepsy:
+Treatment and prevention: how? In: Kasteleijn-­Nolst TD,
+
+FISHER et al.
+
+editors. The Importance of Photosensitivity for Epilepsy. New
+York: Springer; 2021.
+288. Verrotti A, Grosso S, D'Egidio C, Parisi P, Spalice A, Pavone P, et al.
+Valproate in adolescents with photosensitive epilepsy with generalized tonic-­clonic seizures only. Eur J Paediatr Neurol. 2014;18:13–­8.
+289. Tomson T, Marson A, Boon P, Canevini MP, Covanis A, Gaily E,
+et al. Valproate in the treatment of epilepsy in girls and women
+of childbearing potential. Epilepsia. 2015;56:1006–­19.
+290. Ambrosetto G, Tassinari CA. Photosensitivity related to valproate
+withdrawal. J Neurol Neurosurg Psychiatry. 1987;50:1709–­10.
+
+How to cite this article: Fisher RS, Acharya JN,
+Baumer FM, French J, Parisi P, Solodar JH, et al.
+Visually sensitive seizures: An updated review by
+the Epilepsy Foundation. Epilepsia. 2022;63:739–­
+768. https://doi.org/10.1111/epi.17175
+
+15281167, 2022, 4, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/epi.17175 by UNIVERSITY OF ESSEX, Wiley Online Library on [29/08/2025]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+768

@@ -20,10 +20,18 @@ the repo. Keep filenames stable and ASCII-only.
 - `adhd/`
 - `algorithms/`
 - `autism/`
+- `blue_cone_monochromacy/`
 - `cognitive_load/`
 - `colorblindness/`
+- `dyslexia/`
+- `nystagmus/`
 - `seizures/`
 - `stereoblindness/`
+
+Tracking files:
+
+- `CANONICAL_REGISTRY.json`
+- `paper_corpus_tracking.bib`
 
 ## Expectations
 
@@ -35,3 +43,4 @@ the repo. Keep filenames stable and ASCII-only.
 Related audit:
 
 - [Paper corpus audit](/home/eirikr/Github/openperception/docs/external_sources/paper_corpus_audit.md)
+- [Paper corpus registry](/home/eirikr/Github/openperception/docs/external_sources/paper_corpus_registry.md)
