@@ -245,6 +245,7 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
 
     floor_mat = _ensure_material(bpy, "Floor", "#BBB2AB", roughness=0.96)
     wall_mat = _ensure_material(bpy, "BackdropWall", "#E8E1DA", roughness=0.94)
+    plaque_mat = _ensure_material(bpy, "DepthLegendPlaque", "#EEE6DD", roughness=0.9)
     rail_near = _ensure_material(bpy, "DepthRailNear", "#A89D95", roughness=0.88)
     rail_mid = _ensure_material(bpy, "DepthRailMid", "#C7BDB4", roughness=0.9)
     rail_far = _ensure_material(bpy, "DepthRailFar", "#DED5CE", roughness=0.92)
@@ -269,7 +270,7 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
         "DepthLegendPlaque",
         location=(0.0, -3.08, 0.16),
         scale=(2.9, 0.56, 0.08),
-        material=wall_mat,
+        material=plaque_mat,
         bevel=0.04,
     )
     for rail_name, rail_y, rail_z, rail_mat in (
@@ -315,7 +316,6 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
         size_x=6.0,
         size_y=6.0,
     )
-
     lane_spacing = 4.6
     start_x = -lane_spacing
     swatch_depth_positions = (
@@ -475,24 +475,24 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
     _add_text(
         bpy,
         "LegendStatic",
-        "Static cues carry the shared spatial meaning",
-        location=(0.0, -3.2, 0.28),
-        scale=(0.12, 0.12, 0.12),
+        "STATIC CUES FIRST",
+        location=(0.0, -3.18, 0.29),
+        scale=(0.17, 0.17, 0.17),
         material=text_dark,
     )
     _add_text(
         bpy,
         "LegendStereo",
-        "Stereo is optional enrichment, not the only path",
-        location=(0.0, -3.42, 0.22),
-        scale=(0.1, 0.1, 0.1),
+        "Stereo optional. Motion supplemental.",
+        location=(0.0, -3.44, 0.22),
+        scale=(0.115, 0.115, 0.115),
         material=neutral_dark,
     )
     _add_text(
         bpy,
         "LegendMotion",
-        "Motion helps, but labels, scale, shadows, and anchors stay primary",
-        location=(0.0, -3.63, 0.18),
+        "Labels | shadows | scale | anchors carry the floor.",
+        location=(0.0, -3.67, 0.16),
         scale=(0.092, 0.092, 0.092),
         material=neutral_dark,
     )
