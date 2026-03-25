@@ -240,7 +240,7 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
     world_output = world_nodes.new("ShaderNodeOutputWorld")
     world_bg = world_nodes.new("ShaderNodeBackground")
     world_bg.inputs["Color"].default_value = _hex_to_rgba("#F4F1ED")
-    world_bg.inputs["Strength"].default_value = 0.42
+    world_bg.inputs["Strength"].default_value = 0.5
     world_links.new(world_bg.outputs["Background"], world_output.inputs["Surface"])
 
     floor_mat = _ensure_material(bpy, "Floor", "#BBB2AB", roughness=0.96)
@@ -264,6 +264,14 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
         material=wall_mat,
         bevel=0.02,
     )
+    _add_box(
+        bpy,
+        "DepthLegendPlaque",
+        location=(0.0, -3.08, 0.16),
+        scale=(2.9, 0.56, 0.08),
+        material=wall_mat,
+        bevel=0.04,
+    )
     for rail_name, rail_y, rail_z, rail_mat in (
         ("DepthRailNear", -1.35, -0.16, rail_near),
         ("DepthRailMid", -0.1, -0.1, rail_mid),
@@ -281,18 +289,18 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
     camera = bpy.data.objects.new("PaletteCamera", camera_data)
     scene.collection.objects.link(camera)
     scene.camera = camera
-    camera.location = (0.0, -11.6, 5.95)
+    camera.location = (0.0, -12.35, 6.1)
     camera.rotation_euler = (math.radians(62.0), 0.0, 0.0)
-    camera.data.lens = 42
+    camera.data.lens = 38
 
-    key_energy = 220.0 if selected_engine == "octane" else 2400.0
+    key_energy = 250.0 if selected_engine == "octane" else 2550.0
     rim_energy = 55.0 if selected_engine == "octane" else 950.0
     _add_area_light(
         bpy,
         scene,
         "KeyLight",
-        location=(-1.6, -5.2, 8.9),
-        rotation=(math.radians(57.0), math.radians(9.0), math.radians(-7.0)),
+        location=(-3.2, -6.35, 10.6),
+        rotation=(math.radians(60.0), math.radians(13.0), math.radians(-11.0)),
         energy=key_energy,
         size_x=8.0,
         size_y=8.0,
@@ -462,6 +470,30 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
         "Stereo enriches, motion reinforces, essential meaning stays readable without stereopsis",
         location=(0.0, 1.2, 0.33),
         scale=(0.102, 0.102, 0.102),
+        material=neutral_dark,
+    )
+    _add_text(
+        bpy,
+        "LegendStatic",
+        "Static cues carry the shared spatial meaning",
+        location=(0.0, -3.2, 0.28),
+        scale=(0.12, 0.12, 0.12),
+        material=text_dark,
+    )
+    _add_text(
+        bpy,
+        "LegendStereo",
+        "Stereo is optional enrichment, not the only path",
+        location=(0.0, -3.42, 0.22),
+        scale=(0.1, 0.1, 0.1),
+        material=neutral_dark,
+    )
+    _add_text(
+        bpy,
+        "LegendMotion",
+        "Motion helps, but labels, scale, shadows, and anchors stay primary",
+        location=(0.0, -3.63, 0.18),
+        scale=(0.092, 0.092, 0.092),
         material=neutral_dark,
     )
 
