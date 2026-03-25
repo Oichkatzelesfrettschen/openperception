@@ -119,6 +119,11 @@ Research needs:
 
 ## Research and Resources
 
+Primary source lane:
+
+- [Vision clinical source cache](/home/eirikr/Github/openperception/docs/external_sources/vision_clinical_source_cache.md)
+- [Nystagmus primary source notes](/home/eirikr/Github/openperception/research/visual_impairments/nystagmus/primary_source_notes.md)
+
 ### Key Papers
 
 1. **Smartphone Eye Tracking for Nystagmus Analysis**
@@ -135,6 +140,10 @@ Research needs:
 
 5. **EyePhone Application**
    - [PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC10926800/)
+
+6. **INS-Associated Inherited Retinal Diseases and Gene Therapy Clinical Trials**
+   - `papers/downloads/nystagmus/2024_INS_Gene_Therapy_Clinical_Trials.html`
+   - [Primary source notes](/home/eirikr/Github/openperception/research/visual_impairments/nystagmus/primary_source_notes.md)
 
 ### Organizations
 

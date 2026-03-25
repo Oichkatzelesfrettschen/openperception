@@ -24,6 +24,11 @@
 
 ## Overview of Photosensitive Epilepsy
 
+Primary source lane:
+
+- [Seizure source cache](/home/eirikr/Github/openperception/docs/external_sources/seizure_source_cache.md)
+- [Photosensitive epilepsy primary source notes](/home/eirikr/Github/openperception/research/seizures/photosensitive_epilepsy/primary_source_notes.md)
+
 ### Definition
 
 Photosensitive epilepsy (PSE) is a form of epilepsy in which seizures are triggered by visual stimuli that form patterns in time or space, such as flashing lights, bold regular patterns, or regular moving patterns.
@@ -711,6 +716,7 @@ if (prefersReducedMotion) {
 
 | Paper | Citation | Access |
 |-------|----------|--------|
+| Fisher review cache | Fisher et al. (2022), *Epilepsia* | `papers/downloads/seizures/Fisher_2022_Visually_Sensitive_Seizures.pdf` |
 | International Guidelines Gap Analysis | Jordan & Vanderheiden (2024), ACM TACCESS | https://dl.acm.org/doi/10.1145/3694790 |
 | Pattern-sensitive PSE self-induction | Epilepsy & Behavior (2021) | https://pubmed.ncbi.nlm.nih.gov/34252828/ |
 | Pokemon Incident Long-term Outcomes | Neurology (2004) | https://pubmed.ncbi.nlm.nih.gov/15037709/ |

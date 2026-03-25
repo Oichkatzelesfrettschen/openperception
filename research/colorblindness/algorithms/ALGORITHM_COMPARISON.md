@@ -55,11 +55,14 @@ RGB-to-LMS conversion matrix choice significantly impacts results:
 - **Chromium/Firefox DevTools**: Machado 2009
 - **GIMP**: Brettel 1997 display filter
 
-## Key Papers (Downloaded)
+## Key Papers (Canonical Local Cache)
 
-1. `Brettel_1997_Dichromat_Simulation.pdf` - Foundational dichromat simulation
-2. `Machado_2009_CVD_Simulation.pdf` - Physiologically-based model
-3. `Vienot_1999_Digital_Colourmaps.pdf` - Simplified digital display approach
+1. `papers/downloads/algorithms/Brettel_1997_Dichromat_Simulation.pdf` - Foundational dichromat simulation
+2. `papers/downloads/algorithms/Machado_2009_CVD_Simulation.pdf` - Physiologically-based model
+3. `papers/downloads/algorithms/Vienot_1999_Digital_Colourmaps.pdf` - Simplified digital display approach
+
+Legacy research-local copies still exist for some of these papers, but the
+canonical cache lane for new citations is `papers/downloads/algorithms/`.
 
 ## Technical Details
 

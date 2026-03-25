@@ -27,6 +27,11 @@
 
 Neurodivergence encompasses natural variations in human cognition, including conditions such as autism, ADHD, dyslexia, and dyscalculia. Current research estimates that 15-20% of the population is neurodivergent, with some studies suggesting up to 40%. This report synthesizes recent academic research (2020-2025) on designing accessible digital interfaces for neurodivergent users.
 
+Primary source lane:
+
+- [Neurodivergence source cache](/home/eirikr/Github/openperception/docs/external_sources/neurodivergence_source_cache.md)
+- [Neurodivergence primary source notes](/home/eirikr/Github/openperception/research/neurodivergence/primary_source_notes.md)
+
 ### Key Findings
 
 - **ADHD**: Interface design should prioritize simplicity, progressive disclosure, and distraction-free environments
@@ -686,6 +691,15 @@ Motion animation triggered by interaction must be disableable unless essential.
 |--------------|----------|
 | UK Home Office | Accessibility posters including dyscalculia |
 | HMRC/DWP | Designing for dyscalculia and low numeracy |
+
+### Local Primary Source Lane
+
+| Resource | Purpose |
+|----------|---------|
+| `papers/downloads/adhd/2024_Eye_Tracking_ADHD_Screening.pdf` | Cached ADHD eye-tracking screening study |
+| `papers/downloads/autism/AASPIRE_Autism_Web_Accessibility_Guidelines_2019.pdf` | Cached participatory autism web-accessibility guidelines |
+| `papers/downloads/dyslexia/Mueller-Axt_2024_Magnocellular_LGN_Dyslexia.pdf` | Cached dyslexia visual-thalamus study |
+| `research/neurodivergence/primary_source_notes.md` | Granular extraction for the repaired neurodivergence sources |
 
 ---
 

@@ -231,6 +231,11 @@ Up to **90% of patients** carry mutations in one of these genes:
 
 ## Blue Cone Monochromacy
 
+Primary source lane:
+
+- [Vision clinical source cache](/home/eirikr/Github/openperception/docs/external_sources/vision_clinical_source_cache.md)
+- [BCM primary source notes](/home/eirikr/Github/openperception/research/colorblindness/blue_cone_monochromacy/primary_source_notes.md)
+
 ### Definition
 
 Blue cone monochromacy (BCM) is a rare X-linked congenital disorder characterized by complete loss or severe reduction of L- and M-cone function, leaving only S-cones functional.
@@ -253,6 +258,7 @@ Blue cone monochromacy (BCM) is a rare X-linked congenital disorder characterize
    - URL: https://www.sciencedirect.com/science/article/pii/S0042698923000457
    - PubMed: https://pubmed.ncbi.nlm.nih.gov/37001420/
    - PMC: https://pmc.ncbi.nlm.nih.gov/articles/PMC10182257/
+   - Local cache: `papers/downloads/blue_cone_monochromacy/Sechrest_2023_BCM_Gene_Therapy_Review.html`
    - Summary: Comprehensive review covering genetic causes, clinical features, animal models, and AAV gene therapy progress
 
 2. **"Preclinical Evaluation of ADVM-062"** (July 2023)
@@ -320,14 +326,15 @@ Three primary algorithms dominate CVD simulation research:
    - URL: https://opg.optica.org/josaa/abstract.cfm?uri=josaa-14-10-2647
    - Method: Projects stimuli onto reduced stimulus surface in LMS space
    - Best for: All dichromacy types, especially tritanopia
-   - Local copy: Not distributed (copyright); obtain via DOI or institutional access
+   - Canonical local cache: `papers/downloads/algorithms/Brettel_1997_Dichromat_Simulation.pdf`
 
 2. **"Digital video colourmaps for checking the legibility of displays by dichromats"** (Vienot et al., 1999)
    - Simpler algorithm for protanopia/deuteranopia
    - Better handling of extreme values
-   - Local copy: Not distributed (copyright); obtain via DOI or institutional access
+   - Canonical local cache: `papers/downloads/algorithms/Vienot_1999_Digital_Colourmaps.pdf`
 
 3. **"A Physiologically-based Model for Simulation of Color Vision Deficiency"** (Machado et al., 2009)
+   - Canonical local cache: `papers/downloads/algorithms/Machado_2009_CVD_Simulation.pdf`
    - Journal: IEEE TVCG
    - URL: https://ieeexplore.ieee.org/document/5290741/
    - PDF: https://www.inf.ufrgs.br/~oliveira/pubs_files/CVD_Simulation/Machado_Oliveira_Fernandes_CVD_Vis2009_final.pdf

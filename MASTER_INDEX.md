@@ -145,6 +145,17 @@ Applied documentation:
 | `CANONICAL_REGISTRY.json` | Canonical paper paths, legacy aliases, and file hashes |
 | `paper_corpus_tracking.bib` | BibTeX tracking for repaired legacy placeholders |
 | `docs/external_sources/paper_corpus_registry.md` | Human-readable canonical cache policy and duplicate map |
+| `docs/external_sources/neurodivergence_source_cache.md` | Cached ADHD, autism, and dyslexia source index |
+| `docs/external_sources/seizure_source_cache.md` | Cached seizure-source index |
+| `docs/external_sources/vision_clinical_source_cache.md` | Cached BCM and nystagmus source index |
+
+#### Repaired Source Notes
+| File | Description |
+|------|-------------|
+| `research/neurodivergence/primary_source_notes.md` | Granular extraction for repaired ADHD, autism, and dyslexia sources |
+| `research/seizures/photosensitive_epilepsy/primary_source_notes.md` | Granular extraction for Fisher et al. seizure review |
+| `research/colorblindness/blue_cone_monochromacy/primary_source_notes.md` | Granular extraction for BCM review |
+| `research/visual_impairments/nystagmus/primary_source_notes.md` | Granular extraction for INS and gene-therapy review |
 
 ### Existing Research PDFs
 
