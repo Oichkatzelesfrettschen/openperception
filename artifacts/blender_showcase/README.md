@@ -1,0 +1,35 @@
+# Blender Showcase Artifacts
+
+This directory holds first-class Blender showcase artifacts for the repo's
+token and accessibility theme lanes.
+
+Why this is tracked:
+
+- the showcase is a distilled visual artifact of repo findings, not disposable
+  scratch output
+- the renders make the palette and redundancy work legible to humans
+- the `.blend` file captures layout, lighting, and scene composition choices
+  that belong with the repo's design-system research
+
+Current source-of-truth file:
+
+- `openperception_palette_showcase_spec.json`
+
+Historical files:
+
+- `openperception_palette_showcase_render_v1.png`
+- `openperception_palette_showcase_render_v2.png`
+- `openperception_palette_showcase_scene_v1.blend`
+- `openperception_palette_showcase_spec_v1.json`
+
+The current spec reflects the latest token findings. Visual regeneration of a
+new current `.png` and `.blend` is intended to happen from that spec inside a
+live Blender session.
+
+Regeneration path:
+
+1. `python3 tools/palette_showcase_spec.py --output artifacts/blender_showcase/openperception_palette_showcase_spec.json`
+2. run `tools/blender_palette_showcase_scene.py` inside Blender with the same
+   spec path and output paths in this directory
+
+This lane is tracked with Git LFS for `.png` and `.blend` files.

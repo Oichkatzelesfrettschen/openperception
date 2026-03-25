@@ -342,7 +342,7 @@
         <a href="#metrics">Metrics</a>
         <a href="#notes">Notes</a>
       </nav>
-      <h1 id="overview">Current, Accessible, and Red Theme Packs</h1>
+      <h1 id="overview">Current, Accessible, and Warm Atmosphere Packs</h1>
       <p class="lede">
         Compare three palette packs side by side. The same viewing filter
         applies to every lane so differences stay honest.
@@ -380,7 +380,7 @@
     </div>
 
     <footer id="metrics" data-density-region="notes">
-      The experimental lane adds a real tertiary family and keeps non-color cues visible through borders, hatching, and line styles.
+      The experimental lanes add a real tertiary family and keep non-color cues visible through borders, hatching, and line styles.
     </footer>
 
     <template id="laneTemplate">
@@ -453,9 +453,9 @@
         },
         {
           key: "redtheme",
-          title: "Red Theme",
-          eyebrow: "Mahogany",
-          description: "Atmosphere-first red theme: mahogany, brass, burgundy, cream. Good for skinning, not the default semantic stack.",
+          title: "Axiomatic Warm Lane",
+          eyebrow: "Mahogany/Brass",
+          description: "Structure-first warm lane: grounded mahogany, brass interpretation, burgundy gravity, cream reading surface.",
           url: "../../tokens/experimental-red-mahogany.json"
         }
       ];
@@ -513,7 +513,7 @@
 
       function buildLaneVars(data) {
         const brand = data.brand;
-        const accentFamily = data.mauve || data.magenta;
+        const accentFamily = data.brass || data.mauve || data.magenta || data.gray;
         const tertiaryFamily = data.burgundy || data.gray || accentFamily;
         return {
           primary: brand.primary,

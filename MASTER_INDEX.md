@@ -181,6 +181,16 @@ Applied documentation:
 | File | Description |
 |------|-------------|
 | `docs/color-support-accommodation-taxonomy.md` | Separates simulation, daltonization, recognition aids, and reconstructive color models |
+| `docs/red-theme-axiomatic-derivation.md` | Re-derives the warm red lane into structure, accent, tertiary, warning, and atmosphere roles |
+
+#### Showcase Artifacts
+| File | Description |
+|------|-------------|
+| `artifacts/blender_showcase/openperception_palette_showcase_spec.json` | Current token-driven Blender showcase specification |
+| `artifacts/blender_showcase/openperception_palette_showcase_render_v1.png` | Restored early palette showcase render snapshot |
+| `artifacts/blender_showcase/openperception_palette_showcase_render_v2.png` | Restored second palette showcase render snapshot |
+| `artifacts/blender_showcase/openperception_palette_showcase_scene_v1.blend` | Restored Blender scene snapshot for the palette showcase |
+| `artifacts/blender_showcase/README.md` | Showcase artifact policy and regeneration path |
 
 ### Existing Research PDFs
 

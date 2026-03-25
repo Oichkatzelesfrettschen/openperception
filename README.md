@@ -93,6 +93,9 @@ python3 tools/check_source_assets.py
 The paper-corpus check now also fails if tracked literature PDFs appear
 directly under `papers/` instead of a topic lane inside `papers/downloads/`.
 
+Visual showcase artifacts now live under `artifacts/blender_showcase/`, with a
+tracked spec plus retained render and `.blend` snapshots for the palette lane.
+
 ---
 
 ## Repository Structure
@@ -102,6 +105,8 @@ openperception/
 |-- algorithms/
 |   |-- DaltonLens-Python/     # Python CVD simulation package
 |   +-- libDaltonLens/         # C library (public domain)
+|-- artifacts/
+|   +-- blender_showcase/     # Tracked Blender scene and render snapshots
 |-- datasets/
 |   |-- source_assets/         # Non-paper reference assets for datasets/tools
 |   +-- ishihara-plate-learning/  # Color blindness test learning tool

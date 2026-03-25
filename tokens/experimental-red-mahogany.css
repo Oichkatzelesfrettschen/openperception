@@ -1,33 +1,34 @@
 :root {
-  --mahogany-900: #241513;
-  --mahogany-800: #3A1E1A;
-  --mahogany-700: #4A231D;
-  --mahogany-500: #6B3B2F;
-  --mahogany-200: #D7B9A4;
+  --mahogany-900: #241816;
+  --mahogany-800: #332420;
+  --mahogany-700: #42312B;
+  --mahogany-500: #6A4B40;
+  --mahogany-200: #D8C2B7;
 
-  --brass-700: #7C5A34;
-  --brass-600: #8E6A42;
-  --brass-400: #C3A06E;
+  --brass-700: #6F4B27;
+  --brass-600: #8C6840;
+  --brass-400: #C5A176;
   --brass-200: #E7D2B4;
 
-  --burgundy-700: #7A1628;
-  --burgundy-600: #A1344C;
-  --burgundy-400: #D06A7E;
-  --burgundy-200: #F0C5CD;
+  --burgundy-800: #6A1428;
+  --burgundy-700: #8D2036;
+  --burgundy-600: #B0475C;
+  --burgundy-300: #E3A1AF;
+  --burgundy-100: #F7E1E5;
 
-  --cream-100: #F8F3EE;
-  --cream-200: #EDE3D7;
+  --cream-100: #F7F2EC;
+  --cream-200: #EBDED0;
 
-  --gray-900: #2A2321;
-  --gray-700: #4D413C;
-  --gray-500: #7B6E67;
-  --gray-300: #D9C8B8;
-  --gray-0: #F8F3EE;
+  --gray-900: #241E1B;
+  --gray-700: #4E433C;
+  --gray-500: #7A6D65;
+  --gray-300: #D8CBBF;
+  --gray-0: #F7F2EC;
 
-  --brand-primary: var(--mahogany-700);
+  --brand-primary: #5B433B;
   --brand-primary-strong: var(--mahogany-800);
-  --brand-accent: var(--brass-600);
-  --brand-accent-strong: var(--brass-700);
+  --brand-accent: #B18B5F;
+  --brand-accent-strong: var(--brass-600);
   --brand-tertiary: var(--burgundy-600);
   --brand-tertiary-strong: var(--burgundy-700);
   --brand-text: var(--gray-900);

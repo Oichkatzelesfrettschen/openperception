@@ -39,7 +39,7 @@ runtime without a page reload.
 
 ---
 
-### `ui/palette-compare.html` -- Current, Accessible, and Red Theme Packs
+### `ui/palette-compare.html` -- Current, Accessible, and Warm Atmosphere Packs
 
 Renders the production pack, the experimental mauve/burgundy accessibility
 pack, and the atmosphere-first red/mahogany theme side by side, using the same

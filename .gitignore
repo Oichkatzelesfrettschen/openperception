@@ -217,9 +217,6 @@ _build/
 # =============================================================================
 # Log files
 logs/*.log
-logs/openperception_palette_showcase_*.png
-logs/openperception_palette_showcase_*.blend
-logs/openperception_palette_showcase_spec.json
 *.log
 
 # Database files (SQLite)

@@ -1,25 +1,108 @@
 {
   "default": {
-    "mahogany": {"900": "#241513", "800": "#3A1E1A", "700": "#4A231D", "500": "#6B3B2F", "200": "#D7B9A4"},
-    "brass": {"700": "#7C5A34", "600": "#8E6A42", "400": "#C3A06E", "200": "#E7D2B4"},
-    "burgundy": {"700": "#7A1628", "600": "#A1344C", "400": "#D06A7E", "200": "#F0C5CD"},
-    "cream": {"100": "#F8F3EE", "200": "#EDE3D7"},
-    "gray": {"900": "#2A2321", "700": "#4D413C", "500": "#7B6E67", "300": "#D9C8B8", "0": "#F8F3EE"},
+    "mahogany": {"900": "#241816", "800": "#332420", "700": "#42312B", "500": "#6A4B40", "200": "#D8C2B7"},
+    "brass": {"700": "#6F4B27", "600": "#8C6840", "400": "#C5A176", "200": "#E7D2B4"},
+    "burgundy": {"800": "#6A1428", "700": "#8D2036", "600": "#B0475C", "300": "#E3A1AF", "100": "#F7E1E5"},
+    "cream": {"100": "#F7F2EC", "200": "#EBDED0"},
+    "gray": {"900": "#241E1B", "700": "#4E433C", "500": "#7A6D65", "300": "#D8CBBF", "0": "#F7F2EC"},
     "brand": {
-      "primary": "#4A231D",
-      "primaryStrong": "#3A1E1A",
-      "accent": "#8E6A42",
-      "accentStrong": "#7C5A34",
-      "tertiary": "#A1344C",
-      "tertiaryStrong": "#7A1628",
-      "text": "#2A2321",
-      "surface": "#F8F3EE",
-      "border": "#D9C8B8",
-      "focusRing": "#C3A06E",
-      "link": "#7A1628"
+      "primary": "#5B433B",
+      "primaryStrong": "#42312B",
+      "accent": "#B18B5F",
+      "accentStrong": "#8C6840",
+      "tertiary": "#B0475C",
+      "tertiaryStrong": "#8D2036",
+      "text": "#241E1B",
+      "surface": "#F7F2EC",
+      "border": "#D8CBBF",
+      "focusRing": "#C5A176",
+      "link": "#8D2036"
     },
     "viz": {
-      "categorical": ["#3A1E1A", "#7C5A34", "#7A1628", "#4D413C", "#C3A06E", "#D06A7E"],
+      "categorical": ["#42312B", "#8C6840", "#8D2036", "#4E433C", "#C5A176", "#E3A1AF"],
+      "markers": ["circle", "triangle", "square", "diamond", "triangle", "square"],
+      "dashes": [[0, 0], [6, 3], [2, 2], [6, 2, 2, 2], [4, 2], [0, 0]]
+    }
+  },
+  "protan": {
+    "mahogany": {"700": "#3D2F2A", "500": "#6E554B"},
+    "brass": {"600": "#8B6136", "400": "#C39A6E"},
+    "burgundy": {"700": "#8A233F", "600": "#AF4C61", "300": "#E2A5B2"},
+    "brand": {
+      "primary": "#57433D",
+      "primaryStrong": "#3D2F2A",
+      "accent": "#AE8454",
+      "accentStrong": "#8B6136",
+      "tertiary": "#AF4C61",
+      "tertiaryStrong": "#8A233F",
+      "focusRing": "#C39A6E",
+      "link": "#8A233F"
+    },
+    "viz": {
+      "categorical": ["#3D2F2A", "#8B6136", "#8A233F", "#4E433C", "#C39A6E", "#E2A5B2"],
+      "markers": ["circle", "triangle", "square", "diamond", "triangle", "square"],
+      "dashes": [[0, 0], [6, 3], [2, 2], [6, 2, 2, 2], [4, 2], [0, 0]]
+    }
+  },
+  "deutan": {
+    "mahogany": {"700": "#3E302A", "500": "#6D554B"},
+    "brass": {"600": "#8C633A", "400": "#C39D73"},
+    "burgundy": {"700": "#852742", "600": "#AB5167", "300": "#E2A8B4"},
+    "brand": {
+      "primary": "#58433D",
+      "primaryStrong": "#3E302A",
+      "accent": "#AF8658",
+      "accentStrong": "#8C633A",
+      "tertiary": "#AB5167",
+      "tertiaryStrong": "#852742",
+      "focusRing": "#C39D73",
+      "link": "#852742"
+    },
+    "viz": {
+      "categorical": ["#3E302A", "#8C633A", "#852742", "#4E433C", "#C39D73", "#E2A8B4"],
+      "markers": ["circle", "triangle", "square", "diamond", "triangle", "square"],
+      "dashes": [[0, 0], [6, 3], [2, 2], [6, 2, 2, 2], [4, 2], [0, 0]]
+    }
+  },
+  "tritan": {
+    "mahogany": {"700": "#4A342F", "500": "#76574D"},
+    "brass": {"600": "#8A5B30", "400": "#C09264"},
+    "burgundy": {"700": "#982D45", "600": "#BE596E", "300": "#E6AAB7"},
+    "brand": {
+      "primary": "#654A42",
+      "primaryStrong": "#4A342F",
+      "accent": "#B98052",
+      "accentStrong": "#8A5B30",
+      "tertiary": "#BE596E",
+      "tertiaryStrong": "#982D45",
+      "focusRing": "#C09264",
+      "link": "#982D45"
+    },
+    "viz": {
+      "categorical": ["#4A342F", "#8A5B30", "#982D45", "#4E433C", "#C09264", "#E6AAB7"],
+      "markers": ["circle", "triangle", "square", "diamond", "triangle", "square"],
+      "dashes": [[0, 0], [6, 3], [2, 2], [6, 2, 2, 2], [4, 2], [0, 0]]
+    }
+  },
+  "mono": {
+    "mahogany": {"700": "#1F2937", "500": "#334155"},
+    "brass": {"600": "#4B5563", "400": "#9CA3AF"},
+    "burgundy": {"700": "#6B7280", "600": "#9CA3AF", "300": "#D1D5DB"},
+    "brand": {
+      "primary": "#334155",
+      "primaryStrong": "#1F2937",
+      "accent": "#6B7280",
+      "accentStrong": "#4B5563",
+      "tertiary": "#9CA3AF",
+      "tertiaryStrong": "#6B7280",
+      "text": "#1F2937",
+      "surface": "#F7F2EC",
+      "border": "#D1D5DB",
+      "focusRing": "#9CA3AF",
+      "link": "#1F2937"
+    },
+    "viz": {
+      "categorical": ["#1F2937", "#4B5563", "#6B7280", "#374151", "#9CA3AF", "#D1D5DB"],
       "markers": ["circle", "triangle", "square", "diamond", "triangle", "square"],
       "dashes": [[0, 0], [6, 3], [2, 2], [6, 2, 2, 2], [4, 2], [0, 0]]
     }

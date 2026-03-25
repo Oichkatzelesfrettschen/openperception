@@ -1,0 +1,895 @@
+{
+  "scene_id": "openperception-palette-showcase",
+  "summary": "Three-lane palette showcase for production, accessibility-first, and atmosphere-first perceptual schemes.",
+  "lanes": [
+    {
+      "scheme_id": "production-indigo-magenta",
+      "label": "Production Indigo/Magenta",
+      "description": "Current default production lane.",
+      "source": "tokens/color-tokens.json",
+      "available_variants": [
+        "default",
+        "protan",
+        "deutan",
+        "tritan",
+        "mono"
+      ],
+      "brand": {
+        "primary": "#4F46E5",
+        "primaryStrong": "#3730A3",
+        "accent": "#C026D3",
+        "accentStrong": "#86198F",
+        "tertiary": null,
+        "tertiaryStrong": null,
+        "surface": "#FFFFFF",
+        "text": "#111827",
+        "border": "#D1D5DB",
+        "focusRing": "#A5B4FC",
+        "link": "#3730A3"
+      },
+      "viz": {
+        "categorical": [
+          "#3730A3",
+          "#C026D3",
+          "#6366F1",
+          "#374151",
+          "#A5B4FC",
+          "#E879F9"
+        ],
+        "markers": [
+          "circle",
+          "triangle",
+          "square",
+          "diamond",
+          "triangle",
+          "square"
+        ],
+        "dashes": [
+          [
+            0,
+            0
+          ],
+          [
+            6,
+            3
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            6,
+            2,
+            2,
+            2
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "variants": {
+        "default": {
+          "brand": {
+            "primary": "#4F46E5",
+            "primaryStrong": "#3730A3",
+            "accent": "#C026D3",
+            "accentStrong": "#86198F",
+            "tertiary": null,
+            "tertiaryStrong": null,
+            "surface": "#FFFFFF",
+            "text": "#111827",
+            "border": "#D1D5DB",
+            "focusRing": "#A5B4FC",
+            "link": "#3730A3"
+          },
+          "viz": {
+            "categorical": [
+              "#3730A3",
+              "#C026D3",
+              "#6366F1",
+              "#374151",
+              "#A5B4FC",
+              "#E879F9"
+            ],
+            "markers": [
+              "circle",
+              "triangle",
+              "square",
+              "diamond",
+              "triangle",
+              "square"
+            ],
+            "dashes": [
+              [
+                0,
+                0
+              ],
+              [
+                6,
+                3
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                6,
+                2,
+                2,
+                2
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                0,
+                0
+              ]
+            ]
+          }
+        },
+        "protan": {
+          "brand": {
+            "primary": "#3D35C8",
+            "primaryStrong": "#2E2AA1",
+            "accent": "#D62A8A",
+            "accentStrong": "#B12179",
+            "tertiary": null,
+            "tertiaryStrong": null,
+            "surface": "#FFFFFF",
+            "text": "#111827",
+            "border": "#D1D5DB",
+            "focusRing": "#A5B4FC",
+            "link": "#2E2AA1"
+          },
+          "viz": {
+            "categorical": [
+              "#2E2AA1",
+              "#D62A8A",
+              "#5A5FEF",
+              "#374151",
+              "#A5B4FC",
+              "#EC6FB1"
+            ],
+            "markers": [
+              "circle",
+              "triangle",
+              "square",
+              "diamond",
+              "triangle",
+              "square"
+            ],
+            "dashes": [
+              [
+                0,
+                0
+              ],
+              [
+                6,
+                3
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                6,
+                2,
+                2,
+                2
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                0,
+                0
+              ]
+            ]
+          }
+        },
+        "deutan": {
+          "brand": {
+            "primary": "#3F38C5",
+            "primaryStrong": "#2E2AA1",
+            "accent": "#D02C8C",
+            "accentStrong": "#A81E7B",
+            "tertiary": null,
+            "tertiaryStrong": null,
+            "surface": "#FFFFFF",
+            "text": "#111827",
+            "border": "#D1D5DB",
+            "focusRing": "#A5B4FC",
+            "link": "#2E2AA1"
+          },
+          "viz": {
+            "categorical": [
+              "#2E2AA1",
+              "#D02C8C",
+              "#5D60EE",
+              "#374151",
+              "#A5B4FC",
+              "#F07BC0"
+            ],
+            "markers": [
+              "circle",
+              "triangle",
+              "square",
+              "diamond",
+              "triangle",
+              "square"
+            ],
+            "dashes": [
+              [
+                0,
+                0
+              ],
+              [
+                6,
+                3
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                6,
+                2,
+                2,
+                2
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                0,
+                0
+              ]
+            ]
+          }
+        },
+        "tritan": {
+          "brand": {
+            "primary": "#6940D6",
+            "primaryStrong": "#5B33BF",
+            "accent": "#C81A78",
+            "accentStrong": "#A9156E",
+            "tertiary": null,
+            "tertiaryStrong": null,
+            "surface": "#FFFFFF",
+            "text": "#111827",
+            "border": "#D1D5DB",
+            "focusRing": "#A5B4FC",
+            "link": "#5B33BF"
+          },
+          "viz": {
+            "categorical": [
+              "#5B33BF",
+              "#C81A78",
+              "#7E5AEE",
+              "#374151",
+              "#A5B4FC",
+              "#E05C9F"
+            ],
+            "markers": [
+              "circle",
+              "triangle",
+              "square",
+              "diamond",
+              "triangle",
+              "square"
+            ],
+            "dashes": [
+              [
+                0,
+                0
+              ],
+              [
+                6,
+                3
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                6,
+                2,
+                2,
+                2
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                0,
+                0
+              ]
+            ]
+          }
+        },
+        "mono": {
+          "brand": {
+            "primary": "#334155",
+            "primaryStrong": "#1E293B",
+            "accent": "#6B7280",
+            "accentStrong": "#4B5563",
+            "tertiary": null,
+            "tertiaryStrong": null,
+            "surface": "#FFFFFF",
+            "text": "#111827",
+            "border": "#D1D5DB",
+            "focusRing": "#A5B4FC",
+            "link": "#1E293B"
+          },
+          "viz": {
+            "categorical": [
+              "#1E293B",
+              "#6B7280",
+              "#475569",
+              "#374151",
+              "#9CA3AF",
+              "#D1D5DB"
+            ],
+            "markers": [
+              "circle",
+              "triangle",
+              "square",
+              "diamond",
+              "triangle",
+              "square"
+            ],
+            "dashes": [
+              [
+                0,
+                0
+              ],
+              [
+                6,
+                3
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                6,
+                2,
+                2,
+                2
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                0,
+                0
+              ]
+            ]
+          }
+        }
+      }
+    },
+    {
+      "scheme_id": "accessible-mauve-burgundy",
+      "label": "Accessible Indigo/Mauve/Burgundy",
+      "description": "Accessibility-first experimental lane with tertiary burgundy support.",
+      "source": "tokens/experimental-mauve-burgundy.json",
+      "available_variants": [
+        "default",
+        "protan",
+        "deutan",
+        "tritan",
+        "mono"
+      ],
+      "brand": {
+        "primary": "#5743E3",
+        "primaryStrong": "#3E2DA4",
+        "accent": "#BD4EAC",
+        "accentStrong": "#853275",
+        "tertiary": "#B52F4A",
+        "tertiaryStrong": "#901C32",
+        "surface": "#FFFFFF",
+        "text": "#111827",
+        "border": "#D1D5DB",
+        "focusRing": "#ABB4FA",
+        "link": "#3E2DA4"
+      },
+      "viz": {
+        "categorical": [
+          "#3E2DA4",
+          "#853275",
+          "#901C32",
+          "#374151",
+          "#ABB4FA",
+          "#DE8ED2"
+        ],
+        "markers": [
+          "circle",
+          "triangle",
+          "square",
+          "diamond",
+          "triangle",
+          "square"
+        ],
+        "dashes": [
+          [
+            0,
+            0
+          ],
+          [
+            6,
+            3
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            6,
+            2,
+            2,
+            2
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "variants": {
+        "default": {
+          "brand": {
+            "primary": "#5743E3",
+            "primaryStrong": "#3E2DA4",
+            "accent": "#BD4EAC",
+            "accentStrong": "#853275",
+            "tertiary": "#B52F4A",
+            "tertiaryStrong": "#901C32",
+            "surface": "#FFFFFF",
+            "text": "#111827",
+            "border": "#D1D5DB",
+            "focusRing": "#ABB4FA",
+            "link": "#3E2DA4"
+          },
+          "viz": {
+            "categorical": [
+              "#3E2DA4",
+              "#853275",
+              "#901C32",
+              "#374151",
+              "#ABB4FA",
+              "#DE8ED2"
+            ],
+            "markers": [
+              "circle",
+              "triangle",
+              "square",
+              "diamond",
+              "triangle",
+              "square"
+            ],
+            "dashes": [
+              [
+                0,
+                0
+              ],
+              [
+                6,
+                3
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                6,
+                2,
+                2,
+                2
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                0,
+                0
+              ]
+            ]
+          }
+        },
+        "protan": {
+          "brand": {
+            "primary": "#4D44D8",
+            "primaryStrong": "#342EA6",
+            "accent": "#C857A5",
+            "accentStrong": "#964178",
+            "tertiary": "#A63247",
+            "tertiaryStrong": "#7A1628",
+            "surface": "#FFFFFF",
+            "text": "#111827",
+            "border": "#D1D5DB",
+            "focusRing": "#ABB4FA",
+            "link": "#342EA6"
+          },
+          "viz": {
+            "categorical": [
+              "#342EA6",
+              "#964178",
+              "#7A1628",
+              "#374151",
+              "#ABB4FA",
+              "#E08EC5"
+            ],
+            "markers": [
+              "circle",
+              "triangle",
+              "square",
+              "diamond",
+              "triangle",
+              "square"
+            ],
+            "dashes": [
+              [
+                0,
+                0
+              ],
+              [
+                6,
+                3
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                6,
+                2,
+                2,
+                2
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                0,
+                0
+              ]
+            ]
+          }
+        },
+        "deutan": {
+          "brand": {
+            "primary": "#4D45D5",
+            "primaryStrong": "#352FA5",
+            "accent": "#C257A9",
+            "accentStrong": "#91407A",
+            "tertiary": "#A1344C",
+            "tertiaryStrong": "#761A2D",
+            "surface": "#FFFFFF",
+            "text": "#111827",
+            "border": "#D1D5DB",
+            "focusRing": "#ABB4FA",
+            "link": "#352FA5"
+          },
+          "viz": {
+            "categorical": [
+              "#352FA5",
+              "#91407A",
+              "#761A2D",
+              "#374151",
+              "#ABB4FA",
+              "#DD8FC8"
+            ],
+            "markers": [
+              "circle",
+              "triangle",
+              "square",
+              "diamond",
+              "triangle",
+              "square"
+            ],
+            "dashes": [
+              [
+                0,
+                0
+              ],
+              [
+                6,
+                3
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                6,
+                2,
+                2,
+                2
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                0,
+                0
+              ]
+            ]
+          }
+        },
+        "tritan": {
+          "brand": {
+            "primary": "#7653E1",
+            "primaryStrong": "#5C3CBD",
+            "accent": "#C75B90",
+            "accentStrong": "#9A3F63",
+            "tertiary": "#B43A50",
+            "tertiaryStrong": "#871D30",
+            "surface": "#FFFFFF",
+            "text": "#111827",
+            "border": "#D1D5DB",
+            "focusRing": "#ABB4FA",
+            "link": "#5C3CBD"
+          },
+          "viz": {
+            "categorical": [
+              "#5C3CBD",
+              "#9A3F63",
+              "#871D30",
+              "#374151",
+              "#ABB4FA",
+              "#E190B7"
+            ],
+            "markers": [
+              "circle",
+              "triangle",
+              "square",
+              "diamond",
+              "triangle",
+              "square"
+            ],
+            "dashes": [
+              [
+                0,
+                0
+              ],
+              [
+                6,
+                3
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                6,
+                2,
+                2,
+                2
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                0,
+                0
+              ]
+            ]
+          }
+        },
+        "mono": {
+          "brand": {
+            "primary": "#334155",
+            "primaryStrong": "#1E293B",
+            "accent": "#6B7280",
+            "accentStrong": "#4B5563",
+            "tertiary": "#6B7280",
+            "tertiaryStrong": "#374151",
+            "surface": "#FFFFFF",
+            "text": "#111827",
+            "border": "#D1D5DB",
+            "focusRing": "#ABB4FA",
+            "link": "#1E293B"
+          },
+          "viz": {
+            "categorical": [
+              "#1E293B",
+              "#4B5563",
+              "#6B7280",
+              "#374151",
+              "#9CA3AF",
+              "#D1D5DB"
+            ],
+            "markers": [
+              "circle",
+              "triangle",
+              "square",
+              "diamond",
+              "triangle",
+              "square"
+            ],
+            "dashes": [
+              [
+                0,
+                0
+              ],
+              [
+                6,
+                3
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                6,
+                2,
+                2,
+                2
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                0,
+                0
+              ]
+            ]
+          }
+        }
+      }
+    },
+    {
+      "scheme_id": "atmosphere-red-mahogany",
+      "label": "Atmosphere Red/Mahogany",
+      "description": "Atmosphere-first experimental lane for theme and document identity.",
+      "source": "tokens/experimental-red-mahogany.json",
+      "available_variants": [
+        "default"
+      ],
+      "brand": {
+        "primary": "#4A231D",
+        "primaryStrong": "#3A1E1A",
+        "accent": "#8E6A42",
+        "accentStrong": "#7C5A34",
+        "tertiary": "#A1344C",
+        "tertiaryStrong": "#7A1628",
+        "surface": "#F8F3EE",
+        "text": "#2A2321",
+        "border": "#D9C8B8",
+        "focusRing": "#C3A06E",
+        "link": "#7A1628"
+      },
+      "viz": {
+        "categorical": [
+          "#3A1E1A",
+          "#7C5A34",
+          "#7A1628",
+          "#4D413C",
+          "#C3A06E",
+          "#D06A7E"
+        ],
+        "markers": [
+          "circle",
+          "triangle",
+          "square",
+          "diamond",
+          "triangle",
+          "square"
+        ],
+        "dashes": [
+          [
+            0,
+            0
+          ],
+          [
+            6,
+            3
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            6,
+            2,
+            2,
+            2
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      },
+      "variants": {
+        "default": {
+          "brand": {
+            "primary": "#4A231D",
+            "primaryStrong": "#3A1E1A",
+            "accent": "#8E6A42",
+            "accentStrong": "#7C5A34",
+            "tertiary": "#A1344C",
+            "tertiaryStrong": "#7A1628",
+            "surface": "#F8F3EE",
+            "text": "#2A2321",
+            "border": "#D9C8B8",
+            "focusRing": "#C3A06E",
+            "link": "#7A1628"
+          },
+          "viz": {
+            "categorical": [
+              "#3A1E1A",
+              "#7C5A34",
+              "#7A1628",
+              "#4D413C",
+              "#C3A06E",
+              "#D06A7E"
+            ],
+            "markers": [
+              "circle",
+              "triangle",
+              "square",
+              "diamond",
+              "triangle",
+              "square"
+            ],
+            "dashes": [
+              [
+                0,
+                0
+              ],
+              [
+                6,
+                3
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                6,
+                2,
+                2,
+                2
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                0,
+                0
+              ]
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

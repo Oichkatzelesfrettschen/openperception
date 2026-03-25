@@ -1,6 +1,6 @@
 # Red Theme Triage
 
-Date: 2026-03-22
+Date: 2026-03-25
 
 ## Verdict
 
@@ -64,13 +64,13 @@ skin" direction from the current triage:
 
 | Role | Hex | Use |
 |---|---|---|
-| mahogany-900 | `#241513` | shell/chrome depth |
-| mahogany-700 | `#4A231D` | panels, window trim, dark cards |
-| burgundy-700 | `#7A1628` | tertiary emphasis |
-| oxblood-600 | `#A1344C` | callouts, focused accents |
-| brass-500 | `#A67C52` | decorative contrast, highlights |
-| cream-100 | `#F8F3EE` | surfaces and reading areas |
-| slate-700 | `#374151` | text and neutral structure |
+| mahogany-800 | `#332420` | shell/chrome depth |
+| mahogany-700 | `#42312B` | grounded structure and dark cards |
+| burgundy-700 | `#8D2036` | tertiary emphasis and high-gravity cues |
+| burgundy-600 | `#B0475C` | callouts and reinforced emphasis |
+| brass-600 | `#8C6840` | interpretive accent and active warm controls |
+| cream-100 | `#F7F2EC` | surfaces and reading areas |
+| gray-700 | `#4E433C` | text-adjacent neutral structure |
 
 ## Practical recommendation
 
@@ -89,6 +89,10 @@ Medium term:
    than replacing the default token source.
 2. Pair it with a comparison example like the current accessible-pack demo, not
    as a silent production swap.
+
+The detailed decomposition and re-derivation now lives in:
+
+- `docs/red-theme-axiomatic-derivation.md`
 
 ## Links to current work
 

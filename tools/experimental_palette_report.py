@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Validate the experimental mauve/burgundy palette pack.
+Validate an experimental palette pack.
 
 Reports:
 - authored contrast for strong brand tokens against white

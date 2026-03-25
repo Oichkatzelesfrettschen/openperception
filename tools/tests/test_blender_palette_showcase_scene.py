@@ -12,17 +12,17 @@ def test_parse_args_reads_required_paths() -> None:
     args = parse_args(
         [
             "--spec",
-            "logs/showcase.json",
+            "artifacts/blender_showcase/showcase.json",
             "--output",
-            "logs/showcase.png",
+            "artifacts/blender_showcase/showcase.png",
             "--blend-output",
-            "logs/showcase.blend",
+            "artifacts/blender_showcase/showcase.blend",
         ]
     )
 
-    assert args.spec == "logs/showcase.json"
-    assert args.output == "logs/showcase.png"
-    assert args.blend_output == "logs/showcase.blend"
+    assert args.spec == "artifacts/blender_showcase/showcase.json"
+    assert args.output == "artifacts/blender_showcase/showcase.png"
+    assert args.blend_output == "artifacts/blender_showcase/showcase.blend"
 
 
 def test_hex_to_rgba_returns_linearized_tuple() -> None:

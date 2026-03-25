@@ -30,9 +30,9 @@ TOKEN_SOURCES = (
     ),
     (
         "atmosphere-red-mahogany",
-        "Atmosphere Red/Mahogany",
+        "Axiomatic Mahogany/Brass/Burgundy",
         REPO_ROOT / "tokens" / "experimental-red-mahogany.json",
-        "Atmosphere-first experimental lane for theme and document identity.",
+        "Warm atmosphere lane with grounded structure, brass interpretation, and burgundy high-gravity emphasis.",
     ),
 )
 
@@ -91,7 +91,7 @@ def build_showcase_spec() -> dict:
         "scene_id": "openperception-palette-showcase",
         "summary": (
             "Three-lane palette showcase for production, accessibility-first, "
-            "and atmosphere-first perceptual schemes."
+            "and axiomatic warm-atmosphere perceptual schemes."
         ),
         "lanes": [
             _build_lane(scheme_id, label, path, description)

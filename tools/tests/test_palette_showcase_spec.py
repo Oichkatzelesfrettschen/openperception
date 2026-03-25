@@ -25,7 +25,7 @@ def test_showcase_spec_uses_current_token_values() -> None:
 
     assert lanes["production-indigo-magenta"]["brand"]["primaryStrong"] == "#3730A3"
     assert lanes["accessible-mauve-burgundy"]["brand"]["tertiaryStrong"] == "#901C32"
-    assert lanes["atmosphere-red-mahogany"]["brand"]["surface"] == "#F8F3EE"
+    assert lanes["atmosphere-red-mahogany"]["brand"]["surface"] == "#F7F2EC"
 
 
 def test_showcase_spec_exposes_variant_payloads() -> None:
@@ -40,4 +40,10 @@ def test_showcase_spec_exposes_variant_payloads() -> None:
         "mono",
     ]
     assert lanes["accessible-mauve-burgundy"]["variants"]["mono"]["brand"]["primaryStrong"] == "#1E293B"
-    assert lanes["atmosphere-red-mahogany"]["available_variants"] == ["default"]
+    assert lanes["atmosphere-red-mahogany"]["available_variants"] == [
+        "default",
+        "protan",
+        "deutan",
+        "tritan",
+        "mono",
+    ]

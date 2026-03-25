@@ -5,8 +5,9 @@ Build and render the OpenPerception palette showcase scene inside Blender.
 Run through Blender:
   blender --background --factory-startup \
     --python tools/blender_palette_showcase_scene.py -- \
-    --spec logs/openperception_palette_showcase_spec.json \
-    --output logs/openperception_palette_showcase_render.png
+    --spec artifacts/blender_showcase/openperception_palette_showcase_spec.json \
+    --output artifacts/blender_showcase/openperception_palette_showcase_render.png \
+    --blend-output artifacts/blender_showcase/openperception_palette_showcase_scene.blend
 """
 from __future__ import annotations
 

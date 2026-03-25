@@ -1,6 +1,6 @@
 # Red Theme From Foundations
 
-Date: 2026-03-22
+Date: 2026-03-25
 
 ## Goal
 
@@ -100,7 +100,7 @@ In that role, the red family does not have to carry every interactive meaning.
 
 Given Steps 1-5, the correct placement is:
 
-- primary interaction should remain on a more stable non-red family,
+- primary interaction should remain on a more stable grounded family,
 - red should enter as tertiary emphasis or atmosphere,
 - warning red should stay explicit and narrow,
 - charts and states still need shape, label, dash, and hatch redundancy.
@@ -112,7 +112,8 @@ This is exactly why the accessible experimental pack ended up as:
 - burgundy for tertiary/high-gravity emphasis.
 
 That structure lets the project keep the emotional register of red without
-making the whole system brittle.
+making the whole system brittle. The refined warm lane now follows the same
+logic internally: grounded mahogany structure, brass accent, burgundy tertiary.
 
 ## Step 7. Re-derive the red-theme outcome
 
@@ -151,11 +152,15 @@ This is the correct implementation form for the red theme:
 
 Its structure is:
 
-- mahogany = primary shell/chrome family
-- brass = accent family
+- mahogany = grounded structure family
+- brass = interpretive accent family
 - burgundy = tertiary emphasis family
 - cream = reading surface
 - slate/brown-gray = text and neutral structure
+
+The detailed 2026-03-25 re-derivation now lives in:
+
+- `docs/red-theme-axiomatic-derivation.md`
 
 ## Step 9. The final derivation in one sentence
 
