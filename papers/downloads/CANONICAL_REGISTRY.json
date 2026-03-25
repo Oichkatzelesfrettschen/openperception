@@ -4,7 +4,7 @@
   "bibliography": "papers/downloads/paper_corpus_tracking.bib",
   "policy": {
     "canonical_pdf_lane": "papers/downloads",
-    "research_pdf_policy": "New source artifacts belong in papers/downloads. research/ may keep legacy mirrors temporarily, but canonical citations and provenance should point at papers/downloads."
+    "research_pdf_policy": "New source artifacts belong in papers/downloads. Canonical citations and provenance should point at papers/downloads, while retired legacy paths remain only in explicit provenance records."
   },
   "sources": [
     {

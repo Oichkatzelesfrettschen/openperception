@@ -64,7 +64,8 @@ python3 tools/check_paper_corpus.py
 
 It fails on zero-byte PDFs, bad registry hashes, lingering legacy aliases, and
 any duplicate PDF groups that reappear across the canonical cache and research
-lanes.
+lanes. It also blocks stale Markdown references to retired alias paths outside
+the provenance docs that are meant to record them.
 
 ## Remaining Follow-Up
 

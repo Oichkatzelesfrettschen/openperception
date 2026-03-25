@@ -56,4 +56,5 @@ The verifier checks:
 - canonical artifacts exist and match the registry hash/size table,
 - no zero-byte PDFs remain under `papers/` or `research/`,
 - legacy alias paths stay removed,
+- legacy alias paths appear only in the paper-corpus provenance docs,
 - duplicate PDF groups do not reappear across `papers/` and `research/`.

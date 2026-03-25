@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import subprocess
 from collections import defaultdict
 from pathlib import Path
 from typing import Any
@@ -14,6 +15,10 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_PAPER_CORPUS_REGISTRY = (
     REPO_ROOT / "papers" / "downloads" / "CANONICAL_REGISTRY.json"
 )
+ALLOWED_LEGACY_REFERENCE_DOCS = {
+    "docs/external_sources/paper_corpus_audit.md",
+    "docs/external_sources/paper_corpus_registry.md",
+}
 
 
 def _sha256(path: Path) -> str:
@@ -26,6 +31,25 @@ def _looks_like_pdf(path: Path) -> bool:
 
 def _load_registry(registry_path: Path) -> dict[str, Any]:
     return json.loads(registry_path.read_text(encoding="utf-8"))
+
+
+def _tracked_markdown_paths(repo_root: Path) -> list[Path]:
+    try:
+        result = subprocess.run(
+            ["git", "-C", str(repo_root), "ls-files", "--", "*.md"],
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+    except (FileNotFoundError, subprocess.CalledProcessError):
+        return sorted(repo_root.rglob("*.md"))
+
+    paths = []
+    for line in result.stdout.splitlines():
+        if not line:
+            continue
+        paths.append(repo_root / line)
+    return sorted(paths)
 
 
 def collect_duplicate_pdf_groups(repo_root: Path = REPO_ROOT) -> list[list[str]]:
@@ -43,6 +67,33 @@ def collect_duplicate_pdf_groups(repo_root: Path = REPO_ROOT) -> list[list[str]]
         [sorted(paths) for paths in by_hash.values() if len(paths) > 1],
         key=lambda paths: paths[0],
     )
+
+
+def collect_legacy_reference_violations(
+    registry: dict[str, Any],
+    repo_root: Path = REPO_ROOT,
+) -> list[str]:
+    legacy_paths = sorted(
+        {
+            entry["legacy_path"]
+            for entry in registry.get("legacy_aliases", [])
+            if entry.get("legacy_path", "").endswith(".pdf")
+        }
+    )
+    violations: list[str] = []
+
+    for path in _tracked_markdown_paths(repo_root):
+        rel_path = path.relative_to(repo_root).as_posix()
+        if rel_path in ALLOWED_LEGACY_REFERENCE_DOCS:
+            continue
+        text = path.read_text(encoding="utf-8")
+        for legacy_path in legacy_paths:
+            if legacy_path in text:
+                violations.append(
+                    "legacy alias referenced outside allowed provenance docs: "
+                    f"{legacy_path} in {rel_path}"
+                )
+    return violations
 
 
 def validate_paper_corpus(
@@ -153,5 +204,7 @@ def validate_paper_corpus(
             "duplicate PDF groups differ from registry: "
             f"registered={registered_duplicates} actual={actual_duplicates}"
         )
+
+    errors.extend(collect_legacy_reference_violations(registry, repo_root))
 
     return errors

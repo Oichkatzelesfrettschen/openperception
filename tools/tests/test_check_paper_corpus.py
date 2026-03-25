@@ -4,7 +4,11 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from paper_corpus import validate_paper_corpus
+from paper_corpus import (
+    ALLOWED_LEGACY_REFERENCE_DOCS,
+    collect_legacy_reference_violations,
+    validate_paper_corpus,
+)
 
 
 MINIMAL_PDF = b"%PDF-1.4\n1 0 obj\n<<>>\nendobj\ntrailer\n<<>>\n%%EOF\n"
@@ -13,6 +17,40 @@ MINIMAL_PDF = b"%PDF-1.4\n1 0 obj\n<<>>\nendobj\ntrailer\n<<>>\n%%EOF\n"
 def write_registry(path: Path, payload: dict) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+
+
+def minimal_registry() -> dict:
+    return {
+        "sources": [
+            {
+                "id": "source_one",
+                "artifacts": ["papers/downloads/topic/one.pdf"],
+            }
+        ],
+        "legacy_aliases": [
+            {
+                "legacy_path": "research/topic/old.pdf",
+                "canonical_artifacts": ["papers/downloads/topic/one.pdf"],
+            }
+        ],
+        "duplicate_groups": [],
+        "files": [
+            {
+                "path": "papers/downloads/topic/one.pdf",
+                "sha256": "b3ec0ca7710d1025ee7ac7994d83b2ddbc200e5543df1066717d7124faf71d8f",
+                "size_bytes": len(MINIMAL_PDF),
+            }
+        ],
+    }
+
+
+def seed_minimal_repo(repo_root: Path) -> Path:
+    artifact = repo_root / "papers" / "downloads" / "topic" / "one.pdf"
+    artifact.parent.mkdir(parents=True, exist_ok=True)
+    artifact.write_bytes(MINIMAL_PDF)
+    registry_path = repo_root / "papers" / "downloads" / "CANONICAL_REGISTRY.json"
+    write_registry(registry_path, minimal_registry())
+    return registry_path
 
 
 def test_validate_paper_corpus_accepts_seeded_registry() -> None:
@@ -65,26 +103,10 @@ def test_validate_paper_corpus_rejects_unregistered_duplicate_group(
     digest = (
         "b3ec0ca7710d1025ee7ac7994d83b2ddbc200e5543df1066717d7124faf71d8f"
     )
-    write_registry(
-        registry_path,
-        {
-            "sources": [
-                {
-                    "id": "source_one",
-                    "artifacts": ["papers/downloads/topic/one.pdf"],
-                }
-            ],
-            "legacy_aliases": [],
-            "duplicate_groups": [],
-            "files": [
-                {
-                    "path": "papers/downloads/topic/one.pdf",
-                    "sha256": digest,
-                    "size_bytes": len(MINIMAL_PDF),
-                }
-            ],
-        },
-    )
+    payload = minimal_registry()
+    payload["legacy_aliases"] = []
+    payload["files"][0]["sha256"] = digest
+    write_registry(registry_path, payload)
 
     errors = validate_paper_corpus(registry_path, repo_root=repo_root)
 
@@ -103,38 +125,45 @@ def test_validate_paper_corpus_rejects_lingering_legacy_path(tmp_path: Path) -> 
     digest = (
         "b3ec0ca7710d1025ee7ac7994d83b2ddbc200e5543df1066717d7124faf71d8f"
     )
-    write_registry(
-        registry_path,
+    payload = minimal_registry()
+    payload["duplicate_groups"] = [
         {
-            "sources": [
-                {
-                    "id": "source_one",
-                    "artifacts": ["papers/downloads/topic/one.pdf"],
-                }
-            ],
-            "legacy_aliases": [
-                {
-                    "legacy_path": "research/topic/old.pdf",
-                    "canonical_artifacts": ["papers/downloads/topic/one.pdf"],
-                }
-            ],
-            "duplicate_groups": [
-                {
-                    "id": "documented_dup",
-                    "canonical_path": "papers/downloads/topic/one.pdf",
-                    "alias_paths": ["research/topic/old.pdf"],
-                }
-            ],
-            "files": [
-                {
-                    "path": "papers/downloads/topic/one.pdf",
-                    "sha256": digest,
-                    "size_bytes": len(MINIMAL_PDF),
-                }
-            ],
-        },
-    )
+            "id": "documented_dup",
+            "canonical_path": "papers/downloads/topic/one.pdf",
+            "alias_paths": ["research/topic/old.pdf"],
+        }
+    ]
+    payload["files"][0]["sha256"] = digest
+    write_registry(registry_path, payload)
 
     errors = validate_paper_corpus(registry_path, repo_root=repo_root)
 
     assert any("legacy path still exists" in error for error in errors)
+
+
+def test_collect_legacy_reference_violations_rejects_stale_markdown_reference(
+    tmp_path: Path,
+) -> None:
+    registry_path = seed_minimal_repo(tmp_path)
+    (tmp_path / "README.md").write_text(
+        "Stale reference: research/topic/old.pdf\n",
+        encoding="utf-8",
+    )
+
+    errors = validate_paper_corpus(registry_path, repo_root=tmp_path)
+
+    assert any("legacy alias referenced outside allowed provenance docs" in error for error in errors)
+
+
+def test_collect_legacy_reference_violations_allows_provenance_docs(
+    tmp_path: Path,
+) -> None:
+    registry_path = seed_minimal_repo(tmp_path)
+    for rel_path in ALLOWED_LEGACY_REFERENCE_DOCS:
+        path = tmp_path / rel_path
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text("Documented alias: research/topic/old.pdf\n", encoding="utf-8")
+
+    registry = json.loads(registry_path.read_text(encoding="utf-8"))
+
+    assert collect_legacy_reference_violations(registry, tmp_path) == []
