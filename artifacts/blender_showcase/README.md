@@ -35,6 +35,9 @@ The current canonical render path prefers Octane inside Octane Blender, with
 Eevee Next or Cycles used only as honest fallbacks when the live session does
 not expose Octane.
 
+The Octane path uses Octane-native area lights and materials so the canonical
+render stays truthful instead of slipping into black or washed-out passes.
+
 Regeneration path:
 
 1. `python3 tools/palette_showcase_spec.py --output artifacts/blender_showcase/openperception_palette_showcase_spec.json`

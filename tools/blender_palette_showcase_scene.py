@@ -58,6 +58,11 @@ def _hex_to_rgba(hex_code: str, alpha: float = 1.0) -> tuple[float, float, float
     return (*linear, alpha)
 
 
+def _hex_to_rgb(hex_code: str) -> tuple[float, float, float]:
+    red, green, blue, _alpha = _hex_to_rgba(hex_code)
+    return (red, green, blue)
+
+
 def _clear_scene(bpy) -> None:
     for obj in list(bpy.data.objects):
         bpy.data.objects.remove(obj, do_unlink=True)
@@ -82,10 +87,17 @@ def _ensure_material(bpy, name: str, hex_code: str, roughness: float = 0.42):
     links = material.node_tree.links
     nodes.clear()
     output = nodes.new("ShaderNodeOutputMaterial")
-    bsdf = nodes.new("ShaderNodeBsdfPrincipled")
-    bsdf.inputs["Base Color"].default_value = _hex_to_rgba(hex_code)
-    bsdf.inputs["Roughness"].default_value = roughness
-    links.new(bsdf.outputs["BSDF"], output.inputs["Surface"])
+    if bpy.context.scene.render.engine == "octane":
+        shader = nodes.new("OctaneUniversalMaterial")
+        shader.inputs["Albedo"].default_value = _hex_to_rgb(hex_code)
+        shader.inputs["Roughness"].default_value = roughness
+        shader.inputs["Specular"].default_value = 0.04
+        links.new(shader.outputs[0], output.inputs["Surface"])
+    else:
+        shader = nodes.new("ShaderNodeBsdfPrincipled")
+        shader.inputs["Base Color"].default_value = _hex_to_rgba(hex_code)
+        shader.inputs["Roughness"].default_value = roughness
+        links.new(shader.outputs["BSDF"], output.inputs["Surface"])
     return material
 
 
@@ -157,6 +169,25 @@ def _add_depth_strip(bpy, name: str, location, scale, material):
     )
 
 
+def _add_area_light(bpy, scene, name: str, location, rotation, energy: float, size_x: float, size_y: float):
+    if scene.render.engine == "octane":
+        bpy.ops.octane.quick_add_octane_area_light()
+        light = bpy.context.active_object
+        light.name = name
+        light.data.name = name
+    else:
+        light_data = bpy.data.lights.new(name=name, type="AREA")
+        light = bpy.data.objects.new(name, light_data)
+        scene.collection.objects.link(light)
+    light.data.energy = energy
+    light.data.shape = "RECTANGLE"
+    light.data.size = size_x
+    light.data.size_y = size_y
+    light.location = location
+    light.rotation_euler = rotation
+    return light
+
+
 def _select_render_engine(scene, preferred: str) -> str:
     eevee_engine = "BLENDER_EEVEE_NEXT"
 
@@ -185,7 +216,7 @@ def _select_render_engine(scene, preferred: str) -> str:
 
 def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
     scene = bpy.context.scene
-    _select_render_engine(scene, render_engine)
+    selected_engine = _select_render_engine(scene, render_engine)
     scene.render.resolution_x = 1800
     scene.render.resolution_y = 1200
     scene.render.film_transparent = False
@@ -228,8 +259,8 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
     _add_box(
         bpy,
         "BackdropWall",
-        location=(0.0, 2.7, 1.4),
-        scale=(8.8, 0.08, 1.55),
+        location=(0.0, 2.55, 1.28),
+        scale=(8.8, 0.08, 1.4),
         material=wall_mat,
         bevel=0.02,
     )
@@ -250,29 +281,32 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
     camera = bpy.data.objects.new("PaletteCamera", camera_data)
     scene.collection.objects.link(camera)
     scene.camera = camera
-    camera.location = (0.0, -13.0, 6.6)
-    camera.rotation_euler = (math.radians(66.0), 0.0, 0.0)
-    camera.data.lens = 38
+    camera.location = (0.0, -11.6, 5.95)
+    camera.rotation_euler = (math.radians(62.0), 0.0, 0.0)
+    camera.data.lens = 42
 
-    key_light_data = bpy.data.lights.new(name="KeyLight", type="AREA")
-    key_light_data.energy = 2200
-    key_light_data.shape = "RECTANGLE"
-    key_light_data.size = 8
-    key_light_data.size_y = 8
-    key_light = bpy.data.objects.new("KeyLight", key_light_data)
-    scene.collection.objects.link(key_light)
-    key_light.location = (0.0, -6.0, 9.5)
-    key_light.rotation_euler = (math.radians(55.0), 0.0, 0.0)
-
-    rim_light_data = bpy.data.lights.new(name="RimLight", type="AREA")
-    rim_light_data.energy = 900
-    rim_light_data.shape = "RECTANGLE"
-    rim_light_data.size = 6
-    rim_light_data.size_y = 6
-    rim_light = bpy.data.objects.new("RimLight", rim_light_data)
-    scene.collection.objects.link(rim_light)
-    rim_light.location = (0.0, 4.8, 5.6)
-    rim_light.rotation_euler = (math.radians(-115.0), 0.0, 0.0)
+    key_energy = 220.0 if selected_engine == "octane" else 2400.0
+    rim_energy = 55.0 if selected_engine == "octane" else 950.0
+    _add_area_light(
+        bpy,
+        scene,
+        "KeyLight",
+        location=(-1.6, -5.2, 8.9),
+        rotation=(math.radians(57.0), math.radians(9.0), math.radians(-7.0)),
+        energy=key_energy,
+        size_x=8.0,
+        size_y=8.0,
+    )
+    _add_area_light(
+        bpy,
+        scene,
+        "RimLight",
+        location=(-0.6, 4.55, 5.4),
+        rotation=(math.radians(-116.0), math.radians(3.0), math.radians(6.0)),
+        energy=rim_energy,
+        size_x=6.0,
+        size_y=6.0,
+    )
 
     lane_spacing = 4.6
     start_x = -lane_spacing
@@ -402,32 +436,32 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
         bpy,
         "ShowcaseHeader",
         "OpenPerception Palette And Depth Showcase",
-        location=(0.0, 3.62, 0.72),
-        scale=(0.3, 0.3, 0.3),
+        location=(0.0, 2.18, 0.72),
+        scale=(0.34, 0.34, 0.34),
         material=text_dark,
     )
     _add_text(
         bpy,
         "ShowcaseSubheader",
         "production | accessibility-first | warm lane | shared depth",
-        location=(0.0, 3.18, 0.5),
-        scale=(0.14, 0.14, 0.14),
+        location=(0.0, 1.82, 0.54),
+        scale=(0.16, 0.16, 0.16),
         material=neutral_dark,
     )
     _add_text(
         bpy,
         "DepthPrinciple",
         "Static cues first: occlusion | scale | shadows | ground plane | labels",
-        location=(0.0, 2.78, 0.36),
-        scale=(0.112, 0.112, 0.112),
+        location=(0.0, 1.5, 0.44),
+        scale=(0.124, 0.124, 0.124),
         material=neutral_dark,
     )
     _add_text(
         bpy,
         "DepthStereoRole",
         "Stereo enriches, motion reinforces, essential meaning stays readable without stereopsis",
-        location=(0.0, 2.45, 0.26),
-        scale=(0.092, 0.092, 0.092),
+        location=(0.0, 1.2, 0.33),
+        scale=(0.102, 0.102, 0.102),
         material=neutral_dark,
     )
 
