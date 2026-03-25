@@ -15,6 +15,31 @@ from pathlib import Path
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
+DEPTH_ACCOMMODATION = {
+    "principle": "Shared depth meaning through static monocular cues first.",
+    "stereo_role": "Stereo enriches the scene but is not required for comprehension.",
+    "motion_role": "Motion parallax reinforces depth but is not the only recovery path.",
+    "static_cues": [
+        "occlusion",
+        "relative_size",
+        "contact_shadows",
+        "ground_plane_anchoring",
+        "labels",
+    ],
+    "source": str(
+        (
+            REPO_ROOT / "docs" / "harmonized-depth-accommodation-guide.md"
+        ).relative_to(REPO_ROOT)
+    ),
+}
+RENDER_PREFERENCE = {
+    "preferred_engine": "octane",
+    "fallback_order": ["BLENDER_EEVEE_NEXT", "CYCLES"],
+    "reason": (
+        "Use Octane in Octane Blender when available for the canonical showcase "
+        "artifact; fall back only when the live session does not expose it."
+    ),
+}
 TOKEN_SOURCES = (
     (
         "production-indigo-magenta",
@@ -93,6 +118,8 @@ def build_showcase_spec() -> dict:
             "Three-lane palette showcase for production, accessibility-first, "
             "and axiomatic warm-atmosphere perceptual schemes."
         ),
+        "render_preference": RENDER_PREFERENCE,
+        "depth_accommodation": DEPTH_ACCOMMODATION,
         "lanes": [
             _build_lane(scheme_id, label, path, description)
             for scheme_id, label, path, description in TOKEN_SOURCES

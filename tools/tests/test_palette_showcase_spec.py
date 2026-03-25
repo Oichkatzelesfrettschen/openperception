@@ -12,6 +12,10 @@ def test_showcase_spec_has_expected_lane_ids() -> None:
     payload = build_showcase_spec()
 
     assert payload["scene_id"] == "openperception-palette-showcase"
+    assert payload["render_preference"]["preferred_engine"] == "octane"
+    assert payload["depth_accommodation"]["stereo_role"] == (
+        "Stereo enriches the scene but is not required for comprehension."
+    )
     assert [lane["scheme_id"] for lane in payload["lanes"]] == [
         "production-indigo-magenta",
         "accessible-mauve-burgundy",

@@ -1,6 +1,27 @@
 {
   "scene_id": "openperception-palette-showcase",
   "summary": "Three-lane palette showcase for production, accessibility-first, and axiomatic warm-atmosphere perceptual schemes.",
+  "render_preference": {
+    "preferred_engine": "octane",
+    "fallback_order": [
+      "BLENDER_EEVEE_NEXT",
+      "CYCLES"
+    ],
+    "reason": "Use Octane in Octane Blender when available for the canonical showcase artifact; fall back only when the live session does not expose it."
+  },
+  "depth_accommodation": {
+    "principle": "Shared depth meaning through static monocular cues first.",
+    "stereo_role": "Stereo enriches the scene but is not required for comprehension.",
+    "motion_role": "Motion parallax reinforces depth but is not the only recovery path.",
+    "static_cues": [
+      "occlusion",
+      "relative_size",
+      "contact_shadows",
+      "ground_plane_anchoring",
+      "labels"
+    ],
+    "source": "docs/harmonized-depth-accommodation-guide.md"
+  },
   "lanes": [
     {
       "scheme_id": "production-indigo-magenta",

@@ -15,6 +15,8 @@ def test_parse_args_reads_required_paths() -> None:
             "artifacts/blender_showcase/showcase.json",
             "--output",
             "artifacts/blender_showcase/showcase.png",
+            "--engine",
+            "octane",
             "--blend-output",
             "artifacts/blender_showcase/showcase.blend",
         ]
@@ -22,6 +24,7 @@ def test_parse_args_reads_required_paths() -> None:
 
     assert args.spec == "artifacts/blender_showcase/showcase.json"
     assert args.output == "artifacts/blender_showcase/showcase.png"
+    assert args.engine == "octane"
     assert args.blend_output == "artifacts/blender_showcase/showcase.blend"
 
 

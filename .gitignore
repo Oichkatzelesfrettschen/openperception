@@ -219,6 +219,9 @@ _build/
 logs/*.log
 *.log
 
+# Blender backups
+*.blend1
+
 # Database files (SQLite)
 *.db
 *.sqlite
