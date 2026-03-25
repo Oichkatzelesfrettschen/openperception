@@ -6,6 +6,23 @@
 
 ---
 
+## Support Mode Map
+
+This compendium now sits beside a more explicit repo taxonomy that separates:
+
+- simulation and preview
+- static recoloring and daltonization
+- interactive recognition aids
+- reconstructive or speculative color-vision modeling
+
+Use these companion docs when reading the papers below:
+
+- [Color support accommodation taxonomy](/home/eirikr/Github/openperception/docs/color-support-accommodation-taxonomy.md)
+- [CVD research report](/home/eirikr/Github/openperception/research/colorblindness/CVD_RESEARCH_REPORT.md)
+- [Algorithm comparison guide](/home/eirikr/Github/openperception/research/colorblindness/algorithms/ALGORITHM_COMPARISON.md)
+
+---
+
 ## Table of Contents
 1. [Recent Papers (2023-2025)](#recent-papers-2023-2025)
 2. [Foundational/Seminal Papers](#foundationalseminal-papers)
@@ -323,7 +340,7 @@
 - **DOI:** 10.1145/3654777.3676415
 - **Canonical Local Cache:** `papers/downloads/color_vision/Zhu_2024_Computational_Trichromacy_Reconstruction_AR.pdf`
 - **Access:** Open Access
-- **Description:** AR-based approach using rotational color shifts to help dichromats distinguish initially confusing colors.
+- **Description:** AR-based approach using rotational color shifts to help dichromats recover color identity in context. Repo framing: this is better treated as an interactive recognition-aid paper than as a standard recoloring paper because it targets color naming, not only pairwise discrimination.
 
 **40. Color Vision Deficiency Recognition Based on Eye-Tracking Metrics Using Machine Learning Approaches**
 - **Year:** 2024
@@ -337,6 +354,14 @@
 - **arXiv:** https://arxiv.org/abs/2402.04762
 - **Access:** Open Access
 - **Description:** CNN-based color detection method with edge detection segmentation, enhancing robustness in various lighting conditions.
+
+Additional repo-local conceptual anchor:
+
+- `papers/downloads/color_vision/Kotani_2025_Color_Vision_Emergence_Framework.pdf`
+  broadens the restoration and enhancement frame by modeling color vision as an
+  emergent cortical representation rather than a fixed trichromatic endpoint.
+  Repo framing: use this as reconstructive or speculative grounding, not as a
+  default product accommodation recipe.
 
 ---
 

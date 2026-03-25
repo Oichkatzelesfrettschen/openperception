@@ -1,5 +1,11 @@
 # Comprehensive Compendium of Colorblindness Simulation and Correction Algorithms
 
+Support-mode companion docs:
+
+- [Color support accommodation taxonomy](/home/eirikr/Github/openperception/docs/color-support-accommodation-taxonomy.md)
+- [Algorithm comparison guide](/home/eirikr/Github/openperception/research/colorblindness/algorithms/ALGORITHM_COMPARISON.md)
+- [CVD research report](/home/eirikr/Github/openperception/research/colorblindness/CVD_RESEARCH_REPORT.md)
+
 ## Table of Contents
 1. [Color Vision Simulation Algorithms](#1-color-vision-simulation-algorithms)
 2. [Daltonization and Color Correction Algorithms](#2-daltonization-and-color-correction-algorithms)
@@ -562,6 +568,13 @@ When citing colorblindness simulation algorithms:
 4. **For daltonization:** Cite Fidaner, Lin, & Ozguven (2005) and Kuhn, Oliveira, & Fernandes (2008)
 5. **For cone fundamentals:** Cite Smith & Pokorny (1975) or Stockman & Sharpe (2000) depending on application
 
+Repo framing note:
+
+- Simulation papers are the validation backbone.
+- Daltonization papers are intervention papers with tradeoffs.
+- Recognition-aid and reconstructive papers are adjacent but distinct lanes,
+  and should not be collapsed into the same evidence claim.
+
 ---
 
 ## 2025-2026 Additions
@@ -613,6 +626,31 @@ Diagnosed student surveys confirm <20% to full visibility improvement.
 **Key Finding**: Transformer-based recoloring with learned loss functions for naturalness
 and contrast. Unsupervised training.
 
+### Interactive Recognition Aid (2024)
+
+**Title**: "Computational Trichromacy Reconstruction: Empowering the
+Color-Vision Deficient to Recognize Colors Using Augmented Reality"
+**Conference**: UIST 2024
+**DOI**: 10.1145/3654777.3676415
+**Canonical Local Cache**:
+`papers/downloads/color_vision/Zhu_2024_Computational_Trichromacy_Reconstruction_AR.pdf`
+**Key Finding**: Uses temporal color shifts in AR to add a learnable cue for
+color naming and contextual identification, not just patch discrimination.
+**Relevance**: Best treated as an interactive recognition-aid paper rather than
+as another static recoloring algorithm.
+
+### Reconstructive Modeling (2025)
+
+**Title**: "A Computational Framework for Modeling Emergence of Color Vision in
+the Human Brain"
+**Venue**: ICLR 2025
+**Canonical Local Cache**:
+`papers/downloads/color_vision/Kotani_2025_Color_Vision_Emergence_Framework.pdf`
+**Key Finding**: Models color as an emergent N-dimensional cortical
+representation derived from optic-nerve signals.
+**Relevance**: Useful for restoration and enhancement framing, but not a direct
+shipping accessibility algorithm.
+
 ---
 
 ## See Also
@@ -622,10 +660,11 @@ Related compendiums in this repository:
 - `papers/COLORBLINDNESS_ACADEMIC_PAPERS.md` -- Epidemiology, genetics, clinical research, and gene therapy for CVD
 - `papers/achromatopsia_bcm_research_compendium.md` -- Achromatopsia and blue cone monochromacy (total/rod monochromacy)
 - `papers/cognitive_load_visual_processing_papers.md` -- Cognitive load in visual interfaces; working memory capacity
+- `docs/color-support-accommodation-taxonomy.md` -- Separation between simulation, daltonization, recognition aids, and reconstructive models
 - `specs/EVIDENCE_MATRIX.md` -- Claims matrix citing Brettel, Vienot, and Machado algorithms (CLM-0020 through CLM-0023)
 
 ---
 
 *Compiled: 2025-12-27*
-*Updated: 2026-03-19 (added 2025-2026 simulation accuracy, daltonization, and ML papers)*
+*Updated: 2026-03-25 (aligned compendium framing with color-support taxonomy and added recognition/reconstruction complements)*
 *For: Colorblindness Research Compendium*
