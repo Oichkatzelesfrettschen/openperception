@@ -2,7 +2,7 @@
 
 **Repository:** OpenPerception (see repository root)
 **Compiled:** March 25, 2026
-**Total PDFs:** 38 (in `papers/downloads/` -- for research use only; see DOI/URL links for official access)
+**Total PDFs:** 41 (in `papers/downloads/` -- for research use only; see DOI/URL links for official access)
 **Total Compendiums:** 35 markdown files
 
 ---
@@ -149,7 +149,7 @@ Applied documentation:
 | `docs/external_sources/research_pdf_migration_inventory.md` | Remaining research-local PDF inventory and migration buckets |
 | `docs/external_sources/neurodivergence_source_cache.md` | Cached ADHD, autism, and dyslexia source index |
 | `docs/external_sources/seizure_source_cache.md` | Cached seizure-source index |
-| `docs/external_sources/vision_clinical_source_cache.md` | Cached BCM and nystagmus source index |
+| `docs/external_sources/vision_clinical_source_cache.md` | Cached BCM, contrast, low-vision, nystagmus, and visual-field-loss source index |
 
 #### Repaired Source Notes
 | File | Description |
@@ -163,7 +163,7 @@ Applied documentation:
 
 Located in `/research/` subdirectories:
 - Canonical source-cache paths for algorithm and cognitive-load papers now live under `papers/downloads/`; see `docs/external_sources/paper_corpus_registry.md`
-- 8 research-local PDFs remain; see `docs/external_sources/research_pdf_migration_inventory.md`
+- 5 research-local PDFs remain; see `docs/external_sources/research_pdf_migration_inventory.md`
 
 ---
 

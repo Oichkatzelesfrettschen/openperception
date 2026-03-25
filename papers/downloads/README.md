@@ -22,11 +22,14 @@ the repo. Keep filenames stable and ASCII-only.
 - `autism/`
 - `blue_cone_monochromacy/`
 - `cognitive_load/`
+- `contrast_sensitivity/`
 - `colorblindness/`
 - `dyslexia/`
+- `low_vision/`
 - `nystagmus/`
 - `seizures/`
 - `stereoblindness/`
+- `visual_field_loss/`
 
 Tracking files:
 
