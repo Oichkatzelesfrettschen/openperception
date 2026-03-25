@@ -323,37 +323,49 @@ Each claim follows this structure:
 | Field | Value |
 |-------|-------|
 | ID | CLM-0050 |
-| Statement | 5-10% of population has some degree of stereoblindness |
+| Statement | Best-evidence synthesis converges on about 7% stereoblindness prevalence in adults under 60 |
 | Axis | depth |
 | Constraint | observational |
-| Threshold | 5-10% |
+| Threshold | ~7% median prevalence |
 | Evidence | clinical |
-| Source | Stereoblindness Research Report |
+| Source | Chopin, Bavelier, Levi (2019), Ophthalmic Physiol Opt |
 
 ### INV-009: Monocular Cue Sufficiency
 | Field | Value |
 |-------|-------|
 | ID | CLM-0051 |
-| Statement | Essential depth info must be available through monocular cues |
+| Statement | Essential depth info must be available through static monocular cues; stereo may enrich but not gate completion |
 | Axis | depth |
 | UI Primitive | depth, navigation |
 | Constraint | hard_safety |
-| Threshold | Occlusion + size + perspective available |
+| Threshold | Occlusion or order cue + size or perspective cue + edge or lighting cue |
 | Evidence | standard |
-| Source | Xbox XAGs, AR depth cue research |
-| Notes | If removing stereo breaks mechanic, it's not merged yet |
+| Source | Frontiers XR inclusivity perspective (2022); Microsoft XAG 103 |
+| Notes | Pladere et al. explicitly recommend increasing monocular cue saliency or offering a 2D mode; if stereo-off or motion-reduced paths break the mechanic, the design is not merged yet |
 
 ### CLM-0052: Monocular Depth Cues
 | Field | Value |
 |-------|-------|
 | ID | CLM-0052 |
-| Statement | Occlusion, relative size, motion parallax, perspective, shading are sufficient for most tasks |
+| Statement | Texture, occlusion, relative size, perspective, shading, and motion parallax provide usable depth information for users without stereopsis |
 | Axis | depth |
 | UI Primitive | depth |
 | Constraint | soft_comfort |
 | Evidence | controlled_study |
-| Source | Szafir AR Depth Cue Research |
-| Notes | VR depth training can improve stereo perception |
+| Source | Wang and Saunders (2022); Nadler et al. (2016) |
+| Notes | Wang and Saunders found comparable texture-based slant performance under monocular conditions; motion parallax is helpful, but it must reinforce rather than replace static cues |
+
+### CLM-0053: Reduced-Motion Depth Preservation
+| Field | Value |
+|-------|-------|
+| ID | CLM-0053 |
+| Statement | Motion-based depth cues should reinforce, not replace, static cues because reduced-motion paths must preserve the same scene meaning |
+| Axis | depth |
+| UI Primitive | depth, feedback |
+| Constraint | soft_comfort |
+| Evidence | review_plus_standard |
+| Source | Nadler et al. (2016); Microsoft XAG 117 |
+| Notes | Nadler et al. treat motion parallax as a powerful and sufficient cue, but it is movement-dependent; if depth only "works" while the camera moves, the scene is underspecified |
 
 ---
 

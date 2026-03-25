@@ -1,0 +1,41 @@
+1. Ophthalmic Physiol Opt. 2019 Mar;39(2):66-85. doi: 10.1111/opo.12607.
+
+The prevalence and diagnosis of 'stereoblindness' in adults less than 60 years
+of age: a best evidence synthesis.
+
+Chopin A(1)(2), Bavelier D(1)(2), Levi DM(3).
+
+Author information:
+(1)Faculte de Psychologie et Sciences de l'Education, University of Geneva,
+Geneva, Switzerland.
+(2)Campus Biotech, Geneva, Switzerland.
+(3)School of Optometry, University of California, Berkeley, USA.
+
+PURPOSE: Stereoscopic vision (or stereopsis) is the ability to perceive depth
+from binocular disparity - the difference of viewpoints between the two eyes.
+Interestingly, there are large individual differences as to how well one can
+appreciate depth from such a cue. The total absence of stereoscopic vision,
+called 'stereoblindness', has been associated with negative behavioural outcomes
+such as poor distance estimation. Surprisingly, the prevalence of
+stereoblindness remains unclear, as it appears highly dependent on the way in
+which stereopsis is measured.
+RECENT FINDINGS: This review highlights the fact that stereopsis is not a
+unitary construct, but rather implies different systems. The optimal conditions
+for measuring these varieties of stereoscopic information processing are
+discussed given the goal of detecting stereoblindness, using either
+psychophysical or clinical stereotests. In that light, we then discuss the
+estimates of stereoblindness prevalence of past studies.
+SUMMARY: We identify four different approaches that all converge toward a
+prevalence of stereoblindness of 7% (median approach: 7%;
+unambiguous-stereoblindness-criteria approach: 7%; visual-defect-included
+approach: 7%; multiple-criteria approach: 7%). We note that these estimates were
+derived considering adults of age <60 years old. Older adults may have a higher
+prevalence. Finally, we make recommendations for a new ecological definition of
+stereoblindness and for efficient clinical methods for determining
+stereoblindness by adapting existing tools.
+
+© 2019 The Authors Ophthalmic & Physiological Optics © 2019 The College of
+Optometrists.
+
+DOI: 10.1111/opo.12607
+PMID: 30776852 [Indexed for MEDLINE]

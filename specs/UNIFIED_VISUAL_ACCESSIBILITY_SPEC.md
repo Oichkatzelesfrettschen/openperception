@@ -153,7 +153,7 @@ Every research domain maps to one or more axes. Every feature must pass through 
 | **Luminance** | Low vision, contrast sensitivity, photophobia | Text/UI unreadable or painful | Contrast budgets + theme dials + outlines |
 | **Spatial** | Low acuity, field loss, dyslexia/crowding | Too small, too dense, too similar | Scaling + spacing rules + HUD layout modes |
 | **Temporal** | PSE, motion sensitivity, attention capture | Flicker, strobe, aggressive motion | Flash invariants + reduced-motion + governor |
-| **Depth** | Stereoblindness, some low vision | Gameplay requires stereo | Monocular cues (occlusion, size, outlines) |
+| **Depth** | Stereoblindness, some low vision | Essential spatial meaning disappears without stereo or motion | Static monocular cues first, optional stereo and multisensory reinforcement |
 | **Cognitive** | ADHD, autism variability, cognitive load | Overload, distraction, unclear priorities | Priority grammar + progressive disclosure |
 
 ### Axis Constraint Table
@@ -181,7 +181,7 @@ TEMPORAL_AXIS:
   validator: PEAT_flash_check, EA_IRIS
 
 DEPTH_AXIS:
-  floor: "stereo not required for essential info"
+  floor: "essential depth readable without stereopsis and without motion-only dependence"
   dial: "depth_cues" {all, monocular_only}
   validator: monocular_cue_audit
 
@@ -207,7 +207,7 @@ COGNITIVE_AXIS:
 | INV-006 | UI component contrast floor | >= 3:1 | WCAG 1.4.11 |
 | INV-007 | Non-color semantic encoding | Every role has shape/pattern/label | WCAG 1.4.1 |
 | INV-008 | Touch target minimum | >= 44x44 CSS px | WCAG 2.5.5 |
-| INV-009 | Stereo independence | Essential info has monocular cues | XAG, research |
+| INV-009 | Stereo independence | Essential info has static monocular cues and stereo is optional | XAG 103, depth research |
 | INV-010 | Cognitive function auth bypass | No memory/puzzle required for login | WCAG 3.3.8 |
 
 ### Dials (User-Tunable, Bounded)
@@ -428,16 +428,29 @@ claim:
 
 # STEREOBLINDNESS
 - id: CLM-0050
-  statement: "5-10% of population has some degree of stereoblindness"
+  statement: "Best-evidence synthesis converges on about 7% stereoblindness prevalence in adults under 60"
   applies_to:
     channel: depth
     axis: depth
   evidence_weight: clinical
   source:
-    citation: "Stereoblindness Research Report"
+    citation: "Chopin, Bavelier, Levi (2019)"
+    url: "https://pubmed.ncbi.nlm.nih.gov/30776852/"
 
 - id: CLM-0051
-  statement: "Monocular depth cues (occlusion, size, perspective) sufficient for most tasks"
+  statement: "Essential depth information must remain interpretable through static monocular cues even when stereo is unavailable"
+  applies_to:
+    channel: depth
+    axis: depth
+  ui_primitive: [depth, navigation]
+  constraint_type: hard_safety
+  evidence_weight: controlled_study
+  source:
+    citation: "Pladere et al. (2022); Microsoft XAG 103"
+    url: "https://www.frontiersin.org/journals/virtual-reality/articles/10.3389/frvir.2022.1006021/full"
+
+- id: CLM-0052
+  statement: "Texture, occlusion, relative size, perspective, shading, and motion parallax provide usable depth information for users without stereopsis"
   applies_to:
     channel: depth
     axis: depth
@@ -445,7 +458,20 @@ claim:
   constraint_type: soft_comfort
   evidence_weight: controlled_study
   source:
-    citation: "Szafir AR Depth Cue Research"
+    citation: "Wang and Saunders (2022); Nadler et al. (2016)"
+    url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC9012895/"
+
+- id: CLM-0053
+  statement: "Motion-based depth cues should reinforce, not replace, static cues, because reduced-motion paths must preserve the same scene meaning"
+  applies_to:
+    channel: depth
+    axis: depth
+  ui_primitive: [depth, feedback]
+  constraint_type: soft_comfort
+  evidence_weight: standard_plus_review
+  source:
+    citation: "Nadler et al. (2016); Microsoft XAG 117"
+    url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC4901450/"
 ```
 
 ---
@@ -610,9 +636,11 @@ validators:
   # DEPTH AXIS
   monocular-cue-audit:
     checks:
-      - essential_depth_info_has_occlusion_cue
-      - essential_depth_info_has_size_cue
-      - essential_depth_info_has_outline_cue
+      - essential_depth_info_has_static_monocular_cue
+      - essential_depth_info_has_occlusion_or_order_cue
+      - essential_depth_info_has_size_or_perspective_cue
+      - essential_depth_info_has_outline_or_lighting_cue
+      - reduced_motion_preserves_depth_meaning
     severity: WARNING
     run_on: [3d-scene, gameplay-mechanic]
 

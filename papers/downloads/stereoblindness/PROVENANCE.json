@@ -1,0 +1,120 @@
+{
+  "topic": "stereoblindness_depth",
+  "generated_on": "2026-03-25",
+  "sources": [
+    {
+      "id": "chopin_2019",
+      "title": "The prevalence and diagnosis of 'stereoblindness' in adults less than 60 years of age: a best evidence synthesis",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30776852/",
+      "artifacts": [
+        "papers/downloads/stereoblindness/Chopin_Bavelier_Levi_2019_Stereoblindness_Best_Evidence_Synthesis.pubmed.txt"
+      ],
+      "access": "abstract_only",
+      "notes": "PubMed abstract cached via NCBI E-utilities; full text not automatically retrieved in this environment."
+    },
+    {
+      "id": "wang_2022",
+      "title": "The experience of stereoblindness does not improve use of texture for slant perception",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9012895/",
+      "artifacts": [
+        "papers/downloads/stereoblindness/Wang_Saunders_2022_Texture_Slant_Stereoblindness.html",
+        "papers/downloads/stereoblindness/Wang_Saunders_2022_Texture_Slant_Stereoblindness.txt",
+        "papers/downloads/stereoblindness/Wang_Saunders_2022_Texture_Slant_Stereoblindness.pdf.trace.html"
+      ],
+      "access": "html_full_text",
+      "notes": "Full article HTML accessible; direct PDF fetch blocked by PMC proof-of-work page in this environment."
+    },
+    {
+      "id": "nadler_2016",
+      "title": "The neural basis of depth perception from motion parallax",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4901450/",
+      "artifacts": [
+        "papers/downloads/stereoblindness/Nadler_et_al_2016_Motion_Parallax_Depth_Review.html",
+        "papers/downloads/stereoblindness/Nadler_et_al_2016_Motion_Parallax_Depth_Review.txt",
+        "papers/downloads/stereoblindness/Nadler_et_al_2016_Motion_Parallax_Depth_Review.pdf.trace.html"
+      ],
+      "access": "html_full_text",
+      "notes": "Full article HTML accessible; direct PDF fetch blocked by PMC proof-of-work page in this environment."
+    },
+    {
+      "id": "pladere_2022",
+      "title": "Inclusivity in stereoscopic XR: Human vision first",
+      "url": "https://www.frontiersin.org/journals/virtual-reality/articles/10.3389/frvir.2022.1006021/full",
+      "artifacts": [
+        "papers/downloads/stereoblindness/Pladere_et_al_2022_Inclusivity_in_Stereoscopic_XR.pdf",
+        "papers/downloads/stereoblindness/Pladere_et_al_2022_Inclusivity_in_Stereoscopic_XR.html",
+        "papers/downloads/stereoblindness/Pladere_et_al_2022_Inclusivity_in_Stereoscopic_XR.txt"
+      ],
+      "access": "pdf_and_html",
+      "notes": "Open PDF and HTML both accessible."
+    }
+  ],
+  "files": [
+    {
+      "path": "papers/downloads/stereoblindness/Pladere_et_al_2022_Inclusivity_in_Stereoscopic_XR.html",
+      "sha256": "537d0fb4d22933f2ad0cddfa5183695b83d4eb4b70c66ede0d512842dbe36b3c",
+      "size_bytes": 602974,
+      "accessed_utc_date": "2026-03-25"
+    },
+    {
+      "path": "papers/downloads/stereoblindness/Pladere_et_al_2022_Inclusivity_in_Stereoscopic_XR.pdf",
+      "sha256": "98b6a1e9f4216426046739a1f92f69c8f718d7421954b65a0b6f7acc277ac8ec",
+      "size_bytes": 1332969,
+      "accessed_utc_date": "2026-03-25"
+    },
+    {
+      "path": "papers/downloads/stereoblindness/Pladere_et_al_2022_Inclusivity_in_Stereoscopic_XR.txt",
+      "sha256": "81064c5bb75a1c63fb46ef6def74a2484bbd37ea4f5cbbc141a05b0c50d00ae5",
+      "size_bytes": 44412,
+      "accessed_utc_date": "2026-03-25"
+    },
+    {
+      "path": "papers/downloads/stereoblindness/Chopin_Bavelier_Levi_2019_Stereoblindness_Best_Evidence_Synthesis.pubmed.txt",
+      "sha256": "ed10d104af367654075f808dc4c09f8bb4293d8b2b7a1cdb77672c690566f316",
+      "size_bytes": 2184,
+      "accessed_utc_date": "2026-03-25"
+    },
+    {
+      "path": "papers/downloads/stereoblindness/Nadler_et_al_2016_Motion_Parallax_Depth_Review.html",
+      "sha256": "216e4d753491f862b4d262190bb00df567d9bb82e160e51761cde95235f923a9",
+      "size_bytes": 234252,
+      "accessed_utc_date": "2026-03-25"
+    },
+    {
+      "path": "papers/downloads/stereoblindness/Nadler_et_al_2016_Motion_Parallax_Depth_Review.pdf.trace.html",
+      "sha256": "dbe0683013dc0b01c0074ec995555d37192e06d35f0d26faade525aac90119fb",
+      "size_bytes": 1817,
+      "accessed_utc_date": "2026-03-25"
+    },
+    {
+      "path": "papers/downloads/stereoblindness/Nadler_et_al_2016_Motion_Parallax_Depth_Review.txt",
+      "sha256": "049ee98c28ff01b245578d7caf50ff72adf4ddc39e3f013ab904fe9e0aa105a4",
+      "size_bytes": 63198,
+      "accessed_utc_date": "2026-03-25"
+    },
+    {
+      "path": "papers/downloads/stereoblindness/Stereoblindness_VR_Training.pdf",
+      "sha256": "cfcadcaffd8550cb7f9318842faad76c91da04cd03f7ca57ee37c1c53c4520e9",
+      "size_bytes": 10678557,
+      "accessed_utc_date": "2026-03-25"
+    },
+    {
+      "path": "papers/downloads/stereoblindness/Wang_Saunders_2022_Texture_Slant_Stereoblindness.html",
+      "sha256": "afd7b0fc42dca304a60f45de6a5ba1602ebde684708206c33271de261ca0eb9d",
+      "size_bytes": 219250,
+      "accessed_utc_date": "2026-03-25"
+    },
+    {
+      "path": "papers/downloads/stereoblindness/Wang_Saunders_2022_Texture_Slant_Stereoblindness.pdf.trace.html",
+      "sha256": "6e742b8f7eb61976c0fb2741433ed3e7bb9e4e7102c184dc23b09a9cb9ea4796",
+      "size_bytes": 1816,
+      "accessed_utc_date": "2026-03-25"
+    },
+    {
+      "path": "papers/downloads/stereoblindness/Wang_Saunders_2022_Texture_Slant_Stereoblindness.txt",
+      "sha256": "2a138ffd2832579c7f399f39395df49e984a2a22443b8acd33bbe79554e1edd5",
+      "size_bytes": 66967,
+      "accessed_utc_date": "2026-03-25"
+    }
+  ]
+}

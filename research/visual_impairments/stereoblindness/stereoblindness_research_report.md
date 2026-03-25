@@ -4,6 +4,12 @@
 
 This report synthesizes recent academic research (2020-2025) on stereoblindness, binocular vision disorders, and accessibility considerations for users with depth perception impairments. The findings are intended to inform accessibility guidelines for digital interfaces, VR/AR experiences, and 3D content.
 
+Repository note:
+
+- Cached source inventory: [docs/external_sources/stereoblindness_depth_sources.md](/home/eirikr/Github/openperception/docs/external_sources/stereoblindness_depth_sources.md)
+- Paper-by-paper extraction: [primary_source_notes.md](/home/eirikr/Github/openperception/research/visual_impairments/stereoblindness/primary_source_notes.md)
+- Distilled design guidance: [harmonized-depth-accommodation-guide.md](/home/eirikr/Github/openperception/docs/harmonized-depth-accommodation-guide.md)
+
 ---
 
 ## Table of Contents

@@ -1,0 +1,33 @@
+# Paper Downloads
+
+This directory is the repo's curated local paper cache.
+
+## Storage Policy
+
+- PDF papers in this tree are stored with Git LFS.
+- Bibliographies, provenance files, HTML captures, and text extracts stay in
+  normal Git for reviewability and grepability.
+- This directory is intentionally versioned even though the repo has a broad
+  `downloads/` ignore rule elsewhere.
+
+## Purpose
+
+Use this tree for cached primary sources that back claims, guides, and specs in
+the repo. Keep filenames stable and ASCII-only.
+
+## Layout
+
+- `adhd/`
+- `algorithms/`
+- `autism/`
+- `cognitive_load/`
+- `colorblindness/`
+- `seizures/`
+- `stereoblindness/`
+
+## Expectations
+
+- Add provenance for newly fetched sources when practical.
+- Prefer one deterministic filename per source.
+- Keep distilled summaries in markdown outside this cache, and use this tree as
+  the backing artifact store.

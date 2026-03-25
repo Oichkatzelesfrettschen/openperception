@@ -1,0 +1,1576 @@
+PERSPECTIVE article
+Front. Virtual Real.
+, 23 November 2022
+ Sec. Technologies for VR
+Volume 3 - 2022 |
+https://doi.org/10.3389/frvir.2022.1006021
+Inclusivity in stereoscopic XR: Human vision first
+T
+P
+Tatjana Pladere
+1
+*
+E
+S
+Ellen Svarverud
+2
+G
+K
+Gunta Krumina
+1
+S
+J
+Stuart J. Gilson
+2
+R
+C
+Rigmor C. Baraas
+2
+1.
+ Department of Optometry and Vision Science, Faculty of Physics, Mathematics and Optometry, University of Latvia, Riga, Latvia
+2.
+ National Centre for Optics, Vision and Eye Care, Faculty of Health and Social Sciences, University of South-Eastern Norway, Kongsberg, Norway
+ Article metrics
+View details
+Abstract
+Full accessibility to eXtended Reality Head-Mounted Displays (XR HMDs) includes a requirement for well-functioning eyes and visual system. Eye and vision problems—that affect visual skills and abilities to various degrees—are common and may prevent an individual from comfortably wearing and using XR HMDs. Yet, vision problems have gained little attention in the XR community, making it difficult to assess the degree of accessibility and how to increase inclusivity. This perspective article aims to highlight the need for understanding, assessing, and correcting common eye and vision problems to increase inclusivity—to help broaden a responsible uptake of XR HMDs. There is a need to apply an interdisciplinary, human-centered approach in research. Guidelines are given for conducting reproducible research to contribute to the development of more inclusive XR technologies, through consideration of the individual variations in human visual skills and abilities.
+Introduction
+The enthusiasm for using eXtended Reality Head-Mounted Devices (XR HMDs) grows rapidly. Early virtual-, augmented- and mixed-reality consumer devices were primarily associated with entertainment. The range of potential uses has, however, since expanded and the benefits of using XR devices are being explored in areas as diverse as medicine, defence, education, manufacturing, design, and marketing. Moreover, there is an effort emerging from social media companies to drive XR-based social interactions to the same level of ubiquity as found on existing digital platforms, and millions of people may routinely need to use XR technologies. This drive of XR technologies toward ubiquity raises an important question: how inclusive will this new world be if human factors—particularly eye and vision problems—are not considered?
+While general aspects of inclusivity in XR are questioned (
+Franks, 2017
+), the impact of common eye and vision problems are often neglected. Most attention to vision problems has been directed to studying the effects of conventional stereoscopic displays on user experience and performance in self-selected populations, typically without knowledge about their visual skills and abilities. Requirements for XR technologies in the specific cases of permanent vision impairment and blindness have been elucidated (
+Gopalakrishnan et al., 2020
+;
+Schieber et al., 2022
+). However, little to no attention has been paid to understanding the needs of users who have common eye and vision problems. Left unattended, these problems may lead to exclusion of a substantial number of potential users. At the core of this Perspective is the notion that visual perception (the act of seeing, the “why”) and the eye (an implementation of an optical system, the “how”) are inseparable and need to be considered unison to increase inclusivity in XR. We outline the visual mechanisms involved in the perception of stereoscopic images, the most common eye and vision problems, and the importance of their consideration in the context of conducting human-centered research to assess the experience and performance in the XR environment, and then suggest three steps to foster inclusivity.
+The human eye as an optical system
+It is worth briefly reviewing the basic optical properties of the eye so that many of the accessibility problems referred to below can be explained unambiguously. The human eye is a complex biological optical system, but for the purposes here, it can be simplified to a fixed focus lens (the cornea), an adjustable focus lens (the lens), and an image plane (the retina). If the optical power of the eye is matched with the size of the eye (no refractive error), light entering the eye from a distant object is projected on to the retina as a focused image (see
+Figure 1
+). The lens allows the eye to adjust focus to accommodate on nearer objects. In an eye of a young person with no refractive error, the dynamic focus range of the lens extends from infinity to as near as 5–6 cm. The ability to accommodate declines with age.
+FIGURE 1
+Refractive errors. An emmetropic eye has no refractive error if the optical power of the cornea is matched to the length of the eye
+(A)
+. Light reflected from a far away object is focused on the fovea, forming a sharp image
+(B)
+, however, nearer objects are blurred due to the limited depth of field of the eye. By adjusting the lens, near objects can be brought into focus (by accommodation), although distant objects become unfocused
+(C)
+. An emmetrope can effortlessly switch between fixating on objects at different distances while keeping the object of fixation sharp. A hyperopic eye is too short for the optical power of the eye
+(D)
+. Far away objects can be kept in focus by accommodation
+(E)
+, but this leaves less lens power available for focusing at near objects, which remain blurred
+(F)
+. A hyperope is less able to switch between fixating on objects at different distances, having difficulty maintaining focus on near objects, especially for longer durations. A myopic eye is too long for the optical power of the eye
+(G)
+. Far away objects always appear blurred
+(H)
+ while near objects are focusable
+(I)
+.
+The retina is not uniformly populated with sensory cells—there is a small area (the fovea) that possesses a dense cluster of light-sensing cells (photoreceptors) providing high-resolution sampling of the visual environment. The eye can rotate to bring the projected image of an object of interest to fall on to the fovea (the act of fixation) without requiring a movement of the head. However, the density of photoreceptors decreases towards the periphery, resulting in a substantial drop in visual resolution.
+The act of seeing: How humans experience 3D visual information in the natural world
+The ability to estimate distances to objects is essential for rapid locomotion, threat avoidance and goal completion strategies in a three-dimensional (3D) world. The human brain makes use of different depth cues when interpreting spatial relationships, such as occlusion, relative size, texture gradients, perspective, shading, motion parallax, and colour information. While a single eye (monocular vision) can supply the brain with a rich feed of information from such cues, stereoscopic information available from two eyes (binocular vision) gives advantages for the perception of spatial relations (
+Svarverud et al., 2010
+;
+Svarverud et al., 2012
+) by disambiguating monocular depth cues (e.g.,
+Levi et al., 2015
+). Stereo vision refers to the perception of depth based on binocular disparity, a cue derived from the horizontal separation of the eyes, to construct a 3D percept of the visual world. For the brain to be able to combine the information from two eyes, it is critical that the eyes are able to rotate in a coordinated fashion to ensure that the image of an object of interest falls on the foveas in both eyes (bifoveal fixation). Such coordinated movement (vergence) results, notionally, in the two images being aligned and combined into a single, composite image (image fusion, yielding a stereoscopic percept). Precise vergence requires that both monocular images are in focus.
+Overall, constructing a stereoscopic percept of an object requires both accommodation and vergence to work co-operatively. Consequently, in the human visual system, these two mechanisms are neurologically linked and act mutually—a change in accommodation instigates a change in vergence of the appropriate direction and magnitude and, likewise, a change in vergence instigates a change in accommodation.
+How humans experience 3D visual information in stereoscopic XR
+Given the description of the human vision system above, the role of XR is to replace (or augment) the light rays reflected from objects in the natural world with light rays generated by a pair of near-eye displays. Initial intuition would suggest that a pair of large field-of-view, high-resolution displays, rigidly mounted in front of the eyes (an HMD), would provide an indistinguishable replacement for the natural world (or a seamless augmentation of it). As illustrated below, this intuition fails.
+A key limitation with current HMD technology is that the displays are mono-focal—the rays of light generated are all emitted from the same, fixed distance (contrast with the real world, where rays are reflected at a focal length corresponding to the distance of the object from the observer). In a typical stereoscopic HMD, the image provided by each of the displays is optically projected at a fixed focal distance (often 2 m) which means the eyes are required to accommodate at that distance to ensure a focused image falls on the retina (see
+Figure 2
+). Generally, XR scenes contain virtual objects at distances nearer or farther than 2 m and fusing these objects to create a stereoscopic percept, as has already been shown, requires appropriate vergence actions. However, the presence of a neurological link between vergence and accommodation means that the eyes are inclined to accommodate to the simulated distance, not the focal length of the displays. Unlike the natural world, any change of accommodation within the HMD defocuses the entirety of the pair of two-dimensional images, inhibiting the construction of a 3D percept. Thus, current consumer HMD technologies present a vergence-accommodation conflict (
+Hoffman et al., 2008
+), inducing visual stress in the HMD wearer which may cause transient changes in their vergence and accommodation behaviour (
+Yoon et al., 2021
+;
+Banstola et al., 2022
+;
+Souchet et al., 2022
+) making it more demanding to maintain binocular fusion.
+FIGURE 2
+(A)
+ In the natural world, when fixating on a real object, the eyes accommodate (green lines) and converge (red lines) appropriately for that object’s distance.
+(B)
+ In XR, the focal distance of all virtual objects is the same as the focal distance of the HMD (typically, 2 m) irrespective of the objects’ distances. When fixating on a virtual object, the eyes need to accommodate at 2 m, while converging appropriately for the virtual object’s distance, here nearer than 2 m, resulting in a vergence-accommodation conflict. A user may be able to construct a single 3D percept from two monocular virtual scenes
+(B and C)
+, if unaffected by the conflict, the user perceives a single, focused image
+(D)
+. If the user fails to overcome the vergence-accommodation conflict, then this may result in an un-fused image which appear double
+(E)
+ or a fused image which appear blurred
+(F)
+.
+Alternative display technologies are under development to mitigate or eliminate the vergence-accommodation conflict by displaying information in a space- and time-variant manner. These include varifocal, multifocal, and holographic displays (for review see
+Xiong et al., 2021
+). The technology is, presently, limited and trades off poorer resolution, narrower field-of-view, reduced frame rate and a less-ergonomic form factor, as well as increasing computational demand and transmission bandwidth (
+Zabels et al., 2019
+;
+Zhan et al., 2020
+;
+Xiong et al., 2021
+). To reduce computational workload, space-variant image coding and foveated rendering have been developed (
+Coltekin, 2009
+;
+Peillard et al., 2020
+;
+Jabbireddy et al., 2022
+). However, these techniques make broad assumptions about the function of the human eye and visual system, implying best efficacy for users with “normal” vision (i.e. no refractive error, normal retina and normal binocular vision). Such assumptions do not foster inclusivity.
+The perception of stereoscopic XR images strongly depends on well-functioning eyes and visual system. Unfortunately, a considerable proportion of the population has common eye and vision problems that result in individual variations in visual skills and abilities, limiting their accessibility to current XR technologies.
+Common eye and vision problems that may affect visual experience in XR
+Refractive errors such as myopia and hyperopia (see
+Figure 1
+) are common with overall prevalence (albeit with regional differences around the world) in about 15% of children and 57% of adults (
+Hashemi et al., 2017
+). Myopia and hyperopia are caused by a mismatch between the optical power of the eye and the length of the eye, resulting in blurred vision, either at distance or near, if not corrected with appropriate eyeglasses or contact lenses. Presbyopia (the reduced ability to focus at near because of age) affects everyone from around the age of 45 years. Uncorrected refractive errors have been negatively correlated with an individual’s educational achievement (
+Mavi et al., 2022
+), and general quality of life (
+Frick et al., 2015
+;
+Chua & Foster, 2019
+). Uncorrected refractive errors are considered a major cause of avoidable vision impairment, affecting more than 30% of the population (
+Flaxman et al., 2017
+;
+Foreman et al., 2017
+;
+Ye et al., 2018
+). This is a problem even in wealthy nations irrespective of socioeconomic variables. In an XR HMD, uncorrected refractive errors may impair the user’s ability to focus and fuse the stereoscopic images and negatively affect their experience and performance in XR.
+About 5% of the population do not have equally sharp vision in the two eyes even when fully corrected with eyeglasses or contact lenses, due to either a squint (strabismus) and/or poor vision in one eye (amblyopia) (
+Chopin et al., 2019
+). For these individuals, information from one eye is ignored (suppressed) by the brain, and they are not be able to see stereo in neither the natural nor XR worlds. The problem is exacerbated in XR applications where information may be selectively shown in only one display, (e.g., an overlay) these individuals may simply be unaware of the presence of such information.
+The ability to see stereoscopically can also be impaired because of vergence anomalies. These arise when there is slight misalignment between the two eyes (binocular misalignment), which makes precise bifocal fixation a challenge. Such a person may experience partially blurred or un-fused images, which can manifest as tiredness and eye strain, especially when doing near-vision tasks, such as reading a book or smartphone use. Additionally, similar experiences and symptoms may occur due to accommodation anomalies, that also result in a failure to maintain a focused retinal image. Overall, more than 30% of the population have moderate to poor stereo vision (stereoanomaly:
+Hess et al., 2015
+) due to vergence and accommodation anomalies typically combined with a refractive error (
+Atiya et al., 2020
+;
+Dahal et al., 2021
+;
+Franco et al., 2021
+).
+Common eye and vision problems typically develop slowly over time, and most sufferers subconsciously develop strategies to work around problems that would otherwise be symptomatic. Many do not experience symptoms in the natural world (
+Atiya et al., 2020
+), because situations that cause discomfort can be avoided. However, it is important to note that anyone who has difficulties in maintaining binocular fusion in the natural world is further disadvantaged in a stereoscopic XR world because of the vergence-accommodation conflict (
+Pladere et al., 2021
+). For some people, the feeling of discomfort that emerges after a few minutes of using XR HMDs will discourage them from using XR technologies further.
+Another common vision problem is inherited colour vision deficiency (
+Sharpe et al., 1999
+). Males are predominantly affected, with prevalence varying around the world (up to 10% of males in Northern Europe (
+Baraas, 2008
+), up to 6.5% in East Asia (
+Birch, 2012
+)). Many of those who have common red-green colour vision deficiencies may experience few problems in the natural world, and the degree of disadvantage in the digital world depends on the degree of colour vision deficiency (e.g.,
+Baraas et al., 2010
+).
+Humans are not machines
+It has been assumed that the visual system works like an over-simplified optical system. Thus, several technology-based approaches have been developed to measure field of view, spatial resolution, and image brightness in XR displays (
+Cakmakci et al., 2019
+;
+Cholewiak et al., 2020
+;
+Eisenberg, 2022
+). It is necessary to build models to describe image parameters for the comparison of different XR technologies, however, the claims that such models replicate human visual experience (
+Eisenberg, 2022
+) are misleading. The findings in user studies clearly show that there are considerable individual variations in visual experience under the same viewing conditions (
+Hoffman et al., 2008
+;
+Rousset et al., 2018
+;
+Erkelens & MacKenzie, 2020
+). Thus, it is imperative to also consider the varying degrees of visual skills and abilities that would be found in the common population—the properties of which can be assessed using standard clinical tests. What are the steps that the XR community can take to foster knowledge to improve accessibility and inclusivity of potential users with varying visual skills and abilities?
+Step 1—Assess participant’s vision
+Research on utilization of the XR technologies are published at a high rate, however, the aspects described above are rarely addressed, or even acknowledged. Often, papers do not mention which inclusion and exclusion criteria were used for determining the participants’ suitability, in relation to eyes and vision. When reviewing the seven original research papers that utilized visual XR technologies published under the Frontiers in Virtual Reality research topic “Presence and Beyond: Evaluating User Experience in AR/MR/VR”, none addressed these issues. This is representative of the XR literature. The lack of information pertaining to eye and vision status makes it impossible to ascertain whether an individual was not included or not able to complete an XR task because of common eye and vision problems. This makes it difficult to critically assess the results in terms of accessibility and how to move forward to increase inclusivity.
+Often participants are selected based on self-reporting their visual status. However, self-reporting limits the opportunity to replicate the study, and moreover, is not a reliable measure because many are unaware of their eye and vision status. Some studies do report visual functions based on limited testing or misappropriate tests. An example is the use of stereo tests that also contain monocular cues, resulting in misleading scores for participants with anomalous stereo vision (
+Simons & Reinecke, 1974
+;
+Chopin et al., 2019
+). Another example of limited testing is visual acuity assessment with both eyes open, typically at 6 m distance. This is problematic for several reasons. First, poor, or absent vision in one eye is not identified without testing each eye individually and, in such cases, the individual likely has compromised binocular vision and anomalous stereo vision (
+Simons & Reinecke, 1974
+). Second, visual acuity assessment only measures performance for high contrast details at a particular distance and this knowledge may not be transferrable to other distances or lower contrast scenes. Third, visual acuity tests are, by clinical necessity, brief in duration—they do not give insight to whether the ascribed level of visual performance is sustainable for any non-trivial length of time. Uncorrected refractive errors, and accommodation and vergence anomalies, can still affect stereo vision even when visual acuity is measurably normal at 6 m distance. These individuals have to try hard to maintain sharp vision at near distances, with the consequence of compromised binocular vision and eye strain.
+To understand the implications from research in XR, it is imperative to consider the participants’ eye and visual functions. Ideally, the human vision community would develop a standard eye examination protocol specifically for research within XR.
+Step 2—Correct participant’s vision
+Where possible, an individual’s vision disorders should be corrected before introducing them to XR technologies. Currently, in research, not only is there the lack of information about visual functions, but it is rarely reported whether study participants were given the opportunity to wear their own eyeglasses or contact lenses, or even if the correction they used was appropriate. This limits the opportunity to understand how common eye and vision problems affect accessibility to stereoscopic XR technologies.
+Therefore, participants should have access to the appropriate refractive correction. If necessary, participants should be referred to eye care providers for an eye examination to ensure that the prescribed eye correction balances the individual’s needs regarding binocular function.
+There are several ways to provide vision correction in the stereoscopic XR environment. Currently, the most feasible option is to wear eyeglasses or contact lenses within the HMD since doing so requires no further software or hardware modifications. However, not all contemporary HMDs are compatible with a user’s eyeglasses, which will result in discomfort and reduce the quality of their experience. The analysis of scientific literature and new products suggests that there is a growing interest in exploring other ideas. For instance, custom-crafted prescription lens inserts are proposed to be attached to virtual reality HMDs. Moreover, next-generation XR HMDs and smart glasses with eyeglass prescription lenses are under development, including early prototypes utilizing tunable lenses (
+Xia et al., 2019
+), free-form image combiners (
+Wu & Kim, 2020
+), and aberration-corrected holograms (
+Kim et al., 2021
+). These technologies do not adapt automatically. Customized changes in software and hardware are required considering the user’s eyeglass prescription.
+Altogether, it is clear that the mass adoption of vision-correcting XR HMDs is some time away. For the immediate future, researchers should select the XR HMDs that are most compatible with eyeglasses and should actively ensure that invited participants wear their appropriate vision correction to achieve as sharp and comfortable vision as possible.
+Step 3—Make it adaptive
+Adaptations can be made to ensure accessibility to those with common eye and vision problems, to account for individual variations in visual skills, abilities, and needs. Adjustments of hardware and software parameters are important both in the absence and presence of eye and vision problems. For instance, the form factor of the XR headset should allow for adjustments of not only individual variations in the size of the head and space for eyeglasses, but also needs to allow for the adjustment of the distance between the eyes (inter-pupillary distance). Then, the center of each of the stereo displays lies on the optical axis of each eye, excluding unwanted optical distortions and providing better depth perception and comfort (
+Hibbard et al., 2020
+).
+Moreover, when a vision problem cannot be solved with eyeglasses or contact lenses, accessibility can be supported by making adaptive changes to digital content. This has already been studied in relation to anomalous colour vision proving the feasibility of new approaches. One such method provides information about the colour of objects in the form of sound (
+Dai et al., 2017
+) or labels (
+Ponce Gallegos et al., 2020
+) overlaid on the AR scene. These algorithms possibly oversimplify a disability, unintentionally removing other pertinent information and reducing the individual’s agency. Other solutions allow the user to modify the basic properties of digital images such as contrast, what colours are used and their saturation using software filters to compensate for anomalous colour vision (
+Zhu et al., 2016
+;
+Gurumurthy et al., 2019
+;
+Díaz-Barrancas et al., 2020
+).
+The goal of inclusion of people with anomalous vision, whether it is colour or stereo vision, should aim at providing digital adaptations that the user can adjust. For instance, to ensure satisfactory visual experience in individuals with no or anomalous stereo vision, one could provide an opportunity to either increase the saliency of monocular depth cues or even switch to a synthesised, entirely two-dimensional mode. Such simple adjustments would increase inclusivity of stereo-anomalous individuals through allowing them to comfortably be immersed in an XR world for longer.
+Appreciate each individual and solve the reproducibility crisis
+Conventional research protocol is to assimilate data from many individuals and report the emergent, generalised, group behaviour. Understanding group behaviours has established advantages, but fails to consider individual variations and does not allow to predict whom and how many individuals do not follow the group behaviour. If we want the XR technologies to be used on a regular basis by many people, the impact of vision on user experience and performance needs to be studied more extensively. As a minimum, the following affordable standard vision screening tests should be performed and reported for each participant in each user study:
+• visual acuity for each eye separately at distance (assessed using a LogMAR chart),
+• near stereo acuity (using a TNO or another random dot stereo test (
+Chopin et al., 2019
+)), and
+• colour vision (using Ishihara and Hardy-Rand-Rittler plates (
+Arnegard et al., 2022
+)).
+However, it is important to keep in mind that the purpose of testing is to verify whether the capabilities of the visual system meet the requirements of the visual task. For instance, a more comprehensive eye examination is necessary if participants are expected to do sustained near work using stereoscopic XR technologies because of the increased vergence demand and a more pronounced vergence-accommodation conflict. Whenever a participant fails one or more of the tests, the experimenter should advise the participant to seek a full eye examination.
+To ensure research is reproducible, information about exclusion and inclusion criteria pertaining to eye and vision status and parameters of the utilized XR HMDs need to be provided. Moreover, studies should be suitably designed to allow individual data to be analysed and presented considering factors related to the type of visualization and specifics of human vision. This will make it possible to replicate studies and conduct meta-studies to uncover a more balanced result of the potential ubiquity of the XR technologies.
+Overall, the possibility to verify results will make a stable foundation for future research, innovation, and societal policies. It will increase the value of the research (
+Iqbal et al., 2016
+) by ensuring the opportunity to replicate novel scientific findings and accelerate the rate of technological change (
+Munafò et al., 2017
+).
+Conclusion
+The introduction of stereoscopic XR HMDs in societal applications emboldens the prerequisite for accessibility and usability because individuals who have common eye and vision problems may be disadvantaged when using the technology. A key requirement for 3D simulations to be effective is for the user to possess good binocular vision and depth perception. If common eye and vision problems are not considered, at least 30% of the population will be excluded from utilizing these technologies which may negatively affect their education, competitiveness in the labour market, emotional wellbeing, and quality of life. The world of virtual, augmented and mixed realities can be made more inclusive by assessing vision in a thorough manner, ensuring that correctable eye and vision problems are corrected, developing adaptive digital content respecting the needs of individuals, and contributing to open and reproducible human-centered research.
+Statements
+Data availability statement
+The original contributions presented in the study are included in the article/supplementary material, further inquiries can be directed to the corresponding author.
+Author contributions
+TP, Conceptualization, Writing—original draft, Project administration, Visualization, Writing—review and editing; ES, Conceptualization, Writing—original draft, Writing—review and editing; GK, Conceptualization, Writing—original draft, Writing—review and editing; SG, Visualization, Writing—review and editing; RB, Conceptualization, Writing—original draft, Visualization, Writing—review and editing.
+Funding
+The work was funded by the University of South-Eastern Norway, the Research Council of Norway (regional funds projects 828390 and FORREGION-VT 328526), and the Latvian Council of Science project No. lzp-2021/1-0399.
+Conflict of interest
+The authors declare that the research was conducted in the absence of any commercial or financial relationships that could be construed as a potential conflict of interest.
+Publisher’s note
+All claims expressed in this article are solely those of the authors and do not necessarily represent those of their affiliated organizations, or those of the publisher, the editors and the reviewers. Any product that may be evaluated in this article, or claim that may be made by its manufacturer, is not guaranteed or endorsed by the publisher.
+References
+1
+Arnegard
+S.
+Baraas
+R. C.
+Neitz
+J.
+Hagen
+L. A.
+Neitz
+M.
+ (
+2022
+).
+Limitation of standard pseudoisochromatic plates in identifying colour vision deficiencies when compared with genetic testing
+.
+Acta Ophthalmol.
+100
+,
+805
+–
+812
+.
+10.1111/aos.15103
+CrossRef
+Google Scholar
+2
+Atiya
+A.
+Hussaindeen
+J. R.
+Kasturirangan
+S.
+Ramasubramanian
+S.
+Swathi
+K.
+Swaminathan
+M.
+ (
+2020
+).
+Frequency of undetected binocular vision anomalies among ophthalmology trainees
+.
+J. Optom.
+13
+ (
+3
+),
+185
+–
+190
+.
+10.1016/j.optom.2020.01.003
+CrossRef
+Google Scholar
+3
+Banstola
+S.
+Hanna
+K.
+O’Connor
+A.
+ (
+2022
+).
+Changes to visual parameters following virtual reality gameplay
+.
+Br. Ir. Orthopt. J.
+18
+ (
+1
+),
+57
+–
+64
+.
+10.22599/bioj.257
+CrossRef
+Google Scholar
+4
+Baraas
+R. C.
+Foster
+D. H.
+Amano
+K.
+Nascimento
+S. M.
+ (
+2010
+).
+Color constancy of red-green dichromats and anomalous trichromats
+.
+Invest. Ophthalmol. Vis. Sci.
+51
+ (
+4
+),
+2286
+–
+2293
+.
+10.1167/iovs.09-4576
+CrossRef
+Google Scholar
+5
+Baraas
+R. C.
+ (
+2008
+).
+Poorer color discrimination by females when tested with pseudoisochromatic plates containing vanishing designs on neutral backgrounds
+.
+Vis. Neurosci.
+25
+ (
+3
+),
+501
+–
+505
+.
+10.1017/S0952523808080632
+CrossRef
+Google Scholar
+6
+Birch
+J.
+ (
+2012
+).
+Worldwide prevalence of red-green color deficiency
+.
+J. Opt. Soc. Am. A
+29
+ (
+3
+),
+313
+–
+320
+.
+10.1364/JOSAA.29.000313
+CrossRef
+Google Scholar
+7
+Cakmakci
+O.
+Hoffman
+D. M.
+Balram
+N.
+ (
+2019
+).
+31‐4: Invited paper: 3D eyebox in augmented and virtual reality optics
+.
+SID Symposium Dig. Tech. Pap.
+50
+ (
+1
+),
+438
+–
+441
+.
+10.1002/sdtp.12950
+CrossRef
+Google Scholar
+8
+Cholewiak
+S. A.
+Başgöze
+Z.
+Cakmakci
+O.
+Hoffman
+D. M.
+Cooper
+E. A.
+ (
+2020
+).
+A perceptual eyebox for near-eye displays
+.
+Opt. Express
+28
+ (
+25
+),
+38008
+–
+38028
+.
+10.1364/OE.408404
+CrossRef
+Google Scholar
+9
+Chopin
+A.
+Chan
+S. W.
+Guellai
+B.
+Bavelier
+D.
+Levi
+D. M.
+ (
+2019
+).
+Binocular non-stereoscopic cues can deceive clinical tests of stereopsis
+.
+Sci. Rep.
+9
+,
+5789
+.
+10.1038/s41598-019-42149-2
+CrossRef
+Google Scholar
+10
+Chua
+S. Y. L.
+Foster
+P. J.
+ (
+2020
+). “
+The economic and societal impact of myopia and high myopia
+,” in
+Updates on myopia
+. Editors
+Ang
+M.
+Wong
+T.
+ (
+Singapore
+:
+Springer
+).
+10.1007/978-981-13-8491-2_3
+CrossRef
+Google Scholar
+11
+Coltekin
+A.
+ (
+2009
+). “
+Space-variant image coding for stereoscopic media
+,”.
+Picture coding symposium
+ (
+China
+,
+1
+–
+4
+.
+10.1109/PCS.2009.5167396
+CrossRef
+Google Scholar
+12
+Dahal
+M.
+Kaiti
+R.
+Shah
+P.
+Ghimire
+R.
+ (
+2021
+).
+Prevalence of non strabismic binocular vision dysfunction among engineering students in Nepal
+.
+Med. Surg. Ophthal. Res.
+3
+ (
+2
+).
+10.31031/MSOR.2021.03.000559
+CrossRef
+Google Scholar
+13
+Dai
+S.
+Arechiga
+N.
+Lin
+C. W.
+Shiraishi
+S.
+ (
+2017
+). “
+Personalized augmented reality vehicular assistance for color blindness condition
+,” in
+U.S. Patent No 10
+ (
+Washington, DC
+:
+U.S. Patent and Trademark Office
+),
+423
+–
+844
+.
+Google Scholar
+14
+Díaz-Barrancas
+F.
+Cwierz
+H.
+Pardo
+P. J.
+Pérez
+Á. L.
+Suero
+M. I.
+ (
+2020
+).
+Spectral color management in virtual reality scenes
+.
+Sensors
+20
+,
+5658
+.
+10.3390/s20195658
+CrossRef
+Google Scholar
+15
+Eisenberg
+E.
+ (
+2022
+).
+Replicating human vision for XR display testing: A flexible solution for in-headset measurement. Engineering360 (GlobalSpec) webinar
+.
+Available:
+https://www.radiantvisionsystems.com/learn/webinars/replicating-human-vision-xr-display-testing-flexible-optical
+ (Accessed July 1, 2022)
+.
+Google Scholar
+16
+Erkelens
+I. M.
+MacKenzie
+K. J.
+ (
+2020
+).
+19‐2: Vergence‐Accommodation conflicts in augmented reality: Impacts on perceived image quality
+.
+SID Symposium Dig. Tech. Pap.
+51
+ (
+1
+),
+265
+–
+268
+.
+10.1002/sdtp.13855
+CrossRef
+Google Scholar
+17
+Flaxman
+S. R.
+Bourne
+R. R. A.
+Resnikoff
+S.
+Ackland
+P.
+Braithwaite
+T.
+Cicinelli
+M. V.
+et al
+ (
+2017
+).
+Global causes of blindness and distance vision impairment 1990-2020: A systematic review and meta-analysis
+.
+Lancet Glob. Health
+5
+ (
+12
+),
+e1221
+–
+e1234
+.
+10.1016/S2214-109X(17)30393-5
+CrossRef
+Google Scholar
+18
+Foreman
+J.
+Xie
+J.
+Keel
+S.
+van Wijngaarden
+P.
+Sandhu
+S. S.
+Ang
+G. S.
+et al
+ (
+2017
+).
+The prevalence and causes of vision loss in indigenous and non-indigenous Australians: The national eye health survey
+.
+Ophthalmology
+124
+ (
+12
+),
+1743
+–
+1752
+.
+10.1016/j.ophtha.2017.06.001
+CrossRef
+Google Scholar
+19
+Franco
+S.
+Moreira
+A.
+Fernandes
+A.
+Baptista
+A.
+ (
+2021
+).
+Accommodative and binocular vision dysfunctions in a Portuguese clinical population
+.
+J. Optom.
+15
+,
+271
+–
+277
+.
+10.1016/j.optom.2021.10.002
+CrossRef
+Google Scholar
+20
+Franks
+M. A.
+ (
+2017
+).
+The desert of the unreal: Inequality in virtual and augmented reality
+.
+UC davis law review
+, Vol. 51,
+University of Miami Legal Studies Research
+ Paper No.
+17
+–
+24
+.
+Beijing China
+Google Scholar
+21
+Frick
+K. D.
+Joy
+S. M.
+Wilson
+D. A.
+Naidoo
+K. S.
+Holden
+B. A.
+ (
+2015
+).
+The global burden of potential productivity loss from uncorrected presbyopia
+.
+Ophthalmology
+122
+ (
+8
+),
+1706
+–
+1710
+.
+10.1016/j.ophtha.2015.04.014
+CrossRef
+Google Scholar
+22
+Gopalakrishnan
+S.
+Chouhan Suwalal
+S.
+Bhaskaran
+G.
+Raman
+R.
+ (
+2020
+).
+Use of augmented reality technology for improving visual acuity of individuals with low vision
+.
+Indian J. Ophthalmol.
+68
+ (
+6
+),
+1136
+–
+1142
+.
+10.4103/ijo.IJO_1524_19
+CrossRef
+Google Scholar
+23
+Gurumurthy
+S.
+Rajagopal
+R. D.
+AjayAshar
+A.
+ (
+2019
+).
+Color blindness correction using augmented reality
+.
+Madridge J. Bioinform. Syst. Biol.
+1
+ (
+2
+),
+31
+–
+33
+.
+10.18689/mjbsb-1000106
+CrossRef
+Google Scholar
+24
+Hashemi
+H.
+Fotouhi
+A.
+Yekta
+A.
+Pakzad
+R.
+Ostadimoghaddam
+H.
+Khabazkhoob
+M.
+ (
+2017
+).
+Global and regional estimates of prevalence of refractive errors: Systematic review and meta-analysis
+.
+J. Curr. Ophthalmol.
+30
+ (
+1
+),
+3
+–
+22
+.
+10.1016/j.joco.2017.08.009
+CrossRef
+Google Scholar
+25
+Hess
+R. F.
+To
+L.
+Zhou
+J.
+Wang
+G.
+Cooperstock
+J. R.
+ (
+2015
+).
+Stereo vision: The haves and have-nots
+.
+Iperception.
+6
+ (
+3
+)–
+204166951559302
+.
+10.1177/2041669515593028
+CrossRef
+Google Scholar
+26
+Hibbard
+P. B.
+van Dam
+L. C. J.
+Scarfe
+P.
+ “
+The implications of interpupillary distance variability for virtual reality
+,” in
+Proceedings of the 2020 International Conference on 3D Immersion (IC3D)
+,
+NY China
+,
+April 2020
+,
+1
+–
+7
+.
+10.1109/IC3D51119.2020.9376369
+CrossRef
+Google Scholar
+27
+Hoffman
+D. M.
+Girshick
+A. R.
+Akeley
+K.
+Banks
+M. S.
+ (
+2008
+).
+Vergence-accommodation conflicts hinder visual performance and cause visual fatigue
+.
+J. Vis.
+8
+ (
+3
+),
+33
+.
+10.1167/8.3.33
+CrossRef
+Google Scholar
+28
+Iqbal
+S. A.
+Wallach
+J. D.
+Khoury
+M. J.
+Schully
+S. D.
+Ioannidis
+J. P.
+ (
+2016
+).
+Reproducible research practices and transparency across the biomedical literature
+.
+PLoS Biol.
+14
+ (
+1
+)–
+e1002333
+.
+10.1371/journal.pbio.1002333
+CrossRef
+Google Scholar
+29
+Jabbireddy
+S.
+Sun
+X.
+Meng
+X.
+Varshney
+A.
+Varshney
+A.
+ (
+2022
+).
+Foveated rendering: Motivation, taxonomy, and research directions
+.
+Preprint
+23
+.
+10.48550/arXiv.2205.04529
+CrossRef
+Google Scholar
+30
+Kim
+D.
+Nam
+S. W.
+Bang
+K.
+Lee
+B.
+Lee
+S.
+Jeong
+Y.
+et al
+ (
+2021
+).
+Vision-correcting holographic display: Evaluation of aberration correcting hologram
+.
+Biomed. Opt. Express
+12
+ (
+8
+),
+5179
+–
+5195
+.
+10.1364/BOE.433919
+CrossRef
+Google Scholar
+31
+Levi
+D. M.
+Knill
+D. C.
+Bavelier
+D.
+ (
+2015
+).
+Stereopsis and amblyopia: A mini-review
+.
+Vis. Res.
+114
+,
+17
+–
+30
+.
+10.1016/j.visres.2015.01.002
+CrossRef
+Google Scholar
+32
+Mavi
+S.
+Chan
+V. F.
+Virgili
+G.
+Biagini
+I.
+Congdon
+N.
+Piyasena
+P.
+et al
+ (
+2022
+).
+The impact of hyperopia on academic performance among children: A systematic review
+.
+Asia. Pac. J. Ophthalmol. (Phila).
+11
+ (
+1
+),
+36
+–
+51
+.
+10.1097/APO.0000000000000492
+CrossRef
+Google Scholar
+33
+Munafò
+M. R.
+Nosek
+B. A.
+Bishop
+D. V. M.
+Button
+K. S.
+Chambers
+C. D.
+du Sert
+N. P.
+et al
+ (
+2017
+).
+A manifesto for reproducible science
+.
+Nat. Hum. Behav.
+10
+ (
+1
+)–
+0021
+.
+10.1038/s41562-016-0021
+CrossRef
+Google Scholar
+34
+Peillard
+E.
+Itoh
+Y.
+Moreau
+G.
+Normand
+J. M.
+Lécuyer
+A.
+Argelaguet
+F.
+ “
+Can retinal projection displays improve spatial perception in augmented reality?
+,” in
+Proceedings of the 2020 IEEE International Symposium on Mixed and Augmented Reality (ISMAR)
+,
+NEW YORK
+,
+June 2020
+,
+80
+–
+89
+.
+10.1109/ISMAR50242.2020.00028
+CrossRef
+Google Scholar
+35
+Pladere
+T.
+Luguzis
+A.
+Zabels
+R.
+Smukulis
+R.
+Barkovska
+V.
+Krauze
+L.
+et al
+ (
+2021
+).
+When virtual and real worlds coexist: Visualization and visual system affect spatial performance in augmented reality
+.
+J. Vis.
+21
+ (
+8
+),
+17
+.
+10.1167/jov.21.8.17
+CrossRef
+Google Scholar
+36
+Ponce Gallegos
+J. C.
+Montes Rivera
+M.
+Ornelas Zapata
+F. J.
+Padilla Díaz
+A.
+ (
+2020
+). “
+Augmented reality as a tool to support the inclusion of colorblind people
+,” in
+HCI international 2020 – late breaking papers: Universal access and inclusive design. HCII 2020. Lecture notes in computer science 12426
+. Editors
+Stephanidis
+C.
+Antona
+M.
+Gao
+Q.
+Zhou
+J.
+ (
+Cham
+:
+Springer
+).
+10.1007/978-3-030-60149-2_24
+CrossRef
+Google Scholar
+37
+Rousset
+T.
+Bourdin
+C.
+Goulon
+C.
+Monnoyer
+J.
+Vercher
+J.-L.
+ (
+2018
+).
+Misperception of egocentric distances in virtual environments: More a question of training than a technological issue?
+Displays
+52
+,
+8
+–
+20
+.
+10.1016/j.displa.2018.02.004
+CrossRef
+Google Scholar
+38
+Schieber
+H.
+Kleinbeck
+C.
+Pradel
+C.
+Theelke
+L.
+Roth
+D.
+ “
+A mixed reality guidance system for blind and visually impaired people
+,” in
+Proceedings of the 2022 IEEE Conference on Virtual Reality and 3D User Interfaces Abstracts and Workshops (VRW)
+,
+Singapore
+,
+July 2022
+,
+726
+–
+727
+.
+10.1109/VRW55335.2022.00214
+CrossRef
+Google Scholar
+39
+Sharpe
+L. T.
+Stockman
+A.
+Jägle
+H.
+Nathans
+J.
+ (
+1999
+).
+Opsin genes, cone photopigments, color vision, and color blindness” in color vision. From genes to perception
+. Editors
+Gegenfurtner
+K. R.
+Sharpe
+L. T.
+ (
+Cambridge
+:
+Cambridge University Press
+),
+3
+–
+51
+.
+Google Scholar
+40
+Simons
+K.
+Reinecke
+R. D.
+ (
+1974
+).
+A reconsideration of amblyopia screening and stereopsis
+.
+Am. J. Ophthalmol.
+78
+ (
+4
+),
+707
+–
+713
+.
+10.1016/S0002-9394(14)76310-X
+CrossRef
+Google Scholar
+41
+Souchet
+A. D.
+Lourdeaux
+D.
+Pagani
+A.
+Rebenitsch
+L.
+ (
+2022
+).
+A narrative review of immersive virtual reality’s ergonomics and risks at the workplace: Cybersickness, visual fatigue, muscular fatigue, acute stress, and mental overload
+.
+Virtual Real.
+20
+.
+10.1007/s10055-022-00672-0
+CrossRef
+Google Scholar
+42
+Svarverud
+E.
+Gilson
+S.
+Glennerster
+A.
+ (
+2012
+).
+A demonstration of ‘broken’ visual space
+.
+PLoS ONE
+7
+ (
+3
+)–
+e33782
+.
+10.1371/journal.pone.0033782
+CrossRef
+Google Scholar
+43
+Svarverud
+E.
+Gilson
+S. J.
+Glennerster
+A.
+ (
+2010
+).
+Cue combination for 3D location judgements
+.
+J. Vis.
+10
+ (
+1
+),
+5
+.
+10.1167/10.1.5
+CrossRef
+Google Scholar
+44
+Wu
+J.-Y.
+Kim
+J.
+ (
+2020
+).
+Prescription AR: A fully-customized prescription-embedded augmented reality display
+.
+Opt. Express
+28
+ (
+5
+),
+6225
+–
+6241
+.
+10.1364/OE.380945
+CrossRef
+Google Scholar
+45
+Xia
+X.
+Guan
+Y.
+State
+A.
+Chakravarthula
+P.
+Rathinavel
+K.
+Cham
+T.-J.
+et al
+ (
+2019
+).
+Towards a switchable AR/VR near-eye display with accommodation-vergence and eyeglass prescription support
+.
+IEEE Trans. Vis. Comput. Graph.
+25
+,
+3114
+–
+3124
+.
+10.1109/tvcg.2019.2932238
+CrossRef
+Google Scholar
+46
+Xiong
+J.
+Hsiang
+E.-L.
+He
+Z.
+Zhan
+T.
+Wu
+S-T.
+ (
+2021
+).
+Augmented reality and virtual reality displays: Emerging technologies and future perspectives
+.
+Light. Sci. Appl.
+10
+,
+216
+.
+10.1038/s41377-021-00658-8
+CrossRef
+Google Scholar
+47
+Ye
+H.
+Qian
+Y.
+Zhang
+Q.
+Liu
+X.
+Cai
+X.
+Yu
+W.
+et al
+ (
+2018
+).
+Prevalence and risk factors of uncorrected refractive error among an elderly Chinese population in urban China: A cross-sectional study
+.
+BMJ Open
+8
+ (
+3
+),
+e021325
+–e022017-021325.
+10.1136/bmjopen-2017-021325
+CrossRef
+Google Scholar
+48
+Yoon
+H. J.
+Moon
+H. S.
+Sung
+M. S.
+Park
+S. W.
+Heo
+H.
+ (
+2021
+).
+Effects of prolonged use of virtual reality smartphone-based head-mounted display on visual parameters: A randomised controlled trial
+.
+Sci. Rep.
+11
+–
+15382
+.
+10.1038/s41598-021-94680-w
+CrossRef
+Google Scholar
+49
+Zabels
+R.
+Osmanis
+K.
+Narels
+M.
+Gertners
+U.
+Ozols
+A.
+Rūtenbergs
+K.
+et al
+ (
+2019
+).
+AR displays: Next-generation technologies to solve the vergence–accommodation conflict
+.
+Appl. Sci. (Basel).
+9
+ (
+15
+),
+3147
+.
+10.3390/app9153147
+CrossRef
+Google Scholar
+50
+Zhan
+T.
+Yin
+K.
+Xiong
+J.
+He
+Z.
+Wu
+S.-T.
+ (
+2020
+).
+Augmented reality and virtual reality displays: Perspectives and challenges
+.
+iScience
+23
+ (
+8
+)–
+101397
+.
+10.1016/j.isci.2020.101397
+CrossRef
+Google Scholar
+51
+Zhu
+R.
+Tan
+G.
+Yuan
+J.
+Wu
+S.-T.
+ (
+2016
+).
+Functional reflective polarizer for augmented reality and color vision deficiency
+.
+Opt. Express
+28
+ (
+25
+),
+5431
+–
+38028
+.
+10.1364/OE.24.005431
+CrossRef
+Google Scholar
+Summary
+Keywords
+XR
+,
+stereoscopic images
+,
+stereo vision
+,
+vision problems
+,
+inclusivity
+,
+HMD
+Citation
+Pladere T, Svarverud E, Krumina G, Gilson SJ and Baraas RC (2022)
+Inclusivity in stereoscopic XR: Human vision first
+.
+Front. Virtual Real.
+ 3:1006021. doi:
+10.3389/frvir.2022.1006021
+Received
+28 July 2022
+Accepted
+08 November 2022
+Published
+23 November 2022
+Volume
+3 - 2022
+Edited by
+Timo Götzelmann
+, Nuremberg Institute of Technology, Germany
+Reviewed by
+Manuela Chessa
+, University of Genoa, Italy
+Updates
+Check for updates
+ Copyright
+© 2022 Pladere, Svarverud, Krumina, Gilson and Baraas.
+This is an open-access article distributed under the terms of the
+Creative Commons Attribution License (CC BY)
+. The use, distribution or reproduction in other forums is permitted, provided the original author(s) and the copyright owner(s) are credited and that the original publication in this journal is cited, in accordance with accepted academic practice. No use, distribution or reproduction is permitted which does not comply with these terms.
+*Correspondence: Tatjana Pladere,
+tatjana.pladere@lu.lv
+This article was submitted to Technologies for VR, a section of the journal Frontiers in Virtual Reality
+Disclaimer
+ All claims expressed in this article are solely those of the authors and do not necessarily represent those of their affiliated organizations, or those of the publisher, the editors and the reviewers. Any product that may be evaluated in this article or claim that may be made by its manufacturer is not guaranteed or endorsed by the publisher.

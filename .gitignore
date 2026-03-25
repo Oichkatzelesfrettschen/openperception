@@ -207,6 +207,11 @@ _build/
 !research/**/*.pdf
 !datasets/**/*.pdf
 
+# Curated paper corpus: keep bibliographies, provenance, and sidecars in Git
+# while storing PDFs in LFS via .gitattributes.
+!papers/downloads/
+!papers/downloads/**
+
 # =============================================================================
 # Project-Specific
 # =============================================================================

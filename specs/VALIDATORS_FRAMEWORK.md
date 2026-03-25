@@ -323,27 +323,35 @@ depth_gate:
   id: GATE-005
   severity: WARNING
   checks:
-    - name: monocular_cue_occlusion
-      rule: "essential_depth_info.has_occlusion_cue == true"
+    - name: monocular_cue_static
+      rule: "essential_depth_info.has_static_monocular_cue == true"
       applies_to: "depth-critical gameplay elements"
 
-    - name: monocular_cue_size
-      rule: "essential_depth_info.has_relative_size_cue == true"
+    - name: monocular_cue_order
+      rule: "essential_depth_info.has_occlusion_or_order_cue == true"
 
-    - name: monocular_cue_outline
-      rule: "essential_depth_info.has_outline_or_edge_cue == true"
+    - name: monocular_cue_scale
+      rule: "essential_depth_info.has_size_or_perspective_cue == true"
+
+    - name: monocular_cue_edge
+      rule: "essential_depth_info.has_outline_or_lighting_cue == true"
 
     - name: stereo_not_required
       rule: "gameplay_completable_with_stereo_disabled == true"
 
+    - name: reduced_motion_depth_path
+      rule: "reduced_motion_preserves_depth_meaning == true"
+
   warning_message: |
     DEPTH CUE WARNING
     Element: {element_name}
-    Issue: Essential depth information lacks sufficient monocular cues.
+    Issue: Essential depth information lacks sufficient stereo-independent cues.
     Available cues: {cue_list}
     Missing: {missing_cues}
 
-    RECOMMENDATION: Add occlusion, relative size, or outline cues to convey depth.
+    RECOMMENDATION: Add static monocular cues first (occlusion/order, size/perspective,
+    outline/lighting). Motion parallax may reinforce depth, but reduced-motion and
+    stereo-disabled paths must preserve the same meaning.
 ```
 
 ### COGNITIVE_GATE (WARNING)

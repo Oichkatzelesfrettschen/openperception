@@ -1,0 +1,1787 @@
+J Vis
+. 2022 Apr 12;22(5):3. doi:
+10.1167/jov.22.5.3
+
+Search in PMC
+
+Search in PubMed
+
+View in NLM Catalog
+
+Add to search
+
+The experience of stereoblindness does not improve use of texture for slant perception
+
+Pin Yang
+
+Pin Yang
+
+1
+Shanghai Key Laboratory of Brain Functional Genomics, Affiliated Mental Health Center, School of Psychology and Cognitive Science, East China Normal University, Shanghai, China
+
+Find articles by
+Pin Yang
+
+1,
+1
+,
+Jeffrey A Saunders
+
+Jeffrey A Saunders
+
+2
+Department of Psychology, the University of Hong Kong, Hong Kong SAR
+
+Find articles by
+Jeffrey A Saunders
+
+2,
+2
+,
+Zhongting Chen
+
+Zhongting Chen
+
+3
+Shanghai Key Laboratory of Brain Functional Genomics, Affiliated Mental Health Center, School of Psychology and Cognitive Science, East China Normal University, Shanghai, China
+
+4
+Shanghai Changning Mental Health Center, Shanghai, China
+
+Find articles by
+Zhongting Chen
+
+3,
+4,
+3
+
+Author information
+
+Article notes
+
+Copyright and License information
+
+1
+Shanghai Key Laboratory of Brain Functional Genomics, Affiliated Mental Health Center, School of Psychology and Cognitive Science, East China Normal University, Shanghai, China
+
+2
+Department of Psychology, the University of Hong Kong, Hong Kong SAR
+
+3
+Shanghai Key Laboratory of Brain Functional Genomics, Affiliated Mental Health Center, School of Psychology and Cognitive Science, East China Normal University, Shanghai, China
+
+4
+Shanghai Changning Mental Health Center, Shanghai, China
+
+1
+Email:
+pin_yang@163.com
+
+2
+Email:
+jsaun@hku.hk
+
+3
+Email:
+ztchen@psy.ecnu.edu.cn
+
+Accepted 2022 Mar 12; Received 2021 Jul 16; Collection date 2022 Apr.
+
+Copyright 2022 The Authors
+
+This work is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
+
+PMC Copyright notice
+
+PMCID: PMC9012895  PMID:
+35412556
+
+Abstract
+
+Stereopsis is an important depth cue for normal people, but a subset of people suffer from stereoblindness and cannot use binocular disparity as a cue to depth. Does this experience of stereoblindness modulate use of other depth cues? We investigated this question by comparing perception of 3D slant from texture for stereoblind people and stereo-normal people. Subjects performed slant discrimination and slant estimation tasks using both monocular and binocular stimuli. We found that two groups had comparable ability to discriminate slant from texture information and showed similar mappings between texture information and slant perception (biased perception toward frontal surface with texture information indicating low slants). The results suggest that the experience of stereoblindness did not change the use of texture information for slant perception. In addition, we found that stereoblind people benefitted from binocular viewing in the slant estimation task, despite their inability to use binocular disparity information. These findings are generally consistent with the optimal cue combination model of slant perception.
+
+Keywords:
+ stereoblindness, slant perception, slant from texture, perceptual modulation
+Introduction
+
+Humans can perceive depth information via multiple cues from the environments, including binocular cues (e.g.,
+Harris & Watamaniuk, 1995
+;
+Julesz, 1971
+), monocular cues (e.g.,
+Knill, 1998b
+;
+Todd & Akerstrom, 1987
+), accommodation cues (e.g.,
+Watt, Akeley, Ernst, & Banks, 2005
+;
+Held, Cooper, O'Brien, & Banks, 2010
+), and haptic cues (e.g.,
+Hillis, Ernst, Banks, & Landy, 2002
+;
+Rosas et al., 2005
+). These cues have been well documented as effective information for perceiving depth. Moreover, when multiple cues are available, people can combine multiple cues to construct a more reliable percept rather than selectively use some of them (e.g.,
+Jacobs, 1999
+;
+Ernst & Banks, 2002
+;
+Hillis, Watt, Landy, & Banks, 2004
+;
+Knill & Saunders, 2003
+;
+Saunders & Backus, 2006
+;
+Saunders & Chen, 2015
+).
+
+But what occurs if some cue, such as stereopsis, is not available? Stereopsis is a strong depth cue for the normal population (e.g.,
+Johnston, Cumming, B. G., & Parker, 1993
+;
+Johnston, Cumming, & Landy, 1994
+;
+Datta, Foss, Grainge, Gregson, Zaman, Masud, Osborn, & Harwood, 2008
+). However, not everyone is able to use this cue. A subset of the population can be classified as stereoblind based on the inability to judge depth on the basis of binocular disparity alone. A number of studies have investigated stereoblindness and the various causes of it (e.g.,
+Dorman & van Ee, 2017
+;
+van Ee & Richard, 2002
+), and various clinical tests have been developed to identify deficits in stereo acuity (see review in
+Gadia Garipoli, Bonanomi, Albani, & Rizzi, 2014
+). However, there has been little research on how stereoblind people construct their perception of depth without stereopsis. Does the long-term experience of stereoblindness alter the use of other depth cues? The current study addresses this question.
+
+Stereoblindness and depth perception
+
+The existing literature has reported that 4% to 14% of the population have deficits in stereopsis. For example,
+Julesz (1971)
+ found that, among 150 students in MIT, about 4% of them could not detect binocular disparity, while the other 10% had great difficulty in using binocular disparity cues and could not report depth correctly.
+Rubin, West, Munoz, Bandeen-Roche, Zeger, Schein, & Fried (1997)
+ reported that 14% of the users (359 of 2520 subjects) could not see the depth with the maximum stereoscopic parallax of 450″. Those who have difficulties in perceiving depth through binocular cues have been termed stereoblind (
+Movshon, Chambers, & Blakemore, 1972
+), and this disability often results from strabismus (a turned eye) or amblyopia (lazy eye) during early childhood (
+Mitchell, 1980
+;
+Movshon & van Sluyters, 1981
+).
+
+Does such special experience also alter the use of other depth cues for stereoblind people? This question has not previously been directly addressed. Despite the abundant literature on stereoblind people, the majority of studies have focused on their basic visual function of stereopsis. Few studies have investigated how loss of stereopsis affects the ability to perceive depth from other cues.
+
+A number of previous studies have shown that some sensory or perceptual deficiencies are accompanied with compensatory improvement of cross-modal or within-modal functions. For example, previous studies have reported that blind people can have better auditory functions (e.g.,
+Lessard, Paré, & Lepore, 1998
+;
+Röder, Teder-Sälejärvi, Sterr, Rösler, Hillyard, & Neville, 1999
+) and tactile functions (
+Gizewski, Gasser De Greiff, Boehm, & Forsting, 2003
+); deaf people can also have enhanced visual functions (e.g.,
+Proksch & Bavelier, 2002
+;
+Rettenbach, Diller, & Sireteanu, 1999
+) and enhanced tactile functions (Levenan & Hamdorf, 2001). Compensation can also occur within visual modality. Some studies have found perceptual advantages of dichromats comparted to trichromats, such as better color camouflage breaking (
+Morgan, Adam, & Mollon, 1992
+), better spatial resolution (
+Abramov, Gordon, Wakeland, Tannazzo, Delman, & Galand, 2000
+;
+Gordon, Delman, Abramov, Tannazzo, Scuello, 2000
+), higher visual acuity (
+Jägle, de Luca, Serey, Bach, & Sharpe, 2006
+), and higher detection sensitivity to cone-isolating stimuli (
+Sharpe, De Luca, Hansen, Jägle, & Gegenfurtner, 2006
+). Such findings suggest that loss of stereopsis may similarly be accompanied by enhancement of other visual functions.
+
+There are at least two plausible ways by which the experience of stereoblindness might change the use of monocular depth information. The experience of stereoblindness might improve the ability to discriminate depth information or change the mapping between monocular cues and depth perception. These two possibilities are further explained in the following two subsections. In the present study, we tested for these two possibilities by comparing slant perception from monocular depth cues of stereoblind people and stereo-normal people.
+Sensitivity to monocular cues
+
+The experience of stereoblindness might modulate the ability to discriminate depth information from monocular cues. As mentioned above, sensory or perceptual deficiency can accompany with the enhancement of other perceptual functions. For example, dichromats develop better spatial resolution (
+Abramov et al., 2000
+;
+Gordon et al., 2000
+), higher visual acuity (
+Jägle et al., 2006
+), and higher detection sensitivity to cone-isolating stimuli (
+Sharpe et al., 2006
+) compared to trichromats. Although stereoblindness and colorblindness involve different mechanisms, these results demonstrate that low-level perceptual abilities can adapt in response to loss of sensory functions. Something similar might occur for stereoblind people.
+
+Because stereoblind people cannot perceive depth from stereo cues, they would have to rely on monocular cues (texture, shading, etc) more than normal people, which could cause stereoblind people to be overtrained on the use of monocular cues. Studies of perceptual learning have shown that overtraining on a task that uses visual information may permanently increase one's sensitivity to that kind of visual information (e.g.,
+Ball & Sekuler, 1987
+;
+Fine & Jacobs, 2000
+;
+Gold, Bennett, & Sekuler, 1999
+;
+Matthews & Welch, 1997
+; see
+Fine & Jacobs, 2002
+ for review). This has been demonstrated both for basic visual features (e.g., contrast, two-dimensional [2D] orientation, spatial frequency) and higher-level properties (e.g., facial identity, facial expression). A number of studies have also shown that sports expertise is correlated with better depth perception (e.g.,
+Garland & Barry, 1990
+;
+Quintana, Román, Calvo, & Molinuevo, 2007
+;
+Tanaka & Iwami, 2018
+), suggesting that sports training might improve depth perception. If stereoblindness forces observers to train their use of monocular depth cues, stereoblind people might develop better discrimination of (i.e. high sensitivity to) monocular depth cues like texture.
+
+There are also some reasons to doubt that stereoblindness would improve sensitivity to monocular depth cues. Discrimination of depth from monocular cues may depend on visual processing of low-level features that is already optimized. For example, discriminating slant from texture may depend on ability to discriminate spatial frequency variations across the image (e.g.,
+Todd, Thaler, Dijkstra, Koenderink, & Kappers, 2007
+;
+Chen & Saunders, 2020
+). There may not be much room for improvement in discriminating such features. In addition, monocular depth cues are important for people with normal vision, not just those who are stereoblind, so normal people may have already stereo-normal use of these cues.
+Reappraisal of monocular cues
+
+Another possible influence of stereoblindness would be changing the mapping between depth cues and perceived depth. For stereo-normal people, perceived depth is biased toward frontal without stereo cues (e.g.,
+Saunders & Chen, 2015
+;
+Chen & Saunders, 2019
+;
+Chen & Saunders, 2020
+). But is this the case for stereoblind people as well?
+
+Change in sensitivity to monocular cues could alter biases. According to an optimal cue combination account, perceptual bias is a consequence of veridical but weak monocular cues (especially at low slants) combined with either a frontal prior or conflicting frontal cues (
+Saunders & Chen, 2015
+). From this perspective, we would predict that stereoblind people have the same perceptual biases on slant perception from monocular cues if stereoblindness does not modulate sensitivity to monocular cues.
+
+The mapping between texture information and perceived depth could also be recalibrated for stereoblind people even if there was no change in sensitivity. Multiple studies have reported that manipulating haptic feedback can temporarily modulate weighting between cues in perceptual tasks (
+Atkins, Fiser, & Jacobs, 2001
+;
+Atkins, Jacobs, & Knill, 2003
+;
+Cesanek & Domini, 2019
+;
+Cesanek, Taylor, & Domini, 2021
+;
+Ernst, Banks, & Bülthoff, 2000
+) or modulate the use of prior information (
+Adams, Kerrigan, & Graf, 2010
+). Empirical evidence also shows that depth perception can be modulated by long-term changes in physiological status (
+Bhalla & Proffitt, 1999
+) or the experience of interaction in VR environment (
+Kelly, Hammel, Siegel, & Sjolund, 2014
+). According to the account of sensory-prediction errors (
+Cesanek & Domini, 2019
+;
+Cesanek, Taylor, & Domini, 2021
+), the biased mapping between slant information from monocular cues and perceived slant can cause conflicts between prediction based on perception and feedback from the environment, which then drives sensorimotor adaptation. For stereo-normal people, such conflict is temporary because stereo information is usually available and results in veridical percepts. However, stereoblind people would constantly face this conflict if they did not recalibrate the mapping. It is possible that the mapping would be recalibrated in stereoblind people to avoid this conflict.
+
+There are also reasons why such a remapping would not be expected. Although depth perception tends to be biased when limited monocular cues are available, perception may be more veridical in a natural environment with a full range of depth cues are available. Stereoblind people may not have large biases in depth perception in most situations when strong monocular cues like motion parallax are present. Calibration of depth perception for stereoblind people could be based on the integrated information from multiple sources. If so, stereoblind people might show similar pattern of biases as stereo-normal people when presented with isolated monocular depth cues like texture.
+The current study
+
+The current study investigates whether stereoblindness changes the use of monocular depth cues in the context of perception of three-dimensional (3D) slant from texture and stereo information. We recruited 24 stereoblind subjects in addition to 24 stereo-normal subjects and conducted an experiment that included a slant discrimination task, which measured sensitivity to binocular and monocular cues, and a slant estimation task, which measured the mapping between texture cues and slant perception.
+
+Figure 1
+ shows examples of monocular stimuli that provide texture information about 3D surface slant. Texture slant cues include the gradients of size and density of texture elements across the image, and the perspective foreshortening of image texture. The reliability and accuracy of perceived slant from texture is highly dependent on surface slant. Previous studies have found that slant discrimination is very poor when surfaces are near frontal (e.g.,
+Knill & Saunders, 2003
+;
+Hillis et al, 2004
+), and slant estimates show proportional more bias toward frontal when slant is low (e.g.,
+Todd et al, 2010
+;
+Saunders & Chen, 2015
+;
+Chen & Saunders, 2020
+). We tested stimuli with a range of simulating slants, including low slants that provide weak texture information (0°–30°) and higher slants that provide more reliable slant information (45°–75°).
+
+Figure 1.
+
+Open in a new tab
+
+Perspective views of two surfaces covered Voronoi textures with low slant (30°, left) and high slant (60°, right) relative to the frontal plane. The simulated field of view is 10°, as used in the present study. When slant is low, perceived slant from texture is strongly biased toward frontal and slant discrimination thresholds are large. When slant is higher, it is easier to perceive slant from texture and discrimination thresholds are smaller.
+
+Figure 2
+ illustrates the alternative hypotheses of this study. Using a slant discrimination task, we compared the sensitivities to slant from texture information between two groups to investigate whether the experience of stereoblindness enhanced the sensitivity to slant from texture information. We also used a slant estimation task to measure the mapping between texture information and slant perception (i.e., perceptual biases), allowing us to test whether stereoblindness induced a recalibration/remapping in slant perception from texture.
+
+Figure 2.
+
+Open in a new tab
+
+Illustrations of two hypothesized effects of stereoblindness on slant perception. (a) Stereoblind people might show higher sensitivity to slant from texture cues (lower discrimination thresholds) due to perceptual learning, in response to being unable to use disparity cues. (b) In the slant estimation task, stereoblind people might show less bias in the mapping between slant specified by texture and perceived slant, regardless of whether their sensitivity to slant from texture changes or not.
+Method
+
+Participants
+
+Forty-eight subjects participated in the experiment, 24 (14 female, 10 male) of whom were stereoblind and the other 24 (13 female, 11 male) were stereo-normal. All the subjects were first screened by the Randot stereo test. The stereo acuity of stereo-normal subjects was further confirmed via a computer-based screening program (see details in the subsection of Procedure). All the subjects had normal or corrected-to-normal visual acuity for both eyes. All subjects were naive as to the purpose of the study and were paid for their participation. One stereo-normal subject was excluded because of unusually low accuracy in the discrimination task. The presented results were based on analysis of the other 47 subjects.
+
+Potential stereoblind subjects were identified by a clinical Randot test (by Stereo Optical Co., Inc., Chicago, IL, USA). According to the previous literature (e.g.,
+Bohr & Read, 2013
+;
+Rubin et al., 1997
+), observers who failed to identify any of the shapes in the “shape” part of the Randot test would be classified stereoblind because the failure indicated that they either had no stereopsis or an absolute disparity thresholds of > 500″ in stereopsis. Over 2000 people at a campus of East China University were screened, and we found 36 who were classified as stereoblind based on our procedure and had normal or correct-to-normal visual acuity. Twenty-nine of these people agreed to participate in a future research study. We randomly chose 24 of these volunteers and invited them to participate in this study.
+
+We had no basis for estimating the size of possible effects because no previous studies have investigated slant from texture for stereoblind people, so we chose a sample size that is larger than typical for a psychophysics experiment. Psychophysics experiments often use small samples (<15) because effects tend to be large and reliable. We chose a larger sample of 24 stereoblind people and a corresponding sample of 24 stereo-normal people. These sample sizes would provide good power for detecting within-subjects effects (e.g., 80% power for Cohen's
+d
+z
+ = 0.6), and reasonable power to detect large effects across groups (e.g., 77% power for Cohen's
+d
+z
+ = 0.8).
+Apparatus & stimuli
+
+The stimuli of the computer-based stereotest and the experiment were both presented on an LCD monitor (ASUS VG278H; ASUS, Taipei, Taiwan) that had a viewable region of 59.2 cm × 33.6 cm, a resolution of 1920 × 1080 pixels and a refresh rate of 120 Hz (60 Hz for each eye). We used a pair of shutter glasses (NVIDIA 3D Vision 2; NVIDIA Corp., Santa Clara, CA, USA) to present left and right stereo images to the two eyes, respectively. Interocular distance was measured for each individual subject to compute accurate stereo images. Subjects were seated at a distance of 100 cm to the screen and set their chins on a chin rest to restrain their head movement. With this viewing distance, the stimulus resolution was 56 pixels per degree of visual angle.
+
+To eliminate ghosting, we adjusted the binocular stimuli to counteract the effects of the partially visible image from the opposite eye. The luminance was slightly reduced at pixels where the ghost image had high luminance, and slightly increased at pixels where the ghost image had low luminance, which effectively made the ghost images invisible. Before the experiment, we performed a psychophysical procedure to determine how much compensation was required to eliminate ghosting at different locations in the image. The stimulus images were adjusted on a pixel-by-pixel basis. Subjectively, it was hard to detect any ghosting in the resulting binocular images.
+
+The stimuli in the experiment were computer-generated perspective images of the slanted planar surfaces, which were rendered with OpenGL using a NVIDIA Quadro 600 graphics card, and antialiased with subpixel resolution. The surface textures were Voronoi patterns, similar to the textures used in our previous study (
+Saunders & Chen, 2015
+).
+
+The surfaces were simulated to be slanted around a horizontal axis (i.e., receding in the vertical direction) by six different amounts, from low slant conditions (0°, 15°, 30°) to high slant conditions (45°, 60°, 75°). The upper part of the surface was always simulated to be away from the observer to make the hand estimation task more natural. The scale of the texture was varied randomly across trials so that the projected sizes of texture elements could not be used as a reliable cue for inferring surface slants. The virtual surfaces were viewed through a circular aperture on a black board that constrained the field of view in each to be approximately circular regions with diameter of 10°.
+
+To record hand orientation in the slant estimation task, we used a DOG2 MEMS-Series inclinometer attached to a rigid board that was worn on the palm of a subject's right hand. The inclinometer recorded a 3D slant and tilt at a rate of 100 Hz. The palm board was lightweight and detached from any other surfaces, so the subject could move the right hand freely.
+Procedure
+
+Stereoblindness screening
+
+We first used the Randot stereotest to screen the subjects in stereoblindness before their participation to the experiment. A subject would be classified as stereoblind if they recognized none of the shapes in the “shape” part of Randot stereotest. This failure indicated that the subject could not identify the stereo information with a binocular disparity of 500″. Subjects who recognized all the shapes performed an additional computer-based stereo test to further confirm that their ability to use stereo information was in the normal range. On each trial of this test, two small rings were presented with different simulated depths and the subject reported which circle appeared closer. The differences in depth ranged between 0.3 cm and 1.2 cm. To be classified as stereo-normal, subject needed to make correct answers for 18 out of 20 trials, indicating that they could discriminate a depth difference of 0.4 cm or less at a viewing distance of 100 cm (≈ 49.3 arcseconds of disparity).
+
+For the formal experiment, each subject finished two tasks in a fixed order. They first finished the slant estimation task and then finished the slant discrimination task.
+Slant discrimination task
+
+In the discrimination task, subjects judged which of two surfaces had a larger slant (see
+Figure 3
+a). On each trial, a fixation cross was first presented for 500 ms, and then two slanted surfaces were sequentially presented with a 500 ms interstimulus interval. The first surface was presented for 2 s, and the second surface remained visible until the subjects responded. The subject was asked to press UP if the first surface was perceived more slanted (i.e., more deviation from frontal) and press DOWN if the second was perceived more slanted. On each trial, one of the two surfaces was the standard stimulus, and the other surface was the probe stimulus, which had a slant that varied around the standard. The slant of the probe surface was determined adaptively using the minimum expected entropy procedure (
+Saunders & Backus, 2006
+). The order of standard and probe surfaces was randomized.
+
+Figure 3.
+
+Open in a new tab
+
+Illustrations of (a) the discrimination task and (b) the slant estimation task. On each trial of the slant discrimination task, two simulated planar surfaces with texture were sequentially presented and subjects judged which surface was more slanted. On each trial of the slant estimation task, the subject viewed a simulated surface and adjusted the right hand to align with the surface. A palm board with an inclinometer was attached to the subject's right hand. The display was viewed through a round aperture that constrained the field of view to 10°. Stereo shutter glasses were used to present different images to the left and right eyes in binocular conditions. In monocular conditions, subjects wore an eye patch over their nondominant eye.
+The slant discrimination task included two blocks, one of which was binocular and the other monocular. Half of the subjects first finished the binocular block, and the other half first finished the monocular one. In each block, two standard slant levels (30°, 60°) were included, and each standard slant level had 75 trials. The trials of different standard slant levels were randomly intermixed. Each subject performed a total of 300 slant discrimination trials, which took about 30 minutes to complete.
+Slant estimation task
+
+In the slant estimation task, subjects aligned their right hand to match the orientation of a slanted surface (see
+Figure 3
+b). On each trial, a fixation cross was first presented, and the subject was asked to put the palm on the desk and press SPACE by the left hand to continue. Then, a textured slanted surface was presented, and the subject moved their hand to align with the surface. The surface did not appear until the subject pressed SPACE to confirm the alignment and complete the trial. If subjects’ hand had a significant tilt, it would distort the report of the matching slant, so we required that the tilt be close to zero. Alignment would only be confirmed when the tilt of the palm was between −5° and +5°; otherwise, a sound warning was presented, and the subject needed to adjust and reconfirm the alignment.
+
+Each subject performed four blocks in the slant task, two of which were in the binocular viewing conditions and the other two in the monocular viewing conditions. Half of the subjects first finished the binocular blocks, and the other half first finished the monocular ones. Each of six slant conditions (i.e. 0°,15°,30°,45°,60°,75°) was tested by 16 repetitions in one block, and the order of the trials was fully randomized within the block. It took about seven minutes for each subject to finish one block. The slant estimation task contained 384 trials in total for each subject and took about half an hour.
+
+At the start of each block, a subject performed a calibration task to estimate the mapping between perceived angular inclination and hand orientation alignment. The subject was presented with 2D oriented lines in the frontal plane and asked to match the slant of their hand in the sagittal plane to the angular deviation of the lines from vertical. The 2D orientations varied from 0° to 90°. Subjects’ performance in the calibration task is presented in the
+Appendix
+. We found that hand orientation in the calibration task was an approximately linear function of line orientation over the range from 10° to 80° but often deviated from the linear pattern for the cases of lines that were exactly vertical (0°) or horizontal (90°). We therefore modeled the mapping from the perceived angular inclination to hand orientation as a linear transformation by performing linear regression fits to the results from 10° to 80° orientations. We used the inverse of the linear transformations to normalize the raw hand orientations and reduce the constant biases in the estimation task before performing further analysis.
+Results
+
+Slant discrimination
+
+The responses in each condition of the slant experiment were fitted using a cumulative Gaussian function
+Φ
+ (
+µ
+,
+σ
+2
+), in which
+µ
+ was fixed to zero and the estimated
+σ
+ was used as the measure of the threshold for each subject and each condition.
+
+Figure 4
+ shows the mean thresholds from different conditions and groups. A three-way mixed design analysis of variance (ANOVA) was conducted to test statistical significance of the effects on threshold. The main effect of slant was significant (
+F
+(1,46) = 292.67,
+p
+ < 0.001, partial
+η
+2
+ = 0.864) and so was the main effect of viewing condition (
+F
+(1,46) = 5.74,
+p
+ = 0.021, partial
+η
+2
+ = 0.111). These effects indicated that thresholds were generally lower at high slants and with binocular viewing. The main effect of group was not significant (
+F
+(1,46) = .242,
+p
+ = 0.625, partial
+η
+2
+ = 0.005). We also found two significant interactions (slant × viewing:
+F
+(1,46) = 10.96,
+p
+ = 0.002, partial
+η
+2
+ = 0.192; slant × viewing × group:
+F
+(1,46) = 7.05,
+p
+ = 0.011, partial
+η
+2
+ = 0.133). The other interactions were not significant (
+F
+ < 2.50,
+p
+ > 0.120, partial
+η
+2
+ < 0.051). The significant slant × viewing interaction indicated that the thresholds differed between the viewing conditions at the low slant (30°), but not at the high slant (60°). The three-way interaction further indicated that the threshold differences between viewing conditions at 30° occurred on the stereo-normal group, but not on the stereoblind group. The lack of the viewing effect at high slants (i.e., 60°) here was predictable because, at higher slants, texture cues become more reliable and has higher weight in slant perception than disparity cues (
+Knill, 1998a
+;
+Knill & Saunders, 2003
+;
+Hillis et al., 2004
+).
+
+Figure 4.
+
+Open in a new tab
+
+Mean slant discrimination thresholds of stereo-normal subjects (left) and stereoblind subjects (right) in different slant and viewing conditions.
+Error bars
+ depict ± 1 standard error.
+To compare the benefit from stereo for the normal and stereoblind groups, we performed 2 (viewing) × 2 (group) ANOVAs for the low slant and high slant conditions separately. In the low slant conditions, there was no significant main effect of group (
+F
+(1,46) = 0.510,
+p
+ = 0.479, partial
+η
+2
+ = 0.011). The main effect of viewing was significant (
+F
+(1,46) = 4.402,
+p
+ = 0.041, partial
+η
+2
+ = 0.157), indicating that the stereoblind group had higher thresholds than the stereo-normal group in general. More importantly, the interaction was significant as well (
+F
+(1,46) = 8.431,
+p
+ = 0.006, partial
+η
+2
+ = 0.155), which indicates that stereo provided more benefit to the normal population than the stereoblind population, as expected. For high slants, there was no significant main effect or interaction observed (viewing:
+F
+(1,46) = 0.502,
+p
+ = 0.482,
+η
+2
+ = 0.011; group:
+F
+(1,46) < .001,
+p
+ = 0.993, partial
+η
+2
+ < 0.001; viewing × group:
+F
+(1,46) = 0.004,
+p
+ = 0.947, partial
+η
+2
+ < 0.001), indicating no evidence that stereo information selectively improved discrimination for the normal group at high slants.
+
+We also analyzed performance in only the monocular conditions to test whether the stereoblind group performed better than the normal group. A 2 × 2 ANOVA was conducted to analyze slant estimates in monocular viewing conditions. The main effect of slant was significant (
+F
+(1,46) = 266.03,
+p
+ < 0.001,
+η
+2
+ = 0.853), as expected. But there was no main effect of group (
+F
+(1,46) = 0.767,
+p
+ = 0.386,
+η
+2
+ = 0.016) or interaction between group and slant (
+F
+(1,46) = 0.372,
+p
+ = 0.545,
+η
+2
+ = 0.008). The results indicate that the overall performance of normal and stereoblind groups was equivalent.
+
+In short, there were two main findings from the discrimination task. First, stereoblind people performed worse at slant discrimination in binocular conditions compared to stereo-normal people, which confirmed the validity of our stereoblindness screening. Second, the thresholds in the monocular viewing conditions did not significantly differ between the two groups, indicating that the stereoblind people did not develop higher sensitivity to texture cues because of the loss of binocular cues. At high slants, we did not find significant effects of viewing condition or group. This is possibly because texture cues were more reliable than stereo cues so that the influence of stereo information became limited and hard to be observed. This has also been observed in previous studies (
+Knill & Saunders, 2003
+;
+Hillis et al., 2004
+).
+Slant estimation
+
+Figure 5
+ shows how mean slant estimates varied as a function of simulated slants in different viewing conditions for two groups, respectively. For the stereo-normal group, the estimates show different trends in two viewing conditions: the trend in binocular viewing conditions appeared close to linear while estimates with monocular viewing showed frontal biases at low slants. On the other hand, the stereoblind groups showed comparable frontal bias trends of estimates in two viewing conditions, and the trend in the monocular viewing conditions of the stereo-normal group was similar to the trends of the stereoblind group.
+
+Figure 5.
+
+Open in a new tab
+
+Mean slant estimates as a function of simulated slants of stereo-normal subjects (left) and stereoblind subjects (right) in the binocular viewing condition (upper) and the monocular condition (lower).
+Error bars
+ depict ± 1 standard error.
+To compare the patterns of slant estimates in different viewing conditions, we conducted separate two-way (viewing × slant) repeated-measures ANOVAs for the stereo-normal and stereoblind groups.
+
+For the stereo-normal group, we found both significant main effects of slant (
+F
+(5,115) = 291.85,
+p
+ < 0.001, partial
+η
+2
+ = 0.927) and viewing (
+F
+(1,23) = 15.28,
+p
+ < 0.001, partial
+η
+2
+ = .399) and significant interaction between slant and viewing (
+F
+(5,115) = 21.67,
+p
+ < 0.001, partial
+η
+2
+ = 0.485). Further pairwise tests found that slant estimates in the binocular viewing conditions was significantly lower at slant 0° (
+t
+(23) = 2.60,
+p
+ = 0.016, Cohen's
+d
+ = 0.532), and higher at slants 30° to 75° than in the monocular viewing conditions (
+t
+(23) > 4.14,
+p
+ < 0.001, Cohen's
+d
+ > 0.845). At slant 15°, the mean slant estimate appeared higher in binocular viewing, but the effect was not significant (
+t
+(23) = 1.975,
+p
+ = 0.060, Cohen's
+d
+ = 0.403).
+
+For the stereoblind group, ANOVA showed that both main effects as well as the interaction were significant (slant:
+F
+(5,115) = 167.67,
+p
+ < 0.001, partial
+η
+2
+ = 0.879; viewing:
+F
+(1,23) = 6.36,
+p
+ = 0.019, partial
+η
+2
+ = 0.217; slant × viewing:
+F
+(5,115) = 4.75,
+p
+ = 0.001, partial
+η
+2
+ = 0.171). The significant main effect of viewing indicated that binocular viewing made slant perception more veridical even for the stereoblind group. Pairwise tests found that slant estimates in the binocular viewing conditions were significantly higher at slants 30°, 45°, and 75° compared to estimates in the monocular viewing conditions (
+t
+ (23) > 2.21,
+p
+ < 0.037, Cohen's
+d
+ > 0.452). At other slants, the differences were not significant (
+t
+(23) < 1.20,
+p
+ > 0.629, Cohen's
+d
+ < 0.244). As
+Figure 5
+ shows, these differences were toward more veridical estimates with binocular viewing. These results show that the stereoblind group also obtained benefits in slant perception from binocular presentation, though the effect was weaker compared to the stereo-normal group.
+
+As in the discrimination task, we also compared slant estimates for two groups in the monocular viewing conditions. A two-way ANOVA showed no main effect of group and no interaction between slant and group (group:
+F
+(1,46) = 0.790,
+p
+ = 0.379, partial
+η
+2
+ = .017; group × slant:
+F
+(5,230) = 1.927,
+p
+ = 0.091, partial
+η
+2
+ = 0.040). The main effect of slant was significant as expected (
+F
+(5,230) = 300.01,
+p
+ < 0.001, partial
+η
+2
+ = 0.867). These results provide no evidence that stereoblind people have developed different mappings between texture information and slant perception compared to the stereo-normal group.
+
+In brief, we observed that binocular viewing provided advantages to slant perception in both groups compared to monocular viewing. However, the effects of viewing were different. For the stereo-normal group, slant estimates had a strong nonlinear pattern as a function of simulated slant with monocular viewing but were close to linear with binocular viewing. For the stereoblind group, binocular viewing also provided some benefits, but the effect was much smaller and did not change the nonlinear pattern as a function of slant. In the next subsection, we present analyses of perceptual gains to further investigate the nonlinearity of perceived slant.
+Perceptual gain of slant estimation
+
+To better compare the biases in perceived slants between tasks we computed perceptual gains from the slant estimates. The main complication with using the slant estimates directly is that constant biases due to the estimation task could vary across individuals and viewing conditions. Although we normalized the estimates based on results from a calibration procedure, this probably did not fully correct for constant biases. To deal with this issue, we used the same approach as in
+Saunders and Chen (2015)
+. We assumed that frontal surfaces (i.e., 0°) were accurately perceived as frontal and calculated the perceptual gain g(S) relative to frontal:
+
+g
+S
+=
+H
+S
+-
+H
+0
+/
+S
+
+in which S represents simulated slant S, and H(S) represents the mean hand orientation matched to surfaces with slant S, and H(0) is the mean hand orientation for frontal surfaces. This calculation should remove the influence of any constant bias in the mapping from perceived slant to hand orientation.
+
+Figure 6
+ shows the mean perceptual gains as a function of slant for each subject and viewing condition. In the binocular viewing conditions of the stereo-normal group, the perceptual gains appeared similar and near one across slant conditions, indicating that the slant perception was close to veridical. For the other 3 conditions, one can see that mean perceptual gains were relatively low for surfaces near frontal and increased for surfaces with larger simulated slant. We performed four repeated-measures ANOVAs to analyze the pattern of perceptual gains in different conditions. The slant effect was not significant in binocular viewing condition of the stereo-normal group (
+F
+(4,92) = 0.703,
+p
+ = 0.592, partial
+η
+2
+ = 0.030), but significant in the other conditions (
+F
+(4,92) > 18.50,
+p
+ < 0.001, partial
+η
+2
+ > 0.44). For the conditions in which the slant effect was significant, we further checked the linear and quadratic trend of the perceptual gains. We found that the linear trends were all significant (
+F
+(1,23) > 23.32,
+p
+ < 0.001, partial
+η
+2
+ > 0.50) but there was no significant quadratic trend in any condition (
+F
+(1,23) < 2.26,
+p
+ > 0.147, partial
+η
+2
+ < 0.09).
+
+Figure 6.
+
+Open in a new tab
+
+(a) Mean perceptual gains of slant estimates for the stereo-normal subjects and stereoblind subjects in different viewing and slant conditions. (b) The difference between mean perceptual gains in different viewing conditions for stereo-normal and stereoblind groups, respectively.
+Error bars
+ depict ± 1 standard error.
+In addition, we performed separate repeated-measures ANOVAs to investigate how viewing conditions modulated the perceptual gains for stereoblind and stereo-normal groups. For the stereo-normal group, we found two significant main effects of slant and viewing (viewing:
+F
+(1,23) = 22.48,
+p
+ < 0.001, partial
+η
+2
+ = 0.494; slant:
+F
+(4,92) = 85.79,
+p
+ < 0.001, partial
+η
+2
+ = 0.789) and a significant interaction between viewing and slant (
+F
+(4,92) = 21.78,
+p
+ < 0.001, partial
+η
+2
+ = 0.486). Pairwise tests found that perceptual gains were higher with binocular viewing at each slant (
+t
+(23) > 5.56,
+p
+ < 0.001, Cohen's
+d
+ > 1.13), but the difference became smaller with the increase of simulated slant (
+Figure 6
+b, left). For the stereoblind group, we also found two significant main effects (viewing:
+F
+(1,23) = 9.74,
+p
+ < 0.001, partial
+η
+2
+ = 0.297; slant:
+F
+(4,92) = 41.69,
+p
+ < 0.001, partial
+η
+2
+ = 0.644), as well as a significant interaction (
+F
+(4,92) = 5.49,
+p
+ = 0.001, partial
+η
+2
+ = 0.193). The pairwise test showed that the perceptual gains were higher with binocular viewing at slants 30°, 45°, and 75° (30°:
+t
+(23) = 3.685,
+p
+ = 0.001, Cohen's
+d
+ = 0.752; 45°:
+t
+(23) = 2.809,
+p
+ = 0.010, Cohen's
+d
+ = 0.573; 75°:
+t
+(23) = 2.378,
+p
+ = 0.026, Cohen's
+d
+ = 0.485) but not at the other slants (
+t
+(23) < 1.53,
+p
+ > 0.14, Cohen's
+d
+ < 0.312).
+
+These analyses, combined with the analyses on slant estimates, clearly show that the effects of binocular viewing were substantially different for the stereoblind and stereo-normal groups. For the stereo-normal group, binocular viewing systematically changed the pattern of the mapping between simulated slant and slant estimates. For the stereoblind group, the patterns were similar in two viewing conditions, but their perceived slant was slightly increased with binocular viewing.
+
+We also compared the perceptual gains for two groups in the monocular viewing conditions and did not find either a significant main effect of group (
+F
+(1,46) = 2.87,
+p
+ = 0.097, partial
+η
+2
+ = 0.059) or a significant interaction between slant and group (
+F
+(4,92) = 1.28,
+p
+ = 0.278, partial
+η
+2
+ = 0.027). Our results provide no evidence that stereoblind people had larger perceptual gain from texture cues compared to stereo-normal people. The main effect of slant was significant as expected (
+F
+(4,184) = 5.49,
+p
+ = 0.001, partial
+η
+2
+ = 0.193).
+Discussion
+
+Stereoblindness and use of texture cues
+
+In the present study, we investigated whether the experience of stereoblindness changes the use of texture cues in slant perception by testing both performances in slant discrimination and slant estimation tasks. We hypothesized that the experience of stereoblindness might (1) improve the capability of discriminating slant from texture cues or (2) result in the remapping between slant information from texture and slant perception. However, neither of these hypotheses was consistent with our findings. The stereoblind subjects had sensitivities to slant from texture cues that were comparable to stereo-normal subjects. Two groups also had similar mapping patterns between simulated slants and slant estimates in the monocular viewing conditions. These results indicate that the experiences of stereoblindness did not substantially modulate use of texture cues in slant perception.
+
+Although a number of studies have shown that overuse of specific sensory information can increase the sensitivity to this information (e.g.,
+Ball & Sekuler, 1987
+;
+Fine & Jacobs, 2000
+;
+Gold et al., 1999
+;
+Matthews & Welch, 1997
+), our findings were not consistent with either of these hypotheses.
+
+This could be because stereoblind people rely more on other monocular cues rather than texture cues. Texture on slanted surfaces includes multiple sources, such as texture compression, texture scaling and perspective convergence (e.g.,
+Knill, 1998b
+;
+Saunders & Backus, 2006
+;
+Chen & Saunders, 2020
+), that can effectively contribute to indicate slant information. However, it is not the only option for stereoblind people to extract 3D information from the real environment. For example, surface orientation could be determined using motion parallax (e.g.,
+Norman, Crabtree, Bartholomew, & Ferrell, 2009
+;
+Louw, Smeets, & Brenner, 2007
+) or foreshortening of boundary contours (e.g.,
+Saunders & Knill, 2001
+;
+Durgin, Li, & Hajnal, 2010
+). It is not necessary for stereoblind people to exclusively rely on texture information for depth perception.
+
+Another possibility is that stereo-normal people have optimized their use of texture information for slant discrimination. Whether stereo-normal people and stereoblind people experience different interactions between depth perception and feedback from environments, one would not expect that the mere exposure of texture information differed between them in daily life. It is possible that such exposure is sufficient to develop a close-to-optimal use of texture information for depth perception, which has little space to be improved.
+
+In this study, we observed that stereoblind people showed a similar pattern of frontal biases as observed in stereo-normal people. This is consistent with the optimal cue combination account by
+Saunders and Chen (2015)
+. According to this account, slant biases in monocular viewing conditions are an effect of a veridical but weak slant representation from texture combined with a frontal cue (e.g., accommodation) or prior information. The predicted bias would depend only on the reliability of the cues and prior. Because we did not find evidence of higher sensitivity to texture information for stereoblind people, the optimal cue combination account would predict the same biases in slant estimates for stereo-normal and stereoblind people, as observed in this study.
+
+Stereo-normal observers have close to veridical slant perception with binocular viewing, minimizing sensory-prediction errors and making it not necessary for perceived slant from monocular cues to be well calibrated. However, stereoblind people may experience a long-term conflict between biased slant perception from texture and feedback from the real environment, so it seems necessary for stereoblind people to recalibrate the mapping between texture information and perceived slant, and these people can use other sensory and perceptual inputs (e.g., haptic inputs, motion parallax) to implement such remapping. This prediction was not observed in this study.
+
+We also observed no evidence for a remapping between texture slant information and perceived slant. The sensory-prediction error account proposes that sensory-prediction error drives sensorimotor adaptation, which reconstructs the mapping between sensory input and perception toward veridical environment. We hypothesized that stereoblind people might show less bias in perceived slant from texture because the perceptual mapping might be calibrated based on monocular cues. Contrary to this prediction, we observed similar frontal biases for stereoblind and stereo-normal people.
+
+The similar biases for stereoblind and stereo-normal people might be because stereoblind people do not experience large conflicts in natural conditions. Without stereopsis, stereoblind people can still obtain ample depth information in real environments, including texture information, motion parallax, contour information, etc. Although depth perception from one specific monocular cue might be systematically biased, stereoblind people could combine multiple monocular cues to obtain a relatively veridical percept without stereopsis. In this case, reappraisal of texture information would not be necessary. To test this possibility, we would need to investigate depth perception of stereoblind people in a more ecological environment.
+
+Another possible reason why remapping did not occur is that the visuomotor system could adapt implicitly using the monocular texture information, allowing accurate performance even if slant perception remained biased. A number of empirical studies have shown a dissociation between visual perception and visuomotor control (see review in
+Goodale, 2014
+), and this could have occurred for stereoblind people. To test this possibility, one can compare stereoblind people's performance in slant perception tasks and in visuomotor tasks (e.g., reaching-to-grasp and object placement tasks).
+Binocular information: More than stereopsis
+
+An interesting finding of this study was that stereoblind people, who could not process stereopsis, also benefitted from binocular viewing in slant estimation. This finding indicates that we extract more than stereopsis from binocular viewing. Besides stereopsis, one other important binocular cue for depth perception is convergence. Previous studies have shown that visually normal people can use convergence as a cue to promote depth information (e.g.,
+Foley & Richard, 1972
+;
+Richards & Miller, 1969
+). Recently, a number of studies (e.g.,
+Banks, Kim, & Shibata, 2013
+;
+Mon-Williams, Tresilian, McIntosh, & Milner, 2001
+;
+Naceri, Moscatelli, & Chellali, 2015
+) have also pointed out that the convergence-accommodation conflict by depth simulation makes depth perception less veridical, indirectly indicating the contribution of convergence to depth perception. If stereoblind people are able to use convergence information, it could explain why we observed benefits from binocular viewing even for people with deficits in fusing binocular information.
+
+Some benefit from binocular viewing might result from the combination of monocular texture information from two eyes. If the noise in texture measurements was independent in each eye's view, then combining the information would reduce noise of slant estimates and improve sensitivity. On the other hand, if the noise in texture measurements was highly correlated, combining the information from the two eyes would provide little benefit (
+Oruç, Maloney, & Landy, 2003
+). If the texture slant information from the two eyes is only partially correlated, binocular viewing would be expected to improve estimates of slant even without stereopsis. This might explain why stereoblind people showed some benefit from binocular viewing in our study.
+Conclusion
+
+The present study focuses on whether and how the experience of stereoblindness modulates use of depth cues other than stereopsis, which has received little previous research. We tested this using both slant discrimination and slant estimation tasks, and found that stereoblind people and stereo-normal people had comparable sensitivity to slant from texture and similar non-linear mappings between texture information and slant perception (i.e., biased perception toward frontal surface with texture information indicating low slants). These findings are generally consistent with the optimal cue combination account by
+Saunders and Chen (2015)
+. In addition, we found that binocular viewing is beneficial to slant perception for stereoblind people, indicating that binocular viewing provides depth information beyond stereopsis.
+Acknowledgments
+
+Supported by grants from the China Postdoctoral Science Foundation (Grant No. 2018M630410, 2019T1203).
+
+Commercial relationships: none.
+
+Corresponding author: Zhongting Chen.
+
+Email: ztchen@psy.ecnu.edu.cn.
+
+Address: Shanghai Key Laboratory of Brain Functional Genomics, Affiliated Mental Health Center, School of Psychology and Cognitive Science, East China Normal University, Shanghai, China.
+Appendix A: Calibration task
+
+In this appendix, we present results from the calibration task used to estimate the mapping from hand orientations to perceived angles. Subjects were presented with 2D lines with various orientations relative to vertical and attempted to match the 3D slant of their hand to the 2D angle.
+Figure A1
+ plots the mean hand orientations averaged across subject as a function of line orientation, and
+Figure A2
+ plots the results from individual subjects. One can see that hand orientations varied in an approximately linear manner for line orientations between 10° and 80° but often deviated from the linear pattern for the cases of the lines that were vertical (0°) or horizontal (90°).
+
+Figure A1.
+
+Open in a new tab
+
+Mean hand orientations in the calibration task as a function of 2D line orientations.
+Black lines
+ show results from calibration before stereo binocular viewing blocks, and
+red lines
+ show results from calibration before monocular viewing blocks.
+Dark lines
+ show the averages across subjects and light color lines show results from individual subjects.
+Figure A2.
+
+Open in a new tab
+
+Individual subjects’ performance in the calibration task. The graphs plot the mean hand orientation as a function of 2D line orientation. The top graphs show results from the 23 stereoblind subjects (
+black
+), and the bottom graphs show results from the 24 stereo-normal subjects.
+Solid lines
+ show results from the calibration before binocular viewing, and
+dashed lines
+ show results from the calibration before monocular viewing.
+References
+
+Abramov, I., Gordon, J., Wakeland, M., Tannazzo, T., Delman, H., & Galand, R. (2000). Suprathreshold binocular contrast summation.
+Investigative Ophthalmology & Visual Science Supplement
+
+,
+
+41, S731.
+ [
+Google Scholar
+]
+
+Adams, W. J., Kerrigan, I. S., & Graf, E. W. (2010). Efficient visual recalibration from either visual or haptic feedback: the importance of being wrong.
+Journal of Neuroscience
+
+,
+
+30(44), 14745–14749.
+ [
+DOI
+] [
+PMC free article
+] [
+PubMed
+] [
+Google Scholar
+]
+
+Atkins, J. E., Fiser, J., & Jacobs, R. A. (2001). Experience-dependent visual cue integration based on consistencies between visual and haptic percepts.
+Vision Research
+
+,
+
+41(4), 449–461.
+ [
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+
+Atkins, J. E., Jacobs, R. A., & Knill, D. C. (2003). Experience-dependent visual cue recalibration based on discrepancies between visual and haptic percepts.
+Vision Research
+
+,
+
+43(25), 2603–2613.
+ [
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+
+Ball, K., & Sekuler, R. (1987). Direction-specific improvement in motion discrimination.
+Vision Research
+
+,
+
+27, 953–965
+ [
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+
+Banks, M. S., Kim, J., & Shibata, T. (2013). Insight into vergence/accommodation mismatch. In
+Head-and Helmet-Mounted Displays XVIII: Design and Applications
+ (Vol. 8735, p. 873509). International Society for Optics and Photonics.
+ [
+DOI
+] [
+PMC free article
+] [
+PubMed
+] [
+Google Scholar
+]
+
+Bhalla, M., & Proffitt, D. R. (1999). Visual–motor recalibration in geographical slant perception.
+Journal of Experimental Psychology: Human Perception and Performance
+
+,
+
+25(4), 1076–1096.
+ [
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+
+Bohr, I., & Read, J. C. (2013). Stereoacuity with Frisby and revised FD2 stereo tests.
+PLoS One
+
+,
+
+8(12), e82999.
+ [
+DOI
+] [
+PMC free article
+] [
+PubMed
+] [
+Google Scholar
+]
+
+Cesanek, E., & Domini, F. (2019). Depth cue reweighting requires altered correlations with haptic feedback.
+Journal of Vision
+
+,
+
+19(14), 3–3.
+ [
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+
+Cesanek, E., Taylor, J. A., & Domini, F. (2021). Persistent grasping errors produce depth cue reweighting in perception.
+Vision Research
+
+,
+
+178, 1–11.
+ [
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+
+Chen, Z., & Saunders, J. A. (2019). Perception of 3D slant from textures with and without aligned spectral components.
+Journal of Vision
+
+,
+
+19(4), 7–7.
+ [
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+
+Chen, Z., & Saunders, J. A. (2020). Multiple texture cues are integrated for perception of 3D slant from texture.
+Journal of Vision
+
+,
+
+20(7), 14–14.
+ [
+DOI
+] [
+PMC free article
+] [
+PubMed
+] [
+Google Scholar
+]
+
+Datta, S., Foss, A. J., Grainge, M. J., Gregson, R. M., Zaman, A., Masud, T., & Harwood, R. H. (2008). The importance of acuity, stereopsis, and contrast sensitivity for health-related quality of life in elderly women with cataracts.
+Investigative Ophthalmology & Visual Science
+
+,
+
+49(1), 1–6.
+ [
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+
+Dorman, R., & van Ee, R. (2017). 50 years of stereoblindness: Reconciliation of a continuum of disparity detectors with blindness for disparity in near or far depth.
+i-Perception
+
+,
+
+8(6), 2041669517738542.
+ [
+DOI
+] [
+PMC free article
+] [
+PubMed
+] [
+Google Scholar
+]
+
+Durgin, F. H., Li, Z., & Hajnal, A. (2010). Slant perception in near space is categorically biased: Evidence for a vertical tendency.
+Attention, Perception, & Psychophysics
+
+,
+
+72(7), 1875–1889.
+ [
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+
+Ernst, M. O., & Banks, M. S. (2002). Humans integrate visual and haptic information in a statistically optimal fashion.
+
+Nature,
+
+415(6870), 429–433.
+ [
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+
+Ernst, M. O., Banks, M. S., & Bülthoff, H. H. (2000). Touch can change visual slant perception.
+Nature Neuroscience
+, 3(1), 69–73.
+ [
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+
+Fine, I., & Jacobs, R. A. (2000). Perceptual learning for a pattern discrimination task.
+Vision Research
+
+,
+
+40, 3209–3230.
+ [
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+
+Fine, I., & Jacobs, R. A. (2002). Comparing perceptual learning across tasks: A review.
+Journal of Vision
+
+,
+
+2(2), 5–5.
+ [
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+
+Foley, J. M., & Richards, W. (1972). Effects of voluntary eye movement and convergence on the binocular appreciation of depth.
+Perception & Psychophysics
+
+,
+
+11(6), 423–427.
+ [
+Google Scholar
+]
+
+Gadia, D., Garipoli, G., Bonanomi, C., Albani, L., & Rizzi, A. (2014). Assessing stereo blindness and stereo acuity on digital displays.
+Displays
+
+,
+
+35(4), 206–212.
+ [
+Google Scholar
+]
+
+Garland, D. J., & Barry, J. R. (1990). Sport expertise: The cognitive advantage
+.
+
+Perceptual and Motor Skills
+
+,
+
+70(3), 1299–1314.
+ [
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+
+Gizewski, E. R., Gasser T., De Greiff, A., Boehm, A., & Forsting, M. (2003). Cross-modal plasticity for sensory and motor activation patterns in blind subjects.
+Neuroimage
+, 19(3), 968–975.
+ [
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+
+Gold, J., Bennett, P. J., & Sekuler, A. B. (1999). Signal but not noise changes with perceptual learning.
+Nature
+
+,
+
+402, 176–178.
+ [
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+
+Goodale, M. A. (2014). How (and why) the visual control of action differs from visual perception.
+Proceedings of the Royal Society B: Biological Sciences
+
+,
+
+281(1785), 20140337.
+ [
+DOI
+] [
+PMC free article
+] [
+PubMed
+] [
+Google Scholar
+]
+
+Gordon, H., Delman, H., Abramov, I., Tannazzo, T., & Scuello, M. (2000). Supersensitivity in color-anomalous observers.
+Investigative Ophthalmology & Visual Science Supplement
+
+,
+
+41, S807
+ [
+Google Scholar
+]
+
+Harris, J. M., & Watamaniuk, S. N. (1995). Speed discrimination of motion-in-depth using binocular cues.
+Vision Research
+
+,
+
+35(7), 885–896.
+ [
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+
+Held, R. T., Cooper, E. A., O'Brien, J. F., & Banks, M. S. (2010). Using blur to affect perceived distance and size.
+ACM Transactions on Graphics
+
+,
+
+29(2).
+ [
+DOI
+] [
+PMC free article
+] [
+PubMed
+] [
+Google Scholar
+]
+
+Hillis, J. M., Ernst, M. O., Banks, M. S., & Landy, M. S. (2002). Combining sensory information: mandatory fusion within, but not between senses.
+Science
+
+,
+
+298(5598), 1627–1630.
+ [
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+
+Hillis, J. M., Watt, S. J., Landy, M. S., & Banks, M. S. (2004). Slant from texture and disparity cues: Optimal cue combination.
+Journal of Vision
+
+,
+
+4(12), 1–1.
+ [
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+
+Jacobs, R. A. (1999). Optimal integration of texture and motion cues to depth.
+Vision Research
+
+,
+
+39(21), 3621–3629.
+ [
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+
+Jägle, H., de Luca, E., Serey, L., Bach, M., & Sharpe, L. T. (2006). Visual acuity and X-linked color blindness.
+Graefe's Archive for Clinical and Experimental Ophthalmology
+
+,
+
+244(4), 447–453.
+ [
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+
+Johnston, E. B., Cumming, B. G., & Landy, M. S. (1994). Integration of stereopsis and motion shape cues.
+Vision Research
+
+,
+
+34(17), 2259–2275.
+ [
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+
+Johnston, E. B., Cumming, B. G., & Parker, A. J. (1993). Integration of depth modules: Stereopsis and texture.
+Vision Research
+, 33(5–6), 813–826.
+ [
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+
+Julesz, B. (1971).
+Foundations of cyclopean perception
+. Chicago: University of Chicago Press.
+ [
+Google Scholar
+]
+
+Kelly, J. W., Hammel, W. W., Siegel, Z. D., & Sjolund, L. A. (2014). Recalibration of perceived distance in virtual environments occurs rapidly and transfers asymmetrically across scale.
+IEEE Transactions on Visualization and Computer Graphics
+
+,
+
+20(4), 588–595.
+ [
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+
+Knill, D. C. (1998a). Discriminating surface slant from texture: comparing human and ideal observers.
+Vision Research
+, 38, 1683–1711.
+ [
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+
+Knill, D. C. (1998b). Surface orientation from texture: ideal observers, generic observers and the information content of texture cues.
+Vision Research
+
+,
+
+38(11), 1655–1682.
+ [
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+
+Knill, D. C., & Saunders, J. A. (2003). Do humans optimally integrate stereo and texture information for judgments of surface slant?.
+Vision Research
+
+,
+
+43(24), 2539–2558.
+ [
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+
+Lessard, N., Paré, M., & Lepore, F., et al. (1998). Early-blind human subjects localize sound sources better than sighted subjects.
+Nature
+
+,
+
+395, 278–280
+ [
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+
+Louw, S., Smeets, J. B., & Brenner, E. (2007). Judging surface slant for placing objects: A role for motion parallax.
+Experimental Brain Research
+
+,
+
+183(2), 149–158.
+ [
+DOI
+] [
+PMC free article
+] [
+PubMed
+] [
+Google Scholar
+]
+
+Matthews, N., & Welch, L. (1997). The effect of inducer polarity and contrast on the perception of illusory figures.
+Perception
+
+,
+
+26(11), 1431–1443.
+ [
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+
+Mitchell, D. E. (1980). The influence of early visual experience on visual perception.
+Visual Coding and Adaptability
+, 1–50.
+ [
+Google Scholar
+]
+
+Mon-Williams, M., Tresilian, J. R., McIntosh, R. D., & Milner, D. A. (2001). Monocular and binocular distance cues: insights from visual form agnosia I (of III).
+Experimental Brain Research
+
+,
+
+139(2), 127–136.
+ [
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+
+Morgan, M. J., Adam, A., & Mollon, J. D. (1992). Dichromats detect colour-camouflaged objects that are not detected by trichromats.
+Proceedings: Biological Sciences/The Royal Society
+
+,
+
+248, 291–295.
+ [
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+
+Movshon, J. A., & Van Sluyters, R. C. (1981). Visual neural development.
+Annual Review of Psychology
+
+,
+
+32(1), 477–522.
+ [
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+
+Movshon, J. A., Chambers, B. E. I., & Blakemore, C. (1972). Interocular transfer in normal humans, and those who lack stereopsis.
+Perception
+
+,
+
+1(4), 483–490.
+ [
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+
+Naceri, A., Moscatelli, A., & Chellali, R. (2015). Depth discrimination of constant angular size stimuli in action space: role of accommodation and convergence cues.
+Frontiers in Human Neuroscience
+
+,
+
+9, 511.
+ [
+DOI
+] [
+PMC free article
+] [
+PubMed
+] [
+Google Scholar
+]
+
+Norman, J. F., Crabtree, C. E., Bartholomew, A. N., & Ferrell, E. L. (2009). Aging and the perception of slant from optical texture, motion parallax, and binocular disparity.
+Perception & Psychophysics
+
+,
+
+71(1), 116–130.
+ [
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+
+Oruç, I., Maloney, L. T., & Landy, M. S. (2003). Weighted linear cue combination with possibly correlated error.
+Vision Research
+
+,
+
+43(23), 2451–2468.
+ [
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+
+Proksch, J., & Bavelier, D. (2002). Changes in the Spatial Distribution of Visual Attention after Early Deafness.
+Journal of Cognitive Neuroscience
+, 14(5): 687–701.
+ [
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+
+Quintana, M. S., Román, I. R., Calvo, A. L., & Molinuevo, J. S. (2007). Perceptual visual skills in young highly skilled basketball players.
+Perceptual and Motor Skills
+, 104(2), 547–561.
+ [
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+
+Rettenbach, R., Diller, G., & Sireteanu, R. (1999). Do deaf people see better? Texture segmentation and visual search compensate in adult but not in juvenile subjects.
+Journal of Cognitive Neuroscience
+, 11(5), 560–583.
+ [
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+
+Richards, W., & Miller, J. F. (1969). Convergence as a cue to depth.
+Perception & Psychophysics
+
+,
+
+5(5), 317–320.
+ [
+Google Scholar
+]
+
+Röder, B., Teder-Sälejärvi, W., Sterr, A., Rösler, F., Hillyard, S. A., & Neville, H. J., (1999). Improved auditory spatial tuning in blind humans.
+Nature
+
+,
+
+400(6740), 162–166.
+ [
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+
+Rosas, P., Wagemans, J., Ernst, M. O., & Wichmann, F. A. (2005). Texture and haptic cues in slant discrimination: reliability-based cue weighting without statistically optimal cue combination.
+JOSA A
+
+,
+
+22(5), 801–809.
+ [
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+
+Rubin, G. S., West, S. K., Munoz, B., Bandeen-Roche, K., Zeger, S., Schein, O., & Fried, L. P. (1997). A comprehensive assessment of visual impairment in a population of older Americans. The SEE Study. Salisbury Eye Evaluation Project.
+Investigative Ophthalmology & Visual Science
+
+,
+
+38
+(
+3), 557–568.
+ [
+PubMed
+] [
+Google Scholar
+]
+
+Saunders, J. A., & Backus, B. T. (2006). Perception of surface slant from oriented textures.
+Journal of Vision
+
+,
+
+6(9), 3–3.
+ [
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+
+Saunders, J. A., & Chen, Z. (2015). Perceptual biases and cue weighting in perception of 3D slant from texture and stereo information.
+Journal of Vision
+
+,
+
+15(2), 14–14.
+ [
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+
+Saunders, J. A., & Knill, D. C. (2001). Perception of 3D surface orientation from skew symmetry.
+Vision Research
+
+,
+
+41(24), 3163–3183.
+ [
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+
+Sharpe, L. T., De Luca, E., Hansen, T., Jägle, H., & Gegenfurtner, K. R. (2006). Advantages and disadvantages of human dichromacy.
+Journal of Vision
+
+,
+
+6(3), 3–3.
+ [
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+
+Tanaka, H., & Iwami, M. (2018). Estimating putting outcomes in golf: Experts have a better sense of distance.
+Perceptual and Motor Skills
+
+,
+
+125(2), 313–328.
+ [
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+
+Todd, J. T., Christensen, J. C., & Guckes, K. M. (2010). Are discrimination thresholds a valid measure of variance for judgments of slant from texture?
+
+Journal of Vision,
+
+10(2), 20–20.
+ [
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+
+Todd, J. T., & Akerstrom, R. A. (1987). Perception of three-dimensional form from patterns of optical texture.
+Journal of Experimental Psychology: Human Perception and Performance
+
+,
+
+13(2), 242.
+ [
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+
+Todd, J. T., Thaler, L., Dijkstra, T. M. H., Koenderink, J. J., & Kappers, A. M. L. (2007). The effects of viewing angle, camera angle and sign of surface curvature on the perception of 3D shape from texture.
+Journal of Vision
+, 7(12): 9,  1–16.
+ [
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+
+van Ee, R., & Richards, W. (2002). A planar and a volumetric test for stereoanomaly.
+Perception
+
+,
+
+31(1), 51–64.
+ [
+DOI
+] [
+PubMed
+] [
+Google Scholar
+]
+
+Watt, S. J., Akeley, K., Ernst, M. O., & Banks, M. S. (2005). Focus cues affect perceived depth.
+Journal of Vision
+
+,
+
+5(10), 7–7.
+ [
+DOI
+] [
+PMC free article
+] [
+PubMed
+] [
+Google Scholar
+]
+
+Articles from Journal of Vision are provided here courtesy of
+Association for Research in Vision and Ophthalmology

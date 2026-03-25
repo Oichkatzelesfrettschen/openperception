@@ -2,7 +2,7 @@
 
 **Repository:** OpenPerception (see repository root)
 **Compiled:** December 27, 2025
-**Total PDFs:** 32 (in `papers/downloads/` -- for research use only; see DOI/URL links for official access)
+**Total PDFs:** 33 (in `papers/downloads/` -- for research use only; see DOI/URL links for official access)
 **Total Compendiums:** 35 markdown files
 
 ---
@@ -118,10 +118,19 @@
 | `ITU-R_BT1702-3_PSE_Guidelines.pdf` | International standard |
 | `Multisensory_Flicker_Epilepsy_2024.pdf` | 40Hz stimulation |
 
-#### Stereoblindness (1 paper)
+#### Stereoblindness And Depth Source Cache
 | File | Description |
 |------|-------------|
 | `Stereoblindness_VR_Training.pdf` | VR depth training |
+| `Pladere_et_al_2022_Inclusivity_in_Stereoscopic_XR.pdf` | XR inclusivity and adaptive depth presentation |
+| `Wang_Saunders_2022_Texture_Slant_Stereoblindness.txt` | Full-text extraction from PMC HTML article |
+| `Nadler_et_al_2016_Motion_Parallax_Depth_Review.txt` | Full-text extraction from PMC HTML article |
+| `Chopin_Bavelier_Levi_2019_Stereoblindness_Best_Evidence_Synthesis.pubmed.txt` | PubMed abstract trace for prevalence synthesis |
+
+Applied documentation:
+- `docs/harmonized-depth-accommodation-guide.md` - Stereo-independent depth guidance for shared scene meaning
+- `docs/external_sources/stereoblindness_depth_sources.md` - Source cache and provenance index
+- `research/visual_impairments/stereoblindness/primary_source_notes.md` - Paper-by-paper granular extraction
 
 ### Existing Research PDFs
 
@@ -150,6 +159,7 @@ Located in `/research/` subdirectories:
 | `papers/autism_visual_processing_bibliography.md` | Autism visual processing | 50+ |
 | `papers/photosensitive_epilepsy_research_compendium.md` | Seizure safety | 40+ |
 | `papers/cognitive_load_visual_processing_papers.md` | Cognitive load | 75+ |
+| `docs/harmonized-depth-accommodation-guide.md` | Applied depth accommodation synthesis | Curated primary sources |
 
 ### Research Domain Files
 

@@ -13,6 +13,7 @@ This repository contains:
 - **CVD Simulation Algorithms**: Production-ready implementations of Brettel, Vienot, and Machado color vision deficiency simulation algorithms
 - **Design Token System**: CVD-aware color tokens with variants for protanopia, deuteranopia, tritanopia, and achromatopsia
 - **Accessibility Specifications**: Comprehensive framework covering safety, perceptibility, discriminability, comprehensibility, and controllability
+- **Depth Accessibility Guidance**: Stereo-independent depth documentation for users with and without stereopsis
 - **Research Compendiums**: 400+ cataloged academic papers on visual accessibility
 - **Development Tools**: Contrast checkers, color separation validators, and OKLCH utilities
 
@@ -25,6 +26,7 @@ This repository contains:
 - Python 3.8+
 - CMake 3.16+ (for C library)
 - NumPy and Pillow (for Python package)
+- Git LFS (for paper corpus PDFs)
 
 ### Install DaltonLens-Python
 
@@ -69,6 +71,15 @@ make contrast-check
 
 # Generate OKLCH tokens
 make oklch
+```
+
+### Research Corpus Notes
+
+The paper corpus under `papers/downloads/` and research PDFs under `papers/` and
+`research/` are stored with Git LFS. After cloning, run:
+
+```bash
+git lfs pull
 ```
 
 ---
@@ -153,6 +164,10 @@ Comprehensive accessibility framework in `specs/`:
 - **TYPOGRAPHY_SYSTEM.md** - Accessible typography rules
 - **LAYOUT_SYSTEM.md** - Responsive layout guidelines
 
+Applied guidance in `docs/`:
+
+- **harmonized-depth-accommodation-guide.md** - Shared depth-cue strategy for stereo-capable and stereoblind users
+
 ---
 
 ## Development
@@ -216,6 +231,13 @@ make sphinx-example-html
 - Photosensitive epilepsy prevention
 - Pattern sensitivity guidelines
 - Flash rate limitations
+
+### Visual Impairments
+
+- Stereoblindness and reduced stereopsis
+- Low vision and contrast sensitivity
+- Visual field loss
+- Nystagmus and oculomotor instability
 
 ---
 
