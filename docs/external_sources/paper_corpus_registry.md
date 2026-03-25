@@ -10,6 +10,8 @@ tracked papers and trace artifacts.
 - New paper artifacts belong in `papers/downloads/`.
 - `research/` should cite or discuss those artifacts, not carry placeholder PDF
   stubs or duplicate mirrors.
+- Tracked Markdown and BibTeX should not point directly at `research/...pdf`
+  paths outside the dedicated provenance and migration-inventory docs.
 - When a direct PDF is blocked, cache the accessible full-text HTML plus a
   trace artifact that shows the blocked PDF path.
 
@@ -18,6 +20,7 @@ Machine-readable tracking:
 - `papers/downloads/CANONICAL_REGISTRY.json`
 - `papers/downloads/paper_corpus_tracking.bib`
 - `tools/check_paper_corpus.py`
+- [Research PDF migration inventory](/home/eirikr/Github/openperception/docs/external_sources/research_pdf_migration_inventory.md)
 
 ## Repaired Legacy Placeholders
 
@@ -57,4 +60,5 @@ The verifier checks:
 - no zero-byte PDFs remain under `papers/` or `research/`,
 - legacy alias paths stay removed,
 - legacy alias paths appear only in the paper-corpus provenance docs,
+- direct `research/...pdf` references appear only in provenance or migration docs,
 - duplicate PDF groups do not reappear across `papers/` and `research/`.

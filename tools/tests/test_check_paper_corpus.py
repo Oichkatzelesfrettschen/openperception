@@ -1,17 +1,20 @@
 """Tests for paper corpus registry validation."""
 from __future__ import annotations
 
+import hashlib
 import json
 from pathlib import Path
 
 from paper_corpus import (
-    ALLOWED_LEGACY_REFERENCE_DOCS,
-    collect_legacy_reference_violations,
+    ALLOWED_NONCANONICAL_REFERENCE_DOCS,
+    collect_noncanonical_reference_violations,
+    collect_remaining_research_pdf_paths,
     validate_paper_corpus,
 )
 
 
 MINIMAL_PDF = b"%PDF-1.4\n1 0 obj\n<<>>\nendobj\ntrailer\n<<>>\n%%EOF\n"
+MINIMAL_PDF_SHA256 = hashlib.sha256(MINIMAL_PDF).hexdigest()
 
 
 def write_registry(path: Path, payload: dict) -> None:
@@ -37,7 +40,7 @@ def minimal_registry() -> dict:
         "files": [
             {
                 "path": "papers/downloads/topic/one.pdf",
-                "sha256": "b3ec0ca7710d1025ee7ac7994d83b2ddbc200e5543df1066717d7124faf71d8f",
+                "sha256": MINIMAL_PDF_SHA256,
                 "size_bytes": len(MINIMAL_PDF),
             }
         ],
@@ -51,6 +54,13 @@ def seed_minimal_repo(repo_root: Path) -> Path:
     registry_path = repo_root / "papers" / "downloads" / "CANONICAL_REGISTRY.json"
     write_registry(registry_path, minimal_registry())
     return registry_path
+
+
+def seed_research_pdf(repo_root: Path, rel_path: str) -> Path:
+    path = repo_root / rel_path
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_bytes(MINIMAL_PDF)
+    return path
 
 
 def test_validate_paper_corpus_accepts_seeded_registry() -> None:
@@ -100,9 +110,7 @@ def test_validate_paper_corpus_rejects_unregistered_duplicate_group(
     first.write_bytes(MINIMAL_PDF)
     second.write_bytes(MINIMAL_PDF)
     registry_path = repo_root / "papers" / "downloads" / "CANONICAL_REGISTRY.json"
-    digest = (
-        "b3ec0ca7710d1025ee7ac7994d83b2ddbc200e5543df1066717d7124faf71d8f"
-    )
+    digest = MINIMAL_PDF_SHA256
     payload = minimal_registry()
     payload["legacy_aliases"] = []
     payload["files"][0]["sha256"] = digest
@@ -122,9 +130,7 @@ def test_validate_paper_corpus_rejects_lingering_legacy_path(tmp_path: Path) -> 
     artifact.write_bytes(MINIMAL_PDF)
     legacy.write_bytes(MINIMAL_PDF)
     registry_path = repo_root / "papers" / "downloads" / "CANONICAL_REGISTRY.json"
-    digest = (
-        "b3ec0ca7710d1025ee7ac7994d83b2ddbc200e5543df1066717d7124faf71d8f"
-    )
+    digest = MINIMAL_PDF_SHA256
     payload = minimal_registry()
     payload["duplicate_groups"] = [
         {
@@ -141,7 +147,7 @@ def test_validate_paper_corpus_rejects_lingering_legacy_path(tmp_path: Path) -> 
     assert any("legacy path still exists" in error for error in errors)
 
 
-def test_collect_legacy_reference_violations_rejects_stale_markdown_reference(
+def test_collect_noncanonical_reference_violations_rejects_stale_markdown_reference(
     tmp_path: Path,
 ) -> None:
     registry_path = seed_minimal_repo(tmp_path)
@@ -152,18 +158,66 @@ def test_collect_legacy_reference_violations_rejects_stale_markdown_reference(
 
     errors = validate_paper_corpus(registry_path, repo_root=tmp_path)
 
-    assert any("legacy alias referenced outside allowed provenance docs" in error for error in errors)
+    assert any(
+        "noncanonical research PDF reference outside allowed provenance docs" in error
+        for error in errors
+    )
 
 
-def test_collect_legacy_reference_violations_allows_provenance_docs(
+def test_collect_noncanonical_reference_violations_allows_provenance_docs(
     tmp_path: Path,
 ) -> None:
     registry_path = seed_minimal_repo(tmp_path)
-    for rel_path in ALLOWED_LEGACY_REFERENCE_DOCS:
+    for rel_path in ALLOWED_NONCANONICAL_REFERENCE_DOCS:
         path = tmp_path / rel_path
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text("Documented alias: research/topic/old.pdf\n", encoding="utf-8")
 
     registry = json.loads(registry_path.read_text(encoding="utf-8"))
 
-    assert collect_legacy_reference_violations(registry, tmp_path) == []
+    assert collect_noncanonical_reference_violations(registry, tmp_path) == []
+
+
+def test_collect_noncanonical_reference_violations_rejects_live_research_pdf_path_in_bib(
+    tmp_path: Path,
+) -> None:
+    registry_path = seed_minimal_repo(tmp_path)
+    seed_research_pdf(tmp_path, "research/topic/live.pdf")
+    (tmp_path / "refs.bib").write_text(
+        "@misc{live,\n  file = {research/topic/live.pdf}\n}\n",
+        encoding="utf-8",
+    )
+
+    errors = validate_paper_corpus(registry_path, repo_root=tmp_path)
+
+    assert any(
+        "noncanonical research PDF reference outside allowed provenance docs: "
+        "research/topic/live.pdf in refs.bib" in error
+        for error in errors
+    )
+
+
+def test_collect_noncanonical_reference_violations_allows_canonical_cache_path(
+    tmp_path: Path,
+) -> None:
+    registry_path = seed_minimal_repo(tmp_path)
+    (tmp_path / "README.md").write_text(
+        "Canonical reference: papers/downloads/topic/one.pdf\n",
+        encoding="utf-8",
+    )
+
+    assert validate_paper_corpus(registry_path, repo_root=tmp_path) == []
+
+
+def test_collect_remaining_research_pdf_paths_reports_unmigrated_research_pdfs(
+    tmp_path: Path,
+) -> None:
+    registry_path = seed_minimal_repo(tmp_path)
+    seed_research_pdf(tmp_path, "research/topic/live.pdf")
+    seed_research_pdf(tmp_path, "research/topic/second.pdf")
+    registry = json.loads(registry_path.read_text(encoding="utf-8"))
+
+    assert collect_remaining_research_pdf_paths(registry, tmp_path) == [
+        "research/topic/live.pdf",
+        "research/topic/second.pdf",
+    ]

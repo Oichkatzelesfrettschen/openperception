@@ -145,6 +145,7 @@ Applied documentation:
 | `CANONICAL_REGISTRY.json` | Canonical paper paths, legacy aliases, and file hashes |
 | `paper_corpus_tracking.bib` | BibTeX tracking for repaired legacy placeholders |
 | `docs/external_sources/paper_corpus_registry.md` | Human-readable canonical cache policy and duplicate map |
+| `docs/external_sources/research_pdf_migration_inventory.md` | Remaining research-local PDF inventory and migration buckets |
 | `docs/external_sources/neurodivergence_source_cache.md` | Cached ADHD, autism, and dyslexia source index |
 | `docs/external_sources/seizure_source_cache.md` | Cached seizure-source index |
 | `docs/external_sources/vision_clinical_source_cache.md` | Cached BCM and nystagmus source index |

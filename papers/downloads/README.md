@@ -38,6 +38,8 @@ Tracking files:
 - Add provenance for newly fetched sources when practical.
 - Prefer one deterministic filename per source.
 - Retire research-local PDF mirrors once a canonical cache path exists.
+- In tracked Markdown and BibTeX, prefer canonical `papers/downloads/` paths
+  over direct `research/...pdf` references.
 - Keep distilled summaries in markdown outside this cache, and use this tree as
   the backing artifact store.
 

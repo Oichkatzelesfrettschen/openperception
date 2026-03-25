@@ -73,3 +73,6 @@ the provenance docs that are meant to record them.
    trace artifacts added in the same change.
 2. Treat research-local PDF copies as migration debt rather than a normal
    storage pattern.
+3. Use the [research PDF migration inventory](/home/eirikr/Github/openperception/docs/external_sources/research_pdf_migration_inventory.md)
+   to retire the remaining 11 research-local PDFs deliberately rather than
+   piecemeal.
