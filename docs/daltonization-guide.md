@@ -16,6 +16,10 @@ nearly identical to them.
 Simulation is for testing and diagnosis. Daltonization produces a modified
 image intended for CVD viewers to consume directly.
 
+For the repo's broader distinction between simulation, daltonization,
+recognition aids, and reconstructive color models, see the
+[Color support accommodation taxonomy](/home/eirikr/Github/openperception/docs/color-support-accommodation-taxonomy.md).
+
 ---
 
 ## Quick Start

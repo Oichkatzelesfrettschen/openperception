@@ -8,6 +8,9 @@ canonical `papers/downloads/algorithms/` lane.
 These artifacts support the color-simulation algorithm research and related
 implementation notes.
 
+In the repo's color-support taxonomy, this lane primarily informs simulation
+and preview work, plus the cone-model choices that those previews depend on.
+
 Machine-readable registry:
 
 - [CANONICAL_REGISTRY.json](/home/eirikr/Github/openperception/papers/downloads/CANONICAL_REGISTRY.json)
@@ -21,6 +24,7 @@ Machine-readable registry:
 
 ## Related Docs
 
+- [Color support accommodation taxonomy](/home/eirikr/Github/openperception/docs/color-support-accommodation-taxonomy.md)
 - [Algorithm comparison guide](/home/eirikr/Github/openperception/research/colorblindness/algorithms/ALGORITHM_COMPARISON.md)
 - [CVD research report](/home/eirikr/Github/openperception/research/colorblindness/CVD_RESEARCH_REPORT.md)
 - [Paper corpus registry](/home/eirikr/Github/openperception/docs/external_sources/paper_corpus_registry.md)

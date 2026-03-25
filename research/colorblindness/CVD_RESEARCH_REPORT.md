@@ -23,6 +23,10 @@
 
 ---
 
+Support-mode guide:
+
+- [Color support accommodation taxonomy](/home/eirikr/Github/openperception/docs/color-support-accommodation-taxonomy.md)
+
 ## Overview and Statistics
 
 Color vision deficiency (CVD), commonly called "color blindness," affects approximately:
@@ -383,6 +387,16 @@ Recent publication:
 ### Definition
 
 Daltonization is the process of modifying images to improve color discrimination for CVD observers while maintaining naturalness for normal vision observers.
+
+In this repo, it is useful to keep four support modes separate:
+
+- simulation and preview for validation
+- daltonization and recoloring for static intervention
+- interactive recognition aids for color naming and contextual identification
+- reconstructive or speculative modeling for future-facing restoration work
+
+See the [color support accommodation taxonomy](/home/eirikr/Github/openperception/docs/color-support-accommodation-taxonomy.md)
+for the repo's preferred separation.
 
 ### Key Design Principles
 
@@ -813,7 +827,9 @@ Key repo-relevant takeaways:
 - The system augments a dichromat's native 2D percept with a third, learned cue
   via swipe-controlled temporal color shifts.
 - The paper reports both psychophysical discrimination gains and task-level
-  color-recognition benefits in Lego-building and art-interpretation scenarios.
+  color-recognition benefits in Lego-building and art-interpretation scenarios,
+  which is why the repo treats it as an interactive recognition-aid source and
+  not just another recoloring paper.
 - For OpenPerception, some accommodations should be evaluated against naming and
   task completion, not only against pairwise color separability.
 
@@ -863,7 +879,7 @@ support for real-time rendering applications.
 |------|---------|---------|
 | 2025-12-27 | 1.0 | Initial comprehensive report |
 | 2026-03-19 | 1.1 | Added 2025-2026 research updates: simulation accuracy study, gene therapy trials, NVIDIA daltonization, deep learning approaches, WCAG 3.0/APCA status |
-| 2026-03-25 | 1.2 | Added canonical color-vision source synthesis for AR color recognition and computational color-vision emergence modeling |
+| 2026-03-25 | 1.2 | Added canonical color-vision source synthesis and color-support taxonomy links for AR color recognition and computational color-vision emergence modeling |
 
 ---
 

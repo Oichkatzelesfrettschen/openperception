@@ -9,6 +9,11 @@ These artifacts support color-vision modeling, augmentation, and human-centered
 color reconstruction work that feeds both perception research and accessibility
 design exploration.
 
+In the repo's color-support taxonomy, this lane primarily informs:
+
+- interactive recognition aids
+- reconstructive or speculative color-vision modeling
+
 Machine-readable registry:
 
 - [CANONICAL_REGISTRY.json](/home/eirikr/Github/openperception/papers/downloads/CANONICAL_REGISTRY.json)
@@ -22,6 +27,7 @@ Machine-readable registry:
 
 ## Related Docs
 
+- [Color support accommodation taxonomy](/home/eirikr/Github/openperception/docs/color-support-accommodation-taxonomy.md)
 - [Color vision primary source notes](/home/eirikr/Github/openperception/research/colorblindness/primary_source_notes.md)
 - [Color vision deficiency academic papers](/home/eirikr/Github/openperception/papers/COLORBLINDNESS_ACADEMIC_PAPERS.md)
 - [CVD research report](/home/eirikr/Github/openperception/research/colorblindness/CVD_RESEARCH_REPORT.md)

@@ -177,6 +177,11 @@ Applied documentation:
 | `research/colorblindness/blue_cone_monochromacy/primary_source_notes.md` | Granular extraction for BCM review |
 | `research/visual_impairments/nystagmus/primary_source_notes.md` | Granular extraction for INS and gene-therapy review |
 
+#### Applied Taxonomy Docs
+| File | Description |
+|------|-------------|
+| `docs/color-support-accommodation-taxonomy.md` | Separates simulation, daltonization, recognition aids, and reconstructive color models |
+
 ### Existing Research PDFs
 
 Located in `/research/` subdirectories:
@@ -202,6 +207,7 @@ Located in `/research/` subdirectories:
 | `papers/photosensitive_epilepsy_research_compendium.md` | Seizure safety | 40+ |
 | `papers/cognitive_load_visual_processing_papers.md` | Cognitive load | 75+ |
 | `docs/harmonized-depth-accommodation-guide.md` | Applied depth accommodation synthesis | Curated primary sources |
+| `docs/color-support-accommodation-taxonomy.md` | Applied color-support accommodation synthesis | Curated primary sources |
 
 ### Research Domain Files
 
@@ -224,6 +230,7 @@ openperception/
 │   └── DaltonLens-Python/      # Python R&D package
 ├── docs/
 │   ├── colorblind-friendly-design-guide.md
+│   ├── color-support-accommodation-taxonomy.md
 │   ├── oklch-guide.md
 │   └── simulator-guide.md
 ├── papers/
@@ -346,5 +353,5 @@ openperception/
 ---
 
 *Index generated: March 25, 2026*
-*Updated: March 25, 2026 (retired root-level paper outliers, expanded canonical cache lanes, refreshed cache counts)*
+*Updated: March 25, 2026 (retired root-level paper outliers, expanded canonical cache lanes, refreshed cache counts, added color-support taxonomy)*
 *For: Visual Accessibility Research Compendium*

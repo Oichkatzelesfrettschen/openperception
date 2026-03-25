@@ -6,6 +6,9 @@ This guide provides practical palettes, UI/UX patterns, and data visualization r
 
 ## Principles
 
+- Treat simulation, daltonization, recognition aids, and reconstructive models
+  as different support modes; see
+  [Color support accommodation taxonomy](/home/eirikr/Github/openperception/docs/color-support-accommodation-taxonomy.md).
 - Prefer redundant cues over color alone: text labels, icons, shapes, patterns, underline links, and direct value annotations.
 - Maintain contrast: 4.5:1 for body text, 3:1 for large text and UI graphics, 7:1 where possible for critical content.
 - Separate by lightness, not just hue. For CVD, lightness differences and thickness/shape are most reliable.

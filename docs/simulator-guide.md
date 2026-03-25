@@ -10,6 +10,10 @@ Color Vision Deficiency (CVD) affects approximately 8% of males and 0.5% of fema
 Simulating CVD lets developers verify that their designs remain usable for all users
 without requiring user testing at every iteration.
 
+In the repo's color-support taxonomy, simulation is primarily a validation
+mode, not itself an accommodation. See the
+[Color support accommodation taxonomy](/home/eirikr/Github/openperception/docs/color-support-accommodation-taxonomy.md).
+
 ---
 
 ## Python API
