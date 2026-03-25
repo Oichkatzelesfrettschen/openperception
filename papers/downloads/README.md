@@ -31,3 +31,7 @@ the repo. Keep filenames stable and ASCII-only.
 - Prefer one deterministic filename per source.
 - Keep distilled summaries in markdown outside this cache, and use this tree as
   the backing artifact store.
+
+Related audit:
+
+- [Paper corpus audit](/home/eirikr/Github/openperception/docs/external_sources/paper_corpus_audit.md)
