@@ -80,6 +80,39 @@
         "papers/downloads/nystagmus/2024_INS_Gene_Therapy_Clinical_Trials.pdf.trace.html"
       ],
       "notes": "Full article HTML was accessible on PMC. Direct PDF fetch returned a proof-of-work page, which is cached as a trace artifact."
+    },
+    {
+      "id": "stockman_2019",
+      "title": "Cone fundamentals and CIE standards",
+      "url": "https://discovery.ucl.ac.uk/id/eprint/10097174/",
+      "download_url": "https://discovery.ucl.ac.uk/id/eprint/10097174/1/Stockman_Cone%20fundamentals%20and%20CIE%20standards_AAM.pdf",
+      "access": "pdf",
+      "artifacts": [
+        "papers/downloads/algorithms/Stockman_2019_Cone_Fundamentals_CIE_Standards.pdf"
+      ],
+      "notes": "Accepted manuscript cached from UCL Discovery and migrated from the legacy research algorithm lane."
+    },
+    {
+      "id": "vienot_2015",
+      "title": "Cone fundamentals: Past, present and future",
+      "url": "https://files.cie.co.at/918_CIE_2015_Abstract_Booklet.pdf",
+      "download_url": "https://files.cie.co.at/918_CIE_2015_Abstract_Booklet.pdf",
+      "access": "pdf",
+      "artifacts": [
+        "papers/downloads/algorithms/Vienot_2015_Cone_Fundamentals_Past_Present_Future.pdf"
+      ],
+      "notes": "CIE 2015 session abstract PDF migrated from the legacy research algorithm lane."
+    },
+    {
+      "id": "manning_2024",
+      "title": "Visual processing and decision-making in autism and dyslexia: Insights from cross-syndrome approaches",
+      "url": "https://research.birmingham.ac.uk/en/publications/visual-processing-and-decision-making-in-autism-and-dyslexia-insi",
+      "download_url": "https://research.birmingham.ac.uk/files/264404321/Manning_Visual_processing_and_decision_making_in_autism_and_dyslexia_accepted.pdf",
+      "access": "pdf",
+      "artifacts": [
+        "papers/downloads/autism/Manning_2024_Visual_Processing_Autism_Dyslexia.pdf"
+      ],
+      "notes": "Publisher-version PDF retained in the canonical autism cache; legacy research-local export retired."
     }
   ],
   "legacy_aliases": [
@@ -180,6 +213,27 @@
         "papers/downloads/cognitive_load/Virtual_Multitasking_Cognitive_Load.pdf"
       ],
       "status": "removed_duplicate_mirror"
+    },
+    {
+      "legacy_path": "research/colorblindness/algorithms/Stockman_2019_Cone_Fundamentals_CIE_Standards.pdf",
+      "canonical_artifacts": [
+        "papers/downloads/algorithms/Stockman_2019_Cone_Fundamentals_CIE_Standards.pdf"
+      ],
+      "status": "migrated_to_canonical_cache"
+    },
+    {
+      "legacy_path": "research/colorblindness/algorithms/Vienot_2015_Cone_Fundamentals_Past_Present_Future.pdf",
+      "canonical_artifacts": [
+        "papers/downloads/algorithms/Vienot_2015_Cone_Fundamentals_Past_Present_Future.pdf"
+      ],
+      "status": "migrated_to_canonical_cache"
+    },
+    {
+      "legacy_path": "research/neurodivergence/autism/Manning_2024_Visual_Processing_Autism_Dyslexia.pdf",
+      "canonical_artifacts": [
+        "papers/downloads/autism/Manning_2024_Visual_Processing_Autism_Dyslexia.pdf"
+      ],
+      "status": "retired_duplicate_export"
     }
   ],
   "duplicate_groups": [],
@@ -266,6 +320,24 @@
       "path": "papers/downloads/nystagmus/2024_INS_Gene_Therapy_Clinical_Trials.pdf.trace.html",
       "sha256": "c22ece5f7e0495ff12bb085ffbbf5874731ec0824cc83d86832d4a21e5cbff46",
       "size_bytes": 1817,
+      "accessed_utc_date": "2026-03-25"
+    },
+    {
+      "path": "papers/downloads/algorithms/Stockman_2019_Cone_Fundamentals_CIE_Standards.pdf",
+      "sha256": "b2710b38dc4ae58330f802ce25fa9ee6acbdcf5c25a165a3c53b11a897a28c59",
+      "size_bytes": 703691,
+      "accessed_utc_date": "2026-03-25"
+    },
+    {
+      "path": "papers/downloads/algorithms/Vienot_2015_Cone_Fundamentals_Past_Present_Future.pdf",
+      "sha256": "6b6e2d82c8b76ba0c15180e940eb5520a724d99e8b00595a94a839be95bd8942",
+      "size_bytes": 434812,
+      "accessed_utc_date": "2026-03-25"
+    },
+    {
+      "path": "papers/downloads/autism/Manning_2024_Visual_Processing_Autism_Dyslexia.pdf",
+      "sha256": "014a55e387062df098ee2bf3f947c664298c9553a0ac3ee3e631fdfc1a18bd20",
+      "size_bytes": 440261,
       "accessed_utc_date": "2026-03-25"
     }
   ]

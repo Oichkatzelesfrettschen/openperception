@@ -2,7 +2,7 @@
 
 **Repository:** OpenPerception (see repository root)
 **Compiled:** March 25, 2026
-**Total PDFs:** 36 (in `papers/downloads/` -- for research use only; see DOI/URL links for official access)
+**Total PDFs:** 38 (in `papers/downloads/` -- for research use only; see DOI/URL links for official access)
 **Total Compendiums:** 35 markdown files
 
 ---
@@ -145,6 +145,7 @@ Applied documentation:
 | `CANONICAL_REGISTRY.json` | Canonical paper paths, legacy aliases, and file hashes |
 | `paper_corpus_tracking.bib` | BibTeX tracking for repaired legacy placeholders |
 | `docs/external_sources/paper_corpus_registry.md` | Human-readable canonical cache policy and duplicate map |
+| `docs/external_sources/algorithm_source_cache.md` | Cached algorithm-support source index |
 | `docs/external_sources/research_pdf_migration_inventory.md` | Remaining research-local PDF inventory and migration buckets |
 | `docs/external_sources/neurodivergence_source_cache.md` | Cached ADHD, autism, and dyslexia source index |
 | `docs/external_sources/seizure_source_cache.md` | Cached seizure-source index |
@@ -161,10 +162,8 @@ Applied documentation:
 ### Existing Research PDFs
 
 Located in `/research/` subdirectories:
-- `Stockman_2019_Cone_Fundamentals_CIE_Standards.pdf`
-- `Vienot_2015_Cone_Fundamentals_Past_Present_Future.pdf`
 - Canonical source-cache paths for algorithm and cognitive-load papers now live under `papers/downloads/`; see `docs/external_sources/paper_corpus_registry.md`
-- And 18+ more across research subdirectories
+- 8 research-local PDFs remain; see `docs/external_sources/research_pdf_migration_inventory.md`
 
 ---
 
