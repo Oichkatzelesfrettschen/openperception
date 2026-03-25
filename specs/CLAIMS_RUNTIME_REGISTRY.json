@@ -1,0 +1,177 @@
+{
+  "version": "1.0.0",
+  "description": "Links evidence-matrix claims to runtime validators, tests, docs, and concrete implementation artifacts.",
+  "claims": [
+    {
+      "claim_id": "CLM-0001",
+      "status": "partial",
+      "validator_gates": ["GATE-001"],
+      "runtime_artifacts": ["tools/validators/seizure.py"],
+      "tests": ["tools/tests/test_seizure.py"],
+      "docs": ["docs/runtime-gap-analysis.md"],
+      "notes": "First-pass frame-sequence flash-frequency analysis exists; direct video and pattern-oscillation checks remain unimplemented."
+    },
+    {
+      "claim_id": "CLM-0002",
+      "status": "partial",
+      "validator_gates": ["GATE-001"],
+      "runtime_artifacts": ["tools/validators/seizure.py"],
+      "tests": ["tools/tests/test_seizure.py"],
+      "docs": ["docs/runtime-gap-analysis.md"],
+      "notes": "Red-flash detection exists for frame manifests; richer ISO nuance and video ingestion remain future work."
+    },
+    {
+      "claim_id": "CLM-0003",
+      "status": "partial",
+      "validator_gates": ["GATE-001"],
+      "runtime_artifacts": ["tools/validators/seizure.py"],
+      "tests": ["tools/tests/test_seizure.py"],
+      "docs": ["docs/runtime-gap-analysis.md"],
+      "notes": "Large-area flash estimation is implemented for frame sequences."
+    },
+    {
+      "claim_id": "CLM-0005",
+      "status": "partial",
+      "validator_gates": ["GATE-001"],
+      "runtime_artifacts": ["tools/validators/seizure.py"],
+      "tests": ["tools/tests/test_seizure.py"],
+      "docs": ["docs/runtime-gap-analysis.md"],
+      "notes": "Cumulative flashing exposure is tracked for frame-sequence manifests."
+    },
+    {
+      "claim_id": "CLM-0010",
+      "status": "implemented",
+      "validator_gates": ["GATE-002"],
+      "runtime_artifacts": ["tools/validators/contrast.py", "tools/contrast_check.py"],
+      "tests": ["tools/tests/test_contrast_check.py"],
+      "docs": ["docs/contrast-guide.md"],
+      "notes": "WCAG normal-text contrast floor is enforced in runtime."
+    },
+    {
+      "claim_id": "CLM-0012",
+      "status": "implemented",
+      "validator_gates": ["GATE-002"],
+      "runtime_artifacts": ["tools/validators/contrast.py", "tools/contrast_check.py"],
+      "tests": ["tools/tests/test_contrast_check.py"],
+      "docs": ["docs/contrast-guide.md"],
+      "notes": "UI component contrast is enforced through the contrast gate's adjacent-pair checks."
+    },
+    {
+      "claim_id": "CLM-0020",
+      "status": "implemented",
+      "validator_gates": [],
+      "runtime_artifacts": ["algorithms/DaltonLens-Python/daltonlens/simulate.py", "algorithms/libDaltonLens/libDaltonLens.c"],
+      "tests": ["algorithms/DaltonLens-Python/tests/test_simulate.py", "algorithms/libDaltonLens/tests/test_simulation.c"],
+      "docs": ["docs/daltonlens-python-foundations.md", "docs/simulator-guide.md"],
+      "notes": "Brettel-style simulation is present in both Python and C algorithm lanes."
+    },
+    {
+      "claim_id": "CLM-0021",
+      "status": "implemented",
+      "validator_gates": [],
+      "runtime_artifacts": ["algorithms/DaltonLens-Python/daltonlens/convert.py"],
+      "tests": ["algorithms/DaltonLens-Python/tests/test_convert.py"],
+      "docs": ["docs/simulator-guide.md"],
+      "notes": "Gamma decode and encode handling exists in the simulation pipeline."
+    },
+    {
+      "claim_id": "CLM-0022",
+      "status": "implemented",
+      "validator_gates": [],
+      "runtime_artifacts": ["algorithms/DaltonLens-Python/daltonlens/simulate.py"],
+      "tests": ["algorithms/DaltonLens-Python/tests/test_simulate.py"],
+      "docs": ["docs/simulator-guide.md"],
+      "notes": "Machado severity support exists in the vendored algorithm implementation."
+    },
+    {
+      "claim_id": "CLM-0023",
+      "status": "partial",
+      "validator_gates": ["GATE-004"],
+      "runtime_artifacts": ["tools/validators/spatial.py", "tokens/color-tokens.css", "examples/ui/variant-toggle.html"],
+      "tests": ["tools/tests/test_spatial.py"],
+      "docs": ["docs/design-guide-foundations.md", "docs/runtime-gap-analysis.md"],
+      "notes": "Non-color redundancy is only lightly enforced today through link underlining and focus/example hygiene, not as a full semantic-role audit."
+    },
+    {
+      "claim_id": "CLM-0060",
+      "status": "partial",
+      "validator_gates": ["GATE-006"],
+      "runtime_artifacts": ["tools/validators/cognitive.py", "examples/ui/variant-toggle.html", "examples/ui/palette-compare.html"],
+      "tests": ["tools/tests/test_cognitive.py"],
+      "docs": ["docs/runtime-gap-analysis.md"],
+      "notes": "The cognitive gate now enforces a first nav-item-count ceiling over repo-owned HTML, but not full flow or task-memory analysis."
+    },
+    {
+      "claim_id": "CLM-0064",
+      "status": "partial",
+      "validator_gates": ["GATE-006"],
+      "runtime_artifacts": ["tools/validators/cognitive.py", "examples/ui/variant-toggle.html", "examples/ui/palette-compare.html"],
+      "tests": ["tools/tests/test_cognitive.py"],
+      "docs": ["docs/runtime-gap-analysis.md"],
+      "notes": "Progressive disclosure is now checked through summary/details markers on repo-owned HTML surfaces."
+    },
+    {
+      "claim_id": "CLM-0066",
+      "status": "partial",
+      "validator_gates": ["GATE-006"],
+      "runtime_artifacts": ["tools/validators/cognitive.py"],
+      "tests": ["tools/tests/test_cognitive.py"],
+      "docs": ["docs/runtime-gap-analysis.md"],
+      "notes": "Approximate reading-level warnings now exist, but the implementation is heuristic and advisory."
+    },
+    {
+      "claim_id": "CLM-0092",
+      "status": "partial",
+      "validator_gates": ["GATE-004"],
+      "runtime_artifacts": ["tools/validators/spatial.py", "examples/ui/variant-toggle.html", "examples/ui/palette-compare.html"],
+      "tests": ["tools/tests/test_spatial.py"],
+      "docs": ["docs/runtime-gap-analysis.md"],
+      "notes": "The spatial gate now checks for viewport meta tags, media-query or adaptive-grid markers, main-layout responsiveness, narrow-viewport column fit, swatch-grid adaptation, and wrapping control rows as a first static reflow heuristic."
+    },
+    {
+      "claim_id": "CLM-0093",
+      "status": "partial",
+      "validator_gates": ["GATE-006"],
+      "runtime_artifacts": ["tools/validators/cognitive.py", "examples/ui/variant-toggle.html", "examples/ui/palette-compare.html"],
+      "tests": ["tools/tests/test_cognitive.py"],
+      "docs": ["docs/runtime-gap-analysis.md"],
+      "notes": "The cognitive gate now checks navigation nesting plus static density budgets keyed to declared HUD complexity, including visible-control burden and declared panel and metric-group burden."
+    },
+    {
+      "claim_id": "CLM-0094",
+      "status": "partial",
+      "validator_gates": ["GATE-004"],
+      "runtime_artifacts": ["tools/rendered_spatial_check.py", "examples/ui/variant-toggle.html", "examples/ui/palette-compare.html"],
+      "tests": ["tools/tests/test_rendered_spatial_check.py"],
+      "docs": ["docs/runtime-gap-analysis.md"],
+      "notes": "A first browser-backed spatial audit now measures rendered page and container overflow plus first focus-visibility risk in Chromium at fixed viewport widths."
+    },
+    {
+      "claim_id": "CLM-0095",
+      "status": "partial",
+      "validator_gates": ["GATE-006"],
+      "runtime_artifacts": ["tools/rendered_cognitive_check.py", "examples/ui/variant-toggle.html", "examples/ui/palette-compare.html"],
+      "tests": ["tools/tests/test_rendered_cognitive_check.py"],
+      "docs": ["docs/runtime-gap-analysis.md"],
+      "notes": "A first browser-backed cognitive audit now measures first-screen visible control, region, cluster, and notification burden in Chromium."
+    },
+    {
+      "claim_id": "CLM-0100",
+      "status": "partial",
+      "validator_gates": ["GATE-003"],
+      "runtime_artifacts": ["tools/validators/cvd.py", "tools/semantic_tokens.py", "tokens/semantic-role-tokens.json"],
+      "tests": ["tools/tests/test_cvd_gate.py", "tools/tests/test_semantic_tokens.py"],
+      "docs": ["docs/runtime-gap-analysis.md"],
+      "notes": "The CVD gate now checks multiple semantic role pairs and some redundancy, but not yet the full declared semantic universe."
+    },
+    {
+      "claim_id": "CLM-0128",
+      "status": "partial",
+      "validator_gates": ["GATE-005"],
+      "runtime_artifacts": ["tools/validators/temporal_depth.py", "specs/tokens/profiles/axis-profiles.json", "specs/tokens/temporal/motion.json"],
+      "tests": ["tools/tests/test_temporal_depth.py"],
+      "docs": ["docs/runtime-gap-analysis.md"],
+      "notes": "Reduced-motion and flicker-sensitive policy caps are now enforced at the token/profile level, but not yet through rendered motion-path analysis."
+    }
+  ]
+}

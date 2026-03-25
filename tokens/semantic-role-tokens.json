@@ -1,0 +1,401 @@
+{
+  "version": "1.0.0",
+  "description": "First-class runtime semantic role tokens derived from the current OpenPerception palette and semantic role specs.",
+  "variants": {
+    "default": {
+      "roles": {
+        "danger": {
+          "color": "#86198F",
+          "source": "brand.accentStrong",
+          "redundancy": {
+            "marker": "triangle",
+            "dash": [6, 3],
+            "icon": "exclamation-triangle",
+            "pattern": "diagonal-stripes-45deg"
+          }
+        },
+        "ally": {
+          "color": "#3730A3",
+          "source": "brand.primaryStrong",
+          "redundancy": {
+            "marker": "circle",
+            "dash": [0, 0],
+            "icon": "checkmark-circle",
+            "pattern": "solid-fill"
+          }
+        },
+        "focus": {
+          "color": "#A5B4FC",
+          "source": "brand.focusRing",
+          "redundancy": {
+            "icon": null,
+            "pattern": "outline-double-3px"
+          }
+        },
+        "disabled": {
+          "color": "#D1D5DB",
+          "source": "brand.border",
+          "redundancy": {
+            "marker": "x",
+            "dash": [2, 2],
+            "icon": "lock",
+            "pattern": "dashed-outline"
+          }
+        },
+        "interactable": {
+          "color": "#3730A3",
+          "source": "brand.link",
+          "redundancy": {
+            "icon": null,
+            "pattern": "underline-or-button-shape"
+          }
+        },
+        "warning": {
+          "color": "#B45309",
+          "source": "semantic.warning",
+          "redundancy": {
+            "marker": "diamond",
+            "dash": [3, 2, 1, 2],
+            "icon": "warning-triangle",
+            "pattern": "chevron-stripes"
+          }
+        },
+        "info": {
+          "color": "#0369A1",
+          "source": "semantic.info",
+          "redundancy": {
+            "marker": "square",
+            "dash": [1, 2],
+            "icon": "info-circle",
+            "pattern": "dotted-outline"
+          }
+        },
+        "progress": {
+          "color": "#047857",
+          "source": "semantic.progress",
+          "redundancy": {
+            "icon": "progress-bar",
+            "label": "percent-complete",
+            "pattern": "fill-direction-left-to-right"
+          }
+        }
+      }
+    },
+    "protan": {
+      "roles": {
+        "danger": {
+          "color": "#B12179",
+          "source": "brand.accentStrong",
+          "redundancy": {
+            "marker": "triangle",
+            "dash": [6, 3],
+            "icon": "exclamation-triangle",
+            "pattern": "diagonal-stripes-45deg"
+          }
+        },
+        "ally": {
+          "color": "#2E2AA1",
+          "source": "brand.primaryStrong",
+          "redundancy": {
+            "marker": "circle",
+            "dash": [0, 0],
+            "icon": "checkmark-circle",
+            "pattern": "solid-fill"
+          }
+        },
+        "focus": {
+          "color": "#A5B4FC",
+          "source": "default.brand.focusRing",
+          "redundancy": {
+            "icon": null,
+            "pattern": "outline-double-3px"
+          }
+        },
+        "disabled": {
+          "color": "#9CA3AF",
+          "source": "gray.400",
+          "redundancy": {
+            "marker": "x",
+            "dash": [2, 2],
+            "icon": "lock",
+            "pattern": "dashed-outline"
+          }
+        },
+        "interactable": {
+          "color": "#2E2AA1",
+          "source": "brand.link",
+          "redundancy": {
+            "icon": null,
+            "pattern": "underline-or-button-shape"
+          }
+        },
+        "warning": {
+          "color": "#C2410C",
+          "source": "semantic.warning",
+          "redundancy": {
+            "marker": "diamond",
+            "dash": [3, 2, 1, 2],
+            "icon": "warning-triangle",
+            "pattern": "chevron-stripes"
+          }
+        },
+        "info": {
+          "color": "#075985",
+          "source": "semantic.info",
+          "redundancy": {
+            "marker": "square",
+            "dash": [1, 2],
+            "icon": "info-circle",
+            "pattern": "dotted-outline"
+          }
+        },
+        "progress": {
+          "color": "#0F766E",
+          "source": "semantic.progress",
+          "redundancy": {
+            "icon": "progress-bar",
+            "label": "percent-complete",
+            "pattern": "fill-direction-left-to-right"
+          }
+        }
+      }
+    },
+    "deutan": {
+      "roles": {
+        "danger": {
+          "color": "#A81E7B",
+          "source": "brand.accentStrong",
+          "redundancy": {
+            "marker": "triangle",
+            "dash": [6, 3],
+            "icon": "exclamation-triangle",
+            "pattern": "diagonal-stripes-45deg"
+          }
+        },
+        "ally": {
+          "color": "#2E2AA1",
+          "source": "brand.primaryStrong",
+          "redundancy": {
+            "marker": "circle",
+            "dash": [0, 0],
+            "icon": "checkmark-circle",
+            "pattern": "solid-fill"
+          }
+        },
+        "focus": {
+          "color": "#A5B4FC",
+          "source": "default.brand.focusRing",
+          "redundancy": {
+            "icon": null,
+            "pattern": "outline-double-3px"
+          }
+        },
+        "disabled": {
+          "color": "#9CA3AF",
+          "source": "gray.400",
+          "redundancy": {
+            "marker": "x",
+            "dash": [2, 2],
+            "icon": "lock",
+            "pattern": "dashed-outline"
+          }
+        },
+        "interactable": {
+          "color": "#2E2AA1",
+          "source": "brand.link",
+          "redundancy": {
+            "icon": null,
+            "pattern": "underline-or-button-shape"
+          }
+        },
+        "warning": {
+          "color": "#C2410C",
+          "source": "semantic.warning",
+          "redundancy": {
+            "marker": "diamond",
+            "dash": [3, 2, 1, 2],
+            "icon": "warning-triangle",
+            "pattern": "chevron-stripes"
+          }
+        },
+        "info": {
+          "color": "#075985",
+          "source": "semantic.info",
+          "redundancy": {
+            "marker": "square",
+            "dash": [1, 2],
+            "icon": "info-circle",
+            "pattern": "dotted-outline"
+          }
+        },
+        "progress": {
+          "color": "#0F766E",
+          "source": "semantic.progress",
+          "redundancy": {
+            "icon": "progress-bar",
+            "label": "percent-complete",
+            "pattern": "fill-direction-left-to-right"
+          }
+        }
+      }
+    },
+    "tritan": {
+      "roles": {
+        "danger": {
+          "color": "#A9156E",
+          "source": "brand.accentStrong",
+          "redundancy": {
+            "marker": "triangle",
+            "dash": [6, 3],
+            "icon": "exclamation-triangle",
+            "pattern": "diagonal-stripes-45deg"
+          }
+        },
+        "ally": {
+          "color": "#5B33BF",
+          "source": "brand.primaryStrong",
+          "redundancy": {
+            "marker": "circle",
+            "dash": [0, 0],
+            "icon": "checkmark-circle",
+            "pattern": "solid-fill"
+          }
+        },
+        "focus": {
+          "color": "#A5B4FC",
+          "source": "default.brand.focusRing",
+          "redundancy": {
+            "icon": null,
+            "pattern": "outline-double-3px"
+          }
+        },
+        "disabled": {
+          "color": "#9CA3AF",
+          "source": "gray.400",
+          "redundancy": {
+            "marker": "x",
+            "dash": [2, 2],
+            "icon": "lock",
+            "pattern": "dashed-outline"
+          }
+        },
+        "interactable": {
+          "color": "#5B33BF",
+          "source": "brand.link",
+          "redundancy": {
+            "icon": null,
+            "pattern": "underline-or-button-shape"
+          }
+        },
+        "warning": {
+          "color": "#9A3412",
+          "source": "semantic.warning",
+          "redundancy": {
+            "marker": "diamond",
+            "dash": [3, 2, 1, 2],
+            "icon": "warning-triangle",
+            "pattern": "chevron-stripes"
+          }
+        },
+        "info": {
+          "color": "#1D4ED8",
+          "source": "semantic.info",
+          "redundancy": {
+            "marker": "square",
+            "dash": [1, 2],
+            "icon": "info-circle",
+            "pattern": "dotted-outline"
+          }
+        },
+        "progress": {
+          "color": "#047857",
+          "source": "semantic.progress",
+          "redundancy": {
+            "icon": "progress-bar",
+            "label": "percent-complete",
+            "pattern": "fill-direction-left-to-right"
+          }
+        }
+      }
+    },
+    "mono": {
+      "roles": {
+        "danger": {
+          "color": "#4B5563",
+          "source": "brand.accentStrong",
+          "redundancy": {
+            "marker": "triangle",
+            "dash": [6, 3],
+            "icon": "exclamation-triangle",
+            "pattern": "diagonal-stripes-45deg"
+          }
+        },
+        "ally": {
+          "color": "#1E293B",
+          "source": "brand.primaryStrong",
+          "redundancy": {
+            "marker": "circle",
+            "dash": [0, 0],
+            "icon": "checkmark-circle",
+            "pattern": "solid-fill"
+          }
+        },
+        "focus": {
+          "color": "#A5B4FC",
+          "source": "default.brand.focusRing",
+          "redundancy": {
+            "icon": null,
+            "pattern": "outline-double-3px"
+          }
+        },
+        "disabled": {
+          "color": "#9CA3AF",
+          "source": "gray.400",
+          "redundancy": {
+            "marker": "x",
+            "dash": [2, 2],
+            "icon": "lock",
+            "pattern": "dashed-outline"
+          }
+        },
+        "interactable": {
+          "color": "#1E293B",
+          "source": "brand.link",
+          "redundancy": {
+            "icon": null,
+            "pattern": "underline-or-button-shape"
+          }
+        },
+        "warning": {
+          "color": "#78716C",
+          "source": "semantic.warning",
+          "redundancy": {
+            "marker": "diamond",
+            "dash": [3, 2, 1, 2],
+            "icon": "warning-triangle",
+            "pattern": "chevron-stripes"
+          }
+        },
+        "info": {
+          "color": "#334155",
+          "source": "semantic.info",
+          "redundancy": {
+            "marker": "square",
+            "dash": [1, 2],
+            "icon": "info-circle",
+            "pattern": "dotted-outline"
+          }
+        },
+        "progress": {
+          "color": "#334155",
+          "source": "semantic.progress",
+          "redundancy": {
+            "icon": "progress-bar",
+            "label": "percent-complete",
+            "pattern": "fill-direction-left-to-right"
+          }
+        }
+      }
+    }
+  }
+}

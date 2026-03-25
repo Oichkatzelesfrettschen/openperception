@@ -108,12 +108,26 @@
 }
 
 .btn-primary {
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  border-radius: 8px;
   color: var(--white);
   background: var(--brand-primary);
   border: 1px solid var(--brand-primary-strong);
 }
 
 .btn-secondary {
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  border-radius: 8px;
   color: var(--brand-primary-strong);
   background: transparent;
   border: 1px solid var(--brand-primary-strong);
@@ -128,4 +142,3 @@
 .hatch-diag {
   background-image: repeating-linear-gradient(45deg, rgba(0,0,0,0.2) 0, rgba(0,0,0,0.2) 2px, transparent 2px, transparent 6px);
 }
-

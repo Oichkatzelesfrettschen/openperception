@@ -6,30 +6,58 @@
     <title>CVD Variant Toggle</title>
     <link rel="stylesheet" href="../../tokens/color-tokens.css" />
     <style>
-      body { font-family: system-ui, sans-serif; background: var(--surface); color: var(--text); padding: 2rem; }
+      body { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 16px; line-height: 1.5; background: var(--surface); color: var(--text); padding: 2rem; }
+      .page-nav { display: flex; flex-wrap: wrap; gap: .75rem; margin-bottom: 1rem; }
+      .page-nav a { color: var(--link); text-decoration: underline; text-underline-offset: 2px; }
       .card { background: var(--surface-subtle); border: 1px solid var(--border); padding: 1rem; border-radius: 8px; }
+      .demo-actions { display: flex; flex-wrap: wrap; gap: .75rem; align-items: center; }
       .chip { display:inline-flex; align-items:center; gap:.5rem; border:1px solid var(--border); border-radius:999px; padding:.25rem .5rem; }
+      details { margin: 1rem 0; }
+      @media (max-width: 640px) {
+        body { padding: 1rem; }
+        .card { padding: .875rem; }
+      }
     </style>
   </head>
-  <body>
-    <h1>Colorblind-friendly UI (Indigo, Gray, Magenta)</h1>
-    <p>Links are always <a class="link" href="#">underlined</a>. Focus uses a high-contrast ring.</p>
+  <body
+    data-hud-complexity="simple"
+    data-cognitive-complex="true"
+    data-panel-groups="1"
+    data-metric-groups="0"
+  >
+    <nav class="page-nav" aria-label="Variant toggle sections" data-density-region="nav">
+      <a href="#overview">Overview</a>
+      <a href="#demo">Demo</a>
+      <a href="#controls">Controls</a>
+    </nav>
 
-    <div class="card" tabindex="0" class="focus-ring">
+    <h1 id="overview">Colorblind-friendly UI (Indigo, Gray, Magenta)</h1>
+    <p>Links are always <a class="link" href="#">underlined</a>. Focus uses a high-contrast ring.</p>
+    <details data-summary-view="true" data-density-region="summary">
+      <summary>What this example shows</summary>
+      <p>This page keeps one compact demo card, one variant switcher, and one live status line.</p>
+    </details>
+    <p class="chip" role="status" aria-live="polite" data-notification="status" data-density-region="status">One preview updates when you switch variants.</p>
+
+    <div class="card focus-ring" id="demo" tabindex="0" data-density-region="demo">
       <p>Primary and secondary buttons demonstrate redundant cues.</p>
-      <button class="btn-primary focus-ring">Primary</button>
-      <button class="btn-secondary focus-ring">Secondary</button>
-      <span class="chip hatch-diag">Paused</span>
+      <div class="demo-actions" data-primary-actions="true">
+        <button class="btn-primary focus-ring">Primary</button>
+        <button class="btn-secondary focus-ring">Secondary</button>
+        <span class="chip hatch-diag">Paused</span>
+      </div>
     </div>
 
-    <p style="margin-top:1rem;">Switch CVD variant:</p>
-    <select id="variant">
-      <option value="default">default</option>
-      <option value="protan">protan</option>
-      <option value="deutan">deutan</option>
-      <option value="tritan">tritan</option>
-      <option value="mono">mono</option>
-    </select>
+    <p id="controls" style="margin-top:1rem;">Switch CVD variant:</p>
+    <div data-density-region="controls" data-primary-actions="true">
+      <select id="variant">
+        <option value="default">default</option>
+        <option value="protan">protan</option>
+        <option value="deutan">deutan</option>
+        <option value="tritan">tritan</option>
+        <option value="mono">mono</option>
+      </select>
+    </div>
 
     <script>
       const sel = document.getElementById('variant');

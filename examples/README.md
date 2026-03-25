@@ -39,6 +39,16 @@ runtime without a page reload.
 
 ---
 
+### `ui/palette-compare.html` -- Current, Accessible, and Red Theme Packs
+
+Renders the production pack, the experimental mauve/burgundy accessibility
+pack, and the atmosphere-first red/mahogany theme side by side, using the same
+authored variant and optional simulated CVD filter for all lanes.
+
+**Open:** `http://localhost:8000/examples/ui/palette-compare.html`
+
+---
+
 ## Script Examples
 
 ### `viz/matplotlib_palette.py` -- Matplotlib CVD-Aware Palette

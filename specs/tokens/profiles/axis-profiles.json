@@ -1,0 +1,191 @@
+{
+  "version": "1.0.0",
+  "description": "First machine-readable axis profile manifest derived from AXIS_OVERLAP_MAP and DISPLAY_ADAPTATION_LAYER.",
+  "profiles": {
+    "standard": {
+      "axes": {
+        "chromatic": "default",
+        "luminance": "default",
+        "spatial": "100% scale",
+        "temporal": "full motion",
+        "depth": "all cues",
+        "cognitive": "full HUD"
+      },
+      "caps": {
+        "max_animation_hz": 60,
+        "max_luminance_modulation_hz": 3,
+        "min_transition_duration_ms": 150,
+        "palette_variant": "full",
+        "pattern_encoding_required": false
+      },
+      "declared_sources": [
+        "specs/AXIS_OVERLAP_MAP.md",
+        "specs/DISPLAY_ADAPTATION_LAYER.md"
+      ]
+    },
+    "protan-safe": {
+      "axes": {
+        "chromatic": "protan-safe palette",
+        "luminance": "default",
+        "spatial": "100% scale",
+        "temporal": "full motion",
+        "depth": "all cues",
+        "cognitive": "full HUD"
+      },
+      "caps": {
+        "max_animation_hz": 60,
+        "max_luminance_modulation_hz": 3,
+        "min_transition_duration_ms": 150,
+        "palette_variant": "full",
+        "pattern_encoding_required": false
+      },
+      "declared_sources": [
+        "specs/AXIS_OVERLAP_MAP.md"
+      ]
+    },
+    "deutan-safe": {
+      "axes": {
+        "chromatic": "deutan-safe palette",
+        "luminance": "default",
+        "spatial": "100% scale",
+        "temporal": "full motion",
+        "depth": "all cues",
+        "cognitive": "full HUD"
+      },
+      "caps": {
+        "max_animation_hz": 60,
+        "max_luminance_modulation_hz": 3,
+        "min_transition_duration_ms": 150,
+        "palette_variant": "full",
+        "pattern_encoding_required": false
+      },
+      "declared_sources": [
+        "specs/UNIFIED_VISUAL_ACCESSIBILITY_SPEC.md",
+        "specs/AXIS_OVERLAP_MAP.md"
+      ]
+    },
+    "high-contrast": {
+      "axes": {
+        "chromatic": "default",
+        "luminance": "high",
+        "spatial": "100% scale",
+        "temporal": "full motion",
+        "depth": "all cues",
+        "cognitive": "full HUD"
+      },
+      "caps": {
+        "max_animation_hz": 60,
+        "max_luminance_modulation_hz": 3,
+        "min_transition_duration_ms": 150,
+        "palette_variant": "full",
+        "pattern_encoding_required": false
+      },
+      "declared_sources": [
+        "specs/AXIS_OVERLAP_MAP.md",
+        "specs/UNIFIED_VISUAL_ACCESSIBILITY_SPEC.md"
+      ]
+    },
+    "low-glare": {
+      "axes": {
+        "chromatic": "desaturated",
+        "luminance": "low",
+        "spatial": "100% scale",
+        "temporal": "reduced motion",
+        "depth": "all cues",
+        "cognitive": "full HUD"
+      },
+      "caps": {
+        "max_animation_hz": 30,
+        "max_luminance_modulation_hz": 3,
+        "min_transition_duration_ms": 150,
+        "palette_variant": "reduced",
+        "pattern_encoding_required": false
+      },
+      "declared_sources": [
+        "specs/AXIS_OVERLAP_MAP.md"
+      ]
+    },
+    "reduced-motion": {
+      "axes": {
+        "chromatic": "default",
+        "luminance": "default",
+        "spatial": "100% scale",
+        "temporal": "reduced motion",
+        "depth": "all cues",
+        "cognitive": "full HUD"
+      },
+      "caps": {
+        "max_animation_hz": 0,
+        "max_luminance_modulation_hz": 0,
+        "min_transition_duration_ms": 0,
+        "palette_variant": "full",
+        "pattern_encoding_required": false
+      },
+      "declared_sources": [
+        "specs/DISPLAY_ADAPTATION_LAYER.md",
+        "specs/AXIS_OVERLAP_MAP.md"
+      ]
+    },
+    "flicker-sensitive": {
+      "axes": {
+        "chromatic": "default",
+        "luminance": "default",
+        "spatial": "100% scale",
+        "temporal": "reduced motion",
+        "depth": "all cues",
+        "cognitive": "full HUD"
+      },
+      "caps": {
+        "max_animation_hz": 30,
+        "max_luminance_modulation_hz": 1,
+        "min_transition_duration_ms": 300,
+        "palette_variant": "reduced",
+        "pattern_encoding_required": false
+      },
+      "declared_sources": [
+        "specs/DISPLAY_ADAPTATION_LAYER.md"
+      ]
+    },
+    "eink": {
+      "axes": {
+        "chromatic": "default",
+        "luminance": "default",
+        "spatial": "100% scale",
+        "temporal": "static",
+        "depth": "all cues",
+        "cognitive": "minimal HUD"
+      },
+      "caps": {
+        "max_animation_hz": 1,
+        "max_luminance_modulation_hz": 0.5,
+        "min_transition_duration_ms": 500,
+        "palette_variant": "eink",
+        "pattern_encoding_required": true
+      },
+      "declared_sources": [
+        "specs/DISPLAY_ADAPTATION_LAYER.md"
+      ]
+    },
+    "reduced-cognitive": {
+      "axes": {
+        "chromatic": "default",
+        "luminance": "default",
+        "spatial": "150% scale",
+        "temporal": "reduced motion",
+        "depth": "all cues",
+        "cognitive": "minimal HUD"
+      },
+      "caps": {
+        "max_animation_hz": 30,
+        "max_luminance_modulation_hz": 1,
+        "min_transition_duration_ms": 300,
+        "palette_variant": "reduced",
+        "pattern_encoding_required": false
+      },
+      "declared_sources": [
+        "specs/AXIS_OVERLAP_MAP.md",
+        "specs/UNIFIED_VISUAL_ACCESSIBILITY_SPEC.md"
+      ]
+    }
+  }
+}

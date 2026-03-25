@@ -1,0 +1,38 @@
+:root {
+  --mahogany-900: #241513;
+  --mahogany-800: #3A1E1A;
+  --mahogany-700: #4A231D;
+  --mahogany-500: #6B3B2F;
+  --mahogany-200: #D7B9A4;
+
+  --brass-700: #7C5A34;
+  --brass-600: #8E6A42;
+  --brass-400: #C3A06E;
+  --brass-200: #E7D2B4;
+
+  --burgundy-700: #7A1628;
+  --burgundy-600: #A1344C;
+  --burgundy-400: #D06A7E;
+  --burgundy-200: #F0C5CD;
+
+  --cream-100: #F8F3EE;
+  --cream-200: #EDE3D7;
+
+  --gray-900: #2A2321;
+  --gray-700: #4D413C;
+  --gray-500: #7B6E67;
+  --gray-300: #D9C8B8;
+  --gray-0: #F8F3EE;
+
+  --brand-primary: var(--mahogany-700);
+  --brand-primary-strong: var(--mahogany-800);
+  --brand-accent: var(--brass-600);
+  --brand-accent-strong: var(--brass-700);
+  --brand-tertiary: var(--burgundy-600);
+  --brand-tertiary-strong: var(--burgundy-700);
+  --brand-text: var(--gray-900);
+  --brand-surface: var(--cream-100);
+  --brand-border: var(--gray-300);
+  --focus-ring: var(--brass-400);
+  --link: var(--burgundy-700);
+}

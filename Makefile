@@ -13,7 +13,7 @@ C_BUILD_DIR ?= algorithms/libDaltonLens/build
 # =============================================================================
 # Phony Targets
 # =============================================================================
-.PHONY: all help serve oklch contrast-check separation-check \
+.PHONY: all help serve oklch contrast-check separation-check seizure-check temporal-depth-check cognitive-check typography-check rendered-spatial-check rendered-cognitive-check profile-report scale-report validate gap-report claims-report claims-check \
         test test-python test-c test-all coverage \
         lint lint-python lint-c format \
         build build-c install-python install-dev \
@@ -33,6 +33,18 @@ help:
 	@echo "  oklch              - Generate OKLCH color tokens"
 	@echo "  contrast-check     - Validate WCAG contrast ratios"
 	@echo "  separation-check   - Check CVD color separation"
+	@echo "  seizure-check      - Run seizure gate on a frame manifest (set SEIZURE_MANIFEST=path)"
+	@echo "  temporal-depth-check - Run the first temporal/depth policy validator"
+	@echo "  cognitive-check    - Run the first cognitive/navigation validator"
+	@echo "  typography-check   - Run the first typography verifier"
+	@echo "  rendered-spatial-check - Run the browser-backed rendered spatial audit"
+	@echo "  rendered-cognitive-check - Run the browser-backed rendered cognitive audit"
+	@echo "  profile-report     - Compose axis/display profiles (set PROFILE_NAMES=a,b)"
+	@echo "  scale-report       - Show lp->px quantization report (LP=16 DPI=96 SCALE=1 SNAP_CLASS=layout)"
+	@echo "  validate           - Run unified implemented validator gates"
+	@echo "  gap-report         - Show declared-vs-runtime gap report"
+	@echo "  claims-report      - Show seeded claims-to-runtime coverage report"
+	@echo "  claims-check       - Validate the claims registry integrity"
 	@echo ""
 	@echo "Testing:"
 	@echo "  test-python        - Run Python tests with pytest"
@@ -76,6 +88,46 @@ contrast-check:
 
 separation-check:
 	$(PYTHON) tools/separation_check.py
+
+seizure-check:
+	@if [ -z "$(SEIZURE_MANIFEST)" ]; then \
+		echo "Set SEIZURE_MANIFEST=/path/to/manifest.json"; \
+		exit 1; \
+	fi
+	$(PYTHON) tools/validators/seizure.py $(SEIZURE_MANIFEST)
+
+temporal-depth-check:
+	$(PYTHON) tools/validators/temporal_depth.py
+
+cognitive-check:
+	$(PYTHON) tools/validators/cognitive.py
+
+typography-check:
+	$(PYTHON) tools/validators/typography.py
+
+rendered-spatial-check:
+	$(PYTHON) tools/rendered_spatial_check.py
+
+rendered-cognitive-check:
+	$(PYTHON) tools/rendered_cognitive_check.py
+
+profile-report:
+	$(PYTHON) tools/profile_resolver.py $(if $(PROFILE_NAMES),--profiles $(PROFILE_NAMES),)
+
+scale-report:
+	$(PYTHON) tools/scaling.py --lp $(or $(LP),16) --dpi $(or $(DPI),96) --scale $(or $(SCALE),1) --snap-class $(or $(SNAP_CLASS),layout) $(if $(PROFILE_NAMES),--profiles $(PROFILE_NAMES),)
+
+validate:
+	$(PYTHON) tools/validate.py
+
+gap-report:
+	$(PYTHON) tools/runtime_gap_report.py
+
+claims-report:
+	$(PYTHON) tools/claims_coverage_report.py
+
+claims-check:
+	$(PYTHON) tools/check_claims_registry.py
 
 # =============================================================================
 # Testing

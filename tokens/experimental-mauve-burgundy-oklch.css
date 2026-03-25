@@ -1,0 +1,109 @@
+:root {
+  --oklch-indigo-700: 0.40027 0.18057 280.39;
+  --oklch-indigo-600: 0.50997 0.22931 279.95;
+  --oklch-indigo-500: 0.59004 0.19996 278.96;
+  --oklch-indigo-300: 0.79242 0.10251 278.75;
+  --oklch-indigo-100: 0.92998 0.03167 275.92;
+
+  --oklch-mauve-700: 0.45942 0.13862 336.29;
+  --oklch-mauve-600: 0.60117 0.17708 333.96;
+  --oklch-mauve-400: 0.74889 0.12661 332.18;
+  --oklch-mauve-200: 0.90189 0.07077 329.95;
+
+  --oklch-burgundy-800: 0.33273 0.12872 17.47;
+  --oklch-burgundy-700: 0.42991 0.15133 16.47;
+  --oklch-burgundy-600: 0.52115 0.16653 14.02;
+  --oklch-burgundy-300: 0.78226 0.09822 17.69;
+  --oklch-burgundy-100: 0.93299 0.02983 19.27;
+
+  --oklch-brand-primary: 0.50997 0.22931 279.95;
+  --oklch-brand-primaryStrong: 0.40027 0.18057 280.39;
+  --oklch-brand-accent: 0.60117 0.17708 333.96;
+  --oklch-brand-accentStrong: 0.45942 0.13862 336.29;
+  --oklch-brand-tertiary: 0.52115 0.16653 14.02;
+  --oklch-brand-tertiaryStrong: 0.42991 0.15133 16.47;
+}
+
+[data-cvd="protan"] {
+  --oklch-indigo-700: 0.40754 0.17679 281.77;
+  --oklch-indigo-600: 0.51055 0.21191 282.25;
+  --oklch-indigo-500: 0.58711 0.19364 280.26;
+
+  --oklch-mauve-700: 0.51189 0.1233 350.49;
+  --oklch-mauve-600: 0.60936 0.16263 349.12;
+  --oklch-mauve-400: 0.75013 0.10838 346.55;
+
+  --oklch-burgundy-800: 0.33502 0.11425 10.04;
+  --oklch-burgundy-700: 0.40618 0.12262 10.61;
+  --oklch-burgundy-600: 0.51123 0.13624 12.54;
+
+  --oklch-brand-primary: 0.51055 0.21191 282.25;
+  --oklch-brand-primaryStrong: 0.40754 0.17679 281.77;
+  --oklch-brand-accent: 0.60936 0.16263 349.12;
+  --oklch-brand-accentStrong: 0.51189 0.1233 350.49;
+  --oklch-brand-tertiary: 0.51123 0.13624 12.54;
+  --oklch-brand-tertiaryStrong: 0.40618 0.12262 10.61;
+}
+
+[data-cvd="deutan"] {
+  --oklch-indigo-700: 0.40798 0.17473 280.77;
+  --oklch-indigo-600: 0.50812 0.20529 281.68;
+  --oklch-indigo-500: 0.58613 0.19144 279.48;
+
+  --oklch-mauve-700: 0.50351 0.12261 346.76;
+  --oklch-mauve-600: 0.60495 0.15937 345.26;
+  --oklch-mauve-400: 0.75057 0.10757 344.07;
+
+  --oklch-burgundy-800: 0.34955 0.10497 7.81;
+  --oklch-burgundy-700: 0.40253 0.11548 8.15;
+  --oklch-burgundy-600: 0.51014 0.13262 10.03;
+
+  --oklch-brand-primary: 0.50812 0.20529 281.68;
+  --oklch-brand-primaryStrong: 0.40798 0.17473 280.77;
+  --oklch-brand-accent: 0.60495 0.15937 345.26;
+  --oklch-brand-accentStrong: 0.50351 0.12261 346.76;
+  --oklch-brand-tertiary: 0.51014 0.13262 10.03;
+  --oklch-brand-tertiaryStrong: 0.40253 0.11548 8.15;
+}
+
+[data-cvd="tritan"] {
+  --oklch-indigo-700: 0.49183 0.18616 294.48;
+  --oklch-indigo-600: 0.58993 0.18434 292.37;
+  --oklch-indigo-500: 0.6746 0.1619 291.19;
+
+  --oklch-mauve-700: 0.51703 0.14926 10.17;
+  --oklch-mauve-600: 0.63659 0.15965 6.6;
+  --oklch-mauve-400: 0.77954 0.10799 3.95;
+
+  --oklch-burgundy-800: 0.36217 0.13123 13.84;
+  --oklch-burgundy-700: 0.43538 0.14609 12.63;
+  --oklch-burgundy-600: 0.54399 0.15675 10.9;
+
+  --oklch-brand-primary: 0.58993 0.18434 292.37;
+  --oklch-brand-primaryStrong: 0.49183 0.18616 294.48;
+  --oklch-brand-accent: 0.63659 0.15965 6.6;
+  --oklch-brand-accentStrong: 0.51703 0.14926 10.17;
+  --oklch-brand-tertiary: 0.54399 0.15675 10.9;
+  --oklch-brand-tertiaryStrong: 0.43538 0.14609 12.63;
+}
+
+[data-cvd="mono"] {
+  --oklch-indigo-700: 0.2795 0.03685 260.03;
+  --oklch-indigo-600: 0.3717 0.03916 257.29;
+  --oklch-indigo-500: 0.44553 0.03745 257.28;
+
+  --oklch-mauve-700: 0.44611 0.02631 256.8;
+  --oklch-mauve-600: 0.55102 0.02336 264.36;
+  --oklch-mauve-400: 0.71366 0.01918 261.32;
+
+  --oklch-burgundy-800: 0.37293 0.03062 259.73;
+  --oklch-burgundy-700: 0.44611 0.02631 256.8;
+  --oklch-burgundy-600: 0.55102 0.02336 264.36;
+
+  --oklch-brand-primary: 0.3717 0.03916 257.29;
+  --oklch-brand-primaryStrong: 0.2795 0.03685 260.03;
+  --oklch-brand-accent: 0.55102 0.02336 264.36;
+  --oklch-brand-accentStrong: 0.44611 0.02631 256.8;
+  --oklch-brand-tertiary: 0.55102 0.02336 264.36;
+  --oklch-brand-tertiaryStrong: 0.37293 0.03062 259.73;
+}

@@ -1,0 +1,639 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Palette Pack Comparison</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #111827;
+        background:
+          radial-gradient(circle at top, rgba(87, 67, 227, 0.10), transparent 38%),
+          linear-gradient(180deg, #fbf8ff 0%, #f7f2f5 48%, #fffdfd 100%);
+      }
+
+      header {
+        padding: 20px 24px 14px;
+        border-bottom: 1px solid rgba(17, 24, 39, 0.08);
+        background: rgba(255, 255, 255, 0.82);
+        backdrop-filter: blur(10px);
+      }
+
+      h1 {
+        margin: 0 0 6px;
+        font-size: clamp(1.9rem, 2.8vw, 3rem);
+        line-height: 1.05;
+      }
+
+      .lede {
+        margin: 0;
+        max-width: 70ch;
+        font-family: ui-sans-serif, system-ui, sans-serif;
+        color: #4b5563;
+      }
+
+      .toolbar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 14px;
+        align-items: center;
+        margin-top: 16px;
+        font-family: ui-sans-serif, system-ui, sans-serif;
+      }
+
+      .toolbar label {
+        font-size: 0.92rem;
+        font-weight: 600;
+      }
+
+      .toolbar select {
+        padding: 9px 12px;
+        border-radius: 10px;
+        border: 1px solid rgba(17, 24, 39, 0.14);
+        background: rgba(255, 255, 255, 0.95);
+        font: inherit;
+      }
+
+      .toolbar .note {
+        color: #6b7280;
+        font-size: 0.88rem;
+      }
+
+      .page-nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 14px;
+        margin-bottom: 14px;
+        font-family: ui-sans-serif, system-ui, sans-serif;
+      }
+
+      .page-nav a {
+        color: #1f3c88;
+        text-decoration: underline;
+        text-underline-offset: 2px;
+      }
+
+      .summary-box {
+        margin-top: 14px;
+        max-width: 70ch;
+        font-family: ui-sans-serif, system-ui, sans-serif;
+      }
+
+      .summary-box summary {
+        cursor: pointer;
+        font-weight: 600;
+      }
+
+      #simWrap {
+        filter: none;
+      }
+
+      main {
+        padding: 24px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+        gap: 18px;
+      }
+
+      .lane {
+        border-radius: 22px;
+        border: 1px solid rgba(17, 24, 39, 0.08);
+        background: rgba(255, 255, 255, 0.88);
+        box-shadow: 0 24px 60px rgba(31, 41, 55, 0.08);
+        overflow: hidden;
+      }
+
+      .lane-head {
+        padding: 18px 18px 14px;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(250, 242, 245, 0.96));
+        border-bottom: 1px solid rgba(17, 24, 39, 0.08);
+      }
+
+      .eyebrow {
+        margin: 0 0 6px;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        font-size: 0.76rem;
+        font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+        color: var(--lane-primary-strong, #3730a3);
+      }
+
+      .lane-head h2 {
+        margin: 0;
+        font-size: 1.35rem;
+        line-height: 1.1;
+      }
+
+      .lane-head p {
+        margin: 10px 0 0;
+        font-family: ui-sans-serif, system-ui, sans-serif;
+        color: #4b5563;
+      }
+
+      .lane-body {
+        padding: 18px;
+        display: grid;
+        gap: 16px;
+      }
+
+      .panel {
+        border: 1px solid var(--lane-border, #d1d5db);
+        border-radius: 16px;
+        background: var(--lane-surface, #ffffff);
+        padding: 14px;
+      }
+
+      .panel h3 {
+        margin: 0 0 12px;
+        font-size: 1rem;
+      }
+
+      .metrics {
+        display: grid;
+        gap: 8px;
+        font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+        font-size: 0.86rem;
+      }
+
+      .metric {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 8px 10px;
+        border-radius: 10px;
+        background: rgba(17, 24, 39, 0.04);
+      }
+
+      .swatch-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+        gap: 8px;
+      }
+
+      .swatch {
+        min-height: 74px;
+        border-radius: 14px;
+        border: 1px solid rgba(17, 24, 39, 0.08);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 9px;
+        color: white;
+        font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+        font-size: 0.72rem;
+        line-height: 1.2;
+      }
+
+      .swatch.light {
+        color: #111827;
+      }
+
+      .controls {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .btn {
+        appearance: none;
+        border-radius: 12px;
+        padding: 10px 14px;
+        font: 600 0.92rem/1 ui-sans-serif, system-ui, sans-serif;
+        cursor: pointer;
+      }
+
+      .btn-primary {
+        background: var(--lane-primary, #4f46e5);
+        border: 1px solid var(--lane-primary-strong, #3730a3);
+        color: white;
+      }
+
+      .btn-secondary {
+        background: transparent;
+        border: 1px solid var(--lane-accent-strong, #86198f);
+        color: var(--lane-accent-strong, #86198f);
+      }
+
+      .pill-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 12px;
+        border-radius: 999px;
+        border: 1px solid var(--lane-border, #d1d5db);
+        font: 500 0.86rem/1 ui-sans-serif, system-ui, sans-serif;
+      }
+
+      .pill .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        flex: none;
+      }
+
+      .hatch {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hatch::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: repeating-linear-gradient(
+          135deg,
+          rgba(17, 24, 39, 0.18) 0,
+          rgba(17, 24, 39, 0.18) 2px,
+          transparent 2px,
+          transparent 8px
+        );
+        pointer-events: none;
+      }
+
+      .legend {
+        display: grid;
+        gap: 10px;
+      }
+
+      .legend-item {
+        display: grid;
+        grid-template-columns: 72px 1fr;
+        gap: 10px;
+        align-items: center;
+        font-family: ui-sans-serif, system-ui, sans-serif;
+      }
+
+      .line {
+        height: 0;
+        border-top-width: 4px;
+        border-top-style: solid;
+      }
+
+      footer {
+        padding: 0 24px 24px;
+        font-family: ui-sans-serif, system-ui, sans-serif;
+        color: #6b7280;
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 720px) {
+        main { padding: 18px; }
+        header { padding: 18px; }
+        footer { padding: 0 18px 18px; }
+        .legend-item { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body data-hud-complexity="full" data-cognitive-complex="true">
+    <svg width="0" height="0" style="position:absolute">
+      <defs>
+        <filter id="protanopia">
+          <feColorMatrix type="matrix" values="
+            0.567 0.433 0     0 0
+            0.558 0.442 0     0 0
+            0     0.242 0.758 0 0
+            0     0     0     1 0"/>
+        </filter>
+        <filter id="deuteranopia">
+          <feColorMatrix type="matrix" values="
+            0.625 0.375 0     0 0
+            0.700 0.300 0     0 0
+            0     0.300 0.700 0 0
+            0     0     0     1 0"/>
+        </filter>
+        <filter id="tritanopia">
+          <feColorMatrix type="matrix" values="
+            0.95  0.05  0     0 0
+            0     0.433 0.567 0 0
+            0     0.475 0.525 0 0
+            0     0     0     1 0"/>
+        </filter>
+        <filter id="achromatopsia">
+          <feColorMatrix type="matrix" values="
+            0.299 0.587 0.114 0 0
+            0.299 0.587 0.114 0 0
+            0.299 0.587 0.114 0 0
+            0     0     0     1 0"/>
+        </filter>
+      </defs>
+    </svg>
+
+    <header>
+      <nav class="page-nav" aria-label="Palette comparison sections" data-density-region="nav">
+        <a href="#overview">Overview</a>
+        <a href="#lanes">Palette lanes</a>
+        <a href="#metrics">Metrics</a>
+        <a href="#notes">Notes</a>
+      </nav>
+      <h1 id="overview">Current, Accessible, and Red Theme Packs</h1>
+      <p class="lede">
+        Compare three palette packs side by side. The same viewing filter
+        applies to every lane so differences stay honest.
+      </p>
+      <details class="summary-box" data-summary-view="true" data-density-region="summary">
+        <summary>Quick summary</summary>
+        <p>This page compares one production pack and two experimental packs with one shared simulation mode.</p>
+      </details>
+      <div class="toolbar" data-density-region="toolbar" data-primary-actions="true">
+        <label for="variant">Authored variant</label>
+        <select id="variant">
+          <option value="default">default</option>
+          <option value="protan">protan</option>
+          <option value="deutan">deutan</option>
+          <option value="tritan">tritan</option>
+          <option value="mono">mono</option>
+        </select>
+
+        <label for="simulate">Simulate view</label>
+        <select id="simulate">
+          <option value="none">none</option>
+          <option value="protanopia">protanopia</option>
+          <option value="deuteranopia">deuteranopia</option>
+          <option value="tritanopia">tritanopia</option>
+          <option value="achromatopsia">achromatopsia</option>
+        </select>
+
+        <span class="note">Authored variant changes the actual tokens. Simulate view applies the same filter to every lane.</span>
+        <span class="note" id="notes" role="status" aria-live="polite" data-notification="status">One shared status line describes the current comparison mode.</span>
+      </div>
+    </header>
+
+    <div id="simWrap" data-density-region="canvas">
+      <main id="lanes" data-panel-groups="12" data-metric-groups="3"></main>
+    </div>
+
+    <footer id="metrics" data-density-region="notes">
+      The experimental lane adds a real tertiary family and keeps non-color cues visible through borders, hatching, and line styles.
+    </footer>
+
+    <template id="laneTemplate">
+      <article class="lane">
+        <div class="lane-head">
+          <div class="eyebrow"></div>
+          <h2></h2>
+          <p></p>
+        </div>
+        <div class="lane-body">
+          <section class="panel">
+            <h3>Strong-token metrics</h3>
+            <div class="metrics"></div>
+          </section>
+
+          <section class="panel">
+            <h3>Buttons and states</h3>
+            <div class="controls">
+              <button class="btn btn-primary">Primary</button>
+              <button class="btn btn-secondary">Accent</button>
+            </div>
+            <div class="pill-row" style="margin-top:12px">
+              <div class="pill"><span class="dot primary-dot"></span>Stable state</div>
+              <div class="pill hatch"><span class="dot accent-dot"></span>Paused / interpretive</div>
+              <div class="pill tertiary-pill"><span class="dot tertiary-dot"></span>Tertiary emphasis</div>
+            </div>
+          </section>
+
+          <section class="panel">
+            <h3>Swatches</h3>
+            <div class="swatch-grid swatches"></div>
+          </section>
+
+          <section class="panel">
+            <h3>Legend cues</h3>
+            <div class="legend">
+              <div class="legend-item">
+                <div class="line line-primary"></div>
+                <div>Primary series: solid line, circle marker</div>
+              </div>
+              <div class="legend-item">
+                <div class="line line-accent"></div>
+                <div>Accent series: dashed line, triangle marker</div>
+              </div>
+              <div class="legend-item tertiary-row">
+                <div class="line line-tertiary"></div>
+                <div>Tertiary series: dotted line, square marker</div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </article>
+    </template>
+
+    <script>
+      const packs = [
+        {
+          key: "current",
+          title: "Production Pack",
+          eyebrow: "Current",
+          description: "Indigo + magenta + gray. No dedicated tertiary chromatic family.",
+          url: "../../tokens/color-tokens.json"
+        },
+        {
+          key: "experimental",
+          title: "Experimental Pack",
+          eyebrow: "Mauve/Burgundy",
+          description: "Indigo + mauve + burgundy, with a true tertiary family and compatibility-safe aliases.",
+          url: "../../tokens/experimental-mauve-burgundy.json"
+        },
+        {
+          key: "redtheme",
+          title: "Red Theme",
+          eyebrow: "Mahogany",
+          description: "Atmosphere-first red theme: mahogany, brass, burgundy, cream. Good for skinning, not the default semantic stack.",
+          url: "../../tokens/experimental-red-mahogany.json"
+        }
+      ];
+
+      function srgbChannelToLinear(c) {
+        return c <= 0.04045 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
+      }
+
+      function hexToSrgb(hex) {
+        const clean = hex.replace("#", "");
+        return [0, 2, 4].map(i => parseInt(clean.slice(i, i + 2), 16) / 255);
+      }
+
+      function srgbToOklab(hex) {
+        const [r, g, b] = hexToSrgb(hex).map(srgbChannelToLinear);
+        const l = 0.4122214708 * r + 0.5363325363 * g + 0.0514459929 * b;
+        const m = 0.2119034982 * r + 0.6806995451 * g + 0.1073969566 * b;
+        const s = 0.0883024619 * r + 0.2817188376 * g + 0.6299787005 * b;
+        const l_ = Math.cbrt(l);
+        const m_ = Math.cbrt(m);
+        const s_ = Math.cbrt(s);
+        return [
+          0.2104542553 * l_ + 0.7936177850 * m_ - 0.0040720468 * s_,
+          1.9779984951 * l_ - 2.4285922050 * m_ + 0.4505937099 * s_,
+          0.0259040371 * l_ + 0.7827717662 * m_ - 0.8086757660 * s_
+        ];
+      }
+
+      function oklabDistance(hexA, hexB) {
+        const [L1, a1, b1] = srgbToOklab(hexA);
+        const [L2, a2, b2] = srgbToOklab(hexB);
+        return Math.sqrt((L1 - L2) ** 2 + (a1 - a2) ** 2 + (b1 - b2) ** 2);
+      }
+
+      function relativeLuminance(hex) {
+        const [r, g, b] = hexToSrgb(hex).map(srgbChannelToLinear);
+        return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+      }
+
+      function contrastRatio(fg, bg) {
+        const l1 = relativeLuminance(fg);
+        const l2 = relativeLuminance(bg);
+        const light = Math.max(l1, l2);
+        const dark = Math.min(l1, l2);
+        return (light + 0.05) / (dark + 0.05);
+      }
+
+      function isLight(hex) {
+        return relativeLuminance(hex) > 0.55;
+      }
+
+      function getVariant(tokens, name) {
+        return tokens[name] || tokens.default;
+      }
+
+      function buildLaneVars(data) {
+        const brand = data.brand;
+        const accentFamily = data.mauve || data.magenta;
+        const tertiaryFamily = data.burgundy || data.gray || accentFamily;
+        return {
+          primary: brand.primary,
+          primaryStrong: brand.primaryStrong,
+          accent: brand.accent,
+          accentStrong: brand.accentStrong,
+          tertiary: brand.tertiary || tertiaryFamily["600"] || tertiaryFamily["700"],
+          tertiaryStrong: brand.tertiaryStrong || tertiaryFamily["700"] || tertiaryFamily["800"] || tertiaryFamily["600"],
+          text: brand.text || "#111827",
+          surface: brand.surface || "#FFFFFF",
+          border: brand.border || "#D1D5DB",
+          swatches: [
+            { label: "Primary strong", color: brand.primaryStrong },
+            { label: "Primary", color: brand.primary },
+            { label: "Accent strong", color: brand.accentStrong },
+            { label: "Accent", color: brand.accent },
+            { label: "Tertiary strong", color: brand.tertiaryStrong || tertiaryFamily["700"] || tertiaryFamily["800"] || tertiaryFamily["600"] },
+            { label: "Tertiary", color: brand.tertiary || tertiaryFamily["600"] || tertiaryFamily["500"] || tertiaryFamily["400"] },
+            { label: "Border", color: brand.border || "#D1D5DB" },
+            { label: "Text", color: brand.text || "#111827" }
+          ]
+        };
+      }
+
+      function metricRow(label, value) {
+        const row = document.createElement("div");
+        row.className = "metric";
+        row.innerHTML = `<span>${label}</span><strong>${value}</strong>`;
+        return row;
+      }
+
+      function renderLane(pack, tokens, variant) {
+        const tpl = document.getElementById("laneTemplate");
+        const lane = tpl.content.firstElementChild.cloneNode(true);
+        const data = getVariant(tokens, variant);
+        const vars = buildLaneVars(data);
+
+        lane.style.setProperty("--lane-primary", vars.primary);
+        lane.style.setProperty("--lane-primary-strong", vars.primaryStrong);
+        lane.style.setProperty("--lane-accent", vars.accent);
+        lane.style.setProperty("--lane-accent-strong", vars.accentStrong);
+        lane.style.setProperty("--lane-tertiary", vars.tertiary);
+        lane.style.setProperty("--lane-tertiary-strong", vars.tertiaryStrong);
+        lane.style.setProperty("--lane-border", vars.border);
+        lane.style.setProperty("--lane-surface", vars.surface);
+
+        lane.querySelector(".eyebrow").textContent = pack.eyebrow;
+        lane.querySelector("h2").textContent = pack.title;
+        lane.querySelector(".lane-head p").textContent = pack.description;
+
+        lane.querySelector(".primary-dot").style.background = vars.primaryStrong;
+        lane.querySelector(".accent-dot").style.background = vars.accentStrong;
+        lane.querySelector(".tertiary-dot").style.background = vars.tertiaryStrong;
+        lane.querySelector(".tertiary-pill").style.borderColor = vars.tertiaryStrong;
+        lane.querySelector(".tertiary-row").style.color = vars.text;
+        lane.querySelector(".line-primary").style.borderTopColor = vars.primaryStrong;
+        lane.querySelector(".line-accent").style.borderTopColor = vars.accentStrong;
+        lane.querySelector(".line-accent").style.borderTopStyle = "dashed";
+        lane.querySelector(".line-tertiary").style.borderTopColor = vars.tertiaryStrong;
+        lane.querySelector(".line-tertiary").style.borderTopStyle = "dotted";
+
+        const metrics = lane.querySelector(".metrics");
+        metrics.appendChild(metricRow("white on primaryStrong", contrastRatio("#FFFFFF", vars.primaryStrong).toFixed(2)));
+        metrics.appendChild(metricRow("white on accentStrong", contrastRatio("#FFFFFF", vars.accentStrong).toFixed(2)));
+        metrics.appendChild(metricRow("primary/accent distance", oklabDistance(vars.primaryStrong, vars.accentStrong).toFixed(3)));
+        metrics.appendChild(metricRow("primary/tertiary distance", oklabDistance(vars.primaryStrong, vars.tertiaryStrong).toFixed(3)));
+
+        const swatches = lane.querySelector(".swatches");
+        vars.swatches.forEach(({ label, color }) => {
+          const item = document.createElement("div");
+          item.className = "swatch";
+          if (isLight(color)) item.classList.add("light");
+          item.style.background = color;
+          item.innerHTML = `<strong>${label}</strong><span>${color}</span>`;
+          swatches.appendChild(item);
+        });
+
+        return lane;
+      }
+
+      async function loadPacks() {
+        return Promise.all(
+          packs.map(async pack => ({
+            ...pack,
+            tokens: await fetch(pack.url).then(r => r.json())
+          }))
+        );
+      }
+
+      function applySimulation() {
+        const mode = document.getElementById("simulate").value;
+        const wrap = document.getElementById("simWrap");
+        wrap.style.filter = mode === "none" ? "none" : `url(#${mode})`;
+      }
+
+      async function init() {
+        const loaded = await loadPacks();
+        const variantSel = document.getElementById("variant");
+        const simulateSel = document.getElementById("simulate");
+        const lanesEl = document.getElementById("lanes");
+
+        const params = new URLSearchParams(window.location.search);
+        const variant = params.get("variant");
+        if (variant && ["default", "protan", "deutan", "tritan", "mono"].includes(variant)) {
+          variantSel.value = variant;
+        }
+
+        function render() {
+          lanesEl.innerHTML = "";
+          loaded.forEach(pack => lanesEl.appendChild(renderLane(pack, pack.tokens, variantSel.value)));
+          applySimulation();
+        }
+
+        variantSel.addEventListener("change", render);
+        simulateSel.addEventListener("change", applySimulation);
+        render();
+      }
+
+      init();
+    </script>
+    <script src="../shared/auto-dev.js"></script>
+  </body>
+</html>

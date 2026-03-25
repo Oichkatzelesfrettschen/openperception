@@ -1,0 +1,27 @@
+{
+  "default": {
+    "mahogany": {"900": "#241513", "800": "#3A1E1A", "700": "#4A231D", "500": "#6B3B2F", "200": "#D7B9A4"},
+    "brass": {"700": "#7C5A34", "600": "#8E6A42", "400": "#C3A06E", "200": "#E7D2B4"},
+    "burgundy": {"700": "#7A1628", "600": "#A1344C", "400": "#D06A7E", "200": "#F0C5CD"},
+    "cream": {"100": "#F8F3EE", "200": "#EDE3D7"},
+    "gray": {"900": "#2A2321", "700": "#4D413C", "500": "#7B6E67", "300": "#D9C8B8", "0": "#F8F3EE"},
+    "brand": {
+      "primary": "#4A231D",
+      "primaryStrong": "#3A1E1A",
+      "accent": "#8E6A42",
+      "accentStrong": "#7C5A34",
+      "tertiary": "#A1344C",
+      "tertiaryStrong": "#7A1628",
+      "text": "#2A2321",
+      "surface": "#F8F3EE",
+      "border": "#D9C8B8",
+      "focusRing": "#C3A06E",
+      "link": "#7A1628"
+    },
+    "viz": {
+      "categorical": ["#3A1E1A", "#7C5A34", "#7A1628", "#4D413C", "#C3A06E", "#D06A7E"],
+      "markers": ["circle", "triangle", "square", "diamond", "triangle", "square"],
+      "dashes": [[0, 0], [6, 3], [2, 2], [6, 2, 2, 2], [4, 2], [0, 0]]
+    }
+  }
+}
