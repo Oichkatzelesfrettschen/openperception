@@ -13,7 +13,7 @@ materials used by a dataset or interactive tool.
 
 | ID | Asset | Local Path | Provenance | Notes |
 |----|-------|------------|------------|-------|
-| `ishihara_38_plate_reference` | Ishihara Colour Plates - 38 Set | `datasets/source_assets/ishihara/Ishihara_38_Plates_Test.pdf` | `datasets/source_assets/ishihara/PROVENANCE.json` | Migrated out of `research/` because it is a dataset-support reference asset, not a literature paper. Bibliographic provenance for the 38-plate edition is re-verified, while exact byte-level acquisition lineage for the local PDF remains unresolved and is documented in the verification trace. |
+| `ishihara_38_plate_reference` | Ishihara Colour Plates - 38 Set | `datasets/source_assets/ishihara/Ishihara_38_Plates_Test.pdf` | `datasets/source_assets/ishihara/PROVENANCE.json` | Migrated out of `research/` because it is a dataset-support reference asset, not a literature paper. The exact upstream Challenge TB PDF is now re-verified, and the verification trace also records alternate public mirrors with different bytes. |
 
 ## Related Docs
 

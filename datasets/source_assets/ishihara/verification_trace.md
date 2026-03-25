@@ -29,25 +29,36 @@ re-verified:
   for colour deficiency (38 plates)" with Kanehara Trading / Isshinkai
   bibliographic attribution.
 
-## Exact-File Provenance Gap
+## Exact-File Comparison History
 
-Two public PDF mirrors were fetched and compared by hash:
+The exact upstream source for the local file was recovered:
+
+- `https://www.challengetb.org/publications/tools/country/Ishihara_Tests.pdf`
+
+That file is a byte-for-byte match for the local cached asset:
+
+- SHA-256: `549b389d9bf921006a0d4d52941728b1b15f77df3cf766a79e0f21a1d3b31786`
+- Size: `2816420` bytes
+
+Other public PDF mirrors were also fetched and compared by hash:
 
 - `https://www.iisgaribaldi.edu.it/wp-content/uploads/2024/12/tavolediishihara.pdf`
 - `https://picassciences.com/wp-content/uploads/2015/01/ishihara38.pdf`
 
-Those two mirrors matched each other:
+Those two mirrors did not match the local Challenge TB copy. The first two
+mirrors matched each other:
 
 - SHA-256: `c7a2e710c132d37098fb048e4766e74a68a8baee0799422deb9e3d19e0d77d21`
 - Size: `1494387` bytes
 
-They do not match the local cached asset, which means the exact acquisition
-path for the local PDF is still unresolved. The current repo asset therefore
-has stronger bibliographic verification than byte-level source-url verification.
+The University of Mustansiriyah copy was also a different file:
+
+- `https://uomustansiriyah.edu.iq/media/lectures/3/3_2025_09_22%2112_51_13_AM.pdf`
+- SHA-256: `3a3d90171492e3d2cb87ea7b148fca53f439fc5fb1455592a0b1f0793f20e1d6`
+- Size: `2687974` bytes
 
 ## Current Interpretation
 
-The local file is kept because its content is useful to the Ishihara learning
-tool and clearly corresponds to the 38-plate reference set, but it should be
-treated as a legacy local cache artifact until an exact upstream source can be
-re-identified.
+The local file is now tied to an exact upstream acquisition URL, while the
+mirror comparisons remain useful evidence that multiple public Ishihara 38-set
+PDF layouts circulate online.
