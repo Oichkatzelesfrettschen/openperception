@@ -5,7 +5,7 @@
     "default": {
       "roles": {
         "danger": {
-          "color": "#86198F",
+          "color": "#B91C9C",
           "source": "brand.accentStrong",
           "redundancy": {
             "marker": "triangle",
@@ -33,8 +33,8 @@
           }
         },
         "disabled": {
-          "color": "#D1D5DB",
-          "source": "brand.border",
+          "color": "#6B7280",
+          "source": "gray.500",
           "redundancy": {
             "marker": "x",
             "dash": [2, 2],
@@ -71,8 +71,8 @@
           }
         },
         "progress": {
-          "color": "#047857",
-          "source": "semantic.progress",
+          "color": "#10B981",
+          "source": "semantic.progress_adjusted",
           "redundancy": {
             "icon": "progress-bar",
             "label": "percent-complete",
@@ -112,8 +112,8 @@
           }
         },
         "disabled": {
-          "color": "#9CA3AF",
-          "source": "gray.400",
+          "color": "#6B7280",
+          "source": "gray.500",
           "redundancy": {
             "marker": "x",
             "dash": [2, 2],
@@ -150,8 +150,8 @@
           }
         },
         "progress": {
-          "color": "#0F766E",
-          "source": "semantic.progress",
+          "color": "#10B981",
+          "source": "semantic.progress_adjusted",
           "redundancy": {
             "icon": "progress-bar",
             "label": "percent-complete",
@@ -191,8 +191,8 @@
           }
         },
         "disabled": {
-          "color": "#9CA3AF",
-          "source": "gray.400",
+          "color": "#6B7280",
+          "source": "gray.500",
           "redundancy": {
             "marker": "x",
             "dash": [2, 2],
@@ -229,8 +229,8 @@
           }
         },
         "progress": {
-          "color": "#0F766E",
-          "source": "semantic.progress",
+          "color": "#10B981",
+          "source": "semantic.progress_adjusted",
           "redundancy": {
             "icon": "progress-bar",
             "label": "percent-complete",
@@ -270,8 +270,8 @@
           }
         },
         "disabled": {
-          "color": "#9CA3AF",
-          "source": "gray.400",
+          "color": "#6B7280",
+          "source": "gray.500",
           "redundancy": {
             "marker": "x",
             "dash": [2, 2],
@@ -308,8 +308,8 @@
           }
         },
         "progress": {
-          "color": "#047857",
-          "source": "semantic.progress",
+          "color": "#10B981",
+          "source": "semantic.progress_adjusted",
           "redundancy": {
             "icon": "progress-bar",
             "label": "percent-complete",
@@ -321,7 +321,7 @@
     "mono": {
       "roles": {
         "danger": {
-          "color": "#4B5563",
+          "color": "#64748B",
           "source": "brand.accentStrong",
           "redundancy": {
             "marker": "triangle",
@@ -349,8 +349,8 @@
           }
         },
         "disabled": {
-          "color": "#9CA3AF",
-          "source": "gray.400",
+          "color": "#6B7280",
+          "source": "gray.500",
           "redundancy": {
             "marker": "x",
             "dash": [2, 2],
@@ -367,7 +367,7 @@
           }
         },
         "warning": {
-          "color": "#78716C",
+          "color": "#94A3B8",
           "source": "semantic.warning",
           "redundancy": {
             "marker": "diamond",
@@ -387,8 +387,8 @@
           }
         },
         "progress": {
-          "color": "#334155",
-          "source": "semantic.progress",
+          "color": "#1E293B",
+          "source": "brand.primaryStrong",
           "redundancy": {
             "icon": "progress-bar",
             "label": "percent-complete",

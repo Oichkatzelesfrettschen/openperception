@@ -7,7 +7,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from validators.base import Status
-from validators.cognitive import CognitiveGate
+from validators.cognitive import CognitiveGate, CognitiveHTMLParser
 
 
 def write_profiles(path: Path) -> None:
@@ -164,3 +164,20 @@ def test_cognitive_gate_fails_on_dense_nav_without_summary(tmp_path: Path) -> No
         check.name == "example.html/metric_group_density" and check.status == Status.FAIL
         for check in result.checks
     )
+
+
+def test_cognitive_parser_recovers_after_self_closing_ignored_svg_tags() -> None:
+    parser = CognitiveHTMLParser()
+    parser.feed(
+        "\n".join(
+            [
+                "<!doctype html>",
+                "<html><body>",
+                '<svg width="0" height="0"><defs><feColorMatrix type="matrix" values="1" /></defs></svg>',
+                "<p>Plain words stay visible.</p>",
+                "</body></html>",
+            ]
+        )
+    )
+
+    assert "Plain words stay visible." in " ".join(parser.text_chunks)

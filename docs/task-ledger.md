@@ -92,14 +92,14 @@ Current tranche focus:
 - [x] T061 Run `python3 tools/validate.py` and record live warning surfaces.
 - [x] T062 Run `python3 tools/check_claims_registry.py`.
 - [x] T063 Run targeted validator tests under `tools/tests/test_validate.py`.
-- [ ] T064 Add `tools/check_task_governance.py` to a broader default check lane.
-- [ ] T065 Add `tools/check_source_cache_links.py` to the broader default check lane.
-- [ ] T066 Add `tools/check_paper_corpus.py` to the broader default check lane.
-- [ ] T067 Add `tools/check_source_assets.py` to the broader default check lane.
-- [ ] T068 Add a `make check` umbrella target once scope is settled.
+- [x] T064 Add `tools/check_task_governance.py` to a broader default check lane.
+- [x] T065 Add `tools/check_source_cache_links.py` to the broader default check lane.
+- [x] T066 Add `tools/check_paper_corpus.py` to the broader default check lane.
+- [x] T067 Add `tools/check_source_assets.py` to the broader default check lane.
+- [x] T068 Add a `make check` umbrella target once scope is settled.
 - [ ] T069 Ensure every verifier error points to one exact file and task or issue row.
 - [ ] T070 Add JSON output mode to repo-governance verifiers for future automation.
-- [ ] T071 Audit whether `tools/validate.py` should fail on warnings for selected profiles.
+- [x] T071 Audit whether `tools/validate.py` should fail on warnings for selected profiles.
 - [ ] T072 Decide whether rendered audits belong in default or optional validation.
 - [ ] T073 Add benchmark or performance smoke coverage where docs claim performance intent.
 - [ ] T074 Add a validator summary doc that maps runtime warnings to debt IDs.

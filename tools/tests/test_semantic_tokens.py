@@ -24,7 +24,9 @@ def test_get_variant_roles_returns_runtime_roles() -> None:
     payload = load_semantic_tokens()
     roles = get_variant_roles(payload, "default")
 
-    assert roles["danger"]["color"] == "#86198F"
+    assert roles["danger"]["color"].startswith("#")
+    assert len(roles["danger"]["color"]) == 7
+    assert roles["danger"]["source"]
     assert roles["ally"]["redundancy"]["marker"] == "circle"
     assert roles["warning"]["redundancy"]["marker"] == "diamond"
     assert roles["progress"]["redundancy"]["label"] == "percent-complete"

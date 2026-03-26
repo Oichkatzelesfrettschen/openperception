@@ -207,6 +207,8 @@ class CognitiveHTMLParser(HTMLParser):
 
     def handle_startendtag(self, tag: str, attrs_list: list[tuple[str, str | None]]) -> None:
         self.handle_starttag(tag, attrs_list)
+        if tag in IGNORED_TEXT_TAGS and self._ignored_depth:
+            self._ignored_depth -= 1
         if self._primary_action_scopes and dict(attrs_list).get("data-primary-actions") is not None:
             self._primary_action_scopes.pop()
 

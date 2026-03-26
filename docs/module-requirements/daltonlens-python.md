@@ -8,11 +8,19 @@ This file documents the editable-install and validation expectations for the
 - Python with `pip`
 - NumPy
 - Pillow
+- Geometry3D for the Ishihara plate generation tests
+- OpenCV (`opencv-python-headless`) for the Ishihara plate generation tests
 
 Editable install:
 
 ```bash
 python3 -m pip install -e algorithms/DaltonLens-Python
+```
+
+Repo-preferred path:
+
+```bash
+make venv
 ```
 
 ## Testing

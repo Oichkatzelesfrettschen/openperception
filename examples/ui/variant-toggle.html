@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CVD Variant Toggle</title>
+    <title>Color-safe UI demo</title>
     <link rel="stylesheet" href="../../tokens/color-tokens.css" />
     <style>
       body { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 16px; line-height: 1.5; background: var(--surface); color: var(--text); padding: 2rem; }
@@ -31,16 +31,16 @@
       <a href="#controls">Controls</a>
     </nav>
 
-    <h1 id="overview">Colorblind-friendly UI (Indigo, Gray, Magenta)</h1>
-    <p>Links are always <a class="link" href="#">underlined</a>. Focus uses a high-contrast ring.</p>
+    <h1 id="overview">Color-safe UI demo</h1>
+    <p>Links stay <a class="link" href="#">underlined</a>. Focus gets a clear ring.</p>
     <details data-summary-view="true" data-density-region="summary">
-      <summary>What this example shows</summary>
-      <p>This page keeps one compact demo card, one variant switcher, and one live status line.</p>
+      <summary>What this page shows</summary>
+      <p>One demo card, one variant switcher, and one live status line.</p>
     </details>
-    <p class="chip" role="status" aria-live="polite" data-notification="status" data-density-region="status">One preview updates when you switch variants.</p>
+    <p class="chip" role="status" aria-live="polite" data-notification="status" data-density-region="status">The preview changes with the variant.</p>
 
     <div class="card focus-ring" id="demo" tabindex="0" data-density-region="demo">
-      <p>Primary and secondary buttons demonstrate redundant cues.</p>
+      <p>These buttons show backup cues.</p>
       <div class="demo-actions" data-primary-actions="true">
         <button class="btn-primary focus-ring">Primary</button>
         <button class="btn-secondary focus-ring">Secondary</button>
@@ -48,7 +48,7 @@
       </div>
     </div>
 
-    <p id="controls" style="margin-top:1rem;">Switch CVD variant:</p>
+    <p id="controls" style="margin-top:1rem;">Choose a CVD variant:</p>
     <div data-density-region="controls" data-primary-actions="true">
       <select id="variant">
         <option value="default">default</option>

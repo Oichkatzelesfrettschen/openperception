@@ -37,18 +37,18 @@ Issue classes:
 - current handling: the module requirements doc now calls this out explicitly
   instead of silently implying broader support.
 
-## KI-003 Unified Validation Still Returns Live Warnings
+## KI-003 Full Python Test Lane Depends On A Local Dev Environment
 
-- class: implementation gap
+- class: tooling gap
 - status: open
-- affected files: `tools/validate.py`, `tools/validators/cvd.py`,
-  `tools/validators/cognitive.py`, `tools/validators/typography.py`
-- problem: the current runtime validator reports warnings for borderline CVD
-  separations, reading-level burden, and typography checks.
-- consequence: the repo has a functioning validator surface, but not a
-  clean-pass accessibility baseline yet.
-- current handling: warnings are treated as real debt and tracked in
-  `docs/task-ledger.md`.
+- affected files: `Makefile`, `requirements-dev.txt`,
+  `docs/module-requirements/daltonlens-python.md`
+- problem: the full `DaltonLens-Python` test lane requires a local virtual
+  environment and the `Geometry3D` dependency for Ishihara generation tests.
+- consequence: running `make test-python` against a bare system Python can fail
+  even when the repo itself is healthy.
+- current handling: `make venv` now provisions the preferred local environment,
+  and the missing dependency is declared in `requirements-dev.txt`.
 
 ## KI-004 Strategic Docs Still Need Ongoing Reconciliation
 

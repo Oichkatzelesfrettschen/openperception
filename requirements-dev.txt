@@ -23,3 +23,5 @@ pre-commit==4.0.1
 # Runtime dependencies (DaltonLens-Python)
 numpy>=1.21
 Pillow>=9.0
+Geometry3D==0.3.0
+opencv-python-headless==4.13.0.92

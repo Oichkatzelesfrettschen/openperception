@@ -4,7 +4,7 @@
   --oklch-indigo-500: 0.5854 0.20406 277.12;
   --oklch-indigo-300: 0.7853 0.10413 274.71;
   --oklch-indigo-100: 0.92994 0.03343 272.79;
-  --oklch-magenta-700: 0.45191 0.19218 324.59;
+  --oklch-magenta-700: 0.54338 0.22279 337.6;
   --oklch-magenta-600: 0.59147 0.25688 322.9;
   --oklch-magenta-400: 0.74772 0.20697 322.16;
   --oklch-magenta-200: 0.90298 0.07324 319.62;
@@ -20,7 +20,7 @@
   --oklch-brand-primary: 0.51057 0.23005 276.97;
   --oklch-brand-primaryStrong: 0.39843 0.17734 277.37;
   --oklch-brand-accent: 0.59147 0.25688 322.9;
-  --oklch-brand-accentStrong: 0.45191 0.19218 324.59;
+  --oklch-brand-accentStrong: 0.54338 0.22279 337.6;
   --oklch-brand-text: 0.21008 0.03176 264.66;
   --oklch-brand-surface: 1.0 0.0 89.88;
   --oklch-brand-border: 0.87168 0.00934 258.34;
@@ -70,12 +70,12 @@
   --oklch-indigo-700: 0.2795 0.03685 260.03;
   --oklch-indigo-600: 0.3717 0.03916 257.29;
   --oklch-indigo-500: 0.44553 0.03745 257.28;
-  --oklch-magenta-700: 0.44611 0.02631 256.8;
+  --oklch-magenta-700: 0.55439 0.04072 257.42;
   --oklch-magenta-600: 0.55102 0.02336 264.36;
   --oklch-magenta-400: 0.71366 0.01918 261.32;
   --oklch-brand-primary: 0.3717 0.03916 257.29;
   --oklch-brand-primaryStrong: 0.2795 0.03685 260.03;
   --oklch-brand-accent: 0.55102 0.02336 264.36;
-  --oklch-brand-accentStrong: 0.44611 0.02631 256.8;
+  --oklch-brand-accentStrong: 0.55439 0.04072 257.42;
   --oklch-brand-link: 0.2795 0.03685 260.03;
 }

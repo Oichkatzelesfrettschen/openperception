@@ -44,15 +44,16 @@ Why the root floor is 3.10+:
 ## Core Setup
 
 ```bash
-python3 -m pip install -r requirements-dev.txt
-python3 -m pip install -e algorithms/DaltonLens-Python
+make venv
 ```
 
 Optional local theme package:
 
-```bash
-python3 -m pip install -e python-packages/sphinx-brand-theme
-```
+The `venv` target installs:
+
+- `requirements-dev.txt`
+- editable `algorithms/DaltonLens-Python`
+- editable `python-packages/sphinx-brand-theme`
 
 Pull tracked binary artifacts after clone:
 
@@ -71,13 +72,15 @@ make integrity-check
 Accessibility runtime validator:
 
 ```bash
-python3 tools/validate.py
+make validate
 ```
 
 Targeted tests:
 
 ```bash
-python3 -m pytest tools/tests/test_validate.py tools/tests/test_check_claims_registry.py -q
+make test-tools
+make test-python
+make check
 ```
 
 ## Optional Toolchains
@@ -125,5 +128,7 @@ See `artifacts/blender_showcase/REQUIREMENTS.md`.
 - `algorithms/DaltonLens-Python/pyproject.toml` does not currently declare a
   machine-readable `requires-python` floor.
 - optional toolchains are documented, not auto-installed.
+- the root repo now prefers a local `.venv` because many Linux hosts enforce
+  PEP 668 for the system Python.
 - some strategic docs still need ongoing reconciliation with runtime state; see
   `docs/KNOWN_ISSUES.md` and `docs/task-ledger.md`.

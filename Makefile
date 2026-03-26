@@ -7,13 +7,19 @@
 PORT ?= 8000
 PANDOC_SRC ?= docs/colorblind-friendly-design-guide.md
 OUT_DIR ?= out
+VENV_DIR ?= .venv
+BOOTSTRAP_PYTHON ?= python3
+ifneq ($(wildcard $(VENV_DIR)/bin/python3),)
+PYTHON ?= $(abspath $(VENV_DIR)/bin/python3)
+else
 PYTHON ?= python3
+endif
 C_BUILD_DIR ?= algorithms/libDaltonLens/build
 
 # =============================================================================
 # Phony Targets
 # =============================================================================
-.PHONY: all help serve oklch contrast-check separation-check seizure-check temporal-depth-check cognitive-check typography-check rendered-spatial-check rendered-cognitive-check profile-report scale-report validate gap-report claims-report claims-check integrity-check task-governance-check source-cache-links-check paper-corpus-check source-assets-check \
+.PHONY: all help serve oklch contrast-check separation-check seizure-check temporal-depth-check cognitive-check typography-check rendered-spatial-check rendered-cognitive-check profile-report scale-report validate validate-strict gap-report claims-report claims-check integrity-check task-governance-check source-cache-links-check paper-corpus-check source-assets-check check venv \
         test test-python test-tools test-c test-all coverage \
         lint lint-python lint-c format \
         build build-c install-python install-dev \
@@ -41,12 +47,14 @@ help:
 	@echo "  rendered-cognitive-check - Run the browser-backed rendered cognitive audit"
 	@echo "  profile-report     - Compose axis/display profiles (set PROFILE_NAMES=a,b)"
 	@echo "  scale-report       - Show lp->px quantization report (LP=16 DPI=96 SCALE=1 SNAP_CLASS=layout)"
-	@echo "  validate           - Run unified implemented validator gates"
+	@echo "  validate           - Run unified implemented validator gates in strict mode"
+	@echo "  validate-strict    - Alias for strict unified validation"
 	@echo "  gap-report         - Show declared-vs-runtime gap report"
 	@echo "  claims-report      - Show seeded claims-to-runtime coverage report"
 	@echo "  claims-check       - Validate the claims registry integrity"
 	@echo "  integrity-check    - Run repo integrity verifiers (claims, corpus, source assets, source cache links, task governance)"
 	@echo "  task-governance-check - Validate task ledger and known-issues governance docs"
+	@echo "  check              - Run the repo aggregate gate (strict validate, integrity, tools tests, DaltonLens tests)"
 	@echo ""
 	@echo "Testing:"
 	@echo "  test-python        - Run Python tests with pytest"
@@ -64,6 +72,7 @@ help:
 	@echo ""
 	@echo "Building:"
 	@echo "  build-c            - Build libDaltonLens C library"
+	@echo "  venv               - Create or refresh the local .venv with dev dependencies"
 	@echo "  install-python     - Install DaltonLens-Python in dev mode"
 	@echo "  install-dev        - Full dev environment setup (deps + pre-commit)"
 	@echo ""
@@ -120,8 +129,10 @@ profile-report:
 scale-report:
 	$(PYTHON) tools/scaling.py --lp $(or $(LP),16) --dpi $(or $(DPI),96) --scale $(or $(SCALE),1) --snap-class $(or $(SNAP_CLASS),layout) $(if $(PROFILE_NAMES),--profiles $(PROFILE_NAMES),)
 
-validate:
-	$(PYTHON) tools/validate.py
+validate: validate-strict
+
+validate-strict:
+	$(PYTHON) tools/validate.py --strict-warnings
 
 gap-report:
 	$(PYTHON) tools/runtime_gap_report.py
@@ -146,6 +157,9 @@ source-assets-check:
 
 integrity-check: claims-check paper-corpus-check source-assets-check source-cache-links-check task-governance-check
 	@echo "All repo integrity checks completed."
+
+check: validate-strict integrity-check test-tools test-python
+	@echo "Aggregate repo check completed."
 
 # =============================================================================
 # Testing
@@ -229,16 +243,22 @@ build-c:
 	cd $(C_BUILD_DIR) && cmake --build . --config Release
 	@echo "C library build completed."
 
+venv:
+	@echo "Bootstrapping local virtual environment in $(VENV_DIR)..."
+	$(BOOTSTRAP_PYTHON) -m venv $(VENV_DIR)
+	$(VENV_DIR)/bin/python -m pip install --upgrade pip
+	$(VENV_DIR)/bin/pip install -r requirements-dev.txt
+	$(VENV_DIR)/bin/pip install -e algorithms/DaltonLens-Python -e python-packages/sphinx-brand-theme
+	@echo "Virtual environment ready. Use $(VENV_DIR)/bin/python or rerun make commands."
+
 install-python:
 	@echo "Installing DaltonLens-Python in development mode..."
-	pip install -e algorithms/DaltonLens-Python
+	$(PYTHON) -m pip install -e algorithms/DaltonLens-Python
 	@echo "Python package installed."
 
-install-dev:
+install-dev: venv
 	@echo "Setting up complete development environment..."
-	pip install -r requirements-dev.txt
-	pip install -e algorithms/DaltonLens-Python
-	pre-commit install
+	$(VENV_DIR)/bin/pre-commit install
 	@echo "Development environment ready. Run 'make test' to verify."
 
 # =============================================================================

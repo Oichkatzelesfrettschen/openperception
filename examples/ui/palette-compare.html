@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Palette Pack Comparison</title>
+    <title>Color packs</title>
     <style>
       :root {
         color-scheme: light;
@@ -337,22 +337,21 @@
 
     <header>
       <nav class="page-nav" aria-label="Palette comparison sections" data-density-region="nav">
-        <a href="#overview">Overview</a>
-        <a href="#lanes">Palette lanes</a>
-        <a href="#metrics">Metrics</a>
+        <a href="#overview">Start</a>
+        <a href="#lanes">Packs</a>
+        <a href="#metrics">Data</a>
         <a href="#notes">Notes</a>
       </nav>
-      <h1 id="overview">Current, Accessible, and Warm Atmosphere Packs</h1>
+      <h1 id="overview">Color packs</h1>
       <p class="lede">
-        Compare three palette packs side by side. The same viewing filter
-        applies to every lane so differences stay honest.
+        Compare three packs side by side. One filter covers every pack.
       </p>
       <details class="summary-box" data-summary-view="true" data-density-region="summary">
-        <summary>Quick summary</summary>
-        <p>This page compares one production pack and two experimental packs with one shared simulation mode.</p>
+        <summary>Quick view</summary>
+        <p>Compare one current pack and two test packs in one view mode.</p>
       </details>
       <div class="toolbar" data-density-region="toolbar" data-primary-actions="true">
-        <label for="variant">Authored variant</label>
+        <label for="variant">Pack variant</label>
         <select id="variant">
           <option value="default">default</option>
           <option value="protan">protan</option>
@@ -361,7 +360,7 @@
           <option value="mono">mono</option>
         </select>
 
-        <label for="simulate">Simulate view</label>
+        <label for="simulate">View filter</label>
         <select id="simulate">
           <option value="none">none</option>
           <option value="protanopia">protanopia</option>
@@ -370,8 +369,8 @@
           <option value="achromatopsia">achromatopsia</option>
         </select>
 
-        <span class="note">Authored variant changes the actual tokens. Simulate view applies the same filter to every lane.</span>
-        <span class="note" id="notes" role="status" aria-live="polite" data-notification="status">One shared status line describes the current comparison mode.</span>
+        <span class="note">Pack variant changes the tokens. One filter covers every pack.</span>
+        <span class="note" id="notes" role="status" aria-live="polite" data-notification="status">One status line names the current mode.</span>
       </div>
     </header>
 
@@ -380,7 +379,7 @@
     </div>
 
     <footer id="metrics" data-density-region="notes">
-      The experimental lanes add a real tertiary family and keep non-color cues visible through borders, hatching, and line styles.
+      The test packs add a third family and clear backup cues.
     </footer>
 
     <template id="laneTemplate">
@@ -419,15 +418,15 @@
             <div class="legend">
               <div class="legend-item">
                 <div class="line line-primary"></div>
-                <div>Primary series: solid line, circle marker</div>
+                <div>Primary series: solid line, circle mark</div>
               </div>
               <div class="legend-item">
                 <div class="line line-accent"></div>
-                <div>Accent series: dashed line, triangle marker</div>
+                <div>Accent series: dashed line, triangle mark</div>
               </div>
               <div class="legend-item tertiary-row">
                 <div class="line line-tertiary"></div>
-                <div>Tertiary series: dotted line, square marker</div>
+                <div>Tertiary series: dotted line, square mark</div>
               </div>
             </div>
           </section>
@@ -441,21 +440,21 @@
           key: "current",
           title: "Production Pack",
           eyebrow: "Current",
-          description: "Indigo + magenta + gray. No dedicated tertiary chromatic family.",
+          description: "Current indigo, magenta, and gray pack.",
           url: "../../tokens/color-tokens.json"
         },
         {
           key: "experimental",
           title: "Experimental Pack",
           eyebrow: "Mauve/Burgundy",
-          description: "Indigo + mauve + burgundy, with a true tertiary family and compatibility-safe aliases.",
+          description: "Experimental pack with a true third color family.",
           url: "../../tokens/experimental-mauve-burgundy.json"
         },
         {
           key: "redtheme",
           title: "Axiomatic Warm Lane",
           eyebrow: "Mahogany/Brass",
-          description: "Structure-first warm lane: grounded mahogany, brass interpretation, burgundy gravity, cream reading surface.",
+          description: "Warm pack built from mahogany, brass, burgundy, and cream.",
           url: "../../tokens/experimental-red-mahogany.json"
         }
       ];

@@ -75,14 +75,15 @@ Executed on this audit pass:
 - `python3 tools/check_claims_registry.py`
 - `python3 -m pytest tools/tests/test_validate.py tools/tests/test_check_claims_registry.py -q`
 
-Observed current validator debt:
+Observed current runtime result after remediation:
 
-- CVD gate returns borderline-separation warnings
-- cognitive gate returns reading-level warnings
-- typography remains a warned auxiliary surface
+- `python3 tools/validate.py --strict-warnings` now passes
+- the remaining practical setup gap is environment bootstrap for the full
+  `DaltonLens-Python` test lane
 
-Those are real implementation debts, not noise, and they are now tracked in
-`docs/KNOWN_ISSUES.md` and `docs/task-ledger.md`.
+That means the repo's current debt is no longer in the implemented validator
+surface itself. It is now mostly in environment reproducibility, broader
+claim-audit coverage, and strategic-doc reconciliation.
 
 ## Conclusion
 

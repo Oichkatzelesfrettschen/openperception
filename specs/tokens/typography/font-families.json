@@ -169,6 +169,7 @@
         "name": "JetBrains Mono",
         "license": "OFL 1.1",
         "source": "https://www.jetbrains.com/lp/mono/",
+        "x_height_ratio": 0.53,
         "disambiguation_score": "exceptional",
         "weights": [100, 200, 300, 400, 500, 600, 700, 800],
         "ligatures": true,
