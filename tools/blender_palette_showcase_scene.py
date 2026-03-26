@@ -239,17 +239,17 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
     world_nodes.clear()
     world_output = world_nodes.new("ShaderNodeOutputWorld")
     world_bg = world_nodes.new("ShaderNodeBackground")
-    world_bg.inputs["Color"].default_value = _hex_to_rgba("#F4F1ED")
-    world_bg.inputs["Strength"].default_value = 0.5
+    world_bg.inputs["Color"].default_value = _hex_to_rgba("#F6F2EC")
+    world_bg.inputs["Strength"].default_value = 0.68
     world_links.new(world_bg.outputs["Background"], world_output.inputs["Surface"])
 
-    floor_mat = _ensure_material(bpy, "Floor", "#BBB2AB", roughness=0.96)
-    wall_mat = _ensure_material(bpy, "BackdropWall", "#E8E1DA", roughness=0.94)
-    plaque_mat = _ensure_material(bpy, "DepthLegendPlaque", "#EEE6DD", roughness=0.9)
-    rail_near = _ensure_material(bpy, "DepthRailNear", "#A89D95", roughness=0.88)
-    rail_mid = _ensure_material(bpy, "DepthRailMid", "#C7BDB4", roughness=0.9)
-    rail_far = _ensure_material(bpy, "DepthRailFar", "#DED5CE", roughness=0.92)
-    text_dark = _ensure_material(bpy, "TextDark", "#1F2937", roughness=0.55)
+    floor_mat = _ensure_material(bpy, "Floor", "#C7BDB4", roughness=0.96)
+    wall_mat = _ensure_material(bpy, "BackdropWall", "#F1EBE4", roughness=0.94)
+    plaque_mat = _ensure_material(bpy, "DepthLegendPlaque", "#FBF6F1", roughness=0.88)
+    rail_near = _ensure_material(bpy, "DepthRailNear", "#8F847B", roughness=0.84)
+    rail_mid = _ensure_material(bpy, "DepthRailMid", "#B6AAA1", roughness=0.88)
+    rail_far = _ensure_material(bpy, "DepthRailFar", "#D9D0C8", roughness=0.9)
+    text_dark = _ensure_material(bpy, "TextDark", "#111827", roughness=0.55)
     text_warm = _ensure_material(bpy, "TextWarm", "#2A2321", roughness=0.55)
     neutral_dark = _ensure_material(bpy, "NeutralDark", "#2E3440", roughness=0.55)
 
@@ -268,8 +268,8 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
     _add_box(
         bpy,
         "DepthLegendPlaque",
-        location=(0.0, -3.08, 0.16),
-        scale=(2.9, 0.56, 0.08),
+        location=(0.0, -3.2, 0.14),
+        scale=(3.18, 0.78, 0.1),
         material=plaque_mat,
         bevel=0.04,
     )
@@ -290,12 +290,12 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
     camera = bpy.data.objects.new("PaletteCamera", camera_data)
     scene.collection.objects.link(camera)
     scene.camera = camera
-    camera.location = (0.0, -12.35, 6.1)
-    camera.rotation_euler = (math.radians(62.0), 0.0, 0.0)
-    camera.data.lens = 38
+    camera.location = (0.0, -12.95, 6.28)
+    camera.rotation_euler = (math.radians(61.0), 0.0, 0.0)
+    camera.data.lens = 34
 
-    key_energy = 250.0 if selected_engine == "octane" else 2550.0
-    rim_energy = 55.0 if selected_engine == "octane" else 950.0
+    key_energy = 315.0 if selected_engine == "octane" else 2850.0
+    rim_energy = 80.0 if selected_engine == "octane" else 1125.0
     _add_area_light(
         bpy,
         scene,
@@ -316,8 +316,13 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
         size_x=6.0,
         size_y=6.0,
     )
-    lane_spacing = 4.6
+    lane_spacing = 4.8
     start_x = -lane_spacing
+    lane_titles = {
+        "production-indigo-magenta": "Production",
+        "accessible-mauve-burgundy": "Accessible",
+        "atmosphere-red-mahogany": "Axiomatic",
+    }
     swatch_depth_positions = (
         ("primary", -0.32, 0.42, (1.08, 0.31, 0.13)),
         ("accent", 0.0, 0.61, (0.96, 0.29, 0.13)),
@@ -394,17 +399,17 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
         _add_text(
             bpy,
             f"{lane['scheme_id']}_title",
-            lane["label"],
+            lane_titles.get(lane["scheme_id"], lane["label"]),
             location=(x, -1.7, 0.62),
-            scale=(0.22, 0.22, 0.22),
+            scale=(0.29, 0.29, 0.29),
             material=label_mat,
         )
         _add_text(
             bpy,
             f"{lane['scheme_id']}_subtitle",
-            lane["scheme_id"],
+            lane["label"],
             location=(x, -2.05, 0.48),
-            scale=(0.1, 0.1, 0.1),
+            scale=(0.11, 0.11, 0.11),
             material=neutral_dark,
         )
 
@@ -444,56 +449,40 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
         bpy,
         "ShowcaseHeader",
         "OpenPerception Palette And Depth Showcase",
-        location=(0.0, 2.18, 0.72),
-        scale=(0.34, 0.34, 0.34),
+        location=(0.0, 2.06, 0.8),
+        scale=(0.4, 0.4, 0.4),
         material=text_dark,
     )
     _add_text(
         bpy,
         "ShowcaseSubheader",
-        "production | accessibility-first | warm lane | shared depth",
-        location=(0.0, 1.82, 0.54),
-        scale=(0.16, 0.16, 0.16),
-        material=neutral_dark,
-    )
-    _add_text(
-        bpy,
-        "DepthPrinciple",
-        "Static cues first: occlusion | scale | shadows | ground plane | labels",
-        location=(0.0, 1.5, 0.44),
-        scale=(0.124, 0.124, 0.124),
-        material=neutral_dark,
-    )
-    _add_text(
-        bpy,
-        "DepthStereoRole",
-        "Stereo enriches, motion reinforces, essential meaning stays readable without stereopsis",
-        location=(0.0, 1.2, 0.33),
-        scale=(0.102, 0.102, 0.102),
+        "Shared depth without requiring stereopsis",
+        location=(0.0, 1.7, 0.58),
+        scale=(0.18, 0.18, 0.18),
         material=neutral_dark,
     )
     _add_text(
         bpy,
         "LegendStatic",
         "STATIC CUES FIRST",
-        location=(0.0, -3.18, 0.29),
-        scale=(0.17, 0.17, 0.17),
+        location=(0.0, -3.22, 0.31),
+        scale=(0.21, 0.21, 0.21),
         material=text_dark,
     )
     _add_text(
         bpy,
         "LegendStereo",
         "Stereo optional. Motion supplemental.",
-        location=(0.0, -3.44, 0.22),
-        scale=(0.115, 0.115, 0.115),
+        location=(0.0, -3.48, 0.225),
+        scale=(0.155, 0.155, 0.155),
         material=neutral_dark,
     )
     _add_text(
         bpy,
         "LegendMotion",
-        "Labels | shadows | scale | anchors carry the floor.",
-        location=(0.0, -3.67, 0.16),
-        scale=(0.092, 0.092, 0.092),
+        "Labels | shadows | scale | anchors",
+        location=(0.0, -3.72, 0.15),
+        scale=(0.13, 0.13, 0.13),
         material=neutral_dark,
     )
 
