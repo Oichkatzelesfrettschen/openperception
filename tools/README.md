@@ -14,6 +14,7 @@ Development and validation utilities for OpenPerception.
 | `runtime_gap_report.py` | Declared-vs-runtime gap report across validator and system areas | `python tools/runtime_gap_report.py [--format markdown]` |
 | `claims_coverage_report.py` | Coverage report linking seeded evidence claims to validators and runtime artifacts | `python tools/claims_coverage_report.py [--format markdown]` |
 | `check_claims_registry.py` | Integrity checker for claim statuses, gate links, and referenced files | `python tools/check_claims_registry.py` |
+| `check_task_governance.py` | Integrity checker for `docs/task-ledger.md`, `docs/KNOWN_ISSUES.md`, and loose TODO-language debt | `python tools/check_task_governance.py` |
 | `rendered_spatial_check.py` | Browser-backed overflow and focus-visibility audit for repo-owned example pages using Playwright | `python tools/rendered_spatial_check.py [--page examples/ui/palette-compare.html] [--viewport 320x900]` |
 | `rendered_cognitive_check.py` | Browser-backed first-screen cognitive density audit for repo-owned example pages using Playwright | `python tools/rendered_cognitive_check.py [--page examples/ui/palette-compare.html] [--viewport 320x900]` |
 | `profile_resolver.py` | Compose axis/display profiles and surface cross-axis conflicts | `python tools/profile_resolver.py [--profiles standard,reduced-motion]` |

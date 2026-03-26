@@ -1,198 +1,92 @@
 # Known Issues
 
-This document tracks known limitations, bugs, and areas needing improvement in OpenPerception.
-
----
-
-## Critical Issues
-
-None currently. All critical issues have been resolved.
-
----
-
-## Code Quality Issues
-
-### Performance Note - Array Allocation (Documented)
-
-**Location**: `algorithms/DaltonLens-Python/daltonlens/simulate.py` (CoblisV2Simulator.simulate_cvd)
-
-**Description**: The CoblisV2 simulator allocates multiple intermediate arrays for clarity and debugging. This is a conscious design choice prioritizing readability over memory efficiency.
-
-**Impact**: Higher memory usage during simulation (~50% more than optimal).
-
-**Status**: Documented - intentional design decision
-
-**Recommendation**: Use libDaltonLens (C) for performance-critical applications.
-
----
-
-## Documentation Gaps
-
-### Optional Dependency for Generate Tests
-
-**Affected Area**: `algorithms/DaltonLens-Python/tests/test_generate.py`
-
-**Description**: The Ishihara plate generation tests require the optional `Geometry3D` package.
-
-**Impact**: 4 tests skip without this dependency. Core simulation tests (7/7) pass without it.
-
-**Status**: Expected behavior - Geometry3D is optional
-
-**Resolution**: Install with `pip install Geometry3D` if Ishihara generation is needed.
-
----
-
-### Examples Documentation
-
-**Affected Areas**: `examples/`
-
-**Description**: 8 functional example files exist across 4 subdirectories:
-- `examples/simulator/index.html` -- Interactive CVD simulator
-- `examples/contrast/index.html` -- Contrast ratio checker
-- `examples/viz/matplotlib_palette.py` -- Matplotlib palette visualization
-- `examples/viz/d3-scale.js` -- D3.js scale configuration
-- `examples/viz/chartjs.config.js` -- Chart.js configuration
-- `examples/shared/auto-dev.js` -- Auto-reload development helper
-- `examples/shared/query-variant.js` -- CVD variant query utility
-- `examples/ui/variant-toggle.html` -- CVD variant toggle UI
-
-**Impact**: Examples exist but lack a README or usage documentation.
-
-**Status**: Documentation needed (v0.2.0)
-
----
-
-### Specification Implementation Gap
-
-**Description**: `specs/VALIDATORS_FRAMEWORK.md` defines 6 validation gates. GATE-002 (CONTRAST) and GATE-003 (CVD) are implemented in `tools/validators/`. GATE-001 (SEIZURE), GATE-004 (SPATIAL), GATE-005 (TEMPORAL/DEPTH), and GATE-006 (COGNITIVE) remain spec-only. The unified validator CLI is not yet implemented.
-
-**Impact**: 4 of 6 gates and the unified CLI lack enforcement tooling.
-
-**Status**: Remaining gates targeted for v0.3.0
-
----
-
-## Infrastructure Issues
-
-### No Automated Documentation Deployment
-
-**Description**: Documentation must be built locally; no CI/CD deploys to GitHub Pages or similar.
-
-**Impact**: Users must build docs themselves.
-
-**Status**: Targeted for v0.2.0
-
----
-
-### Limited Cross-Platform Testing
-
-**Description**: CI/CD primarily tests Linux; macOS and Windows coverage is limited.
-
-**Impact**: Potential platform-specific bugs may go undetected.
-
-**Status**: Targeted for v0.2.0
-
----
-
-## Third-Party Dependencies
-
-### Vendored jQuery
-
-**Location**: `datasets/ishihara-plate-learning/scripts/jquery.js`
-
-**Description**: Older jQuery 1.x version is vendored in the Ishihara learning tool.
-
-**Impact**: Potential security vulnerabilities in outdated library.
-
-**Status**: Low priority - standalone educational tool
-
-**Workaround**: Tool functions offline; no sensitive data handling.
-
----
-
-### Vendored stb Libraries
-
-**Location**: `algorithms/libDaltonLens/tests/`
-
-**Description**: stb_image, stb_image_write, and sokol_time are vendored.
-
-**Impact**: May fall behind upstream security patches.
-
-**Status**: Monitor upstream for security updates
-
----
-
-### PEAT Binary in Git
-
-**Location**: `tools/PEAT_1.6_Seizure_Analysis.zip` (1.1 MB)
-
-**Description**: The Photosensitive Epilepsy Analysis Tool binary is committed to the repository as a reference tool for GATE-001 SEIZURE validation research.
-
-**Impact**: Inflates repository size. Binary files are not ideal for git.
-
-**Status**: Acceptable for now; consider Git LFS or external hosting if more binaries are added
-
----
-
-## Research Gaps
-
-### Anomalous Trichromacy Models
-
-**Description**: Current algorithms focus on dichromacy (complete deficiency). Anomalous trichromacy (partial deficiency) simulation uses simple interpolation.
-
-**Impact**: Less accurate simulation for mild CVD.
-
-**Status**: Research ongoing - see `research/colorblindness/algorithms/`
-
----
-
-### Blue Cone Monochromacy
-
-**Description**: BCM is documented in research but not implemented in simulation algorithms.
-
-**Impact**: Cannot simulate this rare condition.
-
-**Status**: Targeted for algorithm expansion (v0.4.0)
-
----
-
-## Reporting New Issues
-
-When reporting new issues:
-
-1. Check this document first for known issues
-2. Search existing GitHub issues
-3. If new, create issue with:
-   - Clear title describing the problem
-   - Steps to reproduce
-   - Expected vs actual behavior
-   - Environment details (OS, Python version, etc.)
-   - Any error messages or logs
-
----
-
-## Issue Resolution Process
-
-1. **Triage**: Issues are reviewed and labeled
-2. **Prioritize**: Assigned to milestone based on impact
-3. **Investigate**: Root cause analysis
-4. **Fix**: Implementation with tests
-5. **Document**: Update this file and CHANGELOG.md
-6. **Release**: Include in appropriate version
-
----
-
-## Version Targets
-
-| Issue | Target Version |
-|-------|----------------|
-| Examples documentation | v0.2.0 |
-| Remaining validator gates (4 of 6) | v0.3.0 |
-| Unified validator CLI | v0.3.0 |
-| Documentation deployment | v0.2.0+ |
-| Cross-platform CI | v0.2.0 |
-| BCM simulation | v0.4.0 |
-
----
-
-Last Updated: 2026-03-19
+This file is the repo's live debt register. It lists current issues that are
+real, reproducible, and still unresolved after the latest audit pass.
+
+Issue classes:
+
+- implementation gap: behavior does not yet meet the intended standard
+- documentation gap: docs overstate, understate, or omit something important
+- tooling gap: local setup or validation depends on undeclared prerequisites
+- evidence gap: a claim exists without enough primary-source or runtime support
+
+## KI-001 Root Tooling Python Floor Is Underspecified
+
+- class: documentation gap
+- status: open
+- affected files: `README.md`, `REQUIREMENTS.md`, `pyproject.toml`, `tools/`
+- problem: top-level docs previously said `Python 3.8+`, but the repo-owned
+  root tooling uses PEP 604 union syntax such as `Path | None`, which requires
+  Python 3.10+.
+- consequence: contributors can follow the old claim and then hit syntax
+  errors before reaching the real validation surface.
+- current handling: root requirements now state `Python 3.10+` for repo-owned
+  tooling and note that the current audit pass was run on Python 3.14.3.
+
+## KI-002 `DaltonLens-Python` Metadata Does Not Declare A Machine-Readable Python Floor
+
+- class: tooling gap
+- status: open
+- affected files: `algorithms/DaltonLens-Python/pyproject.toml`,
+  `docs/module-requirements/daltonlens-python.md`
+- problem: the local package metadata does not currently expose
+  `requires-python`, so compatibility claims for the editable package are not
+  machine-checkable from packaging metadata alone.
+- consequence: downstream tooling cannot reliably infer the supported Python
+  range for that package.
+- current handling: the module requirements doc now calls this out explicitly
+  instead of silently implying broader support.
+
+## KI-003 Unified Validation Still Returns Live Warnings
+
+- class: implementation gap
+- status: open
+- affected files: `tools/validate.py`, `tools/validators/cvd.py`,
+  `tools/validators/cognitive.py`, `tools/validators/typography.py`
+- problem: the current runtime validator reports warnings for borderline CVD
+  separations, reading-level burden, and typography checks.
+- consequence: the repo has a functioning validator surface, but not a
+  clean-pass accessibility baseline yet.
+- current handling: warnings are treated as real debt and tracked in
+  `docs/task-ledger.md`.
+
+## KI-004 Strategic Docs Still Need Ongoing Reconciliation
+
+- class: documentation gap
+- status: open
+- affected files: `ROADMAP.md`, `docs/current-work-inventory.md`,
+  `CHANGELOG.md`, `MASTER_INDEX.md`
+- problem: some strategic docs are snapshots or ambition ledgers, while others
+  describe current runtime state; they drift unless explicitly reconciled.
+- consequence: readers can mistake a strategic milestone or stale count for a
+  verified current-state claim.
+- current handling: `docs/task-ledger.md` now tracks reconciliation work as a
+  first-class task lane, and `docs/repo-audit-2026-03-26.md` records the latest
+  audit findings.
+
+## KI-005 Optional Tooling Is Still Not Auto-Provisioned
+
+- class: tooling gap
+- status: open
+- affected files: `REQUIREMENTS.md`, `artifacts/blender_showcase/REQUIREMENTS.md`,
+  `tools/rendered_spatial_check.py`, `tools/rendered_cognitive_check.py`
+- problem: rendered audits and Blender showcase regeneration depend on local
+  browser and Blender tooling that the repo documents but does not auto-install.
+- consequence: a clean clone is not enough to run every optional artifact lane
+  without additional host setup.
+- current handling: requirements docs now split core vs optional toolchains and
+  show the exact commands needed for each lane.
+
+## KI-006 Claims-To-Evidence Coverage Is Still Partial
+
+- class: evidence gap
+- status: open
+- affected files: `specs/CLAIMS_RUNTIME_REGISTRY.json`,
+  `docs/external_sources/`, `docs/repo-audit-2026-03-26.md`
+- problem: some repo narrative claims have been audited and downgraded, but not
+  every high-level statement is yet paired with a source index or offline
+  verifier.
+- consequence: some statements remain directionally true but not yet fully
+  machine-backed.
+- current handling: the 100-step tranche in `docs/task-ledger.md` includes a
+  dedicated claim-verification burn-down phase.

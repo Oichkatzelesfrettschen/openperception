@@ -2,6 +2,13 @@
 
 Date: 2026-03-22
 
+This file is a dated snapshot, not the live task tracker.
+
+For current tracked work and known debt, use:
+
+- `docs/task-ledger.md`
+- `docs/KNOWN_ISSUES.md`
+
 ## Core repo lanes already present
 
 Top-level signals from the current workspace:

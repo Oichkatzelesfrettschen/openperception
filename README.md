@@ -2,7 +2,7 @@
 
 **Visual Accessibility Research and Tools for Color Vision Deficiency, Neurodivergence, and Inclusive Design**
 
-OpenPerception is a comprehensive research repository and toolkit for understanding and accommodating diverse visual perception. It provides production-ready algorithms, design systems, and evidence-based specifications for creating accessible visual experiences.
+OpenPerception is a comprehensive research repository and toolkit for understanding and accommodating diverse visual perception. It combines upstream simulation packages, repo-owned validators, applied accessibility documentation, and evidence-tracking infrastructure for accessible visual experiences.
 
 ---
 
@@ -14,7 +14,7 @@ This repository contains:
 - **Design Token System**: CVD-aware color tokens with variants for protanopia, deuteranopia, tritanopia, and achromatopsia
 - **Accessibility Specifications**: Comprehensive framework covering safety, perceptibility, discriminability, comprehensibility, and controllability
 - **Depth Accessibility Guidance**: Stereo-independent depth documentation for users with and without stereopsis
-- **Research Compendiums**: 400+ cataloged academic papers on visual accessibility
+- **Research Compendiums**: broad topic compendiums plus a curated local cache of canonical papers and trace captures
 - **Development Tools**: Contrast checkers, color separation validators, and OKLCH utilities
 
 ---
@@ -23,10 +23,13 @@ This repository contains:
 
 ### Prerequisites
 
-- Python 3.8+
+- Python 3.10+ for repo-owned root tooling in `tools/` (current audited interpreter: Python 3.14.3)
 - CMake 3.16+ (for C library)
 - NumPy and Pillow (for Python package)
 - Git LFS (for paper corpus PDFs)
+
+Start with `REQUIREMENTS.md` for the repo-wide setup matrix and module-specific
+requirements files.
 
 ### Install DaltonLens-Python
 
@@ -71,6 +74,9 @@ make contrast-check
 
 # Generate OKLCH tokens
 make oklch
+
+# Run fast repo integrity verifiers
+make integrity-check
 ```
 
 ### Research Corpus Notes

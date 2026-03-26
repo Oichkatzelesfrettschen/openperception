@@ -13,8 +13,8 @@ C_BUILD_DIR ?= algorithms/libDaltonLens/build
 # =============================================================================
 # Phony Targets
 # =============================================================================
-.PHONY: all help serve oklch contrast-check separation-check seizure-check temporal-depth-check cognitive-check typography-check rendered-spatial-check rendered-cognitive-check profile-report scale-report validate gap-report claims-report claims-check \
-        test test-python test-c test-all coverage \
+.PHONY: all help serve oklch contrast-check separation-check seizure-check temporal-depth-check cognitive-check typography-check rendered-spatial-check rendered-cognitive-check profile-report scale-report validate gap-report claims-report claims-check integrity-check task-governance-check source-cache-links-check paper-corpus-check source-assets-check \
+        test test-python test-tools test-c test-all coverage \
         lint lint-python lint-c format \
         build build-c install-python install-dev \
         pandoc-html pandoc-pdf sphinx-install-theme sphinx-example-html \
@@ -45,9 +45,12 @@ help:
 	@echo "  gap-report         - Show declared-vs-runtime gap report"
 	@echo "  claims-report      - Show seeded claims-to-runtime coverage report"
 	@echo "  claims-check       - Validate the claims registry integrity"
+	@echo "  integrity-check    - Run repo integrity verifiers (claims, corpus, source assets, source cache links, task governance)"
+	@echo "  task-governance-check - Validate task ledger and known-issues governance docs"
 	@echo ""
 	@echo "Testing:"
 	@echo "  test-python        - Run Python tests with pytest"
+	@echo "  test-tools         - Run repo-owned tools tests with pytest"
 	@echo "  test-c             - Build and run C tests"
 	@echo "  test-all           - Run all tests"
 	@echo "  test               - Alias for test-all"
@@ -129,18 +132,38 @@ claims-report:
 claims-check:
 	$(PYTHON) tools/check_claims_registry.py
 
+task-governance-check:
+	$(PYTHON) tools/check_task_governance.py
+
+source-cache-links-check:
+	$(PYTHON) tools/check_source_cache_links.py
+
+paper-corpus-check:
+	$(PYTHON) tools/check_paper_corpus.py
+
+source-assets-check:
+	$(PYTHON) tools/check_source_assets.py
+
+integrity-check: claims-check paper-corpus-check source-assets-check source-cache-links-check task-governance-check
+	@echo "All repo integrity checks completed."
+
 # =============================================================================
 # Testing
 # =============================================================================
 test: test-all
 
-test-all: test-python test-c
+test-all: test-python test-tools test-c
 	@echo "All tests completed."
 
 test-python:
 	@echo "Running Python tests..."
 	cd algorithms/DaltonLens-Python && $(PYTHON) -m pytest tests/ -v --tb=short
 	@echo "Python tests completed."
+
+test-tools:
+	@echo "Running repo tools tests..."
+	$(PYTHON) -m pytest tools/tests/ -v --tb=short
+	@echo "Repo tools tests completed."
 
 coverage:
 	@echo "Running Python tests with coverage..."

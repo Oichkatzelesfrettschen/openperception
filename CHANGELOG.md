@@ -58,7 +58,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fixed pyproject.toml known-first-party (removed non-package "tools")
 
 ### Fixed
-- Performance TODO in simulate.py documented as intentional design decision
+- Performance issue in simulate.py documented as an intentional design decision
 - 7 accuracy debt items resolved (false doc claims corrected)
 - GitHub URL placeholders annotated in CHANGELOG
 

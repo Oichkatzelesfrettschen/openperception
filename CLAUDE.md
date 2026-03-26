@@ -192,7 +192,7 @@ See `docs/KNOWN_ISSUES.md` for current gaps and limitations.
 
 Key items:
 - Validator framework specified but not fully implemented
-- Performance TODO in simulate.py (CoblisV2 array allocation, intentional design decision)
+- Performance issue in simulate.py (CoblisV2 array allocation, intentional design decision)
 
 ---
 

@@ -19,7 +19,7 @@ Create the most comprehensive, evidence-based toolkit for visual accessibility, 
 - [x] C library (libDaltonLens)
 - [x] Design token system with CVD variants
 - [x] Comprehensive specifications (5-pillar framework)
-- [x] Research paper compendiums (400+ papers)
+- [x] Research paper compendiums and curated local source cache
 - [x] Development tools (contrast check, OKLCH generation)
 - [x] GTK4 demo application
 - [x] Repository infrastructure (git, docs, CI/CD)
@@ -30,6 +30,7 @@ Create the most comprehensive, evidence-based toolkit for visual accessibility, 
 - [ ] Validator framework implementation
 - [ ] Performance optimization (array allocation)
 - [ ] Web-based examples expansion
+- [ ] Governance and installation-requirements reconciliation
 
 ---
 
@@ -182,6 +183,11 @@ Roadmap items are driven by:
 2. **Research**: New findings in visual accessibility
 3. **Standards**: Updates to WCAG and related guidelines
 4. **Community**: Contributor proposals
+
+For current live execution tracking and known debt, also read:
+
+- `docs/task-ledger.md`
+- `docs/KNOWN_ISSUES.md`
 
 To propose roadmap changes:
 1. Open an issue with the `roadmap` label

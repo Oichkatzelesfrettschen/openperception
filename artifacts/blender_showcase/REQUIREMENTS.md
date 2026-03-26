@@ -1,0 +1,49 @@
+# Blender Showcase Requirements
+
+This file documents the regeneration requirements for the tracked Blender
+showcase artifacts.
+
+## Required For Spec Regeneration
+
+- Python 3.10+ for repo-owned tooling
+
+Generate the canonical spec:
+
+```bash
+python3 tools/palette_showcase_spec.py \
+  --output artifacts/blender_showcase/openperception_palette_showcase_spec.json
+```
+
+## Required For Scene Regeneration
+
+- Blender
+
+Preferred current render path:
+
+- Octane Blender with Octane available
+
+Fallbacks:
+
+- Eevee Next
+- Cycles
+
+## Optional For Live Agent Control
+
+- Blender MCP configured and running against the live Blender session
+
+## Regeneration
+
+```bash
+blender --background --factory-startup \
+  --python tools/blender_palette_showcase_scene.py -- \
+  --spec artifacts/blender_showcase/openperception_palette_showcase_spec.json \
+  --output artifacts/blender_showcase/openperception_palette_showcase_render.png \
+  --blend-output artifacts/blender_showcase/openperception_palette_showcase_scene.blend
+```
+
+## Notes
+
+- `.png` and `.blend` artifacts in this lane are tracked with Git LFS
+- Blender backup files such as `.blend1` are intentionally not tracked
+- live MCP control is optional; deterministic script-driven regeneration is the
+  baseline path
