@@ -220,6 +220,7 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
     scene.render.resolution_x = 1800
     scene.render.resolution_y = 1200
     scene.render.film_transparent = False
+    scene.view_settings.exposure = 0.9
     if hasattr(scene, "eevee"):
         scene.eevee.taa_render_samples = 64
         if hasattr(scene.eevee, "use_gtao"):
@@ -240,11 +241,11 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
     world_output = world_nodes.new("ShaderNodeOutputWorld")
     world_bg = world_nodes.new("ShaderNodeBackground")
     world_bg.inputs["Color"].default_value = _hex_to_rgba("#FBF7F1")
-    world_bg.inputs["Strength"].default_value = 1.42
+    world_bg.inputs["Strength"].default_value = 1.55
     world_links.new(world_bg.outputs["Background"], world_output.inputs["Surface"])
 
-    floor_mat = _ensure_material(bpy, "Floor", "#D0C6BC", roughness=0.96)
-    wall_mat = _ensure_material(bpy, "BackdropWall", "#F7F1EA", roughness=0.94)
+    floor_mat = _ensure_material(bpy, "Floor", "#D8CEC4", roughness=0.96)
+    wall_mat = _ensure_material(bpy, "BackdropWall", "#FBF5EE", roughness=0.94)
     plaque_mat = _ensure_material(bpy, "DepthLegendPlaque", "#FBF6F1", roughness=0.88)
     rail_near = _ensure_material(bpy, "DepthRailNear", "#8F847B", roughness=0.84)
     rail_mid = _ensure_material(bpy, "DepthRailMid", "#B6AAA1", roughness=0.88)
@@ -268,8 +269,8 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
     _add_box(
         bpy,
         "DepthLegendPlaque",
-        location=(0.0, -2.72, 0.14),
-        scale=(3.45, 0.8, 0.09),
+        location=(0.0, -2.5, 0.14),
+        scale=(3.35, 0.68, 0.09),
         material=plaque_mat,
         bevel=0.04,
     )
@@ -289,12 +290,12 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
     camera = bpy.data.objects.new("PaletteCamera", camera_data)
     scene.collection.objects.link(camera)
     scene.camera = camera
-    camera.location = (0.0, -12.2, 5.9)
-    camera.rotation_euler = (math.radians(58.5), 0.0, 0.0)
-    camera.data.lens = 35
+    camera.location = (0.0, -12.4, 5.85)
+    camera.rotation_euler = (math.radians(57.6), 0.0, 0.0)
+    camera.data.lens = 36
 
-    key_energy = 760.0 if selected_engine == "octane" else 4800.0
-    rim_energy = 310.0 if selected_engine == "octane" else 2250.0
+    key_energy = 1000.0 if selected_engine == "octane" else 5600.0
+    rim_energy = 420.0 if selected_engine == "octane" else 2850.0
     _add_area_light(
         bpy,
         scene,
@@ -315,13 +316,13 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
         size_x=6.0,
         size_y=6.0,
     )
-    lane_spacing = 4.55
+    lane_spacing = 4.25
     start_x = -lane_spacing
     for connector_x in (-lane_spacing, 0.0, lane_spacing):
         _add_depth_strip(
             bpy,
             f"PlaqueConnector_{connector_x:+.2f}",
-            location=(connector_x, -2.24, -0.02),
+            location=(connector_x, -2.0, -0.02),
             scale=(0.55, 0.025, 0.014),
             material=rail_mid,
         )
@@ -330,17 +331,6 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
         "accessible-mauve-burgundy": "Validators",
         "atmosphere-red-mahogany": "Adaptive Modes",
     }
-    lane_subtitles = {
-        "production-indigo-magenta": "PAPERS + CLAIMS",
-        "accessible-mauve-burgundy": "OFFLINE GATES",
-        "atmosphere-red-mahogany": "COLOR / MOTION / DEPTH",
-    }
-    swatch_depth_positions = (
-        ("primary", -0.32, 0.42, (1.08, 0.31, 0.13)),
-        ("accent", 0.0, 0.61, (0.96, 0.29, 0.13)),
-        ("tertiary", 0.32, 0.8, (0.84, 0.27, 0.13)),
-    )
-
     for index, lane in enumerate(spec["lanes"]):
         x = start_x + index * lane_spacing
         brand = lane["brand"]
@@ -388,7 +378,7 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
             bpy,
             f"{lane_id}_label_band",
             location=(x, -1.88, 0.34),
-            scale=(1.3, 0.62, 0.022),
+            scale=(1.28, 0.42, 0.022),
             material=plaque_mat,
             bevel=0.03,
         )
@@ -423,23 +413,23 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
                 _add_box(
                     bpy,
                     f"{lane_id}_gate_post_l_{gate_index}",
-                    location=(x + gate_x - 0.18, 0.08, 0.62),
-                    scale=(0.055, 0.18, 0.42),
+                    location=(x + gate_x - 0.18, 0.08, 0.54),
+                    scale=(0.055, 0.18, 0.34),
                     material=gate_mat,
                     bevel=0.025,
                 )
                 _add_box(
                     bpy,
                     f"{lane_id}_gate_post_r_{gate_index}",
-                    location=(x + gate_x + 0.18, 0.08, 0.62),
-                    scale=(0.055, 0.18, 0.42),
+                    location=(x + gate_x + 0.18, 0.08, 0.54),
+                    scale=(0.055, 0.18, 0.34),
                     material=gate_mat,
                     bevel=0.025,
                 )
                 _add_box(
                     bpy,
                     f"{lane_id}_gate_bar_{gate_index}",
-                    location=(x + gate_x, 0.08, 0.98),
+                    location=(x + gate_x, 0.08, 0.82),
                     scale=(0.24, 0.18, 0.055),
                     material=gate_mat,
                     bevel=0.025,
@@ -465,17 +455,9 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
             bpy,
             f"{lane_id}_title",
             lane_titles.get(lane_id, lane["label"]),
-            location=(x, -1.73, 0.47),
-            scale=(0.35, 0.35, 0.35),
+            location=(x, -1.78, 0.46),
+            scale=(0.34, 0.34, 0.34),
             material=label_mat,
-        )
-        _add_text(
-            bpy,
-            f"{lane_id}_subtitle",
-            lane_subtitles.get(lane_id, lane["label"]),
-            location=(x, -1.9, 0.3),
-            scale=(0.145, 0.145, 0.145),
-            material=neutral_dark,
         )
 
         marker_x_offsets = (-0.75, -0.25, 0.25, 0.75)
@@ -514,41 +496,33 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
         bpy,
         "ShowcaseHeader",
         "OpenPerception",
-        location=(0.0, 2.12, 0.98),
-        scale=(0.58, 0.58, 0.58),
+        location=(0.0, 2.2, 1.0),
+        scale=(0.6, 0.6, 0.6),
         material=text_dark,
     )
     _add_text(
         bpy,
         "ShowcaseSubheader",
         "Accessibility must stay legible",
-        location=(0.0, 1.92, 0.84),
-        scale=(0.27, 0.27, 0.27),
+        location=(0.0, 1.98, 0.86),
+        scale=(0.29, 0.29, 0.29),
         material=neutral_dark,
     )
     _add_text(
         bpy,
         "ShowcaseSupport",
         "Evidence | Validators | Adaptive Modes",
-        location=(0.0, 1.68, 0.7),
-        scale=(0.18, 0.18, 0.18),
+        location=(0.0, 1.74, 0.72),
+        scale=(0.21, 0.21, 0.21),
         material=neutral_dark,
     )
     _add_text(
         bpy,
         "LegendStatic",
         "STATIC CUES FIRST",
-        location=(0.0, -2.63, 0.235),
-        scale=(0.16, 0.16, 0.16),
+        location=(0.0, -2.42, 0.235),
+        scale=(0.17, 0.17, 0.17),
         material=text_dark,
-    )
-    _add_text(
-        bpy,
-        "LegendDepthSupport",
-        "Stereo optional. Motion supports.",
-        location=(0.0, -2.84, 0.215),
-        scale=(0.105, 0.105, 0.105),
-        material=neutral_dark,
     )
 
     bpy.context.view_layer.update()
