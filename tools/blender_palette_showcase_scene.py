@@ -298,9 +298,9 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
     camera = bpy.data.objects.new("PaletteCamera", camera_data)
     scene.collection.objects.link(camera)
     scene.camera = camera
-    camera.location = (0.0, -11.68, 5.86)
-    camera.rotation_euler = (math.radians(57.4), 0.0, 0.0)
-    camera.data.lens = 38
+    camera.location = (0.0, -12.05, 5.96)
+    camera.rotation_euler = (math.radians(57.8), 0.0, 0.0)
+    camera.data.lens = 37
 
     key_energy = 1000.0 if selected_engine == "octane" else 5600.0
     rim_energy = 420.0 if selected_engine == "octane" else 2850.0
@@ -333,6 +333,14 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
             location=(connector_x, -1.82, -0.02),
             scale=(0.55, 0.025, 0.014),
             material=rail_mid,
+        )
+    for flow_x in (-2.08, 2.08):
+        _add_depth_strip(
+            bpy,
+            f"LaneFlow_{flow_x:+.2f}",
+            location=(flow_x, -0.58, 0.0),
+            scale=(0.72, 0.022, 0.018),
+            material=rail_near,
         )
     lane_titles = {
         "production-indigo-magenta": "Research",
@@ -450,6 +458,23 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
                     material=gate_mat,
                     bevel=0.025,
                 )
+            _add_box(
+                bpy,
+                f"{lane_id}_flow_out",
+                location=(x + 0.98, -0.58, 0.0),
+                scale=(0.16, 0.03, 0.02),
+                material=accent_mat,
+                bevel=0.012,
+            )
+            _add_box(
+                bpy,
+                f"{lane_id}_flow_tip",
+                location=(x + 1.18, -0.58, 0.0),
+                scale=(0.06, 0.06, 0.02),
+                material=accent_mat,
+                bevel=0.012,
+            )
+            bpy.context.active_object.rotation_euler.z = math.radians(45.0)
         else:
             source_mat = _ensure_material(
                 bpy, f"{lane_id}_source", brand["border"], roughness=0.3
@@ -460,8 +485,8 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
             _add_box(
                 bpy,
                 f"{lane_id}_source_panel",
-                location=(x, 0.6, 0.84),
-                scale=(0.98, 0.22, 0.07),
+                location=(x, 0.56, 0.84),
+                scale=(1.06, 0.23, 0.07),
                 material=source_mat,
                 bevel=0.035,
             )
@@ -504,18 +529,27 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
                 _add_box(
                     bpy,
                     f"{lane_id}_{output_name}_panel",
-                    location=(x + x_shift, -0.26, 0.43),
-                    scale=(0.44, 0.22, 0.09),
+                    location=(x + x_shift, -0.3, 0.43),
+                    scale=(0.5, 0.24, 0.095),
                     material=body_mat,
                     bevel=0.03,
                 )
                 _add_box(
                     bpy,
                     f"{lane_id}_{output_name}_inset_obj",
-                    location=(x + x_shift, -0.23, 0.5),
-                    scale=(0.31, 0.12, 0.02),
+                    location=(x + x_shift, -0.26, 0.5),
+                    scale=(0.36, 0.135, 0.02),
                     material=inset_mat,
                     bevel=0.015,
+                )
+            for icon_index, icon_x in enumerate((-0.64, 0.0, 0.64)):
+                _add_box(
+                    bpy,
+                    f"{lane_id}_output_badge_{icon_index}",
+                    location=(x + icon_x, -0.58, 0.58),
+                    scale=(0.07, 0.07, 0.03),
+                    material=(primary_mat, accent_mat, tertiary_mat)[icon_index],
+                    bevel=0.018,
                 )
             for cue_index, cue_x in enumerate((-0.65, -0.47)):
                 _add_box(
