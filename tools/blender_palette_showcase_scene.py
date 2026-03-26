@@ -246,7 +246,7 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
 
     floor_mat = _ensure_material(bpy, "Floor", "#D8CEC4", roughness=0.96)
     wall_mat = _ensure_material(bpy, "BackdropWall", "#FBF5EE", roughness=0.94)
-    plaque_mat = _ensure_material(bpy, "DepthLegendPlaque", "#FBF6F1", roughness=0.88)
+    plaque_mat = _ensure_material(bpy, "DepthLegendPlaque", "#F1EAE3", roughness=0.84)
     rail_near = _ensure_material(bpy, "DepthRailNear", "#8F847B", roughness=0.84)
     rail_mid = _ensure_material(bpy, "DepthRailMid", "#B6AAA1", roughness=0.88)
     rail_far = _ensure_material(bpy, "DepthRailFar", "#D9D0C8", roughness=0.9)
@@ -269,8 +269,8 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
     _add_box(
         bpy,
         "HeaderBand",
-        location=(0.0, 2.1, 0.88),
-        scale=(3.05, 0.035, 0.72),
+        location=(0.0, 2.08, 0.88),
+        scale=(3.18, 0.038, 0.76),
         material=plaque_mat,
         bevel=0.03,
     )
@@ -298,8 +298,8 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
     camera = bpy.data.objects.new("PaletteCamera", camera_data)
     scene.collection.objects.link(camera)
     scene.camera = camera
-    camera.location = (0.0, -11.78, 5.9)
-    camera.rotation_euler = (math.radians(57.8), 0.0, 0.0)
+    camera.location = (0.0, -11.68, 5.86)
+    camera.rotation_euler = (math.radians(57.4), 0.0, 0.0)
     camera.data.lens = 38
 
     key_energy = 1000.0 if selected_engine == "octane" else 5600.0
@@ -335,9 +335,9 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
             material=rail_mid,
         )
     lane_titles = {
-        "production-indigo-magenta": "Evidence",
-        "accessible-mauve-burgundy": "Validators",
-        "atmosphere-red-mahogany": "Adaptive Modes",
+        "production-indigo-magenta": "Clarity",
+        "accessible-mauve-burgundy": "Trust",
+        "atmosphere-red-mahogany": "Adaptation",
     }
     for index, lane in enumerate(spec["lanes"]):
         x = start_x + index * lane_spacing
@@ -386,7 +386,7 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
             bpy,
             f"{lane_id}_label_band",
             location=(x, -1.88, 0.34),
-            scale=(1.28, 0.42, 0.022),
+            scale=(1.34, 0.46, 0.024),
             material=plaque_mat,
             bevel=0.03,
         )
@@ -491,17 +491,17 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
     _add_text(
         bpy,
         "ShowcaseHeader",
-        "OpenPerception accessibility system",
-        location=(0.0, 1.98, 0.82),
-        scale=(0.29, 0.29, 0.29),
+        "OpenPerception: clarity you can trust",
+        location=(0.0, 1.96, 0.82),
+        scale=(0.32, 0.32, 0.32),
         material=text_dark,
     )
     _add_text(
         bpy,
         "LegendStatic",
         "STATIC CUES FIRST",
-        location=(0.0, -2.34, 0.235),
-        scale=(0.22, 0.22, 0.22),
+        location=(0.0, -2.36, 0.24),
+        scale=(0.24, 0.24, 0.24),
         material=text_dark,
     )
 
