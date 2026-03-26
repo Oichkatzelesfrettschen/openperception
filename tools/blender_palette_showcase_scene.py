@@ -542,6 +542,59 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
                     material=inset_mat,
                     bevel=0.015,
                 )
+                if output_name == "contrast":
+                    _add_box(
+                        bpy,
+                        f"{lane_id}_{output_name}_frame_left",
+                        location=(x + x_shift - 0.17, -0.3, 0.56),
+                        scale=(0.04, 0.19, 0.06),
+                        material=source_mat,
+                        bevel=0.014,
+                    )
+                    _add_box(
+                        bpy,
+                        f"{lane_id}_{output_name}_frame_right",
+                        location=(x + x_shift + 0.17, -0.3, 0.56),
+                        scale=(0.04, 0.19, 0.06),
+                        material=plaque_mat,
+                        bevel=0.014,
+                    )
+                elif output_name == "guided":
+                    _add_box(
+                        bpy,
+                        f"{lane_id}_{output_name}_path_stem",
+                        location=(x + x_shift - 0.16, -0.3, 0.56),
+                        scale=(0.03, 0.03, 0.08),
+                        material=accent_mat,
+                        bevel=0.012,
+                    )
+                    _add_box(
+                        bpy,
+                        f"{lane_id}_{output_name}_path_arm",
+                        location=(x + x_shift, -0.12, 0.61),
+                        scale=(0.19, 0.025, 0.02),
+                        material=accent_mat,
+                        bevel=0.012,
+                    )
+                    _add_box(
+                        bpy,
+                        f"{lane_id}_{output_name}_path_tip",
+                        location=(x + x_shift + 0.2, -0.12, 0.61),
+                        scale=(0.03, 0.03, 0.02),
+                        material=accent_mat,
+                        bevel=0.012,
+                    )
+                    bpy.context.active_object.rotation_euler.z = math.radians(45.0)
+                else:
+                    for ridge_index, ridge_x in enumerate((-0.15, 0.0, 0.15)):
+                        _add_box(
+                            bpy,
+                            f"{lane_id}_{output_name}_ridge_{ridge_index}",
+                            location=(x + x_shift + ridge_x, -0.33 + ridge_index * 0.02, 0.57 - ridge_index * 0.025),
+                            scale=(0.04, 0.18, 0.03 + ridge_index * 0.012),
+                            material=tertiary_mat,
+                            bevel=0.012,
+                        )
             # Contrast-led output: obvious light/dark split and bold bars.
             _add_box(
                 bpy,
@@ -598,14 +651,14 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
                 bpy,
                 f"{lane_id}_guided_path",
                 location=(x, -0.18, 0.54),
-                scale=(0.19, 0.02, 0.012),
+                scale=(0.14, 0.018, 0.012),
                 material=accent_mat,
                 bevel=0.01,
             )
             _add_box(
                 bpy,
                 f"{lane_id}_guided_tip",
-                location=(x + 0.19, -0.18, 0.54),
+                location=(x + 0.14, -0.18, 0.54),
                 scale=(0.03, 0.03, 0.012),
                 material=accent_mat,
                 bevel=0.01,
