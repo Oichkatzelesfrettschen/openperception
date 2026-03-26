@@ -338,31 +338,32 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
         x = start_x + index * lane_spacing
         brand = lane["brand"]
         viz = lane["viz"]
+        lane_id = lane["scheme_id"]
         surface_mat = _ensure_material(
-            bpy, f"{lane['scheme_id']}_surface", brand["surface"], roughness=0.72
+            bpy, f"{lane_id}_surface", brand["surface"], roughness=0.72
         )
         border_mat = _ensure_material(
-            bpy, f"{lane['scheme_id']}_border", brand["border"], roughness=0.68
+            bpy, f"{lane_id}_border", brand["border"], roughness=0.68
         )
         primary_mat = _ensure_material(
-            bpy, f"{lane['scheme_id']}_primary", brand["primaryStrong"], roughness=0.38
+            bpy, f"{lane_id}_primary", brand["primaryStrong"], roughness=0.38
         )
         accent_mat = _ensure_material(
-            bpy, f"{lane['scheme_id']}_accent", brand["accentStrong"], roughness=0.38
+            bpy, f"{lane_id}_accent", brand["accentStrong"], roughness=0.38
         )
         tertiary_color = brand["tertiaryStrong"] or brand["focusRing"]
         tertiary_mat = _ensure_material(
-            bpy, f"{lane['scheme_id']}_tertiary", tertiary_color, roughness=0.38
+            bpy, f"{lane_id}_tertiary", tertiary_color, roughness=0.38
         )
         marker_materials = [
-            _ensure_material(bpy, f"{lane['scheme_id']}_marker_{i}", color, roughness=0.34)
+            _ensure_material(bpy, f"{lane_id}_marker_{i}", color, roughness=0.34)
             for i, color in enumerate(viz["categorical"][:4])
         ]
-        label_mat = text_warm if lane["scheme_id"] == "atmosphere-red-mahogany" else text_dark
+        label_mat = text_warm if lane_id == "atmosphere-red-mahogany" else text_dark
 
         _add_box(
             bpy,
-            f"{lane['scheme_id']}_card",
+            f"{lane_id}_card",
             location=(x, 0.0, 0.15),
             scale=(1.65, 2.25, 0.18),
             material=surface_mat,
@@ -370,50 +371,94 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
         )
         _add_box(
             bpy,
-            f"{lane['scheme_id']}_outline",
+            f"{lane_id}_outline",
             location=(x, 0.0, -0.04),
             scale=(1.74, 2.34, 0.04),
             material=border_mat,
             bevel=0.05,
         )
 
-        for shelf_index, (shelf_name, shelf_y, shelf_z, shelf_scale) in enumerate(swatch_depth_positions):
-            _add_box(
-                bpy,
-                f"{lane['scheme_id']}_{shelf_name}_shelf",
-                location=(x, shelf_y, shelf_z - 0.08),
-                scale=(shelf_scale[0] + 0.12, shelf_scale[1] + 0.05, 0.035),
-                material=border_mat,
-                bevel=0.03,
+        if lane_id == "production-indigo-magenta":
+            evidence_layers = (
+                ("paper_back", -0.22, 0.34, (1.16, 0.35, 0.07), primary_mat, -0.16),
+                ("paper_mid", 0.0, 0.56, (1.03, 0.32, 0.065), accent_mat, -0.05),
+                ("paper_front", 0.22, 0.78, (0.9, 0.29, 0.06), tertiary_mat, 0.08),
             )
-        for swatch_name, swatch_y, swatch_z, swatch_scale in swatch_depth_positions:
-            swatch_mat = {
-                "primary": primary_mat,
-                "accent": accent_mat,
-                "tertiary": tertiary_mat,
-            }[swatch_name]
-            _add_box(
-                bpy,
-                f"{lane['scheme_id']}_{swatch_name}",
-                location=(x, swatch_y, swatch_z),
-                scale=swatch_scale,
-                material=swatch_mat,
-                bevel=0.06,
+            for name, y_pos, z_pos, scale, mat, x_shift in evidence_layers:
+                _add_box(
+                    bpy,
+                    f"{lane_id}_{name}",
+                    location=(x + x_shift, y_pos, z_pos),
+                    scale=scale,
+                    material=mat,
+                    bevel=0.04,
+                )
+            for tab_index, tab_x in enumerate((-0.52, -0.08, 0.36)):
+                _add_box(
+                    bpy,
+                    f"{lane_id}_tab_{tab_index}",
+                    location=(x + tab_x, 0.49, 0.86),
+                    scale=(0.14, 0.08, 0.035),
+                    material=marker_materials[tab_index],
+                    bevel=0.02,
+                )
+        elif lane_id == "accessible-mauve-burgundy":
+            for gate_index, gate_x in enumerate((-0.48, 0.0, 0.48)):
+                gate_mat = (primary_mat, accent_mat, tertiary_mat)[gate_index]
+                _add_box(
+                    bpy,
+                    f"{lane_id}_gate_post_l_{gate_index}",
+                    location=(x + gate_x - 0.18, 0.08, 0.62),
+                    scale=(0.055, 0.18, 0.42),
+                    material=gate_mat,
+                    bevel=0.025,
+                )
+                _add_box(
+                    bpy,
+                    f"{lane_id}_gate_post_r_{gate_index}",
+                    location=(x + gate_x + 0.18, 0.08, 0.62),
+                    scale=(0.055, 0.18, 0.42),
+                    material=gate_mat,
+                    bevel=0.025,
+                )
+                _add_box(
+                    bpy,
+                    f"{lane_id}_gate_bar_{gate_index}",
+                    location=(x + gate_x, 0.08, 0.98),
+                    scale=(0.24, 0.18, 0.055),
+                    material=gate_mat,
+                    bevel=0.025,
+                )
+        else:
+            adaptive_layers = (
+                ("mode_back", -0.16, 0.36, (1.0, 0.27, 0.08), primary_mat, -0.18),
+                ("mode_mid", 0.06, 0.58, (0.9, 0.25, 0.075), accent_mat, 0.0),
+                ("mode_front", 0.28, 0.8, (0.8, 0.23, 0.07), tertiary_mat, 0.18),
             )
+            for name, y_pos, z_pos, scale, mat, x_shift in adaptive_layers:
+                obj = _add_box(
+                    bpy,
+                    f"{lane_id}_{name}",
+                    location=(x + x_shift, y_pos, z_pos),
+                    scale=scale,
+                    material=mat,
+                    bevel=0.04,
+                )
+                obj.rotation_euler.z = math.radians(7.0 if x_shift < 0 else (-7.0 if x_shift > 0 else 0.0))
 
         _add_text(
             bpy,
-            f"{lane['scheme_id']}_title",
-            lane_titles.get(lane["scheme_id"], lane["label"]),
-            location=(x, -1.98, 0.48),
+            f"{lane_id}_title",
+            lane_titles.get(lane_id, lane["label"]),
+            location=(x, -2.14, 0.45),
             scale=(0.25, 0.25, 0.25),
             material=label_mat,
         )
         _add_text(
             bpy,
-            f"{lane['scheme_id']}_subtitle",
-            lane_subtitles.get(lane["scheme_id"], lane["label"]),
-            location=(x, -2.23, 0.29),
+            f"{lane_id}_subtitle",
+            lane_subtitles.get(lane_id, lane["label"]),
+            location=(x, -2.34, 0.26),
             scale=(0.09, 0.09, 0.09),
             material=neutral_dark,
         )
@@ -422,7 +467,7 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
         for marker_index, marker_name in enumerate(viz["markers"][:4]):
             _add_marker(
                 bpy,
-                f"{lane['scheme_id']}_marker_{marker_index}",
+                f"{lane_id}_marker_{marker_index}",
                 marker_name,
                 location=(x + marker_x_offsets[marker_index], 1.72, 0.48),
                 size=0.46,
@@ -437,13 +482,13 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
             variant_brand = lane["variants"][variant_name]["brand"]
             chip_mat = _ensure_material(
                 bpy,
-                f"{lane['scheme_id']}_{variant_name}_chip",
+                f"{lane_id}_{variant_name}_chip",
                 variant_brand["primaryStrong"],
                 roughness=0.36,
             )
             _add_box(
                 bpy,
-                f"{lane['scheme_id']}_{variant_name}_chip_obj",
+                f"{lane_id}_{variant_name}_chip_obj",
                 location=(chip_x, -1.32, 0.43),
                 scale=(0.2, 0.12, 0.08),
                 material=chip_mat,
