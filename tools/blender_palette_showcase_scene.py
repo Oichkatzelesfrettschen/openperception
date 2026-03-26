@@ -298,8 +298,8 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
     camera = bpy.data.objects.new("PaletteCamera", camera_data)
     scene.collection.objects.link(camera)
     scene.camera = camera
-    camera.location = (0.0, -12.85, 6.25)
-    camera.rotation_euler = (math.radians(60.0), 0.0, 0.0)
+    camera.location = (0.0, -12.45, 6.05)
+    camera.rotation_euler = (math.radians(58.3), 0.0, 0.0)
     camera.data.lens = 37
 
     key_energy = 1000.0 if selected_engine == "octane" else 5600.0
@@ -503,25 +503,17 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
     _add_text(
         bpy,
         "ShowcaseHeader",
-        "OpenPerception",
-        location=(0.0, 2.08, 0.92),
-        scale=(0.47, 0.47, 0.47),
-        material=text_dark,
-    )
-    _add_text(
-        bpy,
-        "ShowcaseSubheader",
         "OpenPerception accessibility system",
-        location=(0.0, 1.9, 0.78),
-        scale=(0.205, 0.205, 0.205),
+        location=(0.0, 1.98, 0.82),
+        scale=(0.26, 0.26, 0.26),
         material=neutral_dark,
     )
     _add_text(
         bpy,
         "ShowcaseSupport",
         "Evidence | Validators | Adaptive Modes",
-        location=(0.0, 1.72, 0.66),
-        scale=(0.145, 0.145, 0.145),
+        location=(0.0, 1.78, 0.68),
+        scale=(0.16, 0.16, 0.16),
         material=neutral_dark,
     )
     _add_text(
