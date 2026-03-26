@@ -335,9 +335,9 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
             material=rail_mid,
         )
     lane_titles = {
-        "production-indigo-magenta": "Clarity",
-        "accessible-mauve-burgundy": "Trust",
-        "atmosphere-red-mahogany": "Adaptation",
+        "production-indigo-magenta": "Research",
+        "accessible-mauve-burgundy": "Validation",
+        "atmosphere-red-mahogany": "Accommodations",
     }
     for index, lane in enumerate(spec["lanes"]):
         x = start_x + index * lane_spacing
@@ -491,7 +491,7 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
     _add_text(
         bpy,
         "ShowcaseHeader",
-        "OpenPerception: clarity you can trust",
+        "OpenPerception accessibility system",
         location=(0.0, 1.96, 0.82),
         scale=(0.32, 0.32, 0.32),
         material=text_dark,
