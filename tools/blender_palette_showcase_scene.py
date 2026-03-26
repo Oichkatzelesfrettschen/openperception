@@ -542,6 +542,23 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
                     material=inset_mat,
                     bevel=0.015,
                 )
+            # Contrast-led output: obvious light/dark split and bold bars.
+            _add_box(
+                bpy,
+                f"{lane_id}_contrast_dark_zone",
+                location=(x - 0.68, -0.26, 0.525),
+                scale=(0.1, 0.12, 0.014),
+                material=source_mat,
+                bevel=0.012,
+            )
+            _add_box(
+                bpy,
+                f"{lane_id}_contrast_light_zone",
+                location=(x - 0.44, -0.26, 0.525),
+                scale=(0.1, 0.12, 0.014),
+                material=plaque_mat,
+                bevel=0.012,
+            )
             for icon_index, icon_x in enumerate((-0.64, 0.0, 0.64)):
                 _add_box(
                     bpy,
@@ -560,6 +577,40 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
                     material=source_mat if cue_index == 0 else primary_mat,
                     bevel=0.012,
                 )
+            _add_box(
+                bpy,
+                f"{lane_id}_contrast_bar_top",
+                location=(x - 0.56, -0.34, 0.6),
+                scale=(0.16, 0.025, 0.018),
+                material=primary_mat,
+                bevel=0.01,
+            )
+            _add_box(
+                bpy,
+                f"{lane_id}_contrast_bar_bottom",
+                location=(x - 0.56, -0.14, 0.6),
+                scale=(0.16, 0.025, 0.018),
+                material=source_mat,
+                bevel=0.01,
+            )
+            # Guided-symbol-led output: an explicit path line plus symbols.
+            _add_box(
+                bpy,
+                f"{lane_id}_guided_path",
+                location=(x, -0.18, 0.54),
+                scale=(0.19, 0.02, 0.012),
+                material=accent_mat,
+                bevel=0.01,
+            )
+            _add_box(
+                bpy,
+                f"{lane_id}_guided_tip",
+                location=(x + 0.19, -0.18, 0.54),
+                scale=(0.03, 0.03, 0.012),
+                material=accent_mat,
+                bevel=0.01,
+            )
+            bpy.context.active_object.rotation_euler.z = math.radians(45.0)
             for cue_index, cue_x in enumerate((-0.12, 0.0, 0.12)):
                 _add_marker(
                     bpy,
@@ -569,6 +620,15 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
                     size=0.18,
                     material=(accent_mat, primary_mat, tertiary_mat)[cue_index],
                 )
+            # Depth-safe output: stepped relief plus a contour strip.
+            _add_box(
+                bpy,
+                f"{lane_id}_depth_contour",
+                location=(x + 0.56, -0.32, 0.59),
+                scale=(0.17, 0.02, 0.014),
+                material=tertiary_mat,
+                bevel=0.01,
+            )
             for step_index, step_x in enumerate((0.43, 0.56, 0.69)):
                 _add_box(
                     bpy,
@@ -612,9 +672,9 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
     _add_text(
         bpy,
         "LegendStatic",
-        "STATIC CUES FIRST",
+        "same source, adapted views",
         location=(0.0, -2.36, 0.24),
-        scale=(0.24, 0.24, 0.24),
+        scale=(0.2, 0.2, 0.2),
         material=text_dark,
     )
 
