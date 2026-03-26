@@ -298,9 +298,9 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
     camera = bpy.data.objects.new("PaletteCamera", camera_data)
     scene.collection.objects.link(camera)
     scene.camera = camera
-    camera.location = (0.0, -12.45, 6.05)
-    camera.rotation_euler = (math.radians(58.3), 0.0, 0.0)
-    camera.data.lens = 37
+    camera.location = (0.0, -11.78, 5.9)
+    camera.rotation_euler = (math.radians(57.8), 0.0, 0.0)
+    camera.data.lens = 38
 
     key_energy = 1000.0 if selected_engine == "octane" else 5600.0
     rim_energy = 420.0 if selected_engine == "octane" else 2850.0
@@ -345,7 +345,7 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
         viz = lane["viz"]
         lane_id = lane["scheme_id"]
         surface_mat = _ensure_material(
-            bpy, f"{lane_id}_surface", brand["surface"], roughness=0.72
+            bpy, f"{lane_id}_surface", brand["surface"], roughness=0.64
         )
         border_mat = _ensure_material(
             bpy, f"{lane_id}_border", brand["border"], roughness=0.68
@@ -389,6 +389,14 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
             scale=(1.28, 0.42, 0.022),
             material=plaque_mat,
             bevel=0.03,
+        )
+        _add_box(
+            bpy,
+            f"{lane_id}_label_beacon",
+            location=(x - 0.92, -1.78, 0.37),
+            scale=(0.09, 0.09, 0.03),
+            material=primary_mat,
+            bevel=0.02,
         )
 
         if lane_id == "production-indigo-magenta":
@@ -463,8 +471,8 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
             bpy,
             f"{lane_id}_title",
             lane_titles.get(lane_id, lane["label"]),
-            location=(x, -1.78, 0.46),
-            scale=(0.34, 0.34, 0.34),
+            location=(x, -1.86, 0.47),
+            scale=(0.4, 0.4, 0.4),
             material=label_mat,
         )
 
@@ -479,49 +487,21 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
                 material=marker_materials[marker_index],
             )
 
-        variant_names = lane["available_variants"]
-        chip_start_x = x - 1.05
-        chip_gap = 0.55
-        for variant_index, variant_name in enumerate(variant_names):
-            chip_x = chip_start_x + variant_index * chip_gap
-            variant_brand = lane["variants"][variant_name]["brand"]
-            chip_mat = _ensure_material(
-                bpy,
-                f"{lane_id}_{variant_name}_chip",
-                variant_brand["primaryStrong"],
-                roughness=0.36,
-            )
-            _add_box(
-                bpy,
-                f"{lane_id}_{variant_name}_chip_obj",
-                location=(chip_x, -0.92, 0.41),
-                scale=(0.18, 0.11, 0.07),
-                material=chip_mat,
-                bevel=0.03,
-            )
 
     _add_text(
         bpy,
         "ShowcaseHeader",
         "OpenPerception accessibility system",
         location=(0.0, 1.98, 0.82),
-        scale=(0.26, 0.26, 0.26),
-        material=neutral_dark,
-    )
-    _add_text(
-        bpy,
-        "ShowcaseSupport",
-        "Evidence | Validators | Adaptive Modes",
-        location=(0.0, 1.78, 0.68),
-        scale=(0.16, 0.16, 0.16),
-        material=neutral_dark,
+        scale=(0.29, 0.29, 0.29),
+        material=text_dark,
     )
     _add_text(
         bpy,
         "LegendStatic",
         "STATIC CUES FIRST",
         location=(0.0, -2.34, 0.235),
-        scale=(0.17, 0.17, 0.17),
+        scale=(0.22, 0.22, 0.22),
         material=text_dark,
     )
 
