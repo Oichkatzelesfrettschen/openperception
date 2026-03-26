@@ -241,7 +241,7 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
     world_output = world_nodes.new("ShaderNodeOutputWorld")
     world_bg = world_nodes.new("ShaderNodeBackground")
     world_bg.inputs["Color"].default_value = _hex_to_rgba("#FBF7F1")
-    world_bg.inputs["Strength"].default_value = 1.55
+    world_bg.inputs["Strength"].default_value = 1.62
     world_links.new(world_bg.outputs["Background"], world_output.inputs["Surface"])
 
     floor_mat = _ensure_material(bpy, "Floor", "#D8CEC4", roughness=0.96)
@@ -268,8 +268,16 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
     )
     _add_box(
         bpy,
+        "HeaderBand",
+        location=(0.0, 2.1, 0.88),
+        scale=(3.05, 0.035, 0.72),
+        material=plaque_mat,
+        bevel=0.03,
+    )
+    _add_box(
+        bpy,
         "DepthLegendPlaque",
-        location=(0.0, -2.5, 0.14),
+        location=(0.0, -2.42, 0.14),
         scale=(3.35, 0.68, 0.09),
         material=plaque_mat,
         bevel=0.04,
@@ -290,9 +298,9 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
     camera = bpy.data.objects.new("PaletteCamera", camera_data)
     scene.collection.objects.link(camera)
     scene.camera = camera
-    camera.location = (0.0, -12.4, 5.85)
-    camera.rotation_euler = (math.radians(57.6), 0.0, 0.0)
-    camera.data.lens = 36
+    camera.location = (0.0, -12.85, 6.25)
+    camera.rotation_euler = (math.radians(60.0), 0.0, 0.0)
+    camera.data.lens = 37
 
     key_energy = 1000.0 if selected_engine == "octane" else 5600.0
     rim_energy = 420.0 if selected_engine == "octane" else 2850.0
@@ -322,7 +330,7 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
         _add_depth_strip(
             bpy,
             f"PlaqueConnector_{connector_x:+.2f}",
-            location=(connector_x, -2.0, -0.02),
+            location=(connector_x, -1.82, -0.02),
             scale=(0.55, 0.025, 0.014),
             material=rail_mid,
         )
@@ -496,31 +504,31 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
         bpy,
         "ShowcaseHeader",
         "OpenPerception",
-        location=(0.0, 2.2, 1.0),
-        scale=(0.6, 0.6, 0.6),
+        location=(0.0, 2.08, 0.92),
+        scale=(0.47, 0.47, 0.47),
         material=text_dark,
     )
     _add_text(
         bpy,
         "ShowcaseSubheader",
-        "Accessibility must stay legible",
-        location=(0.0, 1.98, 0.86),
-        scale=(0.29, 0.29, 0.29),
+        "OpenPerception accessibility system",
+        location=(0.0, 1.9, 0.78),
+        scale=(0.205, 0.205, 0.205),
         material=neutral_dark,
     )
     _add_text(
         bpy,
         "ShowcaseSupport",
         "Evidence | Validators | Adaptive Modes",
-        location=(0.0, 1.74, 0.72),
-        scale=(0.21, 0.21, 0.21),
+        location=(0.0, 1.72, 0.66),
+        scale=(0.145, 0.145, 0.145),
         material=neutral_dark,
     )
     _add_text(
         bpy,
         "LegendStatic",
         "STATIC CUES FIRST",
-        location=(0.0, -2.42, 0.235),
+        location=(0.0, -2.34, 0.235),
         scale=(0.17, 0.17, 0.17),
         material=text_dark,
     )
