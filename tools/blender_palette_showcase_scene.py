@@ -240,7 +240,7 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
     world_output = world_nodes.new("ShaderNodeOutputWorld")
     world_bg = world_nodes.new("ShaderNodeBackground")
     world_bg.inputs["Color"].default_value = _hex_to_rgba("#F6F2EC")
-    world_bg.inputs["Strength"].default_value = 0.68
+    world_bg.inputs["Strength"].default_value = 0.88
     world_links.new(world_bg.outputs["Background"], world_output.inputs["Surface"])
 
     floor_mat = _ensure_material(bpy, "Floor", "#C7BDB4", roughness=0.96)
@@ -268,8 +268,8 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
     _add_box(
         bpy,
         "DepthLegendPlaque",
-        location=(0.0, -3.02, 0.16),
-        scale=(3.34, 0.92, 0.11),
+        location=(0.0, -3.18, 0.12),
+        scale=(3.05, 0.72, 0.09),
         material=plaque_mat,
         bevel=0.04,
     )
@@ -294,8 +294,8 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
     camera.rotation_euler = (math.radians(61.0), 0.0, 0.0)
     camera.data.lens = 33
 
-    key_energy = 345.0 if selected_engine == "octane" else 3000.0
-    rim_energy = 95.0 if selected_engine == "octane" else 1200.0
+    key_energy = 460.0 if selected_engine == "octane" else 3600.0
+    rim_energy = 170.0 if selected_engine == "octane" else 1650.0
     _add_area_light(
         bpy,
         scene,
@@ -319,9 +319,14 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
     lane_spacing = 4.55
     start_x = -lane_spacing
     lane_titles = {
-        "production-indigo-magenta": "Production",
-        "accessible-mauve-burgundy": "Accessible",
-        "atmosphere-red-mahogany": "Axiomatic",
+        "production-indigo-magenta": "Evidence",
+        "accessible-mauve-burgundy": "Validators",
+        "atmosphere-red-mahogany": "Adaptive Modes",
+    }
+    lane_subtitles = {
+        "production-indigo-magenta": "Papers | provenance | claims",
+        "accessible-mauve-burgundy": "Offline checks | gates | profiles",
+        "atmosphere-red-mahogany": "Color | motion | depth accommodations",
     }
     swatch_depth_positions = (
         ("primary", -0.32, 0.42, (1.08, 0.31, 0.13)),
@@ -400,16 +405,16 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
             bpy,
             f"{lane['scheme_id']}_title",
             lane_titles.get(lane["scheme_id"], lane["label"]),
-            location=(x, -1.7, 0.62),
-            scale=(0.29, 0.29, 0.29),
+            location=(x, -1.98, 0.48),
+            scale=(0.25, 0.25, 0.25),
             material=label_mat,
         )
         _add_text(
             bpy,
             f"{lane['scheme_id']}_subtitle",
-            lane["label"],
-            location=(x, -2.05, 0.48),
-            scale=(0.11, 0.11, 0.11),
+            lane_subtitles.get(lane["scheme_id"], lane["label"]),
+            location=(x, -2.23, 0.29),
+            scale=(0.09, 0.09, 0.09),
             material=neutral_dark,
         )
 
@@ -448,17 +453,33 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
     _add_text(
         bpy,
         "ShowcaseHeader",
-        "OpenPerception Palette And Depth Showcase",
-        location=(0.0, 2.06, 0.8),
-        scale=(0.4, 0.4, 0.4),
+        "OpenPerception",
+        location=(0.0, 2.14, 0.92),
+        scale=(0.56, 0.56, 0.56),
         material=text_dark,
     )
     _add_text(
         bpy,
+        "ShowcaseSubheader",
+        "Evidence-backed accessibility system",
+        location=(0.0, 1.78, 0.7),
+        scale=(0.24, 0.24, 0.24),
+        material=neutral_dark,
+    )
+    _add_text(
+        bpy,
+        "ShowcaseSupport",
+        "Research | validators | adaptive modes",
+        location=(0.0, 1.5, 0.54),
+        scale=(0.16, 0.16, 0.16),
+        material=neutral_dark,
+    )
+    _add_text(
+        bpy,
         "LegendStatic",
-        "STATIC CUES FIRST",
-        location=(0.0, -3.05, 0.29),
-        scale=(0.22, 0.22, 0.22),
+        "ACCESSIBILITY MUST STAY LEGIBLE",
+        location=(0.0, -3.18, 0.215),
+        scale=(0.14, 0.14, 0.14),
         material=text_dark,
     )
 
