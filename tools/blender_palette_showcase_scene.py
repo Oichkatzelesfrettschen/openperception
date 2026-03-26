@@ -451,21 +451,99 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
                     bevel=0.025,
                 )
         else:
-            adaptive_layers = (
-                ("mode_back", -0.16, 0.36, (1.0, 0.27, 0.08), primary_mat, -0.18),
-                ("mode_mid", 0.06, 0.58, (0.9, 0.25, 0.075), accent_mat, 0.0),
-                ("mode_front", 0.28, 0.8, (0.8, 0.23, 0.07), tertiary_mat, 0.18),
+            source_mat = _ensure_material(
+                bpy, f"{lane_id}_source", brand["border"], roughness=0.3
             )
-            for name, y_pos, z_pos, scale, mat, x_shift in adaptive_layers:
-                obj = _add_box(
+            connector_mat = _ensure_material(
+                bpy, f"{lane_id}_connector", brand["focusRing"], roughness=0.42
+            )
+            _add_box(
+                bpy,
+                f"{lane_id}_source_panel",
+                location=(x, 0.6, 0.84),
+                scale=(0.98, 0.22, 0.07),
+                material=source_mat,
+                bevel=0.035,
+            )
+            _add_box(
+                bpy,
+                f"{lane_id}_spine",
+                location=(x, 0.28, 0.64),
+                scale=(0.06, 0.05, 0.28),
+                material=connector_mat,
+                bevel=0.02,
+            )
+            _add_box(
+                bpy,
+                f"{lane_id}_fan_bar",
+                location=(x, 0.04, 0.55),
+                scale=(0.82, 0.05, 0.03),
+                material=connector_mat,
+                bevel=0.02,
+            )
+            output_specs = (
+                ("contrast", -0.56, primary_mat, "#FBF6F1"),
+                ("guided", 0.0, accent_mat, brand["surface"]),
+                ("depth_safe", 0.56, tertiary_mat, "#FBF6F1"),
+            )
+            for output_name, x_shift, body_mat, inset_hex in output_specs:
+                inset_mat = _ensure_material(
                     bpy,
-                    f"{lane_id}_{name}",
-                    location=(x + x_shift, y_pos, z_pos),
-                    scale=scale,
-                    material=mat,
-                    bevel=0.04,
+                    f"{lane_id}_{output_name}_inset",
+                    inset_hex,
+                    roughness=0.5,
                 )
-                obj.rotation_euler.z = math.radians(7.0 if x_shift < 0 else (-7.0 if x_shift > 0 else 0.0))
+                _add_box(
+                    bpy,
+                    f"{lane_id}_{output_name}_connector",
+                    location=(x + x_shift, -0.02, 0.47),
+                    scale=(0.045, 0.045, 0.14),
+                    material=connector_mat,
+                    bevel=0.018,
+                )
+                _add_box(
+                    bpy,
+                    f"{lane_id}_{output_name}_panel",
+                    location=(x + x_shift, -0.26, 0.43),
+                    scale=(0.44, 0.22, 0.09),
+                    material=body_mat,
+                    bevel=0.03,
+                )
+                _add_box(
+                    bpy,
+                    f"{lane_id}_{output_name}_inset_obj",
+                    location=(x + x_shift, -0.23, 0.5),
+                    scale=(0.31, 0.12, 0.02),
+                    material=inset_mat,
+                    bevel=0.015,
+                )
+            for cue_index, cue_x in enumerate((-0.65, -0.47)):
+                _add_box(
+                    bpy,
+                    f"{lane_id}_contrast_cue_{cue_index}",
+                    location=(x + cue_x, -0.24, 0.59),
+                    scale=(0.04, 0.12, 0.045),
+                    material=source_mat if cue_index == 0 else primary_mat,
+                    bevel=0.012,
+                )
+            for cue_index, cue_x in enumerate((-0.12, 0.0, 0.12)):
+                _add_marker(
+                    bpy,
+                    f"{lane_id}_guided_cue_{cue_index}",
+                    ("circle", "triangle", "square")[cue_index],
+                    location=(x + cue_x, -0.18, 0.58),
+                    size=0.18,
+                    material=(accent_mat, primary_mat, tertiary_mat)[cue_index],
+                )
+            for step_index, step_x in enumerate((0.43, 0.56, 0.69)):
+                _add_box(
+                    bpy,
+                    f"{lane_id}_depth_step_{step_index}",
+                    location=(x + step_x, -0.18 + step_index * 0.03, 0.57 - step_index * 0.025),
+                    scale=(0.055, 0.08, 0.028),
+                    material=tertiary_mat,
+                    bevel=0.012,
+                )
 
         _add_text(
             bpy,
@@ -476,16 +554,17 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
             material=label_mat,
         )
 
-        marker_x_offsets = (-0.75, -0.25, 0.25, 0.75)
-        for marker_index, marker_name in enumerate(viz["markers"][:4]):
-            _add_marker(
-                bpy,
-                f"{lane_id}_marker_{marker_index}",
-                marker_name,
-                location=(x + marker_x_offsets[marker_index], 1.72, 0.48),
-                size=0.46,
-                material=marker_materials[marker_index],
-            )
+        if lane_id != "atmosphere-red-mahogany":
+            marker_x_offsets = (-0.75, -0.25, 0.25, 0.75)
+            for marker_index, marker_name in enumerate(viz["markers"][:4]):
+                _add_marker(
+                    bpy,
+                    f"{lane_id}_marker_{marker_index}",
+                    marker_name,
+                    location=(x + marker_x_offsets[marker_index], 1.72, 0.48),
+                    size=0.46,
+                    material=marker_materials[marker_index],
+                )
 
 
     _add_text(
