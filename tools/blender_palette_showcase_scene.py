@@ -268,8 +268,8 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
     _add_box(
         bpy,
         "DepthLegendPlaque",
-        location=(0.0, -3.2, 0.14),
-        scale=(3.18, 0.78, 0.1),
+        location=(0.0, -3.02, 0.16),
+        scale=(3.34, 0.92, 0.11),
         material=plaque_mat,
         bevel=0.04,
     )
@@ -290,12 +290,12 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
     camera = bpy.data.objects.new("PaletteCamera", camera_data)
     scene.collection.objects.link(camera)
     scene.camera = camera
-    camera.location = (0.0, -12.95, 6.28)
+    camera.location = (0.0, -13.15, 6.32)
     camera.rotation_euler = (math.radians(61.0), 0.0, 0.0)
-    camera.data.lens = 34
+    camera.data.lens = 33
 
-    key_energy = 315.0 if selected_engine == "octane" else 2850.0
-    rim_energy = 80.0 if selected_engine == "octane" else 1125.0
+    key_energy = 345.0 if selected_engine == "octane" else 3000.0
+    rim_energy = 95.0 if selected_engine == "octane" else 1200.0
     _add_area_light(
         bpy,
         scene,
@@ -316,7 +316,7 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
         size_x=6.0,
         size_y=6.0,
     )
-    lane_spacing = 4.8
+    lane_spacing = 4.55
     start_x = -lane_spacing
     lane_titles = {
         "production-indigo-magenta": "Production",
@@ -455,35 +455,11 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
     )
     _add_text(
         bpy,
-        "ShowcaseSubheader",
-        "Shared depth without requiring stereopsis",
-        location=(0.0, 1.7, 0.58),
-        scale=(0.18, 0.18, 0.18),
-        material=neutral_dark,
-    )
-    _add_text(
-        bpy,
         "LegendStatic",
         "STATIC CUES FIRST",
-        location=(0.0, -3.22, 0.31),
-        scale=(0.21, 0.21, 0.21),
+        location=(0.0, -3.05, 0.29),
+        scale=(0.22, 0.22, 0.22),
         material=text_dark,
-    )
-    _add_text(
-        bpy,
-        "LegendStereo",
-        "Stereo optional. Motion supplemental.",
-        location=(0.0, -3.48, 0.225),
-        scale=(0.155, 0.155, 0.155),
-        material=neutral_dark,
-    )
-    _add_text(
-        bpy,
-        "LegendMotion",
-        "Labels | shadows | scale | anchors",
-        location=(0.0, -3.72, 0.15),
-        scale=(0.13, 0.13, 0.13),
-        material=neutral_dark,
     )
 
     bpy.context.view_layer.update()
