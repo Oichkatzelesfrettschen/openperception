@@ -118,7 +118,7 @@ openperception/
 |   |-- DaltonLens-Python/     # Python CVD simulation package
 |   +-- libDaltonLens/         # C library (public domain)
 |-- artifacts/
-|   +-- blender_showcase/     # Tracked Blender scene and render snapshots
+|   +-- blender_showcase/     # Tracked Blender living-concept artifacts
 |-- datasets/
 |   |-- source_assets/         # Non-paper reference assets for datasets/tools
 |   +-- ishihara-plate-learning/  # Color blindness test learning tool
