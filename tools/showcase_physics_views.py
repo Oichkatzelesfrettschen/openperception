@@ -547,10 +547,24 @@ def build_showcase_animated_views(output_dir: Path = ANIMATED_DIR) -> dict:
         "concept": "animated accessible views derived from real sibling-repo physics artifacts",
         "generated_dir": str(output_dir),
         "views": [],
+        "deferred_views": [],
     }
     for spec in VIEW_SPECS:
         builder = ANIMATION_BUILDERS.get(spec["id"])
         if builder is None:
+            manifest["deferred_views"].append(
+                {
+                    "id": spec["id"],
+                    "case_title": spec["case_title"],
+                    "mode_label": spec["mode_label"],
+                    "source_repo": spec["source_repo"],
+                    "reason": (
+                        "No real sibling-repo motion source is currently registered for this case; "
+                        "keep it as a still-only accessibility view until that changes."
+                    ),
+                    "source_path": str(spec["source_path"]),
+                }
+            )
             continue
         result = builder(spec, output_dir)
         manifest["views"].append(

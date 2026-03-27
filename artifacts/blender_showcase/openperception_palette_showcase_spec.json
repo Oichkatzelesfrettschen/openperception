@@ -121,6 +121,16 @@
         "animation_basis": "/home/eirikr/Github/compact-common/dist/releases/neutrino-processes-explainer-contact-sheet-latest.png",
         "frame_count": 6
       }
+    ],
+    "deferred_views": [
+      {
+        "id": "blackhole_lensing",
+        "case_title": "Black Hole Lensing",
+        "mode_label": "Depth-safe",
+        "source_repo": "Blackhole",
+        "reason": "No real sibling-repo motion source is currently registered for this case; keep it as a still-only accessibility view until that changes.",
+        "source_path": "/home/eirikr/Github/Blackhole/build/Release/reports/octane_harsh_benchmark_artifacts/render_engine_final.png"
+      }
     ]
   },
   "render_preference": {

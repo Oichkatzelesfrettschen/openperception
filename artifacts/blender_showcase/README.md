@@ -20,6 +20,7 @@ Current source-of-truth files:
 - `CONCEPT.md`
 - `../../docs/generated/repo_stats.json`
 - `../../docs/generated/repo_stats.md`
+- `animated/README.md`
 - `generated/physics_views_manifest.json`
 - `animated/animated_views_manifest.json`
 - `animated/gw_chirp_accessible.gif`
@@ -56,6 +57,9 @@ The animated lane is expected to stay just as concrete:
   into a clearer chirp-focused accessible view
 - `animated/neutrino_cooling_guided.gif` should read as real captured neutrino
   explainer frames turned into a more guided process view
+
+The black-hole case is still intentionally still-only right now. We do not add
+decorative motion there unless a real sibling-repo motion source exists.
 
 The current harsher readability pass removes the bottom plaque and header so
 the three panels have to teach themselves without explanatory copy.

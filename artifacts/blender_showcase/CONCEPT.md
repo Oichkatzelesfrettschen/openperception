@@ -38,6 +38,11 @@ The current tracked animated views are:
 - `Neutrino Cooling` animated from real frames in the sibling-repo contact
   sheet
 
+The current deferred animated view is:
+
+- `Black Hole Lensing`, because there is not yet a real sibling-repo motion
+  source registered for that case
+
 Research, provenance, and validation still matter, but they should appear as
 quiet substrate, not as hero slogans on separate pedestals.
 

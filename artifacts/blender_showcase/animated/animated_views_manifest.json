@@ -1,5 +1,15 @@
 {
   "concept": "animated accessible views derived from real sibling-repo physics artifacts",
+  "deferred_views": [
+    {
+      "case_title": "Black Hole Lensing",
+      "id": "blackhole_lensing",
+      "mode_label": "Depth-safe",
+      "reason": "No real sibling-repo motion source is currently registered for this case; keep it as a still-only accessibility view until that changes.",
+      "source_path": "/home/eirikr/Github/Blackhole/build/Release/reports/octane_harsh_benchmark_artifacts/render_engine_final.png",
+      "source_repo": "Blackhole"
+    }
+  ],
   "generated_dir": "/home/eirikr/Github/openperception/artifacts/blender_showcase/animated",
   "schema_version": 1,
   "views": [

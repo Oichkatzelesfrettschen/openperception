@@ -95,6 +95,8 @@ blender --background --factory-startup \
   motion
 - `python3 tools/check_showcase_source_inputs.py` is the repo-owned integrity
   gate for those sibling-repo inputs
+- if a future third animation is added, it must be grounded in a real
+  sibling-repo motion source rather than a decorative interpolation
 - some hosts ship a broken `blender` binary while `OctaneBlender` works, so the
   binary name should be treated as a host-level configuration choice
 - the repo-owned Octane probe uses `--factory-startup` and an `OctaneServer`
