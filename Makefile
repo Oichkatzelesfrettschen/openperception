@@ -19,7 +19,7 @@ C_BUILD_DIR ?= algorithms/libDaltonLens/build
 # =============================================================================
 # Phony Targets
 # =============================================================================
-.PHONY: all help serve oklch contrast-check separation-check seizure-check temporal-depth-check cognitive-check typography-check rendered-spatial-check rendered-cognitive-check check-rendered playwright-install profile-report scale-report validate validate-strict gap-report claims-report claims-check repo-stats repo-stats-check integrity-check task-governance-check source-cache-links-check paper-corpus-check source-assets-check check venv \
+.PHONY: all help serve oklch contrast-check separation-check seizure-check temporal-depth-check cognitive-check typography-check rendered-spatial-check rendered-cognitive-check check-rendered playwright-install profile-report scale-report validate validate-strict gap-report claims-report claims-check repo-stats repo-stats-check integrity-check task-governance-check source-cache-links-check paper-corpus-check source-assets-check octane-probe check venv \
         test test-python test-tools test-c test-all coverage \
         lint lint-python lint-c format \
         build build-c install-python install-dev \
@@ -47,6 +47,7 @@ help:
 	@echo "  rendered-cognitive-check - Run the browser-backed rendered cognitive audit"
 	@echo "  check-rendered     - Run the optional browser-backed rendered audit lane"
 	@echo "  playwright-install - Install Chromium for the selected Playwright environment"
+	@echo "  octane-probe       - Verify the clean OctaneBlender headless startup path"
 	@echo "  profile-report     - Compose axis/display profiles (set PROFILE_NAMES=a,b)"
 	@echo "  scale-report       - Show lp->px quantization report (LP=16 DPI=96 SCALE=1 SNAP_CLASS=layout)"
 	@echo "  validate           - Run unified implemented validator gates in strict mode"
@@ -132,6 +133,9 @@ check-rendered: rendered-spatial-check rendered-cognitive-check
 
 playwright-install:
 	$(PYTHON) -m playwright install chromium
+
+octane-probe:
+	$(PYTHON) tools/octane_headless_probe.py --blender-executable $(or $(SHOWCASE_BLENDER_BIN),OctaneBlender)
 
 profile-report:
 	$(PYTHON) tools/profile_resolver.py $(if $(PROFILE_NAMES),--profiles $(PROFILE_NAMES),)

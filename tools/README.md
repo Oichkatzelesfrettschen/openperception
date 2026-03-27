@@ -21,6 +21,7 @@ Development and validation utilities for OpenPerception.
 | `rendered_cognitive_check.py` | Browser-backed first-screen cognitive density audit for repo-owned example pages using Playwright | `python tools/rendered_cognitive_check.py [--page examples/ui/palette-compare.html] [--viewport 320x900]` |
 | `profile_resolver.py` | Compose axis/display profiles and surface cross-axis conflicts | `python tools/profile_resolver.py [--profiles standard,reduced-motion]` |
 | `palette_showcase_spec.py` | Emit the repo-driven Blender showcase payload for the living accessibility concept scene | `python tools/palette_showcase_spec.py [--output file.json]` |
+| `octane_headless_probe.py` | Ensure OctaneServer is up and verify a warning-clean OctaneBlender headless startup path | `python tools/octane_headless_probe.py [--blender-executable OctaneBlender] [--json]` |
 | `blender_palette_showcase_scene.py` | Build and render the repo-driven living accessibility concept scene inside Blender | `blender --background --factory-startup --python tools/blender_palette_showcase_scene.py -- --spec artifacts/blender_showcase/openperception_palette_showcase_spec.json --output artifacts/blender_showcase/openperception_palette_showcase_render.png --blend-output artifacts/blender_showcase/openperception_palette_showcase_scene.blend` |
 | `scaling.py` | Convert logical pixels to physical pixels with snap-class quantization, optionally annotated with profile composition | `python tools/scaling.py --lp 44 --dpi 144 --scale 1.25 --snap-class touch-target [--profiles standard,reduced-motion]` |
 | `semantic_tokens.py` | Shared loader and validator for first-class runtime semantic role tokens | Imported by CVD and tests |
@@ -57,6 +58,13 @@ auxiliary runtime section.
 measures first-screen visible controls, regions, clusters, and notifications at
 fixed viewport sizes so we can reason about actual on-screen burden without
 making the unified validator depend on a browser by default.
+
+## Blender And Octane
+
+For Octane-first showcase work, do not treat a raw `OctaneBlender` invocation
+as the canonical readiness check. Use `octane_headless_probe.py` or
+`make octane-probe` first so the repo verifies the clean
+`--factory-startup` plus `OctaneServer` path before a full scene regeneration.
 
 ## Tests
 

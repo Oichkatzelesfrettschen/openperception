@@ -131,4 +131,21 @@ Current tranche focus:
 - [ ] T097 Add a migration playbook for future research-local artifacts.
 - [ ] T098 Add a paper-count generation script if prose counts keep drifting.
 - [x] T099 Audit whether bibliography files are canonical and non-duplicative.
-- [ ] T100 Cut the next tranche from the remaining open items and rebaseline this ledger.
+- [x] T100 Cut the next tranche from the remaining open items and rebaseline this ledger.
+
+## Phase 6. Blender And Octane Cleanliness
+
+- [x] T101 Reproduce the live Octane and Blender startup warnings under the
+  current host configuration.
+- [x] T102 Isolate the Blender startup-script warning to the local
+  `blendermcp_autostart.py` loader path.
+- [x] T103 Confirm a clean Octane headless path exists with `--factory-startup`
+  plus an `OctaneServer` preflight.
+- [x] T104 Add a repo-owned Octane headless probe under `tools/`.
+- [x] T105 Add tests and Makefile coverage for the Octane probe lane.
+- [x] T106 Update showcase requirements and tool docs to point at the clean
+  Octane path instead of a naive raw launch.
+- [ ] T107 Decide whether full showcase regeneration should move behind a
+  repo-owned render driver next tranche.
+- [ ] T108 Re-run the next visual refinement tranche only through the cleaned
+  Octane path.

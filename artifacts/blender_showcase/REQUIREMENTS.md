@@ -42,6 +42,13 @@ Preferred binary selection:
 SHOWCASE_BLENDER_BIN=${SHOWCASE_BLENDER_BIN:-OctaneBlender}
 ```
 
+Probe the clean Octane headless path first:
+
+```bash
+python3 tools/octane_headless_probe.py \
+  --blender-executable "${SHOWCASE_BLENDER_BIN}"
+```
+
 Octane-first regeneration:
 
 ```bash
@@ -73,3 +80,6 @@ blender --background --factory-startup \
   before exporting the canonical spec when counts may have changed
 - some hosts ship a broken `blender` binary while `OctaneBlender` works, so the
   binary name should be treated as a host-level configuration choice
+- the repo-owned Octane probe uses `--factory-startup` and an `OctaneServer`
+  preflight because a naive raw launch can emit misleading connection or
+  activation warnings even when a clean automation path is available
