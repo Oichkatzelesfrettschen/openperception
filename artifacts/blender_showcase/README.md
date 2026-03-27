@@ -39,7 +39,7 @@ guidance:
 
 The scene is also expected to stay legible with low caption dependence:
 
-- the back assembly should read as a verified source built from sources,
+- the back assembly should read as one source built from sources,
   provenance, notes, and checks
 - the left foreground view should read as color-safe
 - the center foreground view should read as symbol-guided

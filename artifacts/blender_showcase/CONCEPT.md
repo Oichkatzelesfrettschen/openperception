@@ -10,13 +10,13 @@ The scene should answer one plain question:
 
 The answer is not a virtue word. The answer is:
 
-- it takes a verified source
+- it takes one source view
 - it keeps the evidence and provenance behind that source visible
 - it transforms that source into several concrete accessible views
 
 The current concept therefore uses:
 
-1. one verified source assembly in the back
+1. one source assembly in the back
 2. three foreground transformed views
 
 Those foreground views are:
@@ -75,7 +75,7 @@ surfaces instead of freezing as a one-off composition.
 The labels are only anchors. The forms themselves must carry the meaning:
 
 - the back assembly should look like sources, notes, and checks becoming one
-  verified source
+  source view
 - the color-safe view should look like color-only meaning being reinforced by
   contrast, pattern, and markers
 - the guided-symbol view should look like direction and interpretation being
@@ -91,7 +91,7 @@ not the small plaque text.
 The geometry is allowed to abstract, but it should stay tied to live repo data:
 
 - source cache document counts can drive how many source tiles or tabs feed the
-  verified-source assembly
+  source assembly
 - primary-source-note counts can drive intake and gate cadence before the
   source is allowed to branch
 - accommodation outputs remain fixed at three because the concept explicitly
@@ -107,5 +107,5 @@ This lane should reject:
 - unreadable microtext
 - decorative symbolism that does not map to repo behavior
 
-If the scene stops reading as a verified source branching into concrete
+If the scene stops reading as one source branching into concrete
 accessible views, it has drifted away from the repo.

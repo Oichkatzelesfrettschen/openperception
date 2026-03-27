@@ -3,17 +3,17 @@
   "summary": "Living concept scene for research flowing through validation into transformed accommodations.",
   "concept": {
     "artifact_kind": "living_accessibility_concept_scene",
-    "scene_header": "OpenPerception: verified source -> accessible views",
+    "scene_header": "OpenPerception: one source -> transformed views",
     "plaque_text": "colorblindness -> pattern + contrast | stereoblindness -> contour + anchors",
     "flow": [
-      "verified_source",
+      "source_assembly",
       "color_safe",
       "guided",
       "depth_safe"
     ],
     "caption_dependence": "low",
     "representation": {
-      "verified_source": "Sources, provenance, and checks resolved into one trusted source view.",
+      "source_assembly": "Sources, provenance, and checks gathered into one source view.",
       "accessible_views": [
         "color_safe",
         "guided_symbol_led",
@@ -21,15 +21,15 @@
       ]
     },
     "visual_logic": {
-      "verified_source": "many sources and checks converge into one verified source",
+      "source_assembly": "many sources and checks converge into one source view",
       "color_safe": "color-only meaning is reinforced by contrast, pattern, and markers",
       "guided": "interpretation is carried by explicit paths, symbols, and direction",
       "depth_safe": "depth meaning is carried by contour, anchoring, and static relief"
     },
     "repo_stats_binding": {
-      "verified_source_inputs_metric": "source_cache_doc_count",
-      "verified_source_notes_metric": "primary_source_notes_count",
-      "verified_source_gate_metric": "source_cache_doc_count",
+      "source_assembly_inputs_metric": "source_cache_doc_count",
+      "source_assembly_notes_metric": "primary_source_notes_count",
+      "source_assembly_gate_metric": "source_cache_doc_count",
       "accommodation_modes": 3
     },
     "repo_stats_source": "docs/generated/repo_stats.json"
