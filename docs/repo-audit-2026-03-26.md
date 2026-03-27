@@ -25,6 +25,7 @@ The weakest parts are:
 - uneven installation documentation across module boundaries
 - some high-level claims that were more precise than the repo could currently
   prove
+- optional browser and Blender lanes depending on host-specific bootstrap
 
 ## Hypotheses
 
@@ -67,6 +68,24 @@ The weakest parts are:
 - action: strategic docs should describe it as a partial implemented runtime,
   not as pure aspiration
 
+### HYP-005 Strategic-doc counts and milestone language still match the current tree
+
+- status: partially refuted
+- local evidence: `MASTER_INDEX.md` had stale markdown counts and `ROADMAP.md`
+  still described already-implemented validators as deferred or in-progress
+- action: rewrite strategic docs to use measured counts, narrower completion
+  language, and more honest milestone framing
+
+### HYP-006 The documented dev-environment bootstrap is reproducible on a fresh host profile
+
+- status: supported after remediation
+- local evidence: the repo can now bootstrap a fresh virtual environment,
+  install the editable theme and DaltonLens package, and build the example
+  Sphinx docs using repo-owned commands
+- nuance: rendered browser audits still require an explicit Playwright browser
+  install step and stay outside the default `make check` gate
+- action: keep rendered audits opt-in and document their bootstrap exactly
+
 ## Current Runtime Findings
 
 Executed on this audit pass:
@@ -80,6 +99,10 @@ Observed current runtime result after remediation:
 - `python3 tools/validate.py --strict-warnings` now passes
 - the remaining practical setup gap is environment bootstrap for the full
   `DaltonLens-Python` test lane
+- strategic docs now use narrower completion language and measured markdown
+  counts instead of the old hand-written totals
+- rendered browser audits remain optional because they depend on local browser
+  binaries even when the Python package is installed
 
 That means the repo's current debt is no longer in the implemented validator
 surface itself. It is now mostly in environment reproducibility, broader

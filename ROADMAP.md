@@ -21,13 +21,13 @@ Create the most comprehensive, evidence-based toolkit for visual accessibility, 
 - [x] Comprehensive specifications (5-pillar framework)
 - [x] Research paper compendiums and curated local source cache
 - [x] Development tools (contrast check, OKLCH generation)
-- [x] GTK4 demo application
-- [x] Repository infrastructure (git, docs, CI/CD)
-- [x] CLI interface (all subcommands implemented in main.py)
+- [x] GTK4 demo prototype
+- [x] Repository infrastructure (git, docs, baseline GitHub Actions workflows)
+- [x] CLI interface implemented in `algorithms/DaltonLens-Python/daltonlens/main.py`
 
 ### In Progress
 
-- [ ] Validator framework implementation
+- [ ] Validator framework expansion and policy reconciliation
 - [ ] Performance optimization (array allocation)
 - [ ] Web-based examples expansion
 - [ ] Governance and installation-requirements reconciliation
@@ -45,18 +45,18 @@ Create the most comprehensive, evidence-based toolkit for visual accessibility, 
 
 ### CLI Enhancements
 
-- [x] Implement all CLI subcommands (main.py -- simulate, daltonize, info)
+- [x] Implement all CLI subcommands in `daltonlens/main.py`
 - [ ] Add batch processing support
 - [ ] Create CLI integration tests
 - [ ] Document CLI usage comprehensively
 
 ### Validator Implementation
 
-- [ ] WCAG 2.1 AA/AAA contrast validator
-- [ ] CVD color separation validator
+- [x] WCAG contrast validator
+- [x] CVD color separation validator
 - [ ] Photosensitive seizure safety validator (PEAT-based)
-- [ ] Pattern sensitivity detector
-- [ ] Unified validator CLI interface
+- [x] Spatial, temporal/depth, cognitive, and typography validators
+- [ ] Unified validator CLI ergonomics and richer artifact-backed checks
 
 ---
 
@@ -130,10 +130,8 @@ The following items are tracked but explicitly deferred to future milestones:
 - [ ] Machado2009 C port (algorithm parity)
 - [ ] Daltonization C port (depends on Machado port)
 - [ ] GATE-001 SEIZURE validator implementation
-- [ ] GATE-004 SPATIAL validator implementation
-- [ ] GATE-005 TEMPORAL/DEPTH validator implementation
-- [ ] GATE-006 COGNITIVE validator implementation
-- [ ] Unified validator CLI interface
+- [ ] Pattern-sensitivity detector and richer seizure-manifest coverage
+- [ ] Unified validator CLI and report ergonomics
 - [ ] CI coverage badge in README
 - [ ] PyPI publish workflow
 
@@ -197,19 +195,18 @@ To propose roadmap changes:
 
 ---
 
-## Milestones
+## Aspirational Milestones
 
-### v0.2.0 - Infrastructure Complete
-- All CI/CD pipelines operational
+### v0.2.0 - Baseline Infrastructure Hardening
+- Baseline GitHub Actions workflows operational
 - 90%+ test coverage
 - CLI fully implemented
 - Documentation deployed
 
-### v0.3.0 - Validators Live
-- WCAG contrast validator
-- CVD separation validator
+### v0.3.0 - Validator Expansion
 - Seizure safety validator
-- Unified CLI interface
+- Unified CLI/report interface
+- Rendered audits policy and browser bootstrap stabilized
 
 ### v0.4.0 - Web Platform
 - Interactive simulator

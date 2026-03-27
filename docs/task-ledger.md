@@ -54,15 +54,15 @@ Current tranche focus:
 - [x] T030 Document Git LFS requirements for `papers/downloads/` and `datasets/source_assets/`.
 - [x] T031 Document optional Chromium and Playwright expectations for rendered audits.
 - [x] T032 Document optional Blender and Octane expectations for showcase regeneration.
-- [ ] T033 Verify editable install flows for each Python package in a fresh environment.
-- [ ] T034 Add exact Sphinx version expectations for `python-packages/sphinx-brand-theme`.
+- [x] T033 Verify editable install flows for each Python package in a fresh environment.
+- [x] T034 Add exact Sphinx version expectations for `python-packages/sphinx-brand-theme`.
 - [ ] T035 Add OS package hints for Linux contributors who need `cmake`, `cppcheck`,
   and browser dependencies.
-- [ ] T036 Add contributor instructions for Playwright browser bootstrap if required.
+- [x] T036 Add contributor instructions for Playwright browser bootstrap if required.
 - [ ] T037 Add a reproducible environment bootstrap script if the docs remain too manual.
 - [ ] T038 Add machine-checkable install smoke tests for root and module lanes.
 - [ ] T039 Validate build docs on a second host profile.
-- [ ] T040 Close any remaining mismatch between docs and actual install commands.
+- [x] T040 Close any remaining mismatch between docs and actual install commands.
 
 ## Phase 3. Claim Audit And Source Validation
 
@@ -73,19 +73,19 @@ Current tranche focus:
 - [x] T045 Validate the WCAG contrast minimum used by the contrast gate.
 - [x] T046 Validate the stereoblindness prevalence source used by the depth lane.
 - [x] T047 Downgrade or rewrite claims that lack exact support.
-- [ ] T048 Audit every numbered or thresholded claim in `README.md`.
-- [ ] T049 Audit every completed-state claim in `ROADMAP.md`.
-- [ ] T050 Audit every statistics claim in `MASTER_INDEX.md`.
+- [x] T048 Audit every numbered or thresholded claim in `README.md`.
+- [x] T049 Audit every completed-state claim in `ROADMAP.md`.
+- [x] T050 Audit every statistics claim in `MASTER_INDEX.md`.
 - [ ] T051 Audit research-count claims in paper compendiums for reproducible counting.
 - [ ] T052 Add source-index references for roadmap-level standards claims.
 - [ ] T053 Add source-index references for major depth-accommodation claims not yet indexed.
 - [ ] T054 Add source-index references for major color-support taxonomy claims not yet indexed.
 - [ ] T055 Add an overclaim phrase linter for unsupported certainty words.
 - [ ] T056 Add a stats generator for local corpus counts instead of hardcoded prose counts.
-- [ ] T057 Reconcile cache counts between `MASTER_INDEX.md` and actual files.
-- [ ] T058 Audit README language for "production-ready" assertions lane by lane.
-- [ ] T059 Audit package support claims against packaging metadata.
-- [ ] T060 Publish a second audit note after the next reconciliation pass.
+- [x] T057 Reconcile cache counts between `MASTER_INDEX.md` and actual files.
+- [x] T058 Audit README language for "production-ready" assertions lane by lane.
+- [x] T059 Audit package support claims against packaging metadata.
+- [x] T060 Publish a second audit note after the next reconciliation pass.
 
 ## Phase 4. Build, Validation, And Runtime Integrity
 
@@ -98,16 +98,16 @@ Current tranche focus:
 - [x] T067 Add `tools/check_source_assets.py` to the broader default check lane.
 - [x] T068 Add a `make check` umbrella target once scope is settled.
 - [ ] T069 Ensure every verifier error points to one exact file and task or issue row.
-- [ ] T070 Add JSON output mode to repo-governance verifiers for future automation.
+- [x] T070 Add JSON output mode to repo-governance verifiers for future automation.
 - [x] T071 Audit whether `tools/validate.py` should fail on warnings for selected profiles.
-- [ ] T072 Decide whether rendered audits belong in default or optional validation.
+- [x] T072 Decide whether rendered audits belong in default or optional validation.
 - [ ] T073 Add benchmark or performance smoke coverage where docs claim performance intent.
 - [ ] T074 Add a validator summary doc that maps runtime warnings to debt IDs.
 - [ ] T075 Add a typography debt issue row for the current TYPE-001 warning.
 - [ ] T076 Add CVD borderline-separation debt issue rows for the current GATE-003 warnings.
 - [ ] T077 Add cognitive reading-level debt issue rows for the current GATE-006 warnings.
 - [ ] T078 Add regression fixtures for any validator bug uncovered during the tranche.
-- [ ] T079 Confirm the Makefile help text stays synchronized with real targets.
+- [x] T079 Confirm the Makefile help text stays synchronized with real targets.
 - [ ] T080 Review whether root lint targets are too broad or too narrow.
 
 ## Phase 5. Research Corpus, Cache, And Provenance Discipline

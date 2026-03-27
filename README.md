@@ -10,7 +10,7 @@ OpenPerception is a comprehensive research repository and toolkit for understand
 
 This repository contains:
 
-- **CVD Simulation Algorithms**: Production-ready implementations of Brettel, Vienot, and Machado color vision deficiency simulation algorithms
+- **CVD Simulation Algorithms**: Working implementations of Brettel-, Vienot-, and Machado-based color vision deficiency simulation algorithms
 - **Design Token System**: CVD-aware color tokens with variants for protanopia, deuteranopia, tritanopia, and achromatopsia
 - **Accessibility Specifications**: Comprehensive framework covering safety, perceptibility, discriminability, comprehensibility, and controllability
 - **Depth Accessibility Guidance**: Stereo-independent depth documentation for users with and without stereopsis
@@ -171,12 +171,12 @@ CVD-aware color tokens in multiple formats:
 - `tokens/color-tokens.json` - JSON definitions
 - `tokens/color-oklch-map.json` - OKLCH color space mappings
 
-Five accessibility variants:
-- `brand_default.css` - Standard color vision
-- `brand_protan.css` - Red-weak optimized
-- `brand_deutan.css` - Green-weak optimized
-- `brand_tritan.css` - Blue-weak optimized
-- `brand_mono.css` - Grayscale/achromatopsia
+Five GTK demo theme variants:
+- `gtk4/brand_default.css` - Standard color vision
+- `gtk4/brand_protan.css` - Red-weak optimized
+- `gtk4/brand_deutan.css` - Green-weak optimized
+- `gtk4/brand_tritan.css` - Blue-weak optimized
+- `gtk4/brand_mono.css` - Grayscale/achromatopsia
 
 ### Specifications
 

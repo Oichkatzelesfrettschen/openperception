@@ -19,7 +19,7 @@ C_BUILD_DIR ?= algorithms/libDaltonLens/build
 # =============================================================================
 # Phony Targets
 # =============================================================================
-.PHONY: all help serve oklch contrast-check separation-check seizure-check temporal-depth-check cognitive-check typography-check rendered-spatial-check rendered-cognitive-check profile-report scale-report validate validate-strict gap-report claims-report claims-check integrity-check task-governance-check source-cache-links-check paper-corpus-check source-assets-check check venv \
+.PHONY: all help serve oklch contrast-check separation-check seizure-check temporal-depth-check cognitive-check typography-check rendered-spatial-check rendered-cognitive-check check-rendered playwright-install profile-report scale-report validate validate-strict gap-report claims-report claims-check integrity-check task-governance-check source-cache-links-check paper-corpus-check source-assets-check check venv \
         test test-python test-tools test-c test-all coverage \
         lint lint-python lint-c format \
         build build-c install-python install-dev \
@@ -45,6 +45,8 @@ help:
 	@echo "  typography-check   - Run the first typography verifier"
 	@echo "  rendered-spatial-check - Run the browser-backed rendered spatial audit"
 	@echo "  rendered-cognitive-check - Run the browser-backed rendered cognitive audit"
+	@echo "  check-rendered     - Run the optional browser-backed rendered audit lane"
+	@echo "  playwright-install - Install Chromium for the selected Playwright environment"
 	@echo "  profile-report     - Compose axis/display profiles (set PROFILE_NAMES=a,b)"
 	@echo "  scale-report       - Show lp->px quantization report (LP=16 DPI=96 SCALE=1 SNAP_CLASS=layout)"
 	@echo "  validate           - Run unified implemented validator gates in strict mode"
@@ -122,6 +124,12 @@ rendered-spatial-check:
 
 rendered-cognitive-check:
 	$(PYTHON) tools/rendered_cognitive_check.py
+
+check-rendered: rendered-spatial-check rendered-cognitive-check
+	@echo "Rendered audit lane completed."
+
+playwright-install:
+	$(PYTHON) -m playwright install chromium
 
 profile-report:
 	$(PYTHON) tools/profile_resolver.py $(if $(PROFILE_NAMES),--profiles $(PROFILE_NAMES),)
@@ -279,11 +287,11 @@ pandoc-pdf: pandoc-html
 	fi
 
 sphinx-install-theme:
-	pip install -e python-packages/sphinx-brand-theme
+	$(PYTHON) -m pip install -e python-packages/sphinx-brand-theme
 
-sphinx-example-html:
+sphinx-example-html: sphinx-install-theme
 	@echo "Building example Sphinx project"
-	sphinx-build -b html sphinx/example sphinx/example/_build/html
+	$(PYTHON) -m sphinx -b html sphinx/example sphinx/example/_build/html
 
 # =============================================================================
 # Cleanup

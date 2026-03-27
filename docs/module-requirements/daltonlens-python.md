@@ -11,24 +11,31 @@ This file documents the editable-install and validation expectations for the
 - Geometry3D for the Ishihara plate generation tests
 - OpenCV (`opencv-python-headless`) for the Ishihara plate generation tests
 
-Editable install:
-
-```bash
-python3 -m pip install -e algorithms/DaltonLens-Python
-```
-
-Repo-preferred path:
+Repo-preferred editable install:
 
 ```bash
 make venv
 ```
 
+Direct editable install for a pre-existing writable virtual environment:
+
+```bash
+python3 -m pip install -e algorithms/DaltonLens-Python
+```
+
 ## Testing
 
 ```bash
-cd algorithms/DaltonLens-Python
-python3 -m pytest tests/ -v --tb=short
+make test-python
 ```
+
+Notes:
+
+- the direct editable-install snippet assumes you are already inside a writable
+  virtual environment
+- it does not install the extra test-only dependencies by itself
+- `make venv` is the supported path for root-repo and module verification on
+  PEP 668 hosts
 
 ## Metadata Caveat
 

@@ -16,6 +16,8 @@ This source index supports the March 26, 2026 repo-audit tranche recorded in
   https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html
 - WCAG 2.2 Understanding SC 2.4.13 Focus Appearance:
   https://www.w3.org/WAI/WCAG22/Understanding/focus-appearance.html
+- WCAG 2.2 Understanding SC 2.3.1 Three Flashes Or Below Threshold:
+  https://www.w3.org/WAI/WCAG22/Understanding/three-flashes-or-below-threshold.html
 
 ### Depth And Stereoblindness
 
@@ -27,3 +29,4 @@ This source index supports the March 26, 2026 repo-audit tranche recorded in
 - `python3 tools/validate.py`
 - `python3 tools/check_claims_registry.py`
 - `python3 -m pytest tools/tests/test_validate.py tools/tests/test_check_claims_registry.py -q`
+- `make check`

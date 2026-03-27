@@ -54,6 +54,8 @@ The `venv` target installs:
 - `requirements-dev.txt`
 - editable `algorithms/DaltonLens-Python`
 - editable `python-packages/sphinx-brand-theme`
+- Sphinx for the example docs lane
+- Playwright Python bindings for optional rendered audits
 
 Pull tracked binary artifacts after clone:
 
@@ -83,6 +85,12 @@ make test-python
 make check
 ```
 
+Optional docs build:
+
+```bash
+make sphinx-example-html
+```
+
 ## Optional Toolchains
 
 ### C build lane
@@ -105,8 +113,18 @@ Requirements:
 
 - local Chromium-capable Playwright environment
 
-This repo documents and tests the audit code, but it does not auto-provision
-browser binaries for every host.
+Bootstrap commands:
+
+```bash
+make venv
+make playwright-install
+```
+
+Policy:
+
+- `make check` does not run rendered audits by default
+- `make check-rendered` is the opt-in lane once Chromium is installed
+- browser binaries are host-specific, so they stay outside the default gate
 
 ### Blender showcase
 

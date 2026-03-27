@@ -1,9 +1,10 @@
 # Visual Accessibility Research Compendium - Master Index
 
 **Repository:** OpenPerception (see repository root)
-**Compiled:** March 25, 2026
-**Total PDFs:** 47 (in `papers/downloads/` -- for research use only; see DOI/URL links for official access)
-**Total Compendiums:** 41 markdown files
+**Compiled:** March 26, 2026
+**Canonical PDFs:** 47 (in `papers/downloads/` -- for research use only; see DOI/URL links for official access)
+**Top-level papers/*.md files:** 8
+**research/**/*.md files:** 21
 
 ---
 
@@ -63,12 +64,14 @@
 
 ### Downloaded Papers by Category
 
-#### Algorithms (3 papers)
+#### Algorithms (5 PDFs in the canonical lane)
 | File | Description |
 |------|-------------|
 | `Brettel_1997_Dichromat_Simulation.pdf` | Foundational dichromat simulation |
 | `Vienot_1999_Digital_Colourmaps.pdf` | Simplified matrix method |
 | `Machado_2009_CVD_Simulation.pdf` | Physiologically-based model |
+| `Stockman_2019_Cone_Fundamentals_CIE_Standards.pdf` | Cone fundamentals and CIE standard context |
+| `Vienot_2015_Cone_Fundamentals_Past_Present_Future.pdf` | Cone-fundamentals review |
 
 #### Colorblindness (5 papers)
 | File | Description |
@@ -95,7 +98,7 @@
 |------|-------------|
 | `2024_Eye_Tracking_ADHD_Screening.pdf` | Eye tracking screening |
 | `ADHD_Pediatrics_Review_2024.pdf` | Neuroimaging review |
-| `ADHD_Perceptual_Oscillations_2025.pdf` | 91.8% ML classification |
+| `ADHD_Perceptual_Oscillations_2025.pdf` | Perceptual-oscillation study with ML classification results |
 | `ADHD_Peripheral_Vision_2023.pdf` | Neuro-glasses intervention |
 | `Gestalt_Processing_CVI_ADHD_2024.pdf` | Visual selective attention |
 
@@ -192,9 +195,9 @@ Applied documentation:
 | `artifacts/blender_showcase/openperception_palette_showcase_scene_v1.blend` | Restored Blender scene snapshot for the palette showcase |
 | `artifacts/blender_showcase/README.md` | Showcase artifact policy and regeneration path |
 
-### Existing Research PDFs
+### Research-Local PDF Migration Status
 
-Located in `/research/` subdirectories:
+There are no tracked `research/*.pdf` files left in the repo:
 - Canonical source-cache paths for algorithm and cognitive-load papers now live under `papers/downloads/`; see `docs/external_sources/paper_corpus_registry.md`
 - 0 research-local PDFs remain; see `docs/external_sources/research_pdf_migration_inventory.md`
 - The Ishihara 38-plate reference PDF now lives in `datasets/source_assets/ishihara/`; see `docs/external_sources/nonpaper_source_assets.md`
@@ -248,12 +251,16 @@ openperception/
 │   │   ├── adhd/
 │   │   ├── algorithms/
 │   │   ├── autism/
+│   │   ├── blue_cone_monochromacy/
 │   │   ├── cognitive_load/
 │   │   ├── colorblindness/
 │   │   ├── color_vision/
+│   │   ├── contrast_sensitivity/
 │   │   ├── dyslexia/
+│   │   ├── low_vision/
 │   │   ├── seizures/
-│   │   └── stereoblindness/
+│   │   ├── stereoblindness/
+│   │   └── visual_field_loss/
 │   ├── colorblindness_algorithms_compendium.md
 │   ├── COLORBLINDNESS_ACADEMIC_PAPERS.md
 │   ├── achromatopsia_bcm_research_compendium.md
@@ -302,13 +309,14 @@ openperception/
 3. Machado, Oliveira, Fernandes (2009) - IEEE TVCG - Severity parameter model
 
 ### Cone Fundamentals
-1. Smith & Pokorny (1975) - Vision Research - Classic cone fundamentals
-2. Stockman & Sharpe (2000) - Vision Research - CIE 2006 standard basis
+1. Smith and Pokorny cone-fundamentals work is tracked in the algorithms lane
+2. Later cone-fundamentals reviews are cached in `papers/downloads/algorithms/`
 
 ### Gene Therapy
-1. CNGA3 trials: NCT02610582 (German), NCT03758404 (AGTC)
-2. CNGB3 trials: NCT03001310 (MeiraGTx), NCT02935517 (AGTC)
-3. BCM: CIRM $4.7M award to Blue Gen Therapeutics (2024)
+1. Achromatopsia and BCM therapy sources are tracked in
+   `papers/achromatopsia_bcm_research_compendium.md`
+2. Clinical-endpoint and retinal-structure sources are cached in the BCM lane
+3. See the BCM compendium for trial-level identifiers and program history
 
 ### Photosensitive Seizures
 1. Fisher et al. (2022) - Epilepsy Foundation updated review
@@ -316,14 +324,16 @@ openperception/
 3. WCAG 2.3.1 - Three flashes or below threshold (Level A)
 
 ### Eye Tracking Biomarkers
-1. ADHD: Retinal fundus 95.5-96.9% AUROC
-2. ADHD: Perceptual oscillations 91.8% ML accuracy
-3. Autism: Eye tracking metrics 88-100% sensitivity
+1. ADHD retinal-fundus and perceptual-oscillation studies are indexed in
+   `papers/ADHD_Visual_Processing_Papers_2023-2025.md`
+2. Autism eye-tracking studies are indexed in
+   `papers/autism_visual_processing_bibliography.md`
+3. See the topic compendiums for exact study-level metrics and caveats
 
 ### Accessibility Standards
 - WCAG 2.1: Color contrast 4.5:1 (AA), 7:1 (AAA)
-- Flash limits: Max 3/second, danger zone 15-20 Hz
-- Pattern limits: Max 5 light-dark pairs if oscillating
+- Flash limits: no more than 3 flashes per second, plus general and red-flash thresholds
+- Pattern limits vary by standard; see the seizure compendium for exact rules
 
 ---
 
@@ -331,9 +341,9 @@ openperception/
 
 | Metric | Count |
 |--------|-------|
-| Total PDFs | 47 (in papers/downloads/) |
-| Compendium Markdown Files | 7 |
-| Research Domain Markdowns | 29 |
+| Total PDFs | 47 (in `papers/downloads/`) |
+| Top-level `papers/*.md` files | 8 |
+| `research/**/*.md` files | 21 |
 | Papers Cataloged (estimated) | 420+ |
 | Research Categories | 6 major |
 | Subcategories | 20+ |
@@ -362,6 +372,6 @@ openperception/
 
 ---
 
-*Index generated: March 25, 2026*
-*Updated: March 25, 2026 (retired root-level paper outliers, expanded canonical cache lanes, refreshed cache counts, added color-support taxonomy)*
+*Index generated: March 26, 2026*
+*Updated: March 26, 2026 (reconciled cache counts, downgraded unsupported numeric summaries, refreshed lane descriptions)*
 *For: Visual Accessibility Research Compendium*

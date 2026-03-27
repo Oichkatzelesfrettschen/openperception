@@ -33,6 +33,24 @@ Fallbacks:
 
 ## Regeneration
 
+Preferred binary selection:
+
+```bash
+SHOWCASE_BLENDER_BIN=${SHOWCASE_BLENDER_BIN:-OctaneBlender}
+```
+
+Octane-first regeneration:
+
+```bash
+"${SHOWCASE_BLENDER_BIN}" --background --factory-startup \
+  --python tools/blender_palette_showcase_scene.py -- \
+  --spec artifacts/blender_showcase/openperception_palette_showcase_spec.json \
+  --output artifacts/blender_showcase/openperception_palette_showcase_render.png \
+  --blend-output artifacts/blender_showcase/openperception_palette_showcase_scene.blend
+```
+
+Generic Blender fallback:
+
 ```bash
 blender --background --factory-startup \
   --python tools/blender_palette_showcase_scene.py -- \
@@ -47,3 +65,5 @@ blender --background --factory-startup \
 - Blender backup files such as `.blend1` are intentionally not tracked
 - live MCP control is optional; deterministic script-driven regeneration is the
   baseline path
+- some hosts ship a broken `blender` binary while `OctaneBlender` works, so the
+  binary name should be treated as a host-level configuration choice
