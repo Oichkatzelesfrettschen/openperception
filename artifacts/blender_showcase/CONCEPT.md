@@ -51,9 +51,9 @@ The scene still stays grounded in the stereoblindness synthesis:
 - stereo optional
 - motion supplemental
 
-For the current harsher readability pass, the front plaque is removed entirely.
-If the panels cannot teach themselves without that sentence, the scene has not
-done its job yet.
+For the current harsher readability pass, the front plaque and the header are
+removed as explanatory crutches. If the panels cannot teach themselves without
+those sentences, the scene has not done its job yet.
 
 ## Why This Is A Living Concept
 
