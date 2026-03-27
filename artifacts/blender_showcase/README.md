@@ -46,8 +46,9 @@ render stays truthful instead of slipping into black or washed-out passes.
 
 Regeneration path:
 
-1. `python3 tools/palette_showcase_spec.py --output artifacts/blender_showcase/openperception_palette_showcase_spec.json`
-2. run `tools/blender_palette_showcase_scene.py` inside Blender with the same
+1. `python3 tools/repo_stats.py --output-json docs/generated/repo_stats.json --output-md docs/generated/repo_stats.md`
+2. `python3 tools/palette_showcase_spec.py --output artifacts/blender_showcase/openperception_palette_showcase_spec.json`
+3. run `tools/blender_palette_showcase_scene.py` inside Blender with the same
    spec path and output paths in this directory
 
 This lane is tracked with Git LFS for `.png` and `.blend` files.
