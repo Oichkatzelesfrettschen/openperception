@@ -12,12 +12,15 @@ Why this is tracked:
   that belong with the repo's design-system research
 - the concept is documented in `CONCEPT.md` so the artifact does not drift into
   slogans or detached mood-board language
+- the current concept uses real science inputs from sibling repos instead of toy
+  placeholder geometry
 
 Current source-of-truth files:
 
 - `CONCEPT.md`
 - `../../docs/generated/repo_stats.json`
 - `../../docs/generated/repo_stats.md`
+- `generated/physics_views_manifest.json`
 - `openperception_palette_showcase_spec.json`
 - `openperception_palette_showcase_render.png`
 - `openperception_palette_showcase_scene.blend`
@@ -30,8 +33,8 @@ Historical files:
 - `openperception_palette_showcase_spec_v1.json`
 
 The current spec and current `.png` / `.blend` outputs reflect the latest token
-findings, generated repo stats, and the repo's stereoblindness-informed depth
-guidance:
+findings, generated repo stats, real source views from `compact-common` and
+`Blackhole`, and the repo's stereoblindness-informed depth guidance:
 
 - static monocular cues first
 - stereo as enrichment, not requirement
@@ -39,11 +42,10 @@ guidance:
 
 The scene is also expected to stay legible with low caption dependence:
 
-- the back assembly should read as one source built from sources,
-  provenance, notes, and checks
-- the left foreground view should read as color-safe
-- the center foreground view should read as symbol-guided
-- the right foreground view should read as depth-safe
+- the back rail should stay quiet and non-competitive
+- the left foreground view should read as a color-safe GW chirp
+- the center foreground view should read as a symbol-guided neutrino explainer
+- the right foreground view should read as a depth-safe black-hole lensing view
 
 The current harsher readability pass removes the bottom plaque and header so
 the three panels have to teach themselves without explanatory copy.
@@ -60,10 +62,13 @@ render stays truthful instead of slipping into black or washed-out passes.
 
 Regeneration path:
 
-1. `python3 tools/repo_stats.py --output-json docs/generated/repo_stats.json --output-md docs/generated/repo_stats.md`
-2. `python3 tools/palette_showcase_spec.py --output artifacts/blender_showcase/openperception_palette_showcase_spec.json`
-3. run `tools/blender_palette_showcase_scene.py` inside Blender with the same
-   spec path and output paths in this directory
+1. `make octane-probe`
+2. `make showcase-render`
+
+`make showcase-render` is the preferred path because it refreshes the generated
+physics-view panels from sibling-repo renders, rebuilds repo stats, emits the
+canonical spec, and then renders the tracked `.png` and `.blend` through the
+clean Octane-first automation path.
 
 This lane is tracked with Git LFS for `.png` and `.blend` files.
 

@@ -1,19 +1,20 @@
 {
   "scene_id": "openperception-palette-showcase",
-  "summary": "Living concept scene for research flowing through validation into transformed accommodations.",
+  "summary": "Living concept scene for real physics use cases transformed into accessible and animated views.",
   "concept": {
     "artifact_kind": "living_accessibility_concept_scene",
     "scene_header": "",
     "plaque_text": "",
     "flow": [
-      "source_assembly",
-      "color_safe",
-      "guided",
-      "depth_safe"
+      "source_rail",
+      "gw_chirp",
+      "neutrino_cooling",
+      "blackhole_lensing"
     ],
     "caption_dependence": "low",
+    "concept_phrase": "real physics use cases turned into real accessible and animated views showcase",
     "representation": {
-      "source_assembly": "Sources, provenance, and checks gathered into one source view.",
+      "source_rail": "Real adjacent-repo science artifacts staged as the substrate for accessible views.",
       "accessible_views": [
         "color_safe",
         "guided_symbol_led",
@@ -21,10 +22,10 @@
       ]
     },
     "visual_logic": {
-      "source_assembly": "many sources and checks converge into one source view",
-      "color_safe": "color-only meaning is reinforced by contrast, pattern, and markers",
-      "guided": "interpretation is carried by explicit paths, symbols, and direction",
-      "depth_safe": "depth meaning is carried by contour, anchoring, and static relief"
+      "source_rail": "real science cases from compact-common and Blackhole remain visible as source material",
+      "color_safe": "the gravitational-wave chirp is reinforced by contrast, pattern, and markers",
+      "guided": "the neutrino explainer is reinforced by explicit paths, symbols, and motion-strip cues",
+      "depth_safe": "the black-hole lensing view is reinforced by contour, anchoring, and static relief cues"
     },
     "repo_stats_binding": {
       "source_assembly_inputs_metric": "source_cache_doc_count",
@@ -65,6 +66,37 @@
       "source_cache_glob": "docs/external_sources/*_source_cache.md",
       "primary_source_notes_glob": "research/**/primary_source_notes.md"
     }
+  },
+  "physics_views": {
+    "schema_version": 1,
+    "concept": "real physics use cases turned into real accessible and animated views showcase",
+    "generated_dir": "/home/eirikr/Github/openperception/artifacts/blender_showcase/generated",
+    "views": [
+      {
+        "id": "gw_chirp",
+        "case_title": "GW Chirp",
+        "mode_label": "Color-safe",
+        "source_repo": "compact-common",
+        "panel_texture": "/home/eirikr/Github/openperception/artifacts/blender_showcase/generated/gw_chirp_panel.png",
+        "source_path": "/home/eirikr/Github/compact-common/.cache/blender/renders/gw_strain_ribbon/gw_strain_ribbon.png"
+      },
+      {
+        "id": "neutrino_cooling",
+        "case_title": "Neutrino Cooling",
+        "mode_label": "Symbol-guided",
+        "source_repo": "compact-common",
+        "panel_texture": "/home/eirikr/Github/openperception/artifacts/blender_showcase/generated/neutrino_cooling_panel.png",
+        "source_path": "/home/eirikr/Github/compact-common/dist/releases/neutrino-processes-latest.png"
+      },
+      {
+        "id": "blackhole_lensing",
+        "case_title": "Black Hole Lensing",
+        "mode_label": "Depth-safe",
+        "source_repo": "Blackhole",
+        "panel_texture": "/home/eirikr/Github/openperception/artifacts/blender_showcase/generated/blackhole_lensing_panel.png",
+        "source_path": "/home/eirikr/Github/Blackhole/build/Release/reports/octane_harsh_benchmark_artifacts/render_engine_final.png"
+      }
+    ]
   },
   "render_preference": {
     "preferred_engine": "octane",
@@ -465,7 +497,11 @@
             ]
           }
         }
-      }
+      },
+      "case_title": "GW Chirp",
+      "source_repo": "compact-common",
+      "panel_texture": "/home/eirikr/Github/openperception/artifacts/blender_showcase/generated/gw_chirp_panel.png",
+      "real_source_path": "/home/eirikr/Github/compact-common/.cache/blender/renders/gw_strain_ribbon/gw_strain_ribbon.png"
     },
     {
       "scheme_id": "accessible-mauve-burgundy",
@@ -844,7 +880,11 @@
             ]
           }
         }
-      }
+      },
+      "case_title": "Neutrino Cooling",
+      "source_repo": "compact-common",
+      "panel_texture": "/home/eirikr/Github/openperception/artifacts/blender_showcase/generated/neutrino_cooling_panel.png",
+      "real_source_path": "/home/eirikr/Github/compact-common/dist/releases/neutrino-processes-latest.png"
     },
     {
       "scheme_id": "atmosphere-red-mahogany",
@@ -1223,7 +1263,11 @@
             ]
           }
         }
-      }
+      },
+      "case_title": "Black Hole Lensing",
+      "source_repo": "Blackhole",
+      "panel_texture": "/home/eirikr/Github/openperception/artifacts/blender_showcase/generated/blackhole_lensing_panel.png",
+      "real_source_path": "/home/eirikr/Github/Blackhole/build/Release/reports/octane_harsh_benchmark_artifacts/render_engine_final.png"
     }
   ]
 }

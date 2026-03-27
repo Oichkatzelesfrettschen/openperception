@@ -6,6 +6,10 @@ showcase artifacts.
 ## Required For Spec Regeneration
 
 - Python 3.10+ for repo-owned tooling
+- Pillow available in the active Python environment for panel generation
+- local sibling-repo inputs at their current expected paths:
+  - `/home/eirikr/Github/compact-common`
+  - `/home/eirikr/Github/Blackhole`
 
 Generate the canonical spec:
 
@@ -49,7 +53,13 @@ python3 tools/octane_headless_probe.py \
   --blender-executable "${SHOWCASE_BLENDER_BIN}"
 ```
 
-Octane-first regeneration:
+Preferred repo-owned regeneration:
+
+```bash
+make showcase-render
+```
+
+Equivalent explicit Octane-first regeneration:
 
 ```bash
 "${SHOWCASE_BLENDER_BIN}" --background --factory-startup \
@@ -78,6 +88,8 @@ blender --background --factory-startup \
 - the showcase concept is documented in `artifacts/blender_showcase/CONCEPT.md`
 - the generated spec now embeds repo stats, so regenerate `docs/generated/`
   before exporting the canonical spec when counts may have changed
+- the generated foreground panels are built from current `compact-common` and
+  `Blackhole` renders under `artifacts/blender_showcase/generated/`
 - some hosts ship a broken `blender` binary while `OctaneBlender` works, so the
   binary name should be treated as a host-level configuration choice
 - the repo-owned Octane probe uses `--factory-startup` and an `OctaneServer`

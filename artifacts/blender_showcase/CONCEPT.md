@@ -2,22 +2,26 @@
 
 This showcase is not a brand poster. It is a living concept model for the repo.
 
+Current phrase:
+
+- real physics use cases turned into real accessible and animated views showcase
+
 ## What It Represents
 
 The scene should answer one plain question:
 
-- what does this repo do to a source view?
+- what does this repo do to real scientific views?
 
-The answer is not a virtue word. The answer is:
+The answer is:
 
-- it takes one source view
-- it keeps the evidence and provenance behind that source visible
-- it transforms that source into several concrete accessible views
+- it takes real physics cases from sibling research repos
+- it keeps the source relationship visible
+- it transforms those cases into concrete accessible views
 
 The current concept therefore uses:
 
-1. one source assembly in the back
-2. three foreground transformed views
+1. a quiet source rail in the back
+2. three foreground transformed views built from real adjacent-repo artifacts
 
 Those foreground views are:
 
@@ -26,22 +30,27 @@ Those foreground views are:
 - depth-safe
 
 Research, provenance, and validation still matter, but they should appear as
-the machinery that feeds the source assembly, not as hero slogans on separate
-pedestals.
+quiet substrate, not as hero slogans on separate pedestals.
 
 ## What The Foreground Must Show
 
 The transformed-view lane is only valid if it demonstrates transformation in
-action, not accommodation as a label. The current concept requires three
-distinct output modes:
+action, not accommodation as a label. The current concept uses three distinct
+real source cases:
+
+- `compact-common` gravitational-wave chirp
+- `compact-common` neutrino explainer
+- `Blackhole` black-hole lensing render
+
+Those are transformed through three output modes:
 
 - contrast-led
 - guided-symbol-led
 - depth-safe
 
-Those are not marketing categories. They are concrete ways one source view can
-be made more legible while preserving meaning for conditions explicitly studied
-in the repo, especially colorblindness and stereoblindness.
+Those are not marketing categories. They are concrete ways real science views
+can be made more legible while preserving meaning for conditions explicitly
+studied in the repo, especially colorblindness and stereoblindness.
 
 ## Depth Rule
 
@@ -63,6 +72,7 @@ is generated from:
 - token files under `tokens/`
 - the harmonized depth guide
 - generated repo stats under `docs/generated/repo_stats.json`
+- generated panel views derived from `compact-common` and `Blackhole`
 
 That means the artifact can evolve with the repo's actual corpus and validation
 surfaces instead of freezing as a one-off composition.
@@ -71,14 +81,14 @@ surfaces instead of freezing as a one-off composition.
 
 The labels are only anchors. The forms themselves must carry the meaning:
 
-- the back assembly should look like sources, notes, and checks becoming one
-  source view
-- the color-safe view should look like color-only meaning being reinforced by
-  contrast, pattern, and markers
-- the guided-symbol view should look like direction and interpretation being
-  carried by explicit paths and symbols
-- the depth-safe view should look like depth meaning being carried by contour,
-  anchoring, relief, and static structure
+- the back rail should read as a quiet scientific substrate, not a second
+  competing object
+- the GW chirp view should look like weak signal becoming color-safe contrast
+  and pattern
+- the neutrino view should look like a process explainer becoming guided and
+  motion-readable
+- the black-hole lensing view should look like fragile depth structure becoming
+  anchored by contour and static cues
 
 The scene should still make sense if a viewer only catches the large nouns and
 the panel geometry alone.
@@ -87,12 +97,10 @@ the panel geometry alone.
 
 The geometry is allowed to abstract, but it should stay tied to live repo data:
 
-- source cache document counts can drive how many source tiles or tabs feed the
-  source assembly
-- primary-source-note counts can drive intake and gate cadence before the
-  source is allowed to branch
+- source cache document counts can drive how many tabs feed the source rail
 - accommodation outputs remain fixed at three because the concept explicitly
-  represents color-safe, guided-symbol-led, and depth-safe views
+  represents color-safe, guided-symbol-led, and depth-safe views across three
+  real science cases
 
 ## Failure Modes To Avoid
 
@@ -104,5 +112,5 @@ This lane should reject:
 - unreadable microtext
 - decorative symbolism that does not map to repo behavior
 
-If the scene stops reading as one source branching into concrete
-accessible views, it has drifted away from the repo.
+If the scene stops reading as real scientific source material transformed into
+concrete accessible views, it has drifted away from the repo.

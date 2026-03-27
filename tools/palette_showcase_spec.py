@@ -14,6 +14,7 @@ import json
 from pathlib import Path
 
 from repo_stats import generate_repo_stats
+from showcase_physics_views import build_showcase_physics_views
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -66,10 +67,11 @@ LIVING_CONCEPT = {
     "artifact_kind": "living_accessibility_concept_scene",
     "scene_header": "",
     "plaque_text": "",
-    "flow": ["source_assembly", "color_safe", "guided", "depth_safe"],
+    "flow": ["source_rail", "gw_chirp", "neutrino_cooling", "blackhole_lensing"],
     "caption_dependence": "low",
+    "concept_phrase": "real physics use cases turned into real accessible and animated views showcase",
     "representation": {
-        "source_assembly": "Sources, provenance, and checks gathered into one source view.",
+        "source_rail": "Real adjacent-repo science artifacts staged as the substrate for accessible views.",
         "accessible_views": [
             "color_safe",
             "guided_symbol_led",
@@ -77,10 +79,10 @@ LIVING_CONCEPT = {
         ],
     },
     "visual_logic": {
-        "source_assembly": "many sources and checks converge into one source view",
-        "color_safe": "color-only meaning is reinforced by contrast, pattern, and markers",
-        "guided": "interpretation is carried by explicit paths, symbols, and direction",
-        "depth_safe": "depth meaning is carried by contour, anchoring, and static relief",
+        "source_rail": "real science cases from compact-common and Blackhole remain visible as source material",
+        "color_safe": "the gravitational-wave chirp is reinforced by contrast, pattern, and markers",
+        "guided": "the neutrino explainer is reinforced by explicit paths, symbols, and motion-strip cues",
+        "depth_safe": "the black-hole lensing view is reinforced by contour, anchoring, and static relief cues",
     },
     "repo_stats_binding": {
         "source_assembly_inputs_metric": "source_cache_doc_count",
@@ -144,19 +146,27 @@ def _build_lane(scheme_id: str, label: str, path: Path, description: str) -> dic
 
 
 def build_showcase_spec() -> dict:
+    physics_views = build_showcase_physics_views(REPO_ROOT / "artifacts" / "blender_showcase" / "generated")
     return {
         "scene_id": "openperception-palette-showcase",
         "summary": (
-            "Living concept scene for research flowing through validation into "
-            "transformed accommodations."
+            "Living concept scene for real physics use cases transformed into "
+            "accessible and animated views."
         ),
         "concept": LIVING_CONCEPT,
         "repo_stats": generate_repo_stats(REPO_ROOT),
+        "physics_views": physics_views,
         "render_preference": RENDER_PREFERENCE,
         "depth_accommodation": DEPTH_ACCOMMODATION,
         "lanes": [
-            _build_lane(scheme_id, label, path, description)
-            for scheme_id, label, path, description in TOKEN_SOURCES
+            {
+                **_build_lane(scheme_id, label, path, description),
+                "case_title": physics_views["views"][index]["case_title"],
+                "source_repo": physics_views["views"][index]["source_repo"],
+                "panel_texture": physics_views["views"][index]["panel_texture"],
+                "real_source_path": physics_views["views"][index]["source_path"],
+            }
+            for index, (scheme_id, label, path, description) in enumerate(TOKEN_SOURCES)
         ],
     }
 

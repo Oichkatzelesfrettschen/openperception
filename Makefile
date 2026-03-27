@@ -15,11 +15,13 @@ else
 PYTHON ?= python3
 endif
 C_BUILD_DIR ?= algorithms/libDaltonLens/build
+PYTEST_DISABLE_PLUGIN_AUTOLOAD ?= 1
+PYTEST_RUN = env PYTEST_DISABLE_PLUGIN_AUTOLOAD=$(PYTEST_DISABLE_PLUGIN_AUTOLOAD) $(PYTHON) -m pytest
 
 # =============================================================================
 # Phony Targets
 # =============================================================================
-.PHONY: all help serve oklch contrast-check separation-check seizure-check temporal-depth-check cognitive-check typography-check rendered-spatial-check rendered-cognitive-check check-rendered playwright-install profile-report scale-report validate validate-strict gap-report claims-report claims-check repo-stats repo-stats-check integrity-check task-governance-check source-cache-links-check paper-corpus-check source-assets-check octane-probe check venv \
+.PHONY: all help serve oklch contrast-check separation-check seizure-check temporal-depth-check cognitive-check typography-check rendered-spatial-check rendered-cognitive-check check-rendered playwright-install profile-report scale-report validate validate-strict gap-report claims-report claims-check repo-stats repo-stats-check integrity-check task-governance-check source-cache-links-check paper-corpus-check source-assets-check octane-probe showcase-render check venv \
         test test-python test-tools test-c test-all coverage \
         lint lint-python lint-c format \
         build build-c install-python install-dev \
@@ -48,6 +50,7 @@ help:
 	@echo "  check-rendered     - Run the optional browser-backed rendered audit lane"
 	@echo "  playwright-install - Install Chromium for the selected Playwright environment"
 	@echo "  octane-probe       - Verify the clean OctaneBlender headless startup path"
+	@echo "  showcase-render    - Regenerate the Blender showcase through the repo-owned driver"
 	@echo "  profile-report     - Compose axis/display profiles (set PROFILE_NAMES=a,b)"
 	@echo "  scale-report       - Show lp->px quantization report (LP=16 DPI=96 SCALE=1 SNAP_CLASS=layout)"
 	@echo "  validate           - Run unified implemented validator gates in strict mode"
@@ -137,6 +140,9 @@ playwright-install:
 octane-probe:
 	$(PYTHON) tools/octane_headless_probe.py --blender-executable $(or $(SHOWCASE_BLENDER_BIN),OctaneBlender)
 
+showcase-render:
+	$(PYTHON) tools/render_blender_showcase.py --blender-executable $(or $(SHOWCASE_BLENDER_BIN),OctaneBlender)
+
 profile-report:
 	$(PYTHON) tools/profile_resolver.py $(if $(PROFILE_NAMES),--profiles $(PROFILE_NAMES),)
 
@@ -191,17 +197,17 @@ test-all: test-python test-tools test-c
 
 test-python:
 	@echo "Running Python tests..."
-	cd algorithms/DaltonLens-Python && $(PYTHON) -m pytest tests/ -v --tb=short
+	cd algorithms/DaltonLens-Python && $(PYTEST_RUN) tests/ -v --tb=short
 	@echo "Python tests completed."
 
 test-tools:
 	@echo "Running repo tools tests..."
-	$(PYTHON) -m pytest tools/tests/ -v --tb=short
+	$(PYTEST_RUN) tools/tests/ -v --tb=short
 	@echo "Repo tools tests completed."
 
 coverage:
 	@echo "Running Python tests with coverage..."
-	cd algorithms/DaltonLens-Python && $(PYTHON) -m pytest tests/ -v --tb=short \
+	cd algorithms/DaltonLens-Python && $(PYTEST_RUN) tests/ -v --tb=short \
 		--cov=daltonlens --cov-report=term-missing --cov-report=html:../../htmlcov \
 		--cov-fail-under=70
 	@echo "Coverage report written to htmlcov/"

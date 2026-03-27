@@ -145,7 +145,8 @@ Current tranche focus:
 - [x] T105 Add tests and Makefile coverage for the Octane probe lane.
 - [x] T106 Update showcase requirements and tool docs to point at the clean
   Octane path instead of a naive raw launch.
-- [ ] T107 Decide whether full showcase regeneration should move behind a
-  repo-owned render driver next tranche.
-- [ ] T108 Re-run the next visual refinement tranche only through the cleaned
-  Octane path.
+- [x] T107 Move full showcase regeneration behind the repo-owned
+  `tools/render_blender_showcase.py` driver and `make showcase-render`.
+- [x] T108 Re-run the real-physics showcase refinement tranche only through the
+  cleaned Octane path so the canonical `.png` and `.blend` are regenerated
+  without startup-warning debt.

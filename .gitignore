@@ -219,6 +219,9 @@ _build/
 logs/*.log
 *.log
 
+# Blender showcase generated intermediate panels
+artifacts/blender_showcase/generated/
+
 # Blender backups
 *.blend1
 
