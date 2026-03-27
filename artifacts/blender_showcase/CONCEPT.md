@@ -43,6 +43,12 @@ The current deferred animated view is:
 - `Black Hole Lensing`, because there is not yet a real sibling-repo motion
   source registered for that case
 
+For the still `Black Hole Lensing` case, the current source basis is the
+sibling `Blackhole` desktop/OpenGL compare capture
+`logs/compare/compare_8_compute.png`. The repaired Blender/CUDA bridge now
+works as a diagnostic rendering lane, but it is not yet the strongest honest
+beauty source for this concept.
+
 Research, provenance, and validation still matter, but they should appear as
 quiet substrate, not as hero slogans on separate pedestals.
 

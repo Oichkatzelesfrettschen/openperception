@@ -55,11 +55,10 @@ VIEW_SPECS = (
         "mode_label": "Depth-safe",
         "source_repo": "Blackhole",
         "source_path": Path(
-            "/home/eirikr/Github/Blackhole/build/Release/reports/"
-            "octane_harsh_benchmark_artifacts/render_engine_final.png"
+            "/home/eirikr/Github/Blackhole/logs/compare/compare_8_compute.png"
         ),
-        "source_box": (200, 80, 460, 310),
-        "main_box": (140, 40, 500, 330),
+        "source_box": (1880, 460, 2940, 1520),
+        "main_box": (1180, 120, 3540, 1780),
     },
 )
 

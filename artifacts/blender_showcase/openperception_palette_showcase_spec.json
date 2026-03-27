@@ -94,7 +94,7 @@
         "mode_label": "Depth-safe",
         "source_repo": "Blackhole",
         "panel_texture": "/home/eirikr/Github/openperception/artifacts/blender_showcase/generated/blackhole_lensing_panel.png",
-        "source_path": "/home/eirikr/Github/Blackhole/build/Release/reports/octane_harsh_benchmark_artifacts/render_engine_final.png"
+        "source_path": "/home/eirikr/Github/Blackhole/logs/compare/compare_8_compute.png"
       }
     ]
   },
@@ -129,7 +129,7 @@
         "mode_label": "Depth-safe",
         "source_repo": "Blackhole",
         "reason": "No real sibling-repo motion source is currently registered for this case; keep it as a still-only accessibility view until that changes.",
-        "source_path": "/home/eirikr/Github/Blackhole/build/Release/reports/octane_harsh_benchmark_artifacts/render_engine_final.png"
+        "source_path": "/home/eirikr/Github/Blackhole/logs/compare/compare_8_compute.png"
       }
     ]
   },
@@ -1304,7 +1304,7 @@
       "case_title": "Black Hole Lensing",
       "source_repo": "Blackhole",
       "panel_texture": "/home/eirikr/Github/openperception/artifacts/blender_showcase/generated/blackhole_lensing_panel.png",
-      "real_source_path": "/home/eirikr/Github/Blackhole/build/Release/reports/octane_harsh_benchmark_artifacts/render_engine_final.png",
+      "real_source_path": "/home/eirikr/Github/Blackhole/logs/compare/compare_8_compute.png",
       "animated_artifact": null
     }
   ]

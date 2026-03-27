@@ -61,6 +61,12 @@ The animated lane is expected to stay just as concrete:
 The black-hole case is still intentionally still-only right now. We do not add
 decorative motion there unless a real sibling-repo motion source exists.
 
+For the current black-hole still, the honest source basis is the sibling
+`Blackhole` desktop/OpenGL compare capture at
+`/home/eirikr/Github/Blackhole/logs/compare/compare_8_compute.png`. That
+source is currently a better visual basis for the depth-safe lane than the
+repaired Blender/CUDA bridge stills.
+
 The current harsher readability pass removes the bottom plaque and header so
 the three panels have to teach themselves without explanatory copy.
 
@@ -83,6 +89,11 @@ Regeneration path:
 physics-view panels from sibling-repo renders, rebuilds repo stats, emits the
 canonical spec, regenerates the tracked animated GIFs, and then renders the
 tracked `.png` and `.blend` through the clean Octane-first automation path.
+
+The `Blackhole` bridge is still part of the upstream repair lane, but its role
+here is currently diagnostic rather than canonical-beauty. We only promote a
+bridge artifact into this showcase once it is both technically sound and
+visually honest as the strongest sibling-repo source.
 
 This lane is tracked with Git LFS for `.png` and `.blend` files.
 
