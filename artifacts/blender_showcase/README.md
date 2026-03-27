@@ -45,6 +45,9 @@ The scene is also expected to stay legible with low caption dependence:
 - the center foreground view should read as symbol-guided
 - the right foreground view should read as depth-safe
 
+The current harsher readability pass removes the bottom plaque entirely so the
+three panels have to teach themselves without explanatory copy at the front.
+
 Generated repo stats are allowed to drive the cadence of those forms so the
 artifact remains a living concept instead of a frozen illustration.
 

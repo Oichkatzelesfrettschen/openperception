@@ -65,7 +65,7 @@ TOKEN_SOURCES = (
 LIVING_CONCEPT = {
     "artifact_kind": "living_accessibility_concept_scene",
     "scene_header": "OpenPerception: one source -> transformed views",
-    "plaque_text": "colorblindness -> pattern + contrast | stereoblindness -> contour + anchors",
+    "plaque_text": "",
     "flow": ["source_assembly", "color_safe", "guided", "depth_safe"],
     "caption_dependence": "low",
     "representation": {

@@ -45,18 +45,15 @@ in the repo, especially colorblindness and stereoblindness.
 
 ## Depth Rule
 
-The front plaque stays grounded in the stereoblindness synthesis:
+The scene still stays grounded in the stereoblindness synthesis:
 
 - static cues first
 - stereo optional
 - motion supplemental
 
-The current rendered plaque text is:
-
-- `same source, adapted views`
-
-That text is acceptable because it describes the transformation directly
-without promising inspiration or lifestyle.
+For the current harsher readability pass, the front plaque is removed entirely.
+If the panels cannot teach themselves without that sentence, the scene has not
+done its job yet.
 
 ## Why This Is A Living Concept
 
@@ -84,7 +81,7 @@ The labels are only anchors. The forms themselves must carry the meaning:
   anchoring, relief, and static structure
 
 The scene should still make sense if a viewer only catches the large nouns and
-not the small plaque text.
+the panel geometry alone.
 
 ## How Repo Stats Feed The Geometry
 

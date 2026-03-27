@@ -278,14 +278,6 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
         material=plaque_mat,
         bevel=0.03,
     )
-    _add_box(
-        bpy,
-        "DepthLegendPlaque",
-        location=(0.0, -2.42, 0.14),
-        scale=(3.35, 0.68, 0.09),
-        material=plaque_mat,
-        bevel=0.04,
-    )
     for rail_name, rail_y, rail_z, rail_mat in (
         ("DepthRailNear", -1.35, -0.16, rail_near),
         ("DepthRailMid", -0.1, -0.1, rail_mid),
@@ -330,14 +322,6 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
     )
     lane_spacing = 4.25
     start_x = -lane_spacing
-    for connector_x in (-lane_spacing, 0.0, lane_spacing):
-        _add_depth_strip(
-            bpy,
-            f"PlaqueConnector_{connector_x:+.2f}",
-            location=(connector_x, -1.82, -0.02),
-            scale=(0.55, 0.025, 0.014),
-            material=rail_mid,
-        )
     for flow_x in (-2.08, 2.08):
         _add_depth_strip(
             bpy,
@@ -774,14 +758,16 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
         scale=(0.19, 0.19, 0.19),
         material=text_dark,
     )
-    _add_text(
-        bpy,
-        "LegendStatic",
-        concept.get("plaque_text", "same source, adapted views"),
-        location=(0.0, -2.36, 0.24),
-        scale=(0.11, 0.11, 0.11),
-        material=text_dark,
-    )
+    plaque_text = concept.get("plaque_text", "")
+    if plaque_text:
+        _add_text(
+            bpy,
+            "LegendStatic",
+            plaque_text,
+            location=(0.0, -2.36, 0.24),
+            scale=(0.11, 0.11, 0.11),
+            material=text_dark,
+        )
 
     bpy.context.view_layer.update()
 

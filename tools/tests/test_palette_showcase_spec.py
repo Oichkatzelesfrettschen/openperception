@@ -14,9 +14,7 @@ def test_showcase_spec_has_expected_lane_ids() -> None:
     assert payload["scene_id"] == "openperception-palette-showcase"
     assert payload["concept"]["artifact_kind"] == "living_accessibility_concept_scene"
     assert payload["concept"]["scene_header"] == "OpenPerception: one source -> transformed views"
-    assert payload["concept"]["plaque_text"] == (
-        "colorblindness -> pattern + contrast | stereoblindness -> contour + anchors"
-    )
+    assert payload["concept"]["plaque_text"] == ""
     assert payload["concept"]["caption_dependence"] == "low"
     assert payload["render_preference"]["preferred_engine"] == "octane"
     assert payload["depth_accommodation"]["stereo_role"] == (
