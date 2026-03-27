@@ -363,9 +363,9 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
     camera = bpy.data.objects.new("PaletteCamera", camera_data)
     scene.collection.objects.link(camera)
     scene.camera = camera
-    camera.location = (0.0, -10.0, 5.36)
-    camera.rotation_euler = (math.radians(58.2), 0.0, 0.0)
-    camera.data.lens = 43
+    camera.location = (0.0, -10.15, 5.52)
+    camera.rotation_euler = (math.radians(56.5), 0.0, 0.0)
+    camera.data.lens = 44
 
     key_energy = 1000.0 if selected_engine == "octane" else 5600.0
     rim_energy = 420.0 if selected_engine == "octane" else 2850.0
@@ -391,12 +391,20 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
     )
     lane_spacing = 3.95
     start_x = -lane_spacing
+    _add_box(
+        bpy,
+        "SourceRailSpine",
+        location=(0.0, 0.48, 0.12),
+        scale=(3.28, 0.028, 0.014),
+        material=rail_near,
+        bevel=0.008,
+    )
     for flow_x in (-2.08, 2.08):
         _add_depth_strip(
             bpy,
             f"LaneFlow_{flow_x:+.2f}",
-            location=(flow_x, -0.58, 0.0),
-            scale=(0.72, 0.022, 0.018),
+            location=(flow_x, -0.12, 0.06),
+            scale=(0.98, 0.03, 0.02),
             material=rail_near,
         )
     concept = spec.get("concept", {})
@@ -411,10 +419,10 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
     _add_box(
         bpy,
         "SourceRailDeck",
-        location=(0.0, 1.05, 0.14),
-        scale=(4.8, 0.18, 0.045),
+        location=(0.0, 0.92, 0.11),
+        scale=(5.0, 0.12, 0.028),
         material=source_surface,
-        bevel=0.02,
+        bevel=0.014,
     )
     tab_spacing = 1.14
     tab_half = (source_tab_count - 1) * tab_spacing / 2.0
@@ -423,10 +431,10 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
         _add_box(
             bpy,
             f"SourceRailTab_{source_index}",
-            location=(tab_x, 1.05, 0.22),
-            scale=(0.26, 0.1, 0.03),
+            location=(tab_x, 0.92, 0.16),
+            scale=(0.24, 0.08, 0.02),
             material=(source_primary, source_accent, source_focus, source_dark)[source_index % 4],
-            bevel=0.012,
+            bevel=0.009,
         )
     physics_views = {
         view["mode_label"]: view for view in spec.get("physics_views", {}).get("views", [])
@@ -478,34 +486,34 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
         _add_box(
             bpy,
             f"{lane_id}_card",
-            location=(x, 0.0, 0.15),
-            scale=(1.65, 2.18, 0.18),
+            location=(x, -0.04, 0.08),
+            scale=(1.56, 1.9, 0.085),
             material=surface_mat,
-            bevel=0.08,
+            bevel=0.04,
         )
         _add_box(
             bpy,
             f"{lane_id}_outline",
-            location=(x, 0.0, -0.04),
-            scale=(1.74, 2.27, 0.04),
+            location=(x, -0.04, -0.005),
+            scale=(1.64, 1.98, 0.012),
             material=border_mat,
-            bevel=0.05,
-        )
-        _add_box(
-            bpy,
-            f"{lane_id}_label_band",
-            location=(x, -1.8, 0.35),
-            scale=(1.04, 0.32, 0.018),
-            material=plaque_mat,
             bevel=0.02,
         )
         _add_box(
             bpy,
-            f"{lane_id}_label_beacon",
-            location=(x - 0.72, -1.71, 0.38),
-            scale=(0.055, 0.055, 0.02),
-            material=primary_mat,
+            f"{lane_id}_label_band",
+            location=(x, -1.41, 0.185),
+            scale=(0.98, 0.26, 0.012),
+            material=plaque_mat,
             bevel=0.012,
+        )
+        _add_box(
+            bpy,
+            f"{lane_id}_label_beacon",
+            location=(x - 0.68, -1.41, 0.208),
+            scale=(0.045, 0.045, 0.014),
+            material=primary_mat,
+            bevel=0.009,
         )
 
         connector_mat = _ensure_material(
@@ -514,24 +522,48 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
         _add_box(
             bpy,
             f"{lane_id}_branch_connector",
-            location=(x * 0.44, 0.38, 0.18),
-            scale=(0.026, 0.22, 0.012),
+            location=(x * 0.48, 0.5, 0.15),
+            scale=(0.046, 0.52, 0.018),
             material=connector_mat,
             bevel=0.01,
-        ).rotation_euler.z = math.radians(-14.0 if x > 0 else 14.0)
+        ).rotation_euler.z = math.radians(-18.0 if x > 0 else 18.0)
+        _add_box(
+            bpy,
+            f"{lane_id}_flow_stub",
+            location=(x, 0.72, 0.14),
+            scale=(0.12, 0.085, 0.014),
+            material=connector_mat,
+            bevel=0.01,
+        )
+        _add_box(
+            bpy,
+            f"{lane_id}_panel_riser",
+            location=(x, 0.6, 0.33),
+            scale=(0.08, 0.08, 0.16),
+            material=connector_mat,
+            bevel=0.012,
+        )
+        _add_box(
+            bpy,
+            f"{lane_id}_panel_bridge",
+            location=(x, 0.46, 0.565),
+            scale=(0.15, 0.12, 0.012),
+            material=connector_mat,
+            bevel=0.01,
+        )
         _add_box(
             bpy,
             f"{lane_id}_media_frame",
-            location=(x, 0.18, 0.66),
-            scale=(1.36, 0.88, 0.1),
+            location=(x, 0.3, 0.67),
+            scale=(1.38, 0.94, 0.085),
             material=primary_mat,
             bevel=0.04,
         )
         _add_box(
             bpy,
             f"{lane_id}_media_mount",
-            location=(x, 0.18, 0.71),
-            scale=(1.24, 0.76, 0.02),
+            location=(x, 0.3, 0.715),
+            scale=(1.28, 0.8, 0.016),
             material=plaque_mat,
             bevel=0.015,
         )
@@ -541,24 +573,24 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
                 bpy,
                 f"{lane_id}_panel_image",
                 physics_view["panel_texture"],
-                location=(x, 0.18, 0.785),
-                scale=(1.16, 0.7, 1.0),
+                location=(x, 0.3, 0.79),
+                scale=(1.2, 0.74, 1.0),
             )
 
         _add_text(
             bpy,
             f"{lane_id}_case_title",
             lane.get("case_title", lane["label"]),
-            location=(label_x, -1.72, 0.47),
-            scale=(0.118, 0.118, 0.118),
+            location=(label_x, -1.36, 0.252),
+            scale=(0.11, 0.11, 0.11),
             material=label_mat,
         )
         _add_text(
             bpy,
             f"{lane_id}_mode_label",
             lane["label"],
-            location=(label_x, -1.94, 0.37),
-            scale=(0.085, 0.085, 0.085),
+            location=(label_x, -1.55, 0.195),
+            scale=(0.078, 0.078, 0.078),
             material=label_mat,
         )
 
