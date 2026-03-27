@@ -37,6 +37,16 @@ guidance:
 - stereo as enrichment, not requirement
 - motion as reinforcement, not sole recovery path
 
+The scene is also expected to stay legible with low caption dependence:
+
+- research should read as many sources converging into synthesis
+- validation should read as intake passing through checks into accepted and
+  rejected paths
+- accommodations should read as one source branching into distinct usable views
+
+Generated repo stats are allowed to drive the cadence of those forms so the
+artifact remains a living concept instead of a frozen illustration.
+
 The current canonical render path prefers Octane inside Octane Blender, with
 Eevee Next or Cycles used only as honest fallbacks when the live session does
 not expose Octane.

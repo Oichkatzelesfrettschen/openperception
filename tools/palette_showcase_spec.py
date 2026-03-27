@@ -67,6 +67,7 @@ LIVING_CONCEPT = {
     "scene_header": "OpenPerception accessibility system",
     "plaque_text": "same source, adapted views",
     "flow": ["research", "validation", "accommodations"],
+    "caption_dependence": "low",
     "representation": {
         "research": "Primary sources, cache provenance, and synthesis notes.",
         "validation": "Machine checks and policy gates that keep claims honest.",
@@ -75,6 +76,17 @@ LIVING_CONCEPT = {
             "guided_symbol_led",
             "depth_safe",
         ],
+    },
+    "visual_logic": {
+        "research": "many sources converge into synthesized evidence",
+        "validation": "intake passes through checks into accepted and rejected paths",
+        "accommodations": "one source branches into distinct usable transformed views",
+    },
+    "repo_stats_binding": {
+        "research_sources_metric": "source_cache_doc_count",
+        "validation_inputs_metric": "primary_source_notes_count",
+        "validation_gate_metric": "source_cache_doc_count",
+        "accommodation_modes": 3,
     },
     "repo_stats_source": str(
         (REPO_ROOT / "docs" / "generated" / "repo_stats.json").relative_to(REPO_ROOT)

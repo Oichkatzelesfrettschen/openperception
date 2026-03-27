@@ -57,6 +57,29 @@ is generated from:
 That means the artifact can evolve with the repo's actual corpus and validation
 surfaces instead of freezing as a one-off composition.
 
+## How The Scene Must Stay Legible Without Captions
+
+The lane titles are only anchors. The forms themselves must carry the meaning:
+
+- research should look like many source artifacts converging into a synthesized
+  body of evidence
+- validation should look like intake passing through checks with accepted and
+  rejected paths
+- accommodations should look like one source becoming several usable views
+
+The scene should still make sense if a viewer only catches the large nouns and
+not the small plaque text.
+
+## How Repo Stats Feed The Geometry
+
+The geometry is allowed to abstract, but it should stay tied to live repo data:
+
+- source cache document counts can drive how many source tiles or tabs feed the
+  research lane
+- primary-source-note counts can drive intake and gate cadence in validation
+- accommodation outputs remain fixed at three because the concept explicitly
+  represents contrast-led, guided-symbol-led, and depth-safe views
+
 ## Failure Modes To Avoid
 
 This lane should reject:
