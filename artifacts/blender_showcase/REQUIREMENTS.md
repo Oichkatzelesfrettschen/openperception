@@ -90,6 +90,11 @@ blender --background --factory-startup \
   before exporting the canonical spec when counts may have changed
 - the generated foreground panels are built from current `compact-common` and
   `Blackhole` renders under `artifacts/blender_showcase/generated/`
+- the tracked animated GIFs under `artifacts/blender_showcase/animated/` are
+  regenerated from real sibling-repo artifacts, not from synthetic placeholder
+  motion
+- `python3 tools/check_showcase_source_inputs.py` is the repo-owned integrity
+  gate for those sibling-repo inputs
 - some hosts ship a broken `blender` binary while `OctaneBlender` works, so the
   binary name should be treated as a host-level configuration choice
 - the repo-owned Octane probe uses `--factory-startup` and an `OctaneServer`

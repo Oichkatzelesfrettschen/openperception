@@ -14,6 +14,7 @@ import json
 from pathlib import Path
 
 from repo_stats import generate_repo_stats
+from showcase_physics_views import build_showcase_animated_views
 from showcase_physics_views import build_showcase_physics_views
 
 
@@ -146,7 +147,13 @@ def _build_lane(scheme_id: str, label: str, path: Path, description: str) -> dic
 
 
 def build_showcase_spec() -> dict:
-    physics_views = build_showcase_physics_views(REPO_ROOT / "artifacts" / "blender_showcase" / "generated")
+    physics_views = build_showcase_physics_views(
+        REPO_ROOT / "artifacts" / "blender_showcase" / "generated"
+    )
+    animated_views = build_showcase_animated_views(
+        REPO_ROOT / "artifacts" / "blender_showcase" / "animated"
+    )
+    animated_by_id = {view["id"]: view for view in animated_views["views"]}
     return {
         "scene_id": "openperception-palette-showcase",
         "summary": (
@@ -156,6 +163,7 @@ def build_showcase_spec() -> dict:
         "concept": LIVING_CONCEPT,
         "repo_stats": generate_repo_stats(REPO_ROOT),
         "physics_views": physics_views,
+        "animated_views": animated_views,
         "render_preference": RENDER_PREFERENCE,
         "depth_accommodation": DEPTH_ACCOMMODATION,
         "lanes": [
@@ -165,6 +173,7 @@ def build_showcase_spec() -> dict:
                 "source_repo": physics_views["views"][index]["source_repo"],
                 "panel_texture": physics_views["views"][index]["panel_texture"],
                 "real_source_path": physics_views["views"][index]["source_path"],
+                "animated_artifact": animated_by_id.get(physics_views["views"][index]["id"], {}).get("animation_path"),
             }
             for index, (scheme_id, label, path, description) in enumerate(TOKEN_SOURCES)
         ],

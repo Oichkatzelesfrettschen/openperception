@@ -80,5 +80,12 @@ def test_showcase_spec_embeds_live_repo_snapshot() -> None:
     assert payload["concept"]["repo_stats_binding"]["accommodation_modes"] == 3
     assert payload["concept"]["repo_stats_source"] == "docs/generated/repo_stats.json"
     assert len(payload["physics_views"]["views"]) == 3
+    assert [entry["id"] for entry in payload["animated_views"]["views"]] == [
+        "gw_chirp",
+        "neutrino_cooling",
+    ]
     for lane in payload["lanes"]:
         assert Path(lane["panel_texture"]).exists()
+    assert Path(payload["lanes"][0]["animated_artifact"]).exists()
+    assert Path(payload["lanes"][1]["animated_artifact"]).exists()
+    assert payload["lanes"][2]["animated_artifact"] is None

@@ -523,7 +523,7 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
             bpy,
             f"{lane_id}_media_frame",
             location=(x, 0.24, 0.56),
-            scale=(1.28, 0.82, 0.1),
+            scale=(1.36, 0.88, 0.1),
             material=primary_mat,
             bevel=0.04,
         )
@@ -531,7 +531,7 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
             bpy,
             f"{lane_id}_media_mount",
             location=(x, 0.24, 0.61),
-            scale=(1.16, 0.7, 0.02),
+            scale=(1.24, 0.76, 0.02),
             material=plaque_mat,
             bevel=0.015,
         )
@@ -542,7 +542,7 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
                 f"{lane_id}_panel_image",
                 physics_view["panel_texture"],
                 location=(x, 0.24, 0.685),
-                scale=(1.08, 0.64, 1.0),
+                scale=(1.16, 0.7, 1.0),
             )
 
         _add_text(

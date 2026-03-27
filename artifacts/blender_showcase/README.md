@@ -21,6 +21,9 @@ Current source-of-truth files:
 - `../../docs/generated/repo_stats.json`
 - `../../docs/generated/repo_stats.md`
 - `generated/physics_views_manifest.json`
+- `animated/animated_views_manifest.json`
+- `animated/gw_chirp_accessible.gif`
+- `animated/neutrino_cooling_guided.gif`
 - `openperception_palette_showcase_spec.json`
 - `openperception_palette_showcase_render.png`
 - `openperception_palette_showcase_scene.blend`
@@ -47,6 +50,13 @@ The scene is also expected to stay legible with low caption dependence:
 - the center foreground view should read as a symbol-guided neutrino explainer
 - the right foreground view should read as a depth-safe black-hole lensing view
 
+The animated lane is expected to stay just as concrete:
+
+- `animated/gw_chirp_accessible.gif` should read as real detector strain turned
+  into a clearer chirp-focused accessible view
+- `animated/neutrino_cooling_guided.gif` should read as real captured neutrino
+  explainer frames turned into a more guided process view
+
 The current harsher readability pass removes the bottom plaque and header so
 the three panels have to teach themselves without explanatory copy.
 
@@ -67,8 +77,8 @@ Regeneration path:
 
 `make showcase-render` is the preferred path because it refreshes the generated
 physics-view panels from sibling-repo renders, rebuilds repo stats, emits the
-canonical spec, and then renders the tracked `.png` and `.blend` through the
-clean Octane-first automation path.
+canonical spec, regenerates the tracked animated GIFs, and then renders the
+tracked `.png` and `.blend` through the clean Octane-first automation path.
 
 This lane is tracked with Git LFS for `.png` and `.blend` files.
 

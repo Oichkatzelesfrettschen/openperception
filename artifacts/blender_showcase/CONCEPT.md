@@ -22,12 +22,21 @@ The current concept therefore uses:
 
 1. a quiet source rail in the back
 2. three foreground transformed views built from real adjacent-repo artifacts
+3. a tracked animated lane beside the still render for cases where motion
+   carries real explanatory value
 
 Those foreground views are:
 
 - color-safe
 - symbol-guided
 - depth-safe
+
+The current tracked animated views are:
+
+- `GW Chirp` animated from real `gw170817_processed.json` strain data plus the
+  sibling-repo chirp render
+- `Neutrino Cooling` animated from real frames in the sibling-repo contact
+  sheet
 
 Research, provenance, and validation still matter, but they should appear as
 quiet substrate, not as hero slogans on separate pedestals.
@@ -92,6 +101,9 @@ The labels are only anchors. The forms themselves must carry the meaning:
 
 The scene should still make sense if a viewer only catches the large nouns and
 the panel geometry alone.
+
+The same rule applies to the animated lane: it should read as a concrete
+physics transformation, not as decorative motion.
 
 ## How Repo Stats Feed The Geometry
 

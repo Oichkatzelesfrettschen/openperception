@@ -22,6 +22,7 @@ Development and validation utilities for OpenPerception.
 | `profile_resolver.py` | Compose axis/display profiles and surface cross-axis conflicts | `python tools/profile_resolver.py [--profiles standard,reduced-motion]` |
 | `palette_showcase_spec.py` | Emit the repo-driven Blender showcase payload for the living accessibility concept scene | `python tools/palette_showcase_spec.py [--output file.json]` |
 | `showcase_physics_views.py` | Generate real science-use-case panel textures from sibling-repo renders for the Blender showcase | `python tools/showcase_physics_views.py [--output-dir dir] [--output-manifest file.json]` |
+| `check_showcase_source_inputs.py` | Validate sibling-repo inputs used by the Blender showcase still and animated lanes | `python tools/check_showcase_source_inputs.py [--json]` |
 | `octane_headless_probe.py` | Ensure OctaneServer is up and verify a warning-clean OctaneBlender headless startup path | `python tools/octane_headless_probe.py [--blender-executable OctaneBlender] [--json]` |
 | `render_blender_showcase.py` | Regenerate repo stats, spec, and canonical `.png` / `.blend` showcase artifacts through the clean Octane-first path | `python tools/render_blender_showcase.py [--blender-executable OctaneBlender] [--json]` |
 | `blender_palette_showcase_scene.py` | Build and render the repo-driven living accessibility concept scene inside Blender | `blender --background --factory-startup --python tools/blender_palette_showcase_scene.py -- --spec artifacts/blender_showcase/openperception_palette_showcase_spec.json --output artifacts/blender_showcase/openperception_palette_showcase_render.png --blend-output artifacts/blender_showcase/openperception_palette_showcase_scene.blend` |
@@ -68,8 +69,8 @@ as the canonical readiness check. Use `octane_headless_probe.py` or
 `make octane-probe` first so the repo verifies the clean
 `--factory-startup` plus `OctaneServer` path before a full scene regeneration.
 The preferred full regeneration entrypoint is `make showcase-render`, which
-also rebuilds the real science-use-case foreground panels from sibling-repo
-inputs before rendering the canonical Blender showcase.
+also rebuilds the real science-use-case foreground panels and tracked animated
+views from sibling-repo inputs before rendering the canonical Blender showcase.
 
 ## Tests
 

@@ -68,7 +68,7 @@
     }
   },
   "physics_views": {
-    "schema_version": 1,
+    "schema_version": 2,
     "concept": "real physics use cases turned into real accessible and animated views showcase",
     "generated_dir": "/home/eirikr/Github/openperception/artifacts/blender_showcase/generated",
     "views": [
@@ -95,6 +95,31 @@
         "source_repo": "Blackhole",
         "panel_texture": "/home/eirikr/Github/openperception/artifacts/blender_showcase/generated/blackhole_lensing_panel.png",
         "source_path": "/home/eirikr/Github/Blackhole/build/Release/reports/octane_harsh_benchmark_artifacts/render_engine_final.png"
+      }
+    ]
+  },
+  "animated_views": {
+    "schema_version": 1,
+    "concept": "animated accessible views derived from real sibling-repo physics artifacts",
+    "generated_dir": "/home/eirikr/Github/openperception/artifacts/blender_showcase/animated",
+    "views": [
+      {
+        "id": "gw_chirp",
+        "case_title": "GW Chirp",
+        "mode_label": "Color-safe",
+        "source_repo": "compact-common",
+        "animation_path": "/home/eirikr/Github/openperception/artifacts/blender_showcase/animated/gw_chirp_accessible.gif",
+        "animation_basis": "/home/eirikr/Github/compact-common/blender/data/gw170817_processed.json",
+        "frame_count": 14
+      },
+      {
+        "id": "neutrino_cooling",
+        "case_title": "Neutrino Cooling",
+        "mode_label": "Symbol-guided",
+        "source_repo": "compact-common",
+        "animation_path": "/home/eirikr/Github/openperception/artifacts/blender_showcase/animated/neutrino_cooling_guided.gif",
+        "animation_basis": "/home/eirikr/Github/compact-common/dist/releases/neutrino-processes-explainer-contact-sheet-latest.png",
+        "frame_count": 6
       }
     ]
   },
@@ -501,7 +526,8 @@
       "case_title": "GW Chirp",
       "source_repo": "compact-common",
       "panel_texture": "/home/eirikr/Github/openperception/artifacts/blender_showcase/generated/gw_chirp_panel.png",
-      "real_source_path": "/home/eirikr/Github/compact-common/.cache/blender/renders/gw_strain_ribbon/gw_strain_ribbon.png"
+      "real_source_path": "/home/eirikr/Github/compact-common/.cache/blender/renders/gw_strain_ribbon/gw_strain_ribbon.png",
+      "animated_artifact": "/home/eirikr/Github/openperception/artifacts/blender_showcase/animated/gw_chirp_accessible.gif"
     },
     {
       "scheme_id": "accessible-mauve-burgundy",
@@ -884,7 +910,8 @@
       "case_title": "Neutrino Cooling",
       "source_repo": "compact-common",
       "panel_texture": "/home/eirikr/Github/openperception/artifacts/blender_showcase/generated/neutrino_cooling_panel.png",
-      "real_source_path": "/home/eirikr/Github/compact-common/dist/releases/neutrino-processes-latest.png"
+      "real_source_path": "/home/eirikr/Github/compact-common/dist/releases/neutrino-processes-latest.png",
+      "animated_artifact": "/home/eirikr/Github/openperception/artifacts/blender_showcase/animated/neutrino_cooling_guided.gif"
     },
     {
       "scheme_id": "atmosphere-red-mahogany",
@@ -1267,7 +1294,8 @@
       "case_title": "Black Hole Lensing",
       "source_repo": "Blackhole",
       "panel_texture": "/home/eirikr/Github/openperception/artifacts/blender_showcase/generated/blackhole_lensing_panel.png",
-      "real_source_path": "/home/eirikr/Github/Blackhole/build/Release/reports/octane_harsh_benchmark_artifacts/render_engine_final.png"
+      "real_source_path": "/home/eirikr/Github/Blackhole/build/Release/reports/octane_harsh_benchmark_artifacts/render_engine_final.png",
+      "animated_artifact": null
     }
   ]
 }

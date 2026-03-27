@@ -79,7 +79,7 @@ def test_validate_task_governance_rejects_short_task_ledger(tmp_path: Path) -> N
 
     errors = validate_task_governance(tmp_path)
 
-    assert any("exactly 100 ordered task IDs" in error for error in errors)
+    assert any("at least 100 ordered task IDs" in error for error in errors)
 
 
 def test_validate_task_governance_rejects_loose_todo_wording(tmp_path: Path) -> None:

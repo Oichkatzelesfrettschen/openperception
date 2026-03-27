@@ -67,10 +67,10 @@ def validate_task_governance(repo_root: Path = REPO_ROOT) -> list[str]:
     task_text = task_ledger.read_text(encoding="utf-8")
     task_matches = list(TASK_LINE_RE.finditer(task_text))
     task_ids = [match.group("task_id") for match in task_matches]
-    expected_ids = [f"T{index:03d}" for index in range(1, 101)]
-    if task_ids != expected_ids:
+    expected_ids = [f"T{index:03d}" for index in range(1, len(task_ids) + 1)]
+    if len(task_ids) < 100 or task_ids != expected_ids:
         errors.append(
-            "task ledger must contain exactly 100 ordered task IDs T001..T100: "
+            "task ledger must contain at least 100 ordered task IDs starting at T001 without gaps: "
             f"{TASK_LEDGER_PATH.as_posix()}"
         )
 

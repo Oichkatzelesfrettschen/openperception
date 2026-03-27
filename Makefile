@@ -21,7 +21,7 @@ PYTEST_RUN = env PYTEST_DISABLE_PLUGIN_AUTOLOAD=$(PYTEST_DISABLE_PLUGIN_AUTOLOAD
 # =============================================================================
 # Phony Targets
 # =============================================================================
-.PHONY: all help serve oklch contrast-check separation-check seizure-check temporal-depth-check cognitive-check typography-check rendered-spatial-check rendered-cognitive-check check-rendered playwright-install profile-report scale-report validate validate-strict gap-report claims-report claims-check repo-stats repo-stats-check integrity-check task-governance-check source-cache-links-check paper-corpus-check source-assets-check octane-probe showcase-render check venv \
+.PHONY: all help serve oklch contrast-check separation-check seizure-check temporal-depth-check cognitive-check typography-check rendered-spatial-check rendered-cognitive-check check-rendered playwright-install profile-report scale-report validate validate-strict gap-report claims-report claims-check repo-stats repo-stats-check integrity-check task-governance-check source-cache-links-check paper-corpus-check source-assets-check showcase-inputs-check octane-probe showcase-render check venv \
         test test-python test-tools test-c test-all coverage \
         lint lint-python lint-c format \
         build build-c install-python install-dev \
@@ -61,6 +61,7 @@ help:
 	@echo "  repo-stats         - Regenerate machine-checkable repo stats files"
 	@echo "  repo-stats-check   - Validate checked-in repo stats against the current tree"
 	@echo "  integrity-check    - Run repo integrity verifiers (claims, stats, corpus, source assets, source cache links, task governance)"
+	@echo "  showcase-inputs-check - Validate sibling-repo inputs used by the Blender showcase"
 	@echo "  task-governance-check - Validate task ledger and known-issues governance docs"
 	@echo "  check              - Run the repo aggregate gate (strict validate, integrity, tools tests, DaltonLens tests)"
 	@echo ""
@@ -181,7 +182,10 @@ paper-corpus-check:
 source-assets-check:
 	$(PYTHON) tools/check_source_assets.py
 
-integrity-check: claims-check repo-stats-check paper-corpus-check source-assets-check source-cache-links-check task-governance-check
+showcase-inputs-check:
+	$(PYTHON) tools/check_showcase_source_inputs.py
+
+integrity-check: claims-check repo-stats-check paper-corpus-check source-assets-check source-cache-links-check showcase-inputs-check task-governance-check
 	@echo "All repo integrity checks completed."
 
 check: validate-strict integrity-check test-tools test-python

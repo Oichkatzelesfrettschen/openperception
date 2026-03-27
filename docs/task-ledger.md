@@ -150,3 +150,12 @@ Current tranche focus:
 - [x] T108 Re-run the real-physics showcase refinement tranche only through the
   cleaned Octane path so the canonical `.png` and `.blend` are regenerated
   without startup-warning debt.
+
+Phase 6 follow-through outcomes:
+
+- tracked animated showcase artifacts now exist for the real GW and neutrino
+  accessible views beside the canonical still render
+- the canonical still render now gives more area to the three real-physics
+  transformations
+- sibling-repo showcase source inputs now have a repo-owned integrity check and
+  are wired into the aggregate integrity lane

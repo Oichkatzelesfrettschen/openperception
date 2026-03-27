@@ -1,0 +1,25 @@
+{
+  "concept": "animated accessible views derived from real sibling-repo physics artifacts",
+  "generated_dir": "/home/eirikr/Github/openperception/artifacts/blender_showcase/animated",
+  "schema_version": 1,
+  "views": [
+    {
+      "animation_basis": "/home/eirikr/Github/compact-common/blender/data/gw170817_processed.json",
+      "animation_path": "/home/eirikr/Github/openperception/artifacts/blender_showcase/animated/gw_chirp_accessible.gif",
+      "case_title": "GW Chirp",
+      "frame_count": 14,
+      "id": "gw_chirp",
+      "mode_label": "Color-safe",
+      "source_repo": "compact-common"
+    },
+    {
+      "animation_basis": "/home/eirikr/Github/compact-common/dist/releases/neutrino-processes-explainer-contact-sheet-latest.png",
+      "animation_path": "/home/eirikr/Github/openperception/artifacts/blender_showcase/animated/neutrino_cooling_guided.gif",
+      "case_title": "Neutrino Cooling",
+      "frame_count": 6,
+      "id": "neutrino_cooling",
+      "mode_label": "Symbol-guided",
+      "source_repo": "compact-common"
+    }
+  ]
+}
