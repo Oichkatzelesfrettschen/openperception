@@ -436,43 +436,43 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
     _add_box(
         bpy,
         "VerifiedSourcePanel",
-        location=(0.0, 0.44, 0.56),
-        scale=(1.0, 0.22, 0.085),
+        location=(0.0, 0.52, 0.5),
+        scale=(0.86, 0.18, 0.06),
         material=source_surface,
-        bevel=0.035,
+        bevel=0.03,
     )
     _add_box(
         bpy,
         "VerifiedSourceInset",
-        location=(0.0, 0.5, 0.64),
-        scale=(0.74, 0.12, 0.022),
+        location=(0.0, 0.56, 0.56),
+        scale=(0.58, 0.08, 0.016),
         material=plaque_mat,
-        bevel=0.015,
+        bevel=0.012,
     )
     for tab_index, tab_x in enumerate((-0.28, 0.0, 0.28)):
         _add_box(
             bpy,
             f"VerifiedSourceTab_{tab_index}",
-            location=(tab_x, 0.63, 0.68),
-            scale=(0.09, 0.045, 0.02),
+            location=(tab_x * 0.85, 0.66, 0.59),
+            scale=(0.065, 0.03, 0.014),
             material=(source_primary, source_accent, source_focus)[tab_index],
-            bevel=0.012,
+            bevel=0.01,
         )
     _add_box(
         bpy,
         "VerifiedSourceSpine",
-        location=(0.0, 0.1, 0.42),
-        scale=(0.08, 0.06, 0.2),
+        location=(0.0, 0.16, 0.34),
+        scale=(0.05, 0.04, 0.13),
         material=source_dark,
-        bevel=0.016,
+        bevel=0.012,
     )
     _add_box(
         bpy,
         "VerifiedSourceBranchBar",
-        location=(0.0, -0.08, 0.36),
-        scale=(2.7, 0.045, 0.022),
+        location=(0.0, -0.08, 0.29),
+        scale=(2.4, 0.03, 0.014),
         material=source_focus,
-        bevel=0.014,
+        bevel=0.01,
     )
     for index, lane in enumerate(spec["lanes"]):
         x = start_x + index * lane_spacing
@@ -500,6 +500,18 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
             for i, color in enumerate(viz["categorical"][:4])
         ]
         label_mat = text_warm if lane_id == "atmosphere-red-mahogany" else text_dark
+        weak_primary_mat = _ensure_material(
+            bpy, f"{lane_id}_weak_primary", brand["primary"], roughness=0.62
+        )
+        weak_accent_mat = _ensure_material(
+            bpy, f"{lane_id}_weak_accent", brand["accent"], roughness=0.62
+        )
+        weak_tertiary_mat = _ensure_material(
+            bpy,
+            f"{lane_id}_weak_tertiary",
+            brand.get("tertiary") or brand["surface"],
+            roughness=0.64,
+        )
 
         _add_box(
             bpy,
@@ -521,17 +533,17 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
             bpy,
             f"{lane_id}_label_band",
             location=(x, -1.88, 0.34),
-            scale=(1.34, 0.46, 0.024),
+            scale=(1.18, 0.38, 0.02),
             material=plaque_mat,
-            bevel=0.03,
+            bevel=0.024,
         )
         _add_box(
             bpy,
             f"{lane_id}_label_beacon",
-            location=(x - 0.92, -1.78, 0.37),
-            scale=(0.09, 0.09, 0.03),
+            location=(x - 0.82, -1.79, 0.37),
+            scale=(0.07, 0.07, 0.024),
             material=primary_mat,
-            bevel=0.02,
+            bevel=0.016,
         )
 
         connector_mat = _ensure_material(
@@ -540,16 +552,16 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
         _add_box(
             bpy,
             f"{lane_id}_branch_connector",
-            location=(x * 0.46, -0.22, 0.26),
-            scale=(0.03, 0.28, 0.016),
+            location=(x * 0.43, -0.16, 0.22),
+            scale=(0.026, 0.22, 0.012),
             material=connector_mat,
-            bevel=0.012,
+            bevel=0.01,
         ).rotation_euler.z = math.radians(-18.0 if x > 0 else 18.0)
         _add_box(
             bpy,
             f"{lane_id}_output_panel",
-            location=(x, 0.16, 0.55),
-            scale=(1.02, 0.5, 0.12),
+            location=(x, 0.16, 0.54),
+            scale=(1.08, 0.54, 0.125),
             material=primary_mat,
             bevel=0.04,
         )
@@ -557,39 +569,39 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
             bpy,
             f"{lane_id}_output_inset",
             location=(x, 0.24, 0.66),
-            scale=(0.8, 0.28, 0.026),
+            scale=(0.88, 0.32, 0.028),
             material=plaque_mat,
             bevel=0.015,
         )
         _add_box(
             bpy,
             f"{lane_id}_source_fragment_pad",
-            location=(x - 0.34, 0.24, 0.69),
-            scale=(0.21, 0.2, 0.016),
+            location=(x - 0.38, 0.24, 0.69),
+            scale=(0.15, 0.18, 0.012),
             material=surface_mat,
-            bevel=0.012,
+            bevel=0.01,
         )
         _add_box(
             bpy,
             f"{lane_id}_transformed_fragment_pad",
-            location=(x + 0.2, 0.24, 0.69),
-            scale=(0.33, 0.2, 0.016),
+            location=(x + 0.22, 0.24, 0.69),
+            scale=(0.47, 0.24, 0.018),
             material=plaque_mat,
             bevel=0.012,
         )
         _add_box(
             bpy,
             f"{lane_id}_panel_arrow_stem",
-            location=(x - 0.04, 0.24, 0.7),
-            scale=(0.12, 0.014, 0.008),
+            location=(x - 0.02, 0.24, 0.7),
+            scale=(0.16, 0.016, 0.008),
             material=connector_mat,
             bevel=0.006,
         )
         _add_box(
             bpy,
             f"{lane_id}_panel_arrow_head",
-            location=(x + 0.1, 0.24, 0.7),
-            scale=(0.028, 0.028, 0.008),
+            location=(x + 0.16, 0.24, 0.7),
+            scale=(0.036, 0.036, 0.008),
             material=connector_mat,
             bevel=0.006,
         ).rotation_euler.z = math.radians(45.0)
@@ -599,47 +611,47 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
                     bpy,
                     f"{lane_id}_source_color_only_{source_index}",
                     location=(x + source_x, 0.24, 0.73),
-                    scale=(0.03, 0.13, 0.012),
-                    material=(primary_mat, accent_mat, tertiary_mat)[source_index],
-                    bevel=0.006,
+                    scale=(0.022, 0.11, 0.01),
+                    material=(weak_primary_mat, weak_accent_mat, weak_tertiary_mat)[source_index],
+                    bevel=0.005,
                 )
             _add_box(
                 bpy,
                 f"{lane_id}_transform_frame",
-                location=(x + 0.2, 0.24, 0.72),
-                scale=(0.35, 0.22, 0.014),
+                location=(x + 0.22, 0.24, 0.72),
+                scale=(0.49, 0.26, 0.016),
                 material=neutral_dark,
-                bevel=0.008,
+                bevel=0.01,
             )
             for split_name, split_x, split_mat in (
-                ("dark", 0.05, neutral_dark),
-                ("mid", 0.2, accent_mat),
-                ("light", 0.35, plaque_mat),
+                ("dark", -0.01, neutral_dark),
+                ("mid", 0.22, accent_mat),
+                ("light", 0.45, plaque_mat),
             ):
                 _add_box(
                     bpy,
                     f"{lane_id}_{split_name}_split",
                     location=(x + split_x, 0.24, 0.73),
-                    scale=(0.055, 0.17, 0.012),
+                    scale=(0.085, 0.2, 0.014),
                     material=split_mat,
-                    bevel=0.006,
+                    bevel=0.008,
                 )
             for stripe_index, stripe_y in enumerate((-0.07, 0.0, 0.07)):
                 _add_box(
                     bpy,
                     f"{lane_id}_stripe_{stripe_index}",
-                    location=(x + 0.2, 0.24 + stripe_y, 0.755),
-                    scale=(0.16, 0.012, 0.008),
+                    location=(x + 0.22, 0.24 + stripe_y, 0.765),
+                    scale=(0.24, 0.018, 0.01),
                     material=primary_mat if stripe_index % 2 == 0 else source_dark,
-                    bevel=0.005,
+                    bevel=0.006,
                 )
-            for marker_index, marker_x in enumerate((0.08, 0.2, 0.32)):
+            for marker_index, marker_x in enumerate((0.02, 0.22, 0.42)):
                 _add_marker(
                     bpy,
                     f"{lane_id}_cue_marker_{marker_index}",
                     ("circle", "triangle", "square")[marker_index],
-                    location=(x + marker_x, 0.08, 0.78),
-                    size=0.16,
+                    location=(x + marker_x, 0.06, 0.8),
+                    size=0.22,
                     material=(primary_mat, accent_mat, tertiary_mat)[marker_index],
                 )
         elif lane["label"] == "Symbol-guided":
@@ -648,101 +660,101 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
                     bpy,
                     f"{lane_id}_source_block_{source_index}",
                     location=(x + source_x, 0.24 - source_index * 0.015, 0.73),
-                    scale=(0.04, 0.08, 0.01),
+                    scale=(0.028, 0.06, 0.008),
                     material=border_mat,
-                    bevel=0.006,
+                    bevel=0.005,
                 )
             _add_box(
                 bpy,
                 f"{lane_id}_route_stem",
-                location=(x + 0.02, 0.1, 0.73),
-                scale=(0.028, 0.028, 0.08),
+                location=(x - 0.02, 0.08, 0.74),
+                scale=(0.04, 0.04, 0.12),
+                material=accent_mat,
+                bevel=0.01,
+            )
+            _add_box(
+                bpy,
+                f"{lane_id}_route_path",
+                location=(x + 0.24, 0.24, 0.8),
+                scale=(0.28, 0.022, 0.012),
                 material=accent_mat,
                 bevel=0.008,
             )
             _add_box(
                 bpy,
-                f"{lane_id}_route_path",
-                location=(x + 0.2, 0.24, 0.79),
-                scale=(0.18, 0.014, 0.01),
-                material=accent_mat,
-                bevel=0.006,
-            )
-            _add_box(
-                bpy,
                 f"{lane_id}_route_tip",
-                location=(x + 0.4, 0.24, 0.79),
-                scale=(0.03, 0.03, 0.01),
+                location=(x + 0.54, 0.24, 0.8),
+                scale=(0.045, 0.045, 0.012),
                 material=accent_mat,
-                bevel=0.006,
+                bevel=0.008,
             ).rotation_euler.z = math.radians(45.0)
-            for cue_index, cue_x in enumerate((0.08, 0.2, 0.32)):
+            for cue_index, cue_x in enumerate((0.02, 0.24, 0.46)):
                 _add_marker(
                     bpy,
                     f"{lane_id}_guided_marker_{cue_index}",
                     ("diamond", "circle", "square")[cue_index],
-                    location=(x + cue_x, 0.12, 0.76),
-                    size=0.16,
+                    location=(x + cue_x, 0.08, 0.78),
+                    size=0.22,
                     material=(accent_mat, primary_mat, tertiary_mat)[cue_index],
                 )
             _add_box(
                 bpy,
                 f"{lane_id}_guide_plate",
-                location=(x + 0.2, 0.02, 0.72),
-                scale=(0.16, 0.03, 0.01),
+                location=(x + 0.24, 0.0, 0.73),
+                scale=(0.24, 0.05, 0.012),
                 material=tertiary_mat,
-                bevel=0.006,
+                bevel=0.008,
             )
         else:
             _add_box(
                 bpy,
                 f"{lane_id}_source_flat_front",
                 location=(x - 0.36, 0.18, 0.72),
-                scale=(0.08, 0.12, 0.012),
+                scale=(0.06, 0.1, 0.01),
                 material=border_mat,
-                bevel=0.006,
+                bevel=0.005,
             )
             _add_box(
                 bpy,
                 f"{lane_id}_source_flat_back",
                 location=(x - 0.31, 0.28, 0.71),
-                scale=(0.08, 0.12, 0.012),
+                scale=(0.06, 0.1, 0.01),
                 material=surface_mat,
-                bevel=0.006,
+                bevel=0.005,
             )
-            for ridge_index, ridge_x in enumerate((0.08, 0.2, 0.32)):
+            for ridge_index, ridge_x in enumerate((0.0, 0.24, 0.48)):
                 _add_box(
                     bpy,
                     f"{lane_id}_ridge_{ridge_index}",
-                    location=(x + ridge_x, 0.18 + ridge_index * 0.03, 0.73 - ridge_index * 0.03),
-                    scale=(0.035, 0.12, 0.025 + ridge_index * 0.012),
+                    location=(x + ridge_x, 0.17 + ridge_index * 0.045, 0.74 - ridge_index * 0.045),
+                    scale=(0.05, 0.17, 0.035 + ridge_index * 0.02),
                     material=tertiary_mat,
-                    bevel=0.008,
+                    bevel=0.01,
                 )
             _add_box(
                 bpy,
                 f"{lane_id}_contour_strip",
-                location=(x + 0.2, 0.06, 0.78),
-                scale=(0.16, 0.016, 0.01),
+                location=(x + 0.24, 0.02, 0.81),
+                scale=(0.26, 0.024, 0.012),
                 material=tertiary_mat,
-                bevel=0.006,
+                bevel=0.008,
             )
-            for anchor_index, anchor_x in enumerate((0.08, 0.32)):
+            for anchor_index, anchor_x in enumerate((0.0, 0.48)):
                 _add_box(
                     bpy,
                     f"{lane_id}_anchor_{anchor_index}",
-                    location=(x + anchor_x, 0.28, 0.73),
-                    scale=(0.026, 0.04, 0.09),
+                    location=(x + anchor_x, 0.28, 0.76),
+                    scale=(0.04, 0.055, 0.13),
                     material=source_dark if anchor_index == 0 else plaque_mat,
-                    bevel=0.006,
+                    bevel=0.008,
                 )
             _add_box(
                 bpy,
                 f"{lane_id}_ground_shadow_bar",
-                location=(x + 0.2, 0.02, 0.7),
-                scale=(0.15, 0.02, 0.008),
+                location=(x + 0.24, -0.02, 0.71),
+                scale=(0.24, 0.026, 0.01),
                 material=neutral_dark,
-                bevel=0.006,
+                bevel=0.008,
             )
 
         _add_text(
@@ -759,7 +771,7 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
         "ShowcaseHeader",
         concept.get("scene_header", "OpenPerception accessibility system"),
         location=(0.0, 1.96, 0.82),
-        scale=(0.25, 0.25, 0.25),
+        scale=(0.19, 0.19, 0.19),
         material=text_dark,
     )
     _add_text(
@@ -767,7 +779,7 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
         "LegendStatic",
         concept.get("plaque_text", "same source, adapted views"),
         location=(0.0, -2.36, 0.24),
-        scale=(0.14, 0.14, 0.14),
+        scale=(0.11, 0.11, 0.11),
         material=text_dark,
     )
 
