@@ -187,7 +187,10 @@ Applied documentation:
 #### Showcase Artifacts
 | File | Description |
 |------|-------------|
-| `artifacts/blender_showcase/openperception_palette_showcase_spec.json` | Current token-driven Blender showcase specification |
+| `artifacts/blender_showcase/CONCEPT.md` | Operational concept brief for the living Blender artifact |
+| `artifacts/blender_showcase/openperception_palette_showcase_spec.json` | Current living-concept Blender showcase specification |
+| `artifacts/blender_showcase/openperception_palette_showcase_render.png` | Current canonical Blender showcase render |
+| `artifacts/blender_showcase/openperception_palette_showcase_scene.blend` | Current canonical Blender showcase scene |
 | `artifacts/blender_showcase/openperception_palette_showcase_render_v1.png` | Restored early palette showcase render snapshot |
 | `artifacts/blender_showcase/openperception_palette_showcase_render_v2.png` | Restored second palette showcase render snapshot |
 | `artifacts/blender_showcase/openperception_palette_showcase_scene_v1.blend` | Restored Blender scene snapshot for the palette showcase |
