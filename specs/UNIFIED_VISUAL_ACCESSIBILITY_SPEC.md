@@ -458,7 +458,7 @@ claim:
   constraint_type: soft_comfort
   evidence_weight: controlled_study
   source:
-    citation: "Wang and Saunders (2022); Nadler et al. (2016)"
+    citation: "Yang, Saunders, and Chen (2022); Kim, Angelaki, and DeAngelis (2016)"
     url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC9012895/"
 
 - id: CLM-0053
@@ -470,7 +470,7 @@ claim:
   constraint_type: soft_comfort
   evidence_weight: standard_plus_review
   source:
-    citation: "Nadler et al. (2016); Microsoft XAG 117"
+    citation: "Kim, Angelaki, and DeAngelis (2016); Microsoft XAG 117"
     url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC4901450/"
 ```
 

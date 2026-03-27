@@ -1,6 +1,58 @@
 {
   "scene_id": "openperception-palette-showcase",
-  "summary": "Three-lane palette showcase for production, accessibility-first, and axiomatic warm-atmosphere perceptual schemes.",
+  "summary": "Living concept scene for research flowing through validation into transformed accommodations.",
+  "concept": {
+    "artifact_kind": "living_accessibility_concept_scene",
+    "scene_header": "OpenPerception accessibility system",
+    "plaque_text": "same source, adapted views",
+    "flow": [
+      "research",
+      "validation",
+      "accommodations"
+    ],
+    "representation": {
+      "research": "Primary sources, cache provenance, and synthesis notes.",
+      "validation": "Machine checks and policy gates that keep claims honest.",
+      "accommodations": [
+        "contrast_led",
+        "guided_symbol_led",
+        "depth_safe"
+      ]
+    },
+    "repo_stats_source": "docs/generated/repo_stats.json"
+  },
+  "repo_stats": {
+    "schema_version": 1,
+    "count_basis": "tracked_repo_files",
+    "metrics": {
+      "canonical_pdf_count": 47,
+      "top_level_papers_markdown_count": 8,
+      "research_markdown_count": 21,
+      "source_cache_doc_count": 6,
+      "primary_source_notes_count": 6,
+      "source_asset_pdf_count": 1
+    },
+    "pdf_by_topic": {
+      "adhd": 5,
+      "algorithms": 5,
+      "autism": 8,
+      "blue_cone_monochromacy": 1,
+      "cognitive_load": 12,
+      "color_vision": 2,
+      "colorblindness": 5,
+      "contrast_sensitivity": 1,
+      "dyslexia": 1,
+      "low_vision": 1,
+      "seizures": 3,
+      "stereoblindness": 2,
+      "visual_field_loss": 1
+    },
+    "paths": {
+      "canonical_pdf_root": "papers/downloads/",
+      "source_cache_glob": "docs/external_sources/*_source_cache.md",
+      "primary_source_notes_glob": "research/**/primary_source_notes.md"
+    }
+  },
   "render_preference": {
     "preferred_engine": "octane",
     "fallback_order": [
@@ -25,8 +77,8 @@
   "lanes": [
     {
       "scheme_id": "production-indigo-magenta",
-      "label": "Production Indigo/Magenta",
-      "description": "Current default production lane.",
+      "label": "Research",
+      "description": "Primary sources, provenance, and synthesized notes rendered as structured evidence.",
       "source": "tokens/color-tokens.json",
       "available_variants": [
         "default",
@@ -39,7 +91,7 @@
         "primary": "#4F46E5",
         "primaryStrong": "#3730A3",
         "accent": "#C026D3",
-        "accentStrong": "#86198F",
+        "accentStrong": "#B91C9C",
         "tertiary": null,
         "tertiaryStrong": null,
         "surface": "#FFFFFF",
@@ -100,7 +152,7 @@
             "primary": "#4F46E5",
             "primaryStrong": "#3730A3",
             "accent": "#C026D3",
-            "accentStrong": "#86198F",
+            "accentStrong": "#B91C9C",
             "tertiary": null,
             "tertiaryStrong": null,
             "surface": "#FFFFFF",
@@ -344,7 +396,7 @@
             "primary": "#334155",
             "primaryStrong": "#1E293B",
             "accent": "#6B7280",
-            "accentStrong": "#4B5563",
+            "accentStrong": "#64748B",
             "tertiary": null,
             "tertiaryStrong": null,
             "surface": "#FFFFFF",
@@ -404,8 +456,8 @@
     },
     {
       "scheme_id": "accessible-mauve-burgundy",
-      "label": "Accessible Indigo/Mauve/Burgundy",
-      "description": "Accessibility-first experimental lane with tertiary burgundy support.",
+      "label": "Validation",
+      "description": "Machine checks, constraints, and evidence gates that shape the repo's claims.",
       "source": "tokens/experimental-mauve-burgundy.json",
       "available_variants": [
         "default",
@@ -783,8 +835,8 @@
     },
     {
       "scheme_id": "atmosphere-red-mahogany",
-      "label": "Axiomatic Mahogany/Brass/Burgundy",
-      "description": "Warm atmosphere lane with grounded structure, brass interpretation, and burgundy high-gravity emphasis.",
+      "label": "Accommodations",
+      "description": "One source branching into contrast-led, guided-symbol-led, and depth-safe outputs.",
       "source": "tokens/experimental-red-mahogany.json",
       "available_variants": [
         "default",

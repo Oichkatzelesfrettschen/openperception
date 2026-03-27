@@ -4,6 +4,10 @@
 **Scope:** Academic papers and guidelines from 2020-2025
 **Focus Areas:** Low vision accessibility, visual field loss, contrast sensitivity, assistive technology
 
+Primary source lane:
+
+- [Vision clinical source cache](/home/eirikr/Github/openperception/docs/external_sources/vision_clinical_source_cache.md)
+
 ---
 
 ## Table of Contents

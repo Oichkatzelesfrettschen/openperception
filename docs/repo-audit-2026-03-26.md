@@ -25,7 +25,7 @@ The weakest parts are:
 - uneven installation documentation across module boundaries
 - some high-level claims that were more precise than the repo could currently
   prove
-- optional browser and Blender lanes depending on host-specific bootstrap
+- a Blender showcase lane that still depends on host-specific bootstrap
 
 ## Hypotheses
 
@@ -83,8 +83,9 @@ The weakest parts are:
   install the editable theme and DaltonLens package, and build the example
   Sphinx docs using repo-owned commands
 - nuance: rendered browser audits still require an explicit Playwright browser
-  install step and stay outside the default `make check` gate
-- action: keep rendered audits opt-in and document their bootstrap exactly
+  install step for local development even though CI can provision them
+- action: keep rendered audits opt-in locally, but require them in CI on a
+  dedicated Ubuntu runner
 
 ## Current Runtime Findings
 
@@ -99,10 +100,10 @@ Observed current runtime result after remediation:
 - `python3 tools/validate.py --strict-warnings` now passes
 - the remaining practical setup gap is environment bootstrap for the full
   `DaltonLens-Python` test lane
-- strategic docs now use narrower completion language and measured markdown
-  counts instead of the old hand-written totals
-- rendered browser audits remain optional because they depend on local browser
-  binaries even when the Python package is installed
+- strategic docs now use narrower completion language, and repo counts now come
+  from generated stats instead of hand-written totals
+- rendered browser audits remain optional locally but are now suitable for a
+  dedicated CI runner that provisions Chromium explicitly
 
 That means the repo's current debt is no longer in the implemented validator
 surface itself. It is now mostly in environment reproducibility, broader

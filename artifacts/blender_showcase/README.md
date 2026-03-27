@@ -1,15 +1,17 @@
 # Blender Showcase Artifacts
 
 This directory holds first-class Blender showcase artifacts for the repo's
-token and accessibility theme lanes.
+living accessibility concept lane.
 
 Why this is tracked:
 
 - the showcase is a distilled visual artifact of repo findings, not disposable
   scratch output
-- the renders make the palette and redundancy work legible to humans
+- the renders make the repo's operational accessibility model legible to humans
 - the `.blend` file captures layout, lighting, and scene composition choices
   that belong with the repo's design-system research
+- the concept is documented in `CONCEPT.md` so the artifact does not drift into
+  slogans or detached mood-board language
 
 Current source-of-truth files:
 
@@ -25,7 +27,8 @@ Historical files:
 - `openperception_palette_showcase_spec_v1.json`
 
 The current spec and current `.png` / `.blend` outputs reflect the latest token
-findings plus the repo's stereoblindness-informed depth guidance:
+findings, generated repo stats, and the repo's stereoblindness-informed depth
+guidance:
 
 - static monocular cues first
 - stereo as enrichment, not requirement

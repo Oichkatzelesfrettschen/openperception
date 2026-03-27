@@ -53,7 +53,7 @@ def _extract_repo_local_link_targets(doc_path: Path, repo_root: Path) -> list[st
 
 
 def _is_qualifying_research_doc(rel_path: str) -> bool:
-    return rel_path.startswith(QUALIFYING_RESEARCH_PREFIXES)
+    return rel_path.startswith(QUALIFYING_RESEARCH_PREFIXES) and rel_path.endswith(".md")
 
 
 def validate_source_cache_links(repo_root: Path = REPO_ROOT) -> list[str]:
@@ -76,4 +76,13 @@ def validate_source_cache_links(repo_root: Path = REPO_ROOT) -> list[str]:
                 "source-cache doc must link to at least one research-facing repo doc "
                 f"under research/ or papers/: {rel_doc}"
             )
+            continue
+        for target in qualifying_targets:
+            target_path = repo_root / target
+            backlink_targets = _extract_repo_local_link_targets(target_path, repo_root)
+            if rel_doc not in backlink_targets:
+                errors.append(
+                    "research-facing repo doc must link back to its source-cache doc: "
+                    f"{target} -> {rel_doc}"
+                )
     return sorted(errors)

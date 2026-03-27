@@ -12,14 +12,22 @@ def test_showcase_spec_has_expected_lane_ids() -> None:
     payload = build_showcase_spec()
 
     assert payload["scene_id"] == "openperception-palette-showcase"
+    assert payload["concept"]["artifact_kind"] == "living_accessibility_concept_scene"
+    assert payload["concept"]["plaque_text"] == "same source, adapted views"
     assert payload["render_preference"]["preferred_engine"] == "octane"
     assert payload["depth_accommodation"]["stereo_role"] == (
         "Stereo enriches the scene but is not required for comprehension."
     )
+    assert payload["repo_stats"]["metrics"]["canonical_pdf_count"] > 0
     assert [lane["scheme_id"] for lane in payload["lanes"]] == [
         "production-indigo-magenta",
         "accessible-mauve-burgundy",
         "atmosphere-red-mahogany",
+    ]
+    assert [lane["label"] for lane in payload["lanes"]] == [
+        "Research",
+        "Validation",
+        "Accommodations",
     ]
 
 
@@ -51,3 +59,10 @@ def test_showcase_spec_exposes_variant_payloads() -> None:
         "tritan",
         "mono",
     ]
+
+
+def test_showcase_spec_embeds_live_repo_snapshot() -> None:
+    payload = build_showcase_spec()
+
+    assert payload["repo_stats"]["metrics"]["source_cache_doc_count"] >= 1
+    assert payload["concept"]["repo_stats_source"] == "docs/generated/repo_stats.json"

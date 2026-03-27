@@ -5,6 +5,10 @@
 **Last Updated:** December 2024
 **Scope:** Academic papers, guidelines, and research on cognitive load theory applications to accessibility and user interface design
 
+Primary source lane:
+
+- [Cognitive load source cache](/home/eirikr/Github/openperception/docs/external_sources/cognitive_load_source_cache.md)
+
 ---
 
 ## Table of Contents

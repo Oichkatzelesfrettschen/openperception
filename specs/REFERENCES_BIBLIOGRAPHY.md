@@ -32,6 +32,7 @@
 | SC 2.3.1 | https://www.w3.org/WAI/WCAG21/Understanding/three-flashes-or-below-threshold | Flash threshold |
 | SC 2.3.3 | https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions | Motion from interactions |
 | SC 2.4.7 | https://www.w3.org/WAI/WCAG21/Understanding/focus-visible | Focus visibility |
+| SC 2.4.13 | https://www.w3.org/WAI/WCAG22/Understanding/focus-appearance.html | Focus appearance |
 | SC 2.4.11 | https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum | Focus not obscured |
 | SC 2.5.5 | https://www.w3.org/WAI/WCAG21/Understanding/target-size | 44x44px touch targets |
 | SC 2.5.8 | https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum | 24x24px minimum |
@@ -234,6 +235,12 @@
 | Motif/OpenMotif | Legacy Xlib-based toolkit |
 | LessTif | Motif clone |
 | Metacity | GNOME 2 WM (Marco is Mate fork) |
+
+### 9.5 Language And Toolchain References
+
+| Resource | URL | Use |
+|----------|-----|-----|
+| Python 3.10 What's New | https://docs.python.org/3/whatsnew/3.10.html | Root-tooling language floor and PEP 604 union syntax |
 
 ---
 

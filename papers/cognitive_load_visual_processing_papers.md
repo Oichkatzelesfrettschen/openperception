@@ -3,6 +3,10 @@
 
 Compiled: December 2025
 
+Primary source lane:
+
+- [Cognitive load source cache](/home/eirikr/Github/openperception/docs/external_sources/cognitive_load_source_cache.md)
+
 ---
 
 ## 1. Cognitive Load Theory (CLT)

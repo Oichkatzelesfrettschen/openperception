@@ -18,7 +18,7 @@ OpenPerception mixes several lanes:
 - the upstream `DaltonLens-Python` package under `algorithms/DaltonLens-Python/`
 - the upstream `libDaltonLens` C library under `algorithms/libDaltonLens/`
 - the local Sphinx theme under `python-packages/sphinx-brand-theme/`
-- optional rendered-audit and Blender artifact lanes
+- optional local rendered-audit and Blender artifact lanes
 
 Those lanes do not all share the same dependency floor, so this document keeps
 them separate instead of pretending one command provisions everything.
@@ -55,7 +55,7 @@ The `venv` target installs:
 - editable `algorithms/DaltonLens-Python`
 - editable `python-packages/sphinx-brand-theme`
 - Sphinx for the example docs lane
-- Playwright Python bindings for optional rendered audits
+- Playwright Python bindings for the rendered-audit lane
 
 Pull tracked binary artifacts after clone:
 
@@ -122,9 +122,9 @@ make playwright-install
 
 Policy:
 
-- `make check` does not run rendered audits by default
-- `make check-rendered` is the opt-in lane once Chromium is installed
-- browser binaries are host-specific, so they stay outside the default gate
+- `make check` does not run rendered audits by default on local hosts
+- `make check-rendered` is the explicit local lane once Chromium is installed
+- CI now runs `make check-rendered` on a dedicated Ubuntu runner that installs Chromium
 
 ### Blender showcase
 

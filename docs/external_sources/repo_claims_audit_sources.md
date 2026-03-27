@@ -3,6 +3,11 @@
 This source index supports the March 26, 2026 repo-audit tranche recorded in
 `docs/repo-audit-2026-03-26.md`.
 
+Machine-readable bibliography support now lives in:
+
+- [repo_claims_audit_sources.bib](/home/eirikr/Github/openperception/docs/external_sources/repo_claims_audit_sources.bib)
+- [paper_corpus_tracking.bib](/home/eirikr/Github/openperception/papers/downloads/paper_corpus_tracking.bib)
+
 ## Primary Sources
 
 ### Python Language Support
@@ -23,6 +28,8 @@ This source index supports the March 26, 2026 repo-audit tranche recorded in
 
 - Chopin, Bavelier, and Levi 2019 PubMed record for stereoblindness prevalence:
   https://pubmed.ncbi.nlm.nih.gov/30776852/
+- Kim, Angelaki, and DeAngelis 2016 PMC full text for motion-parallax depth:
+  https://pmc.ncbi.nlm.nih.gov/articles/PMC4901450/
 
 ## Local Runtime Evidence
 

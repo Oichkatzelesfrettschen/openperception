@@ -19,7 +19,7 @@ C_BUILD_DIR ?= algorithms/libDaltonLens/build
 # =============================================================================
 # Phony Targets
 # =============================================================================
-.PHONY: all help serve oklch contrast-check separation-check seizure-check temporal-depth-check cognitive-check typography-check rendered-spatial-check rendered-cognitive-check check-rendered playwright-install profile-report scale-report validate validate-strict gap-report claims-report claims-check integrity-check task-governance-check source-cache-links-check paper-corpus-check source-assets-check check venv \
+.PHONY: all help serve oklch contrast-check separation-check seizure-check temporal-depth-check cognitive-check typography-check rendered-spatial-check rendered-cognitive-check check-rendered playwright-install profile-report scale-report validate validate-strict gap-report claims-report claims-check repo-stats repo-stats-check integrity-check task-governance-check source-cache-links-check paper-corpus-check source-assets-check check venv \
         test test-python test-tools test-c test-all coverage \
         lint lint-python lint-c format \
         build build-c install-python install-dev \
@@ -54,7 +54,9 @@ help:
 	@echo "  gap-report         - Show declared-vs-runtime gap report"
 	@echo "  claims-report      - Show seeded claims-to-runtime coverage report"
 	@echo "  claims-check       - Validate the claims registry integrity"
-	@echo "  integrity-check    - Run repo integrity verifiers (claims, corpus, source assets, source cache links, task governance)"
+	@echo "  repo-stats         - Regenerate machine-checkable repo stats files"
+	@echo "  repo-stats-check   - Validate checked-in repo stats against the current tree"
+	@echo "  integrity-check    - Run repo integrity verifiers (claims, stats, corpus, source assets, source cache links, task governance)"
 	@echo "  task-governance-check - Validate task ledger and known-issues governance docs"
 	@echo "  check              - Run the repo aggregate gate (strict validate, integrity, tools tests, DaltonLens tests)"
 	@echo ""
@@ -151,6 +153,12 @@ claims-report:
 claims-check:
 	$(PYTHON) tools/check_claims_registry.py
 
+repo-stats:
+	$(PYTHON) tools/repo_stats.py --output-json docs/generated/repo_stats.json --output-md docs/generated/repo_stats.md
+
+repo-stats-check:
+	$(PYTHON) tools/check_repo_stats.py
+
 task-governance-check:
 	$(PYTHON) tools/check_task_governance.py
 
@@ -163,7 +171,7 @@ paper-corpus-check:
 source-assets-check:
 	$(PYTHON) tools/check_source_assets.py
 
-integrity-check: claims-check paper-corpus-check source-assets-check source-cache-links-check task-governance-check
+integrity-check: claims-check repo-stats-check paper-corpus-check source-assets-check source-cache-links-check task-governance-check
 	@echo "All repo integrity checks completed."
 
 check: validate-strict integrity-check test-tools test-python

@@ -3,6 +3,10 @@
 **Research Date:** December 2024
 **Focus:** WCAG contrast guidelines, APCA algorithm, research foundations
 
+Primary source lane:
+
+- [Vision clinical source cache](/home/eirikr/Github/openperception/docs/external_sources/vision_clinical_source_cache.md)
+
 ---
 
 ## Understanding Contrast Sensitivity

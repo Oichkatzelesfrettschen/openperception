@@ -61,22 +61,26 @@ Issue classes:
 - consequence: readers can mistake a strategic milestone or stale count for a
   verified current-state claim.
 - current handling: `README.md`, `ROADMAP.md`, and `MASTER_INDEX.md` were
-  reconciled in the March 26 audit pass, while `docs/task-ledger.md` continues
-  to track the remaining strategic-doc burn-down work.
+  reconciled in the March 26 audit pass, machine-checkable repo counts now live
+  in `docs/generated/repo_stats.json` and `docs/generated/repo_stats.md`, and
+  `docs/task-ledger.md` continues to track the remaining strategic-doc burn-down
+  work.
 
-## KI-005 Optional Tooling Is Still Not Auto-Provisioned
+## KI-005 Optional Artifact Tooling Is Still Partly Host-Managed
 
 - class: tooling gap
 - status: open
 - affected files: `REQUIREMENTS.md`, `artifacts/blender_showcase/REQUIREMENTS.md`,
-  `tools/rendered_spatial_check.py`, `tools/rendered_cognitive_check.py`
-- problem: rendered audits and Blender showcase regeneration depend on local
-  browser and Blender tooling that the repo documents but does not auto-install.
+  `.github/workflows/python-tests.yml`, `tools/rendered_spatial_check.py`,
+  `tools/rendered_cognitive_check.py`
+- problem: Blender showcase regeneration still depends on local Blender or
+  Octane Blender tooling that the repo documents but does not auto-install.
 - consequence: a clean clone is not enough to run every optional artifact lane
   without additional host setup.
 - current handling: requirements docs now split core vs optional toolchains,
-  `make playwright-install` provisions the browser-backed audit lane, and
-  `make check-rendered` keeps that lane explicit and opt-in.
+  `make playwright-install` provisions the browser-backed audit lane locally,
+  GitHub Actions now requires `make check-rendered` on a dedicated Ubuntu
+  runner, and Blender host tooling remains explicitly manual.
 
 ## KI-006 Claims-To-Evidence Coverage Is Still Partial
 

@@ -2,9 +2,7 @@
 
 **Repository:** OpenPerception (see repository root)
 **Compiled:** March 26, 2026
-**Canonical PDFs:** 47 (in `papers/downloads/` -- for research use only; see DOI/URL links for official access)
-**Top-level papers/*.md files:** 8
-**research/**/*.md files:** 21
+**Measured repo stats:** `docs/generated/repo_stats.md` and `docs/generated/repo_stats.json`
 
 ---
 
@@ -64,7 +62,7 @@
 
 ### Downloaded Papers by Category
 
-#### Algorithms (5 PDFs in the canonical lane)
+#### Algorithms
 | File | Description |
 |------|-------------|
 | `Brettel_1997_Dichromat_Simulation.pdf` | Foundational dichromat simulation |
@@ -73,7 +71,7 @@
 | `Stockman_2019_Cone_Fundamentals_CIE_Standards.pdf` | Cone fundamentals and CIE standard context |
 | `Vienot_2015_Cone_Fundamentals_Past_Present_Future.pdf` | Cone-fundamentals review |
 
-#### Colorblindness (5 papers)
+#### Colorblindness
 | File | Description |
 |------|-------------|
 | `Color_Universal_Design_DNN_2025.pdf` | Deep learning CUD |
@@ -82,18 +80,18 @@
 | `OPN1LW_Exon_Deletion_RG_CVD.pdf` | Genetic case study |
 | `OPN1LW_OPN1MW_Mutations_CVD.pdf` | Opsin gene mutations |
 
-#### Color Vision (2 papers)
+#### Color Vision
 | File | Description |
 |------|-------------|
 | `Zhu_2024_Computational_Trichromacy_Reconstruction_AR.pdf` | AR-based trichromacy reconstruction for CVD |
 | `Kotani_2025_Color_Vision_Emergence_Framework.pdf` | Computational framework for color-vision emergence |
 
-#### Blue Cone Monochromacy (1 paper)
+#### Blue Cone Monochromacy
 | File | Description |
 |------|-------------|
 | `Cideciyan_2024_BCM_Retinal_Structure_Clinical_Endpoints.pdf` | Clinical endpoints for L-opsin gene therapy |
 
-#### ADHD (5 papers)
+#### ADHD
 | File | Description |
 |------|-------------|
 | `2024_Eye_Tracking_ADHD_Screening.pdf` | Eye tracking screening |
@@ -102,7 +100,7 @@
 | `ADHD_Peripheral_Vision_2023.pdf` | Neuro-glasses intervention |
 | `Gestalt_Processing_CVI_ADHD_2024.pdf` | Visual selective attention |
 
-#### Autism (8 papers)
+#### Autism
 | File | Description |
 |------|-------------|
 | `AASPIRE_Autism_Web_Accessibility_Guidelines_2019.pdf` | Participatory web accessibility guidelines |
@@ -114,12 +112,12 @@
 | `Visual_Complexity_Autism_2025.pdf` | Sensory preferences |
 | `Visual_Perception_Autism_Review.pdf` | Comprehensive review |
 
-#### Dyslexia (1 paper)
+#### Dyslexia
 | File | Description |
 |------|-------------|
 | `Mueller-Axt_2024_Magnocellular_LGN_Dyslexia.pdf` | Visual thalamus neuroimaging evidence |
 
-#### Cognitive Load (12 papers)
+#### Cognitive Load
 | File | Description |
 |------|-------------|
 | `2024_Cognitive_Load_Measurement_Methods.pdf` | Measurement-methods review and framework |
@@ -135,7 +133,7 @@
 | `Visual_Temporal_Attention_2024.pdf` | Attention review |
 | `VWM_Meaningfulness_2024.pdf` | Working memory |
 
-#### Seizures (3 papers)
+#### Seizures
 | File | Description |
 |------|-------------|
 | `Fisher_2022_Visually_Sensitive_Seizures.pdf` | Epilepsy Foundation review |
@@ -339,15 +337,12 @@ openperception/
 
 ## Statistics Summary
 
-| Metric | Count |
-|--------|-------|
-| Total PDFs | 47 (in `papers/downloads/`) |
-| Top-level `papers/*.md` files | 8 |
-| `research/**/*.md` files | 21 |
-| Papers Cataloged (estimated) | 420+ |
-| Research Categories | 6 major |
-| Subcategories | 20+ |
-| Last Research Update | 2026-03-19 |
+Machine-checkable corpus and markdown counts now live in:
+
+- `docs/generated/repo_stats.json`
+- `docs/generated/repo_stats.md`
+
+Use those generated files instead of hand-editing counts in this index.
 
 ---
 
@@ -373,5 +368,5 @@ openperception/
 ---
 
 *Index generated: March 26, 2026*
-*Updated: March 26, 2026 (reconciled cache counts, downgraded unsupported numeric summaries, refreshed lane descriptions)*
+*Updated: March 26, 2026 (reconciled cache counts, replaced hand-maintained repo counts with generated stats, refreshed lane descriptions)*
 *For: Visual Accessibility Research Compendium*

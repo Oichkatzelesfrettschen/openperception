@@ -36,7 +36,7 @@ Project distillation:
 - Testing language should acknowledge that prevalence depends on how stereopsis
   is measured.
 
-## 2. Wang And Saunders (2022)
+## 2. Yang, Saunders, And Chen (2022)
 
 Citation:
 `The experience of stereoblindness does not improve use of texture for slant perception.`
@@ -72,7 +72,7 @@ Project distillation:
 - Stereo-off paths should still preserve credible slant, ordering, and surface
   interpretation when multiple monocular cues are present.
 
-## 3. Nadler Et Al. (2016)
+## 3. Kim, Angelaki, And DeAngelis (2016)
 
 Citation:
 `The neural basis of depth perception from motion parallax.`
@@ -81,6 +81,12 @@ Local artifacts:
 
 - `papers/downloads/stereoblindness/Nadler_et_al_2016_Motion_Parallax_Depth_Review.html`
 - `papers/downloads/stereoblindness/Nadler_et_al_2016_Motion_Parallax_Depth_Review.txt`
+
+Authorship note:
+
+- The local cache still uses a legacy `Nadler_et_al_2016_*` filename, but the
+  cached full text identifies the source paper authors as HyunGoo R Kim, Dora
+  E Angelaki, and Gregory C DeAngelis.
 
 Granular findings:
 

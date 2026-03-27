@@ -14,13 +14,14 @@ def write_source_cache(path: Path, body: str) -> None:
 def test_validate_source_cache_links_accepts_report_and_notes_links(
     tmp_path: Path,
 ) -> None:
+    source_cache = tmp_path / "docs" / "external_sources" / "topic_source_cache.md"
     report = tmp_path / "research" / "topic" / "REPORT.md"
     notes = tmp_path / "research" / "topic" / "primary_source_notes.md"
     report.parent.mkdir(parents=True, exist_ok=True)
-    report.write_text("# report\n", encoding="utf-8")
-    notes.write_text("# notes\n", encoding="utf-8")
+    report.write_text(f"# report\n\n- [Cache]({source_cache})\n", encoding="utf-8")
+    notes.write_text(f"# notes\n\n- [Cache]({source_cache})\n", encoding="utf-8")
     write_source_cache(
-        tmp_path / "docs" / "external_sources" / "topic_source_cache.md",
+        source_cache,
         "\n".join(
             [
                 "# Topic Source Cache",
@@ -35,11 +36,12 @@ def test_validate_source_cache_links_accepts_report_and_notes_links(
 
 
 def test_validate_source_cache_links_accepts_single_papers_link(tmp_path: Path) -> None:
+    source_cache = tmp_path / "docs" / "external_sources" / "topic_source_cache.md"
     paper_doc = tmp_path / "papers" / "topic_compendium.md"
     paper_doc.parent.mkdir(parents=True, exist_ok=True)
-    paper_doc.write_text("# compendium\n", encoding="utf-8")
+    paper_doc.write_text(f"# compendium\n\n- [Cache]({source_cache})\n", encoding="utf-8")
     write_source_cache(
-        tmp_path / "docs" / "external_sources" / "topic_source_cache.md",
+        source_cache,
         f"# Topic Source Cache\n\n- [Compendium]({paper_doc})\n",
     )
 
@@ -83,3 +85,18 @@ def test_validate_source_cache_links_rejects_master_index_only(tmp_path: Path) -
     errors = validate_source_cache_links(tmp_path)
 
     assert any("must link to at least one research-facing repo doc" in error for error in errors)
+
+
+def test_validate_source_cache_links_rejects_missing_backlink(tmp_path: Path) -> None:
+    source_cache = tmp_path / "docs" / "external_sources" / "topic_source_cache.md"
+    report = tmp_path / "research" / "topic" / "REPORT.md"
+    report.parent.mkdir(parents=True, exist_ok=True)
+    report.write_text("# report\n", encoding="utf-8")
+    write_source_cache(
+        source_cache,
+        f"# Topic Source Cache\n\n- [Report]({report})\n",
+    )
+
+    errors = validate_source_cache_links(tmp_path)
+
+    assert any("must link back to its source-cache doc" in error for error in errors)

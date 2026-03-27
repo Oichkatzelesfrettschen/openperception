@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Build and render the OpenPerception palette showcase scene inside Blender.
+Build and render the OpenPerception living concept scene inside Blender.
 
 Run through Blender:
   blender --background --factory-startup \
@@ -342,11 +342,7 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
             scale=(0.72, 0.022, 0.018),
             material=rail_near,
         )
-    lane_titles = {
-        "production-indigo-magenta": "Research",
-        "accessible-mauve-burgundy": "Validation",
-        "atmosphere-red-mahogany": "Accommodations",
-    }
+    concept = spec.get("concept", {})
     for index, lane in enumerate(spec["lanes"]):
         x = start_x + index * lane_spacing
         brand = lane["brand"]
@@ -695,7 +691,7 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
         _add_text(
             bpy,
             f"{lane_id}_title",
-            lane_titles.get(lane_id, lane["label"]),
+            lane["label"],
             location=(x, -1.86, 0.47),
             scale=(0.4, 0.4, 0.4),
             material=label_mat,
@@ -717,7 +713,7 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
     _add_text(
         bpy,
         "ShowcaseHeader",
-        "OpenPerception accessibility system",
+        concept.get("scene_header", "OpenPerception accessibility system"),
         location=(0.0, 1.96, 0.82),
         scale=(0.32, 0.32, 0.32),
         material=text_dark,
@@ -725,7 +721,7 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
     _add_text(
         bpy,
         "LegendStatic",
-        "same source, adapted views",
+        concept.get("plaque_text", "same source, adapted views"),
         location=(0.0, -2.36, 0.24),
         scale=(0.2, 0.2, 0.2),
         material=text_dark,

@@ -1,17 +1,19 @@
 #!/usr/bin/env python3
 """
-Build a reproducible palette-showcase scene specification from repo token files.
+Build a reproducible Blender showcase scene specification from repo token files.
 
-WHY: OpenPerception now has multiple validated palette lanes. This helper turns
+WHY: OpenPerception now has a living Blender concept lane. This helper turns
 the current production and experimental token packs into one machine-readable
-scene payload so downstream visualizations, including Blender renders, can use
-source-of-truth token values instead of copied hex codes.
+scene payload so downstream visualizations can stay tied to current repo data
+instead of copied hex codes or slogan-only descriptions.
 """
 from __future__ import annotations
 
 import argparse
 import json
 from pathlib import Path
+
+from repo_stats import generate_repo_stats
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -43,23 +45,41 @@ RENDER_PREFERENCE = {
 TOKEN_SOURCES = (
     (
         "production-indigo-magenta",
-        "Production Indigo/Magenta",
+        "Research",
         REPO_ROOT / "tokens" / "color-tokens.json",
-        "Current default production lane.",
+        "Primary sources, provenance, and synthesized notes rendered as structured evidence.",
     ),
     (
         "accessible-mauve-burgundy",
-        "Accessible Indigo/Mauve/Burgundy",
+        "Validation",
         REPO_ROOT / "tokens" / "experimental-mauve-burgundy.json",
-        "Accessibility-first experimental lane with tertiary burgundy support.",
+        "Machine checks, constraints, and evidence gates that shape the repo's claims.",
     ),
     (
         "atmosphere-red-mahogany",
-        "Axiomatic Mahogany/Brass/Burgundy",
+        "Accommodations",
         REPO_ROOT / "tokens" / "experimental-red-mahogany.json",
-        "Warm atmosphere lane with grounded structure, brass interpretation, and burgundy high-gravity emphasis.",
+        "One source branching into contrast-led, guided-symbol-led, and depth-safe outputs.",
     ),
 )
+LIVING_CONCEPT = {
+    "artifact_kind": "living_accessibility_concept_scene",
+    "scene_header": "OpenPerception accessibility system",
+    "plaque_text": "same source, adapted views",
+    "flow": ["research", "validation", "accommodations"],
+    "representation": {
+        "research": "Primary sources, cache provenance, and synthesis notes.",
+        "validation": "Machine checks and policy gates that keep claims honest.",
+        "accommodations": [
+            "contrast_led",
+            "guided_symbol_led",
+            "depth_safe",
+        ],
+    },
+    "repo_stats_source": str(
+        (REPO_ROOT / "docs" / "generated" / "repo_stats.json").relative_to(REPO_ROOT)
+    ),
+}
 
 
 def _load_json(path: Path) -> dict:
@@ -115,9 +135,11 @@ def build_showcase_spec() -> dict:
     return {
         "scene_id": "openperception-palette-showcase",
         "summary": (
-            "Three-lane palette showcase for production, accessibility-first, "
-            "and axiomatic warm-atmosphere perceptual schemes."
+            "Living concept scene for research flowing through validation into "
+            "transformed accommodations."
         ),
+        "concept": LIVING_CONCEPT,
+        "repo_stats": generate_repo_stats(REPO_ROOT),
         "render_preference": RENDER_PREFERENCE,
         "depth_accommodation": DEPTH_ACCOMMODATION,
         "lanes": [

@@ -100,7 +100,13 @@ The paper-corpus check now also fails if tracked literature PDFs appear
 directly under `papers/` instead of a topic lane inside `papers/downloads/`.
 
 Visual showcase artifacts now live under `artifacts/blender_showcase/`, with a
-tracked spec plus retained render and `.blend` snapshots for the palette lane.
+tracked spec plus retained render and `.blend` snapshots for the living concept
+lane.
+
+Machine-checkable repo counts now live in:
+
+- `docs/generated/repo_stats.json`
+- `docs/generated/repo_stats.md`
 
 ---
 

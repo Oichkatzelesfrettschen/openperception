@@ -137,10 +137,10 @@ A depth-critical feature is ready when all of the following are true:
   'stereoblindness' in adults less than 60 years of age: a best evidence
   synthesis." Ophthalmic Physiol Opt. 2019.
   https://pubmed.ncbi.nlm.nih.gov/30776852/
-- Wang T, Saunders JA. "The experience of stereoblindness does not improve use
+- Yang P, Saunders JA, Chen Z. "The experience of stereoblindness does not improve use
   of texture for slant perception." J Vis. 2022.
   https://pmc.ncbi.nlm.nih.gov/articles/PMC9012895/
-- Nadler JW, Angelaki DE, DeAngelis GC et al. Review: "The neural basis of
+- Kim HR, Angelaki DE, DeAngelis GC. Review: "The neural basis of
   depth perception from motion parallax." Philos Trans R Soc Lond B Biol Sci.
   2016. https://pmc.ncbi.nlm.nih.gov/articles/PMC4901450/
 - Pladere T, Svarverud E, Krumina G, Gilson SJ, Baraas RC. "Inclusivity in

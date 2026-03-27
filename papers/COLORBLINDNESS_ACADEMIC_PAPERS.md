@@ -18,6 +18,7 @@ This compendium now sits beside a more explicit repo taxonomy that separates:
 Use these companion docs when reading the papers below:
 
 - [Color support accommodation taxonomy](/home/eirikr/Github/openperception/docs/color-support-accommodation-taxonomy.md)
+- [Color vision source cache](/home/eirikr/Github/openperception/docs/external_sources/color_vision_source_cache.md)
 - [CVD research report](/home/eirikr/Github/openperception/research/colorblindness/CVD_RESEARCH_REPORT.md)
 - [Algorithm comparison guide](/home/eirikr/Github/openperception/research/colorblindness/algorithms/ALGORITHM_COMPARISON.md)
 

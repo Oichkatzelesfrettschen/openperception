@@ -1,0 +1,32 @@
+{
+  "count_basis": "tracked_repo_files",
+  "metrics": {
+    "canonical_pdf_count": 47,
+    "primary_source_notes_count": 6,
+    "research_markdown_count": 21,
+    "source_asset_pdf_count": 1,
+    "source_cache_doc_count": 6,
+    "top_level_papers_markdown_count": 8
+  },
+  "paths": {
+    "canonical_pdf_root": "papers/downloads/",
+    "primary_source_notes_glob": "research/**/primary_source_notes.md",
+    "source_cache_glob": "docs/external_sources/*_source_cache.md"
+  },
+  "pdf_by_topic": {
+    "adhd": 5,
+    "algorithms": 5,
+    "autism": 8,
+    "blue_cone_monochromacy": 1,
+    "cognitive_load": 12,
+    "color_vision": 2,
+    "colorblindness": 5,
+    "contrast_sensitivity": 1,
+    "dyslexia": 1,
+    "low_vision": 1,
+    "seizures": 3,
+    "stereoblindness": 2,
+    "visual_field_loss": 1
+  },
+  "schema_version": 1
+}

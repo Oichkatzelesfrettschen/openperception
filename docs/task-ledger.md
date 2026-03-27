@@ -32,7 +32,7 @@ Current tranche focus:
 - [x] T011 Add governance tests in `tools/tests/test_check_task_governance.py`.
 - [x] T012 Add a fast repo-integrity entrypoint to `Makefile`.
 - [x] T013 Wire the governance check into `Makefile` help and phony targets.
-- [ ] T014 Add a dedicated CI or default `make check` lane for all integrity verifiers.
+- [x] T014 Add a dedicated CI or default `make check` lane for all integrity verifiers.
 - [ ] T015 Expand governance checks to cover additional strategic docs.
 - [ ] T016 Add machine-readable task metadata if markdown proves too weak.
 - [ ] T017 Add issue aging fields so stale debt can be detected automatically.
@@ -81,7 +81,7 @@ Current tranche focus:
 - [ ] T053 Add source-index references for major depth-accommodation claims not yet indexed.
 - [ ] T054 Add source-index references for major color-support taxonomy claims not yet indexed.
 - [ ] T055 Add an overclaim phrase linter for unsupported certainty words.
-- [ ] T056 Add a stats generator for local corpus counts instead of hardcoded prose counts.
+- [x] T056 Add a stats generator for local corpus counts instead of hardcoded prose counts.
 - [x] T057 Reconcile cache counts between `MASTER_INDEX.md` and actual files.
 - [x] T058 Audit README language for "production-ready" assertions lane by lane.
 - [x] T059 Audit package support claims against packaging metadata.
@@ -114,13 +114,13 @@ Current tranche focus:
 
 - [x] T081 Reconfirm the canonical literature lane is `papers/downloads/`.
 - [x] T082 Reconfirm the canonical non-paper asset lane is `datasets/source_assets/`.
-- [ ] T083 Audit whether every source-cache doc links to a live research-facing note.
-- [ ] T084 Audit whether every high-value research note links back to a source cache doc.
+- [x] T083 Audit whether every source-cache doc links to a live research-facing note.
+- [x] T084 Audit whether every high-value research note links back to a source cache doc.
 - [ ] T085 Add a verifier for unresolved provenance placeholders in source docs.
 - [ ] T086 Audit topic-lane README coverage under `papers/downloads/`.
 - [ ] T087 Audit whether each cached topic has a corresponding source-notes lane.
 - [ ] T088 Reconcile legacy migration closeout docs with current file layout.
-- [ ] T089 Add checks for stale cache counts in `MASTER_INDEX.md`.
+- [x] T089 Add checks for stale cache counts in `MASTER_INDEX.md`.
 - [ ] T090 Verify that each repaired paper cited in docs resolves to the canonical path.
 - [ ] T091 Audit the Ishihara source-asset lane for downstream references.
 - [ ] T092 Add a small machine-readable registry for source-cache doc ownership.
@@ -130,5 +130,5 @@ Current tranche focus:
 - [ ] T096 Add periodic revalidation tasks for key web standards sources.
 - [ ] T097 Add a migration playbook for future research-local artifacts.
 - [ ] T098 Add a paper-count generation script if prose counts keep drifting.
-- [ ] T099 Audit whether bibliography files are canonical and non-duplicative.
+- [x] T099 Audit whether bibliography files are canonical and non-duplicative.
 - [ ] T100 Cut the next tranche from the remaining open items and rebaseline this ledger.

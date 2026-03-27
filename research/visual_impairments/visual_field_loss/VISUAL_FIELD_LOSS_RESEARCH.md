@@ -3,6 +3,10 @@
 **Research Date:** December 2024
 **Focus:** Hemianopia, tunnel vision, scotomas, peripheral and central vision loss
 
+Primary source lane:
+
+- [Vision clinical source cache](/home/eirikr/Github/openperception/docs/external_sources/vision_clinical_source_cache.md)
+
 ---
 
 ## Overview

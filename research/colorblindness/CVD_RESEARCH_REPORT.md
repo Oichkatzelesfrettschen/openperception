@@ -26,6 +26,9 @@
 Support-mode guide:
 
 - [Color support accommodation taxonomy](/home/eirikr/Github/openperception/docs/color-support-accommodation-taxonomy.md)
+- [Algorithm source cache](/home/eirikr/Github/openperception/docs/external_sources/algorithm_source_cache.md)
+- [Color vision source cache](/home/eirikr/Github/openperception/docs/external_sources/color_vision_source_cache.md)
+- [Vision clinical source cache](/home/eirikr/Github/openperception/docs/external_sources/vision_clinical_source_cache.md)
 
 ## Overview and Statistics
 
@@ -237,7 +240,6 @@ Up to **90% of patients** carry mutations in one of these genes:
 
 Primary source lane:
 
-- [Vision clinical source cache](/home/eirikr/Github/openperception/docs/external_sources/vision_clinical_source_cache.md)
 - [BCM primary source notes](/home/eirikr/Github/openperception/research/colorblindness/blue_cone_monochromacy/primary_source_notes.md)
 
 ### Definition

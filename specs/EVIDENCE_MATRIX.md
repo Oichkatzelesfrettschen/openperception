@@ -352,8 +352,8 @@ Each claim follows this structure:
 | UI Primitive | depth |
 | Constraint | soft_comfort |
 | Evidence | controlled_study |
-| Source | Wang and Saunders (2022); Nadler et al. (2016) |
-| Notes | Wang and Saunders found comparable texture-based slant performance under monocular conditions; motion parallax is helpful, but it must reinforce rather than replace static cues |
+| Source | Yang, Saunders, and Chen (2022); Kim, Angelaki, and DeAngelis (2016) |
+| Notes | Yang, Saunders, and Chen found comparable texture-based slant performance under monocular conditions; motion parallax is helpful, but it must reinforce rather than replace static cues |
 
 ### CLM-0053: Reduced-Motion Depth Preservation
 | Field | Value |
@@ -364,8 +364,8 @@ Each claim follows this structure:
 | UI Primitive | depth, feedback |
 | Constraint | soft_comfort |
 | Evidence | review_plus_standard |
-| Source | Nadler et al. (2016); Microsoft XAG 117 |
-| Notes | Nadler et al. treat motion parallax as a powerful and sufficient cue, but it is movement-dependent; if depth only "works" while the camera moves, the scene is underspecified |
+| Source | Kim, Angelaki, and DeAngelis (2016); Microsoft XAG 117 |
+| Notes | Kim, Angelaki, and DeAngelis treat motion parallax as a powerful and sufficient cue, but it is movement-dependent; if depth only "works" while the camera moves, the scene is underspecified |
 
 ---
 
