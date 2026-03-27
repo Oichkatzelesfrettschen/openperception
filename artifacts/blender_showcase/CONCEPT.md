@@ -4,22 +4,34 @@ This showcase is not a brand poster. It is a living concept model for the repo.
 
 ## What It Represents
 
-The scene depicts one operational flow:
+The scene should answer one plain question:
 
-1. Research
-2. Validation
-3. Accommodations
+- what does this repo do to a source view?
 
-That flow is meant literally:
+The answer is not a virtue word. The answer is:
 
-- the left lane stands for primary sources, provenance, and synthesis notes
-- the center lane stands for machine checks and evidence gates
-- the right lane stands for transformed outputs that keep the same source usable
-  under different perceptual needs
+- it takes a verified source
+- it keeps the evidence and provenance behind that source visible
+- it transforms that source into several concrete accessible views
 
-## What The Right Lane Must Show
+The current concept therefore uses:
 
-The accommodations lane is only valid if it demonstrates transformation in
+1. one verified source assembly in the back
+2. three foreground transformed views
+
+Those foreground views are:
+
+- color-safe
+- symbol-guided
+- depth-safe
+
+Research, provenance, and validation still matter, but they should appear as
+the machinery that feeds the source assembly, not as hero slogans on separate
+pedestals.
+
+## What The Foreground Must Show
+
+The transformed-view lane is only valid if it demonstrates transformation in
 action, not accommodation as a label. The current concept requires three
 distinct output modes:
 
@@ -28,7 +40,8 @@ distinct output modes:
 - depth-safe
 
 Those are not marketing categories. They are concrete ways one source view can
-be made more legible while preserving meaning.
+be made more legible while preserving meaning for conditions explicitly studied
+in the repo, especially colorblindness and stereoblindness.
 
 ## Depth Rule
 
@@ -59,13 +72,16 @@ surfaces instead of freezing as a one-off composition.
 
 ## How The Scene Must Stay Legible Without Captions
 
-The lane titles are only anchors. The forms themselves must carry the meaning:
+The labels are only anchors. The forms themselves must carry the meaning:
 
-- research should look like many source artifacts converging into a synthesized
-  body of evidence
-- validation should look like intake passing through checks with accepted and
-  rejected paths
-- accommodations should look like one source becoming several usable views
+- the back assembly should look like sources, notes, and checks becoming one
+  verified source
+- the color-safe view should look like color-only meaning being reinforced by
+  contrast, pattern, and markers
+- the guided-symbol view should look like direction and interpretation being
+  carried by explicit paths and symbols
+- the depth-safe view should look like depth meaning being carried by contour,
+  anchoring, relief, and static structure
 
 The scene should still make sense if a viewer only catches the large nouns and
 not the small plaque text.
@@ -75,10 +91,11 @@ not the small plaque text.
 The geometry is allowed to abstract, but it should stay tied to live repo data:
 
 - source cache document counts can drive how many source tiles or tabs feed the
-  research lane
-- primary-source-note counts can drive intake and gate cadence in validation
+  verified-source assembly
+- primary-source-note counts can drive intake and gate cadence before the
+  source is allowed to branch
 - accommodation outputs remain fixed at three because the concept explicitly
-  represents contrast-led, guided-symbol-led, and depth-safe views
+  represents color-safe, guided-symbol-led, and depth-safe views
 
 ## Failure Modes To Avoid
 
@@ -90,5 +107,5 @@ This lane should reject:
 - unreadable microtext
 - decorative symbolism that does not map to repo behavior
 
-If the scene stops reading as research passing through checks into adapted
-outputs, it has drifted away from the repo.
+If the scene stops reading as a verified source branching into concrete
+accessible views, it has drifted away from the repo.

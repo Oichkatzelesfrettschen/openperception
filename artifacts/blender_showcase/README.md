@@ -39,10 +39,11 @@ guidance:
 
 The scene is also expected to stay legible with low caption dependence:
 
-- research should read as many sources converging into synthesis
-- validation should read as intake passing through checks into accepted and
-  rejected paths
-- accommodations should read as one source branching into distinct usable views
+- the back assembly should read as a verified source built from sources,
+  provenance, notes, and checks
+- the left foreground view should read as color-safe
+- the center foreground view should read as symbol-guided
+- the right foreground view should read as depth-safe
 
 Generated repo stats are allowed to drive the cadence of those forms so the
 artifact remains a living concept instead of a frozen illustration.

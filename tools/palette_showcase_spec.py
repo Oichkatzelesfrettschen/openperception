@@ -45,47 +45,47 @@ RENDER_PREFERENCE = {
 TOKEN_SOURCES = (
     (
         "production-indigo-magenta",
-        "Research",
+        "Color-safe",
         REPO_ROOT / "tokens" / "color-tokens.json",
-        "Primary sources, provenance, and synthesized notes rendered as structured evidence.",
+        "A transformed view that reinforces color meaning with contrast, pattern, and markers.",
     ),
     (
         "accessible-mauve-burgundy",
-        "Validation",
+        "Symbol-guided",
         REPO_ROOT / "tokens" / "experimental-mauve-burgundy.json",
-        "Machine checks, constraints, and evidence gates that shape the repo's claims.",
+        "A transformed view that carries interpretation through explicit paths and symbols.",
     ),
     (
         "atmosphere-red-mahogany",
-        "Accommodations",
+        "Depth-safe",
         REPO_ROOT / "tokens" / "experimental-red-mahogany.json",
-        "One source branching into contrast-led, guided-symbol-led, and depth-safe outputs.",
+        "A transformed view that carries depth with contour, anchoring, and static relief cues.",
     ),
 )
 LIVING_CONCEPT = {
     "artifact_kind": "living_accessibility_concept_scene",
-    "scene_header": "OpenPerception accessibility system",
-    "plaque_text": "same source, adapted views",
-    "flow": ["research", "validation", "accommodations"],
+    "scene_header": "OpenPerception: verified source -> accessible views",
+    "plaque_text": "colorblindness -> pattern + contrast | stereoblindness -> contour + anchors",
+    "flow": ["verified_source", "color_safe", "guided", "depth_safe"],
     "caption_dependence": "low",
     "representation": {
-        "research": "Primary sources, cache provenance, and synthesis notes.",
-        "validation": "Machine checks and policy gates that keep claims honest.",
-        "accommodations": [
-            "contrast_led",
+        "verified_source": "Sources, provenance, and checks resolved into one trusted source view.",
+        "accessible_views": [
+            "color_safe",
             "guided_symbol_led",
             "depth_safe",
         ],
     },
     "visual_logic": {
-        "research": "many sources converge into synthesized evidence",
-        "validation": "intake passes through checks into accepted and rejected paths",
-        "accommodations": "one source branches into distinct usable transformed views",
+        "verified_source": "many sources and checks converge into one verified source",
+        "color_safe": "color-only meaning is reinforced by contrast, pattern, and markers",
+        "guided": "interpretation is carried by explicit paths, symbols, and direction",
+        "depth_safe": "depth meaning is carried by contour, anchoring, and static relief",
     },
     "repo_stats_binding": {
-        "research_sources_metric": "source_cache_doc_count",
-        "validation_inputs_metric": "primary_source_notes_count",
-        "validation_gate_metric": "source_cache_doc_count",
+        "verified_source_inputs_metric": "source_cache_doc_count",
+        "verified_source_notes_metric": "primary_source_notes_count",
+        "verified_source_gate_metric": "source_cache_doc_count",
         "accommodation_modes": 3,
     },
     "repo_stats_source": str(
