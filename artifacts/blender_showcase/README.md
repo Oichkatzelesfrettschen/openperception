@@ -15,6 +15,9 @@ Why this is tracked:
 
 Current source-of-truth files:
 
+- `CONCEPT.md`
+- `../../docs/generated/repo_stats.json`
+- `../../docs/generated/repo_stats.md`
 - `openperception_palette_showcase_spec.json`
 - `openperception_palette_showcase_render.png`
 - `openperception_palette_showcase_scene.blend`
