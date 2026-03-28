@@ -59,6 +59,14 @@ VIEW_SPECS = (
         ),
         "source_box": (1880, 460, 2940, 1520),
         "main_box": (1180, 120, 3540, 1780),
+        "animation_frames": tuple(
+            Path(
+                f"/home/eirikr/Github/Blackhole/.cache/showcase_motion_compare_orbit_near/"
+                f"frame_{frame_index:06d}.png"
+            )
+            for frame_index in range(8)
+        ),
+        "animation_output": "blackhole_lensing_depth_safe.gif",
     },
 )
 
@@ -303,6 +311,57 @@ def _build_blackhole_panel(spec: dict, output_dir: Path) -> dict[str, str]:
     return {"panel_texture": str(output_path), "source_path": str(spec["source_path"])}
 
 
+def _build_blackhole_animation(spec: dict, output_dir: Path) -> dict[str, object]:
+    source_crop = _open_crop(spec["source_path"], spec["source_box"])
+    source_inset = _dim_source(
+        source_crop,
+        (ANIMATION_SOURCE_BOX[2] - ANIMATION_SOURCE_BOX[0] - 8, ANIMATION_SOURCE_BOX[3] - ANIMATION_SOURCE_BOX[1] - 8),
+    )
+    inner_size = (
+        ANIMATION_MAIN_BOX[2] - ANIMATION_MAIN_BOX[0] - 32,
+        ANIMATION_MAIN_BOX[3] - ANIMATION_MAIN_BOX[1] - 32,
+    )
+    frames: list[Image.Image] = []
+    total = len(spec["animation_frames"])
+    for frame_index, frame_path in enumerate(spec["animation_frames"]):
+        transformed = _cover_crop(Image.open(frame_path).convert("RGB"), inner_size)
+        transformed = ImageEnhance.Brightness(transformed).enhance(1.2)
+        transformed = ImageEnhance.Contrast(transformed).enhance(1.55)
+        draw = ImageDraw.Draw(transformed)
+        width, height = transformed.size
+        cx = width * 0.5
+        cy = height * 0.5
+        for radius, color in ((150, "#FDE68A"), (220, "#FB923C"), (290, "#F8FAFC")):
+            draw.arc(
+                (cx - radius, cy - radius, cx + radius, cy + radius),
+                start=24,
+                end=336,
+                fill=color,
+                width=5,
+            )
+        progress = (frame_index + 1) / max(total, 1)
+        for angle_fraction in (0.12, 0.37, 0.68):
+            x = int(cx + math.cos(progress * math.pi * 0.35 + angle_fraction * math.tau) * width * 0.34)
+            y = int(cy + math.sin(progress * math.pi * 0.28 + angle_fraction * math.tau) * height * 0.24)
+            draw.line((x, y, cx, cy), fill="#E5E7EB", width=4)
+            draw.rectangle((x - 16, y - 16, x + 16, y + 16), fill="#111827", outline="#F8FAFC", width=3)
+        frames.append(_compose_animation_frame(source_inset, transformed, "#7C2D12"))
+    output_path = output_dir / spec["animation_output"]
+    frames[0].save(
+        output_path,
+        save_all=True,
+        append_images=frames[1:],
+        duration=180,
+        loop=0,
+        disposal=2,
+    )
+    return {
+        "animation_path": str(output_path),
+        "animation_basis": [str(path) for path in spec["animation_frames"]],
+        "frame_count": len(frames),
+    }
+
+
 def _load_gw_waveform_points(spec: dict, width: int, height: int) -> list[tuple[float, float]]:
     payload = json.loads(Path(spec["data_path"]).read_text(encoding="utf-8"))
     times = payload["arrays"]["real_time_s"]
@@ -447,6 +506,7 @@ PANEL_BUILDERS = {
 ANIMATION_BUILDERS = {
     "gw_chirp": _build_gw_animation,
     "neutrino_cooling": _build_neutrino_animation,
+    "blackhole_lensing": _build_blackhole_animation,
 }
 
 
@@ -479,6 +539,16 @@ def iter_showcase_source_inputs() -> list[dict[str, object]]:
                     "role": "animation_data",
                 }
             )
+        if "animation_frames" in spec:
+            for frame_path in spec["animation_frames"]:
+                inputs.append(
+                    {
+                        "id": spec["id"],
+                        "path": frame_path,
+                        "kind": "image",
+                        "role": "animation_frame",
+                    }
+                )
     return inputs
 
 

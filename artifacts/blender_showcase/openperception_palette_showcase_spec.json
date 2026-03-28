@@ -120,18 +120,27 @@
         "animation_path": "/home/eirikr/Github/openperception/artifacts/blender_showcase/animated/neutrino_cooling_guided.gif",
         "animation_basis": "/home/eirikr/Github/compact-common/dist/releases/neutrino-processes-explainer-contact-sheet-latest.png",
         "frame_count": 6
-      }
-    ],
-    "deferred_views": [
+      },
       {
         "id": "blackhole_lensing",
         "case_title": "Black Hole Lensing",
         "mode_label": "Depth-safe",
         "source_repo": "Blackhole",
-        "reason": "No real sibling-repo motion source is currently registered for this case; keep it as a still-only accessibility view until that changes.",
-        "source_path": "/home/eirikr/Github/Blackhole/logs/compare/compare_8_compute.png"
+        "animation_path": "/home/eirikr/Github/openperception/artifacts/blender_showcase/animated/blackhole_lensing_depth_safe.gif",
+        "animation_basis": [
+          "/home/eirikr/Github/Blackhole/.cache/showcase_motion_compare_orbit_near/frame_000000.png",
+          "/home/eirikr/Github/Blackhole/.cache/showcase_motion_compare_orbit_near/frame_000001.png",
+          "/home/eirikr/Github/Blackhole/.cache/showcase_motion_compare_orbit_near/frame_000002.png",
+          "/home/eirikr/Github/Blackhole/.cache/showcase_motion_compare_orbit_near/frame_000003.png",
+          "/home/eirikr/Github/Blackhole/.cache/showcase_motion_compare_orbit_near/frame_000004.png",
+          "/home/eirikr/Github/Blackhole/.cache/showcase_motion_compare_orbit_near/frame_000005.png",
+          "/home/eirikr/Github/Blackhole/.cache/showcase_motion_compare_orbit_near/frame_000006.png",
+          "/home/eirikr/Github/Blackhole/.cache/showcase_motion_compare_orbit_near/frame_000007.png"
+        ],
+        "frame_count": 8
       }
-    ]
+    ],
+    "deferred_views": []
   },
   "render_preference": {
     "preferred_engine": "octane",
@@ -1305,7 +1314,7 @@
       "source_repo": "Blackhole",
       "panel_texture": "/home/eirikr/Github/openperception/artifacts/blender_showcase/generated/blackhole_lensing_panel.png",
       "real_source_path": "/home/eirikr/Github/Blackhole/logs/compare/compare_8_compute.png",
-      "animated_artifact": null
+      "animated_artifact": "/home/eirikr/Github/openperception/artifacts/blender_showcase/animated/blackhole_lensing_depth_safe.gif"
     }
   ]
 }

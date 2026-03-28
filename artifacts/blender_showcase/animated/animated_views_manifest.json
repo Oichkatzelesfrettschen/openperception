@@ -1,15 +1,6 @@
 {
   "concept": "animated accessible views derived from real sibling-repo physics artifacts",
-  "deferred_views": [
-    {
-      "case_title": "Black Hole Lensing",
-      "id": "blackhole_lensing",
-      "mode_label": "Depth-safe",
-      "reason": "No real sibling-repo motion source is currently registered for this case; keep it as a still-only accessibility view until that changes.",
-      "source_path": "/home/eirikr/Github/Blackhole/logs/compare/compare_8_compute.png",
-      "source_repo": "Blackhole"
-    }
-  ],
+  "deferred_views": [],
   "generated_dir": "/home/eirikr/Github/openperception/artifacts/blender_showcase/animated",
   "schema_version": 1,
   "views": [
@@ -30,6 +21,24 @@
       "id": "neutrino_cooling",
       "mode_label": "Symbol-guided",
       "source_repo": "compact-common"
+    },
+    {
+      "animation_basis": [
+        "/home/eirikr/Github/Blackhole/.cache/showcase_motion_compare_orbit_near/frame_000000.png",
+        "/home/eirikr/Github/Blackhole/.cache/showcase_motion_compare_orbit_near/frame_000001.png",
+        "/home/eirikr/Github/Blackhole/.cache/showcase_motion_compare_orbit_near/frame_000002.png",
+        "/home/eirikr/Github/Blackhole/.cache/showcase_motion_compare_orbit_near/frame_000003.png",
+        "/home/eirikr/Github/Blackhole/.cache/showcase_motion_compare_orbit_near/frame_000004.png",
+        "/home/eirikr/Github/Blackhole/.cache/showcase_motion_compare_orbit_near/frame_000005.png",
+        "/home/eirikr/Github/Blackhole/.cache/showcase_motion_compare_orbit_near/frame_000006.png",
+        "/home/eirikr/Github/Blackhole/.cache/showcase_motion_compare_orbit_near/frame_000007.png"
+      ],
+      "animation_path": "/home/eirikr/Github/openperception/artifacts/blender_showcase/animated/blackhole_lensing_depth_safe.gif",
+      "case_title": "Black Hole Lensing",
+      "frame_count": 8,
+      "id": "blackhole_lensing",
+      "mode_label": "Depth-safe",
+      "source_repo": "Blackhole"
     }
   ]
 }

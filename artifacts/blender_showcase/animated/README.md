@@ -7,6 +7,7 @@ Current tracked artifacts:
 
 - `gw_chirp_accessible.gif`
 - `neutrino_cooling_guided.gif`
+- `blackhole_lensing_depth_safe.gif`
 - `animated_views_manifest.json`
 
 What they are:
@@ -24,11 +25,12 @@ What they are:
   - transformation: the explainer view becomes more guided through explicit
     arrows, marked process points, and a clearer progress cue
 
-What is not tracked yet:
-
-- there is no `blackhole_lensing` animation here yet because no real sibling-repo
-  motion source is currently registered for that case
-- the black-hole lane remains a still-only accessibility view until that changes
+- `blackhole_lensing_depth_safe.gif`
+  - basis: real sibling `Blackhole` desktop record frames in
+    `/home/eirikr/Github/Blackhole/.cache/showcase_motion_compare_orbit_near/`
+    generated with the `compare-orbit-near` profile
+  - transformation: the orbit view becomes more depth-safe through stronger
+    contour arcs, anchor boxes, and clearer static relief cues
 
 Regeneration path:
 

@@ -37,11 +37,8 @@ The current tracked animated views are:
   sibling-repo chirp render
 - `Neutrino Cooling` animated from real frames in the sibling-repo contact
   sheet
-
-The current deferred animated view is:
-
-- `Black Hole Lensing`, because there is not yet a real sibling-repo motion
-  source registered for that case
+- `Black Hole Lensing` animated from real sibling `Blackhole` desktop record
+  frames generated with the `compare-orbit-near` recording profile
 
 For the still `Black Hole Lensing` case, the current source basis is the
 sibling `Blackhole` desktop/OpenGL compare capture

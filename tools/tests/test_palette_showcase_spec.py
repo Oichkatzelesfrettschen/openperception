@@ -83,10 +83,11 @@ def test_showcase_spec_embeds_live_repo_snapshot() -> None:
     assert [entry["id"] for entry in payload["animated_views"]["views"]] == [
         "gw_chirp",
         "neutrino_cooling",
+        "blackhole_lensing",
     ]
-    assert payload["animated_views"]["deferred_views"][0]["id"] == "blackhole_lensing"
+    assert payload["animated_views"]["deferred_views"] == []
     for lane in payload["lanes"]:
         assert Path(lane["panel_texture"]).exists()
     assert Path(payload["lanes"][0]["animated_artifact"]).exists()
     assert Path(payload["lanes"][1]["animated_artifact"]).exists()
-    assert payload["lanes"][2]["animated_artifact"] is None
+    assert Path(payload["lanes"][2]["animated_artifact"]).exists()

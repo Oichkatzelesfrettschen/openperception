@@ -25,6 +25,7 @@ Current source-of-truth files:
 - `animated/animated_views_manifest.json`
 - `animated/gw_chirp_accessible.gif`
 - `animated/neutrino_cooling_guided.gif`
+- `animated/blackhole_lensing_depth_safe.gif`
 - `openperception_palette_showcase_spec.json`
 - `openperception_palette_showcase_render.png`
 - `openperception_palette_showcase_scene.blend`
@@ -57,9 +58,9 @@ The animated lane is expected to stay just as concrete:
   into a clearer chirp-focused accessible view
 - `animated/neutrino_cooling_guided.gif` should read as real captured neutrino
   explainer frames turned into a more guided process view
-
-The black-hole case is still intentionally still-only right now. We do not add
-decorative motion there unless a real sibling-repo motion source exists.
+- `animated/blackhole_lensing_depth_safe.gif` should read as real `Blackhole`
+  desktop orbit frames turned into a depth-safe lensing view with contour and
+  anchor reinforcement
 
 For the current black-hole still, the honest source basis is the sibling
 `Blackhole` desktop/OpenGL compare capture at
