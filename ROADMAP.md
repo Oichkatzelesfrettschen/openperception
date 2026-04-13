@@ -35,7 +35,7 @@ Create the most comprehensive, evidence-based toolkit for visual accessibility, 
 - [ ] Validator framework expansion and policy reconciliation
 - [ ] Performance optimization (array allocation)
 - [ ] Web-based examples expansion
-- [ ] Governance and installation-requirements reconciliation
+- [x] Governance and installation-requirements reconciliation (Phases 1-9 complete)
 
 ---
 
@@ -53,7 +53,7 @@ Create the most comprehensive, evidence-based toolkit for visual accessibility, 
 
 - [x] Implement all CLI subcommands in `daltonlens/main.py`
 - [x] Create CLI integration tests (direct-call tests in `test_cli_direct.py`, 83% coverage)
-- [ ] Add batch processing support (T125, planned Phase 8)
+- [x] Add batch processing support (T125: `--batch GLOB --output-dir` implemented)
 - [x] Document CLI usage comprehensively (T115: updated DaltonLens-Python README with full CLI reference)
 
 ### Validator Implementation

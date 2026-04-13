@@ -14,11 +14,17 @@ Each entry carries an `opened: YYYY-MM-DD` field so stale issues can be detected
 by date comparison (T127).  Issues not resolved within one major tranche should
 receive an explicit resolution-path update.
 
+High-risk entries (implementation gap class) carry an `owner:` field and a
+`milestone:` field so they can be assigned and prioritized against ROADMAP
+version targets (T018, T019).
+
 ## KI-001 Root Tooling Python Floor Is Underspecified
 
 - class: documentation gap
 - status: open
 - opened: 2026-03-26
+- owner: unassigned
+- milestone: ongoing (docs updated; no further milestone gate required)
 - affected files: `README.md`, `REQUIREMENTS.md`, `pyproject.toml`, `tools/`
 - problem: top-level docs previously said `Python 3.8+`, but the repo-owned
   root tooling uses PEP 604 union syntax such as `Path | None`, which requires
@@ -33,6 +39,8 @@ receive an explicit resolution-path update.
 - class: tooling gap
 - status: mitigated
 - opened: 2026-03-26
+- owner: unassigned
+- milestone: v0.2.0+ (PEP 621 migration deferred to this version)
 - affected files: `algorithms/DaltonLens-Python/setup.cfg`,
   `algorithms/DaltonLens-Python/pyproject.toml`,
   `docs/module-requirements/daltonlens-python.md`
@@ -51,6 +59,8 @@ receive an explicit resolution-path update.
 - class: tooling gap
 - status: open
 - opened: 2026-03-26
+- owner: unassigned
+- milestone: v0.2.0 (CI/CD hardening; Geometry3D install documented, venv provisioned)
 - affected files: `Makefile`, `requirements-dev.txt`,
   `docs/module-requirements/daltonlens-python.md`
 - problem: the full `DaltonLens-Python` test lane requires a local virtual
@@ -65,6 +75,8 @@ receive an explicit resolution-path update.
 - class: documentation gap
 - status: open
 - opened: 2026-03-26
+- owner: unassigned
+- milestone: ongoing (reconciled each major tranche; no fixed version gate)
 - affected files: `ROADMAP.md`, `docs/current-work-inventory.md`,
   `CHANGELOG.md`, `MASTER_INDEX.md`
 - problem: some strategic docs are snapshots or ambition ledgers, while others
@@ -82,6 +94,8 @@ receive an explicit resolution-path update.
 - class: tooling gap
 - status: open
 - opened: 2026-03-26
+- owner: unassigned
+- milestone: v0.3.0+ (rendered-audit policy stabilized; Blender/Octane remain host-managed)
 - affected files: `REQUIREMENTS.md`, `artifacts/blender_showcase/REQUIREMENTS.md`,
   `.github/workflows/python-tests.yml`, `tools/rendered_spatial_check.py`,
   `tools/rendered_cognitive_check.py`
@@ -99,6 +113,8 @@ receive an explicit resolution-path update.
 - class: evidence gap
 - status: open
 - opened: 2026-03-26
+- owner: unassigned
+- milestone: ongoing (Phase 9 closed T053, T054, T093; remaining gaps deferred)
 - affected files: `specs/CLAIMS_RUNTIME_REGISTRY.json`,
   `docs/external_sources/`, `docs/repo-audit-2026-03-26.md`
 - problem: some repo narrative claims have been audited and downgraded, but not
@@ -114,6 +130,8 @@ receive an explicit resolution-path update.
 - class: implementation gap
 - status: open
 - opened: 2026-04-10
+- owner: unassigned (requires token design judgment)
+- milestone: v0.3.0 (validator expansion tranche)
 - affected files: `tokens/color-tokens.json` (mono variant),
   `tools/validators/cvd.py`, `tools/validators/achromat.py`
 - problem: GATE-003 (CVD) reports `mono/primary-vs-accent` at Oklab distance
@@ -138,6 +156,8 @@ receive an explicit resolution-path update.
 - class: implementation gap
 - status: open
 - opened: 2026-04-10
+- owner: unassigned (requires token design judgment; resolve alongside KI-007)
+- milestone: v0.3.0 (validator expansion tranche; resolve together with KI-007)
 - affected files: `tokens/color-tokens.json` (mono variant, viz.categorical),
   `tools/validators/achromat.py`
 - problem: GATE-007 (ACHROMAT) reports `mono/viz.categorical[0-1]` contrast

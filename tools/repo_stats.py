@@ -128,6 +128,18 @@ def render_repo_stats_markdown(stats: dict) -> str:
             "- canonical literature counted from `papers/downloads/**/*.pdf`",
             "- top-level paper docs counted from `papers/*.md`",
             "- research docs counted from `research/**/*.md`",
+            "",
+            "## What Is NOT Counted Here",
+            "",
+            "Compendium entry counts (the paper totals listed in `papers/*.md` narrative",
+            "documents such as `colorblindness_algorithms_compendium.md`) are NOT",
+            "machine-generated here. Those files use heterogeneous structures",
+            "(numbered lists, `###` section headers, bold author blocks) that require",
+            "a format-specific parser per file to count accurately. The prose counts",
+            "in those files use `+` qualifiers (e.g., `50+`) to signal that they are",
+            "approximate. If compendium entry counts begin drifting materially, add a",
+            "dedicated counting function here per file using the file's native marker",
+            "pattern (see T098 in `docs/task-ledger.md`).",
         ]
     )
     return "\n".join(lines) + "\n"

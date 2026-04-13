@@ -36,8 +36,8 @@ Current tranche focus:
 - [x] T015 Expand governance checks to cover additional strategic docs.
 - [ ] T016 Add machine-readable task metadata if markdown proves too weak.
 - [x] T017 Add issue aging fields so stale debt can be detected automatically.
-- [ ] T018 Add owners or maintainers for high-risk debt items.
-- [ ] T019 Add due-date or milestone mapping for critical debt items.
+- [x] T018 Add owners or maintainers for high-risk debt items.
+- [x] T019 Add due-date or milestone mapping for critical debt items.
 - [ ] T020 Reconcile governance docs after each major tranche automatically.
 
 ## Phase 2. Installation Requirements And Reproducibility
@@ -78,8 +78,8 @@ Current tranche focus:
 - [x] T050 Audit every statistics claim in `MASTER_INDEX.md`.
 - [x] T051 Audit research-count claims in paper compendiums for reproducible counting.
 - [x] T052 Add source-index references for roadmap-level standards claims.
-- [ ] T053 Add source-index references for major depth-accommodation claims not yet indexed.
-- [ ] T054 Add source-index references for major color-support taxonomy claims not yet indexed.
+- [x] T053 Add source-index references for major depth-accommodation claims not yet indexed.
+- [x] T054 Add source-index references for major color-support taxonomy claims not yet indexed.
 - [x] T055 Add an overclaim phrase linter for unsupported certainty words.
 - [x] T056 Add a stats generator for local corpus counts instead of hardcoded prose counts.
 - [x] T057 Reconcile cache counts between `MASTER_INDEX.md` and actual files.
@@ -121,15 +121,15 @@ Current tranche focus:
 - [x] T087 Audit whether each cached topic has a corresponding source-notes lane.
 - [x] T088 Reconcile legacy migration closeout docs with current file layout.
 - [x] T089 Add checks for stale cache counts in `MASTER_INDEX.md`.
-- [ ] T090 Verify that each repaired paper cited in docs resolves to the canonical path.
-- [ ] T091 Audit the Ishihara source-asset lane for downstream references.
-- [ ] T092 Add a small machine-readable registry for source-cache doc ownership.
-- [ ] T093 Add a source-index doc for any remaining uncached but repeatedly cited external source.
+- [x] T090 Verify that each repaired paper cited in docs resolves to the canonical path.
+- [x] T091 Audit the Ishihara source-asset lane for downstream references.
+- [x] T092 Add a small machine-readable registry for source-cache doc ownership.
+- [x] T093 Add a source-index doc for any remaining uncached but repeatedly cited external source.
 - [x] T094 Verify that all provenance docs use stable ASCII-only filenames.
-- [ ] T095 Review whether any cached HTML traces should be upgraded to PDFs if now accessible.
-- [ ] T096 Add periodic revalidation tasks for key web standards sources.
-- [ ] T097 Add a migration playbook for future research-local artifacts.
-- [ ] T098 Add a paper-count generation script if prose counts keep drifting.
+- [x] T095 Review whether any cached HTML traces should be upgraded to PDFs if now accessible.
+- [x] T096 Add periodic revalidation tasks for key web standards sources.
+- [x] T097 Add a migration playbook for future research-local artifacts.
+- [x] T098 Add a paper-count generation script if prose counts keep drifting.
 - [x] T099 Audit whether bibliography files are canonical and non-duplicative.
 - [x] T100 Cut the next tranche from the remaining open items and rebaseline this ledger.
 

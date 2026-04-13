@@ -49,3 +49,42 @@ Resolution path: re-fetch each PDF via its DOI or PMC ID in a session where
 PMC direct-download is available. Replace the `.html` primary artifact with
 the PDF and retain the `.pdf.trace.html` as a provenance record. Update the
 corresponding source-cache doc to reflect the new access mode.
+
+## Playbook For Future Migrations (T097)
+
+Use this playbook whenever a research artifact needs to move between canonical
+locations or access modes.
+
+### When to run a migration
+
+- A PDF is found under `research/` rather than `papers/downloads/`.
+- A non-paper dataset asset is found under `papers/downloads/` rather than
+  `datasets/source_assets/`.
+- An HTML trace can now be upgraded to a PDF.
+- A paper tracked only in a compendium is downloaded for the first time.
+
+### Steps
+
+1. **Identify the artifact** and determine its canonical destination:
+   - Literature papers -> `papers/downloads/<topic>/`
+   - Dataset support assets -> `datasets/source_assets/<asset-name>/`
+
+2. **Move the file** with `git mv` to preserve history.
+
+3. **Add a CANONICAL_REGISTRY.json entry** (or update an existing one) under
+   `papers/downloads/CANONICAL_REGISTRY.json` with the artifact ID, citation,
+   canonical path(s), and access mode.
+
+4. **Update the source-cache doc** in `docs/external_sources/` for the topic
+   lane. Change the `Local Artifacts` column to the new canonical path and
+   update the `Access Mode` if it changed (e.g., HTML -> PDF).
+
+5. **Add a row to this inventory file** recording the former path, resolution,
+   and current location.
+
+6. **Run `make check-paper-corpus`** to confirm the registry verifier passes.
+
+7. **Run `make integrity-check`** to confirm all governance checks still pass.
+
+8. **Commit** with a message referencing the artifact ID and the task or issue
+   that triggered the migration.
