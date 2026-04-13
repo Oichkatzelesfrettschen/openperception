@@ -174,7 +174,7 @@ and close the most actionable open governance items.
   one task or issue row per error (T069).
 - [x] T112 Review and tighten root Makefile lint targets -- confirm
   breadth is appropriate (not too broad or too narrow) (T080).
-- [ ] T113 Add machine-checkable install smoke tests for root and module
+- [x] T113 Add machine-checkable install smoke tests for root and module
   lanes (`make smoke-test` target) (T038).
 - [ ] T114 Add `--batch` / glob-pattern support to `daltonlens` CLI for
   processing multiple images in one invocation.
