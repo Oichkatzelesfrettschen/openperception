@@ -218,12 +218,14 @@ class CVDGate(ValidatorGate):
             msg = (
                 f"Oklab distance {dist:.3f} in borderline range "
                 f"[{fail_threshold:.2f}, {warn_threshold:.2f})"
+                " -- see docs/KNOWN_ISSUES.md KI-007"
             )
         else:
             status = Status.FAIL
             msg = (
                 f"Oklab distance {dist:.3f} < {fail_threshold:.2f} "
                 "(insufficient separation)"
+                " -- see docs/KNOWN_ISSUES.md KI-007"
             )
 
         result.checks.append(

@@ -159,3 +159,31 @@ Phase 6 follow-through outcomes:
   transformations
 - sibling-repo showcase source inputs now have a repo-owned integrity check and
   are wired into the aggregate integrity lane
+
+## Phase 7. Code Quality, CLI Polish, And Governance Closeout
+
+Focus: push Python test coverage from 83% to 90%+, improve verifier
+error-message quality, add batch CLI, harden install verifiability,
+and close the most actionable open governance items.
+
+- [x] T109 Mark CLI integration tests complete in ROADMAP (direct-call
+  tests registered in pytest-cov; 83% main.py coverage achieved).
+- [x] T110 Add coverage for error-path branches in `daltonlens/main.py`
+  (PIL load failure, PIL save failure) to push coverage above 90%.
+- [x] T111 Improve verifier error messages to point to one exact file and
+  one task or issue row per error (T069).
+- [ ] T112 Review and tighten root Makefile lint targets -- confirm
+  breadth is appropriate (not too broad or too narrow) (T080).
+- [ ] T113 Add machine-checkable install smoke tests for root and module
+  lanes (`make smoke-test` target) (T038).
+- [ ] T114 Add `--batch` / glob-pattern support to `daltonlens` CLI for
+  processing multiple images in one invocation.
+- [ ] T115 Add comprehensive CLI usage documentation in the DaltonLens-Python
+  README or a dedicated CLI guide under docs/.
+- [ ] T116 Add regression fixtures for any validator bug uncovered during
+  Phase 4-7 (T078).
+- [ ] T117 Expand governance checks to cover additional strategic docs
+  (ARCHITECTURE.md, ROADMAP.md) (T015).
+- [ ] T118 Add a verifier for unresolved provenance placeholders in source
+  docs (T085).
+- [ ] T119 Cut Phase 8 tranche from remaining open items and rebaseline.

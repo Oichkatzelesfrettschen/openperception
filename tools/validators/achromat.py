@@ -176,6 +176,7 @@ class AchromatGate(ValidatorGate):
                         message=(
                             f"viz.categorical[0] and [1] both map to {c0} in mono mode "
                             "(expected: marker/dash redundancy compensates for colour loss)"
+                            " -- see docs/KNOWN_ISSUES.md KI-008"
                         ),
                     )
                 )
@@ -183,11 +184,14 @@ class AchromatGate(ValidatorGate):
                 ratio = contrast_ratio(c0, c1)
                 # For non-text visual elements use 3:1 threshold
                 status = Status.PASS if ratio >= CONTRAST_WARN else Status.WARN
+                ki_ref = " -- see docs/KNOWN_ISSUES.md KI-008" if status == Status.WARN else ""
                 result.checks.append(
                     CheckResult(
                         name="mono/viz.categorical[0-1] contrast",
                         status=status,
-                        message=f"{ratio:.2f}:1 between categorical[0] ({c0}) and [1] ({c1})",
+                        message=(
+                            f"{ratio:.2f}:1 between categorical[0] ({c0}) and [1] ({c1}){ki_ref}"
+                        ),
                         value=ratio,
                         threshold=CONTRAST_WARN,
                     )

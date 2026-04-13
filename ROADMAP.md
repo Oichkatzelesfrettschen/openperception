@@ -44,16 +44,17 @@ Create the most comprehensive, evidence-based toolkit for visual accessibility, 
 ### Infrastructure Hardening
 
 - [ ] Complete all CI/CD pipelines
-- [ ] Achieve 90%+ test coverage for Python package
+- [x] Achieve 90%+ test coverage for Python package (90% achieved; simulate.py 97%)
+- [ ] Add machine-checkable install smoke tests (T113)
 - [ ] Add cross-platform build validation (Linux, macOS, Windows)
 - [ ] Set up automated documentation deployment
 
 ### CLI Enhancements
 
 - [x] Implement all CLI subcommands in `daltonlens/main.py`
-- [ ] Add batch processing support
-- [ ] Create CLI integration tests
-- [ ] Document CLI usage comprehensively
+- [x] Create CLI integration tests (direct-call tests in `test_cli_direct.py`, 83% coverage)
+- [ ] Add batch processing support (T114)
+- [ ] Document CLI usage comprehensively (T115)
 
 ### Validator Implementation
 
