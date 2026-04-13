@@ -17,12 +17,21 @@ Machine-readable bibliography support now lives in:
 
 ### Web Accessibility Standards
 
-- WCAG 2.1 Understanding SC 1.4.3 Contrast (Minimum):
+- WCAG 2.1 Understanding SC 1.4.3 Contrast (Minimum) -- 4.5:1 normal text / 3:1 large text:
   https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html
+- WCAG 2.1 Understanding SC 1.4.11 Non-text Contrast -- 3:1 UI components and graphics:
+  https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html
 - WCAG 2.2 Understanding SC 2.4.13 Focus Appearance:
   https://www.w3.org/WAI/WCAG22/Understanding/focus-appearance.html
 - WCAG 2.2 Understanding SC 2.3.1 Three Flashes Or Below Threshold:
   https://www.w3.org/WAI/WCAG22/Understanding/three-flashes-or-below-threshold.html
+
+### Ergonomics And ISO Standards
+
+- ISO 9241-171:2008 Ergonomics of human-system interaction -- Part 171:
+  Guidance on software accessibility.  Cited as a foundational standard
+  in the ROADMAP priority matrix.  Abstract and scope at:
+  https://www.iso.org/standard/39080.html
 
 ### Depth And Stereoblindness
 

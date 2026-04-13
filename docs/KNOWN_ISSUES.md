@@ -10,10 +10,15 @@ Issue classes:
 - tooling gap: local setup or validation depends on undeclared prerequisites
 - evidence gap: a claim exists without enough primary-source or runtime support
 
+Each entry carries an `opened: YYYY-MM-DD` field so stale issues can be detected
+by date comparison (T127).  Issues not resolved within one major tranche should
+receive an explicit resolution-path update.
+
 ## KI-001 Root Tooling Python Floor Is Underspecified
 
 - class: documentation gap
 - status: open
+- opened: 2026-03-26
 - affected files: `README.md`, `REQUIREMENTS.md`, `pyproject.toml`, `tools/`
 - problem: top-level docs previously said `Python 3.8+`, but the repo-owned
   root tooling uses PEP 604 union syntax such as `Path | None`, which requires
@@ -27,6 +32,7 @@ Issue classes:
 
 - class: tooling gap
 - status: mitigated
+- opened: 2026-03-26
 - affected files: `algorithms/DaltonLens-Python/setup.cfg`,
   `algorithms/DaltonLens-Python/pyproject.toml`,
   `docs/module-requirements/daltonlens-python.md`
@@ -44,6 +50,7 @@ Issue classes:
 
 - class: tooling gap
 - status: open
+- opened: 2026-03-26
 - affected files: `Makefile`, `requirements-dev.txt`,
   `docs/module-requirements/daltonlens-python.md`
 - problem: the full `DaltonLens-Python` test lane requires a local virtual
@@ -57,6 +64,7 @@ Issue classes:
 
 - class: documentation gap
 - status: open
+- opened: 2026-03-26
 - affected files: `ROADMAP.md`, `docs/current-work-inventory.md`,
   `CHANGELOG.md`, `MASTER_INDEX.md`
 - problem: some strategic docs are snapshots or ambition ledgers, while others
@@ -73,6 +81,7 @@ Issue classes:
 
 - class: tooling gap
 - status: open
+- opened: 2026-03-26
 - affected files: `REQUIREMENTS.md`, `artifacts/blender_showcase/REQUIREMENTS.md`,
   `.github/workflows/python-tests.yml`, `tools/rendered_spatial_check.py`,
   `tools/rendered_cognitive_check.py`
@@ -89,6 +98,7 @@ Issue classes:
 
 - class: evidence gap
 - status: open
+- opened: 2026-03-26
 - affected files: `specs/CLAIMS_RUNTIME_REGISTRY.json`,
   `docs/external_sources/`, `docs/repo-audit-2026-03-26.md`
 - problem: some repo narrative claims have been audited and downgraded, but not
@@ -103,6 +113,7 @@ Issue classes:
 
 - class: implementation gap
 - status: open
+- opened: 2026-04-10
 - affected files: `tokens/color-tokens.json` (mono variant),
   `tools/validators/cvd.py`, `tools/validators/achromat.py`
 - problem: GATE-003 (CVD) reports `mono/primary-vs-accent` at Oklab distance
@@ -126,6 +137,7 @@ Issue classes:
 
 - class: implementation gap
 - status: open
+- opened: 2026-04-10
 - affected files: `tokens/color-tokens.json` (mono variant, viz.categorical),
   `tools/validators/achromat.py`
 - problem: GATE-007 (ACHROMAT) reports `mono/viz.categorical[0-1]` contrast

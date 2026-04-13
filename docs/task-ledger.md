@@ -33,9 +33,9 @@ Current tranche focus:
 - [x] T012 Add a fast repo-integrity entrypoint to `Makefile`.
 - [x] T013 Wire the governance check into `Makefile` help and phony targets.
 - [x] T014 Add a dedicated CI or default `make check` lane for all integrity verifiers.
-- [ ] T015 Expand governance checks to cover additional strategic docs.
+- [x] T015 Expand governance checks to cover additional strategic docs.
 - [ ] T016 Add machine-readable task metadata if markdown proves too weak.
-- [ ] T017 Add issue aging fields so stale debt can be detected automatically.
+- [x] T017 Add issue aging fields so stale debt can be detected automatically.
 - [ ] T018 Add owners or maintainers for high-risk debt items.
 - [ ] T019 Add due-date or milestone mapping for critical debt items.
 - [ ] T020 Reconcile governance docs after each major tranche automatically.
@@ -60,7 +60,7 @@ Current tranche focus:
   and browser dependencies.
 - [x] T036 Add contributor instructions for Playwright browser bootstrap if required.
 - [ ] T037 Add a reproducible environment bootstrap script if the docs remain too manual.
-- [ ] T038 Add machine-checkable install smoke tests for root and module lanes.
+- [x] T038 Add machine-checkable install smoke tests for root and module lanes.
 - [ ] T039 Validate build docs on a second host profile.
 - [x] T040 Close any remaining mismatch between docs and actual install commands.
 
@@ -97,7 +97,7 @@ Current tranche focus:
 - [x] T066 Add `tools/check_paper_corpus.py` to the broader default check lane.
 - [x] T067 Add `tools/check_source_assets.py` to the broader default check lane.
 - [x] T068 Add a `make check` umbrella target once scope is settled.
-- [ ] T069 Ensure every verifier error points to one exact file and task or issue row.
+- [x] T069 Ensure every verifier error points to one exact file and task or issue row.
 - [x] T070 Add JSON output mode to repo-governance verifiers for future automation.
 - [x] T071 Audit whether `tools/validate.py` should fail on warnings for selected profiles.
 - [x] T072 Decide whether rendered audits belong in default or optional validation.
@@ -106,9 +106,9 @@ Current tranche focus:
 - [x] T075 Add a typography debt issue row for the current TYPE-001 warning.
 - [x] T076 Add CVD borderline-separation debt issue rows for the current GATE-003 warnings.
 - [x] T077 Add cognitive reading-level debt issue rows for the current GATE-006 warnings.
-- [ ] T078 Add regression fixtures for any validator bug uncovered during the tranche.
+- [x] T078 Add regression fixtures for any validator bug uncovered during the tranche.
 - [x] T079 Confirm the Makefile help text stays synchronized with real targets.
-- [ ] T080 Review whether root lint targets are too broad or too narrow.
+- [x] T080 Review whether root lint targets are too broad or too narrow.
 
 ## Phase 5. Research Corpus, Cache, And Provenance Discipline
 
@@ -116,7 +116,7 @@ Current tranche focus:
 - [x] T082 Reconfirm the canonical non-paper asset lane is `datasets/source_assets/`.
 - [x] T083 Audit whether every source-cache doc links to a live research-facing note.
 - [x] T084 Audit whether every high-value research note links back to a source cache doc.
-- [ ] T085 Add a verifier for unresolved provenance placeholders in source docs.
+- [x] T085 Add a verifier for unresolved provenance placeholders in source docs.
 - [ ] T086 Audit topic-lane README coverage under `papers/downloads/`.
 - [ ] T087 Audit whether each cached topic has a corresponding source-notes lane.
 - [ ] T088 Reconcile legacy migration closeout docs with current file layout.
@@ -176,14 +176,41 @@ and close the most actionable open governance items.
   breadth is appropriate (not too broad or too narrow) (T080).
 - [x] T113 Add machine-checkable install smoke tests for root and module
   lanes (`make smoke-test` target) (T038).
-- [ ] T114 Add `--batch` / glob-pattern support to `daltonlens` CLI for
+- [x] T114 Add `--batch` / glob-pattern support to `daltonlens` CLI for
   processing multiple images in one invocation.
-- [ ] T115 Add comprehensive CLI usage documentation in the DaltonLens-Python
+- [x] T115 Add comprehensive CLI usage documentation in the DaltonLens-Python
   README or a dedicated CLI guide under docs/.
-- [ ] T116 Add regression fixtures for any validator bug uncovered during
+- [x] T116 Add regression fixtures for any validator bug uncovered during
   Phase 4-7 (T078).
 - [x] T117 Expand governance checks to cover additional strategic docs
   (ARCHITECTURE.md, ROADMAP.md) (T015).
 - [x] T118 Add a verifier for unresolved provenance placeholders in source
   docs (T085).
-- [ ] T119 Cut Phase 8 tranche from remaining open items and rebaseline.
+- [x] T119 Cut Phase 8 tranche from remaining open items and rebaseline.
+
+## Phase 8. Corpus Audit, Batch CLI, And Governance Closeout
+
+Focus: close cross-phase backlog items that accumulated across Phases 1-7,
+audit the research-corpus topology, add batch processing to the CLI, and
+reconcile stale markers so the ledger accurately reflects repo state.
+
+- [x] T120 Reconcile parent task markers: mark T015, T038, T069, T080,
+  T085 as done in this ledger because their scope was completed by T117,
+  T113, T111, T112, and T118 respectively.
+- [x] T121 Update `ROADMAP.md` to reflect T113 (smoke tests) and T115
+  (CLI docs) as completed and reconcile any other stale short-term markers.
+- [x] T122 Audit topic-lane README coverage under `papers/downloads/` --
+  confirm each subdirectory has a README and flag any missing ones (T086).
+- [x] T123 Verify that all provenance docs in `docs/external_sources/` and
+  `research/` use stable ASCII-only filenames with no spaces or non-ASCII
+  characters (T094).
+- [x] T124 Add source-index references for ROADMAP-level standards claims
+  not yet indexed (WCAG 1.4.3, WCAG 1.4.11, ISO 9241-171) (T052).
+- [x] T125 Add `--batch` / glob-pattern support to `daltonlens` CLI so
+  multiple images can be processed in one invocation (T114).
+- [x] T126 Add at least one regression fixture for a known validator
+  behavior (GATE-003 borderline separation) to `tools/tests/` (T116 / T078).
+- [x] T127 Add an issue-date field to each entry in `docs/KNOWN_ISSUES.md`
+  so stale debt can be detected by date comparison (T017).
+- [x] T128 Commit the completed Phase 8 work and confirm all integrity
+  checks pass on `main`.

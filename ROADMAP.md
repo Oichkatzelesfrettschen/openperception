@@ -45,7 +45,7 @@ Create the most comprehensive, evidence-based toolkit for visual accessibility, 
 
 - [ ] Complete all CI/CD pipelines
 - [x] Achieve 90%+ test coverage for Python package (90% achieved; simulate.py 97%)
-- [ ] Add machine-checkable install smoke tests (T113)
+- [x] Add machine-checkable install smoke tests (T113: `make smoke-test`)
 - [ ] Add cross-platform build validation (Linux, macOS, Windows)
 - [ ] Set up automated documentation deployment
 
@@ -53,8 +53,8 @@ Create the most comprehensive, evidence-based toolkit for visual accessibility, 
 
 - [x] Implement all CLI subcommands in `daltonlens/main.py`
 - [x] Create CLI integration tests (direct-call tests in `test_cli_direct.py`, 83% coverage)
-- [ ] Add batch processing support (T114)
-- [ ] Document CLI usage comprehensively (T115)
+- [ ] Add batch processing support (T125, planned Phase 8)
+- [x] Document CLI usage comprehensively (T115: updated DaltonLens-Python README with full CLI reference)
 
 ### Validator Implementation
 
