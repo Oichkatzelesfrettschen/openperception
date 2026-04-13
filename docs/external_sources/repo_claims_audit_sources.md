@@ -40,6 +40,25 @@ Machine-readable bibliography support now lives in:
 - Kim, Angelaki, and DeAngelis 2016 PMC full text for motion-parallax depth:
   https://pmc.ncbi.nlm.nih.gov/articles/PMC4901450/
 
+## Periodic Revalidation Guidance
+
+Key web standards and guidelines change on different cadences. Revalidate these
+sources at the intervals below, or whenever a major WCAG or ISO revision is
+announced.
+
+| Source | Suggested Revalidation | Reason |
+|--------|----------------------|--------|
+| WCAG 2.1 SC 1.4.3 (contrast minimum) | Annual | W3C can update understanding docs; thresholds stable since 2018, but errata are possible. |
+| WCAG 2.1 SC 1.4.11 (non-text contrast) | Annual | Same cadence as above. |
+| WCAG 2.2 SC 2.4.13 (focus appearance) | Annual | WCAG 2.2 ratified October 2023; errata period active. |
+| WCAG 2.2 SC 2.3.1 (three flashes) | Every two years | Threshold tied to photosensitivity research; slow-moving standard. |
+| ISO 9241-171:2008 | Every three years | ISO reviews standards on a five-year cycle; check if superseded. |
+| Python 3.x "What's New" floor claim | At each Python major release | Confirm repo-owned tooling still compiles on the documented floor. |
+
+Revalidation means: open the URL, confirm the threshold or normative text has
+not changed, and update the opened date in the relevant KNOWN_ISSUES entry if
+the claim status changes.
+
 ## Local Runtime Evidence
 
 - `python3 tools/validate.py`

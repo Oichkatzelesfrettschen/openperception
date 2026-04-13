@@ -68,6 +68,11 @@ Be careful about overclaiming. Daltonization can improve distinguishability
 without preserving natural appearance, semantic meaning, or exact color naming
 equally well across tasks.
 
+Compendium sources (not locally cached as PDFs):
+
+- Section 2 of `papers/colorblindness_algorithms_compendium.md` (Fidaner, Lin,
+  Ozguven 2005; Kuhn, Oliveira, Fernandes 2008; image recoloring surveys 2021)
+
 Related repo docs:
 
 - [Daltonization guide](/home/eirikr/Github/openperception/docs/daltonization-guide.md)

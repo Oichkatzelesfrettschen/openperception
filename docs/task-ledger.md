@@ -224,28 +224,28 @@ to external URLs.
 
 - [x] T129 Reconcile stale parent markers: T051, T073, T086, T087,
   T088, T094 -- all completed by Phase 8 or Phase 9 audit pass.
-- [ ] T130 Add source-index references for major depth-accommodation claims
+- [x] T130 Add source-index references for major depth-accommodation claims
   (field-of-view, parallax, vergence-accommodation conflict) not yet indexed
   in `docs/external_sources/` (T053 scope).
-- [ ] T131 Add source-index references for the color-support accommodation
+- [x] T131 Add source-index references for the color-support accommodation
   taxonomy claims in `docs/color-support-accommodation-taxonomy.md` that
   lack a primary source (T054 scope).
-- [ ] T132 Verify that each repaired paper cited in provenance docs resolves
+- [x] T132 Verify that each repaired paper cited in provenance docs resolves
   to the canonical `papers/downloads/` path and add a `tools/check_paper_corpus.py`
   assertion for any unresolved aliases (T090 scope).
-- [ ] T133 Audit the Ishihara source-asset lane: confirm
+- [x] T133 Audit the Ishihara source-asset lane: confirm
   `datasets/source_assets/ishihara/` entries are referenced by at least one
   downstream doc, and flag orphans (T091 scope).
-- [ ] T134 Add a TOML or JSON machine-readable registry for source-cache
+- [x] T134 Add a TOML or JSON machine-readable registry for source-cache
   doc ownership (doc -> maintainer -> topic lane) under `docs/external_sources/`
   (T092 scope).
-- [ ] T135 Add a source-index doc for uncached external sources that are
+- [x] T135 Add a source-index doc for uncached external sources that are
   repeatedly cited across compendiums but have no offline cache entry (T093 scope).
-- [ ] T136 Review cached HTML traces in `papers/downloads/` that are
+- [x] T136 Review cached HTML traces in `papers/downloads/` that are
   .html or .trace.html and assess whether a PDF is now accessible for upgrade
   (T095 scope); document outcome in `docs/external_sources/research_pdf_migration_inventory.md`.
-- [ ] T137 Add periodic revalidation guidance for key web standards sources
+- [x] T137 Add periodic revalidation guidance for key web standards sources
   (WCAG, ISO 9241-171, ITU-R BT.1702) to `docs/external_sources/repo_claims_audit_sources.md`
   (T096 scope).
-- [ ] T138 Commit the completed Phase 9 reconciliation and confirm all
+- [x] T138 Commit the completed Phase 9 reconciliation and confirm all
   integrity checks pass on `main`.

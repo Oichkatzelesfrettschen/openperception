@@ -1,0 +1,59 @@
+{
+  "description": "Machine-readable registry mapping source-cache docs to topic lanes and scope. Used for source-provenance governance and ownership tracking.",
+  "generated_on": "2026-04-12",
+  "policy": {
+    "doc_location": "docs/external_sources/*_source_cache.md",
+    "ownership_note": "Maintainer field is advisory; any contributor may update a source-cache doc when adding or repairing a cached artifact."
+  },
+  "source_caches": [
+    {
+      "id": "algorithm_source_cache",
+      "doc": "docs/external_sources/algorithm_source_cache.md",
+      "topic_lanes": ["algorithms"],
+      "scope": "CVD simulation and daltonization algorithm papers (Brettel, Vienot, Machado, Stockman, cone-fundamental references)",
+      "maintainer": "unassigned"
+    },
+    {
+      "id": "cognitive_load_source_cache",
+      "doc": "docs/external_sources/cognitive_load_source_cache.md",
+      "topic_lanes": ["cognitive_load"],
+      "scope": "Cognitive load, UX complexity, adaptive learning, and GATE-006 cognitive-validator backing sources",
+      "maintainer": "unassigned"
+    },
+    {
+      "id": "color_vision_source_cache",
+      "doc": "docs/external_sources/color_vision_source_cache.md",
+      "topic_lanes": ["color_vision", "colorblindness"],
+      "scope": "Broader color-vision computation and CVD mechanism papers that span multiple impairment lanes",
+      "maintainer": "unassigned"
+    },
+    {
+      "id": "neurodivergence_source_cache",
+      "doc": "docs/external_sources/neurodivergence_source_cache.md",
+      "topic_lanes": ["adhd", "autism", "dyslexia"],
+      "scope": "ADHD visual processing, autism accessibility, dyslexia research",
+      "maintainer": "unassigned"
+    },
+    {
+      "id": "seizure_source_cache",
+      "doc": "docs/external_sources/seizure_source_cache.md",
+      "topic_lanes": ["seizures"],
+      "scope": "Photosensitive epilepsy research and seizure-trigger normative standards (ITU-R BT.1702, Harding test)",
+      "maintainer": "unassigned"
+    },
+    {
+      "id": "stereoblindness_depth_sources",
+      "doc": "docs/external_sources/stereoblindness_depth_sources.md",
+      "topic_lanes": ["stereoblindness"],
+      "scope": "Stereoblindness prevalence, depth-cue research, XR accessibility, and motion-parallax sources",
+      "maintainer": "unassigned"
+    },
+    {
+      "id": "vision_clinical_source_cache",
+      "doc": "docs/external_sources/vision_clinical_source_cache.md",
+      "topic_lanes": ["blue_cone_monochromacy", "contrast_sensitivity", "low_vision", "nystagmus", "visual_field_loss"],
+      "scope": "Multi-axis vision conditions including BCM, contrast sensitivity, low vision, nystagmus, and visual field loss",
+      "maintainer": "unassigned"
+    }
+  ]
+}
