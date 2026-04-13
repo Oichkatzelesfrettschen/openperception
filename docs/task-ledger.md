@@ -76,8 +76,8 @@ Current tranche focus:
 - [x] T048 Audit every numbered or thresholded claim in `README.md`.
 - [x] T049 Audit every completed-state claim in `ROADMAP.md`.
 - [x] T050 Audit every statistics claim in `MASTER_INDEX.md`.
-- [ ] T051 Audit research-count claims in paper compendiums for reproducible counting.
-- [ ] T052 Add source-index references for roadmap-level standards claims.
+- [x] T051 Audit research-count claims in paper compendiums for reproducible counting.
+- [x] T052 Add source-index references for roadmap-level standards claims.
 - [ ] T053 Add source-index references for major depth-accommodation claims not yet indexed.
 - [ ] T054 Add source-index references for major color-support taxonomy claims not yet indexed.
 - [x] T055 Add an overclaim phrase linter for unsupported certainty words.
@@ -101,7 +101,7 @@ Current tranche focus:
 - [x] T070 Add JSON output mode to repo-governance verifiers for future automation.
 - [x] T071 Audit whether `tools/validate.py` should fail on warnings for selected profiles.
 - [x] T072 Decide whether rendered audits belong in default or optional validation.
-- [ ] T073 Add benchmark or performance smoke coverage where docs claim performance intent.
+- [x] T073 Add benchmark or performance smoke coverage where docs claim performance intent.
 - [x] T074 Add a validator summary doc that maps runtime warnings to debt IDs.
 - [x] T075 Add a typography debt issue row for the current TYPE-001 warning.
 - [x] T076 Add CVD borderline-separation debt issue rows for the current GATE-003 warnings.
@@ -117,15 +117,15 @@ Current tranche focus:
 - [x] T083 Audit whether every source-cache doc links to a live research-facing note.
 - [x] T084 Audit whether every high-value research note links back to a source cache doc.
 - [x] T085 Add a verifier for unresolved provenance placeholders in source docs.
-- [ ] T086 Audit topic-lane README coverage under `papers/downloads/`.
-- [ ] T087 Audit whether each cached topic has a corresponding source-notes lane.
-- [ ] T088 Reconcile legacy migration closeout docs with current file layout.
+- [x] T086 Audit topic-lane README coverage under `papers/downloads/`.
+- [x] T087 Audit whether each cached topic has a corresponding source-notes lane.
+- [x] T088 Reconcile legacy migration closeout docs with current file layout.
 - [x] T089 Add checks for stale cache counts in `MASTER_INDEX.md`.
 - [ ] T090 Verify that each repaired paper cited in docs resolves to the canonical path.
 - [ ] T091 Audit the Ishihara source-asset lane for downstream references.
 - [ ] T092 Add a small machine-readable registry for source-cache doc ownership.
 - [ ] T093 Add a source-index doc for any remaining uncached but repeatedly cited external source.
-- [ ] T094 Verify that all provenance docs use stable ASCII-only filenames.
+- [x] T094 Verify that all provenance docs use stable ASCII-only filenames.
 - [ ] T095 Review whether any cached HTML traces should be upgraded to PDFs if now accessible.
 - [ ] T096 Add periodic revalidation tasks for key web standards sources.
 - [ ] T097 Add a migration playbook for future research-local artifacts.
@@ -214,3 +214,38 @@ reconcile stale markers so the ledger accurately reflects repo state.
   so stale debt can be detected by date comparison (T017).
 - [x] T128 Commit the completed Phase 8 work and confirm all integrity
   checks pass on `main`.
+
+## Phase 9. Backlog Closeout, Source Provenance, And Corpus Depth
+
+Focus: reconcile all stale parent markers across Phases 1-5, close
+source-provenance gaps that accumulated since Phase 5, and defer the
+remaining corpus-depth items that cannot be automated without host access
+to external URLs.
+
+- [x] T129 Reconcile stale parent markers: T051, T073, T086, T087,
+  T088, T094 -- all completed by Phase 8 or Phase 9 audit pass.
+- [ ] T130 Add source-index references for major depth-accommodation claims
+  (field-of-view, parallax, vergence-accommodation conflict) not yet indexed
+  in `docs/external_sources/` (T053 scope).
+- [ ] T131 Add source-index references for the color-support accommodation
+  taxonomy claims in `docs/color-support-accommodation-taxonomy.md` that
+  lack a primary source (T054 scope).
+- [ ] T132 Verify that each repaired paper cited in provenance docs resolves
+  to the canonical `papers/downloads/` path and add a `tools/check_paper_corpus.py`
+  assertion for any unresolved aliases (T090 scope).
+- [ ] T133 Audit the Ishihara source-asset lane: confirm
+  `datasets/source_assets/ishihara/` entries are referenced by at least one
+  downstream doc, and flag orphans (T091 scope).
+- [ ] T134 Add a TOML or JSON machine-readable registry for source-cache
+  doc ownership (doc -> maintainer -> topic lane) under `docs/external_sources/`
+  (T092 scope).
+- [ ] T135 Add a source-index doc for uncached external sources that are
+  repeatedly cited across compendiums but have no offline cache entry (T093 scope).
+- [ ] T136 Review cached HTML traces in `papers/downloads/` that are
+  .html or .trace.html and assess whether a PDF is now accessible for upgrade
+  (T095 scope); document outcome in `docs/external_sources/research_pdf_migration_inventory.md`.
+- [ ] T137 Add periodic revalidation guidance for key web standards sources
+  (WCAG, ISO 9241-171, ITU-R BT.1702) to `docs/external_sources/repo_claims_audit_sources.md`
+  (T096 scope).
+- [ ] T138 Commit the completed Phase 9 reconciliation and confirm all
+  integrity checks pass on `main`.
