@@ -1,6 +1,6 @@
 """Tests for daltonlens/utils.py - utility functions."""
+
 import numpy as np
-import pytest
 
 from daltonlens import utils
 

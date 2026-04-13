@@ -19,7 +19,7 @@ That makes it one of the repo's most important truth-maintenance documents.
 
 OpenPerception has several overlapping layers:
 
-- vendored algorithms,
+- repo-owned algorithm lanes,
 - new validators,
 - specs,
 - docs,

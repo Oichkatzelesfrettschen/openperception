@@ -1,4 +1,5 @@
 """Tests for unified validator and runtime gap reporting."""
+
 import json
 import sys
 from pathlib import Path
@@ -124,7 +125,9 @@ def test_validate_json_includes_auxiliary_runtime_surfaces(tmp_path: Path) -> No
     payload = results_to_json(results, missing, build_auxiliary_runtime_summary())
 
     assert "auxiliary_runtime" in payload
-    assert any(item["name"] == "TYPE-001 TYPOGRAPHY" for item in payload["auxiliary_runtime"])
+    assert any(
+        item["name"] == "TYPE-001 TYPOGRAPHY" for item in payload["auxiliary_runtime"]
+    )
 
 
 def test_rendered_auxiliary_runtime_can_be_added(monkeypatch) -> None:

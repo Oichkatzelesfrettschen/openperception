@@ -12,6 +12,7 @@ conservative, frame-sequence-based subset that checks:
 
 It intentionally does not yet implement pattern-oscillation analysis.
 """
+
 from __future__ import annotations
 
 import json
@@ -57,17 +58,15 @@ def _srgb_to_linear(arr: np.ndarray) -> np.ndarray:
 def _relative_luminance(image: np.ndarray) -> np.ndarray:
     rgb = image.astype(np.float32) / 255.0
     linear = _srgb_to_linear(rgb)
-    return (
-        0.2126 * linear[..., 0]
-        + 0.7152 * linear[..., 1]
-        + 0.0722 * linear[..., 2]
-    )
+    return 0.2126 * linear[..., 0] + 0.7152 * linear[..., 1] + 0.0722 * linear[..., 2]
 
 
 def load_manifest(manifest_path: Path) -> SeizureManifest:
     payload = json.loads(manifest_path.read_text())
     frame_rate_hz = float(payload["frame_rate_hz"])
-    frames = tuple((manifest_path.parent / rel_path).resolve() for rel_path in payload["frames"])
+    frames = tuple(
+        (manifest_path.parent / rel_path).resolve() for rel_path in payload["frames"]
+    )
     luminance_delta_threshold = float(
         payload.get("luminance_delta_threshold", DEFAULT_LUMINANCE_DELTA_THRESHOLD)
     )
@@ -157,19 +156,26 @@ class SeizureGate(ValidatorGate):
             red_mask = (
                 changed_mask
                 & (current_rgb[..., 0] >= RED_CHANNEL_THRESHOLD)
-                & ((current_rgb[..., 0] - current_rgb[..., 1] - current_rgb[..., 2]) >= RED_DOMINANCE_THRESHOLD)
+                & (
+                    (current_rgb[..., 0] - current_rgb[..., 1] - current_rgb[..., 2])
+                    >= RED_DOMINANCE_THRESHOLD
+                )
             )
             red_ratio = float(red_mask.mean())
             max_red_flash_ratio = max(max_red_flash_ratio, red_ratio)
 
         duration_seconds = (len(frames) - 1) / manifest.frame_rate_hz
-        flash_frequency_hz = flash_count / duration_seconds if duration_seconds > 0 else 0.0
+        flash_frequency_hz = (
+            flash_count / duration_seconds if duration_seconds > 0 else 0.0
+        )
         cumulative_exposure_seconds = flash_count / manifest.frame_rate_hz
 
         result.checks.append(
             CheckResult(
                 name="seizure/flash_frequency",
-                status=Status.PASS if flash_frequency_hz <= FLASH_FREQUENCY_THRESHOLD_HZ else Status.FAIL,
+                status=Status.PASS
+                if flash_frequency_hz <= FLASH_FREQUENCY_THRESHOLD_HZ
+                else Status.FAIL,
                 message=(
                     f"{flash_frequency_hz:.2f} flashes/sec (required <= {FLASH_FREQUENCY_THRESHOLD_HZ:.1f})"
                 ),
@@ -180,7 +186,9 @@ class SeizureGate(ValidatorGate):
         result.checks.append(
             CheckResult(
                 name="seizure/red_flash_saturation",
-                status=Status.PASS if max_red_flash_ratio < RED_FLASH_AREA_THRESHOLD_RATIO else Status.FAIL,
+                status=Status.PASS
+                if max_red_flash_ratio < RED_FLASH_AREA_THRESHOLD_RATIO
+                else Status.FAIL,
                 message=(
                     f"max red flash area ratio {max_red_flash_ratio:.3f} "
                     f"(required < {RED_FLASH_AREA_THRESHOLD_RATIO:.2f})"
@@ -192,7 +200,9 @@ class SeizureGate(ValidatorGate):
         result.checks.append(
             CheckResult(
                 name="seizure/flash_area",
-                status=Status.PASS if max_area_ratio < FLASH_AREA_THRESHOLD_RATIO else Status.FAIL,
+                status=Status.PASS
+                if max_area_ratio < FLASH_AREA_THRESHOLD_RATIO
+                else Status.FAIL,
                 message=(
                     f"max flash area ratio {max_area_ratio:.3f} "
                     f"(required < {FLASH_AREA_THRESHOLD_RATIO:.2f})"
@@ -204,7 +214,9 @@ class SeizureGate(ValidatorGate):
         result.checks.append(
             CheckResult(
                 name="seizure/cumulative_exposure",
-                status=Status.PASS if cumulative_exposure_seconds < CUMULATIVE_EXPOSURE_THRESHOLD_SECONDS else Status.FAIL,
+                status=Status.PASS
+                if cumulative_exposure_seconds < CUMULATIVE_EXPOSURE_THRESHOLD_SECONDS
+                else Status.FAIL,
                 message=(
                     f"{cumulative_exposure_seconds:.2f}s cumulative flashing "
                     f"(required < {CUMULATIVE_EXPOSURE_THRESHOLD_SECONDS:.1f}s)"
@@ -219,7 +231,9 @@ class SeizureGate(ValidatorGate):
 if __name__ == "__main__":
     import argparse
 
-    parser = argparse.ArgumentParser(description="Run seizure validation on a frame manifest.")
+    parser = argparse.ArgumentParser(
+        description="Run seizure validation on a frame manifest."
+    )
     parser.add_argument("manifest", help="Path to seizure manifest JSON")
     args = parser.parse_args()
 

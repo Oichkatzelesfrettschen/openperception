@@ -3,6 +3,7 @@
 Contrast checker for brand tokens across variants.
 Reports WCAG contrast for common text/background pairs.
 """
+
 from __future__ import annotations
 
 import json
@@ -10,13 +11,13 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-TOKENS_JSON = ROOT / 'tokens' / 'color-tokens.json'
+TOKENS_JSON = ROOT / "tokens" / "color-tokens.json"
 
 
 def hex_to_rgb(hex_str: str):
-    s = hex_str.strip().lstrip('#')
+    s = hex_str.strip().lstrip("#")
     if len(s) == 3:
-        s = ''.join(c*2 for c in s)
+        s = "".join(c * 2 for c in s)
     r = int(s[0:2], 16)
     g = int(s[2:4], 16)
     b = int(s[4:6], 16)
@@ -46,18 +47,18 @@ def contrast_ratio(fg_hex: str, bg_hex: str) -> float:
 
 def check_variant(name: str, data: dict):
     out = []
-    b = data.get('brand', {})
-    gray = data.get('gray', {})
+    b = data.get("brand", {})
+    gray = data.get("gray", {})
 
     pairs = [
-        (b.get('text'), b.get('surface'), 'text on surface'),
-        (b.get('primaryStrong'), b.get('surface'), 'primaryStrong on surface'),
-        (b.get('accentStrong'), b.get('surface'), 'accentStrong on surface'),
-        ('#FFFFFF', b.get('primaryStrong'), 'white on primaryStrong'),
-        ('#FFFFFF', b.get('accentStrong'), 'white on accentStrong'),
-        (gray.get('700'), b.get('surface'), 'gray700 on surface'),
-        (gray.get('500'), b.get('surface'), 'gray500 on surface'),
-        (gray.get('400'), b.get('surface'), 'gray400 on surface'),
+        (b.get("text"), b.get("surface"), "text on surface"),
+        (b.get("primaryStrong"), b.get("surface"), "primaryStrong on surface"),
+        (b.get("accentStrong"), b.get("surface"), "accentStrong on surface"),
+        ("#FFFFFF", b.get("primaryStrong"), "white on primaryStrong"),
+        ("#FFFFFF", b.get("accentStrong"), "white on accentStrong"),
+        (gray.get("700"), b.get("surface"), "gray700 on surface"),
+        (gray.get("500"), b.get("surface"), "gray500 on surface"),
+        (gray.get("400"), b.get("surface"), "gray400 on surface"),
     ]
     for fg, bg, label in pairs:
         if not fg or not bg:
@@ -73,10 +74,13 @@ def main():
         print(f"\nVariant: {variant}")
         results = check_variant(variant, data)
         for label, fg, bg, ratio in results:
-            status = 'AA 4.5:1' if ratio >= 4.5 else ('AA Large 3:1' if ratio >= 3.0 else 'FAIL')
+            status = (
+                "AA 4.5:1"
+                if ratio >= 4.5
+                else ("AA Large 3:1" if ratio >= 3.0 else "FAIL")
+            )
             print(f"- {label:28s} {fg} on {bg} -> {ratio:.2f} ({status})")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
-

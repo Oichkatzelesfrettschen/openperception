@@ -5,6 +5,7 @@ WHY: VALIDATORS_FRAMEWORK.md defines 6 gate types (SEIZURE, CONTRAST, CVD,
      SPATIAL, DEPTH, COGNITIVE). This module provides the shared ABC so all
      gates implement a consistent interface and results can be aggregated.
 """
+
 from __future__ import annotations
 
 from abc import ABC, abstractmethod
@@ -14,7 +15,7 @@ from enum import Enum
 
 class Severity(Enum):
     BLOCKING = "BLOCKING"  # CI must fail on this
-    WARNING = "WARNING"    # Advisory; log but do not block
+    WARNING = "WARNING"  # Advisory; log but do not block
 
 
 class Status(Enum):
@@ -26,6 +27,7 @@ class Status(Enum):
 @dataclass
 class CheckResult:
     """Result of a single named check within a gate."""
+
     name: str
     status: Status
     message: str
@@ -36,6 +38,7 @@ class CheckResult:
 @dataclass
 class GateResult:
     """Aggregated result of all checks within one validator gate."""
+
     gate_id: str
     gate_name: str
     severity: Severity

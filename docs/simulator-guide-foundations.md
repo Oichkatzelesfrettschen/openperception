@@ -58,7 +58,7 @@ It exposes the simulation pipeline as a chain:
 - conversion back to output RGB.
 
 That is exactly the bridge between the high-level accessibility mission and the
-actual image-processing math in the vendored algorithm code.
+actual image-processing math in the repo-owned algorithm code.
 
 ## Step 4. Why severity is important
 

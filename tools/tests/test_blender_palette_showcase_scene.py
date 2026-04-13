@@ -1,4 +1,5 @@
 """Tests for the Blender palette showcase scene script helpers."""
+
 import sys
 from pathlib import Path
 
@@ -38,7 +39,9 @@ def test_hex_to_rgba_returns_linearized_tuple() -> None:
     assert rgba == (1.0, 1.0, 1.0, 1.0)
 
 
-def test_select_render_engine_can_use_octane_even_when_enum_metadata_is_incomplete() -> None:
+def test_select_render_engine_can_use_octane_even_when_enum_metadata_is_incomplete() -> (
+    None
+):
     class _EnumItem:
         def __init__(self, identifier: str) -> None:
             self.identifier = identifier

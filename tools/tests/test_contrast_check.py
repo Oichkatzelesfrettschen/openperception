@@ -1,4 +1,5 @@
 """Tests for tools/contrast_check.py - WCAG contrast utilities."""
+
 import sys
 from pathlib import Path
 

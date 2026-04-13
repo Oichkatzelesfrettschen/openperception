@@ -1,4 +1,5 @@
 """Tests for the first cognitive/navigation validator."""
+
 import json
 import sys
 from pathlib import Path
@@ -53,7 +54,8 @@ def write_html(
         for index in range(1, max(region_count - 1, 0) + 1)
     )
     actions = "\n".join(
-        f'<button>Action {index}</button>' for index in range(1, primary_action_count + 1)
+        f"<button>Action {index}</button>"
+        for index in range(1, primary_action_count + 1)
     )
     path.write_text(
         "\n".join(
@@ -87,7 +89,9 @@ def test_cognitive_gate_passes_on_valid_profiles_and_html(tmp_path: Path) -> Non
     write_profiles(profiles)
     write_html(html)
 
-    result = CognitiveGate(profile_manifest_path=profiles, html_paths=(html,)).validate()
+    result = CognitiveGate(
+        profile_manifest_path=profiles, html_paths=(html,)
+    ).validate()
 
     assert result.status in {Status.PASS, Status.WARN}
     assert any(
@@ -95,11 +99,13 @@ def test_cognitive_gate_passes_on_valid_profiles_and_html(tmp_path: Path) -> Non
         for check in result.checks
     )
     assert any(
-        check.name == "example.html/primary_action_density" and check.status == Status.PASS
+        check.name == "example.html/primary_action_density"
+        and check.status == Status.PASS
         for check in result.checks
     )
     assert any(
-        check.name == "example.html/visible_control_burden" and check.status == Status.PASS
+        check.name == "example.html/visible_control_burden"
+        and check.status == Status.PASS
         for check in result.checks
     )
     assert any(
@@ -129,19 +135,24 @@ def test_cognitive_gate_fails_on_dense_nav_without_summary(tmp_path: Path) -> No
         ),
     )
 
-    result = CognitiveGate(profile_manifest_path=profiles, html_paths=(html,)).validate()
+    result = CognitiveGate(
+        profile_manifest_path=profiles, html_paths=(html,)
+    ).validate()
 
     assert result.status == Status.FAIL
     assert any(
-        check.name == "example.html/navigation_item_count" and check.status == Status.FAIL
+        check.name == "example.html/navigation_item_count"
+        and check.status == Status.FAIL
         for check in result.checks
     )
     assert any(
-        check.name == "example.html/progressive_disclosure" and check.status == Status.FAIL
+        check.name == "example.html/progressive_disclosure"
+        and check.status == Status.FAIL
         for check in result.checks
     )
     assert any(
-        check.name == "example.html/concurrent_notifications" and check.status == Status.FAIL
+        check.name == "example.html/concurrent_notifications"
+        and check.status == Status.FAIL
         for check in result.checks
     )
     assert any(
@@ -149,11 +160,13 @@ def test_cognitive_gate_fails_on_dense_nav_without_summary(tmp_path: Path) -> No
         for check in result.checks
     )
     assert any(
-        check.name == "example.html/primary_action_density" and check.status == Status.FAIL
+        check.name == "example.html/primary_action_density"
+        and check.status == Status.FAIL
         for check in result.checks
     )
     assert any(
-        check.name == "example.html/visible_control_burden" and check.status == Status.FAIL
+        check.name == "example.html/visible_control_burden"
+        and check.status == Status.FAIL
         for check in result.checks
     )
     assert any(
@@ -161,7 +174,8 @@ def test_cognitive_gate_fails_on_dense_nav_without_summary(tmp_path: Path) -> No
         for check in result.checks
     )
     assert any(
-        check.name == "example.html/metric_group_density" and check.status == Status.FAIL
+        check.name == "example.html/metric_group_density"
+        and check.status == Status.FAIL
         for check in result.checks
     )
 

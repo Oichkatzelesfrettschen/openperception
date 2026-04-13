@@ -1,4 +1,5 @@
 """Tests for the first spatial validator gate."""
+
 import json
 import sys
 from pathlib import Path
@@ -10,7 +11,9 @@ from validators.base import Status
 from validators.spatial import SpatialGate
 
 
-def write_spacing(path: Path, *, min_target: int = 44, min_spacing: int = 8, outline: int = 2) -> None:
+def write_spacing(
+    path: Path, *, min_target: int = 44, min_spacing: int = 8, outline: int = 2
+) -> None:
     payload = {
         "interactive": {
             "touch": {
@@ -25,7 +28,13 @@ def write_spacing(path: Path, *, min_target: int = 44, min_spacing: int = 8, out
     path.write_text(json.dumps(payload))
 
 
-def write_css(path: Path, *, underline: bool = True, outline_px: int = 3, outline_offset_px: int = 2) -> None:
+def write_css(
+    path: Path,
+    *,
+    underline: bool = True,
+    outline_px: int = 3,
+    outline_offset_px: int = 2,
+) -> None:
     text_decoration = "underline" if underline else "none"
     path.write_text(
         "\n".join(
@@ -83,7 +92,11 @@ def write_html(
         if include_swatch_grid
         else ""
     )
-    viewport = '<meta name="viewport" content="width=device-width, initial-scale=1" />' if include_viewport else ""
+    viewport = (
+        '<meta name="viewport" content="width=device-width, initial-scale=1" />'
+        if include_viewport
+        else ""
+    )
     path.write_text(
         "\n".join(
             [
@@ -99,9 +112,9 @@ def write_html(
                 "</style>",
                 "</head>",
                 (
-                    f"<body><nav class=\"page-nav\">One</nav><main>{body}</main></body>"
+                    f'<body><nav class="page-nav">One</nav><main>{body}</main></body>'
                     if include_main
-                    else f"<body><nav class=\"page-nav\">One</nav>{body}</body>"
+                    else f'<body><nav class="page-nav">One</nav>{body}</body>'
                 ),
                 "</html>",
             ]
@@ -127,7 +140,9 @@ def test_spatial_gate_passes_on_valid_static_surface(tmp_path: Path) -> None:
     assert result.status == Status.PASS
 
 
-def test_spatial_gate_fails_on_duplicate_class_and_missing_focus_ring(tmp_path: Path) -> None:
+def test_spatial_gate_fails_on_duplicate_class_and_missing_focus_ring(
+    tmp_path: Path,
+) -> None:
     spacing = tmp_path / "spacing.json"
     css = tmp_path / "tokens.css"
     html = tmp_path / "example.html"
@@ -149,9 +164,19 @@ def test_spatial_gate_fails_on_duplicate_class_and_missing_focus_ring(tmp_path: 
     result = gate.validate()
 
     assert result.status == Status.FAIL
-    assert any(check.name.endswith("duplicate_class_attributes") and check.status == Status.FAIL for check in result.checks)
-    assert any(check.name == "css/link_not_color_only" and check.status == Status.FAIL for check in result.checks)
-    assert any(check.name == "css/btn-primary_target_height" and check.status == Status.PASS for check in result.checks)
+    assert any(
+        check.name.endswith("duplicate_class_attributes")
+        and check.status == Status.FAIL
+        for check in result.checks
+    )
+    assert any(
+        check.name == "css/link_not_color_only" and check.status == Status.FAIL
+        for check in result.checks
+    )
+    assert any(
+        check.name == "css/btn-primary_target_height" and check.status == Status.PASS
+        for check in result.checks
+    )
 
 
 def test_spatial_gate_fails_when_button_targets_lack_minimums(tmp_path: Path) -> None:
@@ -216,7 +241,8 @@ def test_spatial_gate_fails_when_control_rows_do_not_wrap(tmp_path: Path) -> Non
 
     assert result.status == Status.FAIL
     assert any(
-        check.name == "example.html/wrapping_control_rows" and check.status == Status.FAIL
+        check.name == "example.html/wrapping_control_rows"
+        and check.status == Status.FAIL
         for check in result.checks
     )
 
@@ -242,12 +268,15 @@ def test_spatial_gate_merges_repeated_main_selectors(tmp_path: Path) -> None:
 
     assert result.status == Status.PASS
     assert any(
-        check.name == "example.html/main_layout_responsiveness" and check.status == Status.PASS
+        check.name == "example.html/main_layout_responsiveness"
+        and check.status == Status.PASS
         for check in result.checks
     )
 
 
-def test_spatial_gate_fails_when_main_grid_overflows_narrow_viewport(tmp_path: Path) -> None:
+def test_spatial_gate_fails_when_main_grid_overflows_narrow_viewport(
+    tmp_path: Path,
+) -> None:
     spacing = tmp_path / "spacing.json"
     css = tmp_path / "tokens.css"
     html = tmp_path / "example.html"
@@ -271,12 +300,15 @@ def test_spatial_gate_fails_when_main_grid_overflows_narrow_viewport(tmp_path: P
 
     assert result.status == Status.FAIL
     assert any(
-        check.name == "example.html/main_mobile_column_fit" and check.status == Status.FAIL
+        check.name == "example.html/main_mobile_column_fit"
+        and check.status == Status.FAIL
         for check in result.checks
     )
 
 
-def test_spatial_gate_flags_fixed_swatch_grid_without_adaptation(tmp_path: Path) -> None:
+def test_spatial_gate_flags_fixed_swatch_grid_without_adaptation(
+    tmp_path: Path,
+) -> None:
     spacing = tmp_path / "spacing.json"
     css = tmp_path / "tokens.css"
     html = tmp_path / "example.html"
@@ -297,6 +329,7 @@ def test_spatial_gate_flags_fixed_swatch_grid_without_adaptation(tmp_path: Path)
 
     assert result.status == Status.FAIL
     assert any(
-        check.name == "example.html/swatch_grid_adaptation" and check.status == Status.FAIL
+        check.name == "example.html/swatch_grid_adaptation"
+        and check.status == Status.FAIL
         for check in result.checks
     )

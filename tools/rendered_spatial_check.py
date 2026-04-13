@@ -7,6 +7,7 @@ still cannot observe the browser's actual scroll and overflow behavior. This
 tool adds a first renderer-backed audit over repo-owned example pages using
 Playwright and a temporary local HTTP server.
 """
+
 # ruff: noqa: I001
 from __future__ import annotations
 
@@ -259,8 +260,8 @@ def _measure_page(
           return checks;
         }""",
         {
-          "rowSelectors": list(row_selectors),
-          "focusSelectors": list(focus_selectors),
+            "rowSelectors": list(row_selectors),
+            "focusSelectors": list(focus_selectors),
         },
     )
 
@@ -269,7 +270,9 @@ def run_rendered_spatial_audit(
     *,
     root: Path = DEFAULT_ROOT,
     page_paths: tuple[Path, ...] = DEFAULT_PAGE_PATHS,
-    viewports: tuple[Viewport, ...] = tuple(Viewport(*item) for item in DEFAULT_VIEWPORTS),
+    viewports: tuple[Viewport, ...] = tuple(
+        Viewport(*item) for item in DEFAULT_VIEWPORTS
+    ),
     row_selectors: tuple[str, ...] = DEFAULT_ROW_SELECTORS,
     focus_selectors: tuple[str, ...] = DEFAULT_FOCUS_SELECTORS,
 ) -> GateResult:
@@ -307,7 +310,11 @@ def run_rendered_spatial_audit(
                                 row_selectors,
                                 focus_selectors,
                             ):
-                                status = Status.PASS if bool(measurement["ok"]) else Status.FAIL
+                                status = (
+                                    Status.PASS
+                                    if bool(measurement["ok"])
+                                    else Status.FAIL
+                                )
                                 result.checks.append(
                                     CheckResult(
                                         name=(
@@ -398,9 +405,7 @@ def _result_to_json(result: GateResult) -> dict[str, object]:
 def main() -> int:
     args = parse_args()
     page_paths = (
-        tuple(Path(item) for item in args.page)
-        if args.page
-        else DEFAULT_PAGE_PATHS
+        tuple(Path(item) for item in args.page) if args.page else DEFAULT_PAGE_PATHS
     )
     viewports = (
         tuple(_parse_viewport(item) for item in args.viewport)

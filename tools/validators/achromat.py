@@ -26,6 +26,7 @@ HOW:
      python tools/validators/achromat.py
      make validate   # integrates via validator_registry.py
 """
+
 from __future__ import annotations
 
 import json
@@ -45,13 +46,14 @@ from validators.contrast import contrast_ratio
 # Thresholds
 # ---------------------------------------------------------------------------
 
-CONTRAST_PASS = 4.5   # WCAG 2.1 AA normal text
-CONTRAST_WARN = 3.0   # WCAG 2.1 AA large text / non-text UI components
+CONTRAST_PASS = 4.5  # WCAG 2.1 AA normal text
+CONTRAST_WARN = 3.0  # WCAG 2.1 AA large text / non-text UI components
 
 
 # ---------------------------------------------------------------------------
 # AchromatGate
 # ---------------------------------------------------------------------------
+
 
 class AchromatGate(ValidatorGate):
     """GATE-007: ACHROMAT - luminance contrast in the mono token variant.
@@ -153,12 +155,12 @@ class AchromatGate(ValidatorGate):
 
         # --- semantic foreground checks ---
         fg_roles: list[tuple[str, str | None]] = [
-            ("mono/brand.text on surface",         brand.get("text")),
-            ("mono/brand.primary on surface",      brand.get("primary")),
+            ("mono/brand.text on surface", brand.get("text")),
+            ("mono/brand.primary on surface", brand.get("primary")),
             ("mono/brand.primaryStrong on surface", brand.get("primaryStrong")),
-            ("mono/brand.accent on surface",       brand.get("accent")),
-            ("mono/brand.accentStrong on surface",  brand.get("accentStrong")),
-            ("mono/brand.link on surface",         brand.get("link")),
+            ("mono/brand.accent on surface", brand.get("accent")),
+            ("mono/brand.accentStrong on surface", brand.get("accentStrong")),
+            ("mono/brand.link on surface", brand.get("link")),
         ]
 
         for label, fg in fg_roles:
@@ -184,7 +186,11 @@ class AchromatGate(ValidatorGate):
                 ratio = contrast_ratio(c0, c1)
                 # For non-text visual elements use 3:1 threshold
                 status = Status.PASS if ratio >= CONTRAST_WARN else Status.WARN
-                ki_ref = " -- see docs/KNOWN_ISSUES.md KI-008" if status == Status.WARN else ""
+                ki_ref = (
+                    " -- see docs/KNOWN_ISSUES.md KI-008"
+                    if status == Status.WARN
+                    else ""
+                )
                 result.checks.append(
                     CheckResult(
                         name="mono/viz.categorical[0-1] contrast",

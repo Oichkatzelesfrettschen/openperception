@@ -1,4 +1,5 @@
 """Tests for the repo-owned Blender showcase render driver."""
+
 from __future__ import annotations
 
 import sys
@@ -17,11 +18,16 @@ def test_render_driver_stops_on_failed_probe(monkeypatch, tmp_path) -> None:
     )
     monkeypatch.setattr(
         "render_blender_showcase._run_spec_generation",
-        lambda *_args, **_kwargs: type("Proc", (), {"returncode": 0, "stdout": "", "stderr": ""})(),
+        lambda *_args, **_kwargs: type(
+            "Proc", (), {"returncode": 0, "stdout": "", "stderr": ""}
+        )(),
     )
     monkeypatch.setattr(
         "render_blender_showcase.run_probe",
-        lambda *_args, **_kwargs: {"ok": False, "warnings": ["can't connect to octane server"]},
+        lambda *_args, **_kwargs: {
+            "ok": False,
+            "warnings": ["can't connect to octane server"],
+        },
     )
 
     report = run_showcase_regeneration(
@@ -57,7 +63,9 @@ def test_render_driver_reports_warning_matches(monkeypatch, tmp_path) -> None:
     )
     monkeypatch.setattr(
         "render_blender_showcase._run_spec_generation",
-        lambda *_args, **_kwargs: type("Proc", (), {"returncode": 0, "stdout": "", "stderr": ""})(),
+        lambda *_args, **_kwargs: type(
+            "Proc", (), {"returncode": 0, "stdout": "", "stderr": ""}
+        )(),
     )
     monkeypatch.setattr(
         "render_blender_showcase._render_showcase",
@@ -77,7 +85,9 @@ def test_render_driver_reports_warning_matches(monkeypatch, tmp_path) -> None:
     assert report["render"]["warnings"] == ["can't connect to octane server"]
 
 
-def test_render_driver_succeeds_when_outputs_exist_and_no_warnings(monkeypatch, tmp_path) -> None:
+def test_render_driver_succeeds_when_outputs_exist_and_no_warnings(
+    monkeypatch, tmp_path
+) -> None:
     class _Proc:
         returncode = 0
         stdout = "render ok\n"
@@ -96,7 +106,9 @@ def test_render_driver_succeeds_when_outputs_exist_and_no_warnings(monkeypatch, 
     )
     monkeypatch.setattr(
         "render_blender_showcase._run_spec_generation",
-        lambda *_args, **_kwargs: type("Proc", (), {"returncode": 0, "stdout": "", "stderr": ""})(),
+        lambda *_args, **_kwargs: type(
+            "Proc", (), {"returncode": 0, "stdout": "", "stderr": ""}
+        )(),
     )
     monkeypatch.setattr(
         "render_blender_showcase.run_probe",

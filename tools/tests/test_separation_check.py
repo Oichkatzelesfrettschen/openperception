@@ -1,4 +1,5 @@
 """Tests for tools/separation_check.py and okcolor.py utilities."""
+
 import sys
 from pathlib import Path
 

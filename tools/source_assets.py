@@ -1,6 +1,7 @@
 """
 Validate dataset source-asset provenance and local artifact integrity.
 """
+
 from __future__ import annotations
 
 import hashlib
@@ -63,14 +64,18 @@ def validate_source_assets(repo_root: Path = REPO_ROOT) -> list[str]:
 
             asset_path = repo_root / local_path
             if not asset_path.exists():
-                errors.append(f"source-asset entry {asset_id} references missing file {local_path}")
+                errors.append(
+                    f"source-asset entry {asset_id} references missing file {local_path}"
+                )
                 continue
 
             size_bytes = asset_path.stat().st_size
             if size_bytes == 0:
                 errors.append(f"source-asset file is zero-byte: {local_path}")
             if asset_path.suffix.lower() == ".pdf" and not _looks_like_pdf(asset_path):
-                errors.append(f"source-asset PDF does not start with %PDF: {local_path}")
+                errors.append(
+                    f"source-asset PDF does not start with %PDF: {local_path}"
+                )
 
             expected_hash = asset.get("sha256")
             if expected_hash != _sha256(asset_path):

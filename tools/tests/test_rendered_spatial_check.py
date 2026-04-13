@@ -1,5 +1,5 @@
 """Tests for the browser-backed rendered spatial audit."""
-# ruff: noqa: I001
+
 from __future__ import annotations
 
 import sys
@@ -10,7 +10,11 @@ import pytest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from rendered_spatial_check import Viewport, browser_is_available, run_rendered_spatial_audit
+from rendered_spatial_check import (
+    Viewport,
+    browser_is_available,
+    run_rendered_spatial_audit,
+)
 from validators.base import Status
 
 
@@ -69,11 +73,13 @@ def test_rendered_spatial_audit_passes_on_wrapping_surface(tmp_path: Path) -> No
 
     assert result.status == Status.PASS
     assert any(
-        check.name == "index.html@320x700/page_horizontal_overflow" and check.status == Status.PASS
+        check.name == "index.html@320x700/page_horizontal_overflow"
+        and check.status == Status.PASS
         for check in result.checks
     )
     assert any(
-        check.name == "index.html@320x700/focus_visible:.focus-ring:0" and check.status == Status.PASS
+        check.name == "index.html@320x700/focus_visible:.focus-ring:0"
+        and check.status == Status.PASS
         for check in result.checks
     )
 
@@ -94,7 +100,8 @@ def test_rendered_spatial_audit_fails_on_page_overflow(tmp_path: Path) -> None:
 
     assert result.status == Status.FAIL
     assert any(
-        check.name == "index.html@320x700/page_horizontal_overflow" and check.status == Status.FAIL
+        check.name == "index.html@320x700/page_horizontal_overflow"
+        and check.status == Status.FAIL
         for check in result.checks
     )
 
@@ -122,6 +129,7 @@ def test_rendered_spatial_audit_fails_when_focus_is_clipped(tmp_path: Path) -> N
 
     assert result.status == Status.FAIL
     assert any(
-        check.name == "index.html@320x700/focus_visible:.focus-ring:0" and check.status == Status.FAIL
+        check.name == "index.html@320x700/focus_visible:.focus-ring:0"
+        and check.status == Status.FAIL
         for check in result.checks
     )

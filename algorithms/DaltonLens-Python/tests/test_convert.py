@@ -1,6 +1,6 @@
 """Tests for daltonlens/convert.py - color space conversions."""
+
 import numpy as np
-import pytest
 
 from daltonlens import convert
 
@@ -32,7 +32,9 @@ class TestAsFloat32AndUint8:
         original = np.array([[[0, 127, 255]]], dtype=np.uint8)
         result = convert.as_uint8(convert.as_float32(original))
         # Allow off-by-one due to float precision
-        np.testing.assert_array_less(np.abs(result.astype(int) - original.astype(int)), 2)
+        np.testing.assert_array_less(
+            np.abs(result.astype(int) - original.astype(int)), 2
+        )
 
 
 class TestGammaConversions:

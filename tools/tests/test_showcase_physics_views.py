@@ -1,4 +1,5 @@
 """Tests for generated physics showcase views."""
+
 from __future__ import annotations
 
 import sys
@@ -12,18 +13,27 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import showcase_physics_views as spv
 
 
-def test_build_showcase_physics_views_writes_expected_panels(monkeypatch, tmp_path) -> None:
+def test_build_showcase_physics_views_writes_expected_panels(
+    monkeypatch, tmp_path
+) -> None:
     def _fake_builder(spec, output_dir):
         output_path = output_dir / f"{spec['id']}.png"
         Image.new("RGB", (32, 32), "#112233").save(output_path)
-        return {"panel_texture": str(output_path), "source_path": str(spec["source_path"])}
+        return {
+            "panel_texture": str(output_path),
+            "source_path": str(spec["source_path"]),
+        }
 
     def _fake_animation_builder(spec, output_dir):
         output_path = output_dir / f"{spec['id']}.gif"
         Image.new("RGB", (32, 32), "#221133").save(output_path)
         return {
             "animation_path": str(output_path),
-            "animation_basis": str(spec.get("data_path") or spec.get("contact_sheet_path") or spec["source_path"]),
+            "animation_basis": str(
+                spec.get("data_path")
+                or spec.get("contact_sheet_path")
+                or spec["source_path"]
+            ),
             "frame_count": 4,
         }
 
@@ -48,7 +58,10 @@ def test_build_showcase_physics_views_writes_expected_panels(monkeypatch, tmp_pa
     manifest = spv.build_showcase_physics_views(tmp_path)
     animated = spv.build_showcase_animated_views(tmp_path / "animated")
 
-    assert manifest["concept"] == "real physics use cases turned into real accessible and animated views showcase"
+    assert (
+        manifest["concept"]
+        == "real physics use cases turned into real accessible and animated views showcase"
+    )
     assert [entry["id"] for entry in manifest["views"]] == [
         "gw_chirp",
         "neutrino_cooling",

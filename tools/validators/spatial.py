@@ -5,6 +5,7 @@ WHY: The validator framework declares broad spatial and reflow validation, but
 the runtime had no executable spatial gate. This module implements a first,
 static subset over token definitions, CSS utilities, and example HTML.
 """
+
 # ruff: noqa: I001
 from __future__ import annotations
 
@@ -43,8 +44,12 @@ DEFAULT_HTML_PATHS = (
 
 CSS_BLOCK_RE = re.compile(r"(?P<selectors>[^{}]+)\{(?P<body>[^{}]*)\}", re.S)
 CSS_COMMENT_RE = re.compile(r"/\*.*?\*/", re.S)
-CLASS_DUP_RE = re.compile(r"<[^>]*\bclass\s*=\s*\"[^\"]*\"[^>]*\bclass\s*=\s*\"[^\"]*\"[^>]*>")
-TABINDEX_RE = re.compile(r"<(?P<tag>[a-zA-Z0-9-]+)(?P<attrs>[^>]*)\btabindex\s*=\s*\"0\"(?P<rest>[^>]*)>")
+CLASS_DUP_RE = re.compile(
+    r"<[^>]*\bclass\s*=\s*\"[^\"]*\"[^>]*\bclass\s*=\s*\"[^\"]*\"[^>]*>"
+)
+TABINDEX_RE = re.compile(
+    r"<(?P<tag>[a-zA-Z0-9-]+)(?P<attrs>[^>]*)\btabindex\s*=\s*\"0\"(?P<rest>[^>]*)>"
+)
 CLASS_ATTR_RE = re.compile(r"\bclass\s*=\s*\"([^\"]*)\"")
 STYLE_BLOCK_RE = re.compile(r"<style[^>]*>(?P<body>.*?)</style>", re.I | re.S)
 VIEWPORT_RE = re.compile(r"<meta[^>]+name\s*=\s*[\"']viewport[\"'][^>]*>", re.I)
@@ -87,7 +92,9 @@ def _extract_px(value: str | None) -> float | None:
 
 
 def _extract_style_text(html_text: str) -> str:
-    return "\n".join(match.group("body") for match in STYLE_BLOCK_RE.finditer(html_text))
+    return "\n".join(
+        match.group("body") for match in STYLE_BLOCK_RE.finditer(html_text)
+    )
 
 
 def _horizontal_padding(value: str | None) -> float:
@@ -180,7 +187,9 @@ class SpatialGate(ValidatorGate):
         result.checks.append(
             CheckResult(
                 name="css/focus_ring_rule",
-                status=Status.PASS if outline_px is not None and outline_px >= 2 else Status.FAIL,
+                status=Status.PASS
+                if outline_px is not None and outline_px >= 2
+                else Status.FAIL,
                 message=(
                     f"outline {outline_px:g}px in .focus-ring:focus"
                     if outline_px is not None
@@ -193,7 +202,9 @@ class SpatialGate(ValidatorGate):
         result.checks.append(
             CheckResult(
                 name="css/focus_ring_offset",
-                status=Status.PASS if outline_offset_px is not None and outline_offset_px >= 2 else Status.WARN,
+                status=Status.PASS
+                if outline_offset_px is not None and outline_offset_px >= 2
+                else Status.WARN,
                 message=(
                     f"outline-offset {outline_offset_px:g}px"
                     if outline_offset_px is not None
@@ -300,7 +311,7 @@ class SpatialGate(ValidatorGate):
                     name=f"{html_path.name}/focusable_custom_elements",
                     status=Status.PASS if focusable_violations == 0 else Status.FAIL,
                     message=(
-                        "All tabindex=\"0\" elements expose focus-ring class"
+                        'All tabindex="0" elements expose focus-ring class'
                         if focusable_violations == 0
                         else f"{focusable_violations} focusable custom element(s) missing focus-ring class"
                     ),
@@ -310,12 +321,16 @@ class SpatialGate(ValidatorGate):
             )
 
             has_media_query = "@media" in inline_css
-            has_adaptive_grid = "repeat(auto-fit" in inline_css or "repeat(auto-fill" in inline_css
+            has_adaptive_grid = (
+                "repeat(auto-fit" in inline_css or "repeat(auto-fill" in inline_css
+            )
             result.checks.append(
                 CheckResult(
                     name=f"{html_path.name}/responsive_layout_markers",
                     status=(
-                        Status.PASS if has_media_query or has_adaptive_grid else Status.WARN
+                        Status.PASS
+                        if has_media_query or has_adaptive_grid
+                        else Status.WARN
                     ),
                     message=(
                         "Responsive adaptation markers found"
@@ -343,10 +358,14 @@ class SpatialGate(ValidatorGate):
                     main_message = "Main layout declares adaptive grid/flex behavior"
                 elif has_main_layout:
                     main_status = Status.WARN
-                    main_message = "Main layout exists but lacks an explicit adaptive marker"
+                    main_message = (
+                        "Main layout exists but lacks an explicit adaptive marker"
+                    )
                 else:
                     main_status = Status.FAIL
-                    main_message = "Main element lacks explicit grid/flex layout declarations"
+                    main_message = (
+                        "Main element lacks explicit grid/flex layout declarations"
+                    )
             result.checks.append(
                 CheckResult(
                     name=f"{html_path.name}/main_layout_responsiveness",
@@ -362,11 +381,15 @@ class SpatialGate(ValidatorGate):
                 mobile_fit_threshold = None
             else:
                 main_padding_x = _horizontal_padding(main_block.get("padding"))
-                main_grid_min = _grid_min_width(main_block.get("grid-template-columns", ""))
+                main_grid_min = _grid_min_width(
+                    main_block.get("grid-template-columns", "")
+                )
                 available_width = NARROW_VIEWPORT_WIDTH - main_padding_x
                 if main_grid_min is None:
                     mobile_fit_status = Status.WARN
-                    mobile_fit_message = "Main grid lacks a parseable minimum column width"
+                    mobile_fit_message = (
+                        "Main grid lacks a parseable minimum column width"
+                    )
                     mobile_fit_value = None
                     mobile_fit_threshold = available_width
                 elif main_grid_min == 0.0:
@@ -445,21 +468,19 @@ class SpatialGate(ValidatorGate):
                 wrap_message = "No known wrapping control-row selectors found"
             elif wrap_selectors_ok == wrap_selectors_found:
                 wrap_status = Status.PASS
-                wrap_message = (
-                    f"All {wrap_selectors_found} detected control row(s) declare flex-wrap"
-                )
+                wrap_message = f"All {wrap_selectors_found} detected control row(s) declare flex-wrap"
             else:
                 wrap_status = Status.FAIL
-                wrap_message = (
-                    f"{wrap_selectors_ok}/{wrap_selectors_found} detected control row(s) declare flex-wrap"
-                )
+                wrap_message = f"{wrap_selectors_ok}/{wrap_selectors_found} detected control row(s) declare flex-wrap"
             result.checks.append(
                 CheckResult(
                     name=f"{html_path.name}/wrapping_control_rows",
                     status=wrap_status,
                     message=wrap_message,
                     value=float(wrap_selectors_ok),
-                    threshold=float(wrap_selectors_found) if wrap_selectors_found else None,
+                    threshold=float(wrap_selectors_found)
+                    if wrap_selectors_found
+                    else None,
                 )
             )
 

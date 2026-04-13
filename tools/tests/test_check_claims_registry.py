@@ -1,4 +1,5 @@
 """Tests for claims registry integrity checking."""
+
 from __future__ import annotations
 
 import json

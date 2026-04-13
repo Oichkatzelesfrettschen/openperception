@@ -5,6 +5,7 @@ Emit a concise spec-vs-runtime gap report for OpenPerception.
 WHY: The repository has broad declared architecture far ahead of its current
 runtime. This tool makes the lacunae explicit and actionable.
 """
+
 from __future__ import annotations
 
 import argparse

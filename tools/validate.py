@@ -6,6 +6,7 @@ WHY: specs/VALIDATORS_FRAMEWORK.md declares a unified CLI, but the repository
 previously only exposed standalone scripts and direct module execution. This
 script executes the implemented subset and makes spec-only gaps explicit.
 """
+
 from __future__ import annotations
 
 import argparse
@@ -223,8 +224,12 @@ def parse_args() -> argparse.Namespace:
 def main() -> int:
     args = parse_args()
     tokens_path = Path(args.tokens)
-    only_gate_ids = {part.strip() for part in args.only.split(",")} if args.only else None
-    seizure_manifest_path = Path(args.seizure_manifest) if args.seizure_manifest else None
+    only_gate_ids = (
+        {part.strip() for part in args.only.split(",")} if args.only else None
+    )
+    seizure_manifest_path = (
+        Path(args.seizure_manifest) if args.seizure_manifest else None
+    )
     results, missing, skipped = run_validators(
         tokens_path=tokens_path,
         only_gate_ids=only_gate_ids,

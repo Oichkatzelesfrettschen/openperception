@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Validate sibling-repo source inputs for the Blender showcase."""
+
 from __future__ import annotations
 
 import argparse

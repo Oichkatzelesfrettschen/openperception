@@ -56,7 +56,7 @@ This repo already provides two key validators:
 - contrast ratio checks via `tools/contrast_check.py`
 - perceptual separation checks via `tools/separation_check.py`
 
-On top of that, we have full CVD simulation through the vendored
+On top of that, we have full CVD simulation through the repo-owned
 `DaltonLens-Python` package.
 
 Therefore a red theme is acceptable only if:

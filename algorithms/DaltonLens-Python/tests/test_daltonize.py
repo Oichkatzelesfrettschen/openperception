@@ -1,4 +1,5 @@
 """Tests for daltonlens/daltonize.py - daltonization algorithms."""
+
 import numpy as np
 import pytest
 
@@ -101,21 +102,28 @@ class TestDaltonizeQuality:
 
     def _color_distance(self, a: np.ndarray, b: np.ndarray) -> float:
         """Mean Euclidean distance in sRGB space between two solid images."""
-        return float(np.mean(np.sqrt(np.sum((a.astype(float) - b.astype(float)) ** 2, axis=2))))
+        return float(
+            np.mean(np.sqrt(np.sum((a.astype(float) - b.astype(float)) ** 2, axis=2)))
+        )
 
     def test_fidaner_increases_protan_separation(self):
         """A saturated red and saturated green should be more separable after fidaner daltonization."""
-        from daltonlens import convert, simulate as sim_module
+        from daltonlens import convert
+        from daltonlens import simulate as sim_module
 
         # Red and green: strongly confused by protanopes
         red = _solid_image(220, 30, 30)
         green = _solid_image(30, 200, 30)
 
-        simulator = sim_module.Simulator_Brettel1997(convert.LMSModel_sRGB_SmithPokorny75())
+        simulator = sim_module.Simulator_Brettel1997(
+            convert.LMSModel_sRGB_SmithPokorny75()
+        )
 
         # Distance as seen by a simulated protanope (before daltonization)
         sim_red_before = simulator.simulate_cvd(red, Deficiency.PROTAN, severity=1.0)
-        sim_green_before = simulator.simulate_cvd(green, Deficiency.PROTAN, severity=1.0)
+        sim_green_before = simulator.simulate_cvd(
+            green, Deficiency.PROTAN, severity=1.0
+        )
         dist_before = self._color_distance(sim_red_before, sim_green_before)
 
         # Daltonize both images
@@ -124,7 +132,9 @@ class TestDaltonizeQuality:
 
         # Distance as seen by a simulated protanope (after daltonization)
         sim_red_after = simulator.simulate_cvd(dal_red, Deficiency.PROTAN, severity=1.0)
-        sim_green_after = simulator.simulate_cvd(dal_green, Deficiency.PROTAN, severity=1.0)
+        sim_green_after = simulator.simulate_cvd(
+            dal_green, Deficiency.PROTAN, severity=1.0
+        )
         dist_after = self._color_distance(sim_red_after, sim_green_after)
 
         # Daltonization should increase the perceived distance between the colors
@@ -135,22 +145,29 @@ class TestDaltonizeQuality:
 
     def test_simple_increases_deutan_separation(self):
         """Daltonize_simple should increase deutan separation for red/green pair."""
-        from daltonlens import convert, simulate as sim_module
+        from daltonlens import convert
+        from daltonlens import simulate as sim_module
 
         red = _solid_image(210, 40, 40)
         green = _solid_image(40, 190, 40)
 
-        simulator = sim_module.Simulator_Brettel1997(convert.LMSModel_sRGB_SmithPokorny75())
+        simulator = sim_module.Simulator_Brettel1997(
+            convert.LMSModel_sRGB_SmithPokorny75()
+        )
 
         sim_red_before = simulator.simulate_cvd(red, Deficiency.DEUTAN, severity=1.0)
-        sim_green_before = simulator.simulate_cvd(green, Deficiency.DEUTAN, severity=1.0)
+        sim_green_before = simulator.simulate_cvd(
+            green, Deficiency.DEUTAN, severity=1.0
+        )
         dist_before = self._color_distance(sim_red_before, sim_green_before)
 
         dal_red = daltonize.daltonize_simple(red, Deficiency.DEUTAN)
         dal_green = daltonize.daltonize_simple(green, Deficiency.DEUTAN)
 
         sim_red_after = simulator.simulate_cvd(dal_red, Deficiency.DEUTAN, severity=1.0)
-        sim_green_after = simulator.simulate_cvd(dal_green, Deficiency.DEUTAN, severity=1.0)
+        sim_green_after = simulator.simulate_cvd(
+            dal_green, Deficiency.DEUTAN, severity=1.0
+        )
         dist_after = self._color_distance(sim_red_after, sim_green_after)
 
         assert dist_after > dist_before, (

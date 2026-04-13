@@ -1,4 +1,5 @@
 """Tests for check_provenance_placeholders provenance-sentinel scanner."""
+
 from __future__ import annotations
 
 import json
@@ -19,6 +20,7 @@ from check_provenance_placeholders import main, scan_file
 # Helpers
 # ---------------------------------------------------------------------------
 
+
 def _write(path: Path, text: str) -> Path:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(text, encoding="utf-8")
@@ -28,6 +30,7 @@ def _write(path: Path, text: str) -> Path:
 # ---------------------------------------------------------------------------
 # scan_file unit tests
 # ---------------------------------------------------------------------------
+
 
 class TestScanFile:
     def test_clean_file_returns_no_hits(self, tmp_path: Path) -> None:
@@ -110,6 +113,7 @@ class TestScanFile:
 # main() integration tests
 # ---------------------------------------------------------------------------
 
+
 class TestMain:
     def _make_scan_tree(self, root: Path, content: str = "") -> None:
         """Create a minimal SCAN_DIRS layout under root."""
@@ -132,7 +136,9 @@ class TestMain:
         rc = main(["--root", str(tmp_path)])
         assert rc == 0
 
-    def test_json_output_clean(self, tmp_path: Path, capsys: pytest.CaptureFixture) -> None:
+    def test_json_output_clean(
+        self, tmp_path: Path, capsys: pytest.CaptureFixture
+    ) -> None:
         self._make_scan_tree(tmp_path, "All clean.\n")
         rc = main(["--json", "--root", str(tmp_path)])
         captured = capsys.readouterr()
@@ -141,7 +147,9 @@ class TestMain:
         assert payload["hits"] == []
         assert rc == 0
 
-    def test_json_output_with_hits(self, tmp_path: Path, capsys: pytest.CaptureFixture) -> None:
+    def test_json_output_with_hits(
+        self, tmp_path: Path, capsys: pytest.CaptureFixture
+    ) -> None:
         self._make_scan_tree(tmp_path, "TODO: check this source\n")
         rc = main(["--json", "--root", str(tmp_path)])
         captured = capsys.readouterr()
@@ -154,13 +162,17 @@ class TestMain:
         assert "excerpt" in hit
         assert rc == 1
 
-    def test_human_output_clean(self, tmp_path: Path, capsys: pytest.CaptureFixture) -> None:
+    def test_human_output_clean(
+        self, tmp_path: Path, capsys: pytest.CaptureFixture
+    ) -> None:
         self._make_scan_tree(tmp_path, "All good.\n")
         main(["--root", str(tmp_path)])
         captured = capsys.readouterr()
         assert "no unresolved" in captured.out
 
-    def test_human_output_with_hit(self, tmp_path: Path, capsys: pytest.CaptureFixture) -> None:
+    def test_human_output_with_hit(
+        self, tmp_path: Path, capsys: pytest.CaptureFixture
+    ) -> None:
         self._make_scan_tree(tmp_path, "SOURCE UNKNOWN\n")
         main(["--root", str(tmp_path)])
         captured = capsys.readouterr()

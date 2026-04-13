@@ -1,4 +1,5 @@
 """Tests for scaling and quantization helpers."""
+
 import sys
 from pathlib import Path
 
@@ -36,9 +37,15 @@ def test_modular_scale_and_practical_rounding() -> None:
 def test_hysteresis_quantizer_suppresses_layout_jitter() -> None:
     quantizer = HysteresisQuantizer()
 
-    first = quantize_value(15.49, "layout", dpi=96, key="card.width", quantizer=quantizer)
-    second = quantize_value(15.51, "layout", dpi=96, key="card.width", quantizer=quantizer)
-    third = quantize_value(15.90, "layout", dpi=96, key="card.width", quantizer=quantizer)
+    first = quantize_value(
+        15.49, "layout", dpi=96, key="card.width", quantizer=quantizer
+    )
+    second = quantize_value(
+        15.51, "layout", dpi=96, key="card.width", quantizer=quantizer
+    )
+    third = quantize_value(
+        15.90, "layout", dpi=96, key="card.width", quantizer=quantizer
+    )
 
     assert first == 15.0
     assert second == 15.0
@@ -52,14 +59,18 @@ def test_touch_target_floor_never_drops_below_44px() -> None:
 def test_high_dpi_text_size_quantization_tightens_precision() -> None:
     snap_class = get_dpi_adjusted_snap_class("text-size", dpi=192)
     quantizer = HysteresisQuantizer()
-    value = quantize_value(15.18, "text-size", dpi=192, key="body.size", quantizer=quantizer)
+    value = quantize_value(
+        15.18, "text-size", dpi=192, key="body.size", quantizer=quantizer
+    )
 
     assert snap_class.precision == 0.125
     assert value == 15.125
 
 
 def test_build_report_uses_touch_target_floor() -> None:
-    payload = build_report(44, dpi_phys=76, user_scale=1.0, snap_class_name="touch-target")
+    payload = build_report(
+        44, dpi_phys=76, user_scale=1.0, snap_class_name="touch-target"
+    )
 
     assert payload["quantized_px"] == 44.0
 

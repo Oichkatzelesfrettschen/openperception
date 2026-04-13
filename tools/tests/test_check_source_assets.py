@@ -1,4 +1,5 @@
 """Tests for dataset source-asset provenance validation."""
+
 from __future__ import annotations
 
 import hashlib
@@ -54,7 +55,9 @@ def test_validate_source_assets_rejects_unindexed_asset_file(tmp_path: Path) -> 
 
     errors = validate_source_assets(tmp_path)
 
-    assert any("source-asset file is not indexed in provenance" in error for error in errors)
+    assert any(
+        "source-asset file is not indexed in provenance" in error for error in errors
+    )
 
 
 def test_validate_source_assets_rejects_missing_trace_and_missing_urls(
@@ -81,12 +84,16 @@ def test_validate_source_assets_rejects_missing_trace_and_missing_urls(
     errors = validate_source_assets(tmp_path)
 
     assert any("verification trace is missing" in error for error in errors)
-    assert any("must provide upstream_url or reference_urls" in error for error in errors)
+    assert any(
+        "must provide upstream_url or reference_urls" in error for error in errors
+    )
 
 
 def test_validate_source_assets_rejects_hash_mismatch(tmp_path: Path) -> None:
     seed_asset_repo(tmp_path)
-    provenance_path = tmp_path / "datasets" / "source_assets" / "topic" / "PROVENANCE.json"
+    provenance_path = (
+        tmp_path / "datasets" / "source_assets" / "topic" / "PROVENANCE.json"
+    )
     payload = json.loads(provenance_path.read_text(encoding="utf-8"))
     payload["assets"][0]["sha256"] = "0" * 64
     provenance_path.write_text(json.dumps(payload, indent=2), encoding="utf-8")

@@ -2,6 +2,7 @@
 """
 Validate that checked-in repo stats match the current tracked tree.
 """
+
 from __future__ import annotations
 
 import argparse
@@ -44,7 +45,9 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
-def validate_repo_stats(repo_root: Path, stats_json_path: Path, stats_md_path: Path) -> list[str]:
+def validate_repo_stats(
+    repo_root: Path, stats_json_path: Path, stats_md_path: Path
+) -> list[str]:
     errors: list[str] = []
     if not stats_json_path.exists():
         errors.append(f"generated repo stats JSON is missing: {stats_json_path}")
@@ -71,7 +74,11 @@ def validate_repo_stats(repo_root: Path, stats_json_path: Path, stats_md_path: P
 
 def main() -> int:
     args = parse_args()
-    repo_root = Path(args.repo_root).resolve() if args.repo_root else Path(__file__).resolve().parents[1]
+    repo_root = (
+        Path(args.repo_root).resolve()
+        if args.repo_root
+        else Path(__file__).resolve().parents[1]
+    )
     stats_json_path = Path(args.stats_json)
     stats_md_path = Path(args.stats_md)
     errors = validate_repo_stats(repo_root, stats_json_path, stats_md_path)

@@ -1,4 +1,5 @@
 """Tests for first-class semantic runtime tokens."""
+
 import json
 import sys
 from pathlib import Path
@@ -40,8 +41,14 @@ def test_validate_semantic_tokens_rejects_missing_role(tmp_path: Path) -> None:
                 "variants": {
                     "default": {
                         "roles": {
-                            "danger": {"color": "#111111", "redundancy": {"marker": "triangle", "dash": [1, 1]}},
-                            "ally": {"color": "#222222", "redundancy": {"marker": "circle", "dash": [0, 0]}},
+                            "danger": {
+                                "color": "#111111",
+                                "redundancy": {"marker": "triangle", "dash": [1, 1]},
+                            },
+                            "ally": {
+                                "color": "#222222",
+                                "redundancy": {"marker": "circle", "dash": [0, 0]},
+                            },
                         }
                     }
                 }

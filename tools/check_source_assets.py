@@ -2,6 +2,7 @@
 """
 Validate dataset source-asset provenance and cached artifact integrity.
 """
+
 from __future__ import annotations
 
 import argparse
@@ -31,7 +32,9 @@ def parse_args() -> argparse.Namespace:
 def main() -> int:
     args = parse_args()
     repo_root = Path(args.repo_root).resolve() if args.repo_root else None
-    errors = validate_source_assets(repo_root) if repo_root else validate_source_assets()
+    errors = (
+        validate_source_assets(repo_root) if repo_root else validate_source_assets()
+    )
     return emit_check_report(
         check_id="source_assets",
         display_name="Source assets check",

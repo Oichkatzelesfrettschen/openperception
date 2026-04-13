@@ -1,6 +1,7 @@
 """
 Validate source-cache docs for live related-doc links into research surfaces.
 """
+
 from __future__ import annotations
 
 import re
@@ -30,7 +31,9 @@ def _tracked_source_cache_paths(repo_root: Path) -> list[Path]:
             text=True,
         )
     except (FileNotFoundError, subprocess.CalledProcessError):
-        return sorted((repo_root / "docs" / "external_sources").glob(f"*{SOURCE_CACHE_SUFFIX}"))
+        return sorted(
+            (repo_root / "docs" / "external_sources").glob(f"*{SOURCE_CACHE_SUFFIX}")
+        )
 
     return sorted(
         repo_root / line
@@ -53,7 +56,9 @@ def _extract_repo_local_link_targets(doc_path: Path, repo_root: Path) -> list[st
 
 
 def _is_qualifying_research_doc(rel_path: str) -> bool:
-    return rel_path.startswith(QUALIFYING_RESEARCH_PREFIXES) and rel_path.endswith(".md")
+    return rel_path.startswith(QUALIFYING_RESEARCH_PREFIXES) and rel_path.endswith(
+        ".md"
+    )
 
 
 def validate_source_cache_links(repo_root: Path = REPO_ROOT) -> list[str]:

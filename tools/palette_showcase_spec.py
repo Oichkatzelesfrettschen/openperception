@@ -7,6 +7,7 @@ the current production and experimental token packs into one machine-readable
 scene payload so downstream visualizations can stay tied to current repo data
 instead of copied hex codes or slogan-only descriptions.
 """
+
 from __future__ import annotations
 
 import argparse
@@ -33,9 +34,9 @@ DEPTH_ACCOMMODATION = {
         "labels",
     ],
     "source": str(
-        (
-            REPO_ROOT / "docs" / "harmonized-depth-accommodation-guide.md"
-        ).relative_to(REPO_ROOT)
+        (REPO_ROOT / "docs" / "harmonized-depth-accommodation-guide.md").relative_to(
+            REPO_ROOT
+        )
     ),
 }
 RENDER_PREFERENCE = {
@@ -175,7 +176,9 @@ def build_showcase_spec() -> dict:
                 "source_repo": physics_views["views"][index]["source_repo"],
                 "panel_texture": physics_views["views"][index]["panel_texture"],
                 "real_source_path": physics_views["views"][index]["source_path"],
-                "animated_artifact": animated_by_id.get(physics_views["views"][index]["id"], {}).get("animation_path"),
+                "animated_artifact": animated_by_id.get(
+                    physics_views["views"][index]["id"], {}
+                ).get("animation_path"),
             }
             for index, (scheme_id, label, path, description) in enumerate(TOKEN_SOURCES)
         ],

@@ -23,12 +23,11 @@ exclude = [
     "build",
     "dist",
     "*.egg-info",
-    # Vendored files
+    # Third-party dataset fixture files
     "datasets/ishihara-plate-learning/scripts/jquery.js",
     # Generated files
     "sphinx/example/_build",
-    # Git submodules -- upstream code, not linted by this project
-    "algorithms/DaltonLens-Python",
+    # Absorbed upstream non-Python trees not linted by this project's Python lane
     "algorithms/libDaltonLens",
     "datasets/ishihara-plate-learning",
 ]

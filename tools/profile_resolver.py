@@ -6,6 +6,7 @@ WHY: AXIS_OVERLAP_MAP and DISPLAY_ADAPTATION_LAYER define profile composition,
 but the runtime previously had no executable manifest loader or conflict
 reporter. This module provides the first partial implementation.
 """
+
 from __future__ import annotations
 
 import argparse
@@ -16,7 +17,9 @@ from typing import Any
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_PROFILE_MANIFEST = REPO_ROOT / "specs" / "tokens" / "profiles" / "axis-profiles.json"
+DEFAULT_PROFILE_MANIFEST = (
+    REPO_ROOT / "specs" / "tokens" / "profiles" / "axis-profiles.json"
+)
 AXES = ("chromatic", "luminance", "spatial", "temporal", "depth", "cognitive")
 TEMPORAL_PRIORITY = {"full motion": 0, "reduced motion": 1, "static": 2}
 COGNITIVE_PRIORITY = {"full HUD": 0, "simple HUD": 1, "minimal HUD": 2}
@@ -72,7 +75,11 @@ def _resolve_axis(axis: str, values: list[str], conflicts: list[dict[str, str]])
         return max(distinct, key=_parse_scale_percent)
 
     if axis == "luminance":
-        active_levels = {value for value in distinct if value in LUMINANCE_LEVELS and value != "default"}
+        active_levels = {
+            value
+            for value in distinct
+            if value in LUMINANCE_LEVELS and value != "default"
+        }
         if len(active_levels) > 1:
             conflicts.append(
                 {
@@ -121,7 +128,9 @@ def compose_profiles(
     selected = [profiles[name] for name in selected_names]
     conflicts: list[dict[str, str]] = []
     resolved_axes = {
-        axis: _resolve_axis(axis, [profile["axes"][axis] for profile in selected], conflicts)
+        axis: _resolve_axis(
+            axis, [profile["axes"][axis] for profile in selected], conflicts
+        )
         for axis in AXES
     }
 
@@ -150,7 +159,8 @@ def compose_profiles(
             {
                 "axis": "palette_variant",
                 "kind": "needs_attention",
-                "message": "Palette variants conflict: " + ", ".join(sorted(non_default_palettes)),
+                "message": "Palette variants conflict: "
+                + ", ".join(sorted(non_default_palettes)),
             }
         )
         palette_variant = "conflict"
@@ -222,7 +232,9 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> int:
     args = parse_args()
-    profile_names = [part.strip() for part in args.profiles.split(",")] if args.profiles else None
+    profile_names = (
+        [part.strip() for part in args.profiles.split(",")] if args.profiles else None
+    )
     payload = compose_profiles(profile_names, Path(args.manifest))
     if args.format == "json":
         print(json.dumps(payload, indent=2))

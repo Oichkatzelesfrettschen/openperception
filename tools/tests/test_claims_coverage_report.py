@@ -1,4 +1,5 @@
 """Tests for claims registry and coverage reporting."""
+
 import sys
 from pathlib import Path
 
@@ -39,9 +40,21 @@ def test_claims_json_report_contains_registry_and_summary() -> None:
 
     assert "summary" in report
     assert "registry" in report
-    assert any(claim["claim_id"] == "CLM-0023" for claim in report["registry"]["claims"])
-    assert any(claim["claim_id"] == "CLM-0100" for claim in report["registry"]["claims"])
-    assert any(claim["claim_id"] == "CLM-0092" for claim in report["registry"]["claims"])
-    assert any(claim["claim_id"] == "CLM-0093" for claim in report["registry"]["claims"])
-    assert any(claim["claim_id"] == "CLM-0094" for claim in report["registry"]["claims"])
-    assert any(claim["claim_id"] == "CLM-0095" for claim in report["registry"]["claims"])
+    assert any(
+        claim["claim_id"] == "CLM-0023" for claim in report["registry"]["claims"]
+    )
+    assert any(
+        claim["claim_id"] == "CLM-0100" for claim in report["registry"]["claims"]
+    )
+    assert any(
+        claim["claim_id"] == "CLM-0092" for claim in report["registry"]["claims"]
+    )
+    assert any(
+        claim["claim_id"] == "CLM-0093" for claim in report["registry"]["claims"]
+    )
+    assert any(
+        claim["claim_id"] == "CLM-0094" for claim in report["registry"]["claims"]
+    )
+    assert any(
+        claim["claim_id"] == "CLM-0095" for claim in report["registry"]["claims"]
+    )

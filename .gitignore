@@ -222,6 +222,9 @@ logs/*.log
 # Blender showcase generated intermediate panels
 artifacts/blender_showcase/generated/
 
+# Generated artifacts
+artifacts/generated/
+
 # Blender backups
 *.blend1
 

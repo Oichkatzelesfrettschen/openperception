@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Generate real science-use-case still and animated views for the showcase."""
+
 from __future__ import annotations
 
 import argparse
@@ -136,7 +137,12 @@ def _compose_panel(
     draw.line((360, 190, 430, 190), fill=accent, width=8)
     draw.polygon(((430, 190), (396, 168), (396, 212)), fill=accent)
     draw.rounded_rectangle(
-        (MAIN_REGION_BOX[0], MAIN_REGION_BOX[1], MAIN_REGION_BOX[2], MAIN_REGION_BOX[3]),
+        (
+            MAIN_REGION_BOX[0],
+            MAIN_REGION_BOX[1],
+            MAIN_REGION_BOX[2],
+            MAIN_REGION_BOX[3],
+        ),
         radius=28,
         fill="#E5E7EB",
         outline=accent,
@@ -167,7 +173,9 @@ def _compose_animation_frame(
         outline="#CBD5E1",
         width=4,
     )
-    frame.paste(source_inset, (ANIMATION_SOURCE_BOX[0] + 4, ANIMATION_SOURCE_BOX[1] + 4))
+    frame.paste(
+        source_inset, (ANIMATION_SOURCE_BOX[0] + 4, ANIMATION_SOURCE_BOX[1] + 4)
+    )
     draw.line(
         (
             ANIMATION_SOURCE_BOX[2] + 18,
@@ -203,7 +211,10 @@ def _build_gw_panel(spec: dict, output_dir: Path) -> dict[str, str]:
     source_inset = _dim_source(source_crop, SOURCE_INSET_SIZE)
     transformed = _cover_crop(
         main_crop,
-        (MAIN_REGION_BOX[2] - MAIN_REGION_BOX[0] - 32, MAIN_REGION_BOX[3] - MAIN_REGION_BOX[1] - 32),
+        (
+            MAIN_REGION_BOX[2] - MAIN_REGION_BOX[0] - 32,
+            MAIN_REGION_BOX[3] - MAIN_REGION_BOX[1] - 32,
+        ),
     )
     transformed = ImageOps.grayscale(transformed)
     transformed = ImageOps.autocontrast(transformed).convert("RGB")
@@ -221,7 +232,9 @@ def _build_gw_panel(spec: dict, output_dir: Path) -> dict[str, str]:
             outline="#F8FAFC",
             width=4,
         )
-    for idx, y in enumerate((int(height * 0.24), int(height * 0.5), int(height * 0.74))):
+    for idx, y in enumerate(
+        (int(height * 0.24), int(height * 0.5), int(height * 0.74))
+    ):
         draw.rectangle(
             (18, y - 16, 110, y + 16),
             fill="#111827" if idx % 2 == 0 else "#374151",
@@ -239,7 +252,10 @@ def _build_neutrino_panel(spec: dict, output_dir: Path) -> dict[str, str]:
     source_inset = _dim_source(source_crop, SOURCE_INSET_SIZE)
     transformed = _cover_crop(
         main_crop,
-        (MAIN_REGION_BOX[2] - MAIN_REGION_BOX[0] - 32, MAIN_REGION_BOX[3] - MAIN_REGION_BOX[1] - 32),
+        (
+            MAIN_REGION_BOX[2] - MAIN_REGION_BOX[0] - 32,
+            MAIN_REGION_BOX[3] - MAIN_REGION_BOX[1] - 32,
+        ),
     )
     transformed = ImageEnhance.Contrast(transformed).enhance(1.18)
     transformed = ImageEnhance.Brightness(transformed).enhance(1.08)
@@ -258,7 +274,9 @@ def _build_neutrino_panel(spec: dict, output_dir: Path) -> dict[str, str]:
         (int(width * 0.6), int(height * 0.45), "#A7F3D0"),
         (int(width * 0.5), int(height * 0.7), "#FCE7F3"),
     ):
-        draw.ellipse((x - 28, y - 28, x + 28, y + 28), fill=color, outline="#111827", width=4)
+        draw.ellipse(
+            (x - 28, y - 28, x + 28, y + 28), fill=color, outline="#111827", width=4
+        )
     strip = _cover_crop(contact_sheet, (width - 100, 120))
     transformed.paste(strip, (50, height - 150))
     draw.rounded_rectangle(
@@ -279,7 +297,10 @@ def _build_blackhole_panel(spec: dict, output_dir: Path) -> dict[str, str]:
     source_inset = _dim_source(source_crop, SOURCE_INSET_SIZE)
     transformed = _cover_crop(
         main_crop,
-        (MAIN_REGION_BOX[2] - MAIN_REGION_BOX[0] - 32, MAIN_REGION_BOX[3] - MAIN_REGION_BOX[1] - 32),
+        (
+            MAIN_REGION_BOX[2] - MAIN_REGION_BOX[0] - 32,
+            MAIN_REGION_BOX[3] - MAIN_REGION_BOX[1] - 32,
+        ),
     )
     transformed = ImageEnhance.Brightness(transformed).enhance(1.75)
     transformed = ImageEnhance.Contrast(transformed).enhance(2.3)
@@ -303,7 +324,9 @@ def _build_blackhole_panel(spec: dict, output_dir: Path) -> dict[str, str]:
         (int(width * 0.48), int(height * 0.82)),
     ):
         draw.line((x, y, cx, cy), fill="#E5E7EB", width=5)
-        draw.rectangle((x - 18, y - 18, x + 18, y + 18), fill="#111827", outline="#F8FAFC", width=3)
+        draw.rectangle(
+            (x - 18, y - 18, x + 18, y + 18), fill="#111827", outline="#F8FAFC", width=3
+        )
     draw.line((60, height - 80, width - 60, height - 80), fill="#111827", width=10)
     panel = _compose_panel(source_inset, transformed, "#7C2D12")
     output_path = output_dir / "blackhole_lensing_panel.png"
@@ -315,7 +338,10 @@ def _build_blackhole_animation(spec: dict, output_dir: Path) -> dict[str, object
     source_crop = _open_crop(spec["source_path"], spec["source_box"])
     source_inset = _dim_source(
         source_crop,
-        (ANIMATION_SOURCE_BOX[2] - ANIMATION_SOURCE_BOX[0] - 8, ANIMATION_SOURCE_BOX[3] - ANIMATION_SOURCE_BOX[1] - 8),
+        (
+            ANIMATION_SOURCE_BOX[2] - ANIMATION_SOURCE_BOX[0] - 8,
+            ANIMATION_SOURCE_BOX[3] - ANIMATION_SOURCE_BOX[1] - 8,
+        ),
     )
     inner_size = (
         ANIMATION_MAIN_BOX[2] - ANIMATION_MAIN_BOX[0] - 32,
@@ -341,10 +367,25 @@ def _build_blackhole_animation(spec: dict, output_dir: Path) -> dict[str, object
             )
         progress = (frame_index + 1) / max(total, 1)
         for angle_fraction in (0.12, 0.37, 0.68):
-            x = int(cx + math.cos(progress * math.pi * 0.35 + angle_fraction * math.tau) * width * 0.34)
-            y = int(cy + math.sin(progress * math.pi * 0.28 + angle_fraction * math.tau) * height * 0.24)
+            x = int(
+                cx
+                + math.cos(progress * math.pi * 0.35 + angle_fraction * math.tau)
+                * width
+                * 0.34
+            )
+            y = int(
+                cy
+                + math.sin(progress * math.pi * 0.28 + angle_fraction * math.tau)
+                * height
+                * 0.24
+            )
             draw.line((x, y, cx, cy), fill="#E5E7EB", width=4)
-            draw.rectangle((x - 16, y - 16, x + 16, y + 16), fill="#111827", outline="#F8FAFC", width=3)
+            draw.rectangle(
+                (x - 16, y - 16, x + 16, y + 16),
+                fill="#111827",
+                outline="#F8FAFC",
+                width=3,
+            )
         frames.append(_compose_animation_frame(source_inset, transformed, "#7C2D12"))
     output_path = output_dir / spec["animation_output"]
     frames[0].save(
@@ -362,11 +403,17 @@ def _build_blackhole_animation(spec: dict, output_dir: Path) -> dict[str, object
     }
 
 
-def _load_gw_waveform_points(spec: dict, width: int, height: int) -> list[tuple[float, float]]:
+def _load_gw_waveform_points(
+    spec: dict, width: int, height: int
+) -> list[tuple[float, float]]:
     payload = json.loads(Path(spec["data_path"]).read_text(encoding="utf-8"))
     times = payload["arrays"]["real_time_s"]
     whitened = payload["arrays"]["detector_strain_whitened_visual"]
-    active = [(t, value) for t, value in zip(times, whitened, strict=False) if abs(value) > 0.5]
+    active = [
+        (t, value)
+        for t, value in zip(times, whitened, strict=False)
+        if abs(value) > 0.5
+    ]
     if not active:
         active = list(zip(times, whitened, strict=False))
     window = active[-420:]
@@ -383,7 +430,13 @@ def _load_gw_waveform_points(spec: dict, width: int, height: int) -> list[tuple[
 
 def _build_gw_animation(spec: dict, output_dir: Path) -> dict[str, object]:
     source_crop = _open_crop(spec["source_path"], spec["source_box"])
-    source_inset = _dim_source(source_crop, (ANIMATION_SOURCE_BOX[2] - ANIMATION_SOURCE_BOX[0] - 8, ANIMATION_SOURCE_BOX[3] - ANIMATION_SOURCE_BOX[1] - 8))
+    source_inset = _dim_source(
+        source_crop,
+        (
+            ANIMATION_SOURCE_BOX[2] - ANIMATION_SOURCE_BOX[0] - 8,
+            ANIMATION_SOURCE_BOX[3] - ANIMATION_SOURCE_BOX[1] - 8,
+        ),
+    )
     inner_size = (
         ANIMATION_MAIN_BOX[2] - ANIMATION_MAIN_BOX[0] - 32,
         ANIMATION_MAIN_BOX[3] - ANIMATION_MAIN_BOX[1] - 32,
@@ -396,7 +449,9 @@ def _build_gw_animation(spec: dict, output_dir: Path) -> dict[str, object]:
         transformed = Image.new("RGB", inner_size, "#F8FAFC")
         draw = ImageDraw.Draw(transformed)
         draw.line(waveform_points, fill="#CBD5E1", width=3)
-        reveal = max(24, int(len(waveform_points) * (0.18 + 0.82 * (frame_index + 1) / n_frames)))
+        reveal = max(
+            24, int(len(waveform_points) * (0.18 + 0.82 * (frame_index + 1) / n_frames))
+        )
         draw.line(waveform_points[:reveal], fill="#111827", width=6)
         beacon_x = waveform_points[reveal - 1][0]
         draw.line((beacon_x, 24, beacon_x, inner_size[1] - 24), fill="#F59E0B", width=8)
@@ -409,7 +464,13 @@ def _build_gw_animation(spec: dict, output_dir: Path) -> dict[str, object]:
                 outline="#FFFFFF",
                 width=3,
             )
-        for band_index, y in enumerate((int(inner_size[1] * 0.22), int(inner_size[1] * 0.5), int(inner_size[1] * 0.78))):
+        for band_index, y in enumerate(
+            (
+                int(inner_size[1] * 0.22),
+                int(inner_size[1] * 0.5),
+                int(inner_size[1] * 0.78),
+            )
+        ):
             draw.rectangle(
                 (16, y - 12, 98, y + 12),
                 fill="#0F172A" if band_index % 2 == 0 else "#475569",
@@ -450,7 +511,13 @@ def _extract_contact_sheet_tiles(contact_sheet: Image.Image) -> list[Image.Image
 
 def _build_neutrino_animation(spec: dict, output_dir: Path) -> dict[str, object]:
     source_crop = _open_crop(spec["source_path"], spec["source_box"])
-    source_inset = _dim_source(source_crop, (ANIMATION_SOURCE_BOX[2] - ANIMATION_SOURCE_BOX[0] - 8, ANIMATION_SOURCE_BOX[3] - ANIMATION_SOURCE_BOX[1] - 8))
+    source_inset = _dim_source(
+        source_crop,
+        (
+            ANIMATION_SOURCE_BOX[2] - ANIMATION_SOURCE_BOX[0] - 8,
+            ANIMATION_SOURCE_BOX[3] - ANIMATION_SOURCE_BOX[1] - 8,
+        ),
+    )
     inner_size = (
         ANIMATION_MAIN_BOX[2] - ANIMATION_MAIN_BOX[0] - 32,
         ANIMATION_MAIN_BOX[3] - ANIMATION_MAIN_BOX[1] - 32,
@@ -466,20 +533,41 @@ def _build_neutrino_animation(spec: dict, output_dir: Path) -> dict[str, object]
         width, height = transformed.size
         progress = (frame_index + 1) / len(tiles)
         for x0, y0, x1, y1 in (
-            (int(width * 0.58), int(height * 0.18), int(width * (0.58 + 0.22 * progress)), int(height * 0.1)),
-            (int(width * 0.6), int(height * 0.45), int(width * (0.6 + 0.28 * progress)), int(height * 0.45)),
-            (int(width * 0.5), int(height * 0.7), int(width * (0.5 + 0.24 * progress)), int(height * 0.84)),
+            (
+                int(width * 0.58),
+                int(height * 0.18),
+                int(width * (0.58 + 0.22 * progress)),
+                int(height * 0.1),
+            ),
+            (
+                int(width * 0.6),
+                int(height * 0.45),
+                int(width * (0.6 + 0.28 * progress)),
+                int(height * 0.45),
+            ),
+            (
+                int(width * 0.5),
+                int(height * 0.7),
+                int(width * (0.5 + 0.24 * progress)),
+                int(height * 0.84),
+            ),
         ):
             draw.line((x0, y0, x1, y1), fill=accent, width=12)
-            draw.polygon(((x1, y1), (x1 - 24, y1 - 14), (x1 - 24, y1 + 14)), fill=accent)
+            draw.polygon(
+                ((x1, y1), (x1 - 24, y1 - 14), (x1 - 24, y1 + 14)), fill=accent
+            )
         for x, y, color in (
             (int(width * 0.58), int(height * 0.18), "#FDE68A"),
             (int(width * 0.6), int(height * 0.45), "#A7F3D0"),
             (int(width * 0.5), int(height * 0.7), "#FCE7F3"),
         ):
-            draw.ellipse((x - 22, y - 22, x + 22, y + 22), fill=color, outline="#111827", width=3)
+            draw.ellipse(
+                (x - 22, y - 22, x + 22, y + 22), fill=color, outline="#111827", width=3
+            )
         bar_right = 40 + int((width - 80) * progress)
-        draw.rounded_rectangle((40, height - 84, bar_right, height - 44), radius=16, fill="#0F172A")
+        draw.rounded_rectangle(
+            (40, height - 84, bar_right, height - 44), radius=16, fill="#0F172A"
+        )
         frames.append(_compose_animation_frame(source_inset, transformed, "#7C3AED"))
     output_path = output_dir / spec["animation_output"]
     frames[0].save(
@@ -582,7 +670,9 @@ def validate_showcase_source_inputs() -> list[str]:
 def _write_manifest(manifest: dict, output_dir: Path, name: str) -> Path:
     output_dir.mkdir(parents=True, exist_ok=True)
     output_path = _manifest_path_for(output_dir, name)
-    output_path.write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    output_path.write_text(
+        json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8"
+    )
     return output_path
 
 
@@ -652,7 +742,10 @@ def build_showcase_animated_views(output_dir: Path = ANIMATED_DIR) -> dict:
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output-dir", default=str(GENERATED_DIR))
-    parser.add_argument("--output-manifest", default=str(_manifest_path_for(GENERATED_DIR, MANIFEST_NAME)))
+    parser.add_argument(
+        "--output-manifest",
+        default=str(_manifest_path_for(GENERATED_DIR, MANIFEST_NAME)),
+    )
     parser.add_argument("--animated-output-dir", default=str(ANIMATED_DIR))
     parser.add_argument(
         "--animated-output-manifest",
@@ -671,7 +764,9 @@ def main() -> int:
     manifest = build_showcase_physics_views(output_dir)
     output_manifest = Path(args.output_manifest)
     output_manifest.parent.mkdir(parents=True, exist_ok=True)
-    output_manifest.write_text(json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    output_manifest.write_text(
+        json.dumps(manifest, indent=2, sort_keys=True) + "\n", encoding="utf-8"
+    )
     animated_manifest = None
     if not args.skip_animations:
         animated_output_dir = Path(args.animated_output_dir)

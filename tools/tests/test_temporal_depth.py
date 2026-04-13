@@ -1,4 +1,5 @@
 """Tests for the first partial temporal/depth gate."""
+
 import json
 import sys
 from pathlib import Path
@@ -13,7 +14,14 @@ from validators.temporal_depth import TemporalDepthGate
 def write_motion(path: Path, *, reduced_motion_enabled: bool = False) -> None:
     payload = {
         "units": {"time": "milliseconds", "frequency": "hertz"},
-        "durations": {"profile_multipliers": {"standard": 1.0, "eink": 3.0, "flicker_sensitive": 1.5, "reduced_motion": 0}},
+        "durations": {
+            "profile_multipliers": {
+                "standard": 1.0,
+                "eink": 3.0,
+                "flicker_sensitive": 1.5,
+                "reduced_motion": 0,
+            }
+        },
         "frequency_caps": {
             "flash_hard_cap": {"value_hz": 3},
             "high_risk_band": {"min_hz": 10, "max_hz": 25},
@@ -94,10 +102,12 @@ def test_temporal_depth_gate_fails_on_bad_reduced_motion_policy(tmp_path: Path) 
 
     assert result.status == Status.FAIL
     assert any(
-        check.name == "temporal/reduced_motion_disables_animation" and check.status == Status.FAIL
+        check.name == "temporal/reduced_motion_disables_animation"
+        and check.status == Status.FAIL
         for check in result.checks
     )
     assert any(
-        check.name == "temporal/profile_reduced_motion_caps" and check.status == Status.FAIL
+        check.name == "temporal/profile_reduced_motion_caps"
+        and check.status == Status.FAIL
         for check in result.checks
     )

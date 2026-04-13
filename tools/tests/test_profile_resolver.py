@@ -1,4 +1,5 @@
 """Tests for axis/display profile composition."""
+
 import sys
 from pathlib import Path
 

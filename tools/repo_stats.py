@@ -2,6 +2,7 @@
 """
 Generate machine-checkable repo stats from tracked files.
 """
+
 from __future__ import annotations
 
 import argparse
@@ -47,17 +48,23 @@ def _is_research_markdown(rel_path: str) -> bool:
 
 
 def _is_source_cache_doc(rel_path: str) -> bool:
-    return rel_path.startswith("docs/external_sources/") and rel_path.endswith("_source_cache.md")
+    return rel_path.startswith("docs/external_sources/") and rel_path.endswith(
+        "_source_cache.md"
+    )
 
 
 def _is_primary_source_notes(rel_path: str) -> bool:
-    return rel_path.startswith("research/") and rel_path.endswith("primary_source_notes.md")
+    return rel_path.startswith("research/") and rel_path.endswith(
+        "primary_source_notes.md"
+    )
 
 
 def _pdf_topic_counts(paths: list[str]) -> dict[str, int]:
     counts: Counter[str] = Counter()
     for rel_path in paths:
-        if not rel_path.startswith("papers/downloads/") or not rel_path.endswith(".pdf"):
+        if not rel_path.startswith("papers/downloads/") or not rel_path.endswith(
+            ".pdf"
+        ):
             continue
         parts = PurePosixPath(rel_path).parts
         if len(parts) >= 3:
@@ -71,15 +78,19 @@ def generate_repo_stats(repo_root: Path = REPO_ROOT) -> dict:
     metrics = {
         "canonical_pdf_count": _count_matching(
             paths,
-            lambda rel_path: rel_path.startswith("papers/downloads/") and rel_path.endswith(".pdf"),
+            lambda rel_path: rel_path.startswith("papers/downloads/")
+            and rel_path.endswith(".pdf"),
         ),
-        "top_level_papers_markdown_count": _count_matching(paths, _is_top_level_papers_markdown),
+        "top_level_papers_markdown_count": _count_matching(
+            paths, _is_top_level_papers_markdown
+        ),
         "research_markdown_count": _count_matching(paths, _is_research_markdown),
         "source_cache_doc_count": _count_matching(paths, _is_source_cache_doc),
         "primary_source_notes_count": _count_matching(paths, _is_primary_source_notes),
         "source_asset_pdf_count": _count_matching(
             paths,
-            lambda rel_path: rel_path.startswith("datasets/source_assets/") and rel_path.endswith(".pdf"),
+            lambda rel_path: rel_path.startswith("datasets/source_assets/")
+            and rel_path.endswith(".pdf"),
         ),
     }
     return {
@@ -146,7 +157,9 @@ def render_repo_stats_markdown(stats: dict) -> str:
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Generate machine-checkable repo stats.")
+    parser = argparse.ArgumentParser(
+        description="Generate machine-checkable repo stats."
+    )
     parser.add_argument(
         "--repo-root",
         default=str(REPO_ROOT),

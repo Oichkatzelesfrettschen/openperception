@@ -50,11 +50,13 @@ PLACEHOLDER_PATTERNS: list[tuple[str, re.Pattern[str]]] = [
 def scan_file(path: Path) -> list[tuple[int, str, str]]:
     """Return (lineno, label, line) for each placeholder hit."""
     hits: list[tuple[int, str, str]] = []
-    for lineno, raw in enumerate(path.read_text(encoding="utf-8").splitlines(), start=1):
+    for lineno, raw in enumerate(
+        path.read_text(encoding="utf-8").splitlines(), start=1
+    ):
         for label, pattern in PLACEHOLDER_PATTERNS:
             if pattern.search(raw):
                 hits.append((lineno, label, raw.strip()))
-                break   # one hit per line
+                break  # one hit per line
     return hits
 
 
@@ -65,11 +67,11 @@ def main(argv: list[str] | None = None) -> int:
         description="Check provenance docs for unresolved placeholder language."
     )
     parser.add_argument(
-        "--json", action="store_true", help="Emit JSON instead of human-readable output."
+        "--json",
+        action="store_true",
+        help="Emit JSON instead of human-readable output.",
     )
-    parser.add_argument(
-        "--root", type=Path, default=None, help="Repo root directory."
-    )
+    parser.add_argument("--root", type=Path, default=None, help="Repo root directory.")
     args = parser.parse_args(argv)
 
     repo_root = args.root or REPO_ROOT
@@ -91,7 +93,12 @@ def main(argv: list[str] | None = None) -> int:
             if args.json:
                 for lineno, label, excerpt in hits:
                     file_hits.append(
-                        {"file": rel_str, "line": lineno, "label": label, "excerpt": excerpt}
+                        {
+                            "file": rel_str,
+                            "line": lineno,
+                            "label": label,
+                            "excerpt": excerpt,
+                        }
                     )
             else:
                 for lineno, label, excerpt in hits:
@@ -100,7 +107,9 @@ def main(argv: list[str] | None = None) -> int:
     if args.json:
         print(json.dumps({"total": total_hits, "hits": file_hits}, indent=2))
     elif total_hits == 0:
-        print("check_provenance_placeholders: no unresolved provenance placeholders found.")
+        print(
+            "check_provenance_placeholders: no unresolved provenance placeholders found."
+        )
     else:
         print(
             f"check_provenance_placeholders: {total_hits} unresolved provenance placeholder(s) found"

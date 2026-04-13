@@ -1,4 +1,5 @@
 """Tests for the first typography verifier."""
+
 import json
 import sys
 from pathlib import Path
@@ -81,7 +82,7 @@ def write_html(
                 "}",
                 "</style>",
                 "</head>",
-                "<body><p class=\"copy\">Example</p><p class=\"eyebrow\">Status lane</p></body>",
+                '<body><p class="copy">Example</p><p class="eyebrow">Status lane</p></body>',
                 "</html>",
             ]
         )
@@ -184,7 +185,9 @@ def test_typography_gate_warns_on_uppercase_without_tracking(tmp_path: Path) -> 
     )
 
 
-def test_typography_gate_fails_when_links_lack_typographic_distinction(tmp_path: Path) -> None:
+def test_typography_gate_fails_when_links_lack_typographic_distinction(
+    tmp_path: Path,
+) -> None:
     contract = tmp_path / "font-contract.json"
     families = tmp_path / "font-families.json"
     html = tmp_path / "example.html"

@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Run a warning-clean OctaneBlender headless startup probe."""
+
 from __future__ import annotations
 
 import argparse
@@ -48,7 +49,9 @@ def run_probe(
     timeout_seconds: int,
 ) -> dict[str, object]:
     resolved_executable = shutil.which(blender_executable) or blender_executable
-    server_info = ensure_octane_server(pathlib.Path("/tmp/openperception_octaneserver_probe.log"))
+    server_info = ensure_octane_server(
+        pathlib.Path("/tmp/openperception_octaneserver_probe.log")
+    )
     command = build_headless_probe_command(resolved_executable, python_expr)
     env = build_octane_env()
     proc = subprocess.run(
@@ -69,7 +72,9 @@ def run_probe(
         "warnings": warnings,
         "stdout": proc.stdout,
         "stderr": proc.stderr,
-        "ok": proc.returncode == 0 and server_info.get("running", False) and not warnings,
+        "ok": proc.returncode == 0
+        and server_info.get("running", False)
+        and not warnings,
     }
     return report
 

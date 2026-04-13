@@ -1,4 +1,5 @@
 """Tests for machine-readable integrity-check CLI output."""
+
 from __future__ import annotations
 
 import json
@@ -40,7 +41,9 @@ def test_source_cache_links_cli_emits_json(tmp_path: Path) -> None:
     source_cache = tmp_path / "docs" / "external_sources" / "topic_source_cache.md"
     report = tmp_path / "research" / "topic" / "REPORT.md"
     report.parent.mkdir(parents=True, exist_ok=True)
-    report.write_text(f"# report\n\n- [Source cache]({source_cache})\n", encoding="utf-8")
+    report.write_text(
+        f"# report\n\n- [Source cache]({source_cache})\n", encoding="utf-8"
+    )
     write_source_cache(
         source_cache,
         f"# Topic Source Cache\n\n- [Report]({report})\n",

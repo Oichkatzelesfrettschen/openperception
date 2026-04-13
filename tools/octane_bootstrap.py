@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Helpers for warning-clean OctaneBlender automation."""
+
 from __future__ import annotations
 
 import os
@@ -26,7 +27,9 @@ def build_octane_env() -> dict[str, str]:
     return env
 
 
-def is_local_port_open(port: int, host: str = "127.0.0.1", timeout: float = 0.5) -> bool:
+def is_local_port_open(
+    port: int, host: str = "127.0.0.1", timeout: float = 0.5
+) -> bool:
     """Return whether a local TCP port is actively accepting connections."""
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     sock.settimeout(timeout)
@@ -153,7 +156,9 @@ def collect_octane_warnings(output: str) -> list[str]:
     return matches
 
 
-def build_headless_probe_command(blender_executable: str, python_expr: str) -> list[str]:
+def build_headless_probe_command(
+    blender_executable: str, python_expr: str
+) -> list[str]:
     """Build the canonical warning-clean OctaneBlender probe command."""
     return [
         blender_executable,

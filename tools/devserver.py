@@ -8,6 +8,7 @@ Usage:
 Add this tag to HTML pages to enable reload:
   <script src="/__livereload.js"></script>
 """
+
 from __future__ import annotations
 
 import argparse
@@ -21,8 +22,17 @@ from pathlib import Path
 
 
 ROOT = Path.cwd()
-IGNORE_DIRS = {'.git', '__pycache__', '.idea', '.vscode', '.tox', 'node_modules', '.venv', 'venv'}
-WATCH_EXT = {'.html', '.css', '.js', '.json', '.md', '.py', '.tex', '.sty'}
+IGNORE_DIRS = {
+    ".git",
+    "__pycache__",
+    ".idea",
+    ".vscode",
+    ".tox",
+    "node_modules",
+    ".venv",
+    "venv",
+}
+WATCH_EXT = {".html", ".css", ".js", ".json", ".md", ".py", ".tex", ".sty"}
 
 
 class LiveReloadRegistry:
@@ -62,22 +72,22 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         sys.stderr.write("[devserver] " + fmt % args + "\n")
 
     def do_GET(self):
-        if self.path == '/__livereload.js':
+        if self.path == "/__livereload.js":
             src = (
-                b"var es=new EventSource('/__events');"\
+                b"var es=new EventSource('/__events');"
                 b"es.onmessage=function(e){if(e.data==='reload'){location.reload();}};"
             )
             self.send_response(200)
-            self.send_header('Content-Type', 'application/javascript')
-            self.send_header('Content-Length', str(len(src)))
+            self.send_header("Content-Type", "application/javascript")
+            self.send_header("Content-Length", str(len(src)))
             self.end_headers()
             self.wfile.write(src)
             return
-        if self.path == '/__events':
+        if self.path == "/__events":
             self.send_response(200)
-            self.send_header('Content-Type', 'text/event-stream')
-            self.send_header('Cache-Control', 'no-cache')
-            self.send_header('Connection', 'keep-alive')
+            self.send_header("Content-Type", "text/event-stream")
+            self.send_header("Cache-Control", "no-cache")
+            self.send_header("Connection", "keep-alive")
             self.end_headers()
             REG.register(self)
             try:
@@ -97,7 +107,7 @@ class Handler(http.server.SimpleHTTPRequestHandler):
 
 def scan_mtimes(root: Path):
     mtimes = {}
-    for p in root.rglob('*'):
+    for p in root.rglob("*"):
         if p.is_dir():
             if p.name in IGNORE_DIRS:
                 continue
@@ -118,38 +128,39 @@ def watch_thread(root: Path, interval: float = 0.5):
         time.sleep(interval)
         now = scan_mtimes(root)
         if now.keys() != prev.keys():
-            REG.broadcast('reload')
+            REG.broadcast("reload")
             prev = now
             continue
         # Check changes
         changed = [p for p, m in now.items() if prev.get(p) != m]
         if changed:
-            REG.broadcast('reload')
+            REG.broadcast("reload")
             prev = now
 
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument('--port', type=int, default=8000)
-    ap.add_argument('--dir', default='.')
-    ap.add_argument('--no-livereload', action='store_true')
+    ap.add_argument("--port", type=int, default=8000)
+    ap.add_argument("--dir", default=".")
+    ap.add_argument("--no-livereload", action="store_true")
     args = ap.parse_args()
 
     os.chdir(args.dir)
     root = Path(args.dir).resolve()
     handler = lambda *a, **kw: Handler(*a, directory=str(root), **kw)
-    with socketserver.ThreadingTCPServer(('', args.port), handler) as httpd:
+    with socketserver.ThreadingTCPServer(("", args.port), handler) as httpd:
         print(f"Serving {root} on http://localhost:{args.port}")
         if not args.no_livereload:
             t = threading.Thread(target=watch_thread, args=(root,), daemon=True)
             t.start()
-            print("Live-reload enabled. Add <script src=\"/__livereload.js\"></script> to pages.")
+            print(
+                'Live-reload enabled. Add <script src="/__livereload.js"></script> to pages.'
+            )
         try:
             httpd.serve_forever()
         except KeyboardInterrupt:
             print("\nShutting down...")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
-

@@ -3,6 +3,7 @@
 Validate canonical paper-cache paths, provenance hashes, duplicate coverage,
 zero research-local PDF drift, and zero stray paper-root PDF outliers.
 """
+
 from __future__ import annotations
 
 import argparse

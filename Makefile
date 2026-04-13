@@ -6,7 +6,10 @@
 # =============================================================================
 PORT ?= 8000
 PANDOC_SRC ?= docs/colorblind-friendly-design-guide.md
-OUT_DIR ?= out
+BUILD_DIR ?= build
+ARTIFACTS_DIR ?= artifacts
+GENERATED_ARTIFACTS_DIR ?= $(ARTIFACTS_DIR)/generated
+OUT_DIR ?= $(GENERATED_ARTIFACTS_DIR)/pandoc
 VENV_DIR ?= .venv
 BOOTSTRAP_PYTHON ?= python3
 ifneq ($(wildcard $(VENV_DIR)/bin/python3),)
@@ -14,14 +17,14 @@ PYTHON ?= $(abspath $(VENV_DIR)/bin/python3)
 else
 PYTHON ?= python3
 endif
-C_BUILD_DIR ?= algorithms/libDaltonLens/build
+C_BUILD_DIR ?= $(BUILD_DIR)/algorithms/libDaltonLens
 PYTEST_DISABLE_PLUGIN_AUTOLOAD ?= 1
 PYTEST_RUN = env PYTEST_DISABLE_PLUGIN_AUTOLOAD=$(PYTEST_DISABLE_PLUGIN_AUTOLOAD) $(PYTHON) -m pytest
 
 # =============================================================================
 # Phony Targets
 # =============================================================================
-.PHONY: all help serve oklch mono-tokens contrast-check separation-check seizure-check temporal-depth-check cognitive-check typography-check rendered-spatial-check rendered-cognitive-check check-rendered playwright-install profile-report scale-report validate validate-strict gap-report claims-report claims-check repo-stats repo-stats-check integrity-check task-governance-check source-cache-links-check paper-corpus-check source-assets-check showcase-inputs-check octane-probe showcase-render overclaims-check provenance-check smoke-test check venv \
+.PHONY: all help serve oklch mono-tokens contrast-check separation-check seizure-check temporal-depth-check cognitive-check typography-check rendered-spatial-check rendered-cognitive-check check-rendered playwright-install profile-report scale-report validate validate-strict gap-report claims-report claims-check repo-stats repo-stats-check artifact-layout-check integrity-check task-governance-check source-cache-links-check paper-corpus-check source-assets-check showcase-inputs-check octane-probe showcase-render overclaims-check provenance-check smoke-test check venv \
         test test-python test-tools test-c test-all coverage \
         lint lint-python lint-c format \
         build build-c install-python install-dev \
@@ -61,6 +64,7 @@ help:
 	@echo "  claims-check       - Validate the claims registry integrity"
 	@echo "  repo-stats         - Regenerate machine-checkable repo stats files"
 	@echo "  repo-stats-check   - Validate checked-in repo stats against the current tree"
+	@echo "  artifact-layout-check - Validate build/artifact placement rules"
 	@echo "  provenance-check   - Scan provenance docs for unresolved placeholder language"
 	@echo "  integrity-check    - Run repo integrity verifiers (claims, stats, corpus, source assets, source cache links, task governance, provenance)"
 	@echo "  showcase-inputs-check - Validate sibling-repo inputs used by the Blender showcase"
@@ -177,6 +181,9 @@ repo-stats:
 repo-stats-check:
 	$(PYTHON) tools/check_repo_stats.py
 
+artifact-layout-check:
+	$(PYTHON) tools/check_artifact_layout.py
+
 task-governance-check:
 	$(PYTHON) tools/check_task_governance.py
 
@@ -201,7 +208,7 @@ smoke-test: ## Verify core installs: daltonlens import, simulate_cvd, CLI, token
 provenance-check: ## Scan provenance docs for unresolved placeholder language (T118)
 	$(PYTHON) tools/check_provenance_placeholders.py
 
-integrity-check: claims-check repo-stats-check paper-corpus-check source-assets-check source-cache-links-check showcase-inputs-check task-governance-check overclaims-check provenance-check
+integrity-check: claims-check repo-stats-check artifact-layout-check paper-corpus-check source-assets-check source-cache-links-check showcase-inputs-check task-governance-check overclaims-check provenance-check
 	@echo "All repo integrity checks completed."
 
 reconcile: repo-stats integrity-check ## Regenerate stats and run all governance checks after a tranche (T020)
@@ -242,8 +249,8 @@ benchmark:
 
 test-c: build-c
 	@echo "Running C tests..."
-	@if [ -f $(C_BUILD_DIR)/tests/test_simulation ]; then \
-		$(C_BUILD_DIR)/tests/test_simulation; \
+	@if [ -f $(C_BUILD_DIR)/test_simulation ]; then \
+		$(C_BUILD_DIR)/test_simulation; \
 	else \
 		echo "C test binary not found. Build may have failed."; \
 		exit 1; \
@@ -287,9 +294,8 @@ format:
 # =============================================================================
 build-c:
 	@echo "Building libDaltonLens..."
-	mkdir -p $(C_BUILD_DIR)
-	cd $(C_BUILD_DIR) && cmake .. -DCMAKE_BUILD_TYPE=Release
-	cd $(C_BUILD_DIR) && cmake --build . --config Release
+	cmake -S algorithms/libDaltonLens -B $(C_BUILD_DIR) -DCMAKE_BUILD_TYPE=Release
+	cmake --build $(C_BUILD_DIR) --config Release
 	@echo "C library build completed."
 
 venv:
@@ -339,11 +345,16 @@ sphinx-example-html: sphinx-install-theme
 # =============================================================================
 clean:
 	rm -rf $(OUT_DIR)
+	rm -rf $(BUILD_DIR)
+	rm -rf $(GENERATED_ARTIFACTS_DIR)
 	rm -rf sphinx/example/_build
-	rm -rf $(C_BUILD_DIR)
+	rm -rf algorithms/DaltonLens-Python/.git
+	rm -rf algorithms/libDaltonLens/.git
+	rm -rf datasets/ishihara-plate-learning/.git
 	find . -type d -name "__pycache__" -exec rm -rf {} + 2>/dev/null || true
 	find . -type d -name "*.egg-info" -exec rm -rf {} + 2>/dev/null || true
 	find . -type f -name "*.pyc" -delete 2>/dev/null || true
+	find . -type f -name ".DS_Store" -delete 2>/dev/null || true
 	find . -type d -name ".pytest_cache" -exec rm -rf {} + 2>/dev/null || true
 	find . -type d -name ".ruff_cache" -exec rm -rf {} + 2>/dev/null || true
 	@echo "Cleanup completed."

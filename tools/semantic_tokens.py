@@ -1,6 +1,7 @@
 """
 Helpers for first-class runtime semantic role tokens.
 """
+
 from __future__ import annotations
 
 import json
@@ -42,10 +43,14 @@ def validate_semantic_tokens(path: Path | None = None) -> list[str]:
         for role in REQUIRED_RUNTIME_ROLES:
             role_data = roles.get(role)
             if role_data is None:
-                errors.append(f"{semantic_path}: variant {variant_name} missing role {role}")
+                errors.append(
+                    f"{semantic_path}: variant {variant_name} missing role {role}"
+                )
                 continue
             if not role_data.get("color"):
-                errors.append(f"{semantic_path}: variant {variant_name} role {role} missing color")
+                errors.append(
+                    f"{semantic_path}: variant {variant_name} role {role} missing color"
+                )
             if not isinstance(role_data.get("redundancy"), dict):
                 errors.append(
                     f"{semantic_path}: variant {variant_name} role {role} missing redundancy mapping"

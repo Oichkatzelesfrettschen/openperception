@@ -1,4 +1,5 @@
 """Tests for source-cache related-doc link validation."""
+
 from __future__ import annotations
 
 from pathlib import Path
@@ -39,7 +40,9 @@ def test_validate_source_cache_links_accepts_single_papers_link(tmp_path: Path) 
     source_cache = tmp_path / "docs" / "external_sources" / "topic_source_cache.md"
     paper_doc = tmp_path / "papers" / "topic_compendium.md"
     paper_doc.parent.mkdir(parents=True, exist_ok=True)
-    paper_doc.write_text(f"# compendium\n\n- [Cache]({source_cache})\n", encoding="utf-8")
+    paper_doc.write_text(
+        f"# compendium\n\n- [Cache]({source_cache})\n", encoding="utf-8"
+    )
     write_source_cache(
         source_cache,
         f"# Topic Source Cache\n\n- [Compendium]({paper_doc})\n",
@@ -48,7 +51,9 @@ def test_validate_source_cache_links_accepts_single_papers_link(tmp_path: Path) 
     assert validate_source_cache_links(tmp_path) == []
 
 
-def test_validate_source_cache_links_rejects_registry_only_links(tmp_path: Path) -> None:
+def test_validate_source_cache_links_rejects_registry_only_links(
+    tmp_path: Path,
+) -> None:
     registry = tmp_path / "docs" / "external_sources" / "paper_corpus_registry.md"
     registry.parent.mkdir(parents=True, exist_ok=True)
     registry.write_text("# registry\n", encoding="utf-8")
@@ -59,7 +64,10 @@ def test_validate_source_cache_links_rejects_registry_only_links(tmp_path: Path)
 
     errors = validate_source_cache_links(tmp_path)
 
-    assert any("must link to at least one research-facing repo doc" in error for error in errors)
+    assert any(
+        "must link to at least one research-facing repo doc" in error
+        for error in errors
+    )
 
 
 def test_validate_source_cache_links_rejects_missing_target(tmp_path: Path) -> None:
@@ -84,7 +92,10 @@ def test_validate_source_cache_links_rejects_master_index_only(tmp_path: Path) -
 
     errors = validate_source_cache_links(tmp_path)
 
-    assert any("must link to at least one research-facing repo doc" in error for error in errors)
+    assert any(
+        "must link to at least one research-facing repo doc" in error
+        for error in errors
+    )
 
 
 def test_validate_source_cache_links_rejects_missing_backlink(tmp_path: Path) -> None:

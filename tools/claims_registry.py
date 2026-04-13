@@ -5,6 +5,7 @@ WHY: The evidence matrix describes many claims, but the runtime previously had
 no machine-readable way to say which claims are implemented, partial, or still
 prose-only. This module provides the shared loader and summary helpers.
 """
+
 from __future__ import annotations
 
 import json

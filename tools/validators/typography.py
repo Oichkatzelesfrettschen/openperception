@@ -6,6 +6,7 @@ previously had no executable typography checks at all. This module starts with
 the smallest honest subset: font-contract data integrity plus body-text rules
 on repo-owned example surfaces.
 """
+
 # ruff: noqa: I001
 from __future__ import annotations
 
@@ -44,9 +45,7 @@ DEFAULT_HTML_PATHS = (
     REPO_ROOT / "examples" / "ui" / "variant-toggle.html",
     REPO_ROOT / "examples" / "ui" / "palette-compare.html",
 )
-DEFAULT_CSS_PATHS = (
-    REPO_ROOT / "tokens" / "color-tokens.css",
-)
+DEFAULT_CSS_PATHS = (REPO_ROOT / "tokens" / "color-tokens.css",)
 REQUIRED_FONT_CATEGORIES = ("ui_sans", "reading_sans", "reading_serif", "mono")
 DISAMBIGUATION_ORDER = {"good": 1, "excellent": 2, "exceptional": 3}
 
@@ -58,7 +57,9 @@ CSS_VALUE_RE = re.compile(r"(-?\d+(?:\.\d+)?)(px|em|rem|ch)?")
 
 
 def _extract_style_text(html_text: str) -> str:
-    return "\n".join(match.group("body") for match in STYLE_BLOCK_RE.finditer(html_text))
+    return "\n".join(
+        match.group("body") for match in STYLE_BLOCK_RE.finditer(html_text)
+    )
 
 
 def _parse_css_blocks(css_text: str) -> dict[str, dict[str, str]]:
@@ -122,10 +123,14 @@ class TypographyGate(ValidatorGate):
         contract = json.loads(self.font_contract_path.read_text())
         families = json.loads(self.font_families_path.read_text())
         categories = families["categories"]
-        min_x_height = contract["contract"]["static_metrics"]["x_height_ratio"]["minimum"]
+        min_x_height = contract["contract"]["static_metrics"]["x_height_ratio"][
+            "minimum"
+        ]
 
         missing_categories = [
-            category for category in REQUIRED_FONT_CATEGORIES if category not in categories
+            category
+            for category in REQUIRED_FONT_CATEGORIES
+            if category not in categories
         ]
         result.checks.append(
             CheckResult(
@@ -192,9 +197,7 @@ class TypographyGate(ValidatorGate):
                 x_height_status = (
                     Status.PASS if x_height_ratio >= min_x_height else Status.FAIL
                 )
-                x_height_message = (
-                    f"x-height ratio {x_height_ratio:.2f} (required >= {min_x_height:.2f})"
-                )
+                x_height_message = f"x-height ratio {x_height_ratio:.2f} (required >= {min_x_height:.2f})"
             result.checks.append(
                 CheckResult(
                     name=f"fonts/{category}_x_height_ratio",
@@ -242,7 +245,9 @@ class TypographyGate(ValidatorGate):
             CheckResult(
                 name=f"{html_path.name}/body_font_size",
                 status=(
-                    Status.PASS if body_font_px is not None and body_font_px >= 16 else Status.FAIL
+                    Status.PASS
+                    if body_font_px is not None and body_font_px >= 16
+                    else Status.FAIL
                 ),
                 message=(
                     f"body font-size {body_font_px:g}px"
@@ -254,24 +259,32 @@ class TypographyGate(ValidatorGate):
             )
         )
 
-        line_height_value, line_height_unit = _parse_css_value(body_block.get("line-height"))
+        line_height_value, line_height_unit = _parse_css_value(
+            body_block.get("line-height")
+        )
         if line_height_value is None:
             line_height_status = Status.FAIL
             line_height_message = "body is missing an explicit line-height"
             line_height_ratio = None
         elif line_height_unit == "":
             line_height_ratio = line_height_value
-            line_height_status = Status.PASS if line_height_ratio >= 1.5 else Status.FAIL
+            line_height_status = (
+                Status.PASS if line_height_ratio >= 1.5 else Status.FAIL
+            )
             line_height_message = f"body line-height {line_height_ratio:g}"
         else:
-            line_height_px = _to_px(line_height_value, line_height_unit, base_px=body_font_px or 16.0)
+            line_height_px = _to_px(
+                line_height_value, line_height_unit, base_px=body_font_px or 16.0
+            )
             if line_height_px is None or body_font_px is None:
                 line_height_ratio = None
                 line_height_status = Status.WARN
                 line_height_message = "body line-height could not be normalized"
             else:
                 line_height_ratio = line_height_px / body_font_px
-                line_height_status = Status.PASS if line_height_ratio >= 1.5 else Status.FAIL
+                line_height_status = (
+                    Status.PASS if line_height_ratio >= 1.5 else Status.FAIL
+                )
                 line_height_message = f"body line-height ratio {line_height_ratio:.2f}"
         result.checks.append(
             CheckResult(
@@ -287,8 +300,14 @@ class TypographyGate(ValidatorGate):
         negative_tracking_violations = []
         uppercase_spacing_violations = []
         for selector, declarations in blocks.items():
-            max_width_value, max_width_unit = _parse_css_value(declarations.get("max-width"))
-            if max_width_value is not None and max_width_unit == "ch" and max_width_value > 80:
+            max_width_value, max_width_unit = _parse_css_value(
+                declarations.get("max-width")
+            )
+            if (
+                max_width_value is not None
+                and max_width_unit == "ch"
+                and max_width_value > 80
+            ):
                 long_line_violations.append(f"{selector}={max_width_value:g}ch")
 
             letter_spacing_value, letter_spacing_unit = _parse_css_value(

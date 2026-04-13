@@ -56,11 +56,8 @@ simulated = simulator.simulate_cvd(img, simulate.Deficiency.DEUTAN, severity=1.0
 ### Build libDaltonLens (C)
 
 ```bash
-cd algorithms/libDaltonLens
-mkdir build && cd build
-cmake ..
-make
-./tests/test_simulation
+make build-c
+make test-c
 ```
 
 ### Run Development Tools
@@ -101,7 +98,9 @@ directly under `papers/` instead of a topic lane inside `papers/downloads/`.
 
 Visual showcase artifacts now live under `artifacts/blender_showcase/`, with a
 tracked spec plus retained render and `.blend` snapshots for the living concept
-lane.
+lane. Generated, non-versioned artifacts belong under `artifacts/generated/`.
+Build products belong under `build/`. Source fixtures, including small
+algorithm test PNGs, stay beside the code or dataset that consumes them.
 
 Machine-checkable repo counts now live in:
 
@@ -118,7 +117,9 @@ openperception/
 |   |-- DaltonLens-Python/     # Python CVD simulation package
 |   +-- libDaltonLens/         # C library (public domain)
 |-- artifacts/
-|   +-- blender_showcase/     # Tracked Blender living-concept artifacts
+|   |-- blender_showcase/     # Tracked Blender living-concept artifacts
+|   +-- generated/            # Ignored generated docs/images/reports
+|-- build/                    # Ignored local build products
 |-- datasets/
 |   |-- source_assets/         # Non-paper reference assets for datasets/tools
 |   +-- ishihara-plate-learning/  # Color blindness test learning tool
@@ -210,8 +211,7 @@ cd algorithms/DaltonLens-Python
 pytest -v
 
 # C tests
-cd algorithms/libDaltonLens/build
-./tests/test_simulation
+make test-c
 ```
 
 ### Code Quality

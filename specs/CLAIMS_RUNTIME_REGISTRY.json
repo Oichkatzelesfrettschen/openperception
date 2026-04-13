@@ -81,7 +81,7 @@
       "runtime_artifacts": ["algorithms/DaltonLens-Python/daltonlens/simulate.py"],
       "tests": ["algorithms/DaltonLens-Python/tests/test_simulate.py"],
       "docs": ["docs/simulator-guide.md"],
-      "notes": "Machado severity support exists in the vendored algorithm implementation."
+      "notes": "Machado severity support exists in the repo-owned algorithm implementation."
     },
     {
       "claim_id": "CLM-0023",

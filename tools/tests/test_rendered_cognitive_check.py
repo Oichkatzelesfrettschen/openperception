@@ -1,4 +1,5 @@
 """Tests for the browser-backed rendered cognitive audit."""
+
 from __future__ import annotations
 
 import sys
@@ -39,7 +40,9 @@ def write_page(path: Path, *, body_attrs: str, style: str, body: str) -> None:
     )
 
 
-def test_rendered_cognitive_audit_passes_on_compact_simple_surface(tmp_path: Path) -> None:
+def test_rendered_cognitive_audit_passes_on_compact_simple_surface(
+    tmp_path: Path,
+) -> None:
     page_path = tmp_path / "index.html"
     write_page(
         page_path,
@@ -70,15 +73,20 @@ def test_rendered_cognitive_audit_passes_on_compact_simple_surface(tmp_path: Pat
 
     assert result.status == Status.PASS
     assert any(
-        check.name == "index.html@320x700/visible_controls" and check.status == Status.PASS
+        check.name == "index.html@320x700/visible_controls"
+        and check.status == Status.PASS
         for check in result.checks
     )
 
 
-def test_rendered_cognitive_audit_fails_on_crowded_simple_surface(tmp_path: Path) -> None:
+def test_rendered_cognitive_audit_fails_on_crowded_simple_surface(
+    tmp_path: Path,
+) -> None:
     page_path = tmp_path / "index.html"
-    controls = "".join(f'<button>Action {index}</button>' for index in range(1, 8))
-    nav_links = "".join(f'<a href="#n{index}">Item {index}</a>' for index in range(1, 7))
+    controls = "".join(f"<button>Action {index}</button>" for index in range(1, 8))
+    nav_links = "".join(
+        f'<a href="#n{index}">Item {index}</a>' for index in range(1, 7)
+    )
     write_page(
         page_path,
         body_attrs='data-hud-complexity="simple"',
@@ -109,6 +117,7 @@ def test_rendered_cognitive_audit_fails_on_crowded_simple_surface(tmp_path: Path
 
     assert result.status == Status.FAIL
     assert any(
-        check.name == "index.html@320x700/visible_controls" and check.status == Status.FAIL
+        check.name == "index.html@320x700/visible_controls"
+        and check.status == Status.FAIL
         for check in result.checks
     )

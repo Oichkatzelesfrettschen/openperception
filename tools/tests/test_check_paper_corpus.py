@@ -1,4 +1,5 @@
 """Tests for paper corpus registry validation."""
+
 from __future__ import annotations
 
 import hashlib
@@ -245,4 +246,6 @@ def test_validate_paper_corpus_rejects_stray_paper_root_pdfs(tmp_path: Path) -> 
 
     errors = validate_paper_corpus(registry_path, repo_root=tmp_path)
 
-    assert any("stray paper PDFs remain outside papers/downloads" in error for error in errors)
+    assert any(
+        "stray paper PDFs remain outside papers/downloads" in error for error in errors
+    )

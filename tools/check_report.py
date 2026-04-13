@@ -1,6 +1,7 @@
 """
 Shared output helpers for repo integrity and governance check wrappers.
 """
+
 from __future__ import annotations
 
 import json

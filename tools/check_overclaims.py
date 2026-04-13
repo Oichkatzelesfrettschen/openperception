@@ -93,8 +93,8 @@ SKIP_DIRS: frozenset[str] = frozenset(
         "venv",
         "node_modules",
         "__pycache__",
-        "papers",          # research literature; external authors' language
-        "research",        # literature summaries; external authors' language
+        "papers",  # research literature; external authors' language
+        "research",  # literature summaries; external authors' language
         "build",
         "dist",
     }
@@ -147,7 +147,7 @@ ALLOWLIST_SUBSTRINGS: list[str] = [
 def _is_skipped(path: Path, repo_root: Path) -> bool:
     rel = path.relative_to(repo_root)
     parts = rel.parts
-    for part in parts[:-1]:           # directory components
+    for part in parts[:-1]:  # directory components
         if part in SKIP_DIRS:
             return True
     return str(rel) in SKIP_FILES
@@ -230,18 +230,12 @@ def main(argv: list[str] | None = None) -> int:
                 print(f"{rel_str}:{lineno}: [OVERCLAIM:{label}] {excerpt}")
 
     if args.json:
-        print(
-            json.dumps(
-                {"total": total_hits, "hits": file_hits}, indent=2
-            )
-        )
+        print(json.dumps({"total": total_hits, "hits": file_hits}, indent=2))
     else:
         if total_hits == 0:
             print("check_overclaims: no overclaim phrases found.")
         else:
-            print(
-                f"\ncheck_overclaims: {total_hits} overclaim phrase(s) found."
-            )
+            print(f"\ncheck_overclaims: {total_hits} overclaim phrase(s) found.")
 
     return 1 if total_hits > 0 else 0
 

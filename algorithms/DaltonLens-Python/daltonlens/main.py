@@ -14,17 +14,19 @@ Batch mode:
     daltonlens --batch "dir/**/*.jpg" --output-dir out/ [options]
 """
 
-import sys
 import glob as glob_module
-import numpy as np
+import sys
 from pathlib import Path
+
+import numpy as np
 from PIL import Image
 
-from daltonlens import convert, simulate, daltonize as daltonize_module
+from daltonlens import convert, simulate
+from daltonlens import daltonize as daltonize_module
 
 
 def parse_command_line():
-    from argparse import ArgumentParser, ArgumentDefaultsHelpFormatter
+    from argparse import ArgumentDefaultsHelpFormatter, ArgumentParser
 
     parser = ArgumentParser(
         description="Toolbox to simulate and correct color vision deficiencies.",
@@ -71,7 +73,15 @@ def parse_command_line():
         "-m",
         type=str,
         default="auto",
-        choices=["auto", "vienot", "brettel", "machado", "vischeck", "coblisV1", "coblisV2"],
+        choices=[
+            "auto",
+            "vienot",
+            "brettel",
+            "machado",
+            "vischeck",
+            "coblisV1",
+            "coblisV2",
+        ],
         help="CVD simulation model to use.",
     )
 
@@ -118,11 +128,11 @@ def parse_command_line():
 
 
 DEFICIENCY_FROM_STR = {
-    "protan":   simulate.Deficiency.PROTAN,
-    "deutan":   simulate.Deficiency.DEUTAN,
-    "tritan":   simulate.Deficiency.TRITAN,
+    "protan": simulate.Deficiency.PROTAN,
+    "deutan": simulate.Deficiency.DEUTAN,
+    "tritan": simulate.Deficiency.TRITAN,
     "achromat": simulate.Deficiency.ACHROMAT,
-    "bcm":      simulate.Deficiency.BCM,
+    "bcm": simulate.Deficiency.BCM,
 }
 
 
@@ -132,8 +142,12 @@ def get_simulator(model_name: str) -> simulate.Simulator:
     # Eager construction would trigger DeprecationWarning for coblisV1
     # on every call regardless of the model actually requested.
     simulators = {
-        "vienot": lambda: simulate.Simulator_Vienot1999(convert.LMSModel_sRGB_SmithPokorny75()),
-        "brettel": lambda: simulate.Simulator_Brettel1997(convert.LMSModel_sRGB_SmithPokorny75()),
+        "vienot": lambda: simulate.Simulator_Vienot1999(
+            convert.LMSModel_sRGB_SmithPokorny75()
+        ),
+        "brettel": lambda: simulate.Simulator_Brettel1997(
+            convert.LMSModel_sRGB_SmithPokorny75()
+        ),
         "vischeck": lambda: simulate.Simulator_Vischeck(),
         "machado": lambda: simulate.Simulator_Machado2009(),
         "coblisV1": lambda: simulate.Simulator_CoblisV1(),
@@ -187,7 +201,7 @@ def main():
             print("ERROR: --batch requires --output-dir", file=sys.stderr)
             sys.exit(1)
 
-        matches = sorted(glob_module.glob(args.batch, recursive=True))
+        matches = sorted(glob_module.glob(args.batch, recursive=True))  # noqa: PTH207
         if not matches:
             print(f"ERROR: No files matched pattern: {args.batch}", file=sys.stderr)
             sys.exit(1)

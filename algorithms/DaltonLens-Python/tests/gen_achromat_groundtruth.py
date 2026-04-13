@@ -7,19 +7,21 @@ Usage (from repo root):
 
 Commit the resulting PNG files in tests/images/.
 """
+
 from pathlib import Path
 
-import numpy as np
 from PIL import Image
 
 from daltonlens import generate, simulate
+
 
 IMAGES = Path(__file__).parent / "images"
 
 CASES = [
     (simulate.Simulator_Achromat, "achromat", simulate.Deficiency.ACHROMAT),
-    (simulate.Simulator_BCM,      "bcm",      simulate.Deficiency.BCM),
+    (simulate.Simulator_BCM, "bcm", simulate.Deficiency.BCM),
 ]
+
 
 def main():
     IMAGES.mkdir(exist_ok=True)
@@ -31,6 +33,7 @@ def main():
             fname = f"{name}_{severity}.png"
             Image.fromarray(result).save(IMAGES / fname)
             print(f"Saved {IMAGES / fname}")
+
 
 if __name__ == "__main__":
     main()

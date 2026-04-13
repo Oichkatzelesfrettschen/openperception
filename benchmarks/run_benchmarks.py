@@ -32,7 +32,9 @@ import numpy as np
 
 
 # Ensure the daltonlens package from the submodule is importable.
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "algorithms", "DaltonLens-Python"))
+sys.path.insert(
+    0, os.path.join(os.path.dirname(__file__), "..", "algorithms", "DaltonLens-Python")
+)
 
 from daltonlens import convert, simulate
 
@@ -48,10 +50,16 @@ IMAGE_SIZES = [
 ]
 
 SIMULATORS = [
-    ("Brettel1997",  lambda: simulate.Simulator_Brettel1997(convert.LMSModel_sRGB_SmithPokorny75())),
-    ("Vienot1999",   lambda: simulate.Simulator_Vienot1999(convert.LMSModel_sRGB_SmithPokorny75())),
-    ("Machado2009",  lambda: simulate.Simulator_Machado2009()),
-    ("AutoSelect",   lambda: simulate.Simulator_AutoSelect()),
+    (
+        "Brettel1997",
+        lambda: simulate.Simulator_Brettel1997(convert.LMSModel_sRGB_SmithPokorny75()),
+    ),
+    (
+        "Vienot1999",
+        lambda: simulate.Simulator_Vienot1999(convert.LMSModel_sRGB_SmithPokorny75()),
+    ),
+    ("Machado2009", lambda: simulate.Simulator_Machado2009()),
+    ("AutoSelect", lambda: simulate.Simulator_AutoSelect()),
 ]
 
 DEFICIENCIES = [
@@ -60,13 +68,16 @@ DEFICIENCIES = [
     simulate.Deficiency.TRITAN,
 ]
 
-SEVERITIES = [1.0]   # Use full dichromacy for reproducible timing (no severity interpolation branch)
-REPEATS = 5          # Number of timed repetitions (best-of-N reported)
+SEVERITIES = [
+    1.0
+]  # Use full dichromacy for reproducible timing (no severity interpolation branch)
+REPEATS = 5  # Number of timed repetitions (best-of-N reported)
 
 
 # ---------------------------------------------------------------------------
 # Benchmark runner
 # ---------------------------------------------------------------------------
+
 
 def bench_one(sim, image, deficiency, severity, repeats):
     """Return the minimum wall-clock time in milliseconds over `repeats` runs."""
@@ -104,6 +115,7 @@ def collect_env():
 # Output formatting
 # ---------------------------------------------------------------------------
 
+
 def results_to_markdown(rows, env):
     lines = []
     lines.append("# CVD Simulation Benchmark Results")
@@ -118,12 +130,14 @@ def results_to_markdown(rows, env):
     # Header
     deficiency_labels = [d.name.capitalize() for d in DEFICIENCIES]
     header = "| Simulator | Size | " + " | ".join(deficiency_labels) + " |"
-    sep    = "| --- | --- | " + " | ".join(["---"] * len(DEFICIENCIES)) + " |"
+    sep = "| --- | --- | " + " | ".join(["---"] * len(DEFICIENCIES)) + " |"
     lines.append(header)
     lines.append(sep)
-    for (sim_name, size_str, timings) in rows:
+    for sim_name, size_str, timings in rows:
         timing_strs = [f"{t:.2f}" for t in timings]
-        lines.append("| {} | {} | {} |".format(sim_name, size_str, " | ".join(timing_strs)))
+        lines.append(
+            "| {} | {} | {} |".format(sim_name, size_str, " | ".join(timing_strs))
+        )
     lines.append("")
     lines.append("*Timing excludes image allocation. Smaller is faster.*")
     return "\n".join(lines)
@@ -133,22 +147,27 @@ def results_to_markdown(rows, env):
 # Main
 # ---------------------------------------------------------------------------
 
+
 def main():
     parser = argparse.ArgumentParser(description="Benchmark CVD simulation algorithms")
     parser.add_argument("--output", help="Write Markdown results to this file")
-    parser.add_argument("--repeats", type=int, default=REPEATS, help="Repetitions per measurement")
+    parser.add_argument(
+        "--repeats", type=int, default=REPEATS, help="Repetitions per measurement"
+    )
     args = parser.parse_args()
 
     env = collect_env()
     print(f"OpenPerception CVD Benchmark  --  {env['date']}")
-    print(f"Python {env['python']} | NumPy {env['numpy']} | daltonlens {env['daltonlens']}")
+    print(
+        f"Python {env['python']} | NumPy {env['numpy']} | daltonlens {env['daltonlens']}"
+    )
     print(f"Platform: {env['platform']}\n")
 
     rows = []
-    for (h, w) in IMAGE_SIZES:
+    for h, w in IMAGE_SIZES:
         image = make_image(h, w)
         size_str = f"{w}x{h}"
-        for (sim_name, sim_factory) in SIMULATORS:
+        for sim_name, sim_factory in SIMULATORS:
             sim = sim_factory()
             timings = []
             for deficiency in DEFICIENCIES:
@@ -156,7 +175,9 @@ def main():
                     t = bench_one(sim, image, deficiency, SEVERITIES[0], args.repeats)
                     timings.append(t)
                 except Exception as exc:
-                    print(f"  SKIP {sim_name}/{deficiency.name}: {exc}", file=sys.stderr)
+                    print(
+                        f"  SKIP {sim_name}/{deficiency.name}: {exc}", file=sys.stderr
+                    )
                     timings.append(float("nan"))
             timing_str = " | ".join(f"{t:6.2f}" for t in timings)
             print(f"  {sim_name:15s}  {size_str:8s}  [{timing_str}] ms (P D T)")

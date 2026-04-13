@@ -10,6 +10,7 @@ from check_overclaims import _is_allowlisted, main, scan_file
 # Unit: _is_allowlisted
 # ---------------------------------------------------------------------------
 
+
 class TestAllowlist:
     def test_pixel_perfect_allowed(self):
         assert _is_allowlisted("Use pixel-perfect alignment for icons.")
@@ -30,6 +31,7 @@ class TestAllowlist:
 # ---------------------------------------------------------------------------
 # Unit: scan_file
 # ---------------------------------------------------------------------------
+
 
 class TestScanFile:
     def test_no_hits_on_clean_file(self, tmp_path):
@@ -92,6 +94,7 @@ class TestScanFile:
 # ---------------------------------------------------------------------------
 # Integration: main() exit code and JSON output
 # ---------------------------------------------------------------------------
+
 
 class TestMain:
     def test_clean_repo_exits_zero(self, tmp_path):

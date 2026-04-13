@@ -51,7 +51,7 @@ Daltonization exists for that layer of the problem.
 
 ## Step 3. What the implementation actually contains
 
-The guide maps well to the vendored implementation in
+The guide maps well to the repo-owned implementation in
 `algorithms/DaltonLens-Python/daltonlens/daltonize.py`.
 
 That file currently exposes:
@@ -132,7 +132,7 @@ toolbox, not as a semantic-token policy document.
 
 ## Step 8. Why DaltonLens matters here
 
-The presence of vendored DaltonLens code means this guide is backed by a
+The presence of repo-owned DaltonLens code means this guide is backed by a
 serious algorithmic lane, not just a design aspiration.
 
 That matters for two reasons:
@@ -144,6 +144,6 @@ That matters for two reasons:
 ## Bottom line
 
 `docs/daltonization-guide.md` is the repo's practical guide to post hoc image
-remediation for CVD viewers. It is well grounded in the vendored DaltonLens
+remediation for CVD viewers. It is well grounded in the repo-owned DaltonLens
 implementation, but it should always be read as a complement to accessible
 palette design and validator enforcement, not a substitute for them.

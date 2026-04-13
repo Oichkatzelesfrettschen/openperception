@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Regenerate the living Blender showcase through the repo-owned clean path."""
+
 from __future__ import annotations
 
 import argparse
@@ -15,24 +16,45 @@ from octane_headless_probe import run_probe
 REPO_ROOT = Path(__file__).resolve().parents[1]
 REPO_STATS_JSON = REPO_ROOT / "docs" / "generated" / "repo_stats.json"
 REPO_STATS_MD = REPO_ROOT / "docs" / "generated" / "repo_stats.md"
-SPEC_OUTPUT = REPO_ROOT / "artifacts" / "blender_showcase" / "openperception_palette_showcase_spec.json"
-RENDER_OUTPUT = REPO_ROOT / "artifacts" / "blender_showcase" / "openperception_palette_showcase_render.png"
-BLEND_OUTPUT = REPO_ROOT / "artifacts" / "blender_showcase" / "openperception_palette_showcase_scene.blend"
+SPEC_OUTPUT = (
+    REPO_ROOT
+    / "artifacts"
+    / "blender_showcase"
+    / "openperception_palette_showcase_spec.json"
+)
+RENDER_OUTPUT = (
+    REPO_ROOT
+    / "artifacts"
+    / "blender_showcase"
+    / "openperception_palette_showcase_render.png"
+)
+BLEND_OUTPUT = (
+    REPO_ROOT
+    / "artifacts"
+    / "blender_showcase"
+    / "openperception_palette_showcase_scene.blend"
+)
 
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--blender-executable", default="OctaneBlender")
-    parser.add_argument("--engine", choices=("auto", "octane", "eevee", "cycles"), default="auto")
+    parser.add_argument(
+        "--engine", choices=("auto", "octane", "eevee", "cycles"), default="auto"
+    )
     parser.add_argument("--spec-output", default=str(SPEC_OUTPUT))
     parser.add_argument("--render-output", default=str(RENDER_OUTPUT))
     parser.add_argument("--blend-output", default=str(BLEND_OUTPUT))
     parser.add_argument("--skip-probe", action="store_true")
-    parser.add_argument("--json", action="store_true", help="Emit a machine-readable report.")
+    parser.add_argument(
+        "--json", action="store_true", help="Emit a machine-readable report."
+    )
     return parser.parse_args()
 
 
-def _run_command(command: list[str], *, env: dict[str, str] | None = None) -> subprocess.CompletedProcess[str]:
+def _run_command(
+    command: list[str], *, env: dict[str, str] | None = None
+) -> subprocess.CompletedProcess[str]:
     return subprocess.run(command, check=False, capture_output=True, text=True, env=env)
 
 
@@ -134,7 +156,9 @@ def run_showcase_regeneration(
             report["ok"] = False
             return report
 
-    render_proc = _render_showcase(blender_executable, engine, spec_output, render_output, blend_output)
+    render_proc = _render_showcase(
+        blender_executable, engine, spec_output, render_output, blend_output
+    )
     combined_output = (render_proc.stdout or "") + (render_proc.stderr or "")
     warnings = collect_octane_warnings(combined_output)
     report["render"] = {
@@ -169,11 +193,17 @@ def main() -> int:
     if args.json:
         print(json.dumps(report, indent=2, sort_keys=True))
     else:
-        print(f"Repo stats: {'ok' if report['repo_stats'].get('returncode') == 0 else 'failed'}")
-        print(f"Spec generation: {'ok' if report['spec_generation'].get('returncode') == 0 else 'failed'}")
+        print(
+            f"Repo stats: {'ok' if report['repo_stats'].get('returncode') == 0 else 'failed'}"
+        )
+        print(
+            f"Spec generation: {'ok' if report['spec_generation'].get('returncode') == 0 else 'failed'}"
+        )
         if report["probe"] is not None:
             print(f"Probe: {'ok' if report['probe']['ok'] else 'failed'}")
-        print(f"Render: {'ok' if report['render'].get('returncode') == 0 else 'failed'}")
+        print(
+            f"Render: {'ok' if report['render'].get('returncode') == 0 else 'failed'}"
+        )
         warnings = report["render"].get("warnings", [])
         print(f"Render warnings: {', '.join(warnings) if warnings else 'none'}")
         print(f"Showcase regeneration: {'ok' if report.get('ok') else 'failed'}")

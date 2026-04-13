@@ -6,6 +6,7 @@ WHY: SCALING_MATHEMATICS.md and QUANTIZATION_POLICY.md define the unit system
 and snap-class behavior, but the runtime previously had no shared
 implementation. This module provides the first reusable substrate.
 """
+
 from __future__ import annotations
 
 import argparse
@@ -69,7 +70,9 @@ def modular_scale(step: int, base_lp: float = 16.0, ratio: float = 1.25) -> floa
     return base_lp * (ratio**step)
 
 
-def practical_typography_size(step: int, base_lp: float = 16.0, ratio: float = 1.25) -> int:
+def practical_typography_size(
+    step: int, base_lp: float = 16.0, ratio: float = 1.25
+) -> int:
     return round(modular_scale(step, base_lp=base_lp, ratio=ratio))
 
 
@@ -206,7 +209,9 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Convert logical pixels to physical pixels and apply snap-class quantization.",
     )
-    parser.add_argument("--lp", type=float, default=16.0, help="Value in logical pixels.")
+    parser.add_argument(
+        "--lp", type=float, default=16.0, help="Value in logical pixels."
+    )
     parser.add_argument("--dpi", type=float, default=96.0, help="Physical DPI.")
     parser.add_argument("--scale", type=float, default=1.0, help="User scale factor.")
     parser.add_argument(
@@ -229,8 +234,12 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> int:
     args = parse_args()
-    profile_names = [part.strip() for part in args.profiles.split(",")] if args.profiles else None
-    payload = build_report(args.lp, args.dpi, args.scale, args.snap_class, profile_names)
+    profile_names = (
+        [part.strip() for part in args.profiles.split(",")] if args.profiles else None
+    )
+    payload = build_report(
+        args.lp, args.dpi, args.scale, args.snap_class, profile_names
+    )
     if args.json:
         print(json.dumps(payload, indent=2))
     else:

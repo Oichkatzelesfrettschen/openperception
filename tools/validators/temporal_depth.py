@@ -6,6 +6,7 @@ implementation validates motion-token safety and display-profile compatibility.
 It intentionally does not yet validate rendered motion paths or monocular depth
 cues in content.
 """
+
 # ruff: noqa: I001
 from __future__ import annotations
 
@@ -22,7 +23,9 @@ else:
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_MOTION_JSON = REPO_ROOT / "specs" / "tokens" / "temporal" / "motion.json"
-DEFAULT_PROFILE_MANIFEST = REPO_ROOT / "specs" / "tokens" / "profiles" / "axis-profiles.json"
+DEFAULT_PROFILE_MANIFEST = (
+    REPO_ROOT / "specs" / "tokens" / "profiles" / "axis-profiles.json"
+)
 
 
 class TemporalDepthGate(ValidatorGate):
@@ -50,7 +53,8 @@ class TemporalDepthGate(ValidatorGate):
             CheckResult(
                 name="temporal/units_time_based",
                 status=Status.PASS
-                if units.get("time") == "milliseconds" and units.get("frequency") == "hertz"
+                if units.get("time") == "milliseconds"
+                and units.get("frequency") == "hertz"
                 else Status.FAIL,
                 message=f"time={units.get('time')} frequency={units.get('frequency')}",
             )
@@ -96,7 +100,9 @@ class TemporalDepthGate(ValidatorGate):
         result.checks.append(
             CheckResult(
                 name="temporal/reduced_motion_multiplier",
-                status=Status.PASS if profile_multipliers.get("reduced_motion") == 0 else Status.FAIL,
+                status=Status.PASS
+                if profile_multipliers.get("reduced_motion") == 0
+                else Status.FAIL,
                 message=f"reduced_motion multiplier {profile_multipliers.get('reduced_motion')}",
                 value=float(profile_multipliers.get("reduced_motion", -1)),
                 threshold=0.0,
@@ -149,7 +155,8 @@ class TemporalDepthGate(ValidatorGate):
                 name="temporal/profile_flicker_sensitive_caps",
                 status=Status.PASS
                 if flicker_profile["max_animation_hz"] <= 30
-                and flicker_profile["max_luminance_modulation_hz"] <= luminance_sensitive_cap
+                and flicker_profile["max_luminance_modulation_hz"]
+                <= luminance_sensitive_cap
                 else Status.FAIL,
                 message=(
                     "flicker-sensitive profile caps respect motion token ceilings"
@@ -173,7 +180,9 @@ class TemporalDepthGate(ValidatorGate):
         result.checks.append(
             CheckResult(
                 name="temporal/time_based_motion",
-                status=Status.PASS if "time" in frame_independence.lower() else Status.WARN,
+                status=Status.PASS
+                if "time" in frame_independence.lower()
+                else Status.WARN,
                 message=frame_independence,
             )
         )

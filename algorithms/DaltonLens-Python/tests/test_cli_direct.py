@@ -5,20 +5,19 @@ not register in pytest-cov because each subprocess is a separate process.
 These tests call the Python functions directly so that coverage is tracked.
 """
 
-import sys
-from pathlib import Path
 from unittest import mock
 
 import numpy as np
 import pytest
 
 from daltonlens import simulate
-from daltonlens.main import get_simulator, DEFICIENCY_FROM_STR
+from daltonlens.main import DEFICIENCY_FROM_STR, get_simulator
 
 
 # ---------------------------------------------------------------------------
 # get_simulator()
 # ---------------------------------------------------------------------------
+
 
 class TestGetSimulator:
     def test_auto(self):
@@ -43,6 +42,7 @@ class TestGetSimulator:
 
     def test_coblis_v1(self):
         import warnings
+
         with warnings.catch_warnings():
             warnings.simplefilter("ignore", DeprecationWarning)
             s = get_simulator("coblisV1")
@@ -56,6 +56,7 @@ class TestGetSimulator:
 # ---------------------------------------------------------------------------
 # DEFICIENCY_FROM_STR
 # ---------------------------------------------------------------------------
+
 
 class TestDeficiencyFromStr:
     def test_protan(self):
@@ -78,10 +79,12 @@ class TestDeficiencyFromStr:
 # main() called directly via sys.argv patching
 # ---------------------------------------------------------------------------
 
+
 @pytest.fixture()
 def tiny_image(tmp_path):
     """Write a tiny 4x4 RGB PNG and return its path."""
     from PIL import Image as PILImage
+
     arr = np.full((4, 4, 3), 128, dtype=np.uint8)
     img = PILImage.fromarray(arr)
     p = tmp_path / "input.png"
@@ -91,8 +94,9 @@ def tiny_image(tmp_path):
 
 class TestMainDirect:
     def _call_main(self, argv):
-        with mock.patch("sys.argv", ["daltonlens"] + argv):
+        with mock.patch("sys.argv", ["daltonlens", *argv]):
             from daltonlens.main import main
+
             main()
 
     def test_simulate_protan_default_model(self, tiny_image, tmp_path):
@@ -102,20 +106,30 @@ class TestMainDirect:
 
     def test_simulate_deutan_brettel(self, tiny_image, tmp_path):
         out = tmp_path / "out.png"
-        self._call_main([
-            str(tiny_image), str(out),
-            "--deficiency", "deutan",
-            "--model", "brettel",
-        ])
+        self._call_main(
+            [
+                str(tiny_image),
+                str(out),
+                "--deficiency",
+                "deutan",
+                "--model",
+                "brettel",
+            ]
+        )
         assert out.exists()
 
     def test_simulate_tritan_machado(self, tiny_image, tmp_path):
         out = tmp_path / "out.png"
-        self._call_main([
-            str(tiny_image), str(out),
-            "--deficiency", "tritan",
-            "--model", "machado",
-        ])
+        self._call_main(
+            [
+                str(tiny_image),
+                str(out),
+                "--deficiency",
+                "tritan",
+                "--model",
+                "machado",
+            ]
+        )
         assert out.exists()
 
     def test_simulate_achromat(self, tiny_image, tmp_path):
@@ -130,57 +144,79 @@ class TestMainDirect:
 
     def test_simulate_severity_half(self, tiny_image, tmp_path):
         out = tmp_path / "out.png"
-        self._call_main([
-            str(tiny_image), str(out),
-            "--deficiency", "protan",
-            "--severity", "0.5",
-        ])
+        self._call_main(
+            [
+                str(tiny_image),
+                str(out),
+                "--deficiency",
+                "protan",
+                "--severity",
+                "0.5",
+            ]
+        )
         assert out.exists()
 
     def test_daltonize_fidaner(self, tiny_image, tmp_path):
         out = tmp_path / "out.png"
-        self._call_main([
-            str(tiny_image), str(out),
-            "--filter", "daltonize",
-            "--deficiency", "protan",
-            "--daltonize-method", "fidaner",
-        ])
+        self._call_main(
+            [
+                str(tiny_image),
+                str(out),
+                "--filter",
+                "daltonize",
+                "--deficiency",
+                "protan",
+                "--daltonize-method",
+                "fidaner",
+            ]
+        )
         assert out.exists()
 
     def test_daltonize_simple(self, tiny_image, tmp_path):
         out = tmp_path / "out.png"
-        self._call_main([
-            str(tiny_image), str(out),
-            "--filter", "daltonize",
-            "--deficiency", "deutan",
-            "--daltonize-method", "simple",
-        ])
+        self._call_main(
+            [
+                str(tiny_image),
+                str(out),
+                "--filter",
+                "daltonize",
+                "--deficiency",
+                "deutan",
+                "--daltonize-method",
+                "simple",
+            ]
+        )
         assert out.exists()
 
     def test_missing_input_exits_nonzero(self, tmp_path):
         out = tmp_path / "out.png"
         with pytest.raises(SystemExit) as exc:
-            self._call_main([
-                str(tmp_path / "nonexistent.png"),
-                str(out),
-            ])
+            self._call_main(
+                [
+                    str(tmp_path / "nonexistent.png"),
+                    str(out),
+                ]
+            )
         assert exc.value.code != 0
 
     def test_output_shape_preserved(self, tmp_path):
         from PIL import Image as PILImage
+
         arr = np.zeros((8, 12, 3), dtype=np.uint8)
         inp = tmp_path / "in.png"
         PILImage.fromarray(arr).save(inp)
         out = tmp_path / "out.png"
         self._call_main([str(inp), str(out)])
         with PILImage.open(out) as im:
-            assert im.size == (12, 8)   # PIL size is (width, height)
+            assert im.size == (12, 8)  # PIL size is (width, height)
 
     def test_load_failure_exits_nonzero(self, tiny_image, tmp_path):
         out = tmp_path / "out.png"
-        with mock.patch("daltonlens.main.Image.open", side_effect=OSError("corrupt")):
-            with pytest.raises(SystemExit) as exc:
-                self._call_main([str(tiny_image), str(out)])
+        with (
+            mock.patch("daltonlens.main.Image.open", side_effect=OSError("corrupt")),
+            pytest.raises(SystemExit) as exc,
+        ):
+            self._call_main([str(tiny_image), str(out)])
         assert exc.value.code != 0
 
     def test_save_failure_exits_nonzero(self, tiny_image, tmp_path):
@@ -196,14 +232,17 @@ class TestMainDirect:
 # Batch mode
 # ---------------------------------------------------------------------------
 
+
 class TestBatchMode:
     def _call_main(self, argv):
-        with mock.patch("sys.argv", ["daltonlens"] + argv):
+        with mock.patch("sys.argv", ["daltonlens", *argv]):
             from daltonlens.main import main
+
             main()
 
     def test_batch_processes_all_matches(self, tmp_path):
         from PIL import Image as PILImage
+
         src_dir = tmp_path / "src"
         src_dir.mkdir()
         out_dir = tmp_path / "out"
@@ -211,10 +250,14 @@ class TestBatchMode:
             arr = np.full((4, 4, 3), 64, dtype=np.uint8)
             PILImage.fromarray(arr).save(src_dir / name)
 
-        self._call_main([
-            "--batch", str(src_dir / "*.png"),
-            "--output-dir", str(out_dir),
-        ])
+        self._call_main(
+            [
+                "--batch",
+                str(src_dir / "*.png"),
+                "--output-dir",
+                str(out_dir),
+            ]
+        )
 
         assert len(list(out_dir.glob("*.png"))) == 3
 
@@ -226,23 +269,32 @@ class TestBatchMode:
     def test_batch_no_matches_exits_nonzero(self, tmp_path):
         out_dir = tmp_path / "out"
         with pytest.raises(SystemExit) as exc:
-            self._call_main([
-                "--batch", str(tmp_path / "nonexistent*.png"),
-                "--output-dir", str(out_dir),
-            ])
+            self._call_main(
+                [
+                    "--batch",
+                    str(tmp_path / "nonexistent*.png"),
+                    "--output-dir",
+                    str(out_dir),
+                ]
+            )
         assert exc.value.code != 0
 
     def test_batch_creates_output_dir(self, tmp_path):
         from PIL import Image as PILImage
+
         src = tmp_path / "img.png"
         arr = np.full((4, 4, 3), 64, dtype=np.uint8)
         PILImage.fromarray(arr).save(src)
         out_dir = tmp_path / "new" / "subdir"
 
-        self._call_main([
-            "--batch", str(tmp_path / "*.png"),
-            "--output-dir", str(out_dir),
-        ])
+        self._call_main(
+            [
+                "--batch",
+                str(tmp_path / "*.png"),
+                "--output-dir",
+                str(out_dir),
+            ]
+        )
 
         assert out_dir.exists()
 
@@ -257,11 +309,14 @@ class TestBatchMode:
 # __main__.py entrypoint
 # ---------------------------------------------------------------------------
 
+
 class TestMainEntrypoint:
     def test_module_entrypoint_runs_main(self, tmp_path):
         """__main__.py calls main(); verify it executes via sys.argv patch."""
         import runpy
+
         from PIL import Image as PILImage
+
         arr = np.full((4, 4, 3), 64, dtype=np.uint8)
         inp = tmp_path / "in.png"
         out = tmp_path / "out.png"

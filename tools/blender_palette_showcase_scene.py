@@ -9,6 +9,7 @@ Run through Blender:
     --output artifacts/blender_showcase/openperception_palette_showcase_render.png \
     --blend-output artifacts/blender_showcase/openperception_palette_showcase_scene.blend
 """
+
 from __future__ import annotations
 
 import argparse
@@ -51,7 +52,9 @@ def _srgb_channel_to_linear(value: float) -> float:
     return ((value + 0.055) / 1.055) ** 2.4
 
 
-def _hex_to_rgba(hex_code: str, alpha: float = 1.0) -> tuple[float, float, float, float]:
+def _hex_to_rgba(
+    hex_code: str, alpha: float = 1.0
+) -> tuple[float, float, float, float]:
     hex_code = hex_code.lstrip("#")
     rgb = [int(hex_code[i : i + 2], 16) / 255.0 for i in (0, 2, 4)]
     linear = [_srgb_channel_to_linear(component) for component in rgb]
@@ -112,7 +115,9 @@ def _assign_material(obj, material) -> None:
         obj.data.materials.append(material)
 
 
-def _add_box(bpy, name: str, location: tuple[float, float, float], scale, material, bevel=0.04):
+def _add_box(
+    bpy, name: str, location: tuple[float, float, float], scale, material, bevel=0.04
+):
     bpy.ops.mesh.primitive_cube_add(location=location)
     obj = bpy.context.active_object
     obj.name = name
@@ -131,7 +136,11 @@ def _add_marker(bpy, name: str, marker_type: str, location, size: float, materia
         )
     elif marker_type == "triangle":
         bpy.ops.mesh.primitive_cone_add(
-            vertices=3, radius1=size * 0.72, radius2=0.0, depth=size * 0.42, location=location
+            vertices=3,
+            radius1=size * 0.72,
+            radius2=0.0,
+            depth=size * 0.42,
+            location=location,
         )
         bpy.context.active_object.rotation_euler.z = math.radians(30.0)
     elif marker_type == "square":
@@ -173,7 +182,16 @@ def _add_depth_strip(bpy, name: str, location, scale, material):
     )
 
 
-def _add_area_light(bpy, scene, name: str, location, rotation, energy: float, size_x: float, size_y: float):
+def _add_area_light(
+    bpy,
+    scene,
+    name: str,
+    location,
+    rotation,
+    energy: float,
+    size_x: float,
+    size_y: float,
+):
     if scene.render.engine == "octane":
         bpy.ops.octane.quick_add_octane_area_light()
         light = bpy.context.active_object
@@ -203,7 +221,9 @@ def _load_image(bpy, image_path: str):
 def _configure_octane_image_node(bpy, node, image):
     if hasattr(node, "image"):
         node.image = image
-    filepath = image.filepath_from_user() if hasattr(image, "filepath_from_user") else ""
+    filepath = (
+        image.filepath_from_user() if hasattr(image, "filepath_from_user") else ""
+    )
     if filepath:
         if hasattr(node, "a_filename"):
             node.a_filename = filepath
@@ -291,7 +311,9 @@ def _select_render_engine(scene, preferred: str) -> str:
             continue
         except ValueError:
             continue
-    enum_items = [item.identifier for item in scene.render.bl_rna.properties["engine"].enum_items]
+    enum_items = [
+        item.identifier for item in scene.render.bl_rna.properties["engine"].enum_items
+    ]
     raise RuntimeError(f"No supported render engine found in {enum_items}")
 
 
@@ -410,11 +432,21 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
     concept = spec.get("concept", {})
     metrics = spec.get("repo_stats", {}).get("metrics", {})
     source_tab_count = _bounded_count(metrics.get("source_cache_doc_count", 5), 4, 7)
-    source_surface = _ensure_material(bpy, "VerifiedSourceSurface", "#F6F0E8", roughness=0.62)
-    source_border = _ensure_material(bpy, "VerifiedSourceBorder", "#C5B8AA", roughness=0.7)
-    source_primary = _ensure_material(bpy, "VerifiedSourcePrimary", "#3730A3", roughness=0.38)
-    source_accent = _ensure_material(bpy, "VerifiedSourceAccent", "#901C32", roughness=0.38)
-    source_focus = _ensure_material(bpy, "VerifiedSourceFocus", "#B45309", roughness=0.38)
+    source_surface = _ensure_material(
+        bpy, "VerifiedSourceSurface", "#F6F0E8", roughness=0.62
+    )
+    source_border = _ensure_material(
+        bpy, "VerifiedSourceBorder", "#C5B8AA", roughness=0.7
+    )
+    source_primary = _ensure_material(
+        bpy, "VerifiedSourcePrimary", "#3730A3", roughness=0.38
+    )
+    source_accent = _ensure_material(
+        bpy, "VerifiedSourceAccent", "#901C32", roughness=0.38
+    )
+    source_focus = _ensure_material(
+        bpy, "VerifiedSourceFocus", "#B45309", roughness=0.38
+    )
     source_dark = _ensure_material(bpy, "VerifiedSourceDark", "#111827", roughness=0.44)
     _add_box(
         bpy,
@@ -433,11 +465,14 @@ def build_scene(bpy, spec: dict, render_engine: str = "auto") -> None:
             f"SourceRailTab_{source_index}",
             location=(tab_x, 0.92, 0.16),
             scale=(0.24, 0.08, 0.02),
-            material=(source_primary, source_accent, source_focus, source_dark)[source_index % 4],
+            material=(source_primary, source_accent, source_focus, source_dark)[
+                source_index % 4
+            ],
             bevel=0.009,
         )
     physics_views = {
-        view["mode_label"]: view for view in spec.get("physics_views", {}).get("views", [])
+        view["mode_label"]: view
+        for view in spec.get("physics_views", {}).get("views", [])
     }
     for index, lane in enumerate(spec["lanes"]):
         x = start_x + index * lane_spacing

@@ -5,6 +5,7 @@ WHY: VALIDATORS_FRAMEWORK.md specifies the CONTRAST_GATE checks WCAG AA/AAA
      thresholds. This refactors contrast_check.py into the gate pattern so it
      can be composed into the full validation pipeline.
 """
+
 from __future__ import annotations
 
 import json
@@ -22,6 +23,7 @@ from validators.base import (
 # ---------------------------------------------------------------------------
 # Pure WCAG utilities (extracted from tools/contrast_check.py)
 # ---------------------------------------------------------------------------
+
 
 def hex_to_rgb(hex_str: str) -> tuple[int, int, int]:
     s = hex_str.strip().lstrip("#")
@@ -83,20 +85,53 @@ class ContrastGate(ValidatorGate):
             )
         self.tokens_path = tokens_json_path
 
-    def _check_variant(
-        self, variant_name: str, data: dict
-    ) -> list[CheckResult]:
+    def _check_variant(self, variant_name: str, data: dict) -> list[CheckResult]:
         brand = data.get("brand", {})
         gray = data.get("gray", {})
 
         pairs: list[tuple[str | None, str | None, str, float]] = [
-            (brand.get("text"), brand.get("surface"), "text on surface", WCAG_AA_NORMAL),
-            (brand.get("primaryStrong"), brand.get("surface"), "primaryStrong on surface", WCAG_AA_NORMAL),
-            (brand.get("accentStrong"), brand.get("surface"), "accentStrong on surface", WCAG_AA_NORMAL),
-            ("#FFFFFF", brand.get("primaryStrong"), "white on primaryStrong", WCAG_AA_NORMAL),
-            ("#FFFFFF", brand.get("accentStrong"), "white on accentStrong", WCAG_AA_NORMAL),
-            (gray.get("700"), brand.get("surface"), "gray700 on surface", WCAG_AA_NORMAL),
-            (gray.get("500"), brand.get("surface"), "gray500 on surface", WCAG_AA_LARGE),
+            (
+                brand.get("text"),
+                brand.get("surface"),
+                "text on surface",
+                WCAG_AA_NORMAL,
+            ),
+            (
+                brand.get("primaryStrong"),
+                brand.get("surface"),
+                "primaryStrong on surface",
+                WCAG_AA_NORMAL,
+            ),
+            (
+                brand.get("accentStrong"),
+                brand.get("surface"),
+                "accentStrong on surface",
+                WCAG_AA_NORMAL,
+            ),
+            (
+                "#FFFFFF",
+                brand.get("primaryStrong"),
+                "white on primaryStrong",
+                WCAG_AA_NORMAL,
+            ),
+            (
+                "#FFFFFF",
+                brand.get("accentStrong"),
+                "white on accentStrong",
+                WCAG_AA_NORMAL,
+            ),
+            (
+                gray.get("700"),
+                brand.get("surface"),
+                "gray700 on surface",
+                WCAG_AA_NORMAL,
+            ),
+            (
+                gray.get("500"),
+                brand.get("surface"),
+                "gray500 on surface",
+                WCAG_AA_LARGE,
+            ),
         ]
 
         results = []

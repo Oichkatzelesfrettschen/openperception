@@ -1,4 +1,5 @@
 """Tests for the first-pass seizure validator gate."""
+
 import json
 import sys
 from pathlib import Path
@@ -12,7 +13,9 @@ from validators.base import Status
 from validators.seizure import SeizureGate
 
 
-def write_frame(path: Path, color: tuple[int, int, int], size: tuple[int, int] = (20, 20)) -> None:
+def write_frame(
+    path: Path, color: tuple[int, int, int], size: tuple[int, int] = (20, 20)
+) -> None:
     image = Image.new("RGB", size, color)
     image.save(path)
 
@@ -38,7 +41,11 @@ def test_seizure_gate_passes_low_frequency_small_area(tmp_path: Path) -> None:
     write_frame(black_again, (0, 0, 0))
 
     manifest = tmp_path / "manifest.json"
-    write_manifest(manifest, frame_rate_hz=1.0, frame_names=["black.png", "white_small.png", "black_again.png"])
+    write_manifest(
+        manifest,
+        frame_rate_hz=1.0,
+        frame_names=["black.png", "white_small.png", "black_again.png"],
+    )
 
     result = SeizureGate(manifest).validate()
 
@@ -47,7 +54,9 @@ def test_seizure_gate_passes_low_frequency_small_area(tmp_path: Path) -> None:
 
 def test_seizure_gate_fails_high_frequency_and_large_area(tmp_path: Path) -> None:
     frames = []
-    for index, color in enumerate([(0, 0, 0), (255, 255, 255), (0, 0, 0), (255, 255, 255)]):
+    for index, color in enumerate(
+        [(0, 0, 0), (255, 255, 255), (0, 0, 0), (255, 255, 255)]
+    ):
         path = tmp_path / f"frame_{index}.png"
         write_frame(path, color)
         frames.append(path.name)
@@ -58,8 +67,14 @@ def test_seizure_gate_fails_high_frequency_and_large_area(tmp_path: Path) -> Non
     result = SeizureGate(manifest).validate()
 
     assert result.status == Status.FAIL
-    assert any(check.name == "seizure/flash_frequency" and check.status == Status.FAIL for check in result.checks)
-    assert any(check.name == "seizure/flash_area" and check.status == Status.FAIL for check in result.checks)
+    assert any(
+        check.name == "seizure/flash_frequency" and check.status == Status.FAIL
+        for check in result.checks
+    )
+    assert any(
+        check.name == "seizure/flash_area" and check.status == Status.FAIL
+        for check in result.checks
+    )
 
 
 def test_seizure_gate_fails_red_flash(tmp_path: Path) -> None:
@@ -73,4 +88,7 @@ def test_seizure_gate_fails_red_flash(tmp_path: Path) -> None:
 
     result = SeizureGate(manifest).validate()
 
-    assert any(check.name == "seizure/red_flash_saturation" and check.status == Status.FAIL for check in result.checks)
+    assert any(
+        check.name == "seizure/red_flash_saturation" and check.status == Status.FAIL
+        for check in result.checks
+    )

@@ -9,6 +9,7 @@ The KI-007 reference in WARN messages was added in T111 (Phase 7) as a link
 from the verifier output back to the known-issue row.  This file adds the
 regression coverage that T078/T116 asked for.
 """
+
 from __future__ import annotations
 
 import json
@@ -33,6 +34,7 @@ from validators.cvd import (
 # Threshold constant regression
 # ---------------------------------------------------------------------------
 
+
 class TestGate003ThresholdConstants:
     """Pin the published threshold values; changes here break downstream docs."""
 
@@ -49,6 +51,7 @@ class TestGate003ThresholdConstants:
 # ---------------------------------------------------------------------------
 # Oklab distance regression: specific color pairs
 # ---------------------------------------------------------------------------
+
 
 class TestOklabDistanceRegression:
     """Verify that well-known color pairs remain in the expected tier.
@@ -77,7 +80,10 @@ class TestOklabDistanceRegression:
 # CVDGate fixture: PASS tier
 # ---------------------------------------------------------------------------
 
-def _write_tokens(path: Path, *, accent: str, primary: str, focus: str, border: str) -> None:
+
+def _write_tokens(
+    path: Path, *, accent: str, primary: str, focus: str, border: str
+) -> None:
     payload = {
         "default": {
             "gray": {"400": "#9CA3AF", "500": "#6B7280"},
@@ -97,7 +103,9 @@ def _write_tokens(path: Path, *, accent: str, primary: str, focus: str, border: 
     path.write_text(json.dumps(payload))
 
 
-def _write_semantic(path: Path, *, danger: str, ally: str, focus: str, disabled: str, interactable: str) -> None:
+def _write_semantic(
+    path: Path, *, danger: str, ally: str, focus: str, disabled: str, interactable: str
+) -> None:
     payload = {
         "variants": {
             "default": {
@@ -145,8 +153,21 @@ class TestGate003PassTier:
         # Indigo (#3730A3) vs Magenta (#86198F) -- high contrast, large Oklab gap
         tokens = tmp_path / "tokens.json"
         semantic = tmp_path / "semantic.json"
-        _write_tokens(tokens, accent="#86198F", primary="#3730A3", focus="#A5B4FC", border="#D1D5DB")
-        _write_semantic(semantic, danger="#86198F", ally="#3730A3", focus="#A5B4FC", disabled="#D1D5DB", interactable="#3730A3")
+        _write_tokens(
+            tokens,
+            accent="#86198F",
+            primary="#3730A3",
+            focus="#A5B4FC",
+            border="#D1D5DB",
+        )
+        _write_semantic(
+            semantic,
+            danger="#86198F",
+            ally="#3730A3",
+            focus="#A5B4FC",
+            disabled="#D1D5DB",
+            interactable="#3730A3",
+        )
 
         result = CVDGate(tokens, semantic).validate()
 
@@ -166,7 +187,13 @@ class TestGate003FailTier:
         tokens = tmp_path / "tokens.json"
         semantic = tmp_path / "semantic.json"
         # Use the same gray for both danger and ally -- Oklab distance = 0
-        _write_tokens(tokens, accent="#777777", primary="#777777", focus="#8B8B8B", border="#8A8A8A")
+        _write_tokens(
+            tokens,
+            accent="#777777",
+            primary="#777777",
+            focus="#8B8B8B",
+            border="#8A8A8A",
+        )
         _write_semantic(
             semantic,
             danger="#777777",
@@ -191,7 +218,13 @@ class TestGate003FailTier:
         # every actionable separation message links back to the known-issue row.
         tokens = tmp_path / "tokens.json"
         semantic = tmp_path / "semantic.json"
-        _write_tokens(tokens, accent="#777777", primary="#777777", focus="#8B8B8B", border="#8A8A8A")
+        _write_tokens(
+            tokens,
+            accent="#777777",
+            primary="#777777",
+            focus="#8B8B8B",
+            border="#8A8A8A",
+        )
         _write_semantic(
             semantic,
             danger="#777777",
@@ -222,7 +255,13 @@ class TestGate003WarnTierMessages:
         tokens = tmp_path / "tokens.json"
         semantic = tmp_path / "semantic.json"
         # Indigo-based protan token that matches repo behavior
-        _write_tokens(tokens, accent="#86198F", primary="#3730A3", focus="#A5B4FC", border="#D1D5DB")
+        _write_tokens(
+            tokens,
+            accent="#86198F",
+            primary="#3730A3",
+            focus="#A5B4FC",
+            border="#D1D5DB",
+        )
         _write_semantic(
             semantic,
             danger="#86198F",

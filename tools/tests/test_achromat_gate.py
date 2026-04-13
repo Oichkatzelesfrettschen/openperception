@@ -1,4 +1,5 @@
 """Unit tests for GATE-007 AchromatGate (tools/validators/achromat.py)."""
+
 from __future__ import annotations
 
 import json
@@ -12,6 +13,7 @@ from validators.base import Status
 # ---------------------------------------------------------------------------
 # Helpers
 # ---------------------------------------------------------------------------
+
 
 def _make_tokens(mono_brand: dict, mono_viz_categorical: list | None = None) -> dict:
     """Build a minimal color-tokens.json payload with only the mono variant."""
@@ -44,33 +46,29 @@ def _write_tokens(tmp_path: Path, data: dict) -> Path:
 # TestAchromatGatePass
 # ---------------------------------------------------------------------------
 
+
 class TestAchromatGatePass:
     """All foreground colors have high contrast against white surface."""
 
     def test_high_contrast_foregrounds_all_pass(self, tmp_path):
         """Dark-on-white palette: every semantic foreground exceeds 4.5:1."""
         brand = {
-            "text":         "#111827",  # ~17.7:1
-            "primary":      "#374151",  # ~10.3:1
-            "primaryStrong": "#111827", # ~17.7:1
-            "accent":       "#374151",  # ~10.3:1
+            "text": "#111827",  # ~17.7:1
+            "primary": "#374151",  # ~10.3:1
+            "primaryStrong": "#111827",  # ~17.7:1
+            "accent": "#374151",  # ~10.3:1
             "accentStrong": "#111827",  # ~17.7:1
-            "link":         "#374151",  # ~10.3:1
-            "surface":      "#FFFFFF",
+            "link": "#374151",  # ~10.3:1
+            "surface": "#FFFFFF",
         }
         tokens_path = _write_tokens(tmp_path, _make_tokens(brand))
         gate = AchromatGate(tokens_path)
         result = gate.validate()
 
-        fg_checks = [
-            c for c in result.checks
-            if "on surface" in c.name
-        ]
+        fg_checks = [c for c in result.checks if "on surface" in c.name]
         assert len(fg_checks) == 6
         for check in fg_checks:
-            assert check.status == Status.PASS, (
-                f"{check.name}: {check.message}"
-            )
+            assert check.status == Status.PASS, f"{check.name}: {check.message}"
 
     def test_gate_id_and_name(self, tmp_path):
         brand = {"text": "#111827", "surface": "#FFFFFF"}
@@ -83,19 +81,17 @@ class TestAchromatGatePass:
     def test_status_pass_when_all_fg_pass(self, tmp_path):
         """When all fg checks pass and no categorical collapse, overall status is PASS."""
         brand = {
-            "text":         "#111827",
-            "primary":      "#111827",
+            "text": "#111827",
+            "primary": "#111827",
             "primaryStrong": "#111827",
-            "accent":       "#374151",
+            "accent": "#374151",
             "accentStrong": "#111827",
-            "link":         "#111827",
-            "surface":      "#FFFFFF",
+            "link": "#111827",
+            "surface": "#FFFFFF",
         }
         # Categorical with enough contrast between [0] and [1]
         categorical = ["#111827", "#FFFFFF", "#374151", "#6B7280"]
-        tokens_path = _write_tokens(
-            tmp_path, _make_tokens(brand, categorical)
-        )
+        tokens_path = _write_tokens(tmp_path, _make_tokens(brand, categorical))
         gate = AchromatGate(tokens_path)
         result = gate.validate()
         assert result.status == Status.PASS, str(result)
@@ -105,19 +101,20 @@ class TestAchromatGatePass:
 # TestAchromatGateFail
 # ---------------------------------------------------------------------------
 
+
 class TestAchromatGateFail:
     """Palettes that must trigger FAIL checks."""
 
     def test_low_contrast_primary_fails(self, tmp_path):
         """brand.primary at gray-300 (#D1D5DB) gives ~1.6:1 on white -- FAIL."""
         brand = {
-            "text":         "#111827",
-            "primary":      "#D1D5DB",  # ~1.6:1 on white
+            "text": "#111827",
+            "primary": "#D1D5DB",  # ~1.6:1 on white
             "primaryStrong": "#111827",
-            "accent":       "#374151",
+            "accent": "#374151",
             "accentStrong": "#111827",
-            "link":         "#111827",
-            "surface":      "#FFFFFF",
+            "link": "#111827",
+            "surface": "#FFFFFF",
         }
         tokens_path = _write_tokens(tmp_path, _make_tokens(brand))
         gate = AchromatGate(tokens_path)
@@ -148,19 +145,20 @@ class TestAchromatGateFail:
 # TestAchromatGateWarn
 # ---------------------------------------------------------------------------
 
+
 class TestAchromatGateWarn:
     """Borderline palettes that should trigger WARN checks."""
 
     def test_medium_contrast_primary_warns(self, tmp_path):
         """brand.primary at #888888 gives ~3.5:1 on white -- WARN zone [3.0, 4.5)."""
         brand = {
-            "text":         "#111827",
-            "primary":      "#888888",  # ~3.5:1 on white -- in WARN zone
+            "text": "#111827",
+            "primary": "#888888",  # ~3.5:1 on white -- in WARN zone
             "primaryStrong": "#111827",
-            "accent":       "#374151",
+            "accent": "#374151",
             "accentStrong": "#111827",
-            "link":         "#111827",
-            "surface":      "#FFFFFF",
+            "link": "#111827",
+            "surface": "#FFFFFF",
         }
         tokens_path = _write_tokens(tmp_path, _make_tokens(brand))
         gate = AchromatGate(tokens_path)
@@ -174,30 +172,26 @@ class TestAchromatGateWarn:
     def test_categorical_collapse_warns(self, tmp_path):
         """When categorical[0] == categorical[1] a WARN is emitted."""
         brand = {
-            "text":     "#111827",
-            "primary":  "#374151",
+            "text": "#111827",
+            "primary": "#374151",
             "primaryStrong": "#111827",
-            "accent":   "#374151",
+            "accent": "#374151",
             "accentStrong": "#111827",
-            "link":     "#374151",
-            "surface":  "#FFFFFF",
+            "link": "#374151",
+            "surface": "#FFFFFF",
         }
         categorical = ["#374151", "#374151", "#6B7280", "#D1D5DB"]
-        tokens_path = _write_tokens(
-            tmp_path, _make_tokens(brand, categorical)
-        )
+        tokens_path = _write_tokens(tmp_path, _make_tokens(brand, categorical))
         gate = AchromatGate(tokens_path)
         result = gate.validate()
 
-        collapse_check = next(
-            c for c in result.checks if "collapse" in c.name
-        )
+        collapse_check = next(c for c in result.checks if "collapse" in c.name)
         assert collapse_check.status == Status.WARN
 
     def test_missing_token_warns_not_fails(self, tmp_path):
         """A missing optional fg token emits WARN, not FAIL."""
         brand = {
-            "text":    "#111827",
+            "text": "#111827",
             # primary, accent, etc. absent
             "surface": "#FFFFFF",
         }
@@ -206,7 +200,8 @@ class TestAchromatGateWarn:
         result = gate.validate()
 
         missing_checks = [
-            c for c in result.checks
+            c
+            for c in result.checks
             if c.status == Status.WARN and "Missing token" in c.message
         ]
         assert len(missing_checks) > 0
@@ -215,6 +210,7 @@ class TestAchromatGateWarn:
 # ---------------------------------------------------------------------------
 # TestAchromatGateWithRealTokens
 # ---------------------------------------------------------------------------
+
 
 class TestAchromatGateWithRealTokens:
     """Integration test: run against the actual repo tokens."""
@@ -230,9 +226,8 @@ class TestAchromatGateWithRealTokens:
         result = gate.validate()
 
         failed = [c for c in result.checks if c.status == Status.FAIL]
-        assert not failed, (
-            "GATE-007 FAIL checks found:\n"
-            + "\n".join(f"  {c.name}: {c.message}" for c in failed)
+        assert not failed, "GATE-007 FAIL checks found:\n" + "\n".join(
+            f"  {c.name}: {c.message}" for c in failed
         )
 
     def test_real_tokens_primary_contrast_passes(self):

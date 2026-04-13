@@ -10,9 +10,9 @@ import math
 
 
 def hex_to_srgb(hex_str: str) -> tuple[float, float, float]:
-    s = hex_str.strip().lstrip('#')
+    s = hex_str.strip().lstrip("#")
     if len(s) == 3:
-        s = ''.join([c*2 for c in s])
+        s = "".join([c * 2 for c in s])
     if len(s) != 6:
         raise ValueError(f"Invalid hex: {hex_str}")
     r = int(s[0:2], 16) / 255.0
@@ -34,9 +34,9 @@ def srgb_to_oklab(r: float, g: float, b: float) -> tuple[float, float, float]:
     m = 0.2119034982 * rl + 0.6806995451 * gl + 0.1073969566 * bl
     s = 0.0883024619 * rl + 0.2817188376 * gl + 0.6299787005 * bl
 
-    l_ = math.copysign(abs(l) ** (1/3), l)
-    m_ = math.copysign(abs(m) ** (1/3), m)
-    s_ = math.copysign(abs(s) ** (1/3), s)
+    l_ = math.copysign(abs(l) ** (1 / 3), l)
+    m_ = math.copysign(abs(m) ** (1 / 3), m)
+    s_ = math.copysign(abs(s) ** (1 / 3), s)
 
     L = 0.2104542553 * l_ + 0.7936177850 * m_ - 0.0040720468 * s_
     a = 1.9779984951 * l_ - 2.4285922050 * m_ + 0.4505937099 * s_
@@ -57,13 +57,15 @@ def hex_to_oklch(hex_str: str) -> tuple[float, float, float]:
     return (Lc, C, h)
 
 
-def format_oklch_tuple(t: tuple[float, float, float], precision: int = 5) -> tuple[float, float, float]:
+def format_oklch_tuple(
+    t: tuple[float, float, float], precision: int = 5
+) -> tuple[float, float, float]:
     L, C, h = t
     return (round(L, precision), round(C, precision), round(h, 2))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     import sys
+
     for hex_code in sys.argv[1:]:
         print(hex_code, format_oklch_tuple(hex_to_oklch(hex_code)))
-

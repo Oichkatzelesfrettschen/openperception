@@ -8,6 +8,7 @@ Reports:
 - simulated separation for the experimental default theme under
   protan, deutan, and tritan full-severity views
 """
+
 from __future__ import annotations
 
 import json

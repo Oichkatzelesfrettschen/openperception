@@ -15,6 +15,7 @@ to color quantization for image analysis and enhancement.
 """
 
 import numpy as np
+
 from daltonlens import convert, simulate
 from daltonlens.simulate import Deficiency
 
@@ -79,18 +80,22 @@ def daltonize_fidaner(
     if deficiency in (Deficiency.PROTAN, Deficiency.DEUTAN):
         # For red-green blindness, shift error to blue channel
         # Also add some to green to increase overall contrast
-        error_shift_matrix = np.array([
-            [0.0, 0.0, 0.0],
-            [0.7, 1.0, 0.0],
-            [0.7, 0.0, 1.0],
-        ])
+        error_shift_matrix = np.array(
+            [
+                [0.0, 0.0, 0.0],
+                [0.7, 1.0, 0.0],
+                [0.7, 0.0, 1.0],
+            ]
+        )
     else:  # TRITAN
         # For blue-yellow blindness, shift error to red/green channels
-        error_shift_matrix = np.array([
-            [1.0, 0.0, 0.7],
-            [0.0, 1.0, 0.7],
-            [0.0, 0.0, 0.0],
-        ])
+        error_shift_matrix = np.array(
+            [
+                [1.0, 0.0, 0.7],
+                [0.0, 1.0, 0.7],
+                [0.0, 0.0, 0.0],
+            ]
+        )
 
     # Apply error shift
     shifted_error = convert.apply_color_matrix(error, error_shift_matrix)

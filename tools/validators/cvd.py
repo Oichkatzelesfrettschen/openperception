@@ -5,7 +5,7 @@ WHY: VALIDATORS_FRAMEWORK.md specifies GATE-003 checks whether semantic colors
      remain distinguishable after CVD simulation. This refactors separation_check.py
      into the gate pattern so it integrates with the validation pipeline.
 """
-# ruff: noqa: I001
+
 from __future__ import annotations
 
 import json
@@ -18,7 +18,11 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from okcolor import hex_to_srgb, srgb_to_oklab
-from semantic_tokens import DEFAULT_SEMANTIC_TOKENS, get_variant_roles, load_semantic_tokens
+from semantic_tokens import (
+    DEFAULT_SEMANTIC_TOKENS,
+    get_variant_roles,
+    load_semantic_tokens,
+)
 
 from validators.base import (
     CheckResult,
@@ -32,6 +36,7 @@ from validators.base import (
 # ---------------------------------------------------------------------------
 # Oklab distance utility
 # ---------------------------------------------------------------------------
+
 
 def oklab_distance(hex1: str, hex2: str) -> float:
     r1, g1, b1 = hex_to_srgb(hex1)
@@ -73,7 +78,9 @@ def derive_semantic_roles(
             or gray.get("500")
             or default_brand.get("border")
         ),
-        "interactable": brand.get("link") or brand.get("primaryStrong") or brand.get("primary"),
+        "interactable": brand.get("link")
+        or brand.get("primaryStrong")
+        or brand.get("primary"),
         "warning": brand.get("accent") or brand.get("accentStrong"),
         "info": brand.get("primary") or brand.get("primaryStrong") or brand.get("link"),
         "progress": brand.get("primaryStrong") or brand.get("primary"),
@@ -106,10 +113,9 @@ def semantic_redundancy_available_pair(
             and redundancy_a.get("dash") is not None
             and redundancy_b.get("dash") is not None
         ):
-            if (
-                redundancy_a.get("marker") == redundancy_b.get("marker")
-                and redundancy_a.get("dash") == redundancy_b.get("dash")
-            ):
+            if redundancy_a.get("marker") == redundancy_b.get(
+                "marker"
+            ) and redundancy_a.get("dash") == redundancy_b.get("dash"):
                 return (
                     False,
                     f"{role_a_name.title()} and {role_b_name} collapse to the same marker and dash",
@@ -143,10 +149,16 @@ def semantic_redundancy_available_pair(
     markers = viz.get("markers", [])
     dashes = viz.get("dashes", [])
     if len(markers) < 2 or len(dashes) < 2:
-        return False, f"Missing viz markers/dashes for {role_a_name}/{role_b_name} redundancy"
+        return (
+            False,
+            f"Missing viz markers/dashes for {role_a_name}/{role_b_name} redundancy",
+        )
     if markers[0] == markers[1] and dashes[0] == dashes[1]:
         return False, f"Fallback viz series collapse for {role_a_name}/{role_b_name}"
-    return True, f"Distinct fallback marker/dash backups exist for {role_a_name} and {role_b_name}"
+    return (
+        True,
+        f"Distinct fallback marker/dash backups exist for {role_a_name} and {role_b_name}",
+    )
 
 
 class CVDGate(ValidatorGate):
@@ -261,7 +273,8 @@ class CVDGate(ValidatorGate):
 
             semantic_roles = (
                 get_variant_roles(semantic_payload, variant_name)
-                if semantic_payload is not None and variant_name in semantic_payload.get("variants", {})
+                if semantic_payload is not None
+                and variant_name in semantic_payload.get("variants", {})
                 else derive_semantic_roles(variant_name, data, default_tokens)
             )
             self._append_distance_check(
@@ -318,11 +331,13 @@ class CVDGate(ValidatorGate):
                     message=redundancy_message,
                 )
             )
-            warning_redundancy_ok, warning_redundancy_message = semantic_redundancy_available_pair(
-                "warning",
-                "info",
-                data,
-                semantic_roles if semantic_payload is not None else None,
+            warning_redundancy_ok, warning_redundancy_message = (
+                semantic_redundancy_available_pair(
+                    "warning",
+                    "info",
+                    data,
+                    semantic_roles if semantic_payload is not None else None,
+                )
             )
             result.checks.append(
                 CheckResult(
@@ -331,11 +346,13 @@ class CVDGate(ValidatorGate):
                     message=warning_redundancy_message,
                 )
             )
-            progress_redundancy_ok, progress_redundancy_message = semantic_redundancy_available_pair(
-                "progress",
-                "disabled",
-                data,
-                semantic_roles if semantic_payload is not None else None,
+            progress_redundancy_ok, progress_redundancy_message = (
+                semantic_redundancy_available_pair(
+                    "progress",
+                    "disabled",
+                    data,
+                    semantic_roles if semantic_payload is not None else None,
+                )
             )
             result.checks.append(
                 CheckResult(

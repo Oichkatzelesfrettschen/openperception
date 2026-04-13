@@ -2,6 +2,7 @@
 """
 Emit a coverage report for the claims-to-runtime registry.
 """
+
 from __future__ import annotations
 
 import argparse

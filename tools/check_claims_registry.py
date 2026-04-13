@@ -2,6 +2,7 @@
 """
 Validate the claims-to-runtime registry for internal consistency.
 """
+
 from __future__ import annotations
 
 import argparse

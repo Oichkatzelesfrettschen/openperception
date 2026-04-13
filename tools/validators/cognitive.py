@@ -6,6 +6,7 @@ progressive disclosure, reading complexity, and notification density. This
 module starts with the smallest honest runtime slice over repo-owned HTML
 surfaces plus the machine-readable axis profile manifest.
 """
+
 # ruff: noqa: I001
 from __future__ import annotations
 
@@ -132,7 +133,9 @@ class CognitiveHTMLParser(HTMLParser):
         self.metric_group_count = 0
         self._primary_action_scopes: list[str] = []
 
-    def handle_starttag(self, tag: str, attrs_list: list[tuple[str, str | None]]) -> None:
+    def handle_starttag(
+        self, tag: str, attrs_list: list[tuple[str, str | None]]
+    ) -> None:
         attrs = dict(attrs_list)
         panel_groups = attrs.get("data-panel-groups")
         if panel_groups and panel_groups.isdigit():
@@ -161,7 +164,12 @@ class CognitiveHTMLParser(HTMLParser):
             self.notification_count += 1
         if "data-primary-actions" in attrs:
             self._primary_action_scopes.append(tag)
-        if self._primary_action_scopes and tag in {"button", "select", "input", "textarea"}:
+        if self._primary_action_scopes and tag in {
+            "button",
+            "select",
+            "input",
+            "textarea",
+        }:
             self.primary_action_count += 1
         if tag in {"a", "button", "summary", "select", "textarea"}:
             self.visible_control_count += 1
@@ -205,11 +213,16 @@ class CognitiveHTMLParser(HTMLParser):
         if self._primary_action_scopes and tag == self._primary_action_scopes[-1]:
             self._primary_action_scopes.pop()
 
-    def handle_startendtag(self, tag: str, attrs_list: list[tuple[str, str | None]]) -> None:
+    def handle_startendtag(
+        self, tag: str, attrs_list: list[tuple[str, str | None]]
+    ) -> None:
         self.handle_starttag(tag, attrs_list)
         if tag in IGNORED_TEXT_TAGS and self._ignored_depth:
             self._ignored_depth -= 1
-        if self._primary_action_scopes and dict(attrs_list).get("data-primary-actions") is not None:
+        if (
+            self._primary_action_scopes
+            and dict(attrs_list).get("data-primary-actions") is not None
+        ):
             self._primary_action_scopes.pop()
 
     def handle_data(self, data: str) -> None:
@@ -244,7 +257,9 @@ class CognitiveGate(ValidatorGate):
             if "axes" in profile
         ]
         invalid = [
-            value for value in cognitive_values if value not in ALLOWED_PROFILE_COGNITIVE
+            value
+            for value in cognitive_values
+            if value not in ALLOWED_PROFILE_COGNITIVE
         ]
         result.checks.append(
             CheckResult(
@@ -253,14 +268,17 @@ class CognitiveGate(ValidatorGate):
                 message=(
                     "All profile cognitive modes use allowed HUD labels"
                     if not invalid
-                    else "Invalid cognitive profile modes: " + ", ".join(sorted(invalid))
+                    else "Invalid cognitive profile modes: "
+                    + ", ".join(sorted(invalid))
                 ),
                 value=float(len(cognitive_values)),
                 threshold=float(len(cognitive_values)),
             )
         )
 
-        supports_reduced_density = any(value == "minimal HUD" for value in cognitive_values)
+        supports_reduced_density = any(
+            value == "minimal HUD" for value in cognitive_values
+        )
         result.checks.append(
             CheckResult(
                 name="profiles/reduced_density_mode_available",
@@ -276,14 +294,26 @@ class CognitiveGate(ValidatorGate):
     def _check_html_surface(self, html_path: Path, result: GateResult) -> None:
         parser = CognitiveHTMLParser()
         parser.feed(html_path.read_text())
-        nav_count = max((int(item["item_count"]) for item in parser.nav_contexts), default=0)
-        nav_depth = max((int(item["max_depth"]) for item in parser.nav_contexts), default=0)
+        nav_count = max(
+            (int(item["item_count"]) for item in parser.nav_contexts), default=0
+        )
+        nav_depth = max(
+            (int(item["max_depth"]) for item in parser.nav_contexts), default=0
+        )
         hud_modes = parser.hud_modes
-        invalid_hud_modes = [mode for mode in hud_modes if mode not in ALLOWED_HUD_COMPLEXITY]
+        invalid_hud_modes = [
+            mode for mode in hud_modes if mode not in ALLOWED_HUD_COMPLEXITY
+        ]
         hud_mode = hud_modes[0] if hud_modes and not invalid_hud_modes else None
         grade_level = approximate_grade_level(" ".join(parser.text_chunks))
 
-        nav_status = Status.WARN if nav_count == 0 else Status.PASS if nav_count <= 9 else Status.FAIL
+        nav_status = (
+            Status.WARN
+            if nav_count == 0
+            else Status.PASS
+            if nav_count <= 9
+            else Status.FAIL
+        )
         nav_message = (
             "No navigation scope declared on the page"
             if nav_count == 0
@@ -299,7 +329,13 @@ class CognitiveGate(ValidatorGate):
             )
         )
 
-        depth_status = Status.WARN if nav_depth == 0 else Status.PASS if nav_depth <= 3 else Status.FAIL
+        depth_status = (
+            Status.WARN
+            if nav_depth == 0
+            else Status.PASS
+            if nav_depth <= 3
+            else Status.FAIL
+        )
         depth_message = (
             "No navigation nesting declared on the page"
             if nav_depth == 0
@@ -316,7 +352,11 @@ class CognitiveGate(ValidatorGate):
         )
 
         summary_required = parser.complex_content_marked
-        summary_status = Status.PASS if (not summary_required or parser.has_summary_view) else Status.FAIL
+        summary_status = (
+            Status.PASS
+            if (not summary_required or parser.has_summary_view)
+            else Status.FAIL
+        )
         summary_message = (
             "Complex content has a summary or details disclosure"
             if summary_status == Status.PASS
@@ -335,7 +375,9 @@ class CognitiveGate(ValidatorGate):
             hud_message = "No data-hud-complexity declaration found"
         elif invalid_hud_modes:
             hud_status = Status.FAIL
-            hud_message = "Invalid HUD complexity values: " + ", ".join(sorted(invalid_hud_modes))
+            hud_message = "Invalid HUD complexity values: " + ", ".join(
+                sorted(invalid_hud_modes)
+            )
         else:
             hud_status = Status.PASS
             hud_message = "Declared HUD complexity modes: " + ", ".join(hud_modes)
@@ -347,7 +389,9 @@ class CognitiveGate(ValidatorGate):
             )
         )
 
-        notification_status = Status.PASS if parser.notification_count <= 3 else Status.FAIL
+        notification_status = (
+            Status.PASS if parser.notification_count <= 3 else Status.FAIL
+        )
         result.checks.append(
             CheckResult(
                 name=f"{html_path.name}/concurrent_notifications",
@@ -418,7 +462,9 @@ class CognitiveGate(ValidatorGate):
 
         if hud_mode is None:
             visible_control_status = Status.WARN
-            visible_control_message = "Missing usable HUD mode for visible-control burden"
+            visible_control_message = (
+                "Missing usable HUD mode for visible-control burden"
+            )
         else:
             pass_threshold, warn_threshold = HUD_VISIBLE_CONTROL_THRESHOLDS[hud_mode]
             if parser.visible_control_count <= pass_threshold:
@@ -503,7 +549,11 @@ class CognitiveGate(ValidatorGate):
             )
         )
 
-        density_burden = parser.region_count + parser.primary_action_count + parser.notification_count
+        density_burden = (
+            parser.region_count
+            + parser.primary_action_count
+            + parser.notification_count
+        )
         if hud_mode is None:
             burden_status = Status.WARN
             burden_message = "Missing usable HUD mode for combined density budget"

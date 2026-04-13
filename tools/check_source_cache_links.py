@@ -2,6 +2,7 @@
 """
 Validate source-cache markdown links into live research-facing repo docs.
 """
+
 from __future__ import annotations
 
 import argparse
@@ -31,7 +32,11 @@ def parse_args() -> argparse.Namespace:
 def main() -> int:
     args = parse_args()
     repo_root = Path(args.repo_root).resolve() if args.repo_root else None
-    errors = validate_source_cache_links(repo_root) if repo_root else validate_source_cache_links()
+    errors = (
+        validate_source_cache_links(repo_root)
+        if repo_root
+        else validate_source_cache_links()
+    )
     return emit_check_report(
         check_id="source_cache_links",
         display_name="Source cache link check",

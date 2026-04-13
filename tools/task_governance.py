@@ -1,6 +1,7 @@
 """
 Validate live governance files for task tracking and known-issues discipline.
 """
+
 from __future__ import annotations
 
 import re
@@ -13,7 +14,9 @@ KNOWN_ISSUES_PATH = Path("docs/KNOWN_ISSUES.md")
 BANNED_TODO_DOCS = (Path("CHANGELOG.md"), Path("CLAUDE.md"))
 # Strategic docs: backtick repo-path references must resolve and no loose TODOs
 STRATEGIC_DOCS = (Path("ARCHITECTURE.md"), Path("ROADMAP.md"))
-TASK_LINE_RE = re.compile(r"^- \[(?P<status>[ x])\] (?P<task_id>T\d{3}) (?P<text>.+)$", re.M)
+TASK_LINE_RE = re.compile(
+    r"^- \[(?P<status>[ x])\] (?P<task_id>T\d{3}) (?P<text>.+)$", re.M
+)
 ISSUE_HEADING_RE = re.compile(r"^## (?P<issue_id>KI-\d{3})\b", re.M)
 BACKTICK_RE = re.compile(r"`([^`\n]+)`")
 ROOT_FILES = {
@@ -52,7 +55,9 @@ def _looks_like_repo_path(token: str) -> bool:
 
 
 def _iter_backticked_repo_paths(text: str) -> list[str]:
-    return [token for token in BACKTICK_RE.findall(text) if _looks_like_repo_path(token)]
+    return [
+        token for token in BACKTICK_RE.findall(text) if _looks_like_repo_path(token)
+    ]
 
 
 def validate_task_governance(repo_root: Path = REPO_ROOT) -> list[str]:
@@ -125,8 +130,7 @@ def validate_task_governance(repo_root: Path = REPO_ROOT) -> list[str]:
         for token in _iter_backticked_repo_paths(text):
             if not (repo_root / token).exists():
                 errors.append(
-                    f"strategic doc references missing repo path: "
-                    f"{token} in {rel_path}"
+                    f"strategic doc references missing repo path: {token} in {rel_path}"
                 )
 
     return sorted(errors)

@@ -1,6 +1,7 @@
 """
 Validate the curated paper corpus and its canonical source registry.
 """
+
 from __future__ import annotations
 
 import hashlib
@@ -156,16 +157,24 @@ def validate_paper_corpus(
             source_artifacts.add(rel_path)
             artifact_path = repo_root / rel_path
             if not artifact_path.exists():
-                errors.append(f"source {source_id} references missing artifact {rel_path}")
+                errors.append(
+                    f"source {source_id} references missing artifact {rel_path}"
+                )
                 continue
             size_bytes = artifact_path.stat().st_size
             if size_bytes == 0:
                 errors.append(f"source {source_id} artifact is zero-byte: {rel_path}")
-            if artifact_path.suffix.lower() == ".pdf" and not _looks_like_pdf(artifact_path):
-                errors.append(f"source {source_id} artifact is not a valid PDF header: {rel_path}")
+            if artifact_path.suffix.lower() == ".pdf" and not _looks_like_pdf(
+                artifact_path
+            ):
+                errors.append(
+                    f"source {source_id} artifact is not a valid PDF header: {rel_path}"
+                )
             entry = file_index.get(rel_path)
             if entry is None:
-                errors.append(f"source {source_id} artifact missing from files table: {rel_path}")
+                errors.append(
+                    f"source {source_id} artifact missing from files table: {rel_path}"
+                )
                 continue
             actual_hash = _sha256(artifact_path)
             if entry.get("sha256") != actual_hash:
@@ -198,7 +207,9 @@ def validate_paper_corpus(
     for alias in registry.get("legacy_aliases", []):
         legacy_path = repo_root / alias["legacy_path"]
         if legacy_path.exists():
-            errors.append(f"legacy path still exists and should be removed: {alias['legacy_path']}")
+            errors.append(
+                f"legacy path still exists and should be removed: {alias['legacy_path']}"
+            )
         for rel_path in alias.get("canonical_artifacts", []):
             if not (repo_root / rel_path).exists():
                 errors.append(

@@ -1,4 +1,5 @@
 """Tests for the semantic-aware CVD gate."""
+
 import json
 import sys
 from pathlib import Path
@@ -10,7 +11,17 @@ from validators.base import Status
 from validators.cvd import CVDGate, derive_semantic_roles
 
 
-def write_tokens(path: Path, *, accent: str, primary: str, link: str, border: str, focus_ring: str, markers=None, dashes=None) -> None:
+def write_tokens(
+    path: Path,
+    *,
+    accent: str,
+    primary: str,
+    link: str,
+    border: str,
+    focus_ring: str,
+    markers=None,
+    dashes=None,
+) -> None:
     payload = {
         "default": {
             "gray": {
@@ -68,15 +79,34 @@ def write_semantic_tokens(
                         },
                     },
                     "focus": {"color": focus, "redundancy": {"pattern": "outline"}},
-                    "disabled": {"color": disabled, "redundancy": {"marker": "x", "dash": [2, 2], "pattern": "dashed", "icon": "lock"}},
-                    "interactable": {"color": interactable, "redundancy": {"pattern": "underline"}},
+                    "disabled": {
+                        "color": disabled,
+                        "redundancy": {
+                            "marker": "x",
+                            "dash": [2, 2],
+                            "pattern": "dashed",
+                            "icon": "lock",
+                        },
+                    },
+                    "interactable": {
+                        "color": interactable,
+                        "redundancy": {"pattern": "underline"},
+                    },
                     "warning": {
                         "color": warning,
-                        "redundancy": {"marker": "diamond", "dash": [3, 2, 1, 2], "pattern": "chevron"},
+                        "redundancy": {
+                            "marker": "diamond",
+                            "dash": [3, 2, 1, 2],
+                            "pattern": "chevron",
+                        },
                     },
                     "info": {
                         "color": info,
-                        "redundancy": {"marker": "square", "dash": [1, 2], "pattern": "dotted"},
+                        "redundancy": {
+                            "marker": "square",
+                            "dash": [1, 2],
+                            "pattern": "dotted",
+                        },
                     },
                     "progress": {
                         "color": progress,
@@ -133,11 +163,13 @@ def test_cvd_gate_passes_semantic_role_checks_on_clear_fixture(tmp_path: Path) -
     result = CVDGate(tokens, semantic).validate()
 
     assert any(
-        check.name == "default/danger-vs-ally" and check.status in {Status.PASS, Status.WARN}
+        check.name == "default/danger-vs-ally"
+        and check.status in {Status.PASS, Status.WARN}
         for check in result.checks
     )
     assert any(
-        check.name == "default/warning-vs-info" and check.status in {Status.PASS, Status.WARN}
+        check.name == "default/warning-vs-info"
+        and check.status in {Status.PASS, Status.WARN}
         for check in result.checks
     )
     assert any(
@@ -202,7 +234,8 @@ def test_cvd_gate_can_fall_back_without_semantic_manifest(tmp_path: Path) -> Non
     result = CVDGate(tokens, tmp_path / "missing.json").validate()
 
     assert any(
-        check.name == "default/danger-vs-ally" and check.status in {Status.PASS, Status.WARN}
+        check.name == "default/danger-vs-ally"
+        and check.status in {Status.PASS, Status.WARN}
         for check in result.checks
     )
     assert any(

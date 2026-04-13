@@ -6,14 +6,18 @@ WHY: The static cognitive validator can reason about declared structure, but it
 cannot tell how many controls and regions actually compete for attention in the
 initial viewport. This tool measures first-screen visible burden in Chromium.
 """
-# ruff: noqa: I001
+
 from __future__ import annotations
 
 import argparse
 import json
 from pathlib import Path
 
-from rendered_spatial_check import _launch_browser, browser_is_available, serve_directory
+from rendered_spatial_check import (
+    _launch_browser,
+    browser_is_available,
+    serve_directory,
+)
 from validators.base import CheckResult, GateResult, Severity, Status
 
 
@@ -152,7 +156,9 @@ def run_rendered_cognitive_audit(
     *,
     root: Path = DEFAULT_ROOT,
     page_paths: tuple[Path, ...] = DEFAULT_PAGE_PATHS,
-    viewports: tuple[Viewport, ...] = tuple(Viewport(*item) for item in DEFAULT_VIEWPORTS),
+    viewports: tuple[Viewport, ...] = tuple(
+        Viewport(*item) for item in DEFAULT_VIEWPORTS
+    ),
 ) -> GateResult:
     result = _make_result()
     if not browser_is_available():
@@ -204,7 +210,9 @@ def run_rendered_cognitive_audit(
                                         f"{control_count} visible control(s) in first viewport for {hud_mode} HUD"
                                     ),
                                     value=float(control_count),
-                                    threshold=float(HUD_VISIBLE_CONTROL_THRESHOLDS[hud_mode][0]),
+                                    threshold=float(
+                                        HUD_VISIBLE_CONTROL_THRESHOLDS[hud_mode][0]
+                                    ),
                                 )
                             )
                             result.checks.append(
@@ -218,7 +226,9 @@ def run_rendered_cognitive_audit(
                                         f"{region_count} visible density region(s) in first viewport for {hud_mode} HUD"
                                     ),
                                     value=float(region_count),
-                                    threshold=float(HUD_VISIBLE_REGION_THRESHOLDS[hud_mode][0]),
+                                    threshold=float(
+                                        HUD_VISIBLE_REGION_THRESHOLDS[hud_mode][0]
+                                    ),
                                 )
                             )
                             result.checks.append(
@@ -232,7 +242,9 @@ def run_rendered_cognitive_audit(
                                         f"{cluster_count} visible cluster(s) in first viewport for {hud_mode} HUD"
                                     ),
                                     value=float(cluster_count),
-                                    threshold=float(HUD_VISIBLE_CLUSTER_THRESHOLDS[hud_mode][0]),
+                                    threshold=float(
+                                        HUD_VISIBLE_CLUSTER_THRESHOLDS[hud_mode][0]
+                                    ),
                                 )
                             )
                             result.checks.append(
@@ -246,7 +258,9 @@ def run_rendered_cognitive_audit(
                                         f"{notification_count} visible notification region(s) in first viewport for {hud_mode} HUD"
                                     ),
                                     value=float(notification_count),
-                                    threshold=float(HUD_VISIBLE_NOTIFICATION_THRESHOLDS[hud_mode][0]),
+                                    threshold=float(
+                                        HUD_VISIBLE_NOTIFICATION_THRESHOLDS[hud_mode][0]
+                                    ),
                                 )
                             )
                     finally:
@@ -317,7 +331,9 @@ def _result_to_json(result: GateResult) -> dict[str, object]:
 
 def main() -> int:
     args = parse_args()
-    page_paths = tuple(Path(item) for item in args.page) if args.page else DEFAULT_PAGE_PATHS
+    page_paths = (
+        tuple(Path(item) for item in args.page) if args.page else DEFAULT_PAGE_PATHS
+    )
     viewports = (
         tuple(_parse_viewport(item) for item in args.viewport)
         if args.viewport

@@ -1,4 +1,5 @@
 """Tests for Octane headless bootstrap and probe helpers."""
+
 from __future__ import annotations
 
 import sys
@@ -51,8 +52,12 @@ def test_run_probe_reports_success_without_octane_warnings(monkeypatch) -> None:
             "output": "OctaneServer already running",
         },
     )
-    monkeypatch.setattr("octane_headless_probe.shutil.which", lambda value: f"/usr/bin/{value}")
-    monkeypatch.setattr("octane_headless_probe.subprocess.run", lambda *args, **kwargs: _Completed())
+    monkeypatch.setattr(
+        "octane_headless_probe.shutil.which", lambda value: f"/usr/bin/{value}"
+    )
+    monkeypatch.setattr(
+        "octane_headless_probe.subprocess.run", lambda *args, **kwargs: _Completed()
+    )
 
     report = run_probe("OctaneBlender", 'print("probe")', 60)
 
@@ -81,7 +86,9 @@ def test_run_probe_reports_failure_when_warning_patterns_match(monkeypatch) -> N
         },
     )
     monkeypatch.setattr("octane_headless_probe.shutil.which", lambda value: value)
-    monkeypatch.setattr("octane_headless_probe.subprocess.run", lambda *args, **kwargs: _Completed())
+    monkeypatch.setattr(
+        "octane_headless_probe.subprocess.run", lambda *args, **kwargs: _Completed()
+    )
 
     report = run_probe("OctaneBlender", 'print("probe")', 60)
 

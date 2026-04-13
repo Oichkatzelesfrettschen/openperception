@@ -4,7 +4,7 @@ Date: 2026-03-22
 
 ## What it is
 
-`algorithms/DaltonLens-Python` is a vendored Python package for color-vision
+`algorithms/DaltonLens-Python` is an absorbed, repo-owned Python package for color-vision
 deficiency simulation and daltonization.
 
 Repo-local evidence:
@@ -125,7 +125,7 @@ With DaltonLens-Python, they become testable claims.
 
 ## Step 7. Test structure
 
-The vendored package includes a healthy test corpus:
+The absorbed package includes a healthy test corpus:
 
 - CLI tests
 - conversion tests
@@ -147,7 +147,7 @@ That makes it more than a loose dependency: it is a reproducible subsystem.
 
 ## Step 8. Research and notebook layer
 
-The vendored subtree also includes:
+The absorbed source tree also includes:
 
 - `research/`
 - notebooks for precomputed matrices
@@ -179,7 +179,7 @@ Instead, it is one of the repo's foundational engines, paired with:
 `git status` showed `algorithms/DaltonLens-Python` as a pre-existing worktree
 item. That likely means:
 
-- it is vendored from upstream,
+- it was originally imported from upstream,
 - or it is a git submodule / nested git checkout,
 - or it has local edits not made in this pass.
 

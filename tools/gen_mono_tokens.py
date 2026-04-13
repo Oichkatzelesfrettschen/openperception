@@ -41,9 +41,9 @@ TOKENS_CSS = ROOT / "tokens" / "color-tokens.css"
 # Values computed as round(int(hex, 16) * 0.2126-weight equivalent) -- but
 # we use the actual sRGB gray value of each stop for snapping distance.
 GRAY_RAMP = [
-    (17,  "#111827"),  # 900
-    (31,  "#1F2937"),  # 800
-    (55,  "#374151"),  # 700
+    (17, "#111827"),  # 900
+    (31, "#1F2937"),  # 800
+    (55, "#374151"),  # 700
     (107, "#6B7280"),  # 500
     (156, "#9CA3AF"),  # 400
     (209, "#D1D5DB"),  # 300
@@ -122,15 +122,15 @@ def derive_mono(default_variant: dict) -> dict:
     # --- brand ---
     d_brand = default_variant["brand"]
     mono["brand"] = {
-        "primary":       project_hex(d_brand["primary"]),
+        "primary": project_hex(d_brand["primary"]),
         "primaryStrong": project_hex(d_brand["primaryStrong"]),
-        "accent":        project_hex(d_brand["accent"]),
-        "accentStrong":  project_hex(d_brand["accentStrong"]),
-        "text":          d_brand["text"],      # already #111827 (near-black)
-        "surface":       d_brand["surface"],   # already #FFFFFF
-        "border":        d_brand["border"],    # already #D1D5DB (gray-300)
-        "focusRing":     project_hex(d_brand["focusRing"]),
-        "link":          project_hex(d_brand["link"]),
+        "accent": project_hex(d_brand["accent"]),
+        "accentStrong": project_hex(d_brand["accentStrong"]),
+        "text": d_brand["text"],  # already #111827 (near-black)
+        "surface": d_brand["surface"],  # already #FFFFFF
+        "border": d_brand["border"],  # already #D1D5DB (gray-300)
+        "focusRing": project_hex(d_brand["focusRing"]),
+        "link": project_hex(d_brand["link"]),
     }
 
     # --- contrast guard: brand.primary on white must be >= 4.5:1 WCAG AA ---
@@ -154,8 +154,8 @@ def derive_mono(default_variant: dict) -> dict:
     d_viz = default_variant["viz"]
     mono["viz"] = {
         "categorical": [project_hex(c) for c in d_viz["categorical"]],
-        "markers":     list(d_viz["markers"]),
-        "dashes":      [list(d) for d in d_viz["dashes"]],
+        "markers": list(d_viz["markers"]),
+        "dashes": [list(d) for d in d_viz["dashes"]],
     }
 
     return mono
@@ -176,7 +176,7 @@ def build_css_block(mono: dict) -> str:
     ind = mono["indigo"]
     mag = mono["magenta"]
     lines = [
-        '/* Monochrome (achromatopsia) -- derived via BT.709 luminance projection */',
+        "/* Monochrome (achromatopsia) -- derived via BT.709 luminance projection */",
         '[data-cvd="mono"] {',
     ]
     # indigo
@@ -210,7 +210,9 @@ def update_css(css_path: Path, new_block: str) -> None:
     else:
         # Append before the first non-CVD rule block after the last CVD block
         insert_marker = "\n/* Utility examples */"
-        updated = text.replace(insert_marker, "\n" + new_block + "\n" + "/* Utility examples */")
+        updated = text.replace(
+            insert_marker, "\n" + new_block + "\n" + "/* Utility examples */"
+        )
     css_path.write_text(updated, encoding="utf-8")
 
 
@@ -232,8 +234,10 @@ def main() -> None:
     print("\nMono token summary:")
     print(f"  indigo:   {mono['indigo']}")
     print(f"  magenta:  {mono['magenta']}")
-    print(f"  brand.primary: {mono['brand']['primary']} "
-          f"(accent: {mono['brand']['accent']})")
+    print(
+        f"  brand.primary: {mono['brand']['primary']} "
+        f"(accent: {mono['brand']['accent']})"
+    )
     print(f"  viz.categorical: {mono['viz']['categorical']}")
 
 

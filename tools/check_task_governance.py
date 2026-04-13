@@ -2,6 +2,7 @@
 """
 Validate repo task-tracking and known-issues governance surfaces.
 """
+
 from __future__ import annotations
 
 import argparse
@@ -31,7 +32,9 @@ def parse_args() -> argparse.Namespace:
 def main() -> int:
     args = parse_args()
     repo_root = Path(args.repo_root).resolve() if args.repo_root else None
-    errors = validate_task_governance(repo_root) if repo_root else validate_task_governance()
+    errors = (
+        validate_task_governance(repo_root) if repo_root else validate_task_governance()
+    )
     return emit_check_report(
         check_id="governance",
         display_name="Task governance check",
