@@ -87,6 +87,12 @@ def _cognitive_factory(tokens_path: Path | None = None) -> object:
     return CognitiveGate()
 
 
+def _achromat_factory(tokens_path: Path | None = None) -> object:
+    from validators.achromat import AchromatGate
+
+    return AchromatGate(tokens_path)
+
+
 def get_gate_specs() -> list[GateSpec]:
     return [
         GateSpec(
@@ -143,6 +149,19 @@ def get_gate_specs() -> list[GateSpec]:
             description="First-pass navigation, summary-view, density-budget, visible-control burden, panel/metric-group, HUD-complexity, notification-density, and reading-level checks.",
             module_path="tools/validators/cognitive.py",
             factory=_cognitive_factory,
+        ),
+        GateSpec(
+            gate_id="GATE-007",
+            gate_name="ACHROMAT",
+            severity="WARNING",
+            status="implemented",
+            description=(
+                "Luminance contrast for semantic role foregrounds in the mono token variant. "
+                "Uses BT.709 relative luminance consistent with GATE-002 CONTRAST. "
+                "Threshold: 4.5:1 PASS (WCAG AA normal text), 3.0:1 WARN (large text/non-text UI)."
+            ),
+            module_path="tools/validators/achromat.py",
+            factory=_achromat_factory,
         ),
     ]
 

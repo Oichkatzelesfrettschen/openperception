@@ -128,10 +128,18 @@ daltonlens/
 
 **Key Classes**:
 - `Simulator` (abstract base)
-- `Simulator_Brettel1997`
-- `Simulator_Vienot1999`
-- `Simulator_Machado2009`
-- `Simulator_Vischeck`
+- `Simulator_Brettel1997` -- dichromat half-plane projection (Brettel 1997)
+- `Simulator_Vienot1999` -- efficient dichromat projection (Vienot 1999)
+- `Simulator_Machado2009` -- anomalous trichromacy (severity dial)
+- `Simulator_Vischeck` -- Brettel with original GIMP matrices
+- `Simulator_Achromat` -- rod monochromacy (BT.709 Y = all-gray)
+- `Simulator_BCM` -- blue-cone monochromacy (SmithPokorny75 3x3 matrix)
+- `Simulator_AutoSelect` -- routes to best simulator per deficiency type
+
+**Deficiency enum**:
+- `PROTAN` (0) / `DEUTAN` (1) / `TRITAN` (2) -- dichromacies
+- `ACHROMAT` (3) -- rod monochromacy (achromatopsia); Simulator_Achromat
+- `BCM` (4) -- blue-cone monochromacy; Simulator_BCM
 
 **Data Flow**:
 ```
@@ -283,7 +291,8 @@ User Application
       v                         v
 +------------------------------------+
 |        Design Validation           |
-| (contrast_check, separation_check) |
+| (contrast_check, separation_check, |
+|  GATE-007 achromat luminance check)|
 +------------------------------------+
       |
       | (pass/fail + metrics)
@@ -293,17 +302,42 @@ User Application
 +------------------------------------+
 ```
 
+**Dichromacy pipeline** (Brettel/Vienot/Machado, protan/deutan/tritan):
+```
+sRGB -> linear RGB -> LMS -> CVD projection -> LMS -> linear RGB -> sRGB
+```
+
+**Achromatopsia pipeline** (Simulator_Achromat / dl_simulate_cvd_achromat):
+```
+sRGB -> linear RGB --(BT.709)--> Y -> (Y, Y, Y) -> sRGB
+Y = 0.2126*R + 0.7152*G + 0.0722*B  (ITU-R BT.709-6 / WCAG 2.1)
+```
+BT.709 photopic weights are chosen for consistency with GATE-002 (CONTRAST).
+
+**Blue-cone monochromacy pipeline** (Simulator_BCM / dl_simulate_cvd_bcm):
+```
+sRGB -> linear RGB --(BCM 3x3)--> gamut-fix -> severity blend -> sRGB
+BCM = linearRGB_from_LMS @ A  (SmithPokorny75)
+  A replaces L,M rows with white_lms[i]*bt709; keeps S row unchanged
+```
+The full LMS roundtrip is precomputed to a single 3x3 operation per pixel.
+
 ### Token Generation Pipeline
 
 ```
 +------------------+
-| color-tokens.json|  (Manual edit)
+| color-tokens.json|  (Manual edit: default/protan/deutan/tritan variants)
 +------------------+
          |
-         v
-+------------------+
-| gen_oklch_tokens |
-+------------------+
+         +------------------+
+         |                  |
+         v                  v
++------------------+  +--------------------+
+| gen_oklch_tokens |  | gen_mono_tokens.py |
++------------------+  | (BT.709 luminance  |
+         |            |  projection for     |
+         |            |  achromat / mono)   |
+         |            +--------------------+
          |
     +----+----+
     |         |

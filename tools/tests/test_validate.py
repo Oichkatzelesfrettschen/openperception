@@ -40,6 +40,7 @@ def test_run_validators_returns_implemented_and_missing(tmp_path: Path) -> None:
         "GATE-004",
         "GATE-005",
         "GATE-006",
+        "GATE-007",
     ]
     assert [spec.gate_id for spec in skipped] == ["GATE-001"]
     assert [spec.gate_id for spec in missing] == []

@@ -21,7 +21,7 @@ PYTEST_RUN = env PYTEST_DISABLE_PLUGIN_AUTOLOAD=$(PYTEST_DISABLE_PLUGIN_AUTOLOAD
 # =============================================================================
 # Phony Targets
 # =============================================================================
-.PHONY: all help serve oklch contrast-check separation-check seizure-check temporal-depth-check cognitive-check typography-check rendered-spatial-check rendered-cognitive-check check-rendered playwright-install profile-report scale-report validate validate-strict gap-report claims-report claims-check repo-stats repo-stats-check integrity-check task-governance-check source-cache-links-check paper-corpus-check source-assets-check showcase-inputs-check octane-probe showcase-render check venv \
+.PHONY: all help serve oklch mono-tokens contrast-check separation-check seizure-check temporal-depth-check cognitive-check typography-check rendered-spatial-check rendered-cognitive-check check-rendered playwright-install profile-report scale-report validate validate-strict gap-report claims-report claims-check repo-stats repo-stats-check integrity-check task-governance-check source-cache-links-check paper-corpus-check source-assets-check showcase-inputs-check octane-probe showcase-render check venv \
         test test-python test-tools test-c test-all coverage \
         lint lint-python lint-c format \
         build build-c install-python install-dev \
@@ -103,6 +103,9 @@ serve:
 
 oklch:
 	$(PYTHON) tools/gen_oklch_tokens.py
+
+mono-tokens: ## Derive mono variant from BT.709 luminance projection
+	$(PYTHON) tools/gen_mono_tokens.py
 
 contrast-check:
 	$(PYTHON) tools/contrast_check.py

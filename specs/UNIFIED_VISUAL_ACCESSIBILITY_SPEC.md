@@ -1,8 +1,9 @@
 # Unified Visual Accessibility Specification (UVAS)
 
-> **Implementation Status:** Partially implemented. GATE-002 (CONTRAST) and GATE-003 (CVD)
-> validators exist in `tools/validators/`. Invariants INV-001 through INV-010 are
-> specification only -- no automated enforcement code exists yet (targeted for v0.3.0+).
+> **Implementation Status:** Partially implemented. GATE-002 (CONTRAST), GATE-003 (CVD),
+> and GATE-007 (ACHROMAT) validators exist in `tools/validators/`. Invariants INV-001
+> through INV-010 are specification only -- no automated enforcement code exists yet
+> (targeted for v0.3.0+).
 
 **Version:** 1.0.0
 **Date:** 2025-12-27
@@ -161,8 +162,15 @@ Every research domain maps to one or more axes. Every feature must pass through 
 ```
 CHROMATIC_AXIS:
   floor: "non-color redundancy for all semantic roles"
-  dial: "color_profile" {default, protan_safe, deutan_safe, tritan_safe}
-  validator: CVD_simulation_discriminability_test
+  dial: "color_profile" {default, protan_safe, deutan_safe, tritan_safe, mono}
+  validator: CVD_simulation_discriminability_test, ACHROMAT_luminance_contrast_test
+  notes:
+    - "protan/deutan/tritan: dichromat simulation via Brettel 1997 / Vienot 1999"
+    - "achromat (rod monochromacy): luminance-only perception; mapped to LUMINANCE_AXIS"
+      "  simulation: Simulator_Achromat (BT.709 Y); token variant: mono"
+      "  gate: GATE-007 ACHROMAT (4.5:1 threshold on white surface)"
+    - "BCM (blue-cone monochromacy): S-cone + rod perception; precomputed 3x3 matrix"
+      "  simulation: Simulator_BCM (SmithPokorny75 LMS); no dedicated token variant"
 
 LUMINANCE_AXIS:
   floor: "4.5:1 text, 3:1 UI components"

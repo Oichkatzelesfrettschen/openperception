@@ -11,12 +11,13 @@
 |------|----|--------|----------|
 | CONTRAST | GATE-002 | **Implemented** | `tools/validators/contrast.py` |
 | CVD | GATE-003 | **Implemented** | `tools/validators/cvd.py` |
+| ACHROMAT | GATE-007 | **Implemented** | `tools/validators/achromat.py` |
 | Base ABC | -- | **Implemented** | `tools/validators/base.py` |
-| SEIZURE | GATE-001 | Spec only (v0.3.0) | -- |
-| SPATIAL | GATE-004 | Spec only (v0.3.0) | -- |
-| TEMPORAL/DEPTH | GATE-005 | Spec only (v0.3.0+) | -- |
-| COGNITIVE | GATE-006 | Spec only (v0.3.0+) | -- |
-| Unified CLI | -- | Spec only (v0.3.0) | -- |
+| SEIZURE | GATE-001 | Partial (v0.3.0) | `tools/validators/seizure.py` |
+| SPATIAL | GATE-004 | Partial | `tools/validators/spatial.py` |
+| TEMPORAL/DEPTH | GATE-005 | Partial | `tools/validators/temporal_depth.py` |
+| COGNITIVE | GATE-006 | Partial | `tools/validators/cognitive.py` |
+| Unified CLI | -- | **Implemented** | `tools/validate.py` |
 
 ---
 
@@ -397,6 +398,56 @@ cognitive_gate:
     Recommended maximum: {threshold}
 
     RECOMMENDATION: {recommendation}
+```
+
+### ACHROMAT_GATE (WARNING)
+
+**Severity:** WARNING
+**Applies to:** The `mono` token variant (achromatopsia / rod monochromacy simulation)
+
+WHY: Rod monochromacy leaves no colour discrimination at all; the only perceptual
+channel is luminance contrast. GATE-002 validates the default/CVD variants but does
+not specifically audit the mono variant. GATE-007 fills that gap using the same BT.709
+relative luminance formula as Simulator_Achromat and dl_simulate_cvd_achromat, keeping
+the simulation and the validator internally consistent.
+
+```yaml
+achromat_gate:
+  id: GATE-007
+  severity: WARNING
+  checks:
+    - name: brand_primary_on_surface
+      rule: "contrast_ratio(mono.brand.primary, mono.brand.surface) >= 4.5"
+      threshold: 4.5
+      unit: "ratio"
+      source: "WCAG 1.4.3 (BT.709 luminance, consistent with GATE-002)"
+
+    - name: brand_text_on_surface
+      rule: "contrast_ratio(mono.brand.text, mono.brand.surface) >= 4.5"
+      threshold: 4.5
+      unit: "ratio"
+      source: "WCAG 1.4.3"
+
+    - name: brand_link_on_surface
+      rule: "contrast_ratio(mono.brand.link, mono.brand.surface) >= 4.5"
+      threshold: 4.5
+      unit: "ratio"
+      source: "WCAG 1.4.3"
+
+    - name: viz_categorical_collapse
+      rule: "categorical[0] != categorical[1] OR marker/dash redundancy present"
+      source: "WCAG 1.4.1 (non-color redundancy for charts)"
+
+  warning_message: |
+    ACHROMAT (MONO) CONTRAST WARNING
+    Token: {token_name}
+    Foreground: {fg_color}
+    Background: {bg_color}
+    Measured ratio: {measured_ratio}
+    Required ratio: 4.5:1 (WCAG AA) or 3.0:1 (large text / non-text UI)
+
+    RECOMMENDATION: Darken the foreground token in the mono variant, or
+    run "make mono-tokens" to re-derive all mono values from BT.709 luminance.
 ```
 
 ---

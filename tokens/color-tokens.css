@@ -84,15 +84,18 @@
   --brand-accent-strong: var(--magenta-700);
 }
 
-/* Monochrome (achromatopsia) */
+/* Monochrome (achromatopsia) -- derived via BT.709 luminance projection */
 [data-cvd="mono"] {
-  --indigo-700: #1E293B; /* slate-like */
-  --indigo-600: #334155;
-  --indigo-500: #475569;
+  --indigo-700: #374151;
+  --indigo-600: #6B7280;
+  --indigo-500: #6B7280;
+  --indigo-300: #D1D5DB;
+  --indigo-100: #E5E7EB;
 
-  --magenta-700: #64748B;
+  --magenta-700: #6B7280;
   --magenta-600: #6B7280;
   --magenta-400: #9CA3AF;
+  --magenta-200: #E5E7EB;
 
   --brand-primary: var(--indigo-600);
   --brand-primary-strong: var(--indigo-700);
