@@ -21,7 +21,7 @@ def seed_repo(repo_root: Path) -> None:
     task_lines = [
         f"- [{'x' if index <= 3 else ' '}] {task_id} Track `{path}`"
         for index, (task_id, path) in enumerate(
-            zip(TASK_IDS, ["README.md", "ROADMAP.md", "tools/validate.py"] + ["docs/repo-audit-2026-03-26.md"] * 97),
+            zip(TASK_IDS, ["README.md", "ROADMAP.md", "tools/validate.py"] + ["docs/repo-audit-2026-03-26.md"] * 97, strict=False),
             start=1,
         )
     ]

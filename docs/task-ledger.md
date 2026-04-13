@@ -172,7 +172,7 @@ and close the most actionable open governance items.
   (PIL load failure, PIL save failure) to push coverage above 90%.
 - [x] T111 Improve verifier error messages to point to one exact file and
   one task or issue row per error (T069).
-- [ ] T112 Review and tighten root Makefile lint targets -- confirm
+- [x] T112 Review and tighten root Makefile lint targets -- confirm
   breadth is appropriate (not too broad or too narrow) (T080).
 - [ ] T113 Add machine-checkable install smoke tests for root and module
   lanes (`make smoke-test` target) (T038).

@@ -91,7 +91,7 @@ def ensure_octane_server(
             resolved_log.parent.mkdir(parents=True, exist_ok=True)
             log_handle = resolved_log.open("a", encoding="utf-8")
         else:
-            log_handle = open(os.devnull, "w", encoding="utf-8")
+            log_handle = pathlib.Path(os.devnull).open("w", encoding="utf-8")
 
         subprocess.Popen(
             [server_binary],

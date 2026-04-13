@@ -24,6 +24,7 @@ import re
 import sys
 from pathlib import Path
 
+
 # Patterns that signal unsupported certainty.
 # Each entry: (pattern, human_label, rationale)
 # Patterns must be valid Python regex; match is case-insensitive.
@@ -149,9 +150,7 @@ def _is_skipped(path: Path, repo_root: Path) -> bool:
     for part in parts[:-1]:           # directory components
         if part in SKIP_DIRS:
             return True
-    if str(rel) in SKIP_FILES:
-        return True
-    return False
+    return str(rel) in SKIP_FILES
 
 
 def _is_allowlisted(line: str) -> bool:
@@ -227,7 +226,7 @@ def main(argv: list[str] | None = None) -> int:
                     }
                 )
         else:
-            for lineno, label, pattern, excerpt in hits:
+            for lineno, label, _pattern, excerpt in hits:
                 print(f"{rel_str}:{lineno}: [OVERCLAIM:{label}] {excerpt}")
 
     if args.json:

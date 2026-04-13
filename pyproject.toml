@@ -81,6 +81,15 @@ lines-after-imports = 2
 "tools/devserver.py" = ["E731", "SIM105"]
 # OKLCH token generator: loop variable and suppress pattern are intentional
 "tools/gen_oklch_tokens.py" = ["B007", "SIM105"]
+# Blender scene script: suppressed Blender API exceptions and named
+# material variables kept for scene readability even when not wired up yet
+"tools/blender_palette_showcase_scene.py" = ["SIM105", "F841"]
+# octane_bootstrap opens a log handle outside a with block intentionally:
+# the handle must outlive the with block to be passed to subprocess.Popen
+"tools/octane_bootstrap.py" = ["SIM115"]
+# Test helper scripts import pathlib.Path at module level for fixture use;
+# TC003 (move into TYPE_CHECKING) would make fixture signatures harder to read
+"tools/tests/*.py" = ["TC003"]
 
 # =============================================================================
 # Black Configuration

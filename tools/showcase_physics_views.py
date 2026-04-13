@@ -366,9 +366,9 @@ def _load_gw_waveform_points(spec: dict, width: int, height: int) -> list[tuple[
     payload = json.loads(Path(spec["data_path"]).read_text(encoding="utf-8"))
     times = payload["arrays"]["real_time_s"]
     whitened = payload["arrays"]["detector_strain_whitened_visual"]
-    active = [(t, value) for t, value in zip(times, whitened) if abs(value) > 0.5]
+    active = [(t, value) for t, value in zip(times, whitened, strict=False) if abs(value) > 0.5]
     if not active:
-        active = list(zip(times, whitened))
+        active = list(zip(times, whitened, strict=False))
     window = active[-420:]
     values = [value for _, value in window]
     max_abs = max(max(abs(value) for value in values), 1.0)

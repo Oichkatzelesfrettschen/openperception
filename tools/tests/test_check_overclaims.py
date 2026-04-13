@@ -3,9 +3,7 @@
 import json
 from pathlib import Path
 
-import pytest
-
-from check_overclaims import main, scan_file, _is_allowlisted
+from check_overclaims import _is_allowlisted, main, scan_file
 
 
 # ---------------------------------------------------------------------------
@@ -44,7 +42,7 @@ class TestScanFile:
         p.write_text("This library is production-ready.\n")
         hits = scan_file(p)
         assert len(hits) == 1
-        lineno, label, _, excerpt = hits[0]
+        lineno, label, _, _excerpt = hits[0]
         assert lineno == 1
         assert "production" in label
 

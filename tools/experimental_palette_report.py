@@ -24,10 +24,11 @@ DEFAULT_TOKENS_JSON = ROOT / "tokens" / "experimental-mauve-burgundy.json"
 sys.path.insert(0, str(TOOLS_DIR))
 sys.path.insert(0, str(DALTONLENS_DIR))
 
+import numpy as np  # noqa: E402
 from contrast_check import contrast_ratio  # noqa: E402
 from okcolor import hex_to_srgb, srgb_to_oklab  # noqa: E402
+
 from daltonlens import simulate  # noqa: E402
-import numpy as np  # noqa: E402
 
 
 def oklab_distance(hex1: str, hex2: str) -> float:
@@ -47,7 +48,8 @@ def simulate_hex(hex_str: str, deficiency: simulate.Deficiency) -> str:
     sim = simulate.Simulator_AutoSelect()
     image = np.array([[hex_to_rgb8(hex_str)]], dtype=np.uint8)
     out = sim.simulate_cvd(image, deficiency, 1.0)
-    return "#%02X%02X%02X" % tuple(int(x) for x in out[0, 0])
+    r, g, b = (int(x) for x in out[0, 0])
+    return f"#{r:02X}{g:02X}{b:02X}"
 
 
 def report_variant(name: str, data: dict) -> None:
