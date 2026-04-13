@@ -184,6 +184,6 @@ and close the most actionable open governance items.
   Phase 4-7 (T078).
 - [x] T117 Expand governance checks to cover additional strategic docs
   (ARCHITECTURE.md, ROADMAP.md) (T015).
-- [ ] T118 Add a verifier for unresolved provenance placeholders in source
+- [x] T118 Add a verifier for unresolved provenance placeholders in source
   docs (T085).
 - [ ] T119 Cut Phase 8 tranche from remaining open items and rebaseline.

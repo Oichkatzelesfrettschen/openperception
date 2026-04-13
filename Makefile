@@ -21,7 +21,7 @@ PYTEST_RUN = env PYTEST_DISABLE_PLUGIN_AUTOLOAD=$(PYTEST_DISABLE_PLUGIN_AUTOLOAD
 # =============================================================================
 # Phony Targets
 # =============================================================================
-.PHONY: all help serve oklch mono-tokens contrast-check separation-check seizure-check temporal-depth-check cognitive-check typography-check rendered-spatial-check rendered-cognitive-check check-rendered playwright-install profile-report scale-report validate validate-strict gap-report claims-report claims-check repo-stats repo-stats-check integrity-check task-governance-check source-cache-links-check paper-corpus-check source-assets-check showcase-inputs-check octane-probe showcase-render overclaims-check smoke-test check venv \
+.PHONY: all help serve oklch mono-tokens contrast-check separation-check seizure-check temporal-depth-check cognitive-check typography-check rendered-spatial-check rendered-cognitive-check check-rendered playwright-install profile-report scale-report validate validate-strict gap-report claims-report claims-check repo-stats repo-stats-check integrity-check task-governance-check source-cache-links-check paper-corpus-check source-assets-check showcase-inputs-check octane-probe showcase-render overclaims-check provenance-check smoke-test check venv \
         test test-python test-tools test-c test-all coverage \
         lint lint-python lint-c format \
         build build-c install-python install-dev \
@@ -60,7 +60,8 @@ help:
 	@echo "  claims-check       - Validate the claims registry integrity"
 	@echo "  repo-stats         - Regenerate machine-checkable repo stats files"
 	@echo "  repo-stats-check   - Validate checked-in repo stats against the current tree"
-	@echo "  integrity-check    - Run repo integrity verifiers (claims, stats, corpus, source assets, source cache links, task governance)"
+	@echo "  provenance-check   - Scan provenance docs for unresolved placeholder language"
+	@echo "  integrity-check    - Run repo integrity verifiers (claims, stats, corpus, source assets, source cache links, task governance, provenance)"
 	@echo "  showcase-inputs-check - Validate sibling-repo inputs used by the Blender showcase"
 	@echo "  task-governance-check - Validate task ledger and known-issues governance docs"
 	@echo "  smoke-test         - Verify core installs: daltonlens, numpy, Pillow, tokens, validators"
@@ -195,7 +196,10 @@ overclaims-check: ## Scan docs for unsupported certainty phrases (T055)
 smoke-test: ## Verify core installs: daltonlens import, simulate_cvd, CLI, tokens, validators (T038)
 	$(PYTHON) tools/smoke_test.py
 
-integrity-check: claims-check repo-stats-check paper-corpus-check source-assets-check source-cache-links-check showcase-inputs-check task-governance-check overclaims-check
+provenance-check: ## Scan provenance docs for unresolved placeholder language (T118)
+	$(PYTHON) tools/check_provenance_placeholders.py
+
+integrity-check: claims-check repo-stats-check paper-corpus-check source-assets-check source-cache-links-check showcase-inputs-check task-governance-check overclaims-check provenance-check
 	@echo "All repo integrity checks completed."
 
 check: validate-strict integrity-check test-tools test-python

@@ -87,9 +87,9 @@ lines-after-imports = 2
 # octane_bootstrap opens a log handle outside a with block intentionally:
 # the handle must outlive the with block to be passed to subprocess.Popen
 "tools/octane_bootstrap.py" = ["SIM115"]
-# Test helper scripts import pathlib.Path at module level for fixture use;
-# TC003 (move into TYPE_CHECKING) would make fixture signatures harder to read
-"tools/tests/*.py" = ["TC003"]
+# Test helper scripts import pathlib.Path and pytest at module level for
+# fixture use; moving these into TYPE_CHECKING would break runtime behavior
+"tools/tests/*.py" = ["TC002", "TC003"]
 
 # =============================================================================
 # Black Configuration
