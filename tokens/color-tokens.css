@@ -86,7 +86,7 @@
 
 /* Monochrome (achromatopsia) -- derived via BT.709 luminance projection */
 [data-cvd="mono"] {
-  --indigo-700: #374151;
+  --indigo-700: #111827;
   --indigo-600: #6B7280;
   --indigo-500: #6B7280;
   --indigo-300: #D1D5DB;

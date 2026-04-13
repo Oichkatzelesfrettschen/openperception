@@ -304,19 +304,19 @@
     },
     "brand": {
       "primary": "#6B7280",
-      "primaryStrong": "#374151",
+      "primaryStrong": "#111827",
       "accent": "#6B7280",
       "accentStrong": "#6B7280",
       "text": "#111827",
       "surface": "#FFFFFF",
       "border": "#D1D5DB",
       "focusRing": "#D1D5DB",
-      "link": "#374151"
+      "link": "#111827"
     },
     "viz": {
       "categorical": [
-        "#374151",
-        "#6B7280",
+        "#111827",
+        "#9CA3AF",
         "#6B7280",
         "#374151",
         "#D1D5DB",

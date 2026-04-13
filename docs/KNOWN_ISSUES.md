@@ -128,8 +128,9 @@ version targets (T018, T019).
 ## KI-007 GATE-003 Borderline Separation In Mono Variant
 
 - class: implementation gap
-- status: open
+- status: resolved
 - opened: 2026-04-10
+- resolved: 2026-04-12
 - owner: unassigned (requires token design judgment)
 - milestone: v0.3.0 (validator expansion tranche)
 - affected files: `tokens/color-tokens.json` (mono variant),
@@ -154,8 +155,9 @@ version targets (T018, T019).
 ## KI-008 GATE-007 Low Contrast Between Mono Viz Categorical Pair
 
 - class: implementation gap
-- status: open
+- status: resolved
 - opened: 2026-04-10
+- resolved: 2026-04-12
 - owner: unassigned (requires token design judgment; resolve alongside KI-007)
 - milestone: v0.3.0 (validator expansion tranche; resolve together with KI-007)
 - affected files: `tokens/color-tokens.json` (mono variant, viz.categorical),
@@ -174,3 +176,8 @@ version targets (T018, T019).
 - resolution path: assign a more separated gray stop to categorical[0] or
   categorical[1] in the mono variant (e.g., gray-900 / gray-400), then
   re-run `make validate` to confirm GATE-007 and GATE-002 both pass.
+- resolution: categorical[0] moved to gray-900 (#111827) and categorical[1]
+  moved to gray-400 (#9CA3AF) in `tokens/color-tokens.json`. GATE-007
+  `mono/viz.categorical[0-1]` contrast is now 6.99:1 (was 2.13:1). GATE-003
+  `mono/primary-vs-accent` Oklab distance is now 0.341 (was 0.178). Both
+  gates PASS. `make validate` confirmed clean.
