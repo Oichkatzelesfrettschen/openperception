@@ -11,6 +11,8 @@ REPO_ROOT = Path(__file__).resolve().parents[1]
 TASK_LEDGER_PATH = Path("docs/task-ledger.md")
 KNOWN_ISSUES_PATH = Path("docs/KNOWN_ISSUES.md")
 BANNED_TODO_DOCS = (Path("CHANGELOG.md"), Path("CLAUDE.md"))
+# Strategic docs: backtick repo-path references must resolve and no loose TODOs
+STRATEGIC_DOCS = (Path("ARCHITECTURE.md"), Path("ROADMAP.md"))
 TASK_LINE_RE = re.compile(r"^- \[(?P<status>[ x])\] (?P<task_id>T\d{3}) (?P<text>.+)$", re.M)
 ISSUE_HEADING_RE = re.compile(r"^## (?P<issue_id>KI-\d{3})\b", re.M)
 BACKTICK_RE = re.compile(r"`([^`\n]+)`")
@@ -110,5 +112,21 @@ def validate_task_governance(repo_root: Path = REPO_ROOT) -> list[str]:
             errors.append(
                 f"loose TODO wording must be replaced with tracked issue language: {rel_path}"
             )
+
+    for rel_path in STRATEGIC_DOCS:
+        doc_path = repo_root / rel_path
+        if not doc_path.exists():
+            continue
+        text = doc_path.read_text(encoding="utf-8")
+        if "TODO" in text:
+            errors.append(
+                f"loose TODO wording must be replaced with tracked issue language: {rel_path}"
+            )
+        for token in _iter_backticked_repo_paths(text):
+            if not (repo_root / token).exists():
+                errors.append(
+                    f"strategic doc references missing repo path: "
+                    f"{token} in {rel_path}"
+                )
 
     return sorted(errors)

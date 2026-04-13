@@ -14,6 +14,7 @@ def seed_repo(repo_root: Path) -> None:
     (repo_root / "tools").mkdir(parents=True, exist_ok=True)
     (repo_root / "README.md").write_text("root\n", encoding="utf-8")
     (repo_root / "ROADMAP.md").write_text("roadmap\n", encoding="utf-8")
+    (repo_root / "ARCHITECTURE.md").write_text("architecture\n", encoding="utf-8")
     (repo_root / "CHANGELOG.md").write_text("tracked issue language only\n", encoding="utf-8")
     (repo_root / "CLAUDE.md").write_text("tracked issue language only\n", encoding="utf-8")
     (repo_root / "tools" / "validate.py").write_text("print('ok')\n", encoding="utf-8")
@@ -89,3 +90,36 @@ def test_validate_task_governance_rejects_loose_todo_wording(tmp_path: Path) -> 
     errors = validate_task_governance(tmp_path)
 
     assert any("loose TODO wording" in error for error in errors)
+
+
+def test_validate_task_governance_rejects_todo_in_architecture(tmp_path: Path) -> None:
+    seed_repo(tmp_path)
+    (tmp_path / "ARCHITECTURE.md").write_text("TODO: finish this section\n", encoding="utf-8")
+
+    errors = validate_task_governance(tmp_path)
+
+    assert any("loose TODO wording" in error and "ARCHITECTURE.md" in error for error in errors)
+
+
+def test_validate_task_governance_rejects_todo_in_roadmap(tmp_path: Path) -> None:
+    seed_repo(tmp_path)
+    (tmp_path / "ROADMAP.md").write_text("TODO: update timeline\n", encoding="utf-8")
+
+    errors = validate_task_governance(tmp_path)
+
+    assert any("loose TODO wording" in error and "ROADMAP.md" in error for error in errors)
+
+
+def test_validate_task_governance_rejects_missing_path_in_architecture(tmp_path: Path) -> None:
+    seed_repo(tmp_path)
+    (tmp_path / "ARCHITECTURE.md").write_text(
+        "See `tools/nonexistent_module.py` for details.\n", encoding="utf-8"
+    )
+
+    errors = validate_task_governance(tmp_path)
+
+    assert any(
+        "strategic doc references missing repo path" in error
+        and "tools/nonexistent_module.py" in error
+        for error in errors
+    )

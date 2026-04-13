@@ -182,7 +182,7 @@ and close the most actionable open governance items.
   README or a dedicated CLI guide under docs/.
 - [ ] T116 Add regression fixtures for any validator bug uncovered during
   Phase 4-7 (T078).
-- [ ] T117 Expand governance checks to cover additional strategic docs
+- [x] T117 Expand governance checks to cover additional strategic docs
   (ARCHITECTURE.md, ROADMAP.md) (T015).
 - [ ] T118 Add a verifier for unresolved provenance placeholders in source
   docs (T085).
