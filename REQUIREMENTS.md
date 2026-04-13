@@ -100,6 +100,28 @@ Needed for `algorithms/libDaltonLens/`:
 - CMake 3.16+
 - a C compiler supported by your platform
 
+**Linux OS packages** (Debian/Ubuntu family):
+
+```bash
+sudo apt-get install cmake build-essential
+```
+
+**Arch/CachyOS** (pacman):
+
+```bash
+sudo pacman -S cmake base-devel
+```
+
+Optional static analysis (cppcheck is run in CI):
+
+```bash
+# Debian/Ubuntu
+sudo apt-get install cppcheck
+
+# Arch/CachyOS
+sudo pacman -S cppcheck
+```
+
 See `docs/module-requirements/libdaltonlens.md`.
 
 ### Rendered audits
@@ -112,6 +134,16 @@ Needed for:
 Requirements:
 
 - local Chromium-capable Playwright environment
+
+**Linux OS packages** (Debian/Ubuntu family):
+
+```bash
+# system libraries Playwright's bundled Chromium needs
+sudo apt-get install libnss3 libatk-bridge2.0-0 libdrm2 libxkbcommon0 \
+    libgbm1 libasound2
+```
+
+On Arch/CachyOS these are generally pulled in by the chromium package.
 
 Bootstrap commands:
 
@@ -143,10 +175,13 @@ See `artifacts/blender_showcase/REQUIREMENTS.md`.
 
 ## Known Gaps
 
-- `algorithms/DaltonLens-Python/pyproject.toml` does not currently declare a
-  machine-readable `requires-python` floor.
-- optional toolchains are documented, not auto-installed.
-- the root repo now prefers a local `.venv` because many Linux hosts enforce
-  PEP 668 for the system Python.
+- `algorithms/DaltonLens-Python/pyproject.toml` does not have a `[project]`
+  table with `requires-python`; the floor is declared in `setup.cfg` and
+  full PEP 621 migration is deferred to v0.2.0+ (see KI-002).
+- optional toolchains are documented here but not auto-installed.
+- the root repo prefers a local `.venv` because Linux hosts enforce PEP 668
+  for the system Python.
 - some strategic docs still need ongoing reconciliation with runtime state; see
   `docs/KNOWN_ISSUES.md` and `docs/task-ledger.md`.
+- a reproducible environment bootstrap script is still a manual process; see
+  T037 in `docs/task-ledger.md`.

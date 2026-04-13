@@ -26,16 +26,19 @@ Issue classes:
 ## KI-002 `DaltonLens-Python` Metadata Does Not Declare A Machine-Readable Python Floor
 
 - class: tooling gap
-- status: open
-- affected files: `algorithms/DaltonLens-Python/pyproject.toml`,
+- status: mitigated
+- affected files: `algorithms/DaltonLens-Python/setup.cfg`,
+  `algorithms/DaltonLens-Python/pyproject.toml`,
   `docs/module-requirements/daltonlens-python.md`
-- problem: the local package metadata does not currently expose
-  `requires-python`, so compatibility claims for the editable package are not
-  machine-checkable from packaging metadata alone.
-- consequence: downstream tooling cannot reliably infer the supported Python
-  range for that package.
-- current handling: the module requirements doc now calls this out explicitly
-  instead of silently implying broader support.
+- problem: the local `pyproject.toml` does not have a `[project]` table
+  with `requires-python`, so PEP 621-aware tooling reading only
+  `pyproject.toml` cannot infer the Python floor.
+- consequence: downstream tooling that reads only `pyproject.toml` cannot
+  reliably infer the supported Python range for that package.
+- current handling: `setup.cfg` declares `python_requires = >=3.12`, which
+  setuptools reads during build and editable install. Full PEP 621 migration
+  (consolidating `setup.cfg` into `pyproject.toml [project]`) is deferred to
+  v0.2.0+. The module requirements doc calls out the floor explicitly.
 
 ## KI-003 Full Python Test Lane Depends On A Local Dev Environment
 
@@ -118,3 +121,24 @@ Issue classes:
   accentStrong in the mono variant (e.g., gray-900 for primaryStrong, gray-500
   for accentStrong). Requires re-evaluating GATE-002 (CONTRAST) for any new
   assignments and running `make validate` to confirm both gates pass.
+
+## KI-008 GATE-007 Low Contrast Between Mono Viz Categorical Pair
+
+- class: implementation gap
+- status: open
+- affected files: `tokens/color-tokens.json` (mono variant, viz.categorical),
+  `tools/validators/achromat.py`
+- problem: GATE-007 (ACHROMAT) reports `mono/viz.categorical[0-1]` contrast
+  at 2.13:1, which is below the 3.0:1 WARN threshold. Both categorical[0]
+  (#374151, gray-700) and categorical[1] (#6B7280, gray-500) are the same
+  pair as primaryStrong and accentStrong -- adjacent gray ramp stops.
+- consequence: in monochromatic rendering, categorical series 0 and 1 are
+  indistinguishable by luminance contrast alone without non-color redundancy
+  (marker shape or line dash pattern). Charts that use color alone to
+  distinguish series 0 from 1 will fail for achromatopsia viewers.
+- current handling: GATE-007 emits a WARN (non-blocking). Marker and dash
+  redundancy is defined in the mono viz token variant and must be applied.
+  GATE-003 also flags this pair under KI-007.
+- resolution path: assign a more separated gray stop to categorical[0] or
+  categorical[1] in the mono variant (e.g., gray-900 / gray-400), then
+  re-run `make validate` to confirm GATE-007 and GATE-002 both pass.

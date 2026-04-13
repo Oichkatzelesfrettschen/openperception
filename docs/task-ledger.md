@@ -56,7 +56,7 @@ Current tranche focus:
 - [x] T032 Document optional Blender and Octane expectations for showcase regeneration.
 - [x] T033 Verify editable install flows for each Python package in a fresh environment.
 - [x] T034 Add exact Sphinx version expectations for `python-packages/sphinx-brand-theme`.
-- [ ] T035 Add OS package hints for Linux contributors who need `cmake`, `cppcheck`,
+- [x] T035 Add OS package hints for Linux contributors who need `cmake`, `cppcheck`,
   and browser dependencies.
 - [x] T036 Add contributor instructions for Playwright browser bootstrap if required.
 - [ ] T037 Add a reproducible environment bootstrap script if the docs remain too manual.
@@ -80,7 +80,7 @@ Current tranche focus:
 - [ ] T052 Add source-index references for roadmap-level standards claims.
 - [ ] T053 Add source-index references for major depth-accommodation claims not yet indexed.
 - [ ] T054 Add source-index references for major color-support taxonomy claims not yet indexed.
-- [ ] T055 Add an overclaim phrase linter for unsupported certainty words.
+- [x] T055 Add an overclaim phrase linter for unsupported certainty words.
 - [x] T056 Add a stats generator for local corpus counts instead of hardcoded prose counts.
 - [x] T057 Reconcile cache counts between `MASTER_INDEX.md` and actual files.
 - [x] T058 Audit README language for "production-ready" assertions lane by lane.
@@ -102,10 +102,10 @@ Current tranche focus:
 - [x] T071 Audit whether `tools/validate.py` should fail on warnings for selected profiles.
 - [x] T072 Decide whether rendered audits belong in default or optional validation.
 - [ ] T073 Add benchmark or performance smoke coverage where docs claim performance intent.
-- [ ] T074 Add a validator summary doc that maps runtime warnings to debt IDs.
-- [ ] T075 Add a typography debt issue row for the current TYPE-001 warning.
+- [x] T074 Add a validator summary doc that maps runtime warnings to debt IDs.
+- [x] T075 Add a typography debt issue row for the current TYPE-001 warning.
 - [x] T076 Add CVD borderline-separation debt issue rows for the current GATE-003 warnings.
-- [ ] T077 Add cognitive reading-level debt issue rows for the current GATE-006 warnings.
+- [x] T077 Add cognitive reading-level debt issue rows for the current GATE-006 warnings.
 - [ ] T078 Add regression fixtures for any validator bug uncovered during the tranche.
 - [x] T079 Confirm the Makefile help text stays synchronized with real targets.
 - [ ] T080 Review whether root lint targets are too broad or too narrow.
