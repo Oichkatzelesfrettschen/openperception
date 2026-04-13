@@ -26,7 +26,8 @@ PYTEST_RUN = env PYTEST_DISABLE_PLUGIN_AUTOLOAD=$(PYTEST_DISABLE_PLUGIN_AUTOLOAD
         lint lint-python lint-c format \
         build build-c install-python install-dev \
         pandoc-html pandoc-pdf sphinx-install-theme sphinx-example-html \
-        clean clean-all
+        clean clean-all \
+        reconcile
 
 # =============================================================================
 # Default Target
@@ -65,6 +66,7 @@ help:
 	@echo "  showcase-inputs-check - Validate sibling-repo inputs used by the Blender showcase"
 	@echo "  task-governance-check - Validate task ledger and known-issues governance docs"
 	@echo "  smoke-test         - Verify core installs: daltonlens, numpy, Pillow, tokens, validators"
+	@echo "  reconcile          - Regenerate repo stats and run all governance checks (run after each tranche)"
 	@echo "  check              - Run the repo aggregate gate (strict validate, integrity, tools tests, DaltonLens tests)"
 	@echo ""
 	@echo "Testing:"
@@ -201,6 +203,9 @@ provenance-check: ## Scan provenance docs for unresolved placeholder language (T
 
 integrity-check: claims-check repo-stats-check paper-corpus-check source-assets-check source-cache-links-check showcase-inputs-check task-governance-check overclaims-check provenance-check
 	@echo "All repo integrity checks completed."
+
+reconcile: repo-stats integrity-check ## Regenerate stats and run all governance checks after a tranche (T020)
+	@echo "Reconciliation complete: repo stats regenerated and all checks passed."
 
 check: validate-strict integrity-check test-tools test-python
 	@echo "Aggregate repo check completed."

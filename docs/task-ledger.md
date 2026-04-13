@@ -34,11 +34,11 @@ Current tranche focus:
 - [x] T013 Wire the governance check into `Makefile` help and phony targets.
 - [x] T014 Add a dedicated CI or default `make check` lane for all integrity verifiers.
 - [x] T015 Expand governance checks to cover additional strategic docs.
-- [ ] T016 Add machine-readable task metadata if markdown proves too weak.
+- [x] T016 Add machine-readable task metadata if markdown proves too weak.
 - [x] T017 Add issue aging fields so stale debt can be detected automatically.
 - [x] T018 Add owners or maintainers for high-risk debt items.
 - [x] T019 Add due-date or milestone mapping for critical debt items.
-- [ ] T020 Reconcile governance docs after each major tranche automatically.
+- [x] T020 Reconcile governance docs after each major tranche automatically.
 
 ## Phase 2. Installation Requirements And Reproducibility
 
@@ -59,7 +59,7 @@ Current tranche focus:
 - [x] T035 Add OS package hints for Linux contributors who need `cmake`, `cppcheck`,
   and browser dependencies.
 - [x] T036 Add contributor instructions for Playwright browser bootstrap if required.
-- [ ] T037 Add a reproducible environment bootstrap script if the docs remain too manual.
+- [x] T037 Add a reproducible environment bootstrap script if the docs remain too manual.
 - [x] T038 Add machine-checkable install smoke tests for root and module lanes.
 - [ ] T039 Validate build docs on a second host profile.
 - [x] T040 Close any remaining mismatch between docs and actual install commands.
