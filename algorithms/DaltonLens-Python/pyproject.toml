@@ -1,0 +1,21 @@
+[build-system]
+requires = [
+    "setuptools>=42",
+    "wheel"
+]
+build-backend = "setuptools.build_meta"
+
+[tool.coverage.run]
+# Omit modules that require optional heavy dependencies (colour-science, Geometry3D)
+# and are not part of the standard test suite.
+omit = [
+    "daltonlens/cmfs.py",
+    "daltonlens/geometry.py",
+    "daltonlens/generate.py",
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "if __name__ == .__main__.:",
+]

@@ -1,0 +1,13 @@
+pip-wheel-metadata
+daltonlens.egg-info
+__pycache__
+.ipynb_checkpoints
+venv
+dist
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+# CLI output images generated during development/testing
+plate_*.png
+

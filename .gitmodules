@@ -1,7 +1,3 @@
-[submodule "algorithms/DaltonLens-Python"]
-	path = algorithms/DaltonLens-Python
-	url = https://github.com/DaltonLens/DaltonLens-Python.git
-
 [submodule "algorithms/libDaltonLens"]
 	path = algorithms/libDaltonLens
 	url = https://github.com/DaltonLens/libDaltonLens.git
