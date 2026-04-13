@@ -32,6 +32,7 @@ import json
 import re
 from pathlib import Path
 
+
 ROOT = Path(__file__).parent.parent
 TOKENS_JSON = ROOT / "tokens" / "color-tokens.json"
 TOKENS_CSS = ROOT / "tokens" / "color-tokens.css"

@@ -14,8 +14,10 @@ import json
 from pathlib import Path
 
 from repo_stats import generate_repo_stats
-from showcase_physics_views import build_showcase_animated_views
-from showcase_physics_views import build_showcase_physics_views
+from showcase_physics_views import (
+    build_showcase_animated_views,
+    build_showcase_physics_views,
+)
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]

@@ -2,12 +2,10 @@
 from __future__ import annotations
 
 import json
-import tempfile
 from pathlib import Path
 
 import pytest
-
-from validators.achromat import AchromatGate, CONTRAST_PASS, CONTRAST_WARN
+from validators.achromat import AchromatGate
 from validators.base import Status
 
 

@@ -5,7 +5,11 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from blender_palette_showcase_scene import _hex_to_rgba, _select_render_engine, parse_args
+from blender_palette_showcase_scene import (
+    _hex_to_rgba,
+    _select_render_engine,
+    parse_args,
+)
 
 
 def test_parse_args_reads_required_paths() -> None:
