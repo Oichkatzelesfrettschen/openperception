@@ -249,3 +249,7 @@ algorithms/libDaltonLens/tests/output/
 
 # Unrelated files
 COLOR-STRATEGY.md
+
+# Application state (ImGui layout, viewer settings)
+imgui.ini
+settings.json
