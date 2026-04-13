@@ -17,13 +17,18 @@ Create the most comprehensive, evidence-based toolkit for visual accessibility, 
 - [x] Core CVD simulation algorithms (Brettel, Vienot, Machado)
 - [x] Python package (DaltonLens-Python)
 - [x] C library (libDaltonLens)
-- [x] Design token system with CVD variants
+- [x] Design token system with CVD variants (protan, deutan, tritan, mono)
 - [x] Comprehensive specifications (5-pillar framework)
 - [x] Research paper compendiums and curated local source cache
-- [x] Development tools (contrast check, OKLCH generation)
+- [x] Development tools (contrast check, OKLCH generation, mono-token derivation)
 - [x] GTK4 demo prototype
 - [x] Repository infrastructure (git, docs, baseline GitHub Actions workflows)
 - [x] CLI interface implemented in `algorithms/DaltonLens-Python/daltonlens/main.py`
+- [x] Rod monochromacy (achromatopsia) simulation: `Simulator_Achromat`, `dl_simulate_cvd_achromat`
+- [x] Blue cone monochromacy simulation: `Simulator_BCM`, `dl_simulate_cvd_bcm`
+- [x] Machado2009 C port: `dl_simulate_cvd_machado2009` (anomalous trichromacy, protan/deutan/tritan)
+- [x] GATE-007 ACHROMAT luminance contrast validator (`tools/validators/achromat.py`)
+- [x] Systematic mono token derivation via BT.709 luminance projection (`tools/gen_mono_tokens.py`)
 
 ### In Progress
 
@@ -127,8 +132,7 @@ The following items are tracked but explicitly deferred to future milestones:
 - [ ] GitHub Pages documentation deployment
 
 ### Deferred to v0.3.0+
-- [ ] Machado2009 C port (algorithm parity)
-- [ ] Daltonization C port (depends on Machado port)
+- [ ] Daltonization C port
 - [ ] GATE-001 SEIZURE validator implementation
 - [ ] Pattern-sensitivity detector and richer seizure-manifest coverage
 - [ ] Unified validator CLI and report ergonomics
@@ -139,7 +143,6 @@ The following items are tracked but explicitly deferred to future milestones:
 - [ ] sRGB lookup table optimization for C library
 - [ ] SIMD vectorization for C library
 - [ ] Performance benchmark suite
-- [ ] Blue Cone Monochromacy simulation
 
 ### Spec-Only (no implementation timeline)
 The following specs define aspirational architecture and have no current implementation target:

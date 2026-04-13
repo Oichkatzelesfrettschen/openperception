@@ -95,3 +95,26 @@ Issue classes:
   machine-backed.
 - current handling: the 100-step tranche in `docs/task-ledger.md` includes a
   dedicated claim-verification burn-down phase.
+
+## KI-007 GATE-003 Borderline Separation In Mono Variant
+
+- class: implementation gap
+- status: open
+- affected files: `tokens/color-tokens.json` (mono variant),
+  `tools/validators/cvd.py`, `tools/validators/achromat.py`
+- problem: GATE-003 (CVD) reports `mono/primary-vs-accent` at Oklab distance
+  0.178, in the borderline range [0.15, 0.20). This is because `primaryStrong`
+  (#374151, gray-700) and `accentStrong` (#6B7280, gray-500) are adjacent gray
+  ramp stops.
+- consequence: in a monochromatic rendering, primary and accent are
+  distinguishable only by luminance contrast (10.3:1 vs 4.8:1 on white), not
+  by hue or chroma. Non-color redundancy (marker/dash series) is present and
+  compensates for chart elements, but UI components relying solely on these two
+  semantic colors to convey different states would lose that distinction.
+- current handling: GATE-003 emits a WARN (non-blocking). GATE-007 (ACHROMAT)
+  verifies that each color individually has adequate contrast on white. Marker
+  and dash redundancy is present in the mono viz token variant.
+- resolution path: allocate more separated gray stops for primaryStrong and
+  accentStrong in the mono variant (e.g., gray-900 for primaryStrong, gray-500
+  for accentStrong). Requires re-evaluating GATE-002 (CONTRAST) for any new
+  assignments and running `make validate` to confirm both gates pass.

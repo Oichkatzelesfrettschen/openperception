@@ -181,14 +181,24 @@ libDaltonLens/
 
 **API**:
 ```c
-enum DLDeficiency { DL_PROTAN, DL_DEUTAN, DL_TRITAN };
+enum DLDeficiency {
+    DLDeficiency_Protan,
+    DLDeficiency_Deutan,
+    DLDeficiency_Tritan,
+    DLDeficiency_Achromat,  /* Rod monochromacy (achromatopsia)  */
+    DLDeficiency_BCM        /* Blue-cone monochromacy             */
+};
 
-void dl_simulate_cvd(
-    enum DLDeficiency deficiency,
-    float severity,
-    unsigned char *srgba_image,
-    size_t width, size_t height, size_t bytesPerRow
-);
+/* Automatic dispatch: best algorithm per deficiency type */
+void dl_simulate_cvd(enum DLDeficiency deficiency, float severity,
+    unsigned char *srgba_image, size_t width, size_t height, size_t bytesPerRow);
+
+/* Named algorithm variants */
+void dl_simulate_cvd_brettel1997(enum DLDeficiency, float severity, ...);
+void dl_simulate_cvd_vienot1999(enum DLDeficiency, float severity, ...);
+void dl_simulate_cvd_machado2009(enum DLDeficiency, float severity, ...);
+void dl_simulate_cvd_achromat(float severity, ...);
+void dl_simulate_cvd_bcm(float severity, ...);
 ```
 
 **Design Principles**:

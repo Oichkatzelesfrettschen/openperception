@@ -104,7 +104,7 @@ Current tranche focus:
 - [ ] T073 Add benchmark or performance smoke coverage where docs claim performance intent.
 - [ ] T074 Add a validator summary doc that maps runtime warnings to debt IDs.
 - [ ] T075 Add a typography debt issue row for the current TYPE-001 warning.
-- [ ] T076 Add CVD borderline-separation debt issue rows for the current GATE-003 warnings.
+- [x] T076 Add CVD borderline-separation debt issue rows for the current GATE-003 warnings.
 - [ ] T077 Add cognitive reading-level debt issue rows for the current GATE-006 warnings.
 - [ ] T078 Add regression fixtures for any validator bug uncovered during the tranche.
 - [x] T079 Confirm the Makefile help text stays synchronized with real targets.
