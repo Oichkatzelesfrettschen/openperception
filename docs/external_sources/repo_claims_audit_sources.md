@@ -21,10 +21,28 @@ Machine-readable bibliography support now lives in:
   https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html
 - WCAG 2.1 Understanding SC 1.4.11 Non-text Contrast -- 3:1 UI components and graphics:
   https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html
+- WCAG 2.2 Understanding SC 1.4.1 Use of Color -- color cannot be the only
+  channel for information; use text, shape, pattern, position, or another
+  redundant cue:
+  https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html
+- WCAG 2.2 Understanding SC 1.4.11 Non-text Contrast -- meaningful graphical
+  objects need at least 3:1 contrast against adjacent colors, and thin lines
+  can render fainter than their specified color:
+  https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html
 - WCAG 2.2 Understanding SC 2.4.13 Focus Appearance:
   https://www.w3.org/WAI/WCAG22/Understanding/focus-appearance.html
 - WCAG 2.2 Understanding SC 2.3.1 Three Flashes Or Below Threshold:
   https://www.w3.org/WAI/WCAG22/Understanding/three-flashes-or-below-threshold.html
+- W3C WAI Images Tutorial, Complex Images -- graphs, flow charts, diagrams,
+  maps, and illustrations need a short identification plus a longer
+  relationship-level description when the surrounding text relies on the
+  reader understanding the image:
+  https://www.w3.org/WAI/tutorials/images/complex/
+- W3C Making Content Usable for People with Cognitive and Learning
+  Disabilities -- supplemental cognitive-accessibility guidance for clear
+  purpose, clear operation, familiar hierarchy, step clarity, whitespace,
+  alternatives for numerical concepts, and reduced memory burden:
+  https://www.w3.org/TR/coga-usable/
 
 ### Ergonomics And ISO Standards
 
